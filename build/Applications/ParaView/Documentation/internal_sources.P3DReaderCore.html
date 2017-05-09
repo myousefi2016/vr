@@ -1,0 +1,184 @@
+
+<html>
+    <head>
+        <title>P3DReaderCore</title>
+        <meta name="proxy_name" contents="internal_sources.P3DReaderCore"/>
+        <meta name="filename" contents="internal_sources.P3DReaderCore.html"/>
+    </head>
+    <body>
+        <h2>P3DReaderCore (P3DReaderCore)</h2>
+        <i>
+            <p>Reads ASCII or binary PLOT3D files.</p>
+        </i>
+        <div class="description">PLOT3D is a plotting
+                     package developed at NASA. The PLOT3D reader can read both
+                     ASCII and binary PLOT3D files. The default file extension
+                     for the geometry files is .xyz, and the default file
+                     extension for the solution files is .q. The output of this
+                     reader is a multi-block dataset containing curvilinear
+                     (structured grid) datasets.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the .xyz (geometry) file name
+        for the PLOT3D reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>QFileName</th>
+                <td>This property specifies the .q (solution) file name for
+          the PLOT3D reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>FunctionFileName</th>
+                <td>This property specifies the .f (function) file name for
+        the PLOT3D reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>AutoDetectFormat</th>
+                <td>When this options is enabled, the reader will try to
+  automatically figure out various settings for a binary file. The other
+  options are ignored. Does not work for text (ascii) files.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>BinaryFile</th>
+                <td>This property indicates whether the data files are
+        binary.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>MultiGrid</th>
+                <td>This property indicates whether these files have
+        multiple-block information.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>HasByteCount</th>
+                <td>This property indicates whether this file uses Fortran
+        leading-trailing byte counts.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>IBlanking</th>
+                <td>This property indicates whether this dataset has
+        visibility information.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TwoDimensionalGeometry</th>
+                <td>This property indicates whether the data is two- or
+        three-dimensional.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ForceRead</th>
+                <td>This property indicates whether to attempt to read the
+        file even if it appears corrupt</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>DoublePrecision</th>
+                <td>This property specifies whether floating points values
+  are in double precision.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ByteOrder</th>
+                <td>This property specifies the byte order of any binary
+        file(s).</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>BigEndian (0)</li>
+                            <li>LittleEndian (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Functions</th>
+                <td>This property lists which functions (point-centered
+        arrays) to compute.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Scalar - Pressure (110)</li>
+                            <li>Scalar - Pressure Coefficient (111)</li>
+                            <li>Scalar - Mach Number (112)</li>
+                            <li>Scalar - Sound Speed (113)</li>
+                            <li>Scalar - Temperature (120)</li>
+                            <li>Scalar - Enthalpy (130)</li>
+                            <li>Scalar - Internal energy (140)</li>
+                            <li>Scalar - Kinetic energy (144)</li>
+                            <li>Scalar - Velocity magnitude (153)</li>
+                            <li>Scalar - Entropy (170)</li>
+                            <li>Scalar - Swirl. (184)</li>
+                            <li>Vector - Velocity (200)</li>
+                            <li>Vector - Vorticity (201)</li>
+                            <li>Vector - Pressure gradient (210)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

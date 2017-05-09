@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/VPIC/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/VPIC/CMakeFiles/generate.stamp is up-to-date.
+  vtkVPICReader.cxx
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOVPIC-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOVPIC-pv5.3.exp
+  vtkIOVPIC.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOVPIC-pv5.3.dll

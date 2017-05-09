@@ -1,0 +1,147 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAbstractTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCylindricalTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkGeneralTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkHomogeneousTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIdentityTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkLinearTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMatrixToHomogeneousTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMatrixToLinearTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPerspectiveTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkSphericalTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkThinPlateSplineTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTransform2DClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTransformCollectionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkWarpTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkLandmarkTransformClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCommonTransformsCSInit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkAbstractTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkCylindricalTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkGeneralTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkHomogeneousTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkIdentityTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkLinearTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkMatrixToHomogeneousTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkMatrixToLinearTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkPerspectiveTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkSphericalTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkThinPlateSplineTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkTransform2D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkTransformCollection.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkWarpTransform.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/vtkLandmarkTransform.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "VTKModular" ],
+		"name" : "vtkCommonTransformsCS"
+	}
+}

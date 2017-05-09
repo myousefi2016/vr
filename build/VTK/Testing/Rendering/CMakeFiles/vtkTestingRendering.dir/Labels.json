@@ -1,0 +1,47 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkRegressionTestImage.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTesting.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingInteractor.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingObjectFactory.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTesting.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingInteractor.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingObjectFactory.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Testing/Rendering/vtkTestingRenderingModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkTestingRendering" ],
+		"name" : "vtkTestingRendering"
+	}
+}

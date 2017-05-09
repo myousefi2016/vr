@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkDistributedDataFilterClientServer.cxx
+  CS Wrapping - generating vtkPExtractGridClientServer.cxx
+  CS Wrapping - generating vtkPExtractRectilinearGridClientServer.cxx
+  CS Wrapping - generating vtkPExtractVOIClientServer.cxx
+  CS Wrapping - generating vtkStructuredImplicitConnectivityClientServer.cxx
+  vtkDistributedDataFilterClientServer.cxx
+  vtkPExtractGridClientServer.cxx
+  vtkPExtractRectilinearGridClientServer.cxx
+  vtkPExtractVOIClientServer.cxx
+  vtkStructuredImplicitConnectivityClientServer.cxx
+  vtkFiltersParallelMPICSInit.cxx
+  Generating Code...
+  vtkFiltersParallelMPICS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersParallelMPICS-pv5.3.lib

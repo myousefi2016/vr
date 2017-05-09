@@ -1,0 +1,31 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkClipHyperOctreeClientServer.cxx
+  CS Wrapping - generating vtkHyperTreeGridAxisCutClientServer.cxx
+  CS Wrapping - generating vtkHyperTreeGridGeometryClientServer.cxx
+  CS Wrapping - generating vtkHyperTreeGridToUnstructuredGridClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeClipCutPointsGrabberClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeContourFilterClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeCutterClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeDepthClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeDualGridContourFilterClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeLimiterClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeSampleFunctionClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeSurfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeToUniformGridFilterClientServer.cxx
+  vtkClipHyperOctreeClientServer.cxx
+  vtkHyperTreeGridAxisCutClientServer.cxx
+  vtkHyperTreeGridGeometryClientServer.cxx
+  vtkHyperTreeGridToUnstructuredGridClientServer.cxx
+  vtkHyperOctreeClipCutPointsGrabberClientServer.cxx
+  vtkHyperOctreeContourFilterClientServer.cxx
+  vtkHyperOctreeCutterClientServer.cxx
+  vtkHyperOctreeDepthClientServer.cxx
+  vtkHyperOctreeDualGridContourFilterClientServer.cxx
+  vtkHyperOctreeLimiterClientServer.cxx
+  vtkHyperOctreeSampleFunctionClientServer.cxx
+  vtkHyperOctreeSurfaceFilterClientServer.cxx
+  vtkHyperOctreeToUniformGridFilterClientServer.cxx
+  vtkFiltersHyperTreeCSInit.cxx
+  Generating Code...
+  vtkFiltersHyperTreeCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersHyperTreeCS-pv5.3.lib

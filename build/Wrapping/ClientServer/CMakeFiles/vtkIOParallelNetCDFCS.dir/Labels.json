@@ -1,0 +1,27 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPNetCDFPOPReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIOParallelNetCDFCSInit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelNetCDF/vtkPNetCDFPOPReader.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "VTKModular" ],
+		"name" : "vtkIOParallelNetCDFCS"
+	}
+}

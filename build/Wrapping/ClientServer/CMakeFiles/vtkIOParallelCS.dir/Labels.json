@@ -1,0 +1,91 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkEnSightWriterClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMultiBlockPLOT3DReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPlot3DMetaReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPChacoReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPDataSetReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPDataSetWriterClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPImageWriterClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPOpenFOAMReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPSLACReaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIOParallelCSInit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkEnSightWriter.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkMultiBlockPLOT3DReader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPlot3DMetaReader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPChacoReader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPDataSetReader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPDataSetWriter.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPImageWriter.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPOpenFOAMReader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/vtkPSLACReader.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "VTKModular" ],
+		"name" : "vtkIOParallelCS"
+	}
+}

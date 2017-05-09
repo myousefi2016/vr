@@ -1,0 +1,41 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkInteractorStyleDrawPolygonClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleFlightClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleImageClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleJoystickActorClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleJoystickCameraClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleMultiTouchCameraClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleRubberBand2DClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleRubberBand3DClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleRubberBandPickClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleRubberBandZoomClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleTerrainClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleTrackballActorClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleTrackballCameraClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleTrackballClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleUnicamClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleUserClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleSwitchClientServer.cxx
+  CS Wrapping - generating vtkParallelCoordinatesInteractorStyleClientServer.cxx
+  vtkInteractorStyleDrawPolygonClientServer.cxx
+  vtkInteractorStyleFlightClientServer.cxx
+  vtkInteractorStyleImageClientServer.cxx
+  vtkInteractorStyleJoystickActorClientServer.cxx
+  vtkInteractorStyleJoystickCameraClientServer.cxx
+  vtkInteractorStyleMultiTouchCameraClientServer.cxx
+  vtkInteractorStyleRubberBand2DClientServer.cxx
+  vtkInteractorStyleRubberBand3DClientServer.cxx
+  vtkInteractorStyleRubberBandPickClientServer.cxx
+  vtkInteractorStyleRubberBandZoomClientServer.cxx
+  vtkInteractorStyleTerrainClientServer.cxx
+  vtkInteractorStyleTrackballActorClientServer.cxx
+  vtkInteractorStyleTrackballCameraClientServer.cxx
+  vtkInteractorStyleTrackballClientServer.cxx
+  vtkInteractorStyleUnicamClientServer.cxx
+  vtkInteractorStyleUserClientServer.cxx
+  vtkInteractorStyleSwitchClientServer.cxx
+  vtkParallelCoordinatesInteractorStyleClientServer.cxx
+  vtkInteractionStyleCSInit.cxx
+  Generating Code...
+  vtkInteractionStyleCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkInteractionStyleCS-pv5.3.lib

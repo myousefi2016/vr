@@ -1,0 +1,211 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageAnisotropicDiffusion2D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageAnisotropicDiffusion3D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCheckerboard.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCityBlockDistance.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageConvolve.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCorrelation.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageEuclideanDistance.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageEuclideanToPolar.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGaussianSmooth.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGradient.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGradientMagnitude.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageHybridMedian2D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageLaplacian.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageMedian3D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageNormalize.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageRange3D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSeparableConvolution.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSobel2D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSobel3D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSpatialAlgorithm.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageVariance3D.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkSimpleImageFilterExample.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSlab.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSlabReslice.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageAnisotropicDiffusion2D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageAnisotropicDiffusion3D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCheckerboard.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCityBlockDistance.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageConvolve.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageCorrelation.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageEuclideanDistance.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageEuclideanToPolar.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGaussianSmooth.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGradient.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageGradientMagnitude.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageHybridMedian2D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageLaplacian.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageMedian3D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageNormalize.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageRange3D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSeparableConvolution.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSobel2D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSobel3D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSpatialAlgorithm.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageVariance3D.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkSimpleImageFilterExample.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSlab.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/vtkImageSlabReslice.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Imaging/General/vtkImagingGeneralModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/General/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkImagingGeneral" ],
+		"name" : "vtkImagingGeneral"
+	}
+}

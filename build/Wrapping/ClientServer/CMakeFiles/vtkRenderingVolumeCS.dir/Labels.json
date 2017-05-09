@@ -1,0 +1,323 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkDirectionEncoderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkEncodedGradientEstimatorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkEncodedGradientShaderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFiniteDifferenceGradientEstimatorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointRayCastImageClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastCompositeGOHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastCompositeGOShadeHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastCompositeHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastCompositeShadeHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastMIPHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFixedPointVolumeRayCastMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkGPUVolumeRayCastMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkOSPRayVolumeInterfaceClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkProjectedTetrahedraMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRayCastImageDisplayHelperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRecursiveSphereDirectionEncoderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkSphericalDirectionEncoderClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridBunykRayCastFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridHomogeneousRayIntegratorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridLinearRayIntegratorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridPartialPreIntegrationClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridPreIntegrationClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeRayCastFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeRayCastIteratorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeRayCastMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeRayIntegratorClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridVolumeZSweepMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeOutlineSourceClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumePickerClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastCompositeFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastIsosurfaceFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastMIPFunctionClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastMapperClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkVolumeRayCastSpaceLeapingImageFilterClientServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRenderingVolumeCSInit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkDirectionEncoder.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkEncodedGradientEstimator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkEncodedGradientShader.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFiniteDifferenceGradientEstimator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointRayCastImage.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastCompositeGOHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastCompositeGOShadeHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastCompositeHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastCompositeShadeHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastMIPHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkFixedPointVolumeRayCastMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkGPUVolumeRayCastMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkOSPRayVolumeInterface.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkProjectedTetrahedraMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkRayCastImageDisplayHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkRecursiveSphereDirectionEncoder.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkSphericalDirectionEncoder.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridBunykRayCastFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridHomogeneousRayIntegrator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridLinearRayIntegrator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridPartialPreIntegration.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridPreIntegration.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeRayCastFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeRayCastIterator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeRayCastMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeRayIntegrator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkUnstructuredGridVolumeZSweepMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeOutlineSource.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumePicker.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastCompositeFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastIsosurfaceFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastMIPFunction.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastMapper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/vtkVolumeRayCastSpaceLeapingImageFilter.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "VTKModular" ],
+		"name" : "vtkRenderingVolumeCS"
+	}
+}

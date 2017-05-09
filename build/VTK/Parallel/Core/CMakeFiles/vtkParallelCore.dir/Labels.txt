@@ -1,0 +1,35 @@
+# Target labels
+ vtkParallelCore
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkCommunicator.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkDummyCommunicator.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkDummyController.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkMultiProcessController.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkMultiProcessStream.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkPDirectory.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkProcess.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkProcessGroup.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkPSystemTools.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSocketCommunicator.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSocketController.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSubCommunicator.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSubGroup.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkFieldDataSerializer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Parallel/Core/vtkSocketCommunicatorHash.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkCommunicator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkDummyCommunicator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkDummyController.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkMultiProcessController.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkMultiProcessStream.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkPDirectory.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkProcess.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkProcessGroup.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkPSystemTools.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSocketCommunicator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSocketController.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSubCommunicator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkSubGroup.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/vtkFieldDataSerializer.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Parallel/Core/vtkParallelCoreModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/Core/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/022cc591d8d25cd6a968f36ace8f423d/vtkSocketCommunicatorHash.h.rule

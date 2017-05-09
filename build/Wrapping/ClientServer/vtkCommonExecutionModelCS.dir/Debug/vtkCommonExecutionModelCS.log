@@ -1,0 +1,125 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkAlgorithmOutputClientServer.cxx
+  CS Wrapping - generating vtkAnnotationLayersAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkArrayDataAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkCachedStreamingDemandDrivenPipelineClientServer.cxx
+  CS Wrapping - generating vtkCastToConcreteClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataPipelineClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataSetAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkDataObjectAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkDataSetAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkDemandDrivenPipelineClientServer.cxx
+  CS Wrapping - generating vtkDirectedGraphAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkEnsembleSourceClientServer.cxx
+  CS Wrapping - generating vtkExecutiveClientServer.cxx
+  CS Wrapping - generating vtkExtentSplitterClientServer.cxx
+  CS Wrapping - generating vtkExtentTranslatorClientServer.cxx
+  CS Wrapping - generating vtkGraphAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalBoxDataSetAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkHyperTreeGridAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkImageAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkImageInPlaceFilterClientServer.cxx
+  CS Wrapping - generating vtkImageToStructuredGridClientServer.cxx
+  CS Wrapping - generating vtkImageToStructuredPointsClientServer.cxx
+  CS Wrapping - generating vtkInformationDataObjectMetaDataKeyClientServer.cxx
+  CS Wrapping - generating vtkInformationExecutivePortKeyClientServer.cxx
+  CS Wrapping - generating vtkInformationExecutivePortVectorKeyClientServer.cxx
+  CS Wrapping - generating vtkInformationIntegerRequestKeyClientServer.cxx
+  CS Wrapping - generating vtkMultiBlockDataSetAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkMultiTimeStepAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkPassInputTypeAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkPiecewiseFunctionAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkPiecewiseFunctionShiftScaleClientServer.cxx
+  CS Wrapping - generating vtkPointSetAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkPolyDataAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkScalarTreeClientServer.cxx
+  CS Wrapping - generating vtkSimpleImageToImageFilterClientServer.cxx
+  CS Wrapping - generating vtkSimpleScalarTreeClientServer.cxx
+  CS Wrapping - generating vtkSpanSpaceClientServer.cxx
+  CS Wrapping - generating vtkStreamingDemandDrivenPipelineClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkTableAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkThreadedCompositeDataPipelineClientServer.cxx
+  CS Wrapping - generating vtkThreadedImageAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkTreeAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkTrivialConsumerClientServer.cxx
+  CS Wrapping - generating vtkTrivialProducerClientServer.cxx
+  CS Wrapping - generating vtkUndirectedGraphAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridBaseAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkProgressObserverClientServer.cxx
+  CS Wrapping - generating vtkSelectionAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkExtentRCBPartitionerClientServer.cxx
+  CS Wrapping - generating vtkUniformGridPartitionerClientServer.cxx
+  CS Wrapping - generating vtkUniformGridAMRAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkOverlappingAMRAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkNonOverlappingAMRAlgorithmClientServer.cxx
+  vtkAlgorithmClientServer.cxx
+  vtkAlgorithmOutputClientServer.cxx
+  vtkAnnotationLayersAlgorithmClientServer.cxx
+  vtkArrayDataAlgorithmClientServer.cxx
+  vtkCachedStreamingDemandDrivenPipelineClientServer.cxx
+  vtkCastToConcreteClientServer.cxx
+  vtkCompositeDataPipelineClientServer.cxx
+  vtkCompositeDataSetAlgorithmClientServer.cxx
+  vtkDataObjectAlgorithmClientServer.cxx
+  vtkDataSetAlgorithmClientServer.cxx
+  vtkDemandDrivenPipelineClientServer.cxx
+  vtkDirectedGraphAlgorithmClientServer.cxx
+  vtkEnsembleSourceClientServer.cxx
+  vtkExecutiveClientServer.cxx
+  vtkExtentSplitterClientServer.cxx
+  vtkExtentTranslatorClientServer.cxx
+  vtkGraphAlgorithmClientServer.cxx
+  vtkHierarchicalBoxDataSetAlgorithmClientServer.cxx
+  vtkHyperOctreeAlgorithmClientServer.cxx
+  vtkHyperTreeGridAlgorithmClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageAlgorithmClientServer.cxx
+  vtkImageInPlaceFilterClientServer.cxx
+  vtkImageToStructuredGridClientServer.cxx
+  vtkImageToStructuredPointsClientServer.cxx
+  vtkInformationDataObjectMetaDataKeyClientServer.cxx
+  vtkInformationExecutivePortKeyClientServer.cxx
+  vtkInformationExecutivePortVectorKeyClientServer.cxx
+  vtkInformationIntegerRequestKeyClientServer.cxx
+  vtkMultiBlockDataSetAlgorithmClientServer.cxx
+  vtkMultiTimeStepAlgorithmClientServer.cxx
+  vtkPassInputTypeAlgorithmClientServer.cxx
+  vtkPiecewiseFunctionAlgorithmClientServer.cxx
+  vtkPiecewiseFunctionShiftScaleClientServer.cxx
+  vtkPointSetAlgorithmClientServer.cxx
+  vtkPolyDataAlgorithmClientServer.cxx
+  vtkRectilinearGridAlgorithmClientServer.cxx
+  vtkScalarTreeClientServer.cxx
+  vtkSimpleImageToImageFilterClientServer.cxx
+  vtkSimpleScalarTreeClientServer.cxx
+  vtkSpanSpaceClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkStreamingDemandDrivenPipelineClientServer.cxx
+  vtkStructuredGridAlgorithmClientServer.cxx
+  vtkTableAlgorithmClientServer.cxx
+  vtkThreadedCompositeDataPipelineClientServer.cxx
+  vtkThreadedImageAlgorithmClientServer.cxx
+  vtkTreeAlgorithmClientServer.cxx
+  vtkTrivialConsumerClientServer.cxx
+  vtkTrivialProducerClientServer.cxx
+  vtkUndirectedGraphAlgorithmClientServer.cxx
+  vtkUnstructuredGridAlgorithmClientServer.cxx
+  vtkUnstructuredGridBaseAlgorithmClientServer.cxx
+  vtkProgressObserverClientServer.cxx
+  vtkSelectionAlgorithmClientServer.cxx
+  vtkExtentRCBPartitionerClientServer.cxx
+  vtkUniformGridPartitionerClientServer.cxx
+  vtkUniformGridAMRAlgorithmClientServer.cxx
+  vtkOverlappingAMRAlgorithmClientServer.cxx
+  vtkNonOverlappingAMRAlgorithmClientServer.cxx
+  vtkCommonExecutionModelCSInit.cxx
+  Generating Code...
+  vtkCommonExecutionModelCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkCommonExecutionModelCS-pv5.3.lib

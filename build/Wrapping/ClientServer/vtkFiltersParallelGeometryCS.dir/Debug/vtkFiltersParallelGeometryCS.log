@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPDataSetGhostGeneratorClientServer.cxx
+  CS Wrapping - generating vtkPStructuredGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkPStructuredGridGhostDataGeneratorClientServer.cxx
+  CS Wrapping - generating vtkPUniformGridGhostDataGeneratorClientServer.cxx
+  CS Wrapping - generating vtkPUnstructuredGridGhostCellsGeneratorClientServer.cxx
+  CS Wrapping - generating vtkPUnstructuredGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkPUnstructuredGridGhostDataGeneratorClientServer.cxx
+  vtkPDataSetGhostGeneratorClientServer.cxx
+  vtkPStructuredGridConnectivityClientServer.cxx
+  vtkPStructuredGridGhostDataGeneratorClientServer.cxx
+  vtkPUniformGridGhostDataGeneratorClientServer.cxx
+  vtkPUnstructuredGridGhostCellsGeneratorClientServer.cxx
+  vtkPUnstructuredGridConnectivityClientServer.cxx
+  vtkPUnstructuredGridGhostDataGeneratorClientServer.cxx
+  vtkFiltersParallelGeometryCSInit.cxx
+  Generating Code...
+  vtkFiltersParallelGeometryCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersParallelGeometryCS-pv5.3.lib

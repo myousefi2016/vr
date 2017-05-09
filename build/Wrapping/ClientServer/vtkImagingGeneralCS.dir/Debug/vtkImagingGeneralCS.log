@@ -1,0 +1,55 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkImageAnisotropicDiffusion2DClientServer.cxx
+  CS Wrapping - generating vtkImageAnisotropicDiffusion3DClientServer.cxx
+  CS Wrapping - generating vtkImageCheckerboardClientServer.cxx
+  CS Wrapping - generating vtkImageCityBlockDistanceClientServer.cxx
+  CS Wrapping - generating vtkImageConvolveClientServer.cxx
+  CS Wrapping - generating vtkImageCorrelationClientServer.cxx
+  CS Wrapping - generating vtkImageEuclideanDistanceClientServer.cxx
+  CS Wrapping - generating vtkImageEuclideanToPolarClientServer.cxx
+  CS Wrapping - generating vtkImageGaussianSmoothClientServer.cxx
+  CS Wrapping - generating vtkImageGradientClientServer.cxx
+  CS Wrapping - generating vtkImageGradientMagnitudeClientServer.cxx
+  CS Wrapping - generating vtkImageHybridMedian2DClientServer.cxx
+  CS Wrapping - generating vtkImageLaplacianClientServer.cxx
+  CS Wrapping - generating vtkImageMedian3DClientServer.cxx
+  CS Wrapping - generating vtkImageNormalizeClientServer.cxx
+  CS Wrapping - generating vtkImageRange3DClientServer.cxx
+  CS Wrapping - generating vtkImageSeparableConvolutionClientServer.cxx
+  CS Wrapping - generating vtkImageSobel2DClientServer.cxx
+  CS Wrapping - generating vtkImageSobel3DClientServer.cxx
+  CS Wrapping - generating vtkImageSpatialAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkImageVariance3DClientServer.cxx
+  CS Wrapping - generating vtkSimpleImageFilterExampleClientServer.cxx
+  CS Wrapping - generating vtkImageSlabClientServer.cxx
+  CS Wrapping - generating vtkImageSlabResliceClientServer.cxx
+  vtkImageAnisotropicDiffusion2DClientServer.cxx
+  vtkImageAnisotropicDiffusion3DClientServer.cxx
+  vtkImageCheckerboardClientServer.cxx
+  vtkImageCityBlockDistanceClientServer.cxx
+  vtkImageConvolveClientServer.cxx
+  vtkImageCorrelationClientServer.cxx
+  vtkImageEuclideanDistanceClientServer.cxx
+  vtkImageEuclideanToPolarClientServer.cxx
+  vtkImageGaussianSmoothClientServer.cxx
+  vtkImageGradientClientServer.cxx
+  vtkImageGradientMagnitudeClientServer.cxx
+  vtkImageHybridMedian2DClientServer.cxx
+  vtkImageLaplacianClientServer.cxx
+  vtkImageMedian3DClientServer.cxx
+  vtkImageNormalizeClientServer.cxx
+  vtkImageRange3DClientServer.cxx
+  vtkImageSeparableConvolutionClientServer.cxx
+  vtkImageSobel2DClientServer.cxx
+  vtkImageSobel3DClientServer.cxx
+  vtkImageSpatialAlgorithmClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageVariance3DClientServer.cxx
+  vtkSimpleImageFilterExampleClientServer.cxx
+  vtkImageSlabClientServer.cxx
+  vtkImageSlabResliceClientServer.cxx
+  vtkImagingGeneralCSInit.cxx
+  Generating Code...
+  vtkImagingGeneralCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingGeneralCS-pv5.3.lib

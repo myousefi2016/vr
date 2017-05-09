@@ -1,0 +1,156 @@
+
+<html>
+    <head>
+        <title>ParticlePath</title>
+        <meta name="proxy_name" contents="filters.ParticlePath"/>
+        <meta name="filename" contents="filters.ParticlePath.html"/>
+    </head>
+    <body>
+        <h2>ParticlePath (ParticlePath)</h2>
+        <i>
+            <p>Trace Particle Paths through time in a vector field.</p>
+        </i>
+        <div class="description">
+                     The Particle Trace filter generates pathlines in a vector
+                     field from a collection of seed points. The vector field
+                     used is selected from the Vectors menu, so the input data
+                     set is required to have point-centered vectors. The Seed
+                     portion of the interface allows you to select whether the
+                     seed points for this integration lie in a point cloud or
+                     along a line. Depending on which is selected, the
+                     appropriate 3D widget (point or line widget) is displayed
+                     along with traditional user interface controls for
+                     positioning the point cloud or line within the data set.
+                     Instructions for using the 3D widgets and the
+                     corresponding manual controls can be found in section 7.4.
+                     This filter operates on any type of data set, provided it
+                     has point-centered vectors. The output is polygonal data
+                     containing polylines. This filter is available on the
+                     Toolbar.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>Specify which is the Input of the StreamTracer
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataObject</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 3 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Seed Source</th>
+                <td>Specify the seed dataset. Typically fron where the
+        vector field integration should begin. Usually a point/radius or a line
+        with a given resolution.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>TerminationTime</th>
+                <td>Setting TerminationTime to a positive value will cause
+        particles to terminate when the time is reached. The units of time
+        should be consistent with the primary time variable.</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ForceReinjectionEveryNSteps</th>
+                <td>When animating particles, it is nice to inject new ones
+        every Nth step to produce a continuous flow. Setting
+        ForceReinjectionEveryNSteps to a non zero value will cause the particle
+        source to reinject particles every Nth step even if it is otherwise
+        unchanged. Note that if the particle source is also animated, this flag
+        will be redundant as the particles will be reinjected whenever the
+        source changes anyway</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>StaticSeeds</th>
+                <td>If the input seeds are not changing, then this
+        can be set to 1 to avoid having to do a repeated grid search
+        that would return the exact same result.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>StaticMesh</th>
+                <td>If the input grid is not changing, then this
+        can be set to 1 to avoid having to create cell locators for
+        each update.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>SelectInputVectors</th>
+                <td>Specify which vector array should be used for the
+        integration through that filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of vectors is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ComputeVorticity</th>
+                <td>Compute vorticity and angular rotation of particles as
+        they progress</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Terminal Speed</th>
+                <td>This property specifies the terminal speed, below which
+        particle advection/integration is terminated.</td>
+                <td>0.000000000001<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

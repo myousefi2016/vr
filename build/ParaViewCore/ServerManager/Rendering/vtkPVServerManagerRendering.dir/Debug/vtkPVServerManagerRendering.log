@@ -1,0 +1,66 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerManager/Rendering/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerManager/Rendering/CMakeFiles/generate.stamp is up-to-date.
+  Processing builtin color maps
+  -- Generate module: ColorMaps
+  vtkPVComparativeAnimationCue.cxx
+  vtkPVComparativeView.cxx
+  vtkPVRepresentedArrayListSettings.cxx
+  vtkSMBagChartSeriesListDomain.cxx
+  vtkSMBoxRepresentationProxy.cxx
+  vtkSMCameraLink.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSMCameraProxy.cxx
+  vtkSMChartRepresentationProxy.cxx
+  vtkSMChartSeriesListDomain.cxx
+  vtkSMChartSeriesSelectionDomain.cxx
+  vtkSMChartUseIndexForAxisDomain.cxx
+  vtkSMComparativeAnimationCueProxy.cxx
+  vtkSMComparativeAnimationCueUndoElement.cxx
+  vtkSMComparativeViewProxy.cxx
+  vtkSMContextViewProxy.cxx
+  vtkSMDataDeliveryManager.cxx
+  vtkSMFunctionalBagChartSeriesSelectionDomain.cxx
+  vtkSMImplicitPlaneRepresentationProxy.cxx
+  vtkSMMultiSliceViewProxy.cxx
+  vtkSMNewWidgetRepresentationProxy.cxx
+  Generating Code...
+  Compiling...
+  vtkSMOrthographicSliceViewProxy.cxx
+  vtkSMPlotMatrixViewProxy.cxx
+  vtkSMPVRepresentationProxy.cxx
+  vtkSMRenderViewProxy.cxx
+  vtkSMRepresentationProxy.cxx
+  vtkSMRepresentationTypeDomain.cxx
+  vtkSMRepresentedArrayListDomain.cxx
+  vtkSMScalarBarWidgetRepresentationProxy.cxx
+  vtkSMSelectionHelper.cxx
+  vtkSMSpreadSheetRepresentationProxy.cxx
+  vtkSMTextWidgetRepresentationProxy.cxx
+  vtkSMTransferFunctionManager.cxx
+  vtkSMTransferFunctionPresets.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'Json::Exception'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: see declaration of 'std::exception'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): note: see declaration of 'Json::Exception'
+  vtkSMTransferFunctionProxy.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'Json::Exception'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: see declaration of 'std::exception'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): note: see declaration of 'Json::Exception'
+  vtkSMUtilities.cxx
+  vtkSMViewLayoutProxy.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSMViewProxy.cxx
+  vtkSMViewProxyInteractorHelper.cxx
+  vtkSMWidgetRepresentationProxy.cxx
+  vtkSMParaViewPipelineControllerWithRendering.cxx
+  Generating Code...
+  Compiling...
+  vtkPVServerManagerRenderingObjectFactory.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerRendering-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerRendering-pv5.3.exp
+  vtkPVServerManagerRendering.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkPVServerManagerRendering-pv5.3.dll

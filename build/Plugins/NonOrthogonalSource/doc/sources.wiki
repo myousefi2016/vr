@@ -1,0 +1,117 @@
+
+==Sheared Wavelet==
+
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''U''' (U)
+|
+
+The values of this property set the corresponding X axis direction.
+
+|
+1.0 0.0 0.0
+|
+
+|-
+|'''V''' (V)
+|
+
+The values of this property set the corresponding Y axis direction.
+
+|
+0.0 1.0 0.0
+|
+
+|-
+|'''W''' (W)
+|
+
+The values of this property set the corresponding Z axis direction.
+
+|
+0.0 0.0 1.0
+|
+
+|-
+|'''UTitle''' (UTitle)
+|
+
+This property specifies the text to display for the X axis.
+
+|
+Base U
+|
+
+|-
+|'''VTitle''' (VTitle)
+|
+
+This property specifies the text to display for the Y axis.
+
+|
+Base V
+|
+
+|-
+|'''WTitle''' (WTitle)
+|
+
+This property specifies the text to display for the Z axis.
+
+|
+Base W
+|
+
+|-
+|'''EnableAxisTitles''' (EnableAxisTitles)
+|
+
+|
+0
+|
+Accepts boolean values (0 or 1).
+|-
+|'''EnableTimeLabel''' (EnableTimeLabel)
+|
+
+|
+0
+|
+Accepts boolean values (0 or 1).
+|-
+|'''ModelBoundingBox''' (ModelBoundingBox)
+|
+
+|
+0 1 0 1 0 1
+|
+
+|-
+|'''TimeLabel''' (TimeLabel)
+|
+
+This property specifies the text to use for time label.
+
+|
+Time
+|
+
+|-
+|'''TimeLabelAnnotation''' (TimeLabelAnnotation)
+|
+
+|
+
+|
+
+
+|}
+

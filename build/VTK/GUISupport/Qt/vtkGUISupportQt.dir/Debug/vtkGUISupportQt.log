@@ -1,0 +1,88 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/GUISupport/Qt/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/GUISupport/Qt/CMakeFiles/generate.stamp is up-to-date.
+  Generating moc_QFilterTreeProxyModel.cpp
+  Generating moc_QVTKApplication.cpp
+  Generating moc_QVTKInteractorAdapter.cpp
+  Generating moc_QVTKInteractorInternal.cpp
+  Generating moc_QVTKWidget.cpp
+  Generating moc_vtkQtAbstractModelAdapter.cpp
+  Generating moc_vtkQtAnnotationLayersModelAdapter.cpp
+  Generating moc_vtkQtConnection.cpp
+  Generating moc_vtkQtDebugLeaksModel.cpp
+  Generating moc_vtkQtDebugLeaksView.cpp
+  Generating moc_vtkQtTableModelAdapter.cpp
+  Generating moc_vtkQtTreeModelAdapter.cpp
+  Generating moc_QVTKOpenGLWidget.cpp
+  QFilterTreeProxyModel.cxx
+  QVTKApplication.cxx
+  QVTKInteractorAdapter.cxx
+  QVTKInteractor.cxx
+  QVTKPaintEngine.cxx
+  QVTKWidget.cxx
+  vtkEventQtSlotConnect.cxx
+  vtkQtAbstractModelAdapter.cxx
+  vtkQtAnnotationLayersModelAdapter.cxx
+  vtkQtConnection.cxx
+  vtkQtDebugLeaksModel.cxx
+  vtkQtDebugLeaksView.cxx
+  vtkQtTableModelAdapter.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\GUISupport\Qt\vtkQtTableModelAdapter.cxx(880): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  vtkQtTreeModelAdapter.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<T>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QModelIndex
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<T>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QModelIndex
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<T>::detach(void)'
+          with
+          [
+              T=QModelIndex
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(129): note: see reference to function template instantiation 'void QVector<T>::detach(void)' being compiled
+          with
+          [
+              T=QModelIndex
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(411): note: while compiling class template member function 'void QVector<T>::resize(int)'
+          with
+          [
+              T=QModelIndex
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\GUISupport\Qt\vtkQtTreeModelAdapter.cxx(143): note: see reference to function template instantiation 'void QVector<T>::resize(int)' being compiled
+          with
+          [
+              T=QModelIndex
+          ]
+  c:\users\vr\desktop\paraview-v5.3.0-vr\src\vtk\guisupport\qt\vtkQtTreeModelAdapter.h(123): note: see reference to class template instantiation 'QVector<T>' being compiled
+          with
+          [
+              T=QModelIndex
+          ]
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\GUISupport\Qt\vtkQtTreeModelAdapter.cxx(586): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  QVTKOpenGLWidget.cxx
+  moc_QFilterTreeProxyModel.cpp
+  moc_QVTKApplication.cpp
+  moc_QVTKInteractorAdapter.cpp
+  moc_QVTKInteractorInternal.cpp
+  moc_QVTKWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_vtkQtAbstractModelAdapter.cpp
+  moc_vtkQtAnnotationLayersModelAdapter.cpp
+  moc_vtkQtConnection.cpp
+  moc_vtkQtDebugLeaksModel.cpp
+  moc_vtkQtDebugLeaksView.cpp
+  moc_vtkQtTableModelAdapter.cpp
+  moc_vtkQtTreeModelAdapter.cpp
+  moc_QVTKOpenGLWidget.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkGUISupportQt-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkGUISupportQt-pv5.3.exp
+  vtkGUISupportQt.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkGUISupportQt-pv5.3.dll

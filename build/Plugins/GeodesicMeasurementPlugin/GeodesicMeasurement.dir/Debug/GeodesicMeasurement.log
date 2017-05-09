@@ -1,0 +1,26 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/GeodesicMeasurementPlugin/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/GeodesicMeasurementPlugin/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPolyDataGeodesicDistanceClientServer.cxx
+  CS Wrapping - generating vtkFastMarchingGeodesicDistanceClientServer.cxx
+  CS Wrapping - generating vtkFastMarchingGeodesicPathClientServer.cxx
+  CS Wrapping - generating vtkGeodesicsBetweenPointsClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_GeodesicMeasurement.h
+  -- Generate module: GeodesicMeasurement
+  vtkPolyDataGeodesicDistance.cxx
+  vtkFastMarchingGeodesicDistance.cxx
+  vtkFastMarchingGeodesicPath.cxx
+  vtkGeodesicsBetweenPoints.cxx
+  vtkPolyDataGeodesicDistanceClientServer.cxx
+  vtkFastMarchingGeodesicDistanceClientServer.cxx
+  vtkFastMarchingGeodesicPathClientServer.cxx
+  vtkGeodesicsBetweenPointsClientServer.cxx
+  GeodesicMeasurementInit.cxx
+  GeodesicMeasurement_Plugin.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/GeodesicMeasurement.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/GeodesicMeasurement.exp
+  GeodesicMeasurement.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\GeodesicMeasurement.dll

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{68340735-41BF-3AEF-800A-51638E117923}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>PACKAGE</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO\vtkmetaio;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff\vtktiff\libtiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\gl2ps;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\gl2ps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO\vtkmetaio;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff\vtktiff\libtiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\gl2ps;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\gl2ps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO\vtkmetaio;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff\vtktiff\libtiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\gl2ps;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\gl2ps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\GL2PSOpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Color;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Geometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Sources;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\OpenGL2;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\IO\Image;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\DICOMParser;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO\vtkmetaio;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\MetaIO;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\zlib;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jpeg;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\png;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff\vtktiff\libtiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\tiff;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Imaging\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\EncodeString;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\glew;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\gl2ps;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\gl2ps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\0ec300a4ba8ff9579bcc3f5272ad040c\PACKAGE_force.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/0ec300a4ba8ff9579bcc3f5272ad040c/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\CMakeFiles\PACKAGE_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/0ec300a4ba8ff9579bcc3f5272ad040c/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\CMakeFiles\PACKAGE_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/0ec300a4ba8ff9579bcc3f5272ad040c/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\CMakeFiles\PACKAGE_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/0ec300a4ba8ff9579bcc3f5272ad040c/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\CMakeFiles\PACKAGE_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\ALL_BUILD.vcxproj">
+      <Project>8C6B271D-BAEC-30F1-A749-81D065428C6D</Project>
+      <Name>ALL_BUILD</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

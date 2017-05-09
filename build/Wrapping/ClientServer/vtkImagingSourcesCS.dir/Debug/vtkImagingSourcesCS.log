@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkImageCanvasSource2DClientServer.cxx
+  CS Wrapping - generating vtkImageEllipsoidSourceClientServer.cxx
+  CS Wrapping - generating vtkImageGaussianSourceClientServer.cxx
+  CS Wrapping - generating vtkImageGridSourceClientServer.cxx
+  CS Wrapping - generating vtkImageMandelbrotSourceClientServer.cxx
+  CS Wrapping - generating vtkImageNoiseSourceClientServer.cxx
+  CS Wrapping - generating vtkImageSinusoidSourceClientServer.cxx
+  vtkImageCanvasSource2DClientServer.cxx
+  vtkImageEllipsoidSourceClientServer.cxx
+  vtkImageGaussianSourceClientServer.cxx
+  vtkImageGridSourceClientServer.cxx
+  vtkImageMandelbrotSourceClientServer.cxx
+  vtkImageNoiseSourceClientServer.cxx
+  vtkImageSinusoidSourceClientServer.cxx
+  vtkImagingSourcesCSInit.cxx
+  Generating Code...
+  vtkImagingSourcesCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingSourcesCS-pv5.3.lib

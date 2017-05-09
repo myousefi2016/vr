@@ -1,0 +1,82 @@
+
+<html>
+    <head>
+        <title>Arrow</title>
+        <meta name="proxy_name" contents="sources.ArrowSource"/>
+        <meta name="filename" contents="sources.ArrowSource.html"/>
+    </head>
+    <body>
+        <h2>Arrow (ArrowSource)</h2>
+        <i>
+            <p>3D arrow with a long cylindrical shaft and a cone for the tip</p>
+        </i>
+        <div class="description">The Arrow source appends a
+                     cylinder to a cone to form a 3D arrow. The length of the
+                     whole arrow is 1.0 unit. The output of the Arrow source is
+                     polygonal data. This polygonal data will not contain
+                     normals, so rendering of the arrow will be performed using
+                     flat shading. The appearance of the arrow can be improved
+                     without significantly increasing the resolution of the tip
+                     and shaft by generating normals. (Use Normals Generation
+                     filter).</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>TipResolution</th>
+                <td>This property specifies the number of faces in the
+        representation of the tip of the arrow (the cone). As the resolution
+        increases, the cone will become smoother.</td>
+                <td>6<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TipRadius</th>
+                <td>This property specifies the radius of the widest part of
+        the tip of the arrow (the cone).</td>
+                <td>0.1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TipLength</th>
+                <td>This property specifies the length of the
+        tip.</td>
+                <td>0.35<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ShaftResolution</th>
+                <td>This property specifies the number of faces of the shaft
+        of the arrow (the cylinder). As the resolution increases, the cylinder
+        will become smoother.</td>
+                <td>6<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ShaftRadius</th>
+                <td>This property specifies the radius of the shaft of the
+        arrow (the cylinder).</td>
+                <td>0.03<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Invert</th>
+                <td>Inverts the arrow direction.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

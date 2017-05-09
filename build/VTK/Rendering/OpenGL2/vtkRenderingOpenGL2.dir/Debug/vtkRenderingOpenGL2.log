@@ -1,0 +1,141 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/OpenGL2/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Rendering/OpenGL2/CMakeFiles/generate.stamp is up-to-date.
+  Generating vtkDepthOfFieldPassFS.cxx, vtkDepthOfFieldPassFS.h
+  Generating vtkDepthPeelingPassFinalFS.cxx, vtkDepthPeelingPassFinalFS.h
+  Generating vtkDepthPeelingPassIntermediateFS.cxx, vtkDepthPeelingPassIntermediateFS.h
+  Generating vtkEDLBilateralFilterFS.cxx, vtkEDLBilateralFilterFS.h
+  Generating vtkEDLComposeFS.cxx, vtkEDLComposeFS.h
+  Generating vtkEDLShadeFS.cxx, vtkEDLShadeFS.h
+  Generating vtkFXAAFilterFS.cxx, vtkFXAAFilterFS.h
+  Generating vtkGaussianBlurPassFS.cxx, vtkGaussianBlurPassFS.h
+  Generating vtkGaussianBlurPassVS.cxx, vtkGaussianBlurPassVS.h
+  Generating vtkGlyph3DVS.cxx, vtkGlyph3DVS.h
+  Generating vtkPointGaussianVS.cxx, vtkPointGaussianVS.h
+  Generating vtkPointFillPassFS.cxx, vtkPointFillPassFS.h
+  Generating vtkPolyData2DFS.cxx, vtkPolyData2DFS.h
+  Generating vtkPolyData2DVS.cxx, vtkPolyData2DVS.h
+  Generating vtkPolyDataFS.cxx, vtkPolyDataFS.h
+  Generating vtkPolyDataVS.cxx, vtkPolyDataVS.h
+  Generating vtkPolyDataWideLineGS.cxx, vtkPolyDataWideLineGS.h
+  Generating vtkSSAAPassFS.cxx, vtkSSAAPassFS.h
+  Generating vtkSobelGradientMagnitudePass1FS.cxx, vtkSobelGradientMagnitudePass1FS.h
+  Generating vtkSobelGradientMagnitudePass2FS.cxx, vtkSobelGradientMagnitudePass2FS.h
+  Generating vtkSphereMapperVS.cxx, vtkSphereMapperVS.h
+  Generating vtkStickMapperVS.cxx, vtkStickMapperVS.h
+  Generating vtkTextureObjectFS.cxx, vtkTextureObjectFS.h
+  Generating vtkTextureObjectVS.cxx, vtkTextureObjectVS.h
+  vtkRenderingOpenGL2ObjectFactory.cxx
+  vtkCameraPass.cxx
+  vtkClearRGBPass.cxx
+  vtkClearZPass.cxx
+  vtkCompositePolyDataMapper2.cxx
+  vtkDefaultPass.cxx
+  vtkDepthOfFieldPass.cxx
+  vtkDepthImageProcessingPass.cxx
+  vtkDepthPeelingPass.cxx
+  vtkDualDepthPeelingPass.cxx
+  vtkEDLShading.cxx
+  vtkGaussianBlurPass.cxx
+  vtkGenericOpenGLRenderWindow.cxx
+  vtkHiddenLineRemovalPass.cxx
+  vtkImageProcessingPass.cxx
+  vtkLightingMapPass.cxx
+  vtkLightsPass.cxx
+  vtkOpaquePass.cxx
+  vtkOpenGLActor.cxx
+  vtkOpenGLBillboardTextActor3D.cxx
+  Generating Code...
+  Compiling...
+  vtkOpenGLBufferObject.cxx
+  vtkOpenGLCamera.cxx
+  vtkOpenGLFXAAFilter.cxx
+  vtkOpenGLFramebufferObject.cxx
+  vtkOpenGLGL2PSHelper.cxx
+  vtkOpenGLGlyph3DHelper.cxx
+  vtkOpenGLGlyph3DMapper.cxx
+  vtkOpenGLHardwareSelector.cxx
+  vtkOpenGLHelper.cxx
+  vtkOpenGLImageAlgorithmHelper.cxx
+  vtkOpenGLImageMapper.cxx
+  vtkOpenGLImageSliceMapper.cxx
+  vtkOpenGLIndexBufferObject.cxx
+  vtkOpenGLLabeledContourMapper.cxx
+  vtkOpenGLLight.cxx
+  vtkOpenGLPointGaussianMapper.cxx
+  vtkOpenGLPolyDataMapper.cxx
+  vtkOpenGLPolyDataMapper2D.cxx
+  vtkOpenGLProperty.cxx
+  vtkOpenGLRenderPass.cxx
+  Generating Code...
+  Compiling...
+  vtkOpenGLRenderTimer.cxx
+  vtkOpenGLRenderUtilities.cxx
+  vtkOpenGLRenderWindow.cxx
+  vtkOpenGLRenderer.cxx
+  vtkOpenGLShaderCache.cxx
+  vtkOpenGLSphereMapper.cxx
+  vtkOpenGLStickMapper.cxx
+  vtkOpenGLTextActor.cxx
+  vtkOpenGLTextActor3D.cxx
+  vtkOpenGLTextMapper.cxx
+  vtkOpenGLTexture.cxx
+  vtkOpenGLVertexArrayObject.cxx
+  vtkOpenGLVertexBufferObject.cxx
+  vtkOpenGLVertexBufferObjectCache.cxx
+  vtkOpenGLVertexBufferObjectGroup.cxx
+  vtkOverlayPass.cxx
+  vtkPixelBufferObject.cxx
+  vtkPointFillPass.cxx
+  vtkRenderPassCollection.cxx
+  vtkRenderStepsPass.cxx
+  Generating Code...
+  Compiling...
+  vtkRenderbuffer.cxx
+  vtkSSAAPass.cxx
+  vtkSequencePass.cxx
+  vtkShader.cxx
+  vtkShaderProgram.cxx
+  vtkShadowMapBakerPass.cxx
+  vtkShadowMapPass.cxx
+  vtkSobelGradientMagnitudePass.cxx
+  vtkTextureObject.cxx
+  vtkTextureUnitManager.cxx
+  vtkTransformFeedback.cxx
+  vtkTranslucentPass.cxx
+  vtkValuePass.cxx
+  vtkVolumetricPass.cxx
+  vtkDataTransferHelper.cxx
+  vtkDepthOfFieldPassFS.cxx
+  vtkDepthPeelingPassFinalFS.cxx
+  vtkDepthPeelingPassIntermediateFS.cxx
+  vtkEDLBilateralFilterFS.cxx
+  vtkEDLComposeFS.cxx
+  Generating Code...
+  Compiling...
+  vtkEDLShadeFS.cxx
+  vtkFXAAFilterFS.cxx
+  vtkGaussianBlurPassFS.cxx
+  vtkGaussianBlurPassVS.cxx
+  vtkGlyph3DVS.cxx
+  vtkPointGaussianVS.cxx
+  vtkPointFillPassFS.cxx
+  vtkPolyData2DFS.cxx
+  vtkPolyData2DVS.cxx
+  vtkPolyDataFS.cxx
+  vtkPolyDataVS.cxx
+  vtkPolyDataWideLineGS.cxx
+  vtkSSAAPassFS.cxx
+  vtkSobelGradientMagnitudePass1FS.cxx
+  vtkSobelGradientMagnitudePass2FS.cxx
+  vtkSphereMapperVS.cxx
+  vtkStickMapperVS.cxx
+  vtkTextureObjectFS.cxx
+  vtkTextureObjectVS.cxx
+  vtkDummyGPUInfoList.cxx
+  Generating Code...
+  Compiling...
+  vtkWin32RenderWindowInteractor.cxx
+  vtkWin32OpenGLRenderWindow.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingOpenGL2-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingOpenGL2-pv5.3.exp
+  vtkRenderingOpenGL2.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkRenderingOpenGL2-pv5.3.dll

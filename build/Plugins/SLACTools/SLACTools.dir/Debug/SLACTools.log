@@ -1,0 +1,44 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/SLACTools/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/SLACTools/CMakeFiles/generate.stamp is up-to-date.
+  Generating qrc_SLACTools.cpp
+  CS Wrapping - generating vtkPTemporalRangesClientServer.cxx
+  CS Wrapping - generating vtkSLACPlaneGlyphsClientServer.cxx
+  CS Wrapping - generating vtkSamplePlaneSourceClientServer.cxx
+  CS Wrapping - generating vtkTemporalRangesClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_SLACTools.h
+  -- Generate module: SLACToolsSM
+  Generating moc_pqSLACActionGroup.cpp
+  Generating moc_pqSLACDataLoadManager.cpp
+  Generating moc_pqSLACManager.cpp
+  Generating ui_pqSLACActionHolder.h
+  Generating ui_pqSLACDataLoadManager.h
+  Generating moc_pqSLACActionGroupImplementation.cpp
+  Generating moc_SLACTools_Plugin.cpp
+  qrc_SLACTools.cpp
+  vtkPTemporalRanges.cxx
+  vtkSLACPlaneGlyphs.cxx
+  vtkSamplePlaneSource.cxx
+  vtkTemporalRanges.cxx
+  vtkPTemporalRangesClientServer.cxx
+  vtkSLACPlaneGlyphsClientServer.cxx
+  vtkSamplePlaneSourceClientServer.cxx
+  vtkTemporalRangesClientServer.cxx
+  SLACToolsInit.cxx
+  moc_pqSLACActionGroup.cpp
+  moc_pqSLACDataLoadManager.cpp
+  moc_pqSLACManager.cpp
+  pqSLACActionGroupImplementation.cxx
+  moc_pqSLACActionGroupImplementation.cpp
+  pqSLACActionGroup.cxx
+  pqSLACDataLoadManager.cxx
+  pqSLACManager.cxx
+  SLACTools_Plugin.cxx
+  moc_SLACTools_Plugin.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SLACTools.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SLACTools.exp
+  SLACTools.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\SLACTools.dll

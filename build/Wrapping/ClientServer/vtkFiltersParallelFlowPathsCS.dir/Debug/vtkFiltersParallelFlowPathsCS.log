@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPLagrangianParticleTrackerClientServer.cxx
+  CS Wrapping - generating vtkPTemporalStreamTracerClientServer.cxx
+  CS Wrapping - generating vtkPStreamTracerClientServer.cxx
+  CS Wrapping - generating vtkPParticleTracerClientServer.cxx
+  CS Wrapping - generating vtkPParticlePathFilterClientServer.cxx
+  CS Wrapping - generating vtkPStreaklineFilterClientServer.cxx
+  CS Wrapping - generating vtkPParticleTracerBaseClientServer.cxx
+  vtkPLagrangianParticleTrackerClientServer.cxx
+  vtkPTemporalStreamTracerClientServer.cxx
+  vtkPStreamTracerClientServer.cxx
+  vtkPParticleTracerClientServer.cxx
+  vtkPParticlePathFilterClientServer.cxx
+  vtkPStreaklineFilterClientServer.cxx
+  vtkPParticleTracerBaseClientServer.cxx
+  vtkFiltersParallelFlowPathsCSInit.cxx
+  Generating Code...
+  vtkFiltersParallelFlowPathsCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersParallelFlowPathsCS-pv5.3.lib

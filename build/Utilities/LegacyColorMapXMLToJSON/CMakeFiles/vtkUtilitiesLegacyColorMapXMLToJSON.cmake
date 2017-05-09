@@ -1,0 +1,11 @@
+set(vtkUtilitiesLegacyColorMapXMLToJSON_LOADED 1)
+set(vtkUtilitiesLegacyColorMapXMLToJSON_DEPENDS "vtkPVServerManagerRendering")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_LIBRARIES "vtkPVServerManagerRendering")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_INCLUDE_DIRS "${VTK_INSTALL_PREFIX}/include/paraview-5.3")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_LIBRARY_DIRS "")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_RUNTIME_LIBRARY_DIRS "${VTK_INSTALL_PREFIX}/bin")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_WRAP_HIERARCHY_FILE "${CMAKE_CURRENT_LIST_DIR}/vtkUtilitiesLegacyColorMapXMLToJSONHierarchy.txt")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_KIT "")
+set(vtkUtilitiesLegacyColorMapXMLToJSON_EXCLUDE_FROM_WRAPPING 1)
+
+

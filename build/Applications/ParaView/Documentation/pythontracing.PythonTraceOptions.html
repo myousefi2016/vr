@@ -1,0 +1,64 @@
+
+<html>
+    <head>
+        <title>PythonTraceOptions</title>
+        <meta name="proxy_name" contents="pythontracing.PythonTraceOptions"/>
+        <meta name="filename" contents="pythontracing.PythonTraceOptions.html"/>
+    </head>
+    <body>
+        <h2>PythonTraceOptions (PythonTraceOptions)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">
+        Options proxy used to prompt user for tracing options when starting trace.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>PropertiesToTraceOnCreate</th>
+                <td>
+          Select which properties to save in trace
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>all properties (0)</li>
+                            <li>any <i>modified</i> properties (1)</li>
+                            <li>only <i>user-modified</i> properites (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>FullyTraceSupplementalProxies</th>
+                <td>
+          Fully trace supplemental objects, such as color maps, color bars, etc.
+          when accessed the first time in trace.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ShowIncrementalTrace</th>
+                <td>
+            Show trace as it is being generated.
+          </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

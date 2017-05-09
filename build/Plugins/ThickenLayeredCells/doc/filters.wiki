@@ -1,0 +1,57 @@
+
+==Thicken Layered Cells==
+
+
+Filter to thicken cells in layers using average thickeness along edges between layers.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''Input''' (Input)
+|
+
+|
+
+|
+Accepts input of following types:
+* vtkDataSet
+The dataset must contain a field array (cell)
+
+with 1 component(s).
+
+|-
+|'''Thickness''' (SelectThickness)
+|
+Select the 'thickness' array.
+|
+0
+|
+An array of scalars is required.
+|-
+|'''Layer''' (SelectLayer)
+|
+Select the 'layer' array.
+|
+1
+|
+An array of scalars is required.
+|-
+|'''EnableThickening''' (EnableThickening)
+|
+
+Enable/disable thickening. When disabled, the filter simply acts as a
+pass-through.
+
+|
+1
+|
+Accepts boolean values (0 or 1).
+
+|}
+

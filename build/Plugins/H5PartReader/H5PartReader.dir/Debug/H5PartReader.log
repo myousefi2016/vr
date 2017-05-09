@@ -1,0 +1,28 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/H5PartReader/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/H5PartReader/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkH5PartReaderClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_H5PartReader.h
+  -- Generate module: H5PartServerManager
+  vtkH5PartReader.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\vtkH5PartReader.cxx(317): warning C4189: 'NeedToReadInformation': local variable is initialized but not referenced
+  vtkH5PartReaderClientServer.cxx
+  H5PartReaderInit.cxx
+  H5Part.c
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(795): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(929): warning C4244: '=': conversion from 'ssize_t' to 'herr_t', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(1792): warning C4100: 'dataset': unreferenced formal parameter
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(2437): warning C4100: 'funcname': unreferenced formal parameter
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(2496): warning C4100: 'unused': unreferenced formal parameter
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\H5PartReader\H5Part\src\H5Part.c(2506): warning C4100: 'f': unreferenced formal parameter
+  H5Block.c
+  H5PartReader_Plugin.cxx
+  Generating Code...
+c:\users\vr\desktop\paraview-v5.3.0-vr\src\plugins\h5partreader\h5part\src\h5block.c(526): warning C4701: potentially uninitialized local variable 'p_best' used
+c:\users\vr\desktop\paraview-v5.3.0-vr\src\plugins\h5partreader\h5part\src\h5block.c(527): warning C4701: potentially uninitialized local variable 'q_best' used
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/H5PartReader.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/H5PartReader.exp
+  H5PartReader.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\H5PartReader.dll

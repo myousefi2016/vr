@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVComparativeAnimationCue.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVComparativeView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVRepresentedArrayListSettings.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMBagChartSeriesListDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMBoxRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMCameraLink.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMCameraProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartSeriesListDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartSeriesSelectionDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartUseIndexForAxisDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeAnimationCueProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeAnimationCueUndoElement.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMContextViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMDataDeliveryManager.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMFunctionalBagChartSeriesSelectionDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMImplicitPlaneRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMMultiSliceViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMNewWidgetRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMOrthographicSliceViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMPlotMatrixViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMPVRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRenderViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentationTypeDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentedArrayListDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMScalarBarWidgetRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMSelectionHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMSpreadSheetRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTextWidgetRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionManager.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionPresets.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMUtilities.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewLayoutProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewProxyInteractorHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMWidgetRepresentationProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMParaViewPipelineControllerWithRendering.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRenderingObjectFactory.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionPresetsBuiltin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVComparativeAnimationCue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVComparativeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkPVRepresentedArrayListSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMBagChartSeriesListDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMBoxRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMCameraLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMCameraProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartSeriesListDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartSeriesSelectionDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMChartUseIndexForAxisDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeAnimationCueProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeAnimationCueUndoElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMComparativeViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMContextViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMDataDeliveryManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMFunctionalBagChartSeriesSelectionDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMImplicitPlaneRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMMultiSliceViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMNewWidgetRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMOrthographicSliceViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMPlotMatrixViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMPVRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRenderViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentationTypeDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMRepresentedArrayListDomain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMScalarBarWidgetRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMSelectionHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMSpreadSheetRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTextWidgetRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionPresets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMTransferFunctionProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewLayoutProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMViewProxyInteractorHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMWidgetRepresentationProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\vtkSMParaViewPipelineControllerWithRendering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRenderingObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRenderingModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Rendering\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\913c250381b7757e90339b33d4baed08\vtkSMTransferFunctionPresetsBuiltin.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BB222BB1-D941-316E-B7B3-B665F064E495}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkContourValuesClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFunctionParserClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkHeapClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkCommonMiscCSInit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Wrapping\ClientServer\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc\vtkContourValues.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc\vtkFunctionParser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc\vtkHeap.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

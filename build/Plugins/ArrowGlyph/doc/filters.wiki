@@ -1,0 +1,157 @@
+
+==ArrowGlyphFilter==
+
+A customized Glyph filter for arrows only
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''Input''' (Input)
+|
+
+This property specifies the input to the filter.
+This is the dataset to which the glyphs will be applied.
+
+|
+
+|
+Accepts input of following types:
+* vtkDataSet
+The dataset must contain a field array ()
+
+The dataset must contain a field array (point)
+
+with 3 component(s).
+
+The dataset must contain a field array (point)
+
+with 1 component(s).
+
+|-
+|'''ArrowSourceObject''' (ArrowSourceObject)
+|
+
+|
+
+|
+The value can be one of the following:
+* ArrowSource (sources)
+
+|-
+|'''Orientation''' (OrientationVectorArray)
+|
+
+This (mandatory) property indicates the name of the Velocity array.
+
+|
+direction
+|
+An array of vectors is required.
+|-
+|'''ScaleByOrientationVectorMagnitude''' (ScaleByOrientationVectorMagnitude)
+|
+
+Apply a scaling accroding to the vector magnitude
+
+|
+1
+|
+Accepts boolean values (0 or 1).
+|-
+|'''Scaling Array''' (ScaleArray)
+|
+
+The array to use for scaling glyphs
+
+|
+Scale
+|
+
+|-
+|'''ScaleFactor''' (ScaleFactor)
+|
+
+Apply a fixed scale to the glyphs
+
+|
+1.0
+|
+
+|-
+|'''Shaft Radius Scaling Array''' (ShaftRadiusArray)
+|
+
+The array to use for scaling shaft radius
+
+|
+Scale
+|
+
+|-
+|'''ShaftRadiusFactor''' (ShaftRadiusFactor)
+|
+
+Apply a fixed scale to the shaft radius
+
+|
+1.0
+|
+
+|-
+|'''Tip Radius Scaling Array''' (TipRadiusArray)
+|
+
+The array to use for scaling tip radius
+
+|
+Scale
+|
+
+|-
+|'''TipRadiusFactor''' (TipRadiusFactor)
+|
+
+Apply a fixed scale to the tip radius
+
+|
+1.0
+|
+
+|-
+|'''Maximum Number of Points''' (MaximumNumberOfPoints)
+|
+
+The value of this property specifies the maximum number of glyphs that should appear in the output dataset if the value of the UseMaskPoints property is 1. (See the UseMaskPoints property.)
+
+|
+5000
+|
+
+|-
+|'''Mask Points''' (UseMaskPoints)
+|
+
+If the value of this property is set to 1, limit the maximum number of glyphs to the value indicated by MaximumNumberOfPoints. (See the MaximumNumberOfPoints property.)
+
+|
+1
+|
+Accepts boolean values (0 or 1).
+|-
+|'''RandomMode''' (RandomMode)
+|
+
+If the value of this property is 1, then the points to glyph are chosen randomly. Otherwise the point ids chosen are evenly spaced.
+
+|
+1
+|
+Accepts boolean values (0 or 1).
+
+|}
+

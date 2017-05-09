@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAMRDataSetCacheClientServer.cxx
+  CS Wrapping - generating vtkAMRBaseParticlesReaderClientServer.cxx
+  CS Wrapping - generating vtkAMRBaseReaderClientServer.cxx
+  CS Wrapping - generating vtkAMREnzoParticlesReaderClientServer.cxx
+  CS Wrapping - generating vtkAMREnzoReaderClientServer.cxx
+  CS Wrapping - generating vtkAMRFlashParticlesReaderClientServer.cxx
+  CS Wrapping - generating vtkAMRFlashReaderClientServer.cxx
+  vtkAMRDataSetCacheClientServer.cxx
+  vtkAMRBaseParticlesReaderClientServer.cxx
+  vtkAMRBaseReaderClientServer.cxx
+  vtkAMREnzoParticlesReaderClientServer.cxx
+  vtkAMREnzoReaderClientServer.cxx
+  vtkAMRFlashParticlesReaderClientServer.cxx
+  vtkAMRFlashReaderClientServer.cxx
+  vtkIOAMRCSInit.cxx
+  Generating Code...
+  vtkIOAMRCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOAMRCS-pv5.3.lib

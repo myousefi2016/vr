@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{5F5A406C-C1D7-396C-80B6-134422042406}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkCommonMath</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonMath.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonMath-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonMath.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonMath-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkCommonMath.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkCommonMath-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkCommonMath.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkCommonMath-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Debug";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Debug\";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Debug\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonMath-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Debug/vtkCommonMath-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Release";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Release\";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Release/vtkCommonMath-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Release/vtkCommonMath-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="MinSizeRel";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"MinSizeRel\";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/MinSizeRel/vtkCommonMath-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/MinSizeRel/vtkCommonMath-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="RelWithDebInfo";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"RelWithDebInfo\";vtkCommonMath_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/RelWithDebInfo/vtkCommonMath-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/RelWithDebInfo/vtkCommonMath-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Math/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Math/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Math/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Math/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkQuaternion.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkTuple.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkQuaternion.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkAmoebaMinimizer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkFunctionSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkInitialValueProblemSolver.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkMatrix3x3.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkMatrix4x4.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkPolynomialSolversUnivariate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkQuaternionInterpolator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta2.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta4.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta45.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMathModule.h" />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkAmoebaMinimizer.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkFunctionSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkInitialValueProblemSolver.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkMatrix3x3.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkMatrix4x4.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkPolynomialSolversUnivariate.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkQuaternionInterpolator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta2.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta4.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math\vtkRungeKutta45.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj">
+      <Project>3074005B-6375-37F2-A7B8-1F80273A9F92</Project>
+      <Name>vtkCommonCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

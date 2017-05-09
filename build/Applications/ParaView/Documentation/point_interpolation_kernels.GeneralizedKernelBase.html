@@ -1,0 +1,63 @@
+
+<html>
+    <head>
+        <title>GeneralizedKernelBase</title>
+        <meta name="proxy_name" contents="point_interpolation_kernels.GeneralizedKernelBase"/>
+        <meta name="filename" contents="point_interpolation_kernels.GeneralizedKernelBase.html"/>
+    </head>
+    <body>
+        <h2>GeneralizedKernelBase (GeneralizedKernelBase)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>KernelFootprint</th>
+                <td>
+          Specify the interpolation basis style. By default, a Radius style is
+          used (i.e., the basis is defined from all points within a specified
+          radius). However, it is also possible to select the N closest points
+          (N Closest). Note that in most formulations the Radius style is assumed
+          as it provides better mathematical properties. However, for convenience
+          some bases are easier to use when the N closest points are taken.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Radius (0)</li>
+                            <li>N Closest (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Radius</th>
+                <td>
+          If the interpolation basis style is Radius, then this method specifies
+          the radius within which the basis points must lie.
+        </td>
+                <td>1.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>NumberOfPoints</th>
+                <td>
+          If the interpolation basis style is N Closest, then this method specifies
+          the number of the closest points used to form the interpolation basis.
+        </td>
+                <td>8<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

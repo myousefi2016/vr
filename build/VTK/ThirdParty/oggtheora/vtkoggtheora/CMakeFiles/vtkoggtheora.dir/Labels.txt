@@ -1,0 +1,33 @@
+# Target labels
+ vtkoggtheora
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libogg-1.1.4/src/framing.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libogg-1.1.4/src/bitwise.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/analyze.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/apiwrapper.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/bitpack.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/decapiwrapper.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/decinfo.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/decode.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/dequant.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/encapiwrapper.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/encfrag.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/encinfo.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/encode.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/enquant.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/fdct.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/fragment.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/huffdec.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/huffenc.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/idct.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/info.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/internal.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/mathops.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/mcenc.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/quant.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/rate.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/state.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/libtheora-1.1.1/lib/tokenize.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/vtkoggtheora.def
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/vtkoggtheora.rc
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/oggtheora/vtkoggtheora/CMakeLists.txt

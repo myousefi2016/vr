@@ -1,0 +1,95 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCompleteArraysClientServer.cxx
+  CS Wrapping - generating vtkMPIMToNSocketConnectionClientServer.cxx
+  CS Wrapping - generating vtkMPIMToNSocketConnectionPortInformationClientServer.cxx
+  CS Wrapping - generating vtkNetworkAccessManagerClientServer.cxx
+  CS Wrapping - generating vtkPConvertSelectionClientServer.cxx
+  CS Wrapping - generating vtkProcessModuleClientServer.cxx
+  CS Wrapping - generating vtkPVAlgorithmPortsInformationClientServer.cxx
+  CS Wrapping - generating vtkPVArrayInformationClientServer.cxx
+  CS Wrapping - generating vtkPVClassNameInformationClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeDataInformationClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeDataInformationIteratorClientServer.cxx
+  CS Wrapping - generating vtkPVDataInformationClientServer.cxx
+  CS Wrapping - generating vtkPVDataInformationHelperClientServer.cxx
+  CS Wrapping - generating vtkPVDataSetAttributesInformationClientServer.cxx
+  CS Wrapping - generating vtkPVDataSizeInformationClientServer.cxx
+  CS Wrapping - generating vtkPVDisableStackTraceSignalHandlerClientServer.cxx
+  CS Wrapping - generating vtkPVEnableStackTraceSignalHandlerClientServer.cxx
+  CS Wrapping - generating vtkPVExtractSelectionClientServer.cxx
+  CS Wrapping - generating vtkPVExtractArraysOverTimeClientServer.cxx
+  CS Wrapping - generating vtkPVFileInformationHelperClientServer.cxx
+  CS Wrapping - generating vtkPVGenericAttributeInformationClientServer.cxx
+  CS Wrapping - generating vtkPVInformationClientServer.cxx
+  CS Wrapping - generating vtkPVMemoryUseInformationClientServer.cxx
+  CS Wrapping - generating vtkPVMultiClientsInformationClientServer.cxx
+  CS Wrapping - generating vtkPVOptionsClientServer.cxx
+  CS Wrapping - generating vtkPVPluginLoaderClientServer.cxx
+  CS Wrapping - generating vtkPVPluginsInformationClientServer.cxx
+  CS Wrapping - generating vtkPVPluginTrackerClientServer.cxx
+  CS Wrapping - generating vtkPVProgressHandlerClientServer.cxx
+  CS Wrapping - generating vtkPVPythonInformationClientServer.cxx
+  CS Wrapping - generating vtkPVPythonModuleClientServer.cxx
+  CS Wrapping - generating vtkPVPythonOptionsClientServer.cxx
+  CS Wrapping - generating vtkPVServerInformationClientServer.cxx
+  CS Wrapping - generating vtkPVSessionClientServer.cxx
+  CS Wrapping - generating vtkPVSILInformationClientServer.cxx
+  CS Wrapping - generating vtkPVSystemConfigInformationClientServer.cxx
+  CS Wrapping - generating vtkPVSystemInformationClientServer.cxx
+  CS Wrapping - generating vtkPVTemporalDataInformationClientServer.cxx
+  CS Wrapping - generating vtkPVTimerInformationClientServer.cxx
+  CS Wrapping - generating vtkSessionClientServer.cxx
+  CS Wrapping - generating vtkSessionIteratorClientServer.cxx
+  CS Wrapping - generating vtkTCPNetworkAccessManagerClientServer.cxx
+  CS Wrapping - generating vtkEnvironmentAnnotationFilterClientServer.cxx
+  vtkCompleteArraysClientServer.cxx
+  vtkMPIMToNSocketConnectionClientServer.cxx
+  vtkMPIMToNSocketConnectionPortInformationClientServer.cxx
+  vtkNetworkAccessManagerClientServer.cxx
+  vtkPConvertSelectionClientServer.cxx
+  vtkProcessModuleClientServer.cxx
+  vtkPVAlgorithmPortsInformationClientServer.cxx
+  vtkPVArrayInformationClientServer.cxx
+  vtkPVClassNameInformationClientServer.cxx
+  vtkPVCompositeDataInformationClientServer.cxx
+  vtkPVCompositeDataInformationIteratorClientServer.cxx
+  vtkPVDataInformationClientServer.cxx
+  vtkPVDataInformationHelperClientServer.cxx
+  vtkPVDataSetAttributesInformationClientServer.cxx
+  vtkPVDataSizeInformationClientServer.cxx
+  vtkPVDisableStackTraceSignalHandlerClientServer.cxx
+  vtkPVEnableStackTraceSignalHandlerClientServer.cxx
+  vtkPVExtractSelectionClientServer.cxx
+  vtkPVExtractArraysOverTimeClientServer.cxx
+  vtkPVFileInformationHelperClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVGenericAttributeInformationClientServer.cxx
+  vtkPVInformationClientServer.cxx
+  vtkPVMemoryUseInformationClientServer.cxx
+  vtkPVMultiClientsInformationClientServer.cxx
+  vtkPVOptionsClientServer.cxx
+  vtkPVPluginLoaderClientServer.cxx
+  vtkPVPluginsInformationClientServer.cxx
+  vtkPVPluginTrackerClientServer.cxx
+  vtkPVProgressHandlerClientServer.cxx
+  vtkPVPythonInformationClientServer.cxx
+  vtkPVPythonModuleClientServer.cxx
+  vtkPVPythonOptionsClientServer.cxx
+  vtkPVServerInformationClientServer.cxx
+  vtkPVSessionClientServer.cxx
+  vtkPVSILInformationClientServer.cxx
+  vtkPVSystemConfigInformationClientServer.cxx
+  vtkPVSystemInformationClientServer.cxx
+  vtkPVTemporalDataInformationClientServer.cxx
+  vtkPVTimerInformationClientServer.cxx
+  vtkSessionClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSessionIteratorClientServer.cxx
+  vtkTCPNetworkAccessManagerClientServer.cxx
+  vtkEnvironmentAnnotationFilterClientServer.cxx
+  vtkPVClientServerCoreCoreCSInit.cxx
+  Generating Code...
+  vtkPVClientServerCoreCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVClientServerCoreCoreCS-pv5.3.lib

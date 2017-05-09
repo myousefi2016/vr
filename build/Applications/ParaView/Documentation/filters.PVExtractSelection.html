@@ -1,0 +1,61 @@
+
+<html>
+    <head>
+        <title>Extract Selection (internal)</title>
+        <meta name="proxy_name" contents="filters.PVExtractSelection"/>
+        <meta name="filename" contents="filters.PVExtractSelection.html"/>
+    </head>
+    <body>
+        <h2>Extract Selection (internal) (PVExtractSelection)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">
+        This filter extracts a given set of cells or points given
+        a selection. The selection can be obtained from a rubber-band selection
+        (either point, cell, visible or in a frustum) and passed to the filter or
+        specified by providing an ID list. This is an internal filter, use
+        "ExtractSelection" instead.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>
+          The input from which the selection is
+          extracted.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Selection</th>
+                <td>
+          The input that provides the selection
+          object.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkSelection</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

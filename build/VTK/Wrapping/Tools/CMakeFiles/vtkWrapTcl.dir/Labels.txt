@@ -1,0 +1,5 @@
+# Target labels
+ vtkWrappingTools
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapTcl.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/CMakeLists.txt

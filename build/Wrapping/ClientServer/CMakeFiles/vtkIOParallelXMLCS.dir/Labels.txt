@@ -1,0 +1,29 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPDataSetWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPImageDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPPolyDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPRectilinearGridWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPStructuredDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPStructuredGridWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPUnstructuredDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPUnstructuredGridWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPHierarchicalBoxDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPMultiBlockDataWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkXMLPUniformGridAMRWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIOParallelXMLCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPDataSetWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPImageDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPPolyDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPRectilinearGridWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPStructuredDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPStructuredGridWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPUnstructuredDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPUnstructuredGridWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPHierarchicalBoxDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPMultiBlockDataWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/vtkXMLPUniformGridAMRWriter.h

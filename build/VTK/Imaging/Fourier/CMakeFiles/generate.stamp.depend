@@ -1,0 +1,18 @@
+# CMake generation dependency list for this directory.
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/module.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonCore.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkkwiml.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtksys.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonDataModel.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonMath.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonMisc.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonSystem.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonTransforms.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkCommonExecutionModel.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtkImagingCore.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkexportheader.cmake.in
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/module.cmake
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkModuleInfo.cmake.in
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkModuleInfo.cmake.in
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkModuleHeaders.cmake.in

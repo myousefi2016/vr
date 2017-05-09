@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/verdict/vtkverdict/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/verdict/vtkverdict/CMakeFiles/generate.stamp is up-to-date.
+  V_EdgeMetric.cpp
+  V_GaussIntegration.cpp
+  V_HexMetric.cpp
+  V_KnifeMetric.cpp
+  V_PyramidMetric.cpp
+  V_QuadMetric.cpp
+  V_TetMetric.cpp
+  V_TriMetric.cpp
+  VerdictVector.cpp
+  V_WedgeMetric.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkverdict-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkverdict-pv5.3.exp
+  verdict.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkverdict-pv5.3.dll

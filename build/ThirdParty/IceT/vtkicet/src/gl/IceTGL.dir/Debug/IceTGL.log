@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/src/gl/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/src/gl/CMakeFiles/generate.stamp is up-to-date.
+  gl_state.c
+  gl_draw.c
+  gl_image.c
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTGL.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTGL.exp
+  IceTGL.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\IceTGL.dll

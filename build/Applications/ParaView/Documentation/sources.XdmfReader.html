@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+        <title>XDMF Reader</title>
+        <meta name="proxy_name" contents="sources.XdmfReader"/>
+        <meta name="filename" contents="sources.XdmfReader.html"/>
+    </head>
+    <body>
+        <h2>XDMF Reader (XdmfReader)</h2>
+        <i>
+            <p>Reads XDMF (eXtensible Data Model and Format) files.</p>
+        </i>
+        <div class="description">The XDMF reader reads
+                     files in XDMF format. The expected file extension is .xmf.
+                     Metadata is stored in the XDMF file using an XML format,
+                     and large attribute arrays are stored in a corresponding
+                     HDF5 file. The output may be unstructured grid, structured
+                     grid, or rectiliner grid. See http://www.xdmf.org for a
+                     description of the file format.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileNameInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FileNames</th>
+                <td>The list of files to be read by the
+        reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

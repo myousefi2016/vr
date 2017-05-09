@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title>DICOM Reader (directory)</title>
+        <meta name="proxy_name" contents="sources.DICOMReader"/>
+        <meta name="filename" contents="sources.DICOMReader.html"/>
+    </head>
+    <body>
+        <h2>DICOM Reader (directory) (DICOMReader)</h2>
+        <i>
+            <p>Reads DICOM regular rectilinear grid data from a directory containing a file.</p>
+        </i>
+        <div class="description">
+        DICOM is a file format often used in medical imaging. This version
+        of the reader will look at all files in the same directory of the
+        selected file and load them as planes of the same data set. It is
+        typically for 3D medical scanners to store planes as set of files
+        in a directory.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>
+          A file in the directory of files to be loaded. The DICOM reader
+          will actually load all valid DICOM files in the same directory as
+          this file as part of the same dataset. This is typical of how
+          DICOM files are often stored.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

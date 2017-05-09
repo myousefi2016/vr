@@ -1,0 +1,32 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Utilities/MetaIO/vtkmetaio/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Utilities/MetaIO/vtkmetaio/CMakeFiles/generate.stamp is up-to-date.
+  metaUtils.cxx
+  metaArrow.cxx
+  metaBlob.cxx
+  metaCommand.cxx
+  metaContour.cxx
+  metaDTITube.cxx
+  metaEllipse.cxx
+  metaGroup.cxx
+  metaGaussian.cxx
+  metaImage.cxx
+  metaImageUtils.cxx
+  metaLandmark.cxx
+  metaLine.cxx
+  metaMesh.cxx
+  metaObject.cxx
+  metaOutput.cxx
+  metaScene.cxx
+  metaSurface.cxx
+  metaTube.cxx
+  metaVesselTube.cxx
+  Generating Code...
+  Compiling...
+  metaTransform.cxx
+  metaTubeGraph.cxx
+  metaForm.cxx
+  metaArray.cxx
+  metaFEMObject.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkmetaio-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkmetaio-pv5.3.exp
+  vtkmetaio.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkmetaio-pv5.3.dll

@@ -1,0 +1,11 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCellQualityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMatrixMathFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMeshQualityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFiltersVerdictCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Verdict/vtkCellQuality.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Verdict/vtkMatrixMathFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Verdict/vtkMeshQuality.h

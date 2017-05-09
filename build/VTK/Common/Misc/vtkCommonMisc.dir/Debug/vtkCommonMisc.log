@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Misc/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Misc/CMakeFiles/generate.stamp is up-to-date.
+  vtkContourValues.cxx
+  vtkErrorCode.cxx
+  vtkFunctionParser.cxx
+  vtkHeap.cxx
+  vtkPolygonBuilder.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonMisc-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonMisc-pv5.3.exp
+  vtkCommonMisc.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkCommonMisc-pv5.3.dll

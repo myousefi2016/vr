@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <title>PPLYWriter</title>
+        <meta name="proxy_name" contents="writers.PPLYWriter"/>
+        <meta name="filename" contents="writers.PPLYWriter.html"/>
+    </head>
+    <body>
+        <h2>PPLYWriter (PPLYWriter)</h2>
+        <i>
+            <p>Write polygonal data in Stanford University PLY format.</p>
+        </i>
+        <div class="description">
+      Writer to write polygonal data in Stanford University PLY format. The
+      data can be written in either binary (little or big endian) or ASCII
+      representation. As for PointData and CellData, vtkPLYWriter cannot handle
+      normals or vectors. It only handles RGB PointData and CellData. This
+      version is used when running in parallel. It gathers data to first node
+      and saves one file.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>The input filter/source whose output dataset is to
+        written to the file.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPolyData</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>The name of the file to be written.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkDirectionEncoderClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkEncodedGradientEstimatorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkEncodedGradientShaderClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFiniteDifferenceGradientEstimatorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointRayCastImageClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastCompositeGOHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastCompositeGOShadeHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastCompositeHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastCompositeShadeHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastMIPHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFixedPointVolumeRayCastMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkGPUVolumeRayCastMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkOSPRayVolumeInterfaceClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkProjectedTetrahedraMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkRayCastImageDisplayHelperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkRecursiveSphereDirectionEncoderClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkSphericalDirectionEncoderClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridBunykRayCastFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridHomogeneousRayIntegratorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridLinearRayIntegratorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridPartialPreIntegrationClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridPreIntegrationClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeRayCastFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeRayCastIteratorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeRayCastMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeRayIntegratorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkUnstructuredGridVolumeZSweepMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeOutlineSourceClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumePickerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastCompositeFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastIsosurfaceFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastMIPFunctionClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastMapperClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkVolumeRayCastSpaceLeapingImageFilterClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkRenderingVolumeCSInit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Wrapping\ClientServer\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkDirectionEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkEncodedGradientEstimator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkEncodedGradientShader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFiniteDifferenceGradientEstimator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointRayCastImage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastCompositeGOHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastCompositeGOShadeHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastCompositeHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastCompositeShadeHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastMIPHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkFixedPointVolumeRayCastMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkGPUVolumeRayCastMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkOSPRayVolumeInterface.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkProjectedTetrahedraMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkRayCastImageDisplayHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkRecursiveSphereDirectionEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkSphericalDirectionEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridBunykRayCastFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridHomogeneousRayIntegrator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridLinearRayIntegrator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridPartialPreIntegration.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridPreIntegration.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeRayCastFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeRayCastIterator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeRayCastMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeRayIntegrator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkUnstructuredGridVolumeZSweepMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeOutlineSource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumePicker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastCompositeFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastIsosurfaceFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastMIPFunction.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastMapper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Rendering\Volume\vtkVolumeRayCastSpaceLeapingImageFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

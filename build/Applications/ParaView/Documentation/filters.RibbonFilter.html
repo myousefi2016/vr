@@ -1,0 +1,137 @@
+
+<html>
+    <head>
+        <title>Ribbon</title>
+        <meta name="proxy_name" contents="filters.RibbonFilter"/>
+        <meta name="filename" contents="filters.RibbonFilter.html"/>
+    </head>
+    <body>
+        <h2>Ribbon (RibbonFilter)</h2>
+        <i>
+            <p>This filter generates ribbon surface from lines.  It is useful for displaying streamlines.</p>
+        </i>
+        <div class="description">The Ribbon
+                     filter creates ribbons from the lines in the input data
+                     set. This filter is useful for visualizing streamlines.
+                     Both the input and output of this filter are polygonal
+                     data. The input data set must also have at least one
+                     point-centered vector array.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Ribbon
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPolyData</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 3 component(s).
+      </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scalars</th>
+                <td>The value of this property indicates the name of the
+        input scalar array used by this filter. The width of the ribbons will
+        be varied based on the values in the specified array if the value of
+        the Width property is 1.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Vectors</th>
+                <td>The value of this property indicates the name of the
+        input vector array used by this filter. If the UseDefaultNormal
+        property is set to 0, the normal vectors for the ribbons come from the
+        specified vector array.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>An array of vectors is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td>If the VaryWidth property is set to 1, the value of this
+        property is the minimum ribbon width. If the VaryWidth property is set
+        to 0, the value of this property is half the width of the
+        ribbon.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>
+  The value must be less than the largest dimension of the
+  dataset multiplied by a scale factor of
+  0.01.
+  </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Angle</th>
+                <td>The value of this property specifies the offset angle
+        (in degrees) of the ribbon from the line normal.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UseDefaultNormal</th>
+                <td>If this property is set to 0, and the input contains no
+        vector array, then default ribbon normals will be generated
+        (DefaultNormal property); if a vector array has been set
+        (SelectInputVectors property), the ribbon normals will be set from the
+        specified array. If this property is set to 1, the default normal
+        (DefaultNormal property) will be used, regardless of whether the
+        SelectInputVectors property has been set.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>DefaultNormal</th>
+                <td>The value of this property specifies the normal to use
+        when the UseDefaultNormal property is set to 1 or the input contains no
+        vector array (SelectInputVectors property).</td>
+                <td>0 0 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>VaryWidth</th>
+                <td>If this property is set to 1, the ribbon width will be
+        scaled according to the scalar array specified in the
+        SelectInputScalars property. Toggle the variation of ribbon width with
+        scalar value.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

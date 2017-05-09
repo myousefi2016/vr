@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <title>Parallel NetCDF POP reader</title>
+        <meta name="proxy_name" contents="sources.PNetCDFPOPReader"/>
+        <meta name="filename" contents="sources.PNetCDFPOPReader.html"/>
+    </head>
+    <body>
+        <h2>Parallel NetCDF POP reader (PNetCDFPOPReader)</h2>
+        <i>
+            <p>Reads rectilinear grid data from a NetCDF POP file in parallel.</p>
+        </i>
+        <div class="description">
+      The reader reads regular rectilinear grid (image/volume) data from a
+      NetCDF file. Only a subset of the processes actually read the file and
+      these processes communicate the data to other processes.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileNameInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>The list of files to be read by the
+        reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

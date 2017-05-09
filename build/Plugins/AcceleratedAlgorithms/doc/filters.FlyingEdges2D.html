@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>Flying Edges 2D</title>
+        <meta name="proxy_name" contents="filters.FlyingEdges2D"/>
+        <meta name="filename" contents="filters.FlyingEdges2D.html"/>
+    </head>
+    <body>
+        <h2>Flying Edges 2D (FlyingEdges2D)</h2>
+        <i>
+            <p>Generates isoline(s) from a structured grid.</p>
+        </i>
+        <div class="description">
+        Generates isoline(s) from a structured grid. It implements the
+        algorithm in: Flying Edges: A High-Performance Scalable
+        Isocontouring Algorithm by Schroeder, Maynard, Geveci.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input dataset to be used by
+        the contour filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Contour By</th>
+                <td>This property specifies the name of the scalar array
+        from which the contour filter will compute isolines and/or
+        isosurfaces.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Isosurfaces</th>
+                <td>This property specifies the values at which to compute
+        isosurfaces/isolines and also the number of such
+        values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value must lie within the range of the selected data array.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

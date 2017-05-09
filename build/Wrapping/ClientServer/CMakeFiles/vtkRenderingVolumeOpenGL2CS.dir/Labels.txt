@@ -1,0 +1,15 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkMultiBlockVolumeMapperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkOpenGLGPUVolumeRayCastMapperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkOpenGLProjectedTetrahedraMapperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkOpenGLRayCastImageDisplayHelperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkSmartVolumeMapperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRenderingVolumeOpenGL2CSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/VolumeOpenGL2/vtkMultiBlockVolumeMapper.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/VolumeOpenGL2/vtkOpenGLGPUVolumeRayCastMapper.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/VolumeOpenGL2/vtkOpenGLProjectedTetrahedraMapper.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/VolumeOpenGL2/vtkOpenGLRayCastImageDisplayHelper.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/VolumeOpenGL2/vtkSmartVolumeMapper.h

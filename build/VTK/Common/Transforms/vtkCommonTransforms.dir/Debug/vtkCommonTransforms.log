@@ -1,0 +1,21 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Transforms/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Transforms/CMakeFiles/generate.stamp is up-to-date.
+  vtkAbstractTransform.cxx
+  vtkCylindricalTransform.cxx
+  vtkGeneralTransform.cxx
+  vtkHomogeneousTransform.cxx
+  vtkIdentityTransform.cxx
+  vtkLinearTransform.cxx
+  vtkMatrixToHomogeneousTransform.cxx
+  vtkMatrixToLinearTransform.cxx
+  vtkPerspectiveTransform.cxx
+  vtkSphericalTransform.cxx
+  vtkThinPlateSplineTransform.cxx
+  vtkTransform2D.cxx
+  vtkTransformCollection.cxx
+  vtkTransform.cxx
+  vtkWarpTransform.cxx
+  vtkLandmarkTransform.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonTransforms-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonTransforms-pv5.3.exp
+  vtkCommonTransforms.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkCommonTransforms-pv5.3.dll

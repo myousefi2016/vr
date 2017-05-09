@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkAbstractInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkAMRInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkCachingInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkCellLocatorInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkCompositeInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkLagrangianParticleTrackerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkLagrangianBasicIntegrationModelClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkLagrangianMatidaIntegrationModelClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkModifiedBSPTreeClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkParticlePathFilterClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkParticleTracerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkParticleTracerBaseClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreaklineFilterClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreamTracerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkTemporalInterpolatedVelocityFieldClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkTemporalStreamTracerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkDashedStreamLineClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreamLineClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreamPointsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreamerClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFiltersFlowPathsCSInit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Wrapping\ClientServer\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkAbstractInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkAMRInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkCachingInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkCellLocatorInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkCompositeInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkLagrangianParticleTracker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkLagrangianBasicIntegrationModel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkLagrangianMatidaIntegrationModel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkModifiedBSPTree.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkParticlePathFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkParticleTracer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkParticleTracerBase.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkStreaklineFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkStreamTracer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkTemporalInterpolatedVelocityField.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkTemporalStreamTracer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkDashedStreamLine.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkStreamLine.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkStreamPoints.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\FlowPaths\vtkStreamer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

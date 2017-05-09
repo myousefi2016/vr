@@ -1,0 +1,81 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAggregateDataSetFilterClientServer.cxx
+  CS Wrapping - generating vtkAngularPeriodicFilterClientServer.cxx
+  CS Wrapping - generating vtkCollectGraphClientServer.cxx
+  CS Wrapping - generating vtkCollectPolyDataClientServer.cxx
+  CS Wrapping - generating vtkCollectTableClientServer.cxx
+  CS Wrapping - generating vtkCutMaterialClientServer.cxx
+  CS Wrapping - generating vtkDuplicatePolyDataClientServer.cxx
+  CS Wrapping - generating vtkExtractCTHPartClientServer.cxx
+  CS Wrapping - generating vtkExtractPolyDataPieceClientServer.cxx
+  CS Wrapping - generating vtkExtractUnstructuredGridPieceClientServer.cxx
+  CS Wrapping - generating vtkExtractUserDefinedPieceClientServer.cxx
+  CS Wrapping - generating vtkPCellDataToPointDataClientServer.cxx
+  CS Wrapping - generating vtkPExtractArraysOverTimeClientServer.cxx
+  CS Wrapping - generating vtkPeriodicFilterClientServer.cxx
+  CS Wrapping - generating vtkPKdTreeClientServer.cxx
+  CS Wrapping - generating vtkPLinearExtrusionFilterClientServer.cxx
+  CS Wrapping - generating vtkPMaskPointsClientServer.cxx
+  CS Wrapping - generating vtkPOutlineCornerFilterClientServer.cxx
+  CS Wrapping - generating vtkPOutlineFilterClientServer.cxx
+  CS Wrapping - generating vtkPPolyDataNormalsClientServer.cxx
+  CS Wrapping - generating vtkPProbeFilterClientServer.cxx
+  CS Wrapping - generating vtkPProjectSphereFilterClientServer.cxx
+  CS Wrapping - generating vtkPReflectionFilterClientServer.cxx
+  CS Wrapping - generating vtkPResampleFilterClientServer.cxx
+  CS Wrapping - generating vtkPSphereSourceClientServer.cxx
+  CS Wrapping - generating vtkPYoungsMaterialInterfaceClientServer.cxx
+  CS Wrapping - generating vtkPassThroughFilterClientServer.cxx
+  CS Wrapping - generating vtkPieceRequestFilterClientServer.cxx
+  CS Wrapping - generating vtkPieceScalarsClientServer.cxx
+  CS Wrapping - generating vtkPipelineSizeClientServer.cxx
+  CS Wrapping - generating vtkProcessIdScalarsClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridOutlineFilterClientServer.cxx
+  CS Wrapping - generating vtkTransmitPolyDataPieceClientServer.cxx
+  CS Wrapping - generating vtkTransmitStructuredDataPieceClientServer.cxx
+  CS Wrapping - generating vtkTransmitRectilinearGridPieceClientServer.cxx
+  CS Wrapping - generating vtkTransmitStructuredGridPieceClientServer.cxx
+  CS Wrapping - generating vtkTransmitUnstructuredGridPieceClientServer.cxx
+  vtkAggregateDataSetFilterClientServer.cxx
+  vtkAngularPeriodicFilterClientServer.cxx
+  vtkCollectGraphClientServer.cxx
+  vtkCollectPolyDataClientServer.cxx
+  vtkCollectTableClientServer.cxx
+  vtkCutMaterialClientServer.cxx
+  vtkDuplicatePolyDataClientServer.cxx
+  vtkExtractCTHPartClientServer.cxx
+  vtkExtractPolyDataPieceClientServer.cxx
+  vtkExtractUnstructuredGridPieceClientServer.cxx
+  vtkExtractUserDefinedPieceClientServer.cxx
+  vtkPCellDataToPointDataClientServer.cxx
+  vtkPExtractArraysOverTimeClientServer.cxx
+  vtkPeriodicFilterClientServer.cxx
+  vtkPKdTreeClientServer.cxx
+  vtkPLinearExtrusionFilterClientServer.cxx
+  vtkPMaskPointsClientServer.cxx
+  vtkPOutlineCornerFilterClientServer.cxx
+  vtkPOutlineFilterClientServer.cxx
+  vtkPPolyDataNormalsClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPProbeFilterClientServer.cxx
+  vtkPProjectSphereFilterClientServer.cxx
+  vtkPReflectionFilterClientServer.cxx
+  vtkPResampleFilterClientServer.cxx
+  vtkPSphereSourceClientServer.cxx
+  vtkPYoungsMaterialInterfaceClientServer.cxx
+  vtkPassThroughFilterClientServer.cxx
+  vtkPieceRequestFilterClientServer.cxx
+  vtkPieceScalarsClientServer.cxx
+  vtkPipelineSizeClientServer.cxx
+  vtkProcessIdScalarsClientServer.cxx
+  vtkRectilinearGridOutlineFilterClientServer.cxx
+  vtkTransmitPolyDataPieceClientServer.cxx
+  vtkTransmitStructuredDataPieceClientServer.cxx
+  vtkTransmitRectilinearGridPieceClientServer.cxx
+  vtkTransmitStructuredGridPieceClientServer.cxx
+  vtkTransmitUnstructuredGridPieceClientServer.cxx
+  vtkFiltersParallelCSInit.cxx
+  Generating Code...
+  vtkFiltersParallelCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersParallelCS-pv5.3.lib

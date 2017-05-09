@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkEnSightWriterClientServer.cxx
+  CS Wrapping - generating vtkMultiBlockPLOT3DReaderClientServer.cxx
+  CS Wrapping - generating vtkPlot3DMetaReaderClientServer.cxx
+  CS Wrapping - generating vtkPChacoReaderClientServer.cxx
+  CS Wrapping - generating vtkPDataSetReaderClientServer.cxx
+  CS Wrapping - generating vtkPDataSetWriterClientServer.cxx
+  CS Wrapping - generating vtkPImageWriterClientServer.cxx
+  CS Wrapping - generating vtkPOpenFOAMReaderClientServer.cxx
+  CS Wrapping - generating vtkPSLACReaderClientServer.cxx
+  vtkEnSightWriterClientServer.cxx
+  vtkMultiBlockPLOT3DReaderClientServer.cxx
+  vtkPlot3DMetaReaderClientServer.cxx
+  vtkPChacoReaderClientServer.cxx
+  vtkPDataSetReaderClientServer.cxx
+  vtkPDataSetWriterClientServer.cxx
+  vtkPImageWriterClientServer.cxx
+  vtkPOpenFOAMReaderClientServer.cxx
+  vtkPSLACReaderClientServer.cxx
+  vtkIOParallelCSInit.cxx
+  Generating Code...
+  vtkIOParallelCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOParallelCS-pv5.3.lib

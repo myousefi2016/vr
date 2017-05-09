@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>Octree Binning</title>
+        <meta name="proxy_name" contents="incremental_point_locators.IncrementalOctreeMergePoints"/>
+        <meta name="filename" contents="incremental_point_locators.IncrementalOctreeMergePoints.html"/>
+    </head>
+    <body>
+        <h2>Octree Binning (IncrementalOctreeMergePoints)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">A point merger exploiting a fast search structure of
+      data-aware multi-resolution octree nodes for zero-tolerance point
+      insertion (to avoid exactly duplicate / coincident
+      points).</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Max number of points per leaf</th>
+                <td>Specify the maximum number of points that a leaf node
+        may maintain. This value is a trade-off between the cost of dynamic
+        octree construction (top-down recursive node sub-division into eight
+        children as points are incrementally inserted to the octree) and the
+        speed of point location (particularly within a container leaf
+        node).</td>
+                <td>128<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Tolerance</th>
+                <td>Always specify a zero tolerance for point insertion ---
+        merging points.</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

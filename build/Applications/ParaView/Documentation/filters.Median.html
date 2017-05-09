@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>Median</title>
+        <meta name="proxy_name" contents="filters.Median"/>
+        <meta name="filename" contents="filters.Median.html"/>
+    </head>
+    <body>
+        <h2>Median (Median)</h2>
+        <i>
+            <p>Compute the median scalar values in a specified neighborhood for image/volume datasets.</p>
+        </i>
+        <div class="description">
+                     The Median filter operates on uniform rectilinear (image
+                     or volume) data and produces uniform rectilinear output.
+                     It replaces the scalar value at each pixel / voxel with
+                     the median scalar value in the specified surrounding
+                     neighborhood. Since the median operation removes outliers,
+                     this filter is useful for removing high-intensity,
+                     low-probability noise (shot noise).</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Median
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>SelectInputScalars</th>
+                <td>The value of this property lists the name of the scalar
+        array to use in computing the median.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>KernelSize</th>
+                <td>The value of this property specifies the number of
+        pixels/voxels in each dimension to use in computing the median to
+        assign to each pixel/voxel. If the kernel size in a particular
+        dimension is 1, then the median will not be computed in that
+        direction.</td>
+                <td>1 1 1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

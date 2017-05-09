@@ -1,0 +1,96 @@
+
+<html>
+    <head>
+        <title>Extract Subset</title>
+        <meta name="proxy_name" contents="filters.ExtractGrid"/>
+        <meta name="filename" contents="filters.ExtractGrid.html"/>
+    </head>
+    <body>
+        <h2>Extract Subset (ExtractGrid)</h2>
+        <i>
+            <p>Extract a subgrid from a structured grid with the option of setting subsample strides.</p>
+        </i>
+        <div class="description">The Extract
+                     Grid filter returns a subgrid of a structured input data
+                     set (uniform rectilinear, curvilinear, or nonuniform
+                     rectilinear). The output data set type of this filter is
+                     the same as the input type.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Extract Grid
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                            <li>vtkRectilinearGrid</li>
+                            <li>vtkStructuredPoints</li>
+                            <li>vtkStructuredGrid</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>VOI</th>
+                <td>This property specifies the minimum and maximum point
+        indices along each of the I, J, and K axes; these values indicate the
+        volume of interest (VOI). The output will have the (I,J,K) extent
+        specified here.</td>
+                <td>0 0 0 0 0 0<span/>
+                </td>
+                <td>
+                    <p>The value(s) must lie within the structured-extents of the input dataset.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>SampleRateI</th>
+                <td>This property indicates the sampling rate in the I
+        dimension. A value grater than 1 results in subsampling; every nth
+        index will be included in the output.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>SampleRateJ</th>
+                <td>This property indicates the sampling rate in the J
+        dimension. A value grater than 1 results in subsampling; every nth
+        index will be included in the output.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>SampleRateK</th>
+                <td>This property indicates the sampling rate in the K
+        dimension. A value grater than 1 results in subsampling; every nth
+        index will be included in the output.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>IncludeBoundary</th>
+                <td>If the value of this property is 1, then if the sample
+        rate in any dimension is greater than 1, the boundary indices of the
+        input dataset will be passed to the output even if the boundary extent
+        is not an even multiple of the sample rate in a given
+        dimension.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

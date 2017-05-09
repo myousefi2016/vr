@@ -1,0 +1,59 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/protobuf/vtkprotobuf/src/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/protobuf/vtkprotobuf/src/CMakeFiles/generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W1' with '/w'
+  main.cc
+  code_generator.cc
+  command_line_interface.cc
+  cpp_enum.cc
+  cpp_enum_field.cc
+  cpp_extension.cc
+  cpp_field.cc
+  cpp_file.cc
+  cpp_generator.cc
+  cpp_helpers.cc
+  cpp_message.cc
+  cpp_message_field.cc
+  cpp_primitive_field.cc
+  cpp_service.cc
+  cpp_string_field.cc
+  plugin.cc
+  plugin.pb.cc
+  subprocess.cc
+  zip_writer.cc
+  common.cc
+  Generating Code...
+  Compiling...
+  once.cc
+  hash.cc
+  extension_set.cc
+  generated_message_util.cc
+  message_lite.cc
+  repeated_field.cc
+  wire_format_lite.cc
+  coded_stream.cc
+  zero_copy_stream.cc
+  zero_copy_stream_impl_lite.cc
+  strutil.cc
+  substitute.cc
+  structurally_valid.cc
+  descriptor.cc
+  descriptor.pb.cc
+  descriptor_database.cc
+  dynamic_message.cc
+  extension_set_heavy.cc
+  generated_message_reflection.cc
+  message.cc
+  Generating Code...
+  Compiling...
+  reflection_ops.cc
+  service.cc
+  text_format.cc
+  unknown_field_set.cc
+  wire_format.cc
+  printer.cc
+  tokenizer.cc
+  zero_copy_stream_impl.cc
+  importer.cc
+  parser.cc
+  Generating Code...
+  protoc_compiler.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\protoc.exe

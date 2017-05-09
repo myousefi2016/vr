@@ -1,0 +1,61 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkConvertSelectionClientServer.cxx
+  CS Wrapping - generating vtkExtractArraysOverTimeClientServer.cxx
+  CS Wrapping - generating vtkExtractBlockClientServer.cxx
+  CS Wrapping - generating vtkExtractCellsClientServer.cxx
+  CS Wrapping - generating vtkExtractDataOverTimeClientServer.cxx
+  CS Wrapping - generating vtkExtractDataSetsClientServer.cxx
+  CS Wrapping - generating vtkExtractEdgesClientServer.cxx
+  CS Wrapping - generating vtkExtractGeometryClientServer.cxx
+  CS Wrapping - generating vtkExtractGridClientServer.cxx
+  CS Wrapping - generating vtkExtractLevelClientServer.cxx
+  CS Wrapping - generating vtkExtractPolyDataGeometryClientServer.cxx
+  CS Wrapping - generating vtkExtractRectilinearGridClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedBlockClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedIdsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedLocationsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedPolyDataIdsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedRowsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedThresholdsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectionClientServer.cxx
+  CS Wrapping - generating vtkExtractTemporalFieldDataClientServer.cxx
+  CS Wrapping - generating vtkExtractTensorComponentsClientServer.cxx
+  CS Wrapping - generating vtkExtractTimeStepsClientServer.cxx
+  CS Wrapping - generating vtkExtractUnstructuredGridClientServer.cxx
+  CS Wrapping - generating vtkExtractVectorComponentsClientServer.cxx
+  CS Wrapping - generating vtkProbeSelectedLocationsClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalDataExtractDataSetsClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalDataExtractLevelClientServer.cxx
+  vtkConvertSelectionClientServer.cxx
+  vtkExtractArraysOverTimeClientServer.cxx
+  vtkExtractBlockClientServer.cxx
+  vtkExtractCellsClientServer.cxx
+  vtkExtractDataOverTimeClientServer.cxx
+  vtkExtractDataSetsClientServer.cxx
+  vtkExtractEdgesClientServer.cxx
+  vtkExtractGeometryClientServer.cxx
+  vtkExtractGridClientServer.cxx
+  vtkExtractLevelClientServer.cxx
+  vtkExtractPolyDataGeometryClientServer.cxx
+  vtkExtractRectilinearGridClientServer.cxx
+  vtkExtractSelectedBlockClientServer.cxx
+  vtkExtractSelectedIdsClientServer.cxx
+  vtkExtractSelectedLocationsClientServer.cxx
+  vtkExtractSelectedPolyDataIdsClientServer.cxx
+  vtkExtractSelectedRowsClientServer.cxx
+  vtkExtractSelectedThresholdsClientServer.cxx
+  vtkExtractSelectionClientServer.cxx
+  vtkExtractTemporalFieldDataClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkExtractTensorComponentsClientServer.cxx
+  vtkExtractTimeStepsClientServer.cxx
+  vtkExtractUnstructuredGridClientServer.cxx
+  vtkExtractVectorComponentsClientServer.cxx
+  vtkProbeSelectedLocationsClientServer.cxx
+  vtkHierarchicalDataExtractDataSetsClientServer.cxx
+  vtkHierarchicalDataExtractLevelClientServer.cxx
+  vtkFiltersExtractionCSInit.cxx
+  Generating Code...
+  vtkFiltersExtractionCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersExtractionCS-pv5.3.lib

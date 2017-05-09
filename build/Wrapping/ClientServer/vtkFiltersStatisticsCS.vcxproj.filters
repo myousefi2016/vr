@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkAutoCorrelativeStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkBivariateLinearTableThresholdClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkComputeQuartilesClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkContingencyStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkCorrelativeStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkDescriptiveStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkHighestDensityRegionsStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkExtractFunctionalBagPlotClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkKMeansDistanceFunctorCalculatorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkKMeansDistanceFunctorClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkKMeansStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkMultiCorrelativeStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkOrderStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPCAStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStatisticsAlgorithmClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStrahlerMetricClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkStreamingStatisticsClientServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkFiltersStatisticsCSInit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Wrapping\ClientServer\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkAutoCorrelativeStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkBivariateLinearTableThreshold.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkComputeQuartiles.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkContingencyStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkCorrelativeStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkDescriptiveStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkHighestDensityRegionsStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkExtractFunctionalBagPlot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkKMeansDistanceFunctorCalculator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkKMeansDistanceFunctor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkKMeansStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkMultiCorrelativeStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkOrderStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkPCAStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkStatisticsAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkStrahlerMetric.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Statistics\vtkStreamingStatistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

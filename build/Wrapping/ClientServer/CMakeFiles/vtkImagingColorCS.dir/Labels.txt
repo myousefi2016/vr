@@ -1,0 +1,25 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageHSIToRGBClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageHSVToRGBClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageYIQToRGBClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageLuminanceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageMapToRGBAClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageMapToWindowLevelColorsClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageQuantizeRGBToIndexClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageRGBToHSIClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageRGBToHSVClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageRGBToYIQClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImagingColorCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageHSIToRGB.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageHSVToRGB.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageYIQToRGB.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageLuminance.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageMapToRGBA.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageMapToWindowLevelColors.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageQuantizeRGBToIndex.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageRGBToHSI.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageRGBToHSV.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Color/vtkImageRGBToYIQ.h

@@ -1,0 +1,43 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIImageTextureProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIPVRepresentationProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIUnstructuredGridVolumeRepresentationProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIImageTextureProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIPVRepresentationProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/vtkSIUnstructuredGridVolumeRepresentationProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerImplementation/Rendering/vtkPVServerImplementationRenderingModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Rendering/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkPVServerImplementationRendering" ],
+		"name" : "vtkPVServerImplementationRendering"
+	}
+}

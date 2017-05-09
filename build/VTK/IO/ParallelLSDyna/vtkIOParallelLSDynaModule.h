@@ -1,0 +1,37 @@
+
+#ifndef VTKIOPARALLELLSDYNA_EXPORT_H
+#define VTKIOPARALLELLSDYNA_EXPORT_H
+
+#ifdef VTKIOPARALLELLSDYNA_STATIC_DEFINE
+#  define VTKIOPARALLELLSDYNA_EXPORT
+#  define VTKIOPARALLELLSDYNA_NO_EXPORT
+#else
+#  ifndef VTKIOPARALLELLSDYNA_EXPORT
+#    ifdef vtkIOParallelLSDyna_EXPORTS
+        /* We are building this library */
+#      define VTKIOPARALLELLSDYNA_EXPORT __declspec(dllexport)
+#    else
+        /* We are using this library */
+#      define VTKIOPARALLELLSDYNA_EXPORT __declspec(dllimport)
+#    endif
+#  endif
+
+#  ifndef VTKIOPARALLELLSDYNA_NO_EXPORT
+#    define VTKIOPARALLELLSDYNA_NO_EXPORT 
+#  endif
+#endif
+
+#ifndef VTKIOPARALLELLSDYNA_DEPRECATED
+#  define VTKIOPARALLELLSDYNA_DEPRECATED __declspec(deprecated)
+#  define VTKIOPARALLELLSDYNA_DEPRECATED_EXPORT VTKIOPARALLELLSDYNA_EXPORT __declspec(deprecated)
+#  define VTKIOPARALLELLSDYNA_DEPRECATED_NO_EXPORT VTKIOPARALLELLSDYNA_NO_EXPORT __declspec(deprecated)
+#endif
+
+#define DEFINE_NO_DEPRECATED 0
+#if DEFINE_NO_DEPRECATED
+# define VTKIOPARALLELLSDYNA_NO_DEPRECATED
+#endif
+
+
+
+#endif

@@ -1,0 +1,21 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Domains/Chemistry/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Domains/Chemistry/CMakeFiles/generate.stamp is up-to-date.
+  vtkBlueObeliskData.cxx
+  vtkBlueObeliskDataParser.cxx
+  vtkCMLMoleculeReader.cxx
+  vtkGaussianCubeReader2.cxx
+  vtkMoleculeAlgorithm.cxx
+  vtkMoleculeMapper.cxx
+  vtkMoleculeToAtomBallFilter.cxx
+  vtkMoleculeToBondStickFilter.cxx
+  vtkMoleculeToPolyDataFilter.cxx
+  vtkPeriodicTable.cxx
+  vtkProgrammableElectronicData.cxx
+  vtkProteinRibbonFilter.cxx
+  vtkSimpleBondPerceiver.cxx
+  vtkVASPAnimationReader.cxx
+  vtkVASPTessellationReader.cxx
+  vtkXYZMolReader2.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkDomainsChemistry-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkDomainsChemistry-pv5.3.exp
+  vtkDomainsChemistry.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkDomainsChemistry-pv5.3.dll

@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>SPH Volume Interpolator</title>
+        <meta name="proxy_name" contents="filters.SPHVolumeInterpolator"/>
+        <meta name="filename" contents="filters.SPHVolumeInterpolator.html"/>
+    </head>
+    <body>
+        <h2>SPH Volume Interpolator (SPHVolumeInterpolator)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">
+        This filter uses SPH (smooth particle hydrodynamics) kernels to
+        interpolate a data source onto an input structure. For example, while the
+        data source is a set of particles, the data from these particles can be
+        interpolated onto an input volume. Then
+        the output (which consists of the input structure plus interpolated data)
+        can then be visualized using classical visualization techniques such as
+        isocontouring, slicing, heat maps and so on.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>The data source that provides the structure to be interpolated on.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>The value can be one of the following:<ul>
+                            <li>BoundedVolumeSource (extended_sources)
+        </li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

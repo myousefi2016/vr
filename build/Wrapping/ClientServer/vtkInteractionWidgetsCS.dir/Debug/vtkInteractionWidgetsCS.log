@@ -1,0 +1,295 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtk3DWidgetClientServer.cxx
+  CS Wrapping - generating vtkAbstractPolygonalHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkAbstractWidgetClientServer.cxx
+  CS Wrapping - generating vtkAffineRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkAffineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkAffineWidgetClientServer.cxx
+  CS Wrapping - generating vtkAngleRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkAngleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkAngleRepresentationClientServer.cxx
+  CS Wrapping - generating vtkAngleWidgetClientServer.cxx
+  CS Wrapping - generating vtkAxesTransformRepresentationClientServer.cxx
+  CS Wrapping - generating vtkAxesTransformWidgetClientServer.cxx
+  CS Wrapping - generating vtkBalloonRepresentationClientServer.cxx
+  CS Wrapping - generating vtkBalloonWidgetClientServer.cxx
+  CS Wrapping - generating vtkBezierContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkBiDimensionalRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkBiDimensionalRepresentationClientServer.cxx
+  CS Wrapping - generating vtkBiDimensionalWidgetClientServer.cxx
+  CS Wrapping - generating vtkBorderRepresentationClientServer.cxx
+  CS Wrapping - generating vtkBorderWidgetClientServer.cxx
+  CS Wrapping - generating vtkBoundedPlanePointPlacerClientServer.cxx
+  CS Wrapping - generating vtkBoxRepresentationClientServer.cxx
+  CS Wrapping - generating vtkBoxWidget2ClientServer.cxx
+  CS Wrapping - generating vtkBoxWidgetClientServer.cxx
+  CS Wrapping - generating vtkBrokenLineWidgetClientServer.cxx
+  CS Wrapping - generating vtkButtonRepresentationClientServer.cxx
+  CS Wrapping - generating vtkButtonWidgetClientServer.cxx
+  CS Wrapping - generating vtkCameraRepresentationClientServer.cxx
+  CS Wrapping - generating vtkCameraWidgetClientServer.cxx
+  CS Wrapping - generating vtkCaptionRepresentationClientServer.cxx
+  CS Wrapping - generating vtkCaptionWidgetClientServer.cxx
+  CS Wrapping - generating vtkCellCentersPointPlacerClientServer.cxx
+  CS Wrapping - generating vtkCenteredSliderRepresentationClientServer.cxx
+  CS Wrapping - generating vtkCenteredSliderWidgetClientServer.cxx
+  CS Wrapping - generating vtkCheckerboardRepresentationClientServer.cxx
+  CS Wrapping - generating vtkCheckerboardWidgetClientServer.cxx
+  CS Wrapping - generating vtkClosedSurfacePointPlacerClientServer.cxx
+  CS Wrapping - generating vtkConstrainedPointHandleRepresentationClientServer.cxx
+  CS Wrapping - generating vtkContinuousValueWidgetClientServer.cxx
+  CS Wrapping - generating vtkContinuousValueWidgetRepresentationClientServer.cxx
+  CS Wrapping - generating vtkContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkContourRepresentationClientServer.cxx
+  CS Wrapping - generating vtkContourWidgetClientServer.cxx
+  CS Wrapping - generating vtkCurveRepresentationClientServer.cxx
+  CS Wrapping - generating vtkDijkstraImageContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkDistanceRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkDistanceRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkDistanceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkDistanceWidgetClientServer.cxx
+  CS Wrapping - generating vtkEllipsoidTensorProbeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkEventClientServer.cxx
+  CS Wrapping - generating vtkFinitePlaneRepresentationClientServer.cxx
+  CS Wrapping - generating vtkFinitePlaneWidgetClientServer.cxx
+  CS Wrapping - generating vtkFixedSizeHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkFocalPlaneContourRepresentationClientServer.cxx
+  CS Wrapping - generating vtkFocalPlanePointPlacerClientServer.cxx
+  CS Wrapping - generating vtkHandleRepresentationClientServer.cxx
+  CS Wrapping - generating vtkHandleWidgetClientServer.cxx
+  CS Wrapping - generating vtkHoverWidgetClientServer.cxx
+  CS Wrapping - generating vtkImageActorPointPlacerClientServer.cxx
+  CS Wrapping - generating vtkImageCroppingRegionsWidgetClientServer.cxx
+  CS Wrapping - generating vtkImageOrthoPlanesClientServer.cxx
+  CS Wrapping - generating vtkImagePlaneWidgetClientServer.cxx
+  CS Wrapping - generating vtkImageTracerWidgetClientServer.cxx
+  CS Wrapping - generating vtkImplicitCylinderRepresentationClientServer.cxx
+  CS Wrapping - generating vtkImplicitCylinderWidgetClientServer.cxx
+  CS Wrapping - generating vtkImplicitPlaneRepresentationClientServer.cxx
+  CS Wrapping - generating vtkImplicitPlaneWidget2ClientServer.cxx
+  CS Wrapping - generating vtkImplicitPlaneWidgetClientServer.cxx
+  CS Wrapping - generating vtkLinearContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkLineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkLineWidget2ClientServer.cxx
+  CS Wrapping - generating vtkLineWidgetClientServer.cxx
+  CS Wrapping - generating vtkLogoRepresentationClientServer.cxx
+  CS Wrapping - generating vtkLogoWidgetClientServer.cxx
+  CS Wrapping - generating vtkMeasurementCubeHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkOrientationMarkerWidgetClientServer.cxx
+  CS Wrapping - generating vtkOrientedGlyphContourRepresentationClientServer.cxx
+  CS Wrapping - generating vtkOrientedGlyphFocalPlaneContourRepresentationClientServer.cxx
+  CS Wrapping - generating vtkOrientedPolygonalHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkParallelopipedRepresentationClientServer.cxx
+  CS Wrapping - generating vtkParallelopipedWidgetClientServer.cxx
+  CS Wrapping - generating vtkPlaneWidgetClientServer.cxx
+  CS Wrapping - generating vtkPlaybackRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPlaybackWidgetClientServer.cxx
+  CS Wrapping - generating vtkPointHandleRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkPointHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkPointPlacerClientServer.cxx
+  CS Wrapping - generating vtkPointWidgetClientServer.cxx
+  CS Wrapping - generating vtkPolyDataContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkPolyDataPointPlacerClientServer.cxx
+  CS Wrapping - generating vtkPolyDataSourceWidgetClientServer.cxx
+  CS Wrapping - generating vtkPolyLineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPolyLineWidgetClientServer.cxx
+  CS Wrapping - generating vtkPolygonalHandleRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkPolygonalSurfaceContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkPolygonalSurfacePointPlacerClientServer.cxx
+  CS Wrapping - generating vtkProgressBarRepresentationClientServer.cxx
+  CS Wrapping - generating vtkProgressBarWidgetClientServer.cxx
+  CS Wrapping - generating vtkProp3DButtonRepresentationClientServer.cxx
+  CS Wrapping - generating vtkRectilinearWipeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkRectilinearWipeWidgetClientServer.cxx
+  CS Wrapping - generating vtkScalarBarRepresentationClientServer.cxx
+  CS Wrapping - generating vtkScalarBarWidgetClientServer.cxx
+  CS Wrapping - generating vtkSeedRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSeedWidgetClientServer.cxx
+  CS Wrapping - generating vtkSliderRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkSliderRepresentation3DClientServer.cxx
+  CS Wrapping - generating vtkSliderRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSliderWidgetClientServer.cxx
+  CS Wrapping - generating vtkSphereHandleRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSphereRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSphereWidget2ClientServer.cxx
+  CS Wrapping - generating vtkSphereWidgetClientServer.cxx
+  CS Wrapping - generating vtkSplineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSplineWidget2ClientServer.cxx
+  CS Wrapping - generating vtkSplineWidgetClientServer.cxx
+  CS Wrapping - generating vtkTensorProbeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkTensorProbeWidgetClientServer.cxx
+  CS Wrapping - generating vtkTerrainContourLineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkTerrainDataPointPlacerClientServer.cxx
+  CS Wrapping - generating vtkTextRepresentationClientServer.cxx
+  CS Wrapping - generating vtkTexturedButtonRepresentation2DClientServer.cxx
+  CS Wrapping - generating vtkTexturedButtonRepresentationClientServer.cxx
+  CS Wrapping - generating vtkTextWidgetClientServer.cxx
+  CS Wrapping - generating vtkWidgetCallbackMapperClientServer.cxx
+  CS Wrapping - generating vtkWidgetEventClientServer.cxx
+  CS Wrapping - generating vtkWidgetEventTranslatorClientServer.cxx
+  CS Wrapping - generating vtkWidgetRepresentationClientServer.cxx
+  CS Wrapping - generating vtkWidgetSetClientServer.cxx
+  CS Wrapping - generating vtkXYPlotWidgetClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorLineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorRepresentationClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorThickLineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorWidgetClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorActorClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorPickerClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorClientServer.cxx
+  CS Wrapping - generating vtkResliceCursorPolyDataAlgorithmClientServer.cxx
+  vtk3DWidgetClientServer.cxx
+  vtkAbstractPolygonalHandleRepresentation3DClientServer.cxx
+  vtkAbstractWidgetClientServer.cxx
+  vtkAffineRepresentation2DClientServer.cxx
+  vtkAffineRepresentationClientServer.cxx
+  vtkAffineWidgetClientServer.cxx
+  vtkAngleRepresentation2DClientServer.cxx
+  vtkAngleRepresentation3DClientServer.cxx
+  vtkAngleRepresentationClientServer.cxx
+  vtkAngleWidgetClientServer.cxx
+  vtkAxesTransformRepresentationClientServer.cxx
+  vtkAxesTransformWidgetClientServer.cxx
+  vtkBalloonRepresentationClientServer.cxx
+  vtkBalloonWidgetClientServer.cxx
+  vtkBezierContourLineInterpolatorClientServer.cxx
+  vtkBiDimensionalRepresentation2DClientServer.cxx
+  vtkBiDimensionalRepresentationClientServer.cxx
+  vtkBiDimensionalWidgetClientServer.cxx
+  vtkBorderRepresentationClientServer.cxx
+  vtkBorderWidgetClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkBoundedPlanePointPlacerClientServer.cxx
+  vtkBoxRepresentationClientServer.cxx
+  vtkBoxWidget2ClientServer.cxx
+  vtkBoxWidgetClientServer.cxx
+  vtkBrokenLineWidgetClientServer.cxx
+  vtkButtonRepresentationClientServer.cxx
+  vtkButtonWidgetClientServer.cxx
+  vtkCameraRepresentationClientServer.cxx
+  vtkCameraWidgetClientServer.cxx
+  vtkCaptionRepresentationClientServer.cxx
+  vtkCaptionWidgetClientServer.cxx
+  vtkCellCentersPointPlacerClientServer.cxx
+  vtkCenteredSliderRepresentationClientServer.cxx
+  vtkCenteredSliderWidgetClientServer.cxx
+  vtkCheckerboardRepresentationClientServer.cxx
+  vtkCheckerboardWidgetClientServer.cxx
+  vtkClosedSurfacePointPlacerClientServer.cxx
+  vtkConstrainedPointHandleRepresentationClientServer.cxx
+  vtkContinuousValueWidgetClientServer.cxx
+  vtkContinuousValueWidgetRepresentationClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkContourLineInterpolatorClientServer.cxx
+  vtkContourRepresentationClientServer.cxx
+  vtkContourWidgetClientServer.cxx
+  vtkCurveRepresentationClientServer.cxx
+  vtkDijkstraImageContourLineInterpolatorClientServer.cxx
+  vtkDistanceRepresentation2DClientServer.cxx
+  vtkDistanceRepresentation3DClientServer.cxx
+  vtkDistanceRepresentationClientServer.cxx
+  vtkDistanceWidgetClientServer.cxx
+  vtkEllipsoidTensorProbeRepresentationClientServer.cxx
+  vtkEventClientServer.cxx
+  vtkFinitePlaneRepresentationClientServer.cxx
+  vtkFinitePlaneWidgetClientServer.cxx
+  vtkFixedSizeHandleRepresentation3DClientServer.cxx
+  vtkFocalPlaneContourRepresentationClientServer.cxx
+  vtkFocalPlanePointPlacerClientServer.cxx
+  vtkHandleRepresentationClientServer.cxx
+  vtkHandleWidgetClientServer.cxx
+  vtkHoverWidgetClientServer.cxx
+  vtkImageActorPointPlacerClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageCroppingRegionsWidgetClientServer.cxx
+  vtkImageOrthoPlanesClientServer.cxx
+  vtkImagePlaneWidgetClientServer.cxx
+  vtkImageTracerWidgetClientServer.cxx
+  vtkImplicitCylinderRepresentationClientServer.cxx
+  vtkImplicitCylinderWidgetClientServer.cxx
+  vtkImplicitPlaneRepresentationClientServer.cxx
+  vtkImplicitPlaneWidget2ClientServer.cxx
+  vtkImplicitPlaneWidgetClientServer.cxx
+  vtkLinearContourLineInterpolatorClientServer.cxx
+  vtkLineRepresentationClientServer.cxx
+  vtkLineWidget2ClientServer.cxx
+  vtkLineWidgetClientServer.cxx
+  vtkLogoRepresentationClientServer.cxx
+  vtkLogoWidgetClientServer.cxx
+  vtkMeasurementCubeHandleRepresentation3DClientServer.cxx
+  vtkOrientationMarkerWidgetClientServer.cxx
+  vtkOrientedGlyphContourRepresentationClientServer.cxx
+  vtkOrientedGlyphFocalPlaneContourRepresentationClientServer.cxx
+  vtkOrientedPolygonalHandleRepresentation3DClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkParallelopipedRepresentationClientServer.cxx
+  vtkParallelopipedWidgetClientServer.cxx
+  vtkPlaneWidgetClientServer.cxx
+  vtkPlaybackRepresentationClientServer.cxx
+  vtkPlaybackWidgetClientServer.cxx
+  vtkPointHandleRepresentation2DClientServer.cxx
+  vtkPointHandleRepresentation3DClientServer.cxx
+  vtkPointPlacerClientServer.cxx
+  vtkPointWidgetClientServer.cxx
+  vtkPolyDataContourLineInterpolatorClientServer.cxx
+  vtkPolyDataPointPlacerClientServer.cxx
+  vtkPolyDataSourceWidgetClientServer.cxx
+  vtkPolyLineRepresentationClientServer.cxx
+  vtkPolyLineWidgetClientServer.cxx
+  vtkPolygonalHandleRepresentation3DClientServer.cxx
+  vtkPolygonalSurfaceContourLineInterpolatorClientServer.cxx
+  vtkPolygonalSurfacePointPlacerClientServer.cxx
+  vtkProgressBarRepresentationClientServer.cxx
+  vtkProgressBarWidgetClientServer.cxx
+  vtkProp3DButtonRepresentationClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkRectilinearWipeRepresentationClientServer.cxx
+  vtkRectilinearWipeWidgetClientServer.cxx
+  vtkScalarBarRepresentationClientServer.cxx
+  vtkScalarBarWidgetClientServer.cxx
+  vtkSeedRepresentationClientServer.cxx
+  vtkSeedWidgetClientServer.cxx
+  vtkSliderRepresentation2DClientServer.cxx
+  vtkSliderRepresentation3DClientServer.cxx
+  vtkSliderRepresentationClientServer.cxx
+  vtkSliderWidgetClientServer.cxx
+  vtkSphereHandleRepresentationClientServer.cxx
+  vtkSphereRepresentationClientServer.cxx
+  vtkSphereWidget2ClientServer.cxx
+  vtkSphereWidgetClientServer.cxx
+  vtkSplineRepresentationClientServer.cxx
+  vtkSplineWidget2ClientServer.cxx
+  vtkSplineWidgetClientServer.cxx
+  vtkTensorProbeRepresentationClientServer.cxx
+  vtkTensorProbeWidgetClientServer.cxx
+  vtkTerrainContourLineInterpolatorClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTerrainDataPointPlacerClientServer.cxx
+  vtkTextRepresentationClientServer.cxx
+  vtkTexturedButtonRepresentation2DClientServer.cxx
+  vtkTexturedButtonRepresentationClientServer.cxx
+  vtkTextWidgetClientServer.cxx
+  vtkWidgetCallbackMapperClientServer.cxx
+  vtkWidgetEventClientServer.cxx
+  vtkWidgetEventTranslatorClientServer.cxx
+  vtkWidgetRepresentationClientServer.cxx
+  vtkWidgetSetClientServer.cxx
+  vtkXYPlotWidgetClientServer.cxx
+  vtkResliceCursorLineRepresentationClientServer.cxx
+  vtkResliceCursorRepresentationClientServer.cxx
+  vtkResliceCursorThickLineRepresentationClientServer.cxx
+  vtkResliceCursorWidgetClientServer.cxx
+  vtkResliceCursorActorClientServer.cxx
+  vtkResliceCursorPickerClientServer.cxx
+  vtkResliceCursorClientServer.cxx
+  vtkResliceCursorPolyDataAlgorithmClientServer.cxx
+  vtkInteractionWidgetsCSInit.cxx
+  Generating Code...
+  vtkInteractionWidgetsCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkInteractionWidgetsCS-pv5.3.lib

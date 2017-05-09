@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVCatalystSessionCore.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVFilePathEncodingHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVProxyDefinitionIterator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionBase.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionCore.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionCoreInterpreterHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionServer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIArraySelectionProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIndexSelectionProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSICollaborationManager.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSICompoundSourceProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDataArrayProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDirectoryProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDoubleMapProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDoubleVectorProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIMetaReaderProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIdTypeVectorProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIInputProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIntVectorProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxyDefinitionManager.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxyProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSISILProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSISourceProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIStringVectorProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeLabelProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeRangeProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeStepsProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIVectorProperty.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIWriterProxy.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSMMessage.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSMMessageMinimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIVectorPropertyTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVCatalystSessionCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVFilePathEncodingHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVProxyDefinitionIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionCoreInterpreterHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkPVSessionServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIArraySelectionProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIndexSelectionProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSICollaborationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSICompoundSourceProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDataArrayProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDirectoryProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDoubleMapProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIDoubleVectorProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIMetaReaderProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIdTypeVectorProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIInputProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIIntVectorProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxyDefinitionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIProxyProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSISILProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSISourceProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIStringVectorProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeLabelProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeRangeProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSITimeStepsProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIVectorProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSIWriterProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\vtkSMMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCoreModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerImplementation\Core\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\89dee596934807ffd6b02b4ca5c9dedd\vtkPVMessage.pb.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BB222BB1-D941-316E-B7B3-B665F064E495}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

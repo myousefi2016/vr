@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3074005B-6375-37F2-A7B8-1F80273A9F92}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkCommonCore</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonCore.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonCore-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonCore.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonCore-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkCommonCore.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkCommonCore-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkCommonCore.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkCommonCore-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Debug";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Debug\";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Debug\vtksys-pv5.3.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonCore-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Debug/vtkCommonCore-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Release";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Release\";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\vtksys-pv5.3.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Release/vtkCommonCore-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Release/vtkCommonCore-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="MinSizeRel";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"MinSizeRel\";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\vtksys-pv5.3.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/MinSizeRel/vtkCommonCore-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/MinSizeRel/vtkCommonCore-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="RelWithDebInfo";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"RelWithDebInfo\";vtkCommonCore_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\utf8\source;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\vtksys-pv5.3.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/RelWithDebInfo/vtkCommonCore-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/RelWithDebInfo/vtkCommonCore-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkAtomic.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPToolsInternal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPThreadLocal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateTypeListMacros.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeListMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateArrayDispatchArrayList.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatchArrayList.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersionMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkToolkits.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\CheckCXXExpressionCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMathConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptionsConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkAtomic.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPToolsInternal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPThreadLocal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateTypeListMacros.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeListMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateArrayDispatchArrayList.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatchArrayList.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersionMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkToolkits.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\CheckCXXExpressionCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMathConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptionsConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkAtomic.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPToolsInternal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPThreadLocal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateTypeListMacros.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeListMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateArrayDispatchArrayList.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatchArrayList.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersionMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkToolkits.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\CheckCXXExpressionCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMathConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptionsConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Core/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkAtomic.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPToolsInternal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPThreadLocal.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateTypeListMacros.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeListMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkCreateArrayDispatchArrayList.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatchArrayList.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersionMacros.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkToolkits.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.cxx.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\CheckCXXExpressionCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMathConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptionsConfigure.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\661c1c551f58e084766bce689813837c\vtkUnicodeCaseFoldData.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating vtkUnicodeCaseFoldData.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/vtkUnicodeString.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/661c1c551f58e084766bce689813837c/vtkUnicodeCaseFoldData.h.rule;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CaseFolding.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeString.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeCaseFoldData.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating vtkUnicodeCaseFoldData.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/vtkUnicodeString.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/661c1c551f58e084766bce689813837c/vtkUnicodeCaseFoldData.h.rule;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CaseFolding.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeString.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeCaseFoldData.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating vtkUnicodeCaseFoldData.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/vtkUnicodeString.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/661c1c551f58e084766bce689813837c/vtkUnicodeCaseFoldData.h.rule;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CaseFolding.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeString.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeCaseFoldData.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating vtkUnicodeCaseFoldData.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Core/vtkUnicodeString.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/661c1c551f58e084766bce689813837c/vtkUnicodeCaseFoldData.h.rule;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\CaseFolding.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeString.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkUnicodeCaseFoldData.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAngularPeriodicDataArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAOSDataArrayTemplate.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIteratorTemplate.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMappedDataArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPeriodicDataArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSOADataArrayTemplate.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedDataArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDenseArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSparseArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeTemplate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkType.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSystemIncludes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWrappingHints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkAtomic.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkSMPToolsInternal.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkSMPThreadLocal.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSMPTools.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSMPThreadLocalObject.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkConfigure.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkMathConfigure.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkVersionMacros.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkABI.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAngularPeriodicDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatch.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayDispatch.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayInterpolate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayInterpolate.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIteratorIncludes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIteratorTemplateImplicit.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayPrint.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayPrint.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAssume.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAtomicTypeConcepts.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAtomicTypes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAutoInit.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBuffer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayAccessor.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayIteratorMacro.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayTemplate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGenericDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGenericDataArrayLookupHelper.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGenericDataArray.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIOStream.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIOStreamFwd.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationInternals.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMappedDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMathUtilities.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMersenneTwister.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkNew.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPeriodicDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSetGet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSmartPointer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSOADataArrayTemplate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTemplateAliasMacro.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTestDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeList.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeList.txx" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypeTraits.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedDataArrayIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantCast.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantCreate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantExtract.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantInlineOperators.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWeakPointer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32Header.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWindows.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkArrayDispatchArrayList.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkToolkits.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeListMacros.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAbstractArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAnimationCue.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAOSDataArrayTemplate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayCoordinates.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayExtents.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayExtentsList.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIteratorTemplate.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayRange.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArraySort.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayWeights.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBitArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBitArrayIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBoxMuellerRandomSequence.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBreakPoint.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkByteSwap.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCallbackCommand.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCharArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCollection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCollectionIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCommand.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCommonInformationKeyManager.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConditionVariable.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCriticalSection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayCollection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayCollectionIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArraySelection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDebugLeaks.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDebugLeaksManager.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDoubleArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDynamicLoader.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkEventForwarderCommand.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFileOutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptions.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGarbageCollector.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGarbageCollectorManager.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGaussianRandomSequence.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdListCollection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdList.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdTypeArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIndent.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformation.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDataObjectKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDoubleKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDoubleVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIdTypeKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationInformationKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationInformationVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerPointerKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIterator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKeyLookup.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKeyVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationObjectBaseKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationObjectBaseVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationRequestKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationStringKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationStringVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationUnsignedLongKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVariantKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVariantVectorKey.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVector.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInstantiator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIntArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLargeInteger.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLongArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLongLongArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLookupTable.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMath.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMinimalStandardRandomSequence.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMultiThreader.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMutexLock.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectBase.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObject.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectFactoryCollection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectFactory.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOldStyleCallbackCommand.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOStreamWrapper.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOStrStreamWrapper.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOverrideInformationCollection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOverrideInformation.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPoints2D.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPriorityQueue.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkRandomSequence.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkReferenceCount.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkScalarsToColors.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkShortArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSignedCharArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSimpleCriticalSection.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSmartPointerBase.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSortDataArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStdString.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStringArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStringOutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTimePointUtility.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTimeStamp.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeStringArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedCharArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedIntArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedLongArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedLongLongArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedShortArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariant.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersion.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVoidArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWeakPointerBase.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkXMLFileOutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDenseArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSparseArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTypedArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32OutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32ProcessOutputWindow.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt8Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt16Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt32Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt64Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt8Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt16Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt32Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt64Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeFloat32Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeFloat64Array.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCoreModule.h" />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAbstractArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkAnimationCue.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayCoordinates.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayExtents.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayExtentsList.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIterator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayIteratorTemplateInstantiate.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayRange.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArraySort.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkArrayWeights.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBitArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBitArrayIterator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBoxMuellerRandomSequence.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkBreakPoint.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkByteSwap.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCallbackCommand.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCharArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCollection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCollectionIterator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCommand.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCommonInformationKeyManager.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkConditionVariable.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkCriticalSection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayCollection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArrayCollectionIterator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDataArraySelection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDebugLeaks.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDebugLeaksManager.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDoubleArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkDynamicLoader.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkEventForwarderCommand.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFileOutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkFloatingPointExceptions.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGarbageCollector.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGarbageCollectorManager.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkGaussianRandomSequence.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdListCollection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdList.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIdTypeArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIndent.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformation.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDataObjectKey.cxx" >
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkCommonDataModel_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkCommonDataModel_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkCommonDataModel_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkCommonDataModel_ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDoubleKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationDoubleVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIdTypeKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationInformationKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationInformationVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerPointerKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIntegerVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationIterator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKeyLookup.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationKeyVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationObjectBaseKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationObjectBaseVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationRequestKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationStringKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationStringVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationUnsignedLongKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVariantKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVariantVectorKey.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInformationVector.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkInstantiator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkIntArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLargeInteger.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLongArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLongLongArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkLookupTable.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMath.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMersenneTwister.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMinimalStandardRandomSequence.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMultiThreader.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkMutexLock.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectBase.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObject.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectFactoryCollection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkObjectFactory.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOldStyleCallbackCommand.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOStreamWrapper.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOStrStreamWrapper.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOverrideInformationCollection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkOverrideInformation.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPoints2D.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkPriorityQueue.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkRandomSequence.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkReferenceCount.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkScalarsToColors.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkShortArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSignedCharArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSimpleCriticalSection.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSmartPointerBase.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSOADataArrayTemplateInstantiate.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkSortDataArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStdString.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStringArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkStringOutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTimePointUtility.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkTimeStamp.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeStringArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnicodeString.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedCharArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedIntArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedLongArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedLongLongArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkUnsignedShortArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariantArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVariant.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVersion.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkVoidArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWeakPointerBase.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkXMLFileOutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkSMPTools.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\SMP\Sequential\vtkAtomic.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32OutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32OutputWindowProcessEncoded.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core\vtkWin32ProcessOutputWindow.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt8Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt16Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt32Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeInt64Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt8Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt16Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt32Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeUInt64Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeFloat32Array.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkTypeFloat64Array.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>A7ABF817-AB95-33CE-A23D-B18D6C4D18BD</Project>
+      <Name>vtksys</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

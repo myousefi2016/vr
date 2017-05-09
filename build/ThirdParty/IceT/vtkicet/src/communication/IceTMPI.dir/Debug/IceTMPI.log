@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/src/communication/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/src/communication/CMakeFiles/generate.stamp is up-to-date.
+  mpi.c
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTMPI.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTMPI.exp
+  IceTMPI.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\IceTMPI.dll

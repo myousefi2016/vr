@@ -1,0 +1,6 @@
+vtk_module(vtkParaViewWebPython
+  DEPENDS
+  EXCLUDE_FROM_WRAPPING
+  TEST_LABELS
+    PARAVIEW
+)

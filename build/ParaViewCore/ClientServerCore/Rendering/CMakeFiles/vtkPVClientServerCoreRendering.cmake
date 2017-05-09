@@ -1,0 +1,11 @@
+set(vtkPVClientServerCoreRendering_LOADED 1)
+set(vtkPVClientServerCoreRendering_DEPENDS "vtkDomainsChemistry;vtkFiltersAMR;vtkPVClientServerCoreCore;vtkPVVTKExtensionsDefault;vtkPVVTKExtensionsRendering;vtkRenderingLabel;vtkRenderingVolumeOpenGL2;vtkViewsContext2D;vtkViewsCore;vtksys;vtkzlib")
+set(vtkPVClientServerCoreRendering_LIBRARIES "vtkPVClientServerCoreRendering")
+set(vtkPVClientServerCoreRendering_INCLUDE_DIRS "${VTK_INSTALL_PREFIX}/include/paraview-5.3")
+set(vtkPVClientServerCoreRendering_LIBRARY_DIRS "")
+set(vtkPVClientServerCoreRendering_RUNTIME_LIBRARY_DIRS "${VTK_INSTALL_PREFIX}/bin")
+set(vtkPVClientServerCoreRendering_WRAP_HIERARCHY_FILE "${CMAKE_CURRENT_LIST_DIR}/vtkPVClientServerCoreRenderingHierarchy.txt")
+set(vtkPVClientServerCoreRendering_KIT "vtkPVClientServer")
+
+set(vtkPVClientServerCoreRendering_WRAP_HINTS "${CMAKE_CURRENT_LIST_DIR}/vtkPVClientServerCoreRendering_hints")
+

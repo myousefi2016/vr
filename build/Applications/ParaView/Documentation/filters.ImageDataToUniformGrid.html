@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <title>Image Data To Uniform Grid</title>
+        <meta name="proxy_name" contents="filters.ImageDataToUniformGrid"/>
+        <meta name="filename" contents="filters.ImageDataToUniformGrid.html"/>
+    </head>
+    <body>
+        <h2>Image Data To Uniform Grid (ImageDataToUniformGrid)</h2>
+        <i>
+            <p>Create a uniform grid from an image data by specified blanking arrays.</p>
+        </i>
+        <div class="description">
+        Create a vtkUniformGrid from a vtkImageData by passing in arrays to be used
+        for point and/or cell blanking. By default, values of 0 in the specified
+        array will result in a point or cell being blanked. Use Reverse to switch this.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array ()
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>SelectInputScalars</th>
+                <td>Specify the array to use for blanking.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Reverse</th>
+                <td>Reverse the array value to whether or not a point or cell is blanked.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

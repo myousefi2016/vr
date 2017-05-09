@@ -1,0 +1,23 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageButterworthHighPassClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageButterworthLowPassClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageFFTClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageFourierCenterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageFourierFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageIdealHighPassClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageIdealLowPassClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageRFFTClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTableFFTClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImagingFourierCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageButterworthHighPass.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageButterworthLowPass.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageFFT.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageFourierCenter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageFourierFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageIdealHighPass.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageIdealLowPass.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkImageRFFT.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Fourier/vtkTableFFT.h

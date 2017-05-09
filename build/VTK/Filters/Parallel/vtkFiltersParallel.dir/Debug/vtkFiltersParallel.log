@@ -1,0 +1,45 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Parallel/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/Parallel/CMakeFiles/generate.stamp is up-to-date.
+  vtkAggregateDataSetFilter.cxx
+  vtkAngularPeriodicFilter.cxx
+  vtkCollectGraph.cxx
+  vtkCollectPolyData.cxx
+  vtkCollectTable.cxx
+  vtkCutMaterial.cxx
+  vtkDuplicatePolyData.cxx
+  vtkExtractCTHPart.cxx
+  vtkExtractPolyDataPiece.cxx
+  vtkExtractUnstructuredGridPiece.cxx
+  vtkExtractUserDefinedPiece.cxx
+  vtkPCellDataToPointData.cxx
+  vtkPExtractArraysOverTime.cxx
+  vtkPeriodicFilter.cxx
+  vtkPKdTree.cxx
+  vtkPLinearExtrusionFilter.cxx
+  vtkPMaskPoints.cxx
+  vtkPOutlineCornerFilter.cxx
+  vtkPOutlineFilter.cxx
+  vtkPOutlineFilterInternals.cxx
+  Generating Code...
+  Compiling...
+  vtkPPolyDataNormals.cxx
+  vtkPProbeFilter.cxx
+  vtkPProjectSphereFilter.cxx
+  vtkPReflectionFilter.cxx
+  vtkPResampleFilter.cxx
+  vtkPSphereSource.cxx
+  vtkPYoungsMaterialInterface.cxx
+  vtkPassThroughFilter.cxx
+  vtkPieceRequestFilter.cxx
+  vtkPieceScalars.cxx
+  vtkPipelineSize.cxx
+  vtkProcessIdScalars.cxx
+  vtkRectilinearGridOutlineFilter.cxx
+  vtkTransmitPolyDataPiece.cxx
+  vtkTransmitStructuredDataPiece.cxx
+  vtkTransmitRectilinearGridPiece.cxx
+  vtkTransmitStructuredGridPiece.cxx
+  vtkTransmitUnstructuredGridPiece.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersParallel-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersParallel-pv5.3.exp
+  vtkFiltersParallel.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkFiltersParallel-pv5.3.dll

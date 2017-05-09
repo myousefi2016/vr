@@ -1,0 +1,62 @@
+
+<html>
+    <head>
+        <title>Gradient Magnitude</title>
+        <meta name="proxy_name" contents="filters.GradientMagnitude"/>
+        <meta name="filename" contents="filters.GradientMagnitude.html"/>
+    </head>
+    <body>
+        <h2>Gradient Magnitude (GradientMagnitude)</h2>
+        <i>
+            <p>Compute the magnitude of the gradient vectors for an image/volume.</p>
+        </i>
+        <div class="description">The Gradient
+                     Magnitude filter computes the magnitude of the gradient
+                     vector at each point in an image or volume. This filter
+                     operates on uniform rectilinear (image) data and produces
+                     image data output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Gradient
+        Magnitude filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Dimensionality</th>
+                <td>This property indicates whether to compute the gradient
+        magnitude in two or three dimensions. If computing the gradient
+        magnitude in 2D, the gradients in X and Y are used for computing the
+        gradient magnitude.</td>
+                <td>3<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Two (2)</li>
+                            <li>Three (3)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

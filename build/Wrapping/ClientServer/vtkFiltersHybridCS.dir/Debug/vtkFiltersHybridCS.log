@@ -1,0 +1,53 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkBSplineTransformClientServer.cxx
+  CS Wrapping - generating vtkDepthSortPolyDataClientServer.cxx
+  CS Wrapping - generating vtkDSPFilterDefinitionClientServer.cxx
+  CS Wrapping - generating vtkDSPFilterGroupClientServer.cxx
+  CS Wrapping - generating vtkEarthSourceClientServer.cxx
+  CS Wrapping - generating vtkFacetReaderClientServer.cxx
+  CS Wrapping - generating vtkForceTimeClientServer.cxx
+  CS Wrapping - generating vtkGreedyTerrainDecimationClientServer.cxx
+  CS Wrapping - generating vtkGridTransformClientServer.cxx
+  CS Wrapping - generating vtkImageToPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkImplicitModellerClientServer.cxx
+  CS Wrapping - generating vtkPCAAnalysisFilterClientServer.cxx
+  CS Wrapping - generating vtkPolyDataSilhouetteClientServer.cxx
+  CS Wrapping - generating vtkProcrustesAlignmentFilterClientServer.cxx
+  CS Wrapping - generating vtkProjectedTerrainPathClientServer.cxx
+  CS Wrapping - generating vtkRenderLargeImageClientServer.cxx
+  CS Wrapping - generating vtkTemporalDataSetCacheClientServer.cxx
+  CS Wrapping - generating vtkTemporalFractalClientServer.cxx
+  CS Wrapping - generating vtkTemporalInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkTemporalShiftScaleClientServer.cxx
+  CS Wrapping - generating vtkTemporalSnapToTimeStepClientServer.cxx
+  CS Wrapping - generating vtkTransformToGridClientServer.cxx
+  CS Wrapping - generating vtkWeightedTransformFilterClientServer.cxx
+  vtkBSplineTransformClientServer.cxx
+  vtkDepthSortPolyDataClientServer.cxx
+  vtkDSPFilterDefinitionClientServer.cxx
+  vtkDSPFilterGroupClientServer.cxx
+  vtkEarthSourceClientServer.cxx
+  vtkFacetReaderClientServer.cxx
+  vtkForceTimeClientServer.cxx
+  vtkGreedyTerrainDecimationClientServer.cxx
+  vtkGridTransformClientServer.cxx
+  vtkImageToPolyDataFilterClientServer.cxx
+  vtkImplicitModellerClientServer.cxx
+  vtkPCAAnalysisFilterClientServer.cxx
+  vtkPolyDataSilhouetteClientServer.cxx
+  vtkProcrustesAlignmentFilterClientServer.cxx
+  vtkProjectedTerrainPathClientServer.cxx
+  vtkRenderLargeImageClientServer.cxx
+  vtkTemporalDataSetCacheClientServer.cxx
+  vtkTemporalFractalClientServer.cxx
+  vtkTemporalInterpolatorClientServer.cxx
+  vtkTemporalShiftScaleClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTemporalSnapToTimeStepClientServer.cxx
+  vtkTransformToGridClientServer.cxx
+  vtkWeightedTransformFilterClientServer.cxx
+  vtkFiltersHybridCSInit.cxx
+  Generating Code...
+  vtkFiltersHybridCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersHybridCS-pv5.3.lib

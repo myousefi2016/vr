@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Components/moc_pqChangeInputDialog.cpp
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Components/pqChangeInputDialog.h

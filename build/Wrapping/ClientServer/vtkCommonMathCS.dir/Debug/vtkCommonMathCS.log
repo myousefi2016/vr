@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAmoebaMinimizerClientServer.cxx
+  CS Wrapping - generating vtkFunctionSetClientServer.cxx
+  CS Wrapping - generating vtkInitialValueProblemSolverClientServer.cxx
+  CS Wrapping - generating vtkMatrix3x3ClientServer.cxx
+  CS Wrapping - generating vtkMatrix4x4ClientServer.cxx
+  CS Wrapping - generating vtkPolynomialSolversUnivariateClientServer.cxx
+  CS Wrapping - generating vtkQuaternionInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkRungeKutta2ClientServer.cxx
+  CS Wrapping - generating vtkRungeKutta4ClientServer.cxx
+  CS Wrapping - generating vtkRungeKutta45ClientServer.cxx
+  vtkAmoebaMinimizerClientServer.cxx
+  vtkFunctionSetClientServer.cxx
+  vtkInitialValueProblemSolverClientServer.cxx
+  vtkMatrix3x3ClientServer.cxx
+  vtkMatrix4x4ClientServer.cxx
+  vtkPolynomialSolversUnivariateClientServer.cxx
+  vtkQuaternionInterpolatorClientServer.cxx
+  vtkRungeKutta2ClientServer.cxx
+  vtkRungeKutta4ClientServer.cxx
+  vtkRungeKutta45ClientServer.cxx
+  vtkCommonMathCSInit.cxx
+  Generating Code...
+  vtkCommonMathCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkCommonMathCS-pv5.3.lib

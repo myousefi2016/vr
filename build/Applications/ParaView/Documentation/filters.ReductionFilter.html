@@ -1,0 +1,105 @@
+
+<html>
+    <head>
+        <title>ReductionFilter</title>
+        <meta name="proxy_name" contents="filters.ReductionFilter"/>
+        <meta name="filename" contents="filters.ReductionFilter.html"/>
+    </head>
+    <body>
+        <h2>ReductionFilter (ReductionFilter)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>Set the input to the Reduction filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ReductionMode</th>
+                <td/>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Move all data to one processor (0)</li>
+                            <li>Reduce all data to one processor (1)</li>
+                            <li>Reduce all data to all processors (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>ReduceTo</th>
+                <td/>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PreGatherHelperName</th>
+                <td>Set the algorithm that runs on each node in
+        parallel.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PostGatherHelperName</th>
+                <td>Set the algorithm that takes multiple inputs and
+        produces a single reduced output.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PostGatherHelper</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PreGatherHelper</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PassThrough</th>
+                <td>If set to a non-negative value, then produce results
+        using only the node Id specified.</td>
+                <td>-1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>GenerateProcessIds</th>
+                <td>If true, the filter will generate vtkOriginalProcessIds
+        arrays indicating the process id on which the cell/point was
+        generated.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

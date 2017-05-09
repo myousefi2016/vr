@@ -1,0 +1,103 @@
+
+<html>
+    <head>
+        <title>Sphere</title>
+        <meta name="proxy_name" contents="sources.SphereSource"/>
+        <meta name="filename" contents="sources.SphereSource.html"/>
+    </head>
+    <body>
+        <h2>Sphere (SphereSource)</h2>
+        <i>
+            <p>Create a 3D sphere given a center and radius.</p>
+        </i>
+        <div class="description">The Sphere source can be
+                     used to add a polygonal sphere to the 3D scene. The output
+                     of the Sphere source is polygonal data with point normals
+                     defined.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>This property specifies the 3D coordinates for the
+        center of the sphere.</td>
+                <td>0.0 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Radius</th>
+                <td>This property specifies the radius of the
+        sphere.</td>
+                <td>0.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ThetaResolution</th>
+                <td>The value of this property represents the number of
+        divisions between Start Theta and End Theta around the sphere. (See the
+        Start Theta and End Theta properties.) The theta divisions are similar
+        to longitude lines on the earth. The higher the resolution, the closer
+        the approximation will come to a sphere, and the more polygons there
+        will be.</td>
+                <td>8<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>StartTheta</th>
+                <td>To form a complete sphere, the value of this property
+        should be 0 degrees, and the value of the End Theta property should be
+        360 degrees. The value of this property can be adjusted to form only a
+        portion of a sphere.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>EndTheta</th>
+                <td>The value of this property can be adjusted to form only
+        a portion of a sphere. This value is measured in
+        degrees.</td>
+                <td>360<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PhiResolution</th>
+                <td>The value of this property represents the number of
+        divisions between Start Phi and End Phi on the sphere. (See the Start
+        Phi and End Phi properties.) The phi divisions are similar to latitude
+        lines on the earth.</td>
+                <td>8<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>StartPhi</th>
+                <td>To form a complete sphere, the value of this property
+        should be 0 degrees, and the value of the End Phi property should be
+        180 degrees. The value of this property can be adjusted to form only a
+        portion of a sphere. Set the starting angle (in degrees) in the
+        latitudinal direction.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>EndPhi</th>
+                <td>The value of this property can be adjusted to form only
+        a portion of a sphere. The value is measured in
+        degrees.</td>
+                <td>180<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

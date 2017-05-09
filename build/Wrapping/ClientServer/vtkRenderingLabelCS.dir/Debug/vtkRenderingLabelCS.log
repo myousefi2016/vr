@@ -1,0 +1,31 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkLabeledDataMapperClientServer.cxx
+  CS Wrapping - generating vtkLabeledTreeMapDataMapperClientServer.cxx
+  CS Wrapping - generating vtkLabelHierarchyAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkLabelHierarchyCompositeIteratorClientServer.cxx
+  CS Wrapping - generating vtkLabelHierarchyClientServer.cxx
+  CS Wrapping - generating vtkLabelHierarchyIteratorClientServer.cxx
+  CS Wrapping - generating vtkLabelPlacementMapperClientServer.cxx
+  CS Wrapping - generating vtkLabelPlacerClientServer.cxx
+  CS Wrapping - generating vtkLabelRenderStrategyClientServer.cxx
+  CS Wrapping - generating vtkLabelSizeCalculatorClientServer.cxx
+  CS Wrapping - generating vtkFreeTypeLabelRenderStrategyClientServer.cxx
+  CS Wrapping - generating vtkDynamic2DLabelMapperClientServer.cxx
+  CS Wrapping - generating vtkPointSetToLabelHierarchyClientServer.cxx
+  vtkLabeledDataMapperClientServer.cxx
+  vtkLabeledTreeMapDataMapperClientServer.cxx
+  vtkLabelHierarchyAlgorithmClientServer.cxx
+  vtkLabelHierarchyCompositeIteratorClientServer.cxx
+  vtkLabelHierarchyClientServer.cxx
+  vtkLabelHierarchyIteratorClientServer.cxx
+  vtkLabelPlacementMapperClientServer.cxx
+  vtkLabelPlacerClientServer.cxx
+  vtkLabelRenderStrategyClientServer.cxx
+  vtkLabelSizeCalculatorClientServer.cxx
+  vtkFreeTypeLabelRenderStrategyClientServer.cxx
+  vtkDynamic2DLabelMapperClientServer.cxx
+  vtkPointSetToLabelHierarchyClientServer.cxx
+  vtkRenderingLabelCSInit.cxx
+  Generating Code...
+  vtkRenderingLabelCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingLabelCS-pv5.3.lib

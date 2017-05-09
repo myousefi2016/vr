@@ -1,0 +1,95 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAxisClientServer.cxx
+  CS Wrapping - generating vtkAxisExtendedClientServer.cxx
+  CS Wrapping - generating vtkCategoryLegendClientServer.cxx
+  CS Wrapping - generating vtkChartClientServer.cxx
+  CS Wrapping - generating vtkChartBoxClientServer.cxx
+  CS Wrapping - generating vtkChartHistogram2DClientServer.cxx
+  CS Wrapping - generating vtkChartLegendClientServer.cxx
+  CS Wrapping - generating vtkChartMatrixClientServer.cxx
+  CS Wrapping - generating vtkChartParallelCoordinatesClientServer.cxx
+  CS Wrapping - generating vtkChartPieClientServer.cxx
+  CS Wrapping - generating vtkChartXYClientServer.cxx
+  CS Wrapping - generating vtkChartXYZClientServer.cxx
+  CS Wrapping - generating vtkColorLegendClientServer.cxx
+  CS Wrapping - generating vtkColorTransferControlPointsItemClientServer.cxx
+  CS Wrapping - generating vtkColorTransferFunctionItemClientServer.cxx
+  CS Wrapping - generating vtkCompositeControlPointsItemClientServer.cxx
+  CS Wrapping - generating vtkCompositeTransferFunctionItemClientServer.cxx
+  CS Wrapping - generating vtkContextAreaClientServer.cxx
+  CS Wrapping - generating vtkControlPointsItemClientServer.cxx
+  CS Wrapping - generating vtkInteractiveAreaClientServer.cxx
+  CS Wrapping - generating vtkLookupTableItemClientServer.cxx
+  CS Wrapping - generating vtkPiecewiseControlPointsItemClientServer.cxx
+  CS Wrapping - generating vtkPiecewiseFunctionItemClientServer.cxx
+  CS Wrapping - generating vtkPiecewisePointHandleItemClientServer.cxx
+  CS Wrapping - generating vtkPlotClientServer.cxx
+  CS Wrapping - generating vtkPlot3DClientServer.cxx
+  CS Wrapping - generating vtkPlotAreaClientServer.cxx
+  CS Wrapping - generating vtkPlotBagClientServer.cxx
+  CS Wrapping - generating vtkPlotBarClientServer.cxx
+  CS Wrapping - generating vtkPlotBoxClientServer.cxx
+  CS Wrapping - generating vtkPlotFunctionalBagClientServer.cxx
+  CS Wrapping - generating vtkPlotGridClientServer.cxx
+  CS Wrapping - generating vtkPlotHistogram2DClientServer.cxx
+  CS Wrapping - generating vtkPlotLineClientServer.cxx
+  CS Wrapping - generating vtkPlotLine3DClientServer.cxx
+  CS Wrapping - generating vtkPlotParallelCoordinatesClientServer.cxx
+  CS Wrapping - generating vtkPlotPieClientServer.cxx
+  CS Wrapping - generating vtkPlotPointsClientServer.cxx
+  CS Wrapping - generating vtkPlotPoints3DClientServer.cxx
+  CS Wrapping - generating vtkPlotStackedClientServer.cxx
+  CS Wrapping - generating vtkPlotSurfaceClientServer.cxx
+  CS Wrapping - generating vtkScalarsToColorsItemClientServer.cxx
+  CS Wrapping - generating vtkScatterPlotMatrixClientServer.cxx
+  vtkAxisClientServer.cxx
+  vtkAxisExtendedClientServer.cxx
+  vtkCategoryLegendClientServer.cxx
+  vtkChartClientServer.cxx
+  vtkChartBoxClientServer.cxx
+  vtkChartHistogram2DClientServer.cxx
+  vtkChartLegendClientServer.cxx
+  vtkChartMatrixClientServer.cxx
+  vtkChartParallelCoordinatesClientServer.cxx
+  vtkChartPieClientServer.cxx
+  vtkChartXYClientServer.cxx
+  vtkChartXYZClientServer.cxx
+  vtkColorLegendClientServer.cxx
+  vtkColorTransferControlPointsItemClientServer.cxx
+  vtkColorTransferFunctionItemClientServer.cxx
+  vtkCompositeControlPointsItemClientServer.cxx
+  vtkCompositeTransferFunctionItemClientServer.cxx
+  vtkContextAreaClientServer.cxx
+  vtkControlPointsItemClientServer.cxx
+  vtkInteractiveAreaClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkLookupTableItemClientServer.cxx
+  vtkPiecewiseControlPointsItemClientServer.cxx
+  vtkPiecewiseFunctionItemClientServer.cxx
+  vtkPiecewisePointHandleItemClientServer.cxx
+  vtkPlotClientServer.cxx
+  vtkPlot3DClientServer.cxx
+  vtkPlotAreaClientServer.cxx
+  vtkPlotBagClientServer.cxx
+  vtkPlotBarClientServer.cxx
+  vtkPlotBoxClientServer.cxx
+  vtkPlotFunctionalBagClientServer.cxx
+  vtkPlotGridClientServer.cxx
+  vtkPlotHistogram2DClientServer.cxx
+  vtkPlotLineClientServer.cxx
+  vtkPlotLine3DClientServer.cxx
+  vtkPlotParallelCoordinatesClientServer.cxx
+  vtkPlotPieClientServer.cxx
+  vtkPlotPointsClientServer.cxx
+  vtkPlotPoints3DClientServer.cxx
+  vtkPlotStackedClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPlotSurfaceClientServer.cxx
+  vtkScalarsToColorsItemClientServer.cxx
+  vtkScatterPlotMatrixClientServer.cxx
+  vtkChartsCoreCSInit.cxx
+  Generating Code...
+  vtkChartsCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkChartsCoreCS-pv5.3.lib

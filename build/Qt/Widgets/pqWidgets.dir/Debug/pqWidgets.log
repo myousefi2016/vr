@@ -1,0 +1,169 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/CMakeFiles/generate.stamp is up-to-date.
+  Generating moc_pqAnimationKeyFrame.cpp
+  Generating moc_pqAnimationModel.cpp
+  Generating moc_pqAnimationTrack.cpp
+  Generating moc_pqAnimationWidget.cpp
+  Generating moc_pqCheckableHeaderView.cpp
+  Generating moc_pqCheckBoxPixMaps.cpp
+  Generating moc_pqCollapsedGroup.cpp
+  Generating moc_pqColorButtonEventPlayer.cpp
+  Generating moc_pqColorButtonEventTranslator.cpp
+  Generating moc_pqColorChooserButton.cpp
+  Generating moc_pqColorDialogEventPlayer.cpp
+  Generating moc_pqColorDialogEventTranslator.cpp
+  Generating moc_pqConsoleWidget.cpp
+  Generating moc_pqConsoleWidgetEventPlayer.cpp
+  Generating moc_pqConsoleWidgetEventTranslator.cpp
+  Generating moc_pqDelimitedTextParser.cpp
+  Generating moc_pqDoubleRangeDialog.cpp
+  Generating moc_pqDoubleRangeWidget.cpp
+  Generating moc_pqDoubleSpinBox.cpp
+  Generating moc_pqExpandableTableView.cpp
+  Generating moc_pqExpanderButton.cpp
+  Generating moc_pqFlatTreeView.cpp
+  Generating moc_pqHighlightablePushButton.cpp
+  Generating moc_pqLineEdit.cpp
+  Generating moc_pqLineEditEventPlayer.cpp
+  Generating moc_pqListWidgetCheckHelper.cpp
+  Generating moc_pqListWidgetItemObject.cpp
+  Generating moc_pqProgressBar.cpp
+  Generating moc_pqProgressWidget.cpp
+  Generating moc_pqQuickLaunchDialog.cpp
+  Generating moc_pqSectionVisibilityContextMenu.cpp
+  Generating moc_pqSignalAdaptors.cpp
+  Generating moc_pqSpinBox.cpp
+  Generating moc_pqTableView.cpp
+  Generating moc_pqTextEdit.cpp
+  Generating moc_pqTreeView.cpp
+  Generating moc_pqTreeWidget.cpp
+  Generating moc_pqTreeWidgetCheckHelper.cpp
+  Generating moc_pqTreeWidgetItemObject.cpp
+  Generating moc_pqTreeWidgetSelectionHelper.cpp
+  Generating moc_pqTreeViewSelectionHelper.cpp
+  Generating moc_pqHelpWindow.cpp
+  Generating qrc_QtWidgets.cpp
+  Generating ui_pqExpanderButton.h
+  Generating ui_pqHelpWindow.h
+  Generating ui_pqQuickLaunchDialog.h
+  pqAnimationKeyFrame.cxx
+  pqAnimationModel.cxx
+  pqAnimationTrack.cxx
+  pqAnimationWidget.cxx
+  pqCheckableHeaderView.cxx
+  pqCheckBoxPixMaps.cxx
+  pqCollapsedGroup.cxx
+  pqColorButtonEventPlayer.cxx
+  pqColorDialogEventPlayer.cxx
+  pqColorDialogEventTranslator.cxx
+  pqColorButtonEventTranslator.cxx
+  pqColorChooserButton.cxx
+  pqConnect.cxx
+  pqConsoleWidget.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidget.cxx(557): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  pqConsoleWidgetEventPlayer.cxx
+  pqConsoleWidgetEventTranslator.cxx
+  pqDelimitedTextParser.cxx
+c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(317): warning C4127: conditional expression is constant
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(316): note: while compiling class template member function 'void QVector<QStringList>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QStringList
+          ]
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(573): note: see reference to function template instantiation 'void QVector<QStringList>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QStringList
+          ]
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(383): note: while compiling class template member function 'void QVector<QStringList>::detach(void)'
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(129): note: see reference to function template instantiation 'void QVector<QStringList>::detach(void)' being compiled
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvector.h(437): note: while compiling class template member function 'QStringList &QVector<QStringList>::operator [](int)'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDelimitedTextParser.cxx(79): note: see reference to function template instantiation 'QStringList &QVector<QStringList>::operator [](int)' being compiled
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDelimitedTextParser.cxx(61): note: see reference to class template instantiation 'QVector<QStringList>' being compiled
+  pqDoubleRangeDialog.cxx
+  pqDoubleRangeWidget.cxx
+  pqDoubleSpinBox.cxx
+  Generating Code...
+  Compiling...
+  pqExpandableTableView.cxx
+  pqExpanderButton.cxx
+  pqFlatTreeView.cxx
+  pqHighlightablePushButton.cxx
+  pqLineEdit.cxx
+  pqLineEditEventPlayer.cxx
+  pqListWidgetCheckHelper.cxx
+  pqListWidgetItemObject.cxx
+  pqProgressBar.cxx
+  pqProgressWidget.cxx
+  pqQuickLaunchDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqQuickLaunchDialog.cxx(282): warning C4714: function 'QString QString::toLower(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(408): note: see declaration of 'QString::toLower'
+  pqSectionVisibilityContextMenu.cxx
+  pqSetData.cxx
+  pqSetName.cxx
+  pqSignalAdaptors.cxx
+  pqSpinBox.cxx
+  pqTableView.cxx
+  pqTextEdit.cxx
+  pqTreeView.cxx
+  pqTreeViewSelectionHelper.cxx
+  Generating Code...
+  Compiling...
+  pqTreeWidgetCheckHelper.cxx
+  pqTreeWidget.cxx
+  pqTreeWidgetItem.cxx
+  pqTreeWidgetItemObject.cxx
+  pqTreeWidgetSelectionHelper.cxx
+  pqWaitCursor.cxx
+  pqHelpWindow.cxx
+  moc_pqAnimationKeyFrame.cpp
+  moc_pqAnimationModel.cpp
+  moc_pqAnimationTrack.cpp
+  moc_pqAnimationWidget.cpp
+  moc_pqCheckableHeaderView.cpp
+  moc_pqCheckBoxPixMaps.cpp
+  moc_pqCollapsedGroup.cpp
+  moc_pqColorButtonEventPlayer.cpp
+  moc_pqColorButtonEventTranslator.cpp
+  moc_pqColorChooserButton.cpp
+  moc_pqColorDialogEventPlayer.cpp
+  moc_pqColorDialogEventTranslator.cpp
+  moc_pqConsoleWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqConsoleWidgetEventPlayer.cpp
+  moc_pqConsoleWidgetEventTranslator.cpp
+  moc_pqDelimitedTextParser.cpp
+  moc_pqDoubleRangeDialog.cpp
+  moc_pqDoubleRangeWidget.cpp
+  moc_pqDoubleSpinBox.cpp
+  moc_pqExpandableTableView.cpp
+  moc_pqExpanderButton.cpp
+  moc_pqFlatTreeView.cpp
+  moc_pqHighlightablePushButton.cpp
+  moc_pqLineEdit.cpp
+  moc_pqLineEditEventPlayer.cpp
+  moc_pqListWidgetCheckHelper.cpp
+  moc_pqListWidgetItemObject.cpp
+  moc_pqProgressBar.cpp
+  moc_pqProgressWidget.cpp
+  moc_pqQuickLaunchDialog.cpp
+  moc_pqSectionVisibilityContextMenu.cpp
+  moc_pqSignalAdaptors.cpp
+  moc_pqSpinBox.cpp
+  Generating Code...
+  Compiling...
+  moc_pqTableView.cpp
+  moc_pqTextEdit.cpp
+  moc_pqTreeView.cpp
+  moc_pqTreeWidget.cpp
+  moc_pqTreeWidgetCheckHelper.cpp
+  moc_pqTreeWidgetItemObject.cpp
+  moc_pqTreeWidgetSelectionHelper.cpp
+  moc_pqTreeViewSelectionHelper.cpp
+  moc_pqHelpWindow.cpp
+  qrc_QtWidgets.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqWidgets-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqWidgets-pv5.3.exp
+  pqWidgets.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkpqWidgets-pv5.3.dll

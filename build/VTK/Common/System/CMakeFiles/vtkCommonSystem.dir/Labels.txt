@@ -1,0 +1,19 @@
+# Target labels
+ vtkCommonSystem
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkClientSocket.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkDirectory.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkServerSocket.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkSocket.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkSocketCollection.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkThreadMessager.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkTimerLog.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkClientSocket.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkDirectory.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkServerSocket.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkSocket.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkSocketCollection.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkThreadMessager.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/vtkTimerLog.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/System/vtkCommonSystemModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/System/CMakeLists.txt

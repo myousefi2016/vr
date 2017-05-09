@@ -1,0 +1,17 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/GMVReader/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/GMVReader/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkGMVReaderClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_GMVReader.h
+  -- Generate module: GMVReaderSM
+  vtkGMVReader.cxx
+  vtkGMVReaderClientServer.cxx
+  GMVReaderInit.cxx
+  GMVReader_Plugin.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/GMVReader.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/GMVReader.exp
+  GMVReader.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\GMVReader.dll

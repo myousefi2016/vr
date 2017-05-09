@@ -1,0 +1,79 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkBoundedPointSourceClientServer.cxx
+  CS Wrapping - generating vtkDensifyPointCloudFilterClientServer.cxx
+  CS Wrapping - generating vtkEllipsoidalGaussianKernelClientServer.cxx
+  CS Wrapping - generating vtkEuclideanClusterExtractionClientServer.cxx
+  CS Wrapping - generating vtkExtractHierarchicalBinsClientServer.cxx
+  CS Wrapping - generating vtkExtractPointCloudPieceClientServer.cxx
+  CS Wrapping - generating vtkExtractPointsClientServer.cxx
+  CS Wrapping - generating vtkExtractSurfaceClientServer.cxx
+  CS Wrapping - generating vtkFitImplicitFunctionClientServer.cxx
+  CS Wrapping - generating vtkGaussianKernelClientServer.cxx
+  CS Wrapping - generating vtkGeneralizedKernelClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalBinningFilterClientServer.cxx
+  CS Wrapping - generating vtkInterpolationKernelClientServer.cxx
+  CS Wrapping - generating vtkLinearKernelClientServer.cxx
+  CS Wrapping - generating vtkMaskPointsFilterClientServer.cxx
+  CS Wrapping - generating vtkPCACurvatureEstimationClientServer.cxx
+  CS Wrapping - generating vtkPCANormalEstimationClientServer.cxx
+  CS Wrapping - generating vtkPointDensityFilterClientServer.cxx
+  CS Wrapping - generating vtkPointCloudFilterClientServer.cxx
+  CS Wrapping - generating vtkPointInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkPointInterpolator2DClientServer.cxx
+  CS Wrapping - generating vtkPointOccupancyFilterClientServer.cxx
+  CS Wrapping - generating vtkProbabilisticVoronoiKernelClientServer.cxx
+  CS Wrapping - generating vtkRadiusOutlierRemovalClientServer.cxx
+  CS Wrapping - generating vtkSPHInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkSPHCubicKernelClientServer.cxx
+  CS Wrapping - generating vtkSPHKernelClientServer.cxx
+  CS Wrapping - generating vtkSPHQuarticKernelClientServer.cxx
+  CS Wrapping - generating vtkSPHQuinticKernelClientServer.cxx
+  CS Wrapping - generating vtkShepardKernelClientServer.cxx
+  CS Wrapping - generating vtkSignedDistanceClientServer.cxx
+  CS Wrapping - generating vtkStatisticalOutlierRemovalClientServer.cxx
+  CS Wrapping - generating vtkUnsignedDistanceClientServer.cxx
+  CS Wrapping - generating vtkVoxelGridClientServer.cxx
+  CS Wrapping - generating vtkVoronoiKernelClientServer.cxx
+  CS Wrapping - generating vtkWendlandQuinticKernelClientServer.cxx
+  vtkBoundedPointSourceClientServer.cxx
+  vtkDensifyPointCloudFilterClientServer.cxx
+  vtkEllipsoidalGaussianKernelClientServer.cxx
+  vtkEuclideanClusterExtractionClientServer.cxx
+  vtkExtractHierarchicalBinsClientServer.cxx
+  vtkExtractPointCloudPieceClientServer.cxx
+  vtkExtractPointsClientServer.cxx
+  vtkExtractSurfaceClientServer.cxx
+  vtkFitImplicitFunctionClientServer.cxx
+  vtkGaussianKernelClientServer.cxx
+  vtkGeneralizedKernelClientServer.cxx
+  vtkHierarchicalBinningFilterClientServer.cxx
+  vtkInterpolationKernelClientServer.cxx
+  vtkLinearKernelClientServer.cxx
+  vtkMaskPointsFilterClientServer.cxx
+  vtkPCACurvatureEstimationClientServer.cxx
+  vtkPCANormalEstimationClientServer.cxx
+  vtkPointDensityFilterClientServer.cxx
+  vtkPointCloudFilterClientServer.cxx
+  vtkPointInterpolatorClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPointInterpolator2DClientServer.cxx
+  vtkPointOccupancyFilterClientServer.cxx
+  vtkProbabilisticVoronoiKernelClientServer.cxx
+  vtkRadiusOutlierRemovalClientServer.cxx
+  vtkSPHInterpolatorClientServer.cxx
+  vtkSPHCubicKernelClientServer.cxx
+  vtkSPHKernelClientServer.cxx
+  vtkSPHQuarticKernelClientServer.cxx
+  vtkSPHQuinticKernelClientServer.cxx
+  vtkShepardKernelClientServer.cxx
+  vtkSignedDistanceClientServer.cxx
+  vtkStatisticalOutlierRemovalClientServer.cxx
+  vtkUnsignedDistanceClientServer.cxx
+  vtkVoxelGridClientServer.cxx
+  vtkVoronoiKernelClientServer.cxx
+  vtkWendlandQuinticKernelClientServer.cxx
+  vtkFiltersPointsCSInit.cxx
+  Generating Code...
+  vtkFiltersPointsCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersPointsCS-pv5.3.lib

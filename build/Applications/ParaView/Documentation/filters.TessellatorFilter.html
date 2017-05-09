@@ -1,0 +1,104 @@
+
+<html>
+    <head>
+        <title>Tessellate</title>
+        <meta name="proxy_name" contents="filters.TessellatorFilter"/>
+        <meta name="filename" contents="filters.TessellatorFilter.html"/>
+    </head>
+    <body>
+        <h2>Tessellate (TessellatorFilter)</h2>
+        <i>
+            <p>Tessellate nonlinear curves, surfaces, and volumes with lines, triangles, and tetrahedra.</p>
+        </i>
+        <div class="description">The Tessellate filter
+                     tessellates cells with nonlinear geometry and/or scalar
+                     fields into a simplicial complex with linearly
+                     interpolated field values that more closely approximate
+                     the original field. This is useful for datasets containing
+                     quadratic cells.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Tessellate
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPolyData</li>
+                            <li>vtkDataSet</li>
+                            <li>vtkUnstructuredGrid</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>OutputDimension</th>
+                <td>The value of this property sets the maximum
+        dimensionality of the output tessellation. When the value of this
+        property is 3, 3D cells produce tetrahedra, 2D cells produce triangles,
+        and 1D cells produce line segments. When the value is 2, 3D cells will
+        have their boundaries tessellated with triangles. When the value is 1,
+        all cells except points produce line segments.</td>
+                <td>3<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ChordError</th>
+                <td>This property controls the maximum chord error allowed
+        at any edge midpoint in the output tessellation. The chord error is
+        measured as the distance between the midpoint of any output edge and
+        the original nonlinear geometry.</td>
+                <td>1e-3<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Field Error</th>
+                <td>This proeprty controls the maximum field error allowed
+        at any edge midpoint in the output tessellation. The field error is
+        measured as the difference between a field value at the midpoint of an
+        output edge and the value of the corresponding field in the original
+        nonlinear geometry.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Maximum Number of Subdivisions</th>
+                <td>This property specifies the maximum number of times an
+        edge may be subdivided. Increasing this number allows further
+        refinement but can drastically increase the computational and storage
+        requirements, especially when the value of the OutputDimension property
+        is 3.</td>
+                <td>3<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MergePoints</th>
+                <td>If the value of this property is set to 1, coincident
+        vertices will be merged after tessellation has occurred. Only geometry
+        is considered during the merge and the first vertex encountered is the
+        one whose point attributes will be used. Any discontinuities in point
+        fields will be lost. On the other hand, many operations, such as
+        streamline generation, require coincident vertices to be merged. Toggle
+        whether to merge coincident vertices.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

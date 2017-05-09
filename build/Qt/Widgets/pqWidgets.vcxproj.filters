@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationKeyFrame.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationModel.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationTrack.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationWidget.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCheckableHeaderView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCheckBoxPixMaps.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCollapsedGroup.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorButtonEventPlayer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorDialogEventPlayer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorDialogEventTranslator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorButtonEventTranslator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorChooserButton.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConnect.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidget.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidgetEventPlayer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidgetEventTranslator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDelimitedTextParser.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleRangeDialog.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleRangeWidget.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleSpinBox.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqExpandableTableView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqExpanderButton.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqFlatTreeView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqHighlightablePushButton.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqLineEdit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqLineEditEventPlayer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqListWidgetCheckHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqListWidgetItemObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqProgressBar.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqProgressWidget.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqQuickLaunchDialog.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSectionVisibilityContextMenu.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSetData.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSetName.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSignalAdaptors.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSpinBox.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTableView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTextEdit.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeView.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeViewSelectionHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetCheckHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidget.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetItem.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetItemObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetSelectionHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqWaitCursor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqHelpWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqAnimationKeyFrame.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqAnimationModel.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqAnimationTrack.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqAnimationWidget.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqCheckableHeaderView.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqCheckBoxPixMaps.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqCollapsedGroup.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqColorButtonEventPlayer.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqColorButtonEventTranslator.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqColorChooserButton.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqColorDialogEventPlayer.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqColorDialogEventTranslator.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqConsoleWidget.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqConsoleWidgetEventPlayer.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqConsoleWidgetEventTranslator.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqDelimitedTextParser.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqDoubleRangeDialog.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqDoubleRangeWidget.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqDoubleSpinBox.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqExpandableTableView.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqExpanderButton.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqFlatTreeView.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqHighlightablePushButton.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqLineEdit.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqLineEditEventPlayer.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqListWidgetCheckHelper.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqListWidgetItemObject.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqProgressBar.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqProgressWidget.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqQuickLaunchDialog.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqSectionVisibilityContextMenu.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqSignalAdaptors.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqSpinBox.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTableView.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTextEdit.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeView.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeWidget.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeWidgetCheckHelper.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeWidgetItemObject.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeWidgetSelectionHelper.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqTreeViewSelectionHelper.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\moc_pqHelpWindow.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\qrc_QtWidgets.cpp">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationKeyFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqAnimationWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCheckableHeaderView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCheckBoxPixMaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqCollapsedGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorDialogEventPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorDialogEventTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorButtonEventPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorButtonEventTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqColorChooserButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidgetEventPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqConsoleWidgetEventTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDelimitedTextParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleRangeDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleRangeWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqDoubleSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqExpandableTableView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqExpanderButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqFlatTreeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqHighlightablePushButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqLineEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqLineEditEventPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqListWidgetCheckHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqListWidgetItemObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqProgressBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqProgressWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqQuickLaunchDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSectionVisibilityContextMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSetData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSetName.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSignalAdaptors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTableView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTextEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeViewSelectionHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetCheckHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetItemObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqTreeWidgetSelectionHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqWaitCursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\pqHelpWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\ui_pqExpanderButton.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\ui_pqHelpWindow.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\ui_pqQuickLaunchDialog.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Qt\Widgets\pqWidgetsModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqAnimationKeyFrame.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqAnimationModel.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqAnimationTrack.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqAnimationWidget.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqCheckableHeaderView.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqCheckBoxPixMaps.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqCollapsedGroup.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqColorButtonEventPlayer.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqColorButtonEventTranslator.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqColorChooserButton.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqColorDialogEventPlayer.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqColorDialogEventTranslator.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqConsoleWidget.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqConsoleWidgetEventPlayer.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqConsoleWidgetEventTranslator.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqDelimitedTextParser.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqDoubleRangeDialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqDoubleRangeWidget.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqDoubleSpinBox.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqExpandableTableView.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqExpanderButton.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqFlatTreeView.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqHighlightablePushButton.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqLineEdit.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqLineEditEventPlayer.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqListWidgetCheckHelper.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqListWidgetItemObject.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqProgressBar.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqProgressWidget.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqQuickLaunchDialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqSectionVisibilityContextMenu.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqSignalAdaptors.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqSpinBox.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTableView.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTextEdit.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeView.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeWidget.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeWidgetCheckHelper.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeWidgetItemObject.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeWidgetSelectionHelper.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqTreeViewSelectionHelper.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\CMakeFiles\e7edf7b430049c34330f84eb7d06e2a1\moc_pqHelpWindow.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\Resources\QtWidgets.qrc">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\Resources\UI\pqExpanderButton.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\Resources\UI\pqHelpWindow.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Widgets\Resources\UI\pqQuickLaunchDialog.ui">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BB222BB1-D941-316E-B7B3-B665F064E495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{9788285F-BBF1-3796-B1A2-D13EEA9FA8E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{7FAE118C-B36D-3B07-BFFA-5510B91AB447}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,75 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkArcSourceClientServer.cxx
+  CS Wrapping - generating vtkArrowSourceClientServer.cxx
+  CS Wrapping - generating vtkButtonSourceClientServer.cxx
+  CS Wrapping - generating vtkConeSourceClientServer.cxx
+  CS Wrapping - generating vtkCubeSourceClientServer.cxx
+  CS Wrapping - generating vtkCylinderSourceClientServer.cxx
+  CS Wrapping - generating vtkDiskSourceClientServer.cxx
+  CS Wrapping - generating vtkEllipseArcSourceClientServer.cxx
+  CS Wrapping - generating vtkEllipticalButtonSourceClientServer.cxx
+  CS Wrapping - generating vtkFrustumSourceClientServer.cxx
+  CS Wrapping - generating vtkGlyphSource2DClientServer.cxx
+  CS Wrapping - generating vtkHyperOctreeFractalSourceClientServer.cxx
+  CS Wrapping - generating vtkHyperTreeGridSourceClientServer.cxx
+  CS Wrapping - generating vtkLineSourceClientServer.cxx
+  CS Wrapping - generating vtkOutlineCornerFilterClientServer.cxx
+  CS Wrapping - generating vtkOutlineCornerSourceClientServer.cxx
+  CS Wrapping - generating vtkOutlineSourceClientServer.cxx
+  CS Wrapping - generating vtkParametricFunctionSourceClientServer.cxx
+  CS Wrapping - generating vtkPlaneSourceClientServer.cxx
+  CS Wrapping - generating vtkPlatonicSolidSourceClientServer.cxx
+  CS Wrapping - generating vtkPointSourceClientServer.cxx
+  CS Wrapping - generating vtkPolyLineSourceClientServer.cxx
+  CS Wrapping - generating vtkProgrammableDataObjectSourceClientServer.cxx
+  CS Wrapping - generating vtkProgrammableSourceClientServer.cxx
+  CS Wrapping - generating vtkRectangularButtonSourceClientServer.cxx
+  CS Wrapping - generating vtkRegularPolygonSourceClientServer.cxx
+  CS Wrapping - generating vtkSelectionSourceClientServer.cxx
+  CS Wrapping - generating vtkSphereSourceClientServer.cxx
+  CS Wrapping - generating vtkSuperquadricSourceClientServer.cxx
+  CS Wrapping - generating vtkTessellatedBoxSourceClientServer.cxx
+  CS Wrapping - generating vtkTextSourceClientServer.cxx
+  CS Wrapping - generating vtkTexturedSphereSourceClientServer.cxx
+  CS Wrapping - generating vtkGraphToPolyDataClientServer.cxx
+  CS Wrapping - generating vtkDiagonalMatrixSourceClientServer.cxx
+  vtkArcSourceClientServer.cxx
+  vtkArrowSourceClientServer.cxx
+  vtkButtonSourceClientServer.cxx
+  vtkConeSourceClientServer.cxx
+  vtkCubeSourceClientServer.cxx
+  vtkCylinderSourceClientServer.cxx
+  vtkDiskSourceClientServer.cxx
+  vtkEllipseArcSourceClientServer.cxx
+  vtkEllipticalButtonSourceClientServer.cxx
+  vtkFrustumSourceClientServer.cxx
+  vtkGlyphSource2DClientServer.cxx
+  vtkHyperOctreeFractalSourceClientServer.cxx
+  vtkHyperTreeGridSourceClientServer.cxx
+  vtkLineSourceClientServer.cxx
+  vtkOutlineCornerFilterClientServer.cxx
+  vtkOutlineCornerSourceClientServer.cxx
+  vtkOutlineSourceClientServer.cxx
+  vtkParametricFunctionSourceClientServer.cxx
+  vtkPlaneSourceClientServer.cxx
+  vtkPlatonicSolidSourceClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPointSourceClientServer.cxx
+  vtkPolyLineSourceClientServer.cxx
+  vtkProgrammableDataObjectSourceClientServer.cxx
+  vtkProgrammableSourceClientServer.cxx
+  vtkRectangularButtonSourceClientServer.cxx
+  vtkRegularPolygonSourceClientServer.cxx
+  vtkSelectionSourceClientServer.cxx
+  vtkSphereSourceClientServer.cxx
+  vtkSuperquadricSourceClientServer.cxx
+  vtkTessellatedBoxSourceClientServer.cxx
+  vtkTextSourceClientServer.cxx
+  vtkTexturedSphereSourceClientServer.cxx
+  vtkGraphToPolyDataClientServer.cxx
+  vtkDiagonalMatrixSourceClientServer.cxx
+  vtkFiltersSourcesCSInit.cxx
+  Generating Code...
+  vtkFiltersSourcesCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersSourcesCS-pv5.3.lib

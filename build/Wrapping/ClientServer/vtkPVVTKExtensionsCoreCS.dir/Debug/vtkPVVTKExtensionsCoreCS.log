@@ -1,0 +1,51 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAttributeDataReductionFilterClientServer.cxx
+  CS Wrapping - generating vtkCompositeMultiProcessControllerClientServer.cxx
+  CS Wrapping - generating vtkDistributedTrivialProducerClientServer.cxx
+  CS Wrapping - generating vtkExtractHistogramClientServer.cxx
+  CS Wrapping - generating vtkFileSeriesReaderClientServer.cxx
+  CS Wrapping - generating vtkFileSeriesWriterClientServer.cxx
+  CS Wrapping - generating vtkImageFileSeriesReaderClientServer.cxx
+  CS Wrapping - generating vtkIntegrateAttributesClientServer.cxx
+  CS Wrapping - generating vtkMetaReaderClientServer.cxx
+  CS Wrapping - generating vtkParallelSerialWriterClientServer.cxx
+  CS Wrapping - generating vtkPExtractHistogramClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeDataPipelineClientServer.cxx
+  CS Wrapping - generating vtkPVNullSourceClientServer.cxx
+  CS Wrapping - generating vtkPVPostFilterClientServer.cxx
+  CS Wrapping - generating vtkPVPostFilterExecutiveClientServer.cxx
+  CS Wrapping - generating vtkPVTransformClientServer.cxx
+  CS Wrapping - generating vtkPVTrivialProducerClientServer.cxx
+  CS Wrapping - generating vtkReductionFilterClientServer.cxx
+  CS Wrapping - generating vtkSelectionSerializerClientServer.cxx
+  CS Wrapping - generating vtkUndoElementClientServer.cxx
+  CS Wrapping - generating vtkUndoSetClientServer.cxx
+  CS Wrapping - generating vtkUndoStackClientServer.cxx
+  vtkAttributeDataReductionFilterClientServer.cxx
+  vtkCompositeMultiProcessControllerClientServer.cxx
+  vtkDistributedTrivialProducerClientServer.cxx
+  vtkExtractHistogramClientServer.cxx
+  vtkFileSeriesReaderClientServer.cxx
+  vtkFileSeriesWriterClientServer.cxx
+  vtkImageFileSeriesReaderClientServer.cxx
+  vtkIntegrateAttributesClientServer.cxx
+  vtkMetaReaderClientServer.cxx
+  vtkParallelSerialWriterClientServer.cxx
+  vtkPExtractHistogramClientServer.cxx
+  vtkPVCompositeDataPipelineClientServer.cxx
+  vtkPVNullSourceClientServer.cxx
+  vtkPVPostFilterClientServer.cxx
+  vtkPVPostFilterExecutiveClientServer.cxx
+  vtkPVTransformClientServer.cxx
+  vtkPVTrivialProducerClientServer.cxx
+  vtkReductionFilterClientServer.cxx
+  vtkSelectionSerializerClientServer.cxx
+  vtkUndoElementClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkUndoSetClientServer.cxx
+  vtkUndoStackClientServer.cxx
+  vtkPVVTKExtensionsCoreCSInit.cxx
+  Generating Code...
+  vtkPVVTKExtensionsCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVVTKExtensionsCoreCS-pv5.3.lib

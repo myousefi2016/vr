@@ -1,0 +1,17 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelXML/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/ParallelXML/CMakeFiles/generate.stamp is up-to-date.
+  vtkXMLPDataSetWriter.cxx
+  vtkXMLPDataWriter.cxx
+  vtkXMLPImageDataWriter.cxx
+  vtkXMLPPolyDataWriter.cxx
+  vtkXMLPRectilinearGridWriter.cxx
+  vtkXMLPStructuredDataWriter.cxx
+  vtkXMLPStructuredGridWriter.cxx
+  vtkXMLPUnstructuredDataWriter.cxx
+  vtkXMLPUnstructuredGridWriter.cxx
+  vtkXMLPHierarchicalBoxDataWriter.cxx
+  vtkXMLPMultiBlockDataWriter.cxx
+  vtkXMLPUniformGridAMRWriter.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOParallelXML-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOParallelXML-pv5.3.exp
+  vtkIOParallelXML.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOParallelXML-pv5.3.dll

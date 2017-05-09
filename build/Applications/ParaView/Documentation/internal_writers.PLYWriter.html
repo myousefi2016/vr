@@ -1,0 +1,70 @@
+
+<html>
+    <head>
+        <title>PLYWriter</title>
+        <meta name="proxy_name" contents="internal_writers.PLYWriter"/>
+        <meta name="filename" contents="internal_writers.PLYWriter.html"/>
+    </head>
+    <body>
+        <h2>PLYWriter (PLYWriter)</h2>
+        <i>
+            <p>Write polygonal data in Stanford University PLY format.</p>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>DummyInput</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>
+      The dataset must contain a field array (any)
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>EnableColoring</th>
+                <td>
+          Specify whether color information should be saved in the PLY file.
+          If enable, the data source's coloring state i.e. the array to color with and the transfer function
+          from the active view will be used.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ColorArrayName</th>
+                <td>
+          The array that will be used for saving color information when
+          <b>Enable Coloring</b> is ON.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>LookupTable</th>
+                <td>Set the lookup table to use for scalar
+        mapping.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

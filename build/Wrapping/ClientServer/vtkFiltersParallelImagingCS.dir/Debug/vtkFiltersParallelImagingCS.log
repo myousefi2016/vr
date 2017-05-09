@@ -1,0 +1,17 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPComputeHistogram2DOutliersClientServer.cxx
+  CS Wrapping - generating vtkPExtractHistogram2DClientServer.cxx
+  CS Wrapping - generating vtkPPairwiseExtractHistogram2DClientServer.cxx
+  CS Wrapping - generating vtkExtractPieceClientServer.cxx
+  CS Wrapping - generating vtkMemoryLimitImageDataStreamerClientServer.cxx
+  CS Wrapping - generating vtkTransmitImageDataPieceClientServer.cxx
+  vtkPComputeHistogram2DOutliersClientServer.cxx
+  vtkPExtractHistogram2DClientServer.cxx
+  vtkPPairwiseExtractHistogram2DClientServer.cxx
+  vtkExtractPieceClientServer.cxx
+  vtkMemoryLimitImageDataStreamerClientServer.cxx
+  vtkTransmitImageDataPieceClientServer.cxx
+  vtkFiltersParallelImagingCSInit.cxx
+  Generating Code...
+  vtkFiltersParallelImagingCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersParallelImagingCS-pv5.3.lib

@@ -1,0 +1,333 @@
+
+<html>
+    <head>
+        <title>GridAxes3DActor</title>
+        <meta name="proxy_name" contents="annotations.GridAxes3DActor"/>
+        <meta name="filename" contents="annotations.GridAxes3DActor.html"/>
+    </head>
+    <body>
+        <h2>GridAxes3DActor (GridAxes3DActor)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">
+        GridAxes3DActor can be used to render a grid in a render view.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Visibility</th>
+                <td>
+          Show/hide the axes grid.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>XTitle</th>
+                <td>
+          Set the title string for X axis.
+        </td>
+                <td>X Axis<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>YTitle</th>
+                <td>
+          Set the title string for Y axis.
+        </td>
+                <td>Y Axis<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ZTitle</th>
+                <td>
+          Set the title string for Z axis.
+        </td>
+                <td>Z Axis<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FacesToRender</th>
+                <td>
+          Set the mask to select faces. The faces rendered will be a subset of the
+          faces selected depending on the status of <b>CullBackface</b> and
+          <b>CullFrontface</b> properties.
+        </td>
+                <td>63<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ShowGrid</th>
+                <td>
+          Turn off to not render the plane grids.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ShowEdges</th>
+                <td>
+          Turn off to not render the plane edges.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ShowTicks</th>
+                <td>
+          Turn off to not render the tick marks.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>AxesToLabel</th>
+                <td>
+          Set the mask to select the axes to label. The axes labelled will be a subset of the
+          axes selected depending on which faces are also being rendered.
+        </td>
+                <td>63<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>LabelUniqueEdgesOnly</th>
+                <td>
+          Set to true to only label edges shared with 1 face. Note that
+          if all faces are being rendered, this will generate no labels.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>XAxisNotation</th>
+                <td>
+          Get/set the numerical notation, standard, scientific or mixed (0, 1, 2) for X Axis.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Mixed (0)</li>
+                            <li>Scientific (1)</li>
+                            <li>Fixed (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>XAxisPrecision</th>
+                <td>
+          Get/set the numerical precision to use for the X Axis, default is 2.
+        </td>
+                <td>2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>XAxisUseCustomLabels</th>
+                <td>
+          Specify whether to use custom labels for the X axis. Labels
+          specified by <b>XAxisLabels</b> are used only when
+          this flag is set to 1.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>XAxisLabels</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value must lie within the range of the selected data array.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>YAxisNotation</th>
+                <td>
+          Get/set the numerical notation, standard, scientific or mixed (0, 1, 2) for Y Axis.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Mixed (0)</li>
+                            <li>Scientific (1)</li>
+                            <li>Fixed (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>YAxisPrecision</th>
+                <td>
+          Get/set the numerical precision to use for the Y Axis, default is 2.
+        </td>
+                <td>2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>YAxisUseCustomLabels</th>
+                <td>
+          Specify whether to use custom labels for the Y axis. Labels
+          specified by <b>YAxisLabels</b> are used only when
+          this flag is set to 1.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>YAxisLabels</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value must lie within the range of the selected data array.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ZAxisNotation</th>
+                <td>
+          Get/set the numerical notation, standard, scientific or mixed (0, 1, 2) for Z Axis.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Mixed (0)</li>
+                            <li>Scientific (1)</li>
+                            <li>Fixed (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>ZAxisPrecision</th>
+                <td>
+          Get/set the numerical precision to use for the Z Axis, default is 2.
+        </td>
+                <td>2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ZAxisUseCustomLabels</th>
+                <td>
+          Specify whether to use custom labels for the Z axis. Labels
+          specified by <b>ZAxisLabels</b> are used only when
+          this flag is set to 1.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ZAxisLabels</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value must lie within the range of the selected data array.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>DataScale</th>
+                <td>
+          If data is being scaled, you can show the original data bounds for the axes
+          instead of the scaled bounds by setting the DataScale to match the scaling applied
+          to the dataset.
+        </td>
+                <td>1 1 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>DataPosition</th>
+                <td>
+          If data is being translated, you can show the original data bounds for the axes
+          instead of the translated bounds by setting the DataPosition to match the
+          translation applied to the dataset.
+        </td>
+                <td>0 0 0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>DataBoundsInflateFactor</th>
+                <td>
+          After the data bounds have been computed, this property enables to inflate the
+          bounds used to generate the axes grid, so it will be slightly larger than the
+          data bounds. It inflates the axes grid bounds using the diagonal length of the
+          bounding box multiplied by this factor.
+          Data bounds are not modified, only the aspect of the AxesGrid is modified.
+          The default value (0.0008) ensures that there is no concident lines drawn when
+          zooming close enough to the model.
+        </td>
+                <td>0.0008<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ModelTransformMatrix</th>
+                <td/>
+                <td>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ModelBounds</th>
+                <td/>
+                <td>0 1 0 1 0 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UseModelTransform</th>
+                <td/>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

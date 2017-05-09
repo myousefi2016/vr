@@ -1,0 +1,33 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkBooleanTextureClientServer.cxx
+  CS Wrapping - generating vtkCheckerboardSplatterClientServer.cxx
+  CS Wrapping - generating vtkFastSplatterClientServer.cxx
+  CS Wrapping - generating vtkGaussianSplatterClientServer.cxx
+  CS Wrapping - generating vtkImageCursor3DClientServer.cxx
+  CS Wrapping - generating vtkImageRectilinearWipeClientServer.cxx
+  CS Wrapping - generating vtkImageToPointsClientServer.cxx
+  CS Wrapping - generating vtkPointLoadClientServer.cxx
+  CS Wrapping - generating vtkSampleFunctionClientServer.cxx
+  CS Wrapping - generating vtkShepardMethodClientServer.cxx
+  CS Wrapping - generating vtkSliceCubesClientServer.cxx
+  CS Wrapping - generating vtkSurfaceReconstructionFilterClientServer.cxx
+  CS Wrapping - generating vtkTriangularTextureClientServer.cxx
+  CS Wrapping - generating vtkVoxelModellerClientServer.cxx
+  vtkBooleanTextureClientServer.cxx
+  vtkCheckerboardSplatterClientServer.cxx
+  vtkFastSplatterClientServer.cxx
+  vtkGaussianSplatterClientServer.cxx
+  vtkImageCursor3DClientServer.cxx
+  vtkImageRectilinearWipeClientServer.cxx
+  vtkImageToPointsClientServer.cxx
+  vtkPointLoadClientServer.cxx
+  vtkSampleFunctionClientServer.cxx
+  vtkShepardMethodClientServer.cxx
+  vtkSliceCubesClientServer.cxx
+  vtkSurfaceReconstructionFilterClientServer.cxx
+  vtkTriangularTextureClientServer.cxx
+  vtkVoxelModellerClientServer.cxx
+  vtkImagingHybridCSInit.cxx
+  Generating Code...
+  vtkImagingHybridCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingHybridCS-pv5.3.lib

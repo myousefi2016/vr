@@ -1,0 +1,14 @@
+# Target labels
+ vtkWrappingTools
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPython.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonClass.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonConstant.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonEnum.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonMethod.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonMethodDef.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonNamespace.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonOverload.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonTemplate.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/vtkWrapPythonType.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/CMakeLists.txt

@@ -1,0 +1,164 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/QtTesting/vtkqttesting/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/QtTesting/vtkqttesting/CMakeFiles/generate.stamp is up-to-date.
+  Generating moc_pq3DViewEventPlayer.cpp
+  Generating moc_pq3DViewEventTranslator.cpp
+  Generating moc_pqAbstractActivateEventPlayer.cpp
+  Generating moc_pqAbstractBooleanEventPlayer.cpp
+  Generating moc_pqAbstractButtonEventTranslator.cpp
+  Generating moc_pqAbstractDoubleEventPlayer.cpp
+  Generating moc_pqAbstractIntEventPlayer.cpp
+  Generating moc_pqAbstractItemViewEventPlayer.cpp
+  Generating moc_pqAbstractItemViewEventPlayerBase.cpp
+  Generating moc_pqAbstractItemViewEventTranslator.cpp
+  Generating moc_pqAbstractItemViewEventTranslatorBase.cpp
+  Generating moc_pqAbstractMiscellaneousEventPlayer.cpp
+  Generating moc_pqAbstractSliderEventTranslator.cpp
+  Generating moc_pqAbstractStringEventPlayer.cpp
+  Generating moc_pqBasicWidgetEventPlayer.cpp
+  Generating moc_pqBasicWidgetEventTranslator.cpp
+  Generating moc_pqCheckEventOverlay.cpp
+  Generating moc_pqComboBoxEventTranslator.cpp
+  Generating moc_pqComboBoxEventPlayer.cpp
+  Generating moc_pqCommentEventPlayer.cpp
+  Generating moc_pqDoubleSpinBoxEventTranslator.cpp
+  Generating moc_pqEventComment.cpp
+  Generating moc_pqEventDispatcher.cpp
+  Generating moc_pqEventObserver.cpp
+  Generating moc_pqEventPlayer.cpp
+  Generating moc_pqEventRecorder.cpp
+  Generating moc_pqEventSource.cpp
+  Generating moc_pqEventTranslator.cpp
+  Generating moc_pqLineEditEventTranslator.cpp
+  Generating moc_pqListViewEventPlayer.cpp
+  Generating moc_pqListViewEventTranslator.cpp
+  Generating moc_pqMenuEventTranslator.cpp
+  Generating moc_pqNativeFileDialogEventPlayer.cpp
+  Generating moc_pqNativeFileDialogEventTranslator.cpp
+  Generating moc_pqPlayBackEventsDialog.cpp
+  Generating moc_pqRecordEventsDialog.cpp
+  Generating moc_pqSpinBoxEventTranslator.cpp
+  Generating moc_pqStdoutEventObserver.cpp
+  Generating moc_pqTabBarEventPlayer.cpp
+  Generating moc_pqTabBarEventTranslator.cpp
+  Generating moc_pqTableViewEventPlayer.cpp
+  Generating moc_pqTableViewEventTranslator.cpp
+  Generating moc_pqTestUtility.cpp
+  Generating moc_pqThreadedEventSource.cpp
+  Generating moc_pqTimer.cpp
+  Generating moc_pqTreeViewEventPlayer.cpp
+  Generating moc_pqTreeViewEventTranslator.cpp
+  Generating moc_pqWidgetEventPlayer.cpp
+  Generating moc_pqWidgetEventTranslator.cpp
+  Generating ui_pqPlayBackEventsDialog.h
+  Generating ui_pqRecordEventsDialog.h
+  Generating qrc_QtTesting.cpp
+  pq3DViewEventPlayer.cxx
+  pq3DViewEventTranslator.cxx
+  pqAbstractActivateEventPlayer.cxx
+  pqAbstractBooleanEventPlayer.cxx
+  pqAbstractButtonEventTranslator.cxx
+  pqAbstractDoubleEventPlayer.cxx
+  pqAbstractIntEventPlayer.cxx
+  pqAbstractItemViewEventPlayer.cxx
+  pqAbstractItemViewEventPlayerBase.cxx
+  pqAbstractItemViewEventTranslator.cxx
+  pqAbstractItemViewEventTranslatorBase.cxx
+  pqAbstractMiscellaneousEventPlayer.cxx
+  pqAbstractSliderEventTranslator.cxx
+  pqAbstractStringEventPlayer.cxx
+  pqBasicWidgetEventPlayer.cxx
+  pqBasicWidgetEventTranslator.cxx
+  pqCheckEventOverlay.cxx
+  pqComboBoxEventTranslator.cxx
+  pqComboBoxEventPlayer.cxx
+  pqCommentEventPlayer.cxx
+  Generating Code...
+  Compiling...
+  pqDoubleSpinBoxEventTranslator.cxx
+  pqEventComment.cxx
+  pqEventDispatcher.cxx
+  pqEventObserver.cxx
+  pqEventPlayer.cxx
+  pqEventRecorder.cxx
+  pqEventTranslator.cxx
+  pqLineEditEventTranslator.cxx
+  pqListViewEventPlayer.cxx
+  pqListViewEventTranslator.cxx
+  pqMenuEventTranslator.cxx
+  pqNativeFileDialogEventPlayer.cxx
+  pqNativeFileDialogEventTranslator.cxx
+  pqObjectNaming.cxx
+  pqPlayBackEventsDialog.cxx
+  pqRecordEventsDialog.cxx
+  pqSpinBoxEventTranslator.cxx
+  pqStdoutEventObserver.cxx
+  pqTabBarEventPlayer.cxx
+  pqTabBarEventTranslator.cxx
+  Generating Code...
+  Compiling...
+  pqTableViewEventPlayer.cxx
+  pqTableViewEventTranslator.cxx
+  pqTestUtility.cxx
+  pqThreadedEventSource.cxx
+  pqTimer.cxx
+  pqTreeViewEventPlayer.cxx
+  pqTreeViewEventTranslator.cxx
+  pqWidgetEventPlayer.cxx
+  pqWidgetEventTranslator.cxx
+  moc_pq3DViewEventPlayer.cpp
+  moc_pq3DViewEventTranslator.cpp
+  moc_pqAbstractActivateEventPlayer.cpp
+  moc_pqAbstractBooleanEventPlayer.cpp
+  moc_pqAbstractButtonEventTranslator.cpp
+  moc_pqAbstractDoubleEventPlayer.cpp
+  moc_pqAbstractIntEventPlayer.cpp
+  moc_pqAbstractItemViewEventPlayer.cpp
+  moc_pqAbstractItemViewEventPlayerBase.cpp
+  moc_pqAbstractItemViewEventTranslator.cpp
+  moc_pqAbstractItemViewEventTranslatorBase.cpp
+  Generating Code...
+  Compiling...
+  moc_pqAbstractMiscellaneousEventPlayer.cpp
+  moc_pqAbstractSliderEventTranslator.cpp
+  moc_pqAbstractStringEventPlayer.cpp
+  moc_pqBasicWidgetEventPlayer.cpp
+  moc_pqBasicWidgetEventTranslator.cpp
+  moc_pqCheckEventOverlay.cpp
+  moc_pqComboBoxEventTranslator.cpp
+  moc_pqComboBoxEventPlayer.cpp
+  moc_pqCommentEventPlayer.cpp
+  moc_pqDoubleSpinBoxEventTranslator.cpp
+  moc_pqEventComment.cpp
+  moc_pqEventDispatcher.cpp
+  moc_pqEventObserver.cpp
+  moc_pqEventPlayer.cpp
+  moc_pqEventRecorder.cpp
+  moc_pqEventSource.cpp
+  moc_pqEventTranslator.cpp
+  moc_pqLineEditEventTranslator.cpp
+  moc_pqListViewEventPlayer.cpp
+  moc_pqListViewEventTranslator.cpp
+  Generating Code...
+  Compiling...
+  moc_pqMenuEventTranslator.cpp
+  moc_pqNativeFileDialogEventPlayer.cpp
+  moc_pqNativeFileDialogEventTranslator.cpp
+  moc_pqPlayBackEventsDialog.cpp
+  moc_pqRecordEventsDialog.cpp
+  moc_pqSpinBoxEventTranslator.cpp
+  moc_pqStdoutEventObserver.cpp
+  moc_pqTabBarEventPlayer.cpp
+  moc_pqTabBarEventTranslator.cpp
+  moc_pqTableViewEventPlayer.cpp
+  moc_pqTableViewEventTranslator.cpp
+  moc_pqTestUtility.cpp
+  moc_pqThreadedEventSource.cpp
+  moc_pqTimer.cpp
+  moc_pqTreeViewEventPlayer.cpp
+  moc_pqTreeViewEventTranslator.cpp
+  moc_pqWidgetEventPlayer.cpp
+  moc_pqWidgetEventTranslator.cpp
+  qrc_QtTesting.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/QtTesting.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/QtTesting.exp
+  QtTesting.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\QtTesting.dll

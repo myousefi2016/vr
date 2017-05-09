@@ -1,0 +1,224 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerImplementation/Core/CMakeFiles/generate.stamp is up-to-date.
+  Generating vtkPVMessage.pb.h, vtkPVMessage.pb.cc
+  vtkPVCatalystSessionCore.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkPVFilePathEncodingHelper.cxx
+  vtkPVProxyDefinitionIterator.cxx
+  vtkPVSessionBase.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkPVSessionCore.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkPVSessionCoreInterpreterHelper.cxx
+  vtkPVSessionServer.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIArraySelectionProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIIndexSelectionProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSICollaborationManager.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSICompoundSourceProxy.cxx
+  vtkSIDataArrayProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIDirectoryProxy.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIDoubleMapProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIDoubleVectorProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIMetaReaderProxy.cxx
+  vtkSIIdTypeVectorProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIInputProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIIntVectorProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIObject.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  vtkSIProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIProxy.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIProxyDefinitionManager.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIProxyProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSISILProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSISourceProxy.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIStringVectorProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSITimeLabelProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSITimeRangeProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSITimeStepsProperty.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  vtkSIVectorProperty.cxx
+  vtkSIWriterProxy.cxx
+  vtkSMMessage.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(648): warning C4267: 'argument': conversion from 'size_t' to 'google::protobuf::uint32', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(655): warning C4267: 'argument': conversion from 'size_t' to 'google::protobuf::uint32', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(717): warning C4267: 'argument': conversion from 'size_t' to 'google::protobuf::uint32', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(718): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(721): warning C4267: 'argument': conversion from 'size_t' to 'google::protobuf::uint32', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(722): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(603): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(610): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(612): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(616): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(622): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(624): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(625): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(631): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(633): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(636): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(639): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(641): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(642): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(644): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(646): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(649): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(654): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(657): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(660): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(663): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(664): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(665): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(666): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(671): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(677): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(681): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(683): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(684): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(686): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(694): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(699): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(700): warning C4125: decimal digit terminates octal escape sequence
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(1140): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(1222): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(1281): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2504): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2550): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2572): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2778): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2795): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2825): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2834): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2851): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(2861): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3053): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3098): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3121): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3329): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3388): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3417): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3857): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3874): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3920): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3929): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3951): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(3961): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4362): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4379): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4396): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4426): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4435): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4444): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4461): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4471): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(4481): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(5234): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(5290): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(5318): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(6110): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(6177): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(6209): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/wire_format_lite_inl.h(226): warning C4100: 'tag_size': unreferenced formal parameter
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVMessage.pb.cc(1028): note: see reference to function template instantiation 'bool google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<google::protobuf::int64,18>(int,google::protobuf::uint32,google::protobuf::io::CodedInputStream *,google::protobuf::RepeatedField<google::protobuf::int64> *)' being compiled
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerImplementationCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerImplementationCore-pv5.3.exp
+  vtkPVServerImplementationCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkPVServerImplementationCore-pv5.3.dll

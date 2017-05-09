@@ -1,0 +1,35 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedPlaneSource.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedVolumeSource.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedPlaneSource.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedVolumeSource.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/VTKExtensions/Points/vtkPVVTKExtensionsPointsModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkPVVTKExtensionsPoints" ],
+		"name" : "vtkPVVTKExtensionsPoints"
+	}
+}

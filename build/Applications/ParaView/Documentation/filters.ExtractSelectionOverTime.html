@@ -1,0 +1,75 @@
+
+<html>
+    <head>
+        <title>Plot Selection Over Time</title>
+        <meta name="proxy_name" contents="filters.ExtractSelectionOverTime"/>
+        <meta name="filename" contents="filters.ExtractSelectionOverTime.html"/>
+    </head>
+    <body>
+        <h2>Plot Selection Over Time (ExtractSelectionOverTime)</h2>
+        <i>
+            <p>Extracts selection over time and then plots it.</p>
+        </i>
+        <div class="description">
+                     This filter extracts the selection over time, i.e. cell
+                     and/or point variables at a cells/point selected are
+                     extracted over time The output multi-block consists of 1D
+                     rectilinear grids where the x coordinate corresponds to
+                     time (the same array is also copied to a point array named
+                     Time or TimeData (if Time exists in the input)). If
+                     selection input is a Location based selection then the
+                     point values are interpolated from the nearby cells, ie
+                     those of the cell the location lies in.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>The input from which the selection is
+        extracted.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                            <li>vtkTable</li>
+                            <li>vtkCompositeDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Selection</th>
+                <td>The input that provides the selection
+        object.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkSelection</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Only Report Selection Statistics</th>
+                <td>If this property is set to 1, the min, max,
+          inter-quartile ranges, and (for numeric arrays) mean and standard
+          deviation of all the selected points or cells within each time step
+          are reported -- instead of breaking each selected point's or cell's
+          attributes out into separate time history tables.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

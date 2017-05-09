@@ -1,0 +1,23 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/netcdf/vtknetcdf/cxx/netcdf.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/netcdf/vtknetcdf/cxx/ncvalues.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/netcdf/vtknetcdf/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtknetcdf" ],
+		"name" : "vtkNetCDF_cxx"
+	}
+}

@@ -1,0 +1,17 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/EyeDomeLighting/ParaViewPlugin/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/EyeDomeLighting/ParaViewPlugin/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPVRenderViewWithEDLClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_EyeDomeLightingView.h
+  -- Generate module: RenderPassViews
+  vtkPVRenderViewWithEDL.cxx
+  vtkPVRenderViewWithEDLClientServer.cxx
+  EyeDomeLightingViewInit.cxx
+  EyeDomeLightingView_Plugin.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/EyeDomeLightingView.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/EyeDomeLightingView.exp
+  EyeDomeLightingView.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\EyeDomeLightingView.dll

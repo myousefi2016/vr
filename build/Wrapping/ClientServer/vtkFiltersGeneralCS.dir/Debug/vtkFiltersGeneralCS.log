@@ -1,0 +1,235 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAnnotationLinkClientServer.cxx
+  CS Wrapping - generating vtkAppendPointsClientServer.cxx
+  CS Wrapping - generating vtkApproximatingSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkAreaContourSpectrumFilterClientServer.cxx
+  CS Wrapping - generating vtkAxesClientServer.cxx
+  CS Wrapping - generating vtkBlankStructuredGridClientServer.cxx
+  CS Wrapping - generating vtkBlankStructuredGridWithImageClientServer.cxx
+  CS Wrapping - generating vtkBlockIdScalarsClientServer.cxx
+  CS Wrapping - generating vtkBoxClipDataSetClientServer.cxx
+  CS Wrapping - generating vtkBrownianPointsClientServer.cxx
+  CS Wrapping - generating vtkCellCentersClientServer.cxx
+  CS Wrapping - generating vtkCellDerivativesClientServer.cxx
+  CS Wrapping - generating vtkClipClosedSurfaceClientServer.cxx
+  CS Wrapping - generating vtkClipConvexPolyDataClientServer.cxx
+  CS Wrapping - generating vtkClipDataSetClientServer.cxx
+  CS Wrapping - generating vtkClipVolumeClientServer.cxx
+  CS Wrapping - generating vtkCoincidentPointsClientServer.cxx
+  CS Wrapping - generating vtkContourTriangulatorClientServer.cxx
+  CS Wrapping - generating vtkCountFacesClientServer.cxx
+  CS Wrapping - generating vtkCountVerticesClientServer.cxx
+  CS Wrapping - generating vtkCursor2DClientServer.cxx
+  CS Wrapping - generating vtkCursor3DClientServer.cxx
+  CS Wrapping - generating vtkCurvaturesClientServer.cxx
+  CS Wrapping - generating vtkDataSetGradientClientServer.cxx
+  CS Wrapping - generating vtkDataSetGradientPrecomputeClientServer.cxx
+  CS Wrapping - generating vtkDataSetTriangleFilterClientServer.cxx
+  CS Wrapping - generating vtkDeformPointSetClientServer.cxx
+  CS Wrapping - generating vtkDensifyPolyDataClientServer.cxx
+  CS Wrapping - generating vtkDicerClientServer.cxx
+  CS Wrapping - generating vtkDiscreteMarchingCubesClientServer.cxx
+  CS Wrapping - generating vtkEdgePointsClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedFrustumClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectionBaseClientServer.cxx
+  CS Wrapping - generating vtkGradientFilterClientServer.cxx
+  CS Wrapping - generating vtkGraphLayoutFilterClientServer.cxx
+  CS Wrapping - generating vtkGraphToPointsClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalDataLevelFilterClientServer.cxx
+  CS Wrapping - generating vtkHyperStreamlineClientServer.cxx
+  CS Wrapping - generating vtkIconGlyphFilterClientServer.cxx
+  CS Wrapping - generating vtkImageMarchingCubesClientServer.cxx
+  CS Wrapping - generating vtkInterpolateDataSetAttributesClientServer.cxx
+  CS Wrapping - generating vtkInterpolatingSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkLevelIdScalarsClientServer.cxx
+  CS Wrapping - generating vtkLinkEdgelsClientServer.cxx
+  CS Wrapping - generating vtkMergeCellsClientServer.cxx
+  CS Wrapping - generating vtkMultiBlockDataGroupFilterClientServer.cxx
+  CS Wrapping - generating vtkMultiBlockFromTimeSeriesFilterClientServer.cxx
+  CS Wrapping - generating vtkMultiBlockMergeFilterClientServer.cxx
+  CS Wrapping - generating vtkMultiThresholdClientServer.cxx
+  CS Wrapping - generating vtkOBBDicerClientServer.cxx
+  CS Wrapping - generating vtkOBBTreeClientServer.cxx
+  CS Wrapping - generating vtkPassThroughClientServer.cxx
+  CS Wrapping - generating vtkPointConnectivityFilterClientServer.cxx
+  CS Wrapping - generating vtkPolyDataStreamerClientServer.cxx
+  CS Wrapping - generating vtkPolyDataToReebGraphFilterClientServer.cxx
+  CS Wrapping - generating vtkProbePolyhedronClientServer.cxx
+  CS Wrapping - generating vtkQuadraturePointInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkQuadraturePointsGeneratorClientServer.cxx
+  CS Wrapping - generating vtkQuadratureSchemeDictionaryGeneratorClientServer.cxx
+  CS Wrapping - generating vtkQuantizePolyDataPointsClientServer.cxx
+  CS Wrapping - generating vtkRandomAttributeGeneratorClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridClipClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridToTetrahedraClientServer.cxx
+  CS Wrapping - generating vtkRecursiveDividingCubesClientServer.cxx
+  CS Wrapping - generating vtkReflectionFilterClientServer.cxx
+  CS Wrapping - generating vtkRotationFilterClientServer.cxx
+  CS Wrapping - generating vtkSampleImplicitFunctionFilterClientServer.cxx
+  CS Wrapping - generating vtkShrinkFilterClientServer.cxx
+  CS Wrapping - generating vtkShrinkPolyDataClientServer.cxx
+  CS Wrapping - generating vtkSpatialRepresentationFilterClientServer.cxx
+  CS Wrapping - generating vtkSplineFilterClientServer.cxx
+  CS Wrapping - generating vtkSplitByCellScalarFilterClientServer.cxx
+  CS Wrapping - generating vtkSplitFieldClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridClipClientServer.cxx
+  CS Wrapping - generating vtkSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkSubPixelPositionEdgelsClientServer.cxx
+  CS Wrapping - generating vtkSynchronizeTimeFilterClientServer.cxx
+  CS Wrapping - generating vtkTableBasedClipDataSetClientServer.cxx
+  CS Wrapping - generating vtkTableToPolyDataClientServer.cxx
+  CS Wrapping - generating vtkTableToStructuredGridClientServer.cxx
+  CS Wrapping - generating vtkTemporalPathLineFilterClientServer.cxx
+  CS Wrapping - generating vtkTemporalStatisticsClientServer.cxx
+  CS Wrapping - generating vtkTessellatorFilterClientServer.cxx
+  CS Wrapping - generating vtkTimeSourceExampleClientServer.cxx
+  CS Wrapping - generating vtkTransformFilterClientServer.cxx
+  CS Wrapping - generating vtkTransformPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkUncertaintyTubeFilterClientServer.cxx
+  CS Wrapping - generating vtkVertexGlyphFilterClientServer.cxx
+  CS Wrapping - generating vtkVolumeContourSpectrumFilterClientServer.cxx
+  CS Wrapping - generating vtkVoxelContoursToSurfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkWarpLensClientServer.cxx
+  CS Wrapping - generating vtkWarpScalarClientServer.cxx
+  CS Wrapping - generating vtkWarpToClientServer.cxx
+  CS Wrapping - generating vtkWarpVectorClientServer.cxx
+  CS Wrapping - generating vtkYoungsMaterialInterfaceClientServer.cxx
+  CS Wrapping - generating vtkMarchingContourFilterClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridToPointSetClientServer.cxx
+  CS Wrapping - generating vtkGraphWeightEuclideanDistanceFilterClientServer.cxx
+  CS Wrapping - generating vtkGraphWeightFilterClientServer.cxx
+  CS Wrapping - generating vtkImageDataToPointSetClientServer.cxx
+  CS Wrapping - generating vtkIntersectionPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkBooleanOperationPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkDistancePolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkOverlappingAMRLevelIdScalarsClientServer.cxx
+  CS Wrapping - generating vtkExtractArrayClientServer.cxx
+  CS Wrapping - generating vtkMatricizeArrayClientServer.cxx
+  CS Wrapping - generating vtkNormalizeMatrixVectorsClientServer.cxx
+  CS Wrapping - generating vtkPassArraysClientServer.cxx
+  CS Wrapping - generating vtkSplitColumnComponentsClientServer.cxx
+  CS Wrapping - generating vtkCellTreeLocatorClientServer.cxx
+  vtkAnnotationLinkClientServer.cxx
+  vtkAppendPointsClientServer.cxx
+  vtkApproximatingSubdivisionFilterClientServer.cxx
+  vtkAreaContourSpectrumFilterClientServer.cxx
+  vtkAxesClientServer.cxx
+  vtkBlankStructuredGridClientServer.cxx
+  vtkBlankStructuredGridWithImageClientServer.cxx
+  vtkBlockIdScalarsClientServer.cxx
+  vtkBoxClipDataSetClientServer.cxx
+  vtkBrownianPointsClientServer.cxx
+  vtkCellCentersClientServer.cxx
+  vtkCellDerivativesClientServer.cxx
+  vtkClipClosedSurfaceClientServer.cxx
+  vtkClipConvexPolyDataClientServer.cxx
+  vtkClipDataSetClientServer.cxx
+  vtkClipVolumeClientServer.cxx
+  vtkCoincidentPointsClientServer.cxx
+  vtkContourTriangulatorClientServer.cxx
+  vtkCountFacesClientServer.cxx
+  vtkCountVerticesClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkCursor2DClientServer.cxx
+  vtkCursor3DClientServer.cxx
+  vtkCurvaturesClientServer.cxx
+  vtkDataSetGradientClientServer.cxx
+  vtkDataSetGradientPrecomputeClientServer.cxx
+  vtkDataSetTriangleFilterClientServer.cxx
+  vtkDeformPointSetClientServer.cxx
+  vtkDensifyPolyDataClientServer.cxx
+  vtkDicerClientServer.cxx
+  vtkDiscreteMarchingCubesClientServer.cxx
+  vtkEdgePointsClientServer.cxx
+  vtkExtractSelectedFrustumClientServer.cxx
+  vtkExtractSelectionBaseClientServer.cxx
+  vtkGradientFilterClientServer.cxx
+  vtkGraphLayoutFilterClientServer.cxx
+  vtkGraphToPointsClientServer.cxx
+  vtkHierarchicalDataLevelFilterClientServer.cxx
+  vtkHyperStreamlineClientServer.cxx
+  vtkIconGlyphFilterClientServer.cxx
+  vtkImageMarchingCubesClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkInterpolateDataSetAttributesClientServer.cxx
+  vtkInterpolatingSubdivisionFilterClientServer.cxx
+  vtkLevelIdScalarsClientServer.cxx
+  vtkLinkEdgelsClientServer.cxx
+  vtkMergeCellsClientServer.cxx
+  vtkMultiBlockDataGroupFilterClientServer.cxx
+  vtkMultiBlockFromTimeSeriesFilterClientServer.cxx
+  vtkMultiBlockMergeFilterClientServer.cxx
+  vtkMultiThresholdClientServer.cxx
+  vtkOBBDicerClientServer.cxx
+  vtkOBBTreeClientServer.cxx
+  vtkPassThroughClientServer.cxx
+  vtkPointConnectivityFilterClientServer.cxx
+  vtkPolyDataStreamerClientServer.cxx
+  vtkPolyDataToReebGraphFilterClientServer.cxx
+  vtkProbePolyhedronClientServer.cxx
+  vtkQuadraturePointInterpolatorClientServer.cxx
+  vtkQuadraturePointsGeneratorClientServer.cxx
+  vtkQuadratureSchemeDictionaryGeneratorClientServer.cxx
+  vtkQuantizePolyDataPointsClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkRandomAttributeGeneratorClientServer.cxx
+  vtkRectilinearGridClipClientServer.cxx
+  vtkRectilinearGridToTetrahedraClientServer.cxx
+  vtkRecursiveDividingCubesClientServer.cxx
+  vtkReflectionFilterClientServer.cxx
+  vtkRotationFilterClientServer.cxx
+  vtkSampleImplicitFunctionFilterClientServer.cxx
+  vtkShrinkFilterClientServer.cxx
+  vtkShrinkPolyDataClientServer.cxx
+  vtkSpatialRepresentationFilterClientServer.cxx
+  vtkSplineFilterClientServer.cxx
+  vtkSplitByCellScalarFilterClientServer.cxx
+  vtkSplitFieldClientServer.cxx
+  vtkStructuredGridClipClientServer.cxx
+  vtkSubdivisionFilterClientServer.cxx
+  vtkSubPixelPositionEdgelsClientServer.cxx
+  vtkSynchronizeTimeFilterClientServer.cxx
+  vtkTableBasedClipDataSetClientServer.cxx
+  vtkTableToPolyDataClientServer.cxx
+  vtkTableToStructuredGridClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTemporalPathLineFilterClientServer.cxx
+  vtkTemporalStatisticsClientServer.cxx
+  vtkTessellatorFilterClientServer.cxx
+  vtkTimeSourceExampleClientServer.cxx
+  vtkTransformFilterClientServer.cxx
+  vtkTransformPolyDataFilterClientServer.cxx
+  vtkUncertaintyTubeFilterClientServer.cxx
+  vtkVertexGlyphFilterClientServer.cxx
+  vtkVolumeContourSpectrumFilterClientServer.cxx
+  vtkVoxelContoursToSurfaceFilterClientServer.cxx
+  vtkWarpLensClientServer.cxx
+  vtkWarpScalarClientServer.cxx
+  vtkWarpToClientServer.cxx
+  vtkWarpVectorClientServer.cxx
+  vtkYoungsMaterialInterfaceClientServer.cxx
+  vtkMarchingContourFilterClientServer.cxx
+  vtkRectilinearGridToPointSetClientServer.cxx
+  vtkGraphWeightEuclideanDistanceFilterClientServer.cxx
+  vtkGraphWeightFilterClientServer.cxx
+  vtkImageDataToPointSetClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkIntersectionPolyDataFilterClientServer.cxx
+  vtkBooleanOperationPolyDataFilterClientServer.cxx
+  vtkDistancePolyDataFilterClientServer.cxx
+  vtkOverlappingAMRLevelIdScalarsClientServer.cxx
+  vtkExtractArrayClientServer.cxx
+  vtkMatricizeArrayClientServer.cxx
+  vtkNormalizeMatrixVectorsClientServer.cxx
+  vtkPassArraysClientServer.cxx
+  vtkSplitColumnComponentsClientServer.cxx
+  vtkCellTreeLocatorClientServer.cxx
+  vtkFiltersGeneralCSInit.cxx
+  Generating Code...
+  vtkFiltersGeneralCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersGeneralCS-pv5.3.lib

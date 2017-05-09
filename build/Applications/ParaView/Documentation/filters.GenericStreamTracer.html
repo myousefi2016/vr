@@ -1,0 +1,210 @@
+
+<html>
+    <head>
+        <title>Stream Tracer For Generic Datasets</title>
+        <meta name="proxy_name" contents="filters.GenericStreamTracer"/>
+        <meta name="filename" contents="filters.GenericStreamTracer.html"/>
+    </head>
+    <body>
+        <h2>Stream Tracer For Generic Datasets (GenericStreamTracer)</h2>
+        <i>
+            <p>Integrate streamlines in a vector field.</p>
+        </i>
+        <div class="description">The
+                     Generic Stream Tracer filter generates streamlines in a
+                     vector field from a collection of seed points. The vector
+                     field used is selected from the Vectors menu, so the input
+                     data set is required to have point-centered vectors. The
+                     Seed portion of the interface allows you to select whether
+                     the seed points for this integration lie in a point cloud
+                     or along a line. Depending on which is selected, the
+                     appropriate 3D widget (point or line widget) is displayed
+                     along with traditional user interface controls for
+                     positioning the point cloud or line within the data set.
+                     Instructions for using the 3D widgets and the
+                     corresponding manual controls can be found in section 7.4.
+                     The Max. Propagation entry box allows you to specify the
+                     maximum length of the streamlines. From the Max.
+                     Propagation menu, you can select the units to be either
+                     Time (the time a particle would travel with steady flow)
+                     or Length (in the data set's spatial coordinates). The
+                     Init. Step Len. menu and entry specify the initial step
+                     size for integration. (For non-adaptive integrators,
+                     Runge-Kutta 2 and 4, the initial step size is used
+                     throughout the integration.) The menu allows you to
+                     specify the units. Time and Length have the same meaning
+                     as for Max. Propagation. Cell Length specifies the step
+                     length as a number of cells. The Integration Direction
+                     menu determines in which direction(s) the stream trace
+                     will be generated: FORWARD, BACKWARD, or BOTH. The
+                     Integrator Type section of the interface determines which
+                     calculation to use for integration: Runge-Kutta 2,
+                     Runge-Kutta 4, or Runge-Kutta 4-5. If Runge-Kutta 4-5 is
+                     selected, controls are displayed for specifying the
+                     minimum and maximum step length and the maximum error. The
+                     controls for specifying Min. Step Len. and Max. Step Len.
+                     are the same as those for Init. Step Len. The Runge-Kutta
+                     4-5 integrator tries to choose the step size so that the
+                     estimated error is less than the value of the Maximum
+                     Error entry. If the integration takes more than Max. Steps
+                     to complete, if the speed goes below Term. Speed, if Max.
+                     Propagation is reached, or if a boundary of the input data
+                     set is crossed, integration terminates. This filter
+                     operates on any type of data set, provided it has
+                     point-centered vectors. The output is polygonal data
+                     containing polylines.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>Set the input to the Generic Stream Tracer
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkGenericDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 3 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Seed Type</th>
+                <td>The value of this property determines how the seeds for
+        the streamlines will be generated.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value can be one of the following:<ul/>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Vectors</th>
+                <td>This property contains the name of the vector array from
+        which to generate streamlines.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of vectors is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>MaximumPropagation</th>
+                <td>Specify the maximum streamline length.</td>
+                <td>1.0<span/>
+                </td>
+                <td>
+                    <p>
+  The value must be less than the largest dimension of the
+  dataset multiplied by a scale factor of
+  1.0.
+  </p>
+                </td>
+            </tr>
+            <tr>
+                <th>InitialIntegrationStep</th>
+                <td>Specify the initial integration step.</td>
+                <td>0.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>IntegrationDirection</th>
+                <td>This property determines in which direction(s) a
+        streamline is generated.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>FORWARD (0)</li>
+                            <li>BACKWARD (1)</li>
+                            <li>BOTH (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>IntegratorType</th>
+                <td>This property determines which integrator (with
+        increasing accuracy) to use for creating streamlines.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Runge-Kutta 2 (0)</li>
+                            <li>Runge-Kutta 4 (1)</li>
+                            <li>Runge-Kutta 4-5 (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>MaximumError</th>
+                <td>Set the maximum error allowed in the integration. The
+        meaning of this value depends on the integrator chosen.</td>
+                <td>0.000001<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MinimumIntegrationStep</th>
+                <td>Specify the minimum integration step.</td>
+                <td>0.01<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>IntegrationStepUnit</th>
+                <td>Choose the unit to use for the integration
+        step.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Time (0)</li>
+                            <li>Length (1)</li>
+                            <li>Cell Length (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>MaximumIntegrationStep</th>
+                <td>Specify the maximum integration step.</td>
+                <td>0.01<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaximumNumberOfSteps</th>
+                <td>Specify the maximum number of steps used in the
+        integration.</td>
+                <td>2000<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TerminalSpeed</th>
+                <td>If at any point the speed is below this value, the
+        integration is terminated.</td>
+                <td>0.000000000001<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

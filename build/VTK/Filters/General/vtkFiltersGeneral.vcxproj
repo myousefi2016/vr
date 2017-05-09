@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{5EACE7A9-0339-3483-BFFC-484ABE161C53}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>vtkFiltersGeneral</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkFiltersGeneral.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkFiltersGeneral-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkFiltersGeneral.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkFiltersGeneral-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkFiltersGeneral.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkFiltersGeneral-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkFiltersGeneral.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkFiltersGeneral-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Debug";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Debug\";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Debug\vtkFiltersCore-pv5.3.lib;..\..\..\lib\Debug\vtkCommonComputationalGeometry-pv5.3.lib;..\..\..\lib\Debug\vtkCommonExecutionModel-pv5.3.lib;..\..\..\lib\Debug\vtkCommonDataModel-pv5.3.lib;..\..\..\lib\Debug\vtkCommonMisc-pv5.3.lib;..\..\..\lib\Debug\vtkCommonSystem-pv5.3.lib;..\..\..\lib\Debug\vtkCommonTransforms-pv5.3.lib;..\..\..\lib\Debug\vtkCommonMath-pv5.3.lib;..\..\..\lib\Debug\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersGeneral-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Debug/vtkFiltersGeneral-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="Release";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"Release\";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\vtkFiltersCore-pv5.3.lib;..\..\..\lib\Release\vtkCommonComputationalGeometry-pv5.3.lib;..\..\..\lib\Release\vtkCommonExecutionModel-pv5.3.lib;..\..\..\lib\Release\vtkCommonDataModel-pv5.3.lib;..\..\..\lib\Release\vtkCommonMisc-pv5.3.lib;..\..\..\lib\Release\vtkCommonSystem-pv5.3.lib;..\..\..\lib\Release\vtkCommonTransforms-pv5.3.lib;..\..\..\lib\Release\vtkCommonMath-pv5.3.lib;..\..\..\lib\Release\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Release/vtkFiltersGeneral-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Release/vtkFiltersGeneral-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="MinSizeRel";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"MinSizeRel\";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\vtkFiltersCore-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonComputationalGeometry-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonExecutionModel-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonDataModel-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonMisc-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonSystem-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonTransforms-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonMath-pv5.3.lib;..\..\..\lib\MinSizeRel\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/MinSizeRel/vtkFiltersGeneral-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/MinSizeRel/vtkFiltersGeneral-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR="RelWithDebInfo";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;MPICH_IGNORE_CXX_SEEK;CMAKE_INTDIR=\"RelWithDebInfo\";vtkFiltersGeneral_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ComputationalGeometry;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\DataModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Math;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Misc;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\System;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Transforms;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\ExecutionModel;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\vtkFiltersCore-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonComputationalGeometry-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonExecutionModel-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonDataModel-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonMisc-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonSystem-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonTransforms-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonMath-pv5.3.lib;..\..\..\lib\RelWithDebInfo\vtkCommonCore-pv5.3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/RelWithDebInfo/vtkFiltersGeneral-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/RelWithDebInfo/vtkFiltersGeneral-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/General/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonComputationalGeometry.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonDataModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMath.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMisc.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonSystem.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonTransforms.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonExecutionModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkFiltersCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/General/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonComputationalGeometry.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonDataModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMath.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMisc.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonSystem.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonTransforms.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonExecutionModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkFiltersCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/General/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonComputationalGeometry.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonDataModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMath.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMisc.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonSystem.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonTransforms.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonExecutionModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkFiltersCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/General/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/General/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonComputationalGeometry.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonDataModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMath.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonMisc.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonSystem.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonTransforms.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonExecutionModel.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkFiltersCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkexportheader.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleHeaders.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAnnotationLink.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAppendPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkApproximatingSubdivisionFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAreaContourSpectrumFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAxes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlankStructuredGrid.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlankStructuredGridWithImage.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlockIdScalars.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBoxClipDataSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBrownianPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellCenters.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellDerivatives.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipClosedSurface.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipConvexPolyData.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipDataSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipVolume.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCoincidentPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkContourTriangulator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCountFaces.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCountVertices.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCursor2D.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCursor3D.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCurvatures.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetGradient.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetGradientPrecompute.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetTriangleFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDeformPointSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDensifyPolyData.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDicer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDiscreteMarchingCubes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkEdgePoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractSelectedFrustum.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractSelectionBase.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGradientFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphLayoutFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphToPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkHierarchicalDataLevelFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkHyperStreamline.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkIconGlyphFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkImageMarchingCubes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkInterpolateDataSetAttributes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkInterpolatingSubdivisionFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkLevelIdScalars.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkLinkEdgels.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMergeCells.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockDataGroupFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockFromTimeSeriesFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockMergeFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiThreshold.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOBBDicer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOBBTree.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPassThrough.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPointConnectivityFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPolyDataStreamer.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPolyDataToReebGraphFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkProbePolyhedron.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadraturePointInterpolator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadraturePointsGenerator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadratureSchemeDictionaryGenerator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuantizePolyDataPoints.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRandomAttributeGenerator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridClip.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridToTetrahedra.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRecursiveDividingCubes.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkReflectionFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRotationFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSampleImplicitFunctionFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkShrinkFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkShrinkPolyData.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSpatialRepresentationFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplineFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitByCellScalarFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitField.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkStructuredGridClip.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSubdivisionFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSubPixelPositionEdgels.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSynchronizeTimeFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableBasedClipDataSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableToPolyData.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableToStructuredGrid.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTemporalPathLineFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTemporalStatistics.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTessellatorFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTimeSourceExample.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTransformFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTransformPolyDataFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkUncertaintyTubeFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVertexGlyphFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVolumeContourSpectrumFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVoxelContoursToSurfaceFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpLens.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpScalar.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpTo.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpVector.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkYoungsMaterialInterface.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMarchingContourFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridToPointSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphWeightEuclideanDistanceFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphWeightFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkImageDataToPointSet.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkIntersectionPolyDataFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBooleanOperationPolyDataFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDistancePolyDataFilter.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOverlappingAMRLevelIdScalars.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMatricizeArray.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkNormalizeMatrixVectors.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPassArrays.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitColumnComponents.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellTreeLocator.h" />
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneralModule.h" />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAnnotationLink.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAppendPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkApproximatingSubdivisionFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAreaContourSpectrumFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkAxes.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlankStructuredGrid.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlankStructuredGridWithImage.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBlockIdScalars.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBoxClipDataSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBrownianPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellCenters.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellDerivatives.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipClosedSurface.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipConvexPolyData.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipDataSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkClipVolume.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCoincidentPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkContourTriangulator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCountFaces.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCountVertices.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCursor2D.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCursor3D.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCurvatures.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetGradient.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetGradientPrecompute.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDataSetTriangleFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDeformPointSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDensifyPolyData.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDicer.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDiscreteMarchingCubes.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkEdgePoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractSelectedFrustum.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractSelectionBase.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGradientFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphLayoutFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphToPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkHierarchicalDataLevelFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkHyperStreamline.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkIconGlyphFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkImageMarchingCubes.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkInterpolateDataSetAttributes.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkInterpolatingSubdivisionFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkLevelIdScalars.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkLinkEdgels.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMergeCells.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockDataGroupFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockFromTimeSeriesFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiBlockMergeFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMultiThreshold.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOBBDicer.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOBBTree.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPassThrough.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPointConnectivityFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPolyDataStreamer.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPolyDataToReebGraphFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkProbePolyhedron.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadraturePointInterpolator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadraturePointsGenerator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuadratureSchemeDictionaryGenerator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkQuantizePolyDataPoints.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRandomAttributeGenerator.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridClip.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridToTetrahedra.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRecursiveDividingCubes.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkReflectionFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRotationFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSampleImplicitFunctionFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkShrinkFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkShrinkPolyData.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSpatialRepresentationFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplineFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitByCellScalarFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitField.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkStructuredGridClip.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSubdivisionFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSubPixelPositionEdgels.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSynchronizeTimeFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableBasedClipDataSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableToPolyData.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTableToStructuredGrid.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTemporalPathLineFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTemporalStatistics.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTessellatorFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTimeSourceExample.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTransformFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkTransformPolyDataFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkUncertaintyTubeFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVertexGlyphFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVolumeContourSpectrumFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkVoxelContoursToSurfaceFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpLens.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpScalar.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpTo.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkWarpVector.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkYoungsMaterialInterface.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMarchingContourFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkRectilinearGridToPointSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphWeightEuclideanDistanceFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkGraphWeightFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkImageDataToPointSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkIntersectionPolyDataFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkBooleanOperationPolyDataFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkDistancePolyDataFilter.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkOverlappingAMRLevelIdScalars.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkExtractArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkMatricizeArray.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkNormalizeMatrixVectors.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkPassArrays.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkSplitColumnComponents.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\General\vtkCellTreeLocator.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj">
+      <Project>91215BAE-9E18-3680-A43C-43CB12CB278A</Project>
+      <Name>vtkCommonComputationalGeometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj">
+      <Project>3074005B-6375-37F2-A7B8-1F80273A9F92</Project>
+      <Name>vtkCommonCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj">
+      <Project>94341191-A8F8-3B0A-A984-4F499908FE84</Project>
+      <Name>vtkCommonDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj">
+      <Project>8B81ED88-1A09-381C-B4F1-E9E92E811843</Project>
+      <Name>vtkCommonExecutionModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj">
+      <Project>5F5A406C-C1D7-396C-80B6-134422042406</Project>
+      <Name>vtkCommonMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj">
+      <Project>7218BC96-E738-36DC-9E4A-BE4EB2465639</Project>
+      <Name>vtkCommonMisc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj">
+      <Project>AAF68CEA-BC22-3D81-A569-B0CF383E909D</Project>
+      <Name>vtkCommonSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj">
+      <Project>71339172-5096-32E4-BF5D-5DAFA61BDB8D</Project>
+      <Name>vtkCommonTransforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj">
+      <Project>BBAE76A5-6EF5-3A03-89FB-C69E5C68AC0B</Project>
+      <Name>vtkFiltersCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

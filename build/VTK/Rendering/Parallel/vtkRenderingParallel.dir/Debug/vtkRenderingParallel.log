@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Parallel/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Rendering/Parallel/CMakeFiles/generate.stamp is up-to-date.
+  Generating vtkCompositeZPassShader_fs.cxx, vtkCompositeZPassShader_fs.h
+  Generating vtkCompositeZPassFS.cxx, vtkCompositeZPassFS.h
+  vtkClientServerCompositePass.cxx
+  vtkClientServerSynchronizedRenderers.cxx
+  vtkCompositedSynchronizedRenderers.cxx
+  vtkCompositer.cxx
+  vtkCompositeRenderManager.cxx
+  vtkCompositeRGBAPass.cxx
+  vtkCompositeZPass.cxx
+  vtkCompressCompositer.cxx
+  vtkParallelRenderManager.cxx
+  vtkPHardwareSelector.cxx
+  vtkSynchronizedRenderers.cxx
+  vtkSynchronizedRenderWindows.cxx
+  vtkTreeCompositer.cxx
+  vtkImageRenderManager.cxx
+  vtkCompositeZPassShader_fs.cxx
+  vtkCompositeZPassFS.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingParallel-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingParallel-pv5.3.exp
+  vtkRenderingParallel.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkRenderingParallel-pv5.3.dll

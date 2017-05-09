@@ -1,0 +1,12 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Texture/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/Texture/CMakeFiles/generate.stamp is up-to-date.
+  vtkTextureMapToCylinder.cxx
+  vtkTextureMapToPlane.cxx
+  vtkTextureMapToSphere.cxx
+  vtkImplicitTextureCoords.cxx
+  vtkThresholdTextureCoords.cxx
+  vtkTransformTextureCoords.cxx
+  vtkTriangularTCoords.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersTexture-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersTexture-pv5.3.exp
+  vtkFiltersTexture.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkFiltersTexture-pv5.3.dll

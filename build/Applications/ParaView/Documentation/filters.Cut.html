@@ -1,0 +1,106 @@
+
+<html>
+    <head>
+        <title>Slice</title>
+        <meta name="proxy_name" contents="filters.Cut"/>
+        <meta name="filename" contents="filters.Cut.html"/>
+    </head>
+    <body>
+        <h2>Slice (Cut)</h2>
+        <i>
+            <p>This filter slices a data set with a plane. Slicing is similar to a contour. It creates surfaces from volumes and lines from surfaces.</p>
+        </i>
+        <div class="description">This filter
+                     extracts the portion of the input dataset that lies along
+                     the specified plane. The Slice filter takes any type of
+                     dataset as input. The output of this filter is polygonal
+                     data.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Slice
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Slice Type</th>
+                <td>This property sets the parameters of the slice
+        function.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value can be one of the following:<ul>
+                            <li>Plane (implicit_functions)
+        </li>
+                            <li>Box (implicit_functions)
+        </li>
+                            <li>Sphere (implicit_functions)
+        </li>
+                            <li>Cylinder (implicit_functions)
+        </li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>InputBounds</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Crinkle slice</th>
+                <td>This parameter controls whether to extract the entire
+        cells that are sliced by the region or just extract a triangulated
+        surface of that region.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Triangulate the slice</th>
+                <td>This parameter controls whether to produce triangles in the output.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Slice Offset Values</th>
+                <td>The values in this property specify a list of current
+        offset values. This can be used to create multiple slices with
+        different centers. Each entry represents a new slice with its center
+        shifted by the offset value.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>
+  Determine the length of the dataset's diagonal.
+  The value must lie within -diagonal length to +diagonal length.
+  </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

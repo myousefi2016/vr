@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+        <title>Cell Data to Point Data</title>
+        <meta name="proxy_name" contents="filters.CellDataToPointData"/>
+        <meta name="filename" contents="filters.CellDataToPointData.html"/>
+    </head>
+    <body>
+        <h2>Cell Data to Point Data (CellDataToPointData)</h2>
+        <i>
+            <p>Create point attributes by averaging cell attributes.</p>
+        </i>
+        <div class="description">The Cell
+                     Data to Point Data filter averages the values of the cell
+                     attributes of the cells surrounding a point to compute
+                     point attributes. The Cell Data to Point Data filter
+                     operates on any type of data set, and the output data set
+                     is of the same type as the input.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Cell Data to
+        Point Data filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (cell)
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>PassCellData</th>
+                <td>If this property is set to 1, then the input cell data
+        is passed through to the output; otherwise, only the generated point
+        data will be available in the output.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PieceInvariant</th>
+                <td>If the value of this property is set to 1, this filter
+        will request ghost levels so that the values at boundary points match
+        across processes. NOTE: Enabling this option might cause multiple
+        executions of the data source because more information is needed to
+        remove internal surfaces.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

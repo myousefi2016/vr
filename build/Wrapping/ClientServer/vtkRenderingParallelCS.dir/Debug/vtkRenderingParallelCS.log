@@ -1,0 +1,29 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkClientServerCompositePassClientServer.cxx
+  CS Wrapping - generating vtkClientServerSynchronizedRenderersClientServer.cxx
+  CS Wrapping - generating vtkCompositedSynchronizedRenderersClientServer.cxx
+  CS Wrapping - generating vtkCompositerClientServer.cxx
+  CS Wrapping - generating vtkCompositeRenderManagerClientServer.cxx
+  CS Wrapping - generating vtkCompressCompositerClientServer.cxx
+  CS Wrapping - generating vtkParallelRenderManagerClientServer.cxx
+  CS Wrapping - generating vtkPHardwareSelectorClientServer.cxx
+  CS Wrapping - generating vtkSynchronizedRenderersClientServer.cxx
+  CS Wrapping - generating vtkSynchronizedRenderWindowsClientServer.cxx
+  CS Wrapping - generating vtkTreeCompositerClientServer.cxx
+  CS Wrapping - generating vtkImageRenderManagerClientServer.cxx
+  vtkClientServerCompositePassClientServer.cxx
+  vtkClientServerSynchronizedRenderersClientServer.cxx
+  vtkCompositedSynchronizedRenderersClientServer.cxx
+  vtkCompositerClientServer.cxx
+  vtkCompositeRenderManagerClientServer.cxx
+  vtkCompressCompositerClientServer.cxx
+  vtkParallelRenderManagerClientServer.cxx
+  vtkPHardwareSelectorClientServer.cxx
+  vtkSynchronizedRenderersClientServer.cxx
+  vtkSynchronizedRenderWindowsClientServer.cxx
+  vtkTreeCompositerClientServer.cxx
+  vtkImageRenderManagerClientServer.cxx
+  vtkRenderingParallelCSInit.cxx
+  Generating Code...
+  vtkRenderingParallelCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingParallelCS-pv5.3.lib

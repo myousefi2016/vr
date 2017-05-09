@@ -1,0 +1,119 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftbase.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftbbox.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftbitmap.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftglyph.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftinit.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftmm.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/bdf/bdf.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/cache/ftcache.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/cff/cff.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/cid/type1cid.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/gzip/ftgzip.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/lzw/ftlzw.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/pcf/pcf.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/pfr/pfr.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/psaux/psaux.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/pshinter/pshinter.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/psnames/psmodule.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/raster/raster.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/sfnt/sfnt.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/smooth/smooth.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/truetype/truetype.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/type1/type1.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/type42/type42.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/winfonts/winfnt.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/builds/win32/ftdebug.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/src/base/ftsystem.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkfreetype" ],
+		"name" : "vtkfreetype"
+	}
+}

@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/jsoncpp/vtkjsoncpp/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/jsoncpp/vtkjsoncpp/CMakeFiles/generate.stamp is up-to-date.
+  jsoncpp.cpp
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkjsoncpp-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkjsoncpp-pv5.3.exp
+  vtkjsoncpp.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkjsoncpp-pv5.3.dll

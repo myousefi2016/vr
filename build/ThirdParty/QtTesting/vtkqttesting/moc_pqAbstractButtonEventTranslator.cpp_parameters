@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/QtTesting/vtkqttesting/moc_pqAbstractButtonEventTranslator.cpp
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/QtTesting/vtkqttesting/pqAbstractButtonEventTranslator.h

@@ -1,0 +1,97 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAddMembershipArrayClientServer.cxx
+  CS Wrapping - generating vtkAdjacencyMatrixToEdgeTableClientServer.cxx
+  CS Wrapping - generating vtkArrayNormClientServer.cxx
+  CS Wrapping - generating vtkArrayToTableClientServer.cxx
+  CS Wrapping - generating vtkCollapseGraphClientServer.cxx
+  CS Wrapping - generating vtkCollapseVerticesByArrayClientServer.cxx
+  CS Wrapping - generating vtkContinuousScatterplotClientServer.cxx
+  CS Wrapping - generating vtkDataObjectToTableClientServer.cxx
+  CS Wrapping - generating vtkDotProductSimilarityClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedTreeClientServer.cxx
+  CS Wrapping - generating vtkEdgeCentersClientServer.cxx
+  CS Wrapping - generating vtkExpandSelectedGraphClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectedGraphClientServer.cxx
+  CS Wrapping - generating vtkGenerateIndexArrayClientServer.cxx
+  CS Wrapping - generating vtkGraphHierarchicalBundleEdgesClientServer.cxx
+  CS Wrapping - generating vtkGroupLeafVerticesClientServer.cxx
+  CS Wrapping - generating vtkMergeColumnsClientServer.cxx
+  CS Wrapping - generating vtkMergeGraphsClientServer.cxx
+  CS Wrapping - generating vtkMergeTablesClientServer.cxx
+  CS Wrapping - generating vtkMutableGraphHelperClientServer.cxx
+  CS Wrapping - generating vtkNetworkHierarchyClientServer.cxx
+  CS Wrapping - generating vtkPipelineGraphSourceClientServer.cxx
+  CS Wrapping - generating vtkPruneTreeFilterClientServer.cxx
+  CS Wrapping - generating vtkRandomGraphSourceClientServer.cxx
+  CS Wrapping - generating vtkReduceTableClientServer.cxx
+  CS Wrapping - generating vtkRemoveIsolatedVerticesClientServer.cxx
+  CS Wrapping - generating vtkSparseArrayToTableClientServer.cxx
+  CS Wrapping - generating vtkStreamGraphClientServer.cxx
+  CS Wrapping - generating vtkStringToCategoryClientServer.cxx
+  CS Wrapping - generating vtkStringToNumericClientServer.cxx
+  CS Wrapping - generating vtkTableToArrayClientServer.cxx
+  CS Wrapping - generating vtkTableToGraphClientServer.cxx
+  CS Wrapping - generating vtkTableToSparseArrayClientServer.cxx
+  CS Wrapping - generating vtkTableToTreeFilterClientServer.cxx
+  CS Wrapping - generating vtkThresholdGraphClientServer.cxx
+  CS Wrapping - generating vtkThresholdTableClientServer.cxx
+  CS Wrapping - generating vtkTransferAttributesClientServer.cxx
+  CS Wrapping - generating vtkTransposeMatrixClientServer.cxx
+  CS Wrapping - generating vtkTreeFieldAggregatorClientServer.cxx
+  CS Wrapping - generating vtkTreeDifferenceFilterClientServer.cxx
+  CS Wrapping - generating vtkTreeLevelsFilterClientServer.cxx
+  CS Wrapping - generating vtkVertexDegreeClientServer.cxx
+  CS Wrapping - generating vtkRemoveHiddenDataClientServer.cxx
+  CS Wrapping - generating vtkKCoreDecompositionClientServer.cxx
+  vtkAddMembershipArrayClientServer.cxx
+  vtkAdjacencyMatrixToEdgeTableClientServer.cxx
+  vtkArrayNormClientServer.cxx
+  vtkArrayToTableClientServer.cxx
+  vtkCollapseGraphClientServer.cxx
+  vtkCollapseVerticesByArrayClientServer.cxx
+  vtkContinuousScatterplotClientServer.cxx
+  vtkDataObjectToTableClientServer.cxx
+  vtkDotProductSimilarityClientServer.cxx
+  vtkExtractSelectedTreeClientServer.cxx
+  vtkEdgeCentersClientServer.cxx
+  vtkExpandSelectedGraphClientServer.cxx
+  vtkExtractSelectedGraphClientServer.cxx
+  vtkGenerateIndexArrayClientServer.cxx
+  vtkGraphHierarchicalBundleEdgesClientServer.cxx
+  vtkGroupLeafVerticesClientServer.cxx
+  vtkMergeColumnsClientServer.cxx
+  vtkMergeGraphsClientServer.cxx
+  vtkMergeTablesClientServer.cxx
+  vtkMutableGraphHelperClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkNetworkHierarchyClientServer.cxx
+  vtkPipelineGraphSourceClientServer.cxx
+  vtkPruneTreeFilterClientServer.cxx
+  vtkRandomGraphSourceClientServer.cxx
+  vtkReduceTableClientServer.cxx
+  vtkRemoveIsolatedVerticesClientServer.cxx
+  vtkSparseArrayToTableClientServer.cxx
+  vtkStreamGraphClientServer.cxx
+  vtkStringToCategoryClientServer.cxx
+  vtkStringToNumericClientServer.cxx
+  vtkTableToArrayClientServer.cxx
+  vtkTableToGraphClientServer.cxx
+  vtkTableToSparseArrayClientServer.cxx
+  vtkTableToTreeFilterClientServer.cxx
+  vtkThresholdGraphClientServer.cxx
+  vtkThresholdTableClientServer.cxx
+  vtkTransferAttributesClientServer.cxx
+  vtkTransposeMatrixClientServer.cxx
+  vtkTreeFieldAggregatorClientServer.cxx
+  vtkTreeDifferenceFilterClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTreeLevelsFilterClientServer.cxx
+  vtkVertexDegreeClientServer.cxx
+  vtkRemoveHiddenDataClientServer.cxx
+  vtkKCoreDecompositionClientServer.cxx
+  vtkInfovisCoreCSInit.cxx
+  Generating Code...
+  vtkInfovisCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkInfovisCoreCS-pv5.3.lib

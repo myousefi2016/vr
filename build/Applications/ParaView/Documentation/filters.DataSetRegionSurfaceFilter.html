@@ -1,0 +1,116 @@
+
+<html>
+    <head>
+        <title>Extract Region Surface</title>
+        <meta name="proxy_name" contents="filters.DataSetRegionSurfaceFilter"/>
+        <meta name="filename" contents="filters.DataSetRegionSurfaceFilter.html"/>
+    </head>
+    <body>
+        <h2>Extract Region Surface (DataSetRegionSurfaceFilter)</h2>
+        <i>
+            <p>Extract a 2D boundary surface using neighbor relations to eliminate internal faces.</p>
+        </i>
+        <div class="description">The Extract
+                     Surface filter extracts the polygons forming the outer
+                     surface of the input dataset. This filter operates on any
+                     type of data and produces polygonal data as
+                     output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Extract Surface
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>PieceInvariant</th>
+                <td>If the value of this property is set to 1, internal
+        surfaces along process boundaries will be removed. NOTE: Enabling this
+        option might cause multiple executions of the data source because more
+        information is needed to remove internal surfaces.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>NonlinearSubdivisionLevel</th>
+                <td>If the input is an unstructured grid with nonlinear
+        faces, this parameter determines how many times the face is subdivided
+        into linear faces. If 0, the output is the equivalent of its linear
+        couterpart (and the midpoints determining the nonlinear interpolation
+        are discarded). If 1, the nonlinear face is triangulated based on the
+        midpoints. If greater than 1, the triangulated pieces are recursively
+        subdivided to reach the desired subdivision. Setting the value to
+        greater than 1 may cause some point data to not be passed even if no
+        quadratic faces exist. This option has no effect if the input is not an
+        unstructured grid.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>RegionArrayName</th>
+                <td>This property specifies the name of the material
+        array for generating parts.</td>
+                <td>material<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>SingleSided</th>
+                <td>If the value of this property is set to 1 (the default),
+        surfaces along the boundary are 1 layer thick. Otherwise there is
+        a surface for the material on each side.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>MaterialPropertiesName</th>
+                <td>This the name of the input material property field data array</td>
+                <td>material_properties<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaterialIDsName</th>
+                <td>This the name of the input and output material id field data array</td>
+                <td>material_ids<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaterialPIDsName</th>
+                <td>This the name of the output material ancestry id field data array</td>
+                <td>material_ancestors<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>InterfaceIDsName</th>
+                <td>This the name of the input and output interface id field data array</td>
+                <td>interface_ids<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

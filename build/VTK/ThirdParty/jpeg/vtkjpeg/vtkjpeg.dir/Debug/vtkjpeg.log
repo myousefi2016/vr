@@ -1,0 +1,55 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/jpeg/vtkjpeg/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/jpeg/vtkjpeg/CMakeFiles/generate.stamp is up-to-date.
+  jmemnobs.c
+  jcomapi.c
+  jutils.c
+  jerror.c
+  jmemmgr.c
+  jcapimin.c
+  jcapistd.c
+  jctrans.c
+  jcparam.c
+  jdatadst.c
+  jcinit.c
+  jcmaster.c
+  jcmarker.c
+  jcmainct.c
+  jcprepct.c
+  jccoefct.c
+  jccolor.c
+  jcsample.c
+  jchuff.c
+  jcphuff.c
+  Generating Code...
+  Compiling...
+  jcdctmgr.c
+  jfdctfst.c
+  jfdctflt.c
+  jfdctint.c
+  jdapimin.c
+  jdapistd.c
+  jdtrans.c
+  jdatasrc.c
+  jdmaster.c
+  jdinput.c
+  jdmarker.c
+  jdhuff.c
+  jdphuff.c
+  jdmainct.c
+  jdcoefct.c
+  jdpostct.c
+  jddctmgr.c
+  jidctfst.c
+  jidctflt.c
+  jidctint.c
+  Generating Code...
+  Compiling...
+  jidctred.c
+  jdsample.c
+  jdcolor.c
+  jquant1.c
+  jquant2.c
+  jdmerge.c
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkjpeg-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkjpeg-pv5.3.exp
+  vtkjpeg.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkjpeg-pv5.3.dll

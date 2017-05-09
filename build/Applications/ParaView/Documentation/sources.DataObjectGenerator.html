@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <title>Data Object Generator</title>
+        <meta name="proxy_name" contents="sources.DataObjectGenerator"/>
+        <meta name="filename" contents="sources.DataObjectGenerator.html"/>
+    </head>
+    <body>
+        <h2>Data Object Generator (DataObjectGenerator)</h2>
+        <i>
+            <p>Parses a string to produce composite data objects consisting of simple templated datasets.</p>
+        </i>
+        <div class="description">
+      vtkDataObjectGenerator parses a string and produces dataobjects from the
+      dataobject template names it sees in the string. For example, if the
+      string contains "ID1" the generator will create a vtkImageData.
+      "UF1", "RG1", "SG1", "PD1", and
+      "UG1" will produce vtkUniformGrid, vtkRectilinearGrid,
+      vtkStructuredGrid, vtkPolyData and vtkUnstructuredGrid respectively.
+      "PD2" will produce an alternate vtkPolydata. You can compose
+      composite datasets from the atomic ones listed above - "MB{}"
+      or "HB[]". "MB{ ID1 PD1 MB{} }" for example will
+      create a vtkMultiBlockDataSet consisting of three blocks: image data,
+      poly data, multi-block (empty). Hierarchical Box data sets additionally
+      require the notion of groups, declared within "()" braces, to
+      specify AMR depth. "HB[ (UF1)(UF1)(UF1) ]" will create a
+      vtkHierarchicalBoxDataSet representing an octree that is three levels
+      deep, in which the firstmost cell in each level is
+      refined.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Program</th>
+                <td>This property contains the string that is parsed to
+        determine the structured of the output data object to
+        produce.</td>
+                <td>ID1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

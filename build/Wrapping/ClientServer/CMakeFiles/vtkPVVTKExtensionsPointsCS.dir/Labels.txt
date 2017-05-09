@@ -1,0 +1,9 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkBoundedPlaneSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkBoundedVolumeSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVVTKExtensionsPointsCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedPlaneSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedVolumeSource.h

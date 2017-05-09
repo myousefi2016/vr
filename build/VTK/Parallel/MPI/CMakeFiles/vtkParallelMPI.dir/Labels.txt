@@ -1,0 +1,12 @@
+# Target labels
+ vtkParallelMPI
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPICommunicator.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPIController.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPIUtilities.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPI.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPICommunicator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPIController.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/vtkMPIUtilities.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Parallel/MPI/vtkParallelMPIModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Parallel/MPI/CMakeLists.txt

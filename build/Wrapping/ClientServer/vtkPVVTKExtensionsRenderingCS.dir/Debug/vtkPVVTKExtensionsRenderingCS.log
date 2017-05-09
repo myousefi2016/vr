@@ -1,0 +1,141 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAttributeDataToTableFilterClientServer.cxx
+  CS Wrapping - generating vtkBlockDeliveryPreprocessorClientServer.cxx
+  CS Wrapping - generating vtkCameraInterpolator2ClientServer.cxx
+  CS Wrapping - generating vtkCameraManipulatorClientServer.cxx
+  CS Wrapping - generating vtkCameraManipulatorGUIHelperClientServer.cxx
+  CS Wrapping - generating vtkCleanArraysClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataToUnstructuredGridFilterClientServer.cxx
+  CS Wrapping - generating vtkCSVExporterClientServer.cxx
+  CS Wrapping - generating vtkImageCompressorClientServer.cxx
+  CS Wrapping - generating vtkKdTreeGeneratorClientServer.cxx
+  CS Wrapping - generating vtkKdTreeManagerClientServer.cxx
+  CS Wrapping - generating vtkLZ4CompressorClientServer.cxx
+  CS Wrapping - generating vtkMarkSelectedRowsClientServer.cxx
+  CS Wrapping - generating vtkMultiSliceContextItemClientServer.cxx
+  CS Wrapping - generating vtkOrderedCompositeDistributorClientServer.cxx
+  CS Wrapping - generating vtkPartitionOrderingClientServer.cxx
+  CS Wrapping - generating vtkPartitionOrderingInterfaceClientServer.cxx
+  CS Wrapping - generating vtkPVAxesActorClientServer.cxx
+  CS Wrapping - generating vtkPVAxesWidgetClientServer.cxx
+  CS Wrapping - generating vtkPVCameraCollectionClientServer.cxx
+  CS Wrapping - generating vtkPVCenterAxesActorClientServer.cxx
+  CS Wrapping - generating vtkPVDefaultPassClientServer.cxx
+  CS Wrapping - generating vtkPVDiscretizableColorTransferFunctionClientServer.cxx
+  CS Wrapping - generating vtkPVGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkPVGL2PSExporterClientServer.cxx
+  CS Wrapping - generating vtkPVInteractiveViewLinkRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVInteractorStyleClientServer.cxx
+  CS Wrapping - generating vtkPVJoystickFlyClientServer.cxx
+  CS Wrapping - generating vtkPVJoystickFlyInClientServer.cxx
+  CS Wrapping - generating vtkPVJoystickFlyOutClientServer.cxx
+  CS Wrapping - generating vtkPVLODActorClientServer.cxx
+  CS Wrapping - generating vtkPVLODVolumeClientServer.cxx
+  CS Wrapping - generating vtkPVMergeTablesClientServer.cxx
+  CS Wrapping - generating vtkPVMergeTablesMultiBlockClientServer.cxx
+  CS Wrapping - generating vtkPVPlotTimeClientServer.cxx
+  CS Wrapping - generating vtkPVRecoverGeometryWireframeClientServer.cxx
+  CS Wrapping - generating vtkPVScalarBarActorClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballMoveActorClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballMultiRotateClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballPanClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballRollClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballRotateClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballZoomClientServer.cxx
+  CS Wrapping - generating vtkPVTrackballZoomToMouseClientServer.cxx
+  CS Wrapping - generating vtkPVUpdateSuppressorClientServer.cxx
+  CS Wrapping - generating vtkResampledAMRImageSourceClientServer.cxx
+  CS Wrapping - generating vtkSelectionConverterClientServer.cxx
+  CS Wrapping - generating vtkSortedTableStreamerClientServer.cxx
+  CS Wrapping - generating vtkSquirtCompressorClientServer.cxx
+  CS Wrapping - generating vtkTileDisplayHelperClientServer.cxx
+  CS Wrapping - generating vtkTilesHelperClientServer.cxx
+  CS Wrapping - generating vtkTrackballPanClientServer.cxx
+  CS Wrapping - generating vtkUpdateSuppressorPipelineClientServer.cxx
+  CS Wrapping - generating vtkViewLayoutClientServer.cxx
+  CS Wrapping - generating vtkVolumeRepresentationPreprocessorClientServer.cxx
+  CS Wrapping - generating vtkZlibImageCompressorClientServer.cxx
+  CS Wrapping - generating vtkCinemaExporterClientServer.cxx
+  CS Wrapping - generating vtkAllToNRedistributeCompositePolyDataClientServer.cxx
+  CS Wrapping - generating vtkAllToNRedistributePolyDataClientServer.cxx
+  CS Wrapping - generating vtkBalancedRedistributePolyDataClientServer.cxx
+  CS Wrapping - generating vtkRedistributePolyDataClientServer.cxx
+  CS Wrapping - generating vtkWeightedRedistributePolyDataClientServer.cxx
+  CS Wrapping - generating vtkMPICompositeManagerClientServer.cxx
+  CS Wrapping - generating vtkIceTCompositePassClientServer.cxx
+  CS Wrapping - generating vtkIceTContextClientServer.cxx
+  vtkAttributeDataToTableFilterClientServer.cxx
+  vtkBlockDeliveryPreprocessorClientServer.cxx
+  vtkCameraInterpolator2ClientServer.cxx
+  vtkCameraManipulatorClientServer.cxx
+  vtkCameraManipulatorGUIHelperClientServer.cxx
+  vtkCleanArraysClientServer.cxx
+  vtkCompositeDataToUnstructuredGridFilterClientServer.cxx
+  vtkCSVExporterClientServer.cxx
+  vtkImageCompressorClientServer.cxx
+  vtkKdTreeGeneratorClientServer.cxx
+  vtkKdTreeManagerClientServer.cxx
+  vtkLZ4CompressorClientServer.cxx
+  vtkMarkSelectedRowsClientServer.cxx
+  vtkMultiSliceContextItemClientServer.cxx
+  vtkOrderedCompositeDistributorClientServer.cxx
+  vtkPartitionOrderingClientServer.cxx
+  vtkPartitionOrderingInterfaceClientServer.cxx
+  vtkPVAxesActorClientServer.cxx
+  vtkPVAxesWidgetClientServer.cxx
+  vtkPVCameraCollectionClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVCenterAxesActorClientServer.cxx
+  vtkPVDefaultPassClientServer.cxx
+  vtkPVDiscretizableColorTransferFunctionClientServer.cxx
+  vtkPVGeometryFilterClientServer.cxx
+  vtkPVGL2PSExporterClientServer.cxx
+  vtkPVInteractiveViewLinkRepresentationClientServer.cxx
+  vtkPVInteractorStyleClientServer.cxx
+  vtkPVJoystickFlyClientServer.cxx
+  vtkPVJoystickFlyInClientServer.cxx
+  vtkPVJoystickFlyOutClientServer.cxx
+  vtkPVLODActorClientServer.cxx
+  vtkPVLODVolumeClientServer.cxx
+  vtkPVMergeTablesClientServer.cxx
+  vtkPVMergeTablesMultiBlockClientServer.cxx
+  vtkPVPlotTimeClientServer.cxx
+  vtkPVRecoverGeometryWireframeClientServer.cxx
+  vtkPVScalarBarActorClientServer.cxx
+  vtkPVTrackballMoveActorClientServer.cxx
+  vtkPVTrackballMultiRotateClientServer.cxx
+  vtkPVTrackballPanClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVTrackballRollClientServer.cxx
+  vtkPVTrackballRotateClientServer.cxx
+  vtkPVTrackballZoomClientServer.cxx
+  vtkPVTrackballZoomToMouseClientServer.cxx
+  vtkPVUpdateSuppressorClientServer.cxx
+  vtkResampledAMRImageSourceClientServer.cxx
+  vtkSelectionConverterClientServer.cxx
+  vtkSortedTableStreamerClientServer.cxx
+  vtkSquirtCompressorClientServer.cxx
+  vtkTileDisplayHelperClientServer.cxx
+  vtkTilesHelperClientServer.cxx
+  vtkTrackballPanClientServer.cxx
+  vtkUpdateSuppressorPipelineClientServer.cxx
+  vtkViewLayoutClientServer.cxx
+  vtkVolumeRepresentationPreprocessorClientServer.cxx
+  vtkZlibImageCompressorClientServer.cxx
+  vtkCinemaExporterClientServer.cxx
+  vtkAllToNRedistributeCompositePolyDataClientServer.cxx
+  vtkAllToNRedistributePolyDataClientServer.cxx
+  vtkBalancedRedistributePolyDataClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkRedistributePolyDataClientServer.cxx
+  vtkWeightedRedistributePolyDataClientServer.cxx
+  vtkMPICompositeManagerClientServer.cxx
+  vtkIceTCompositePassClientServer.cxx
+  vtkIceTContextClientServer.cxx
+  vtkPVVTKExtensionsRenderingCSInit.cxx
+  Generating Code...
+  vtkPVVTKExtensionsRenderingCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVVTKExtensionsRenderingCS-pv5.3.lib

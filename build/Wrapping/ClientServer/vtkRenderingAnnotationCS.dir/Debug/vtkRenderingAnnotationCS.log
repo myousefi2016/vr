@@ -1,0 +1,53 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAnnotatedCubeActorClientServer.cxx
+  CS Wrapping - generating vtkArcPlotterClientServer.cxx
+  CS Wrapping - generating vtkAxesActorClientServer.cxx
+  CS Wrapping - generating vtkAxisActor2DClientServer.cxx
+  CS Wrapping - generating vtkAxisActorClientServer.cxx
+  CS Wrapping - generating vtkAxisFollowerClientServer.cxx
+  CS Wrapping - generating vtkBarChartActorClientServer.cxx
+  CS Wrapping - generating vtkCaptionActor2DClientServer.cxx
+  CS Wrapping - generating vtkConvexHull2DClientServer.cxx
+  CS Wrapping - generating vtkCornerAnnotationClientServer.cxx
+  CS Wrapping - generating vtkCubeAxesActor2DClientServer.cxx
+  CS Wrapping - generating vtkCubeAxesActorClientServer.cxx
+  CS Wrapping - generating vtkGraphAnnotationLayersFilterClientServer.cxx
+  CS Wrapping - generating vtkLeaderActor2DClientServer.cxx
+  CS Wrapping - generating vtkLegendBoxActorClientServer.cxx
+  CS Wrapping - generating vtkLegendScaleActorClientServer.cxx
+  CS Wrapping - generating vtkParallelCoordinatesActorClientServer.cxx
+  CS Wrapping - generating vtkPieChartActorClientServer.cxx
+  CS Wrapping - generating vtkPolarAxesActorClientServer.cxx
+  CS Wrapping - generating vtkProp3DAxisFollowerClientServer.cxx
+  CS Wrapping - generating vtkScalarBarActorClientServer.cxx
+  CS Wrapping - generating vtkSpiderPlotActorClientServer.cxx
+  CS Wrapping - generating vtkXYPlotActorClientServer.cxx
+  vtkAnnotatedCubeActorClientServer.cxx
+  vtkArcPlotterClientServer.cxx
+  vtkAxesActorClientServer.cxx
+  vtkAxisActor2DClientServer.cxx
+  vtkAxisActorClientServer.cxx
+  vtkAxisFollowerClientServer.cxx
+  vtkBarChartActorClientServer.cxx
+  vtkCaptionActor2DClientServer.cxx
+  vtkConvexHull2DClientServer.cxx
+  vtkCornerAnnotationClientServer.cxx
+  vtkCubeAxesActor2DClientServer.cxx
+  vtkCubeAxesActorClientServer.cxx
+  vtkGraphAnnotationLayersFilterClientServer.cxx
+  vtkLeaderActor2DClientServer.cxx
+  vtkLegendBoxActorClientServer.cxx
+  vtkLegendScaleActorClientServer.cxx
+  vtkParallelCoordinatesActorClientServer.cxx
+  vtkPieChartActorClientServer.cxx
+  vtkPolarAxesActorClientServer.cxx
+  vtkProp3DAxisFollowerClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkScalarBarActorClientServer.cxx
+  vtkSpiderPlotActorClientServer.cxx
+  vtkXYPlotActorClientServer.cxx
+  vtkRenderingAnnotationCSInit.cxx
+  Generating Code...
+  vtkRenderingAnnotationCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingAnnotationCS-pv5.3.lib

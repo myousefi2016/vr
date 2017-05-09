@@ -1,0 +1,87 @@
+<xml>
+    <proxy>
+        <group>sources</group>
+        <name>PacMan</name>
+        <label>PacMan</label>
+        <property>
+            <name>Center</name>
+            <label>Center</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property specifies the 3D coordinates for the center of the sphere.
+        </long>
+            </documentation>
+            <defaults>0.0 0.0 0.0</defaults>
+            <domains>
+  Value(s) must be in the range (
+    ,
+    ).
+</domains>
+        </property>
+        <property>
+            <name>ThetaResolution</name>
+            <label>ThetaResolution</label>
+            <documentation>
+                <brief/>
+                <long>
+          The value of this property represents the number of divisions between Start Theta and End Theta around the sphere. (See the Start Theta and End Theta properties.) The theta divisions are similar to longitude lines on the earth. The higher the resolution, the closer the approximation will come to a sphere, and the more polygons there will be.
+        </long>
+            </documentation>
+            <defaults>60</defaults>
+            <domains>
+  Value(s) must be in the range (
+    3,
+    1024).
+</domains>
+        </property>
+        <property>
+            <name>StartTheta</name>
+            <label>StartTheta</label>
+            <documentation>
+                <brief/>
+                <long>
+          To form a complete sphere, the value of this property should be 0 degrees, and the value of the End Theta property should be 360 degrees. The value of this property can be adjusted to form only a portion of a sphere.
+        </long>
+            </documentation>
+            <defaults>30</defaults>
+            <domains>
+  Value(s) must be in the range (
+    0,
+    360).
+</domains>
+        </property>
+        <property>
+            <name>EndTheta</name>
+            <label>EndTheta</label>
+            <documentation>
+                <brief/>
+                <long>
+          The value of this property can be adjusted to form only a portion of a sphere. This value is measured in degrees.
+        </long>
+            </documentation>
+            <defaults>330</defaults>
+            <domains>
+  Value(s) must be in the range (
+    0,
+    360).
+</domains>
+        </property>
+        <property>
+            <name>PhiResolution</name>
+            <label>PhiResolution</label>
+            <documentation>
+                <brief/>
+                <long>
+          The value of this property represents the number of divisions between Start Phi and End Phi on the sphere. (See the Start Phi and End Phi properties.) The phi divisions are similar to latitude lines on the earth.
+        </long>
+            </documentation>
+            <defaults>60</defaults>
+            <domains>
+  Value(s) must be in the range (
+    3,
+    1024).
+</domains>
+        </property>
+    </proxy>
+</xml>

@@ -1,0 +1,61 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/VR/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/VR/CMakeFiles/generate.stamp is up-to-date.
+  Generating moc_pqVRAddConnectionDialog.cpp
+  Generating moc_pqVRAddStyleDialog.cpp
+  Generating moc_pqVRConnectionManager.cpp
+  Generating moc_pqVRDockPanel.cpp
+  Generating moc_pqVRQueueHandler.cpp
+  Generating moc_pqVRStarter.cpp
+  Generating moc_pqVRStarterImplementation.cpp
+  Generating moc_pqVRDockPanelImplementation.cpp
+  Generating ui_pqVRDockPanel.h
+  Generating ui_pqVRAddConnectionDialog.h
+  Generating ui_pqVRAddStyleDialog.h
+  Generating moc_VRPlugin_Plugin.cpp
+  pqVRAddConnectionDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddConnectionDialog.cxx(281): warning C4065: switch statement contains 'default' but no 'case' labels
+  pqVRAddStyleDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(176): warning C4457: declaration of 'name' hides function parameter
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(165): note: see declaration of 'name'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(183): warning C4457: declaration of 'name' hides function parameter
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(165): note: see declaration of 'name'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(190): warning C4457: declaration of 'name' hides function parameter
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRAddStyleDialog.cxx(165): note: see declaration of 'name'
+  pqVRDockPanel.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRDockPanel.cxx(218): warning C4189: 'mgr': local variable is initialized but not referenced
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRDockPanel.cxx(270): warning C4189: 'mgr': local variable is initialized but not referenced
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRDockPanel.cxx(298): warning C4189: 'mgr': local variable is initialized but not referenced
+  pqVRStarter.cxx
+  moc_pqVRAddConnectionDialog.cpp
+  moc_pqVRAddStyleDialog.cpp
+  moc_pqVRConnectionManager.cpp
+  moc_pqVRDockPanel.cpp
+  moc_pqVRQueueHandler.cpp
+  moc_pqVRStarter.cpp
+  pqVRConnectionManager.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRConnectionManager.cxx(70): warning C4099: 'pqVRConnectionManager::pqInternals': type name first seen using 'class' now seen using 'struct'
+  c:\users\vr\desktop\paraview-v5.3.0-vr\src\plugins\vr\pqVRConnectionManager.h(91): note: see declaration of 'pqVRConnectionManager::pqInternals'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRConnectionManager.cxx(298): warning C4189: 'address': local variable is initialized but not referenced
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\pqVRConnectionManager.cxx(297): warning C4189: 'name': local variable is initialized but not referenced
+  pqVRQueueHandler.cxx
+  vtkVRControlSliceOrientationStyle.cxx
+  vtkVRControlSlicePositionStyle.cxx
+  vtkVRGrabWorldStyle.cxx
+  vtkVRInteractorStyle.cxx
+  vtkVRInteractorStyleFactory.cxx
+  vtkVRQueue.cxx
+  vtkVRTrackStyle.cxx
+  vtkVRSpaceNavigatorGrabWorldStyle.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\VR\vtkVRSpaceNavigatorGrabWorldStyle.cxx(81): warning C4101: 'orient': unreferenced local variable
+  Generating Code...
+  Compiling...
+  vtkVRVirtualHandStyle.cxx
+  pqVRStarterImplementation.cxx
+  moc_pqVRStarterImplementation.cpp
+  pqVRDockPanelImplementation.cxx
+  moc_pqVRDockPanelImplementation.cpp
+  VRPlugin_Plugin.cxx
+  moc_VRPlugin_Plugin.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/VRPlugin.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/VRPlugin.exp
+  VRPlugin.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\VRPlugin.dll

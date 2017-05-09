@@ -1,0 +1,11 @@
+# Target labels
+ vtkVPIC
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICDataSet.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICDefinition.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICGlobal.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICHeader.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICPart.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/VPICView.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/GridExchange.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt

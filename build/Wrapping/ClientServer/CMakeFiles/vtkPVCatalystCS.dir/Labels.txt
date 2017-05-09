@@ -1,0 +1,15 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCPAdaptorAPIClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCPDataDescriptionClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCPInputDataDescriptionClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCPPipelineClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCPProcessorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVCatalystCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/CoProcessing/Catalyst/vtkCPAdaptorAPI.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/CoProcessing/Catalyst/vtkCPDataDescription.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/CoProcessing/Catalyst/vtkCPInputDataDescription.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/CoProcessing/Catalyst/vtkCPPipeline.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/CoProcessing/Catalyst/vtkCPProcessor.h

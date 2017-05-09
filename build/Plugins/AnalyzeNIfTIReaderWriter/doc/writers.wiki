@@ -1,0 +1,71 @@
+
+==AnalyzeWriter==
+
+Write Analyze files
+Writer to write Analyze files.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''Input''' (Input)
+|
+
+|
+
+|
+Accepts input of following types:
+* vtkImageData
+|-
+|'''FileName''' (FileName)
+|
+
+The name of the file to be written.
+
+|
+
+|
+
+
+|}
+
+==NIfTIWriter==
+
+Write NIfTI files
+Writer to write NIfTI files.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''Input''' (Input)
+|
+
+|
+
+|
+Accepts input of following types:
+* vtkImageData
+|-
+|'''FileName''' (FileName)
+|
+
+The name of the file to be written.
+
+|
+
+|
+
+
+|}
+

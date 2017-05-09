@@ -1,0 +1,203 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAdditionalFieldReaderClientServer.cxx
+  CS Wrapping - generating vtkAMRConnectivityClientServer.cxx
+  CS Wrapping - generating vtkAMRDualClipClientServer.cxx
+  CS Wrapping - generating vtkAMRDualContourClientServer.cxx
+  CS Wrapping - generating vtkAMRFileSeriesReaderClientServer.cxx
+  CS Wrapping - generating vtkAMRFragmentIntegrationClientServer.cxx
+  CS Wrapping - generating vtkAMRFragmentsFilterClientServer.cxx
+  CS Wrapping - generating vtkAppendArcLengthClientServer.cxx
+  CS Wrapping - generating vtkAppendRectilinearGridClientServer.cxx
+  CS Wrapping - generating vtkCellIntegratorClientServer.cxx
+  CS Wrapping - generating vtkCleanUnstructuredGridCellsClientServer.cxx
+  CS Wrapping - generating vtkCleanUnstructuredGridClientServer.cxx
+  CS Wrapping - generating vtkCSVWriterClientServer.cxx
+  CS Wrapping - generating vtkEnsembleDataReaderClientServer.cxx
+  CS Wrapping - generating vtkEquivalenceSetClientServer.cxx
+  CS Wrapping - generating vtkExodusFileSeriesReaderClientServer.cxx
+  CS Wrapping - generating vtkExtractScatterPlotClientServer.cxx
+  CS Wrapping - generating vtkExtractSelectionRangeClientServer.cxx
+  CS Wrapping - generating vtkFileSequenceParserClientServer.cxx
+  CS Wrapping - generating vtkFlashContourClientServer.cxx
+  CS Wrapping - generating vtkGridAxes2DActorClientServer.cxx
+  CS Wrapping - generating vtkGridAxes3DActorClientServer.cxx
+  CS Wrapping - generating vtkGridAxesPlane2DActorClientServer.cxx
+  CS Wrapping - generating vtkGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalFractalClientServer.cxx
+  CS Wrapping - generating vtkHybridProbeFilterClientServer.cxx
+  CS Wrapping - generating vtkIntegrateFlowThroughSurfaceClientServer.cxx
+  CS Wrapping - generating vtkIntersectFragmentsClientServer.cxx
+  CS Wrapping - generating vtkIsoVolumeClientServer.cxx
+  CS Wrapping - generating vtkMaterialInterfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkMergeArraysClientServer.cxx
+  CS Wrapping - generating vtkMergeCompositeDataSetClientServer.cxx
+  CS Wrapping - generating vtkMinMaxClientServer.cxx
+  CS Wrapping - generating vtkPEnSightGoldBinaryReaderClientServer.cxx
+  CS Wrapping - generating vtkPEnSightGoldReaderClientServer.cxx
+  CS Wrapping - generating vtkPEnSightReaderClientServer.cxx
+  CS Wrapping - generating vtkPEquivalenceSetClientServer.cxx
+  CS Wrapping - generating vtkPExtractTemporalFieldDataClientServer.cxx
+  CS Wrapping - generating vtkPGenericEnSightReaderClientServer.cxx
+  CS Wrapping - generating vtkPhastaReaderClientServer.cxx
+  CS Wrapping - generating vtkPlotEdgesClientServer.cxx
+  CS Wrapping - generating vtkPointHandleRepresentationSphereClientServer.cxx
+  CS Wrapping - generating vtkPolyLineToRectilinearGridFilterClientServer.cxx
+  CS Wrapping - generating vtkPPhastaReaderClientServer.cxx
+  CS Wrapping - generating vtkPSciVizContingencyStatsClientServer.cxx
+  CS Wrapping - generating vtkPSciVizDescriptiveStatsClientServer.cxx
+  CS Wrapping - generating vtkPSciVizKMeansClientServer.cxx
+  CS Wrapping - generating vtkPSciVizMultiCorrelativeStatsClientServer.cxx
+  CS Wrapping - generating vtkPSciVizPCAStatsClientServer.cxx
+  CS Wrapping - generating vtkPVAMRDualClipClientServer.cxx
+  CS Wrapping - generating vtkPVAMRDualContourClientServer.cxx
+  CS Wrapping - generating vtkPVAMRFragmentIntegrationClientServer.cxx
+  CS Wrapping - generating vtkPVArrayCalculatorClientServer.cxx
+  CS Wrapping - generating vtkPVBoxClientServer.cxx
+  CS Wrapping - generating vtkPVClipClosedSurfaceClientServer.cxx
+  CS Wrapping - generating vtkPVClipDataSetClientServer.cxx
+  CS Wrapping - generating vtkPVConnectivityFilterClientServer.cxx
+  CS Wrapping - generating vtkPVContourFilterClientServer.cxx
+  CS Wrapping - generating vtkPVCylinderClientServer.cxx
+  CS Wrapping - generating vtkPVDataSetAlgorithmSelectorFilterClientServer.cxx
+  CS Wrapping - generating vtkPVDReaderClientServer.cxx
+  CS Wrapping - generating vtkPVEnSightMasterServerReader2ClientServer.cxx
+  CS Wrapping - generating vtkPVEnSightMasterServerReaderClientServer.cxx
+  CS Wrapping - generating vtkPVEnSightMasterServerTranslatorClientServer.cxx
+  CS Wrapping - generating vtkPVExtractBagPlotsClientServer.cxx
+  CS Wrapping - generating vtkPVExtractComponentClientServer.cxx
+  CS Wrapping - generating vtkPVExtractVOIClientServer.cxx
+  CS Wrapping - generating vtkPVFrustumActorClientServer.cxx
+  CS Wrapping - generating vtkPVGlyphFilterClientServer.cxx
+  CS Wrapping - generating vtkPVGridAxes3DActorClientServer.cxx
+  CS Wrapping - generating vtkPVImageReaderClientServer.cxx
+  CS Wrapping - generating vtkPVLegacyGlyphFilterClientServer.cxx
+  CS Wrapping - generating vtkPVLinearExtrusionFilterClientServer.cxx
+  CS Wrapping - generating vtkPVMetaClipDataSetClientServer.cxx
+  CS Wrapping - generating vtkPVMetaSliceDataSetClientServer.cxx
+  CS Wrapping - generating vtkPVPlaneClientServer.cxx
+  CS Wrapping - generating vtkPVPLYWriterClientServer.cxx
+  CS Wrapping - generating vtkPVSelectionSourceClientServer.cxx
+  CS Wrapping - generating vtkPVTextSourceClientServer.cxx
+  CS Wrapping - generating vtkPVTransposeTableClientServer.cxx
+  CS Wrapping - generating vtkRulerLineForInputClientServer.cxx
+  CS Wrapping - generating vtkQuerySelectionSourceClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkSciVizStatisticsClientServer.cxx
+  CS Wrapping - generating vtkSpyPlotFileSeriesReaderClientServer.cxx
+  CS Wrapping - generating vtkSpyPlotHistoryReaderClientServer.cxx
+  CS Wrapping - generating vtkSpyPlotReaderClientServer.cxx
+  CS Wrapping - generating vtkSurfaceVectorsClientServer.cxx
+  CS Wrapping - generating vtkTimeStepProgressFilterClientServer.cxx
+  CS Wrapping - generating vtkTimeToTextConvertorClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredPOPReaderClientServer.cxx
+  CS Wrapping - generating vtkVRMLSourceClientServer.cxx
+  CS Wrapping - generating vtkXMLCollectionReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPVDWriterClientServer.cxx
+  CS Wrapping - generating vtkInSituPParticlePathFilterClientServer.cxx
+  vtkAdditionalFieldReaderClientServer.cxx
+  vtkAMRConnectivityClientServer.cxx
+  vtkAMRDualClipClientServer.cxx
+  vtkAMRDualContourClientServer.cxx
+  vtkAMRFileSeriesReaderClientServer.cxx
+  vtkAMRFragmentIntegrationClientServer.cxx
+  vtkAMRFragmentsFilterClientServer.cxx
+  vtkAppendArcLengthClientServer.cxx
+  vtkAppendRectilinearGridClientServer.cxx
+  vtkCellIntegratorClientServer.cxx
+  vtkCleanUnstructuredGridCellsClientServer.cxx
+  vtkCleanUnstructuredGridClientServer.cxx
+  vtkCSVWriterClientServer.cxx
+  vtkEnsembleDataReaderClientServer.cxx
+  vtkEquivalenceSetClientServer.cxx
+  vtkExodusFileSeriesReaderClientServer.cxx
+  vtkExtractScatterPlotClientServer.cxx
+  vtkExtractSelectionRangeClientServer.cxx
+  vtkFileSequenceParserClientServer.cxx
+  vtkFlashContourClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkGridAxes2DActorClientServer.cxx
+  vtkGridAxes3DActorClientServer.cxx
+  vtkGridAxesPlane2DActorClientServer.cxx
+  vtkGridConnectivityClientServer.cxx
+  vtkHierarchicalFractalClientServer.cxx
+  vtkHybridProbeFilterClientServer.cxx
+  vtkIntegrateFlowThroughSurfaceClientServer.cxx
+  vtkIntersectFragmentsClientServer.cxx
+  vtkIsoVolumeClientServer.cxx
+  vtkMaterialInterfaceFilterClientServer.cxx
+  vtkMergeArraysClientServer.cxx
+  vtkMergeCompositeDataSetClientServer.cxx
+  vtkMinMaxClientServer.cxx
+  vtkPEnSightGoldBinaryReaderClientServer.cxx
+  vtkPEnSightGoldReaderClientServer.cxx
+  vtkPEnSightReaderClientServer.cxx
+  vtkPEquivalenceSetClientServer.cxx
+  vtkPExtractTemporalFieldDataClientServer.cxx
+  vtkPGenericEnSightReaderClientServer.cxx
+  vtkPhastaReaderClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPlotEdgesClientServer.cxx
+  vtkPointHandleRepresentationSphereClientServer.cxx
+  vtkPolyLineToRectilinearGridFilterClientServer.cxx
+  vtkPPhastaReaderClientServer.cxx
+  vtkPSciVizContingencyStatsClientServer.cxx
+  vtkPSciVizDescriptiveStatsClientServer.cxx
+  vtkPSciVizKMeansClientServer.cxx
+  vtkPSciVizMultiCorrelativeStatsClientServer.cxx
+  vtkPSciVizPCAStatsClientServer.cxx
+  vtkPVAMRDualClipClientServer.cxx
+  vtkPVAMRDualContourClientServer.cxx
+  vtkPVAMRFragmentIntegrationClientServer.cxx
+  vtkPVArrayCalculatorClientServer.cxx
+  vtkPVBoxClientServer.cxx
+  vtkPVClipClosedSurfaceClientServer.cxx
+  vtkPVClipDataSetClientServer.cxx
+  vtkPVConnectivityFilterClientServer.cxx
+  vtkPVContourFilterClientServer.cxx
+  vtkPVCylinderClientServer.cxx
+  vtkPVDataSetAlgorithmSelectorFilterClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVDReaderClientServer.cxx
+  vtkPVEnSightMasterServerReader2ClientServer.cxx
+  vtkPVEnSightMasterServerReaderClientServer.cxx
+  vtkPVEnSightMasterServerTranslatorClientServer.cxx
+  vtkPVExtractBagPlotsClientServer.cxx
+  vtkPVExtractComponentClientServer.cxx
+  vtkPVExtractVOIClientServer.cxx
+  vtkPVFrustumActorClientServer.cxx
+  vtkPVGlyphFilterClientServer.cxx
+  vtkPVGridAxes3DActorClientServer.cxx
+  vtkPVImageReaderClientServer.cxx
+  vtkPVLegacyGlyphFilterClientServer.cxx
+  vtkPVLinearExtrusionFilterClientServer.cxx
+  vtkPVMetaClipDataSetClientServer.cxx
+  vtkPVMetaSliceDataSetClientServer.cxx
+  vtkPVPlaneClientServer.cxx
+  vtkPVPLYWriterClientServer.cxx
+  vtkPVSelectionSourceClientServer.cxx
+  vtkPVTextSourceClientServer.cxx
+  vtkPVTransposeTableClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkRulerLineForInputClientServer.cxx
+  vtkQuerySelectionSourceClientServer.cxx
+  vtkRectilinearGridConnectivityClientServer.cxx
+  vtkSciVizStatisticsClientServer.cxx
+  vtkSpyPlotFileSeriesReaderClientServer.cxx
+  vtkSpyPlotHistoryReaderClientServer.cxx
+  vtkSpyPlotReaderClientServer.cxx
+  vtkSurfaceVectorsClientServer.cxx
+  vtkTimeStepProgressFilterClientServer.cxx
+  vtkTimeToTextConvertorClientServer.cxx
+  vtkUnstructuredPOPReaderClientServer.cxx
+  vtkVRMLSourceClientServer.cxx
+  vtkXMLCollectionReaderClientServer.cxx
+  vtkXMLPVDWriterClientServer.cxx
+  vtkInSituPParticlePathFilterClientServer.cxx
+  vtkPVVTKExtensionsDefaultCSInit.cxx
+  Generating Code...
+  vtkPVVTKExtensionsDefaultCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVVTKExtensionsDefaultCS-pv5.3.lib

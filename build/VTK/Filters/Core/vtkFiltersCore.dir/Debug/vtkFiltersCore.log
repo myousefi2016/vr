@@ -1,0 +1,97 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/Core/CMakeFiles/generate.stamp is up-to-date.
+  vtkAppendFilter.cxx
+  vtkAppendPolyData.cxx
+  vtkAppendSelection.cxx
+  vtkArrayCalculator.cxx
+  vtkAssignAttribute.cxx
+  vtkAttributeDataToFieldDataFilter.cxx
+  vtkBinCellDataFilter.cxx
+  vtkCellDataToPointData.cxx
+  vtkCleanPolyData.cxx
+  vtkClipPolyData.cxx
+  vtkCompositeDataProbeFilter.cxx
+  vtkConnectivityFilter.cxx
+  vtkContourFilter.cxx
+  vtkContourGrid.cxx
+  vtkContourHelper.cxx
+  vtkDataObjectGenerator.cxx
+  vtkDataObjectToDataSetFilter.cxx
+  vtkDataSetEdgeSubdivisionCriterion.cxx
+  vtkDataSetToDataObjectFilter.cxx
+  vtkDecimatePolylineFilter.cxx
+  Generating Code...
+  Compiling...
+  vtkDecimatePro.cxx
+  vtkDelaunay2D.cxx
+  vtkDelaunay3D.cxx
+  vtkElevationFilter.cxx
+  vtkExecutionTimer.cxx
+  vtkFeatureEdges.cxx
+  vtkFieldDataToAttributeDataFilter.cxx
+  vtkFlyingEdges2D.cxx
+  vtkFlyingEdges3D.cxx
+  vtkFlyingEdgesPlaneCutter.cxx
+  vtkGlyph2D.cxx
+  vtkGlyph3D.cxx
+  vtkHedgeHog.cxx
+  vtkHull.cxx
+  vtkIdFilter.cxx
+  vtkMarchingCubes.cxx
+  vtkMarchingSquares.cxx
+  vtkMaskFields.cxx
+  vtkMaskPoints.cxx
+  vtkMaskPolyData.cxx
+  Generating Code...
+  Compiling...
+  vtkMassProperties.cxx
+  vtkMergeDataObjectFilter.cxx
+  vtkMergeFields.cxx
+  vtkMergeFilter.cxx
+  vtkPointDataToCellData.cxx
+  vtkPolyDataConnectivityFilter.cxx
+  vtkPolyDataNormals.cxx
+  vtkProbeFilter.cxx
+  vtkQuadricClustering.cxx
+  vtkQuadricDecimation.cxx
+  vtkRearrangeFields.cxx
+  vtkResampleToImage.cxx
+  vtkResampleWithDataSet.cxx
+  vtkReverseSense.cxx
+  vtkSimpleElevationFilter.cxx
+  vtkSmoothPolyDataFilter.cxx
+  vtkStripper.cxx
+  vtkStructuredGridOutlineFilter.cxx
+  vtkSynchronizedTemplates2D.cxx
+  vtkSynchronizedTemplates3D.cxx
+  Generating Code...
+  Compiling...
+  vtkSynchronizedTemplatesCutter3D.cxx
+  vtkTensorGlyph.cxx
+  vtkThreshold.cxx
+  vtkThresholdPoints.cxx
+  vtkTransposeTable.cxx
+  vtkTriangleFilter.cxx
+  vtkTriangleMeshPointNormals.cxx
+  vtkTubeFilter.cxx
+  vtkUnstructuredGridQuadricDecimation.cxx
+  vtkVectorDot.cxx
+  vtkVectorNorm.cxx
+  vtkWindowedSincPolyDataFilter.cxx
+  vtkCutter.cxx
+  vtkCompositeCutter.cxx
+  vtkGridSynchronizedTemplates3D.cxx
+  vtkRectilinearSynchronizedTemplates.cxx
+  vtkEdgeSubdivisionCriterion.cxx
+  vtkStreamingTessellator.cxx
+  vtkImplicitPolyDataDistance.cxx
+  vtkStreamerBase.cxx
+  Generating Code...
+  Compiling...
+  vtkCenterOfMass.cxx
+  vtkImageAppend.cxx
+  vtkStructuredGridAppend.cxx
+  vtkAppendCompositeDataLeaves.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersCore-pv5.3.exp
+  vtkFiltersCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkFiltersCore-pv5.3.dll

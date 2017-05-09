@@ -1,0 +1,11 @@
+# Target labels
+ vtkIOParallelExodus
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelExodus/vtkPExodusIIReader.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelExodus/vtkPExodusIIWriter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/ParallelExodus/vtkIOParallelExodusObjectFactory.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelExodus/vtkPExodusIIReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelExodus/vtkPExodusIIWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/ParallelExodus/vtkIOParallelExodusObjectFactory.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/ParallelExodus/vtkIOParallelExodusModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelExodus/CMakeLists.txt

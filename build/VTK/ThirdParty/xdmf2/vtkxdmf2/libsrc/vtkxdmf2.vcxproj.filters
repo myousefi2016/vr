@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfArray.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDOM.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDataDesc.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfExpression.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfValues.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfValuesXML.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfValuesHDF.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfValuesBinary.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfHeavyData.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfHDF.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfHDFSupport.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfLightData.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfInformation.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDataItem.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDataStructure.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDataTransform.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfElement.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfObject.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfExprLex.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfExprYacc.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfRoot.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDomain.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfAttribute.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfGrid.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfTopology.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfTime.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfRegion.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfMap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfGeometry.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfH5Driver.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDsm.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDsmBuffer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDsmComm.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\XdmfDsmMsg.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\xdmf2\vtkxdmf2\libsrc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

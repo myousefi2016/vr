@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+        <title>STL Reader</title>
+        <meta name="proxy_name" contents="sources.stlreader"/>
+        <meta name="filename" contents="sources.stlreader.html"/>
+    </head>
+    <body>
+        <h2>STL Reader (stlreader)</h2>
+        <i>
+            <p>Reads ASCII or binary stereo lithography (STL) files.</p>
+        </i>
+        <div class="description">The STL reader reads ASCII or
+                     binary stereo lithography (STL) files. The expected file
+                     extension is .stl. The output of this reader is a
+                     polygonal dataset. This reader also supports file
+                     series.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileNameInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FileNames</th>
+                <td>The list of files to be read by the reader. If more than
+        one file is specified, the reader will switch to file series mode in
+        which it will pretend that it can support time and provide one file per
+        time step.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

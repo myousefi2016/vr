@@ -1,0 +1,131 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCameraPassClientServer.cxx
+  CS Wrapping - generating vtkClearRGBPassClientServer.cxx
+  CS Wrapping - generating vtkClearZPassClientServer.cxx
+  CS Wrapping - generating vtkCompositePolyDataMapper2ClientServer.cxx
+  CS Wrapping - generating vtkDefaultPassClientServer.cxx
+  CS Wrapping - generating vtkDepthOfFieldPassClientServer.cxx
+  CS Wrapping - generating vtkDepthImageProcessingPassClientServer.cxx
+  CS Wrapping - generating vtkDepthPeelingPassClientServer.cxx
+  CS Wrapping - generating vtkDualDepthPeelingPassClientServer.cxx
+  CS Wrapping - generating vtkEDLShadingClientServer.cxx
+  CS Wrapping - generating vtkGaussianBlurPassClientServer.cxx
+  CS Wrapping - generating vtkGenericOpenGLRenderWindowClientServer.cxx
+  CS Wrapping - generating vtkHiddenLineRemovalPassClientServer.cxx
+  CS Wrapping - generating vtkImageProcessingPassClientServer.cxx
+  CS Wrapping - generating vtkLightingMapPassClientServer.cxx
+  CS Wrapping - generating vtkLightsPassClientServer.cxx
+  CS Wrapping - generating vtkOpaquePassClientServer.cxx
+  CS Wrapping - generating vtkOpenGLActorClientServer.cxx
+  CS Wrapping - generating vtkOpenGLBillboardTextActor3DClientServer.cxx
+  CS Wrapping - generating vtkOpenGLCameraClientServer.cxx
+  CS Wrapping - generating vtkOpenGLFXAAFilterClientServer.cxx
+  CS Wrapping - generating vtkOpenGLHardwareSelectorClientServer.cxx
+  CS Wrapping - generating vtkOpenGLImageAlgorithmHelperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLImageMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLImageSliceMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLLabeledContourMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLLightClientServer.cxx
+  CS Wrapping - generating vtkOpenGLPointGaussianMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLPolyDataMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLPolyDataMapper2DClientServer.cxx
+  CS Wrapping - generating vtkOpenGLPropertyClientServer.cxx
+  CS Wrapping - generating vtkOpenGLRenderPassClientServer.cxx
+  CS Wrapping - generating vtkOpenGLRenderUtilitiesClientServer.cxx
+  CS Wrapping - generating vtkOpenGLRenderWindowClientServer.cxx
+  CS Wrapping - generating vtkOpenGLRendererClientServer.cxx
+  CS Wrapping - generating vtkOpenGLSphereMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLStickMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLTextActorClientServer.cxx
+  CS Wrapping - generating vtkOpenGLTextActor3DClientServer.cxx
+  CS Wrapping - generating vtkOpenGLTextMapperClientServer.cxx
+  CS Wrapping - generating vtkOpenGLTextureClientServer.cxx
+  CS Wrapping - generating vtkOpenGLVertexBufferObjectGroupClientServer.cxx
+  CS Wrapping - generating vtkOverlayPassClientServer.cxx
+  CS Wrapping - generating vtkPointFillPassClientServer.cxx
+  CS Wrapping - generating vtkRenderPassCollectionClientServer.cxx
+  CS Wrapping - generating vtkRenderStepsPassClientServer.cxx
+  CS Wrapping - generating vtkSSAAPassClientServer.cxx
+  CS Wrapping - generating vtkSequencePassClientServer.cxx
+  CS Wrapping - generating vtkShaderClientServer.cxx
+  CS Wrapping - generating vtkShaderProgramClientServer.cxx
+  CS Wrapping - generating vtkShadowMapBakerPassClientServer.cxx
+  CS Wrapping - generating vtkShadowMapPassClientServer.cxx
+  CS Wrapping - generating vtkSobelGradientMagnitudePassClientServer.cxx
+  CS Wrapping - generating vtkTranslucentPassClientServer.cxx
+  CS Wrapping - generating vtkValuePassClientServer.cxx
+  CS Wrapping - generating vtkVolumetricPassClientServer.cxx
+  CS Wrapping - generating vtkDataTransferHelperClientServer.cxx
+  CS Wrapping - generating vtkDummyGPUInfoListClientServer.cxx
+  CS Wrapping - generating vtkWin32RenderWindowInteractorClientServer.cxx
+  CS Wrapping - generating vtkWin32OpenGLRenderWindowClientServer.cxx
+  vtkCameraPassClientServer.cxx
+  vtkClearRGBPassClientServer.cxx
+  vtkClearZPassClientServer.cxx
+  vtkCompositePolyDataMapper2ClientServer.cxx
+  vtkDefaultPassClientServer.cxx
+  vtkDepthOfFieldPassClientServer.cxx
+  vtkDepthImageProcessingPassClientServer.cxx
+  vtkDepthPeelingPassClientServer.cxx
+  vtkDualDepthPeelingPassClientServer.cxx
+  vtkEDLShadingClientServer.cxx
+  vtkGaussianBlurPassClientServer.cxx
+  vtkGenericOpenGLRenderWindowClientServer.cxx
+  vtkHiddenLineRemovalPassClientServer.cxx
+  vtkImageProcessingPassClientServer.cxx
+  vtkLightingMapPassClientServer.cxx
+  vtkLightsPassClientServer.cxx
+  vtkOpaquePassClientServer.cxx
+  vtkOpenGLActorClientServer.cxx
+  vtkOpenGLBillboardTextActor3DClientServer.cxx
+  vtkOpenGLCameraClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkOpenGLFXAAFilterClientServer.cxx
+  vtkOpenGLHardwareSelectorClientServer.cxx
+  vtkOpenGLImageAlgorithmHelperClientServer.cxx
+  vtkOpenGLImageMapperClientServer.cxx
+  vtkOpenGLImageSliceMapperClientServer.cxx
+  vtkOpenGLLabeledContourMapperClientServer.cxx
+  vtkOpenGLLightClientServer.cxx
+  vtkOpenGLPointGaussianMapperClientServer.cxx
+  vtkOpenGLPolyDataMapperClientServer.cxx
+  vtkOpenGLPolyDataMapper2DClientServer.cxx
+  vtkOpenGLPropertyClientServer.cxx
+  vtkOpenGLRenderPassClientServer.cxx
+  vtkOpenGLRenderUtilitiesClientServer.cxx
+  vtkOpenGLRenderWindowClientServer.cxx
+  vtkOpenGLRendererClientServer.cxx
+  vtkOpenGLSphereMapperClientServer.cxx
+  vtkOpenGLStickMapperClientServer.cxx
+  vtkOpenGLTextActorClientServer.cxx
+  vtkOpenGLTextActor3DClientServer.cxx
+  vtkOpenGLTextMapperClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkOpenGLTextureClientServer.cxx
+  vtkOpenGLVertexBufferObjectGroupClientServer.cxx
+  vtkOverlayPassClientServer.cxx
+  vtkPointFillPassClientServer.cxx
+  vtkRenderPassCollectionClientServer.cxx
+  vtkRenderStepsPassClientServer.cxx
+  vtkSSAAPassClientServer.cxx
+  vtkSequencePassClientServer.cxx
+  vtkShaderClientServer.cxx
+  vtkShaderProgramClientServer.cxx
+  vtkShadowMapBakerPassClientServer.cxx
+  vtkShadowMapPassClientServer.cxx
+  vtkSobelGradientMagnitudePassClientServer.cxx
+  vtkTranslucentPassClientServer.cxx
+  vtkValuePassClientServer.cxx
+  vtkVolumetricPassClientServer.cxx
+  vtkDataTransferHelperClientServer.cxx
+  vtkDummyGPUInfoListClientServer.cxx
+  vtkWin32RenderWindowInteractorClientServer.cxx
+  vtkWin32OpenGLRenderWindowClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkRenderingOpenGL2CSInit.cxx
+  Generating Code...
+  vtkRenderingOpenGL2CS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingOpenGL2CS-pv5.3.lib

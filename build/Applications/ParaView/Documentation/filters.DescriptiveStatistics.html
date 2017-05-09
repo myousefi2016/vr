@@ -1,0 +1,146 @@
+
+<html>
+    <head>
+        <title>Descriptive Statistics</title>
+        <meta name="proxy_name" contents="filters.DescriptiveStatistics"/>
+        <meta name="filename" contents="filters.DescriptiveStatistics.html"/>
+    </head>
+    <body>
+        <h2>Descriptive Statistics (DescriptiveStatistics)</h2>
+        <i>
+            <p>Compute a statistical model of a dataset and/or assess the dataset with a statistical model.</p>
+        </i>
+        <div class="description">
+      This filter either computes a statistical model of a dataset or takes
+      such a model as its second input. Then, the model (however it is
+      obtained) may optionally be used to assess the input dataset.&lt;p&gt;
+      This filter computes the min, max, mean, raw moments M2 through M4,
+      standard deviation, skewness, and kurtosis for each array you
+      select.&lt;p&gt; The model is simply a univariate Gaussian distribution
+      with the mean and standard deviation provided. Data is assessed using
+      this model by detrending the data (i.e., subtracting the mean) and then
+      dividing by the standard deviation. Thus the assessment is an array whose
+      entries are the number of standard deviations from the mean that each
+      input point lies.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>The input to the filter. Arrays from this dataset will
+        be used for computing statistics and/or assessed by a statistical
+        model.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                            <li>vtkStructuredGrid</li>
+                            <li>vtkPolyData</li>
+                            <li>vtkUnstructuredGrid</li>
+                            <li>vtkTable</li>
+                            <li>vtkGraph</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array ()
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>ModelInput</th>
+                <td>A previously-calculated model with which to assess a
+        separate dataset. This input is optional.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkTable</li>
+                            <li>vtkMultiBlockDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>AttributeMode</th>
+                <td>Specify which type of field data the arrays will be
+        drawn from.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Variables of Interest</th>
+                <td>Choose arrays whose entries will be used to form
+        observations for statistical analysis.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Task</th>
+                <td>Specify the task to be performed: modeling and/or
+        assessment. &lt;ol&gt; &lt;li&gt; "Detailed model of input data,"
+        creates a set of output tables containing a calculated statistical
+        model of the &lt;b&gt;entire&lt;/b&gt; input dataset;&lt;/li&gt;
+        &lt;li&gt; "Model a subset of the data," creates an output table (or
+        tables) summarizing a &lt;b&gt;randomly-chosen subset&lt;/b&gt; of the
+        input dataset;&lt;/li&gt; &lt;li&gt; "Assess the data with a model,"
+        adds attributes to the first input dataset using a model provided on
+        the second input port; and&lt;/li&gt; &lt;li&gt; "Model and assess the
+        same data," is really just operations 2 and 3 above applied to the same
+        input dataset. The model is first trained using a fraction of the input
+        data and then the entire dataset is assessed using that
+        model.&lt;/li&gt; &lt;/ol&gt; When the task includes creating a model
+        (i.e., tasks 2, and 4), you may adjust the fraction of the input
+        dataset used for training. You should avoid using a large fraction of
+        the input data for training as you will then not be able to detect
+        overfitting. The &lt;i&gt;Training fraction&lt;/i&gt; setting will be
+        ignored for tasks 1 and 3.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Detailed model of input data (0)</li>
+                            <li>Model a subset of the data (1)</li>
+                            <li>Assess the data with a model (2)</li>
+                            <li>Model and assess the same data (3)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>TrainingFraction</th>
+                <td>Specify the fraction of values from the input dataset to
+        be used for model fitting. The exact set of values is chosen at random
+        from the dataset.</td>
+                <td>0.1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Deviations should be</th>
+                <td>Should the assessed values be signed deviations or
+        unsigned?</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Unsigned (0)</li>
+                            <li>Signed (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

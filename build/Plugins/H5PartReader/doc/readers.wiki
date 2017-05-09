@@ -1,0 +1,97 @@
+
+==H5PartReader==
+
+
+Reader for H5Part (HDF5) particle files.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''FileName''' (FileName)
+|
+
+|
+
+|
+The value(s) must be a filename (or filenames).
+|-
+|'''MaskOutOfTimeRangeOutput''' (MaskOutOfTimeRangeOutput)
+|
+
+|
+0
+|
+Accepts boolean values (0 or 1).
+|-
+|'''TimestepValues''' (TimestepValues)
+|
+
+|
+
+|
+
+|-
+|'''Xarray''' (Xarray)
+|
+
+This property lists which point array to use for coordinates.
+
+|
+
+|
+The value(s) can be one of the following:
+|-
+|'''Yarray''' (Yarray)
+|
+
+This property lists which point array to use for coordinates.
+
+|
+
+|
+The value(s) can be one of the following:
+|-
+|'''Zarray''' (Zarray)
+|
+
+This property lists which point array to use for coordinates.
+
+|
+
+|
+The value(s) can be one of the following:
+|-
+|'''PointArrayInfo''' (PointArrayInfo)
+|
+
+|
+
+|
+
+|-
+|'''Point Arrays''' (PointArrayStatus)
+|
+
+This property lists which point-centered arrays to read.
+
+|
+
+|
+The list of array names is provided by the reader.
+|-
+|'''GenerateVertexCells''' (GenerateVertexCells)
+|
+
+|
+1
+|
+Accepts boolean values (0 or 1).
+
+|}
+

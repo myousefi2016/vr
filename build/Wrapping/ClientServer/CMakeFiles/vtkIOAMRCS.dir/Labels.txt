@@ -1,0 +1,19 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMRDataSetCacheClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMRBaseParticlesReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMRBaseReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMREnzoParticlesReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMREnzoReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMRFlashParticlesReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAMRFlashReaderClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIOAMRCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMRDataSetCache.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMRBaseParticlesReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMRBaseReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMREnzoParticlesReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMREnzoReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMRFlashParticlesReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/AMR/vtkAMRFlashReader.h

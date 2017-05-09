@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title>Clean to Grid</title>
+        <meta name="proxy_name" contents="filters.CleanUnstructuredGrid"/>
+        <meta name="filename" contents="filters.CleanUnstructuredGrid.html"/>
+    </head>
+    <body>
+        <h2>Clean to Grid (CleanUnstructuredGrid)</h2>
+        <i>
+            <p>This filter merges points and converts the data set to unstructured grid.</p>
+        </i>
+        <div class="description">The Clean to Grid filter merges
+                     points that are exactly coincident. It also converts the
+                     data set to an unstructured grid. You may wish to do this
+                     if you want to apply a filter to your data set that is
+                     available for unstructured grids but not for the initial
+                     type of your data set (e.g., applying warp vector to
+                     volumetric data). The Clean to Grid filter operates on any
+                     type of data set.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Clean to Grid
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

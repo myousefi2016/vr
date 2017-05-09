@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+        <title>STL Reader</title>
+        <meta name="proxy_name" contents="internal_sources.stlreadercore"/>
+        <meta name="filename" contents="internal_sources.stlreadercore.html"/>
+    </head>
+    <body>
+        <h2>STL Reader (stlreadercore)</h2>
+        <i>
+            <p>Reads ASCII or binary stereo lithography (STL) files.</p>
+        </i>
+        <div class="description">The STL reader reads ASCII or
+                     binary stereo lithography (STL) files. The expected file
+                     extension is .stl. The output of this reader is a
+                     polygonal dataset.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the file name for the STL
+        reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ScalarTags</th>
+                <td>When set to true, the reader will include cell data
+        describing which solid a cell belongs to.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

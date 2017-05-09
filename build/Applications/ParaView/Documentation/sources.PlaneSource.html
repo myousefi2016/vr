@@ -1,0 +1,74 @@
+
+<html>
+    <head>
+        <title>Plane</title>
+        <meta name="proxy_name" contents="sources.PlaneSource"/>
+        <meta name="filename" contents="sources.PlaneSource.html"/>
+    </head>
+    <body>
+        <h2>Plane (PlaneSource)</h2>
+        <i>
+            <p>Create a parallelogram given an origin and two points. The resolution indicates the number of division along each axis of the plane.</p>
+        </i>
+        <div class="description">
+                     The Plane source can be used to add a polygonal
+                     parallelogram to the 3D scene. Unlike the sphere, cone,
+                     and cylinder sources, the parallelogram is exactly
+                     represented at the lowest resolution, but higher
+                     resolutions may be desired if this plane is to be used as
+                     an input to a filter. The output of the Plane source is
+                     polygonal data.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Origin</th>
+                <td>This property specifies the 3D coordinate of the origin
+        (one corner) of the plane.</td>
+                <td>-0.5 -0.5 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Point1</th>
+                <td>This property specifies the 3D coordinate a second
+        corner of the parallelogram. The line connecting this point and that
+        specified by the Origin property define one edge of the parallelogram
+        (its X axis).</td>
+                <td>0.5 -0.5 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Point2</th>
+                <td>This property specifies the 3D coordinate a third corner
+        of the parallelogram. The line connecting this point and that specified
+        by the Origin property define a second edge of the parallelogram (its Y
+        axis).</td>
+                <td>-0.5 0.5 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>XResolution</th>
+                <td>This property specifies the number of divisions along
+        the X axis of the parallelogram.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>YResolution</th>
+                <td>This property specifies the number of divisions along
+        the Y axis of the parallelogram.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

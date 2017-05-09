@@ -1,0 +1,39 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/protobuf/vtkprotobuf/src/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/protobuf/vtkprotobuf/src/CMakeFiles/generate.stamp is up-to-date.
+cl : Command line warning D9025: overriding '/W1' with '/w'
+  common.cc
+  once.cc
+  hash.cc
+  extension_set.cc
+  generated_message_util.cc
+  message_lite.cc
+  repeated_field.cc
+  wire_format_lite.cc
+  coded_stream.cc
+  zero_copy_stream.cc
+  zero_copy_stream_impl_lite.cc
+  strutil.cc
+  substitute.cc
+  structurally_valid.cc
+  descriptor.cc
+  descriptor.pb.cc
+  descriptor_database.cc
+  dynamic_message.cc
+  extension_set_heavy.cc
+  generated_message_reflection.cc
+  Generating Code...
+  Compiling...
+  message.cc
+  reflection_ops.cc
+  service.cc
+  text_format.cc
+  unknown_field_set.cc
+  wire_format.cc
+  printer.cc
+  tokenizer.cc
+  zero_copy_stream_impl.cc
+  importer.cc
+  parser.cc
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/protobuf.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/protobuf.exp
+  protobuf.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\protobuf.dll

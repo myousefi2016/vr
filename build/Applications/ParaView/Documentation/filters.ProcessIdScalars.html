@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+        <title>Process Id Scalars</title>
+        <meta name="proxy_name" contents="filters.ProcessIdScalars"/>
+        <meta name="filename" contents="filters.ProcessIdScalars.html"/>
+    </head>
+    <body>
+        <h2>Process Id Scalars (ProcessIdScalars)</h2>
+        <i>
+            <p>This filter uses colors to show how data is partitioned across processes.</p>
+        </i>
+        <div class="description">The
+                     Process Id Scalars filter assigns a unique scalar value to
+                     each piece of the input according to which processor it
+                     resides on. This filter operates on any type of data when
+                     ParaView is run in parallel. It is useful for determining
+                     whether your data is load-balanced across the processors
+                     being used. The output data set type is the same as that
+                     of the input.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Process Id
+        Scalars filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>RandomMode</th>
+                <td>The value of this property determines whether to use
+        random id values for the various pieces. If set to 1, the unique value
+        per piece will be chosen at random; otherwise the unique value will
+        match the id of the process.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

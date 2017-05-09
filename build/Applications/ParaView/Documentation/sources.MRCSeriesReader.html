@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <title>MRC Series Reader</title>
+        <meta name="proxy_name" contents="sources.MRCSeriesReader"/>
+        <meta name="filename" contents="sources.MRCSeriesReader.html"/>
+    </head>
+    <body>
+        <h2>MRC Series Reader (MRCSeriesReader)</h2>
+        <i>
+            <p>Reads a series of MRC files into an time sequence of image datas.</p>
+        </i>
+        <div class="description">The MRC series
+                     reader reads MRC files. The output is a time sequence of
+                     uniform rectilinear (image/volume) dataset. The default
+                     file extension is .mrc but .ali, .st and .rec are also
+                     recognized.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileNames</th>
+                <td>The list of files to be read by the reader. If more than
+        one file is specified, the reader will switch to file series mode in
+        which it will pretend that it can support time and provide one file per
+        time step.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

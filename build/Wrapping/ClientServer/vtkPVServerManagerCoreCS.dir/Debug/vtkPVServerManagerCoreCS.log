@@ -1,0 +1,215 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkLiveInsituLinkClientServer.cxx
+  CS Wrapping - generating vtkSMArrayListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMArrayRangeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMArraySelectionDomainClientServer.cxx
+  CS Wrapping - generating vtkSMBooleanDomainClientServer.cxx
+  CS Wrapping - generating vtkSMBoundsDomainClientServer.cxx
+  CS Wrapping - generating vtkSMCollaborationManagerClientServer.cxx
+  CS Wrapping - generating vtkSMCompositeTreeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMCompoundProxyDefinitionLoaderClientServer.cxx
+  CS Wrapping - generating vtkSMCompoundSourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSMCompoundSourceProxyDefinitionBuilderClientServer.cxx
+  CS Wrapping - generating vtkSMCoreUtilitiesClientServer.cxx
+  CS Wrapping - generating vtkSMDataSourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSMDataTypeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMDeserializerClientServer.cxx
+  CS Wrapping - generating vtkSMDeserializerProtobufClientServer.cxx
+  CS Wrapping - generating vtkSMDeserializerXMLCacheClientServer.cxx
+  CS Wrapping - generating vtkSMDeserializerXMLClientServer.cxx
+  CS Wrapping - generating vtkSMDimensionsDomainClientServer.cxx
+  CS Wrapping - generating vtkSMDocumentationClientServer.cxx
+  CS Wrapping - generating vtkSMDomainClientServer.cxx
+  CS Wrapping - generating vtkSMDomainIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMDoubleMapPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMDoubleMapPropertyIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMDoubleRangeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMDoubleVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMEnumerationDomainClientServer.cxx
+  CS Wrapping - generating vtkSMExtentDomainClientServer.cxx
+  CS Wrapping - generating vtkSMFieldDataDomainClientServer.cxx
+  CS Wrapping - generating vtkSMFileListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMInputFileNameDomainClientServer.cxx
+  CS Wrapping - generating vtkSMFixedTypeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMGlobalPropertiesLinkUndoElementClientServer.cxx
+  CS Wrapping - generating vtkSMGlobalPropertiesProxyClientServer.cxx
+  CS Wrapping - generating vtkSMIdTypeVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMIndexSelectionDomainClientServer.cxx
+  CS Wrapping - generating vtkSMInputArrayDomainClientServer.cxx
+  CS Wrapping - generating vtkSMInputPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMInsituStateLoaderClientServer.cxx
+  CS Wrapping - generating vtkSMIntRangeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMIntVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMLinkClientServer.cxx
+  CS Wrapping - generating vtkSMLiveInsituLinkProxyClientServer.cxx
+  CS Wrapping - generating vtkSMMapPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMNamedPropertyIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMNumberOfComponentsDomainClientServer.cxx
+  CS Wrapping - generating vtkSMObjectClientServer.cxx
+  CS Wrapping - generating vtkSMOrderedPropertyIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMOutputPortClientServer.cxx
+  CS Wrapping - generating vtkSMParaViewPipelineControllerClientServer.cxx
+  CS Wrapping - generating vtkSMPWriterProxyClientServer.cxx
+  CS Wrapping - generating vtkSMPipelineStateClientServer.cxx
+  CS Wrapping - generating vtkSMPluginLoaderProxyClientServer.cxx
+  CS Wrapping - generating vtkSMPluginManagerClientServer.cxx
+  CS Wrapping - generating vtkSMPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMPropertyGroupClientServer.cxx
+  CS Wrapping - generating vtkSMPropertyIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMNullProxyClientServer.cxx
+  CS Wrapping - generating vtkSMPropertyLinkClientServer.cxx
+  CS Wrapping - generating vtkSMProxyClientServer.cxx
+  CS Wrapping - generating vtkSMProxyDefinitionManagerClientServer.cxx
+  CS Wrapping - generating vtkSMProxyGroupDomainClientServer.cxx
+  CS Wrapping - generating vtkSMProxyInitializationHelperClientServer.cxx
+  CS Wrapping - generating vtkSMProxyIteratorClientServer.cxx
+  CS Wrapping - generating vtkSMProxyLinkClientServer.cxx
+  CS Wrapping - generating vtkSMProxyListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMProxyLocatorClientServer.cxx
+  CS Wrapping - generating vtkSMProxyManagerClientServer.cxx
+  CS Wrapping - generating vtkSMProxyPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMProxySelectionModelClientServer.cxx
+  CS Wrapping - generating vtkSMReaderFactoryClientServer.cxx
+  CS Wrapping - generating vtkSMRemoteObjectClientServer.cxx
+  CS Wrapping - generating vtkSMRemoteObjectUpdateUndoElementClientServer.cxx
+  CS Wrapping - generating vtkSMSILDomainClientServer.cxx
+  CS Wrapping - generating vtkSMSILModelClientServer.cxx
+  CS Wrapping - generating vtkSMSelectionLinkClientServer.cxx
+  CS Wrapping - generating vtkSMSelfGeneratingSourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSMServerStateLocatorClientServer.cxx
+  CS Wrapping - generating vtkSMSessionClientServer.cxx
+  CS Wrapping - generating vtkSMSessionClientClientServer.cxx
+  CS Wrapping - generating vtkSMSessionObjectClientServer.cxx
+  CS Wrapping - generating vtkSMSessionProxyManagerClientServer.cxx
+  CS Wrapping - generating vtkSMSettingsClientServer.cxx
+  CS Wrapping - generating vtkSMSettingsProxyClientServer.cxx
+  CS Wrapping - generating vtkSMSourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSMStateLoaderClientServer.cxx
+  CS Wrapping - generating vtkSMStateLocatorClientServer.cxx
+  CS Wrapping - generating vtkSMStateVersionControllerClientServer.cxx
+  CS Wrapping - generating vtkSMStringListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMStringVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMTimeKeeperClientServer.cxx
+  CS Wrapping - generating vtkSMTimeKeeperProxyClientServer.cxx
+  CS Wrapping - generating vtkSMTimeStepIndexDomainClientServer.cxx
+  CS Wrapping - generating vtkSMTraceClientServer.cxx
+  CS Wrapping - generating vtkSMUndoElementClientServer.cxx
+  CS Wrapping - generating vtkSMUndoStackClientServer.cxx
+  CS Wrapping - generating vtkSMUndoStackBuilderClientServer.cxx
+  CS Wrapping - generating vtkSMVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMWriterFactoryClientServer.cxx
+  CS Wrapping - generating vtkSMWriterProxyClientServer.cxx
+  vtkLiveInsituLinkClientServer.cxx
+  vtkSMArrayListDomainClientServer.cxx
+  vtkSMArrayRangeDomainClientServer.cxx
+  vtkSMArraySelectionDomainClientServer.cxx
+  vtkSMBooleanDomainClientServer.cxx
+  vtkSMBoundsDomainClientServer.cxx
+  vtkSMCollaborationManagerClientServer.cxx
+  vtkSMCompositeTreeDomainClientServer.cxx
+  vtkSMCompoundProxyDefinitionLoaderClientServer.cxx
+  vtkSMCompoundSourceProxyClientServer.cxx
+  vtkSMCompoundSourceProxyDefinitionBuilderClientServer.cxx
+  vtkSMCoreUtilitiesClientServer.cxx
+  vtkSMDataSourceProxyClientServer.cxx
+  vtkSMDataTypeDomainClientServer.cxx
+  vtkSMDeserializerClientServer.cxx
+  vtkSMDeserializerProtobufClientServer.cxx
+  vtkSMDeserializerXMLCacheClientServer.cxx
+  vtkSMDeserializerXMLClientServer.cxx
+  vtkSMDimensionsDomainClientServer.cxx
+  vtkSMDocumentationClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSMDomainClientServer.cxx
+  vtkSMDomainIteratorClientServer.cxx
+  vtkSMDoubleMapPropertyClientServer.cxx
+  vtkSMDoubleMapPropertyIteratorClientServer.cxx
+  vtkSMDoubleRangeDomainClientServer.cxx
+  vtkSMDoubleVectorPropertyClientServer.cxx
+  vtkSMEnumerationDomainClientServer.cxx
+  vtkSMExtentDomainClientServer.cxx
+  vtkSMFieldDataDomainClientServer.cxx
+  vtkSMFileListDomainClientServer.cxx
+  vtkSMInputFileNameDomainClientServer.cxx
+  vtkSMFixedTypeDomainClientServer.cxx
+  vtkSMGlobalPropertiesLinkUndoElementClientServer.cxx
+  vtkSMGlobalPropertiesProxyClientServer.cxx
+  vtkSMIdTypeVectorPropertyClientServer.cxx
+  vtkSMIndexSelectionDomainClientServer.cxx
+  vtkSMInputArrayDomainClientServer.cxx
+  vtkSMInputPropertyClientServer.cxx
+  vtkSMInsituStateLoaderClientServer.cxx
+  vtkSMIntRangeDomainClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSMIntVectorPropertyClientServer.cxx
+  vtkSMLinkClientServer.cxx
+  vtkSMLiveInsituLinkProxyClientServer.cxx
+  vtkSMMapPropertyClientServer.cxx
+  vtkSMNamedPropertyIteratorClientServer.cxx
+  vtkSMNumberOfComponentsDomainClientServer.cxx
+  vtkSMObjectClientServer.cxx
+  vtkSMOrderedPropertyIteratorClientServer.cxx
+  vtkSMOutputPortClientServer.cxx
+  vtkSMParaViewPipelineControllerClientServer.cxx
+  vtkSMPWriterProxyClientServer.cxx
+  vtkSMPipelineStateClientServer.cxx
+  vtkSMPluginLoaderProxyClientServer.cxx
+  vtkSMPluginManagerClientServer.cxx
+  vtkSMPropertyClientServer.cxx
+  vtkSMPropertyGroupClientServer.cxx
+  vtkSMPropertyIteratorClientServer.cxx
+  vtkSMNullProxyClientServer.cxx
+  vtkSMPropertyLinkClientServer.cxx
+  vtkSMProxyClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSMProxyDefinitionManagerClientServer.cxx
+  vtkSMProxyGroupDomainClientServer.cxx
+  vtkSMProxyInitializationHelperClientServer.cxx
+  vtkSMProxyIteratorClientServer.cxx
+  vtkSMProxyLinkClientServer.cxx
+  vtkSMProxyListDomainClientServer.cxx
+  vtkSMProxyLocatorClientServer.cxx
+  vtkSMProxyManagerClientServer.cxx
+  vtkSMProxyPropertyClientServer.cxx
+  vtkSMProxySelectionModelClientServer.cxx
+  vtkSMReaderFactoryClientServer.cxx
+  vtkSMRemoteObjectClientServer.cxx
+  vtkSMRemoteObjectUpdateUndoElementClientServer.cxx
+  vtkSMSILDomainClientServer.cxx
+  vtkSMSILModelClientServer.cxx
+  vtkSMSelectionLinkClientServer.cxx
+  vtkSMSelfGeneratingSourceProxyClientServer.cxx
+  vtkSMServerStateLocatorClientServer.cxx
+  vtkSMSessionClientServer.cxx
+  vtkSMSessionClientClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSMSessionObjectClientServer.cxx
+  vtkSMSessionProxyManagerClientServer.cxx
+  vtkSMSettingsClientServer.cxx
+  vtkSMSettingsProxyClientServer.cxx
+  vtkSMSourceProxyClientServer.cxx
+  vtkSMStateLoaderClientServer.cxx
+  vtkSMStateLocatorClientServer.cxx
+  vtkSMStateVersionControllerClientServer.cxx
+  vtkSMStringListDomainClientServer.cxx
+  vtkSMStringVectorPropertyClientServer.cxx
+  vtkSMTimeKeeperClientServer.cxx
+  vtkSMTimeKeeperProxyClientServer.cxx
+  vtkSMTimeStepIndexDomainClientServer.cxx
+  vtkSMTraceClientServer.cxx
+  vtkSMUndoElementClientServer.cxx
+  vtkSMUndoStackClientServer.cxx
+  vtkSMUndoStackBuilderClientServer.cxx
+  vtkSMVectorPropertyClientServer.cxx
+  vtkSMWriterFactoryClientServer.cxx
+  vtkSMWriterProxyClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVServerManagerCoreCSInit.cxx
+  Generating Code...
+  vtkPVServerManagerCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVServerManagerCoreCS-pv5.3.lib

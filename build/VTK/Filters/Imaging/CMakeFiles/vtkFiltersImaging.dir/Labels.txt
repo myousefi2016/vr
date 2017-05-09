@@ -1,0 +1,11 @@
+# Target labels
+ vtkFiltersImaging
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkPairwiseExtractHistogram2D.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkExtractHistogram2D.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkComputeHistogram2DOutliers.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkPairwiseExtractHistogram2D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkExtractHistogram2D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/vtkComputeHistogram2DOutliers.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/Imaging/vtkFiltersImagingModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Imaging/CMakeLists.txt

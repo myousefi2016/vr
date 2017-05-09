@@ -1,0 +1,53 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Charts/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Charts/Core/CMakeFiles/generate.stamp is up-to-date.
+  vtkAxis.cxx
+  vtkAxisExtended.cxx
+  vtkCategoryLegend.cxx
+  vtkChart.cxx
+  vtkChartBox.cxx
+  vtkChartHistogram2D.cxx
+  vtkChartLegend.cxx
+  vtkChartMatrix.cxx
+  vtkChartParallelCoordinates.cxx
+  vtkChartPie.cxx
+  vtkChartXY.cxx
+  vtkChartXYZ.cxx
+  vtkColorLegend.cxx
+  vtkColorTransferControlPointsItem.cxx
+  vtkColorTransferFunctionItem.cxx
+  vtkCompositeControlPointsItem.cxx
+  vtkCompositeTransferFunctionItem.cxx
+  vtkContextArea.cxx
+  vtkContextPolygon.cxx
+  vtkControlPointsItem.cxx
+  Generating Code...
+  Compiling...
+  vtkInteractiveArea.cxx
+  vtkLookupTableItem.cxx
+  vtkPiecewiseControlPointsItem.cxx
+  vtkPiecewiseFunctionItem.cxx
+  vtkPiecewisePointHandleItem.cxx
+  vtkPlot.cxx
+  vtkPlot3D.cxx
+  vtkPlotArea.cxx
+  vtkPlotBag.cxx
+  vtkPlotBar.cxx
+  vtkPlotBox.cxx
+  vtkPlotFunctionalBag.cxx
+  vtkPlotGrid.cxx
+  vtkPlotHistogram2D.cxx
+  vtkPlotLine.cxx
+  vtkPlotLine3D.cxx
+  vtkPlotParallelCoordinates.cxx
+  vtkPlotPie.cxx
+  vtkPlotPoints.cxx
+  vtkPlotPoints3D.cxx
+  Generating Code...
+  Compiling...
+  vtkPlotStacked.cxx
+  vtkPlotSurface.cxx
+  vtkScalarsToColorsItem.cxx
+  vtkScatterPlotMatrix.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkChartsCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkChartsCore-pv5.3.exp
+  vtkChartsCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkChartsCore-pv5.3.dll

@@ -1,0 +1,15 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkDistributedDataFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPExtractGridClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPExtractRectilinearGridClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPExtractVOIClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredImplicitConnectivityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFiltersParallelMPICSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/ParallelMPI/vtkDistributedDataFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/ParallelMPI/vtkPExtractGrid.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/ParallelMPI/vtkPExtractRectilinearGrid.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/ParallelMPI/vtkPExtractVOI.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/ParallelMPI/vtkStructuredImplicitConnectivity.h

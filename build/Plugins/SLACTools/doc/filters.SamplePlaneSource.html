@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Sample Plane Source</title>
+        <meta name="proxy_name" contents="filters.SamplePlaneSource"/>
+        <meta name="filename" contents="filters.SamplePlaneSource.html"/>
+    </head>
+    <body>
+        <h2>Sample Plane Source (SamplePlaneSource)</h2>
+        <i>
+            <p>Internal filter for creating planes with even samping.</p>
+        </i>
+        <div class="description">
+        Internal for creating planes to use for probing.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>
+          The input of this filter simply provides the bounds that will be used
+          to set the size of the plane.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>
+          The center of the geometry created.
+        </td>
+                <td>0.0 0.0 0.0<span/>
+                </td>
+                <td>
+                    <p>
+      The value must lie within the bounding box of the dataset.
+      
+        It will default to the mid in each dimension.
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Normal</th>
+                <td>
+          The normal to the plane.
+        </td>
+                <td>0.0 0.0 1.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Resolution</th>
+                <td>
+          The number of probe samples to have in each direction.
+        </td>
+                <td>100<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

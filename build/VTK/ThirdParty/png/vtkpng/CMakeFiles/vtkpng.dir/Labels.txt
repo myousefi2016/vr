@@ -1,0 +1,21 @@
+# Target labels
+ vtkpng
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngget.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngrio.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngwrite.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/png.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngmem.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngrtran.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngtrans.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngwtran.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngerror.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngpread.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngrutil.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngvcrd.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngwutil.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pnggccrd.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngread.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngset.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/pngwio.c
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/CMakeLists.txt

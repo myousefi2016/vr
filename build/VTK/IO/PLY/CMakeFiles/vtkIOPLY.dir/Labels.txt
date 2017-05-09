@@ -1,0 +1,11 @@
+# Target labels
+ vtkIOPLY
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLY.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLYReader.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLYWriter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLY.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLYReader.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/vtkPLYWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/PLY/vtkIOPLYModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/PLY/CMakeLists.txt

@@ -1,0 +1,32 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/ComputationalGeometry/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/ComputationalGeometry/CMakeFiles/generate.stamp is up-to-date.
+  vtkCardinalSpline.cxx
+  vtkKochanekSpline.cxx
+  vtkParametricBoy.cxx
+  vtkParametricConicSpiral.cxx
+  vtkParametricCrossCap.cxx
+  vtkParametricDini.cxx
+  vtkParametricEllipsoid.cxx
+  vtkParametricEnneper.cxx
+  vtkParametricFigure8Klein.cxx
+  vtkParametricFunction.cxx
+  vtkParametricKlein.cxx
+  vtkParametricMobius.cxx
+  vtkParametricRandomHills.cxx
+  vtkParametricRoman.cxx
+  vtkParametricSpline.cxx
+  vtkParametricSuperEllipsoid.cxx
+  vtkParametricSuperToroid.cxx
+  vtkParametricTorus.cxx
+  vtkParametricKuen.cxx
+  vtkParametricPseudosphere.cxx
+  Generating Code...
+  Compiling...
+  vtkParametricBohemianDome.cxx
+  vtkParametricHenneberg.cxx
+  vtkParametricCatalanMinimal.cxx
+  vtkParametricBour.cxx
+  vtkParametricPluckerConoid.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonComputationalGeometry-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonComputationalGeometry-pv5.3.exp
+  vtkCommonComputationalGeometry.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkCommonComputationalGeometry-pv5.3.dll

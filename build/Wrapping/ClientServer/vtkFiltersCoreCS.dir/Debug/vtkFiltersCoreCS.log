@@ -1,0 +1,179 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAppendFilterClientServer.cxx
+  CS Wrapping - generating vtkAppendPolyDataClientServer.cxx
+  CS Wrapping - generating vtkAppendSelectionClientServer.cxx
+  CS Wrapping - generating vtkArrayCalculatorClientServer.cxx
+  CS Wrapping - generating vtkAssignAttributeClientServer.cxx
+  CS Wrapping - generating vtkAttributeDataToFieldDataFilterClientServer.cxx
+  CS Wrapping - generating vtkBinCellDataFilterClientServer.cxx
+  CS Wrapping - generating vtkCellDataToPointDataClientServer.cxx
+  CS Wrapping - generating vtkCleanPolyDataClientServer.cxx
+  CS Wrapping - generating vtkClipPolyDataClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataProbeFilterClientServer.cxx
+  CS Wrapping - generating vtkConnectivityFilterClientServer.cxx
+  CS Wrapping - generating vtkContourFilterClientServer.cxx
+  CS Wrapping - generating vtkContourGridClientServer.cxx
+  CS Wrapping - generating vtkDataObjectGeneratorClientServer.cxx
+  CS Wrapping - generating vtkDataObjectToDataSetFilterClientServer.cxx
+  CS Wrapping - generating vtkDataSetEdgeSubdivisionCriterionClientServer.cxx
+  CS Wrapping - generating vtkDataSetToDataObjectFilterClientServer.cxx
+  CS Wrapping - generating vtkDecimatePolylineFilterClientServer.cxx
+  CS Wrapping - generating vtkDecimateProClientServer.cxx
+  CS Wrapping - generating vtkDelaunay2DClientServer.cxx
+  CS Wrapping - generating vtkDelaunay3DClientServer.cxx
+  CS Wrapping - generating vtkElevationFilterClientServer.cxx
+  CS Wrapping - generating vtkExecutionTimerClientServer.cxx
+  CS Wrapping - generating vtkFeatureEdgesClientServer.cxx
+  CS Wrapping - generating vtkFieldDataToAttributeDataFilterClientServer.cxx
+  CS Wrapping - generating vtkFlyingEdges2DClientServer.cxx
+  CS Wrapping - generating vtkFlyingEdges3DClientServer.cxx
+  CS Wrapping - generating vtkFlyingEdgesPlaneCutterClientServer.cxx
+  CS Wrapping - generating vtkGlyph2DClientServer.cxx
+  CS Wrapping - generating vtkGlyph3DClientServer.cxx
+  CS Wrapping - generating vtkHedgeHogClientServer.cxx
+  CS Wrapping - generating vtkHullClientServer.cxx
+  CS Wrapping - generating vtkIdFilterClientServer.cxx
+  CS Wrapping - generating vtkMarchingCubesClientServer.cxx
+  CS Wrapping - generating vtkMarchingSquaresClientServer.cxx
+  CS Wrapping - generating vtkMaskFieldsClientServer.cxx
+  CS Wrapping - generating vtkMaskPointsClientServer.cxx
+  CS Wrapping - generating vtkMaskPolyDataClientServer.cxx
+  CS Wrapping - generating vtkMassPropertiesClientServer.cxx
+  CS Wrapping - generating vtkMergeDataObjectFilterClientServer.cxx
+  CS Wrapping - generating vtkMergeFieldsClientServer.cxx
+  CS Wrapping - generating vtkMergeFilterClientServer.cxx
+  CS Wrapping - generating vtkPointDataToCellDataClientServer.cxx
+  CS Wrapping - generating vtkPolyDataConnectivityFilterClientServer.cxx
+  CS Wrapping - generating vtkPolyDataNormalsClientServer.cxx
+  CS Wrapping - generating vtkProbeFilterClientServer.cxx
+  CS Wrapping - generating vtkQuadricClusteringClientServer.cxx
+  CS Wrapping - generating vtkQuadricDecimationClientServer.cxx
+  CS Wrapping - generating vtkRearrangeFieldsClientServer.cxx
+  CS Wrapping - generating vtkResampleToImageClientServer.cxx
+  CS Wrapping - generating vtkResampleWithDataSetClientServer.cxx
+  CS Wrapping - generating vtkReverseSenseClientServer.cxx
+  CS Wrapping - generating vtkSimpleElevationFilterClientServer.cxx
+  CS Wrapping - generating vtkSmoothPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkStripperClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridOutlineFilterClientServer.cxx
+  CS Wrapping - generating vtkSynchronizedTemplates2DClientServer.cxx
+  CS Wrapping - generating vtkSynchronizedTemplates3DClientServer.cxx
+  CS Wrapping - generating vtkSynchronizedTemplatesCutter3DClientServer.cxx
+  CS Wrapping - generating vtkTensorGlyphClientServer.cxx
+  CS Wrapping - generating vtkThresholdClientServer.cxx
+  CS Wrapping - generating vtkThresholdPointsClientServer.cxx
+  CS Wrapping - generating vtkTransposeTableClientServer.cxx
+  CS Wrapping - generating vtkTriangleFilterClientServer.cxx
+  CS Wrapping - generating vtkTriangleMeshPointNormalsClientServer.cxx
+  CS Wrapping - generating vtkTubeFilterClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridQuadricDecimationClientServer.cxx
+  CS Wrapping - generating vtkVectorDotClientServer.cxx
+  CS Wrapping - generating vtkVectorNormClientServer.cxx
+  CS Wrapping - generating vtkWindowedSincPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkCutterClientServer.cxx
+  CS Wrapping - generating vtkCompositeCutterClientServer.cxx
+  CS Wrapping - generating vtkGridSynchronizedTemplates3DClientServer.cxx
+  CS Wrapping - generating vtkRectilinearSynchronizedTemplatesClientServer.cxx
+  CS Wrapping - generating vtkEdgeSubdivisionCriterionClientServer.cxx
+  CS Wrapping - generating vtkStreamingTessellatorClientServer.cxx
+  CS Wrapping - generating vtkImplicitPolyDataDistanceClientServer.cxx
+  CS Wrapping - generating vtkStreamerBaseClientServer.cxx
+  CS Wrapping - generating vtkCenterOfMassClientServer.cxx
+  CS Wrapping - generating vtkImageAppendClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridAppendClientServer.cxx
+  CS Wrapping - generating vtkAppendCompositeDataLeavesClientServer.cxx
+  vtkAppendFilterClientServer.cxx
+  vtkAppendPolyDataClientServer.cxx
+  vtkAppendSelectionClientServer.cxx
+  vtkArrayCalculatorClientServer.cxx
+  vtkAssignAttributeClientServer.cxx
+  vtkAttributeDataToFieldDataFilterClientServer.cxx
+  vtkBinCellDataFilterClientServer.cxx
+  vtkCellDataToPointDataClientServer.cxx
+  vtkCleanPolyDataClientServer.cxx
+  vtkClipPolyDataClientServer.cxx
+  vtkCompositeDataProbeFilterClientServer.cxx
+  vtkConnectivityFilterClientServer.cxx
+  vtkContourFilterClientServer.cxx
+  vtkContourGridClientServer.cxx
+  vtkDataObjectGeneratorClientServer.cxx
+  vtkDataObjectToDataSetFilterClientServer.cxx
+  vtkDataSetEdgeSubdivisionCriterionClientServer.cxx
+  vtkDataSetToDataObjectFilterClientServer.cxx
+  vtkDecimatePolylineFilterClientServer.cxx
+  vtkDecimateProClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkDelaunay2DClientServer.cxx
+  vtkDelaunay3DClientServer.cxx
+  vtkElevationFilterClientServer.cxx
+  vtkExecutionTimerClientServer.cxx
+  vtkFeatureEdgesClientServer.cxx
+  vtkFieldDataToAttributeDataFilterClientServer.cxx
+  vtkFlyingEdges2DClientServer.cxx
+  vtkFlyingEdges3DClientServer.cxx
+  vtkFlyingEdgesPlaneCutterClientServer.cxx
+  vtkGlyph2DClientServer.cxx
+  vtkGlyph3DClientServer.cxx
+  vtkHedgeHogClientServer.cxx
+  vtkHullClientServer.cxx
+  vtkIdFilterClientServer.cxx
+  vtkMarchingCubesClientServer.cxx
+  vtkMarchingSquaresClientServer.cxx
+  vtkMaskFieldsClientServer.cxx
+  vtkMaskPointsClientServer.cxx
+  vtkMaskPolyDataClientServer.cxx
+  vtkMassPropertiesClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkMergeDataObjectFilterClientServer.cxx
+  vtkMergeFieldsClientServer.cxx
+  vtkMergeFilterClientServer.cxx
+  vtkPointDataToCellDataClientServer.cxx
+  vtkPolyDataConnectivityFilterClientServer.cxx
+  vtkPolyDataNormalsClientServer.cxx
+  vtkProbeFilterClientServer.cxx
+  vtkQuadricClusteringClientServer.cxx
+  vtkQuadricDecimationClientServer.cxx
+  vtkRearrangeFieldsClientServer.cxx
+  vtkResampleToImageClientServer.cxx
+  vtkResampleWithDataSetClientServer.cxx
+  vtkReverseSenseClientServer.cxx
+  vtkSimpleElevationFilterClientServer.cxx
+  vtkSmoothPolyDataFilterClientServer.cxx
+  vtkStripperClientServer.cxx
+  vtkStructuredGridOutlineFilterClientServer.cxx
+  vtkSynchronizedTemplates2DClientServer.cxx
+  vtkSynchronizedTemplates3DClientServer.cxx
+  vtkSynchronizedTemplatesCutter3DClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTensorGlyphClientServer.cxx
+  vtkThresholdClientServer.cxx
+  vtkThresholdPointsClientServer.cxx
+  vtkTransposeTableClientServer.cxx
+  vtkTriangleFilterClientServer.cxx
+  vtkTriangleMeshPointNormalsClientServer.cxx
+  vtkTubeFilterClientServer.cxx
+  vtkUnstructuredGridQuadricDecimationClientServer.cxx
+  vtkVectorDotClientServer.cxx
+  vtkVectorNormClientServer.cxx
+  vtkWindowedSincPolyDataFilterClientServer.cxx
+  vtkCutterClientServer.cxx
+  vtkCompositeCutterClientServer.cxx
+  vtkGridSynchronizedTemplates3DClientServer.cxx
+  vtkRectilinearSynchronizedTemplatesClientServer.cxx
+  vtkEdgeSubdivisionCriterionClientServer.cxx
+  vtkStreamingTessellatorClientServer.cxx
+  vtkImplicitPolyDataDistanceClientServer.cxx
+  vtkStreamerBaseClientServer.cxx
+  vtkCenterOfMassClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageAppendClientServer.cxx
+  vtkStructuredGridAppendClientServer.cxx
+  vtkAppendCompositeDataLeavesClientServer.cxx
+  vtkFiltersCoreCSInit.cxx
+  Generating Code...
+  vtkFiltersCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersCoreCS-pv5.3.lib

@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Wrapping/Tools/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Wrapping/Tools/CMakeFiles/generate.stamp is up-to-date.
+  vtkParse.tab.c
+  vtkParseData.c
+  vtkParseExtras.c
+  vtkParseMangle.c
+  vtkParseMerge.c
+  vtkParseString.c
+  vtkParseHierarchy.c
+  vtkParsePreprocess.c
+  vtkWrap.c
+  vtkWrapText.c
+  Generating Code...
+  vtkParseMain.c
+  vtkWrappingTools.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkWrappingTools-pv5.3.lib

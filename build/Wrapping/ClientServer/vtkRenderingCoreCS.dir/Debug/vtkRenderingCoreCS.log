@@ -1,0 +1,259 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAbstractMapper3DClientServer.cxx
+  CS Wrapping - generating vtkAbstractMapperClientServer.cxx
+  CS Wrapping - generating vtkAbstractPickerClientServer.cxx
+  CS Wrapping - generating vtkAbstractVolumeMapperClientServer.cxx
+  CS Wrapping - generating vtkActor2DCollectionClientServer.cxx
+  CS Wrapping - generating vtkActor2DClientServer.cxx
+  CS Wrapping - generating vtkActorCollectionClientServer.cxx
+  CS Wrapping - generating vtkActorClientServer.cxx
+  CS Wrapping - generating vtkAssemblyClientServer.cxx
+  CS Wrapping - generating vtkBackgroundColorMonitorClientServer.cxx
+  CS Wrapping - generating vtkBillboardTextActor3DClientServer.cxx
+  CS Wrapping - generating vtkCameraActorClientServer.cxx
+  CS Wrapping - generating vtkCameraClientServer.cxx
+  CS Wrapping - generating vtkCameraInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkCellCenterDepthSortClientServer.cxx
+  CS Wrapping - generating vtkColorTransferFunctionClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataDisplayAttributesClientServer.cxx
+  CS Wrapping - generating vtkCompositePolyDataMapperClientServer.cxx
+  CS Wrapping - generating vtkCoordinateClientServer.cxx
+  CS Wrapping - generating vtkCullerCollectionClientServer.cxx
+  CS Wrapping - generating vtkCullerClientServer.cxx
+  CS Wrapping - generating vtkDataSetMapperClientServer.cxx
+  CS Wrapping - generating vtkDiscretizableColorTransferFunctionClientServer.cxx
+  CS Wrapping - generating vtkDistanceToCameraClientServer.cxx
+  CS Wrapping - generating vtkFollowerClientServer.cxx
+  CS Wrapping - generating vtkFrameBufferObjectBaseClientServer.cxx
+  CS Wrapping - generating vtkFrustumCoverageCullerClientServer.cxx
+  CS Wrapping - generating vtkFXAAOptionsClientServer.cxx
+  CS Wrapping - generating vtkGenericRenderWindowInteractorClientServer.cxx
+  CS Wrapping - generating vtkGenericVertexAttributeMappingClientServer.cxx
+  CS Wrapping - generating vtkGlyph3DMapperClientServer.cxx
+  CS Wrapping - generating vtkGPUInfoClientServer.cxx
+  CS Wrapping - generating vtkGPUInfoListClientServer.cxx
+  CS Wrapping - generating vtkGraphicsFactoryClientServer.cxx
+  CS Wrapping - generating vtkGraphMapperClientServer.cxx
+  CS Wrapping - generating vtkGraphToGlyphsClientServer.cxx
+  CS Wrapping - generating vtkHardwareSelectorClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalPolyDataMapperClientServer.cxx
+  CS Wrapping - generating vtkImageActorClientServer.cxx
+  CS Wrapping - generating vtkImageMapper3DClientServer.cxx
+  CS Wrapping - generating vtkImageMapperClientServer.cxx
+  CS Wrapping - generating vtkImagePropertyClientServer.cxx
+  CS Wrapping - generating vtkImageSliceClientServer.cxx
+  CS Wrapping - generating vtkImageSliceMapperClientServer.cxx
+  CS Wrapping - generating vtkInteractorEventRecorderClientServer.cxx
+  CS Wrapping - generating vtkInteractorObserverClientServer.cxx
+  CS Wrapping - generating vtkLabeledContourMapperClientServer.cxx
+  CS Wrapping - generating vtkLightActorClientServer.cxx
+  CS Wrapping - generating vtkLightCollectionClientServer.cxx
+  CS Wrapping - generating vtkLightClientServer.cxx
+  CS Wrapping - generating vtkLightKitClientServer.cxx
+  CS Wrapping - generating vtkLogLookupTableClientServer.cxx
+  CS Wrapping - generating vtkLookupTableWithEnablingClientServer.cxx
+  CS Wrapping - generating vtkMapArrayValuesClientServer.cxx
+  CS Wrapping - generating vtkMapper2DClientServer.cxx
+  CS Wrapping - generating vtkMapperCollectionClientServer.cxx
+  CS Wrapping - generating vtkMapperClientServer.cxx
+  CS Wrapping - generating vtkObserverMediatorClientServer.cxx
+  CS Wrapping - generating vtkPolyDataMapper2DClientServer.cxx
+  CS Wrapping - generating vtkPolyDataMapperClientServer.cxx
+  CS Wrapping - generating vtkProp3DCollectionClientServer.cxx
+  CS Wrapping - generating vtkProp3DClientServer.cxx
+  CS Wrapping - generating vtkProp3DFollowerClientServer.cxx
+  CS Wrapping - generating vtkPropAssemblyClientServer.cxx
+  CS Wrapping - generating vtkPropCollectionClientServer.cxx
+  CS Wrapping - generating vtkPropPicker3DClientServer.cxx
+  CS Wrapping - generating vtkPropClientServer.cxx
+  CS Wrapping - generating vtkProperty2DClientServer.cxx
+  CS Wrapping - generating vtkPropertyClientServer.cxx
+  CS Wrapping - generating vtkRendererCollectionClientServer.cxx
+  CS Wrapping - generating vtkRendererClientServer.cxx
+  CS Wrapping - generating vtkRendererDelegateClientServer.cxx
+  CS Wrapping - generating vtkRendererSourceClientServer.cxx
+  CS Wrapping - generating vtkRenderPassClientServer.cxx
+  CS Wrapping - generating vtkRenderWindowCollectionClientServer.cxx
+  CS Wrapping - generating vtkRenderWindowClientServer.cxx
+  CS Wrapping - generating vtkRenderWindowInteractorClientServer.cxx
+  CS Wrapping - generating vtkRenderWindowInteractor3DClientServer.cxx
+  CS Wrapping - generating vtkSelectVisiblePointsClientServer.cxx
+  CS Wrapping - generating vtkShaderDeviceAdapter2ClientServer.cxx
+  CS Wrapping - generating vtkTextActorClientServer.cxx
+  CS Wrapping - generating vtkTextActor3DClientServer.cxx
+  CS Wrapping - generating vtkTextureClientServer.cxx
+  CS Wrapping - generating vtkTexturedActor2DClientServer.cxx
+  CS Wrapping - generating vtkTransformCoordinateSystemsClientServer.cxx
+  CS Wrapping - generating vtkTransformInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkTupleInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkViewDependentErrorMetricClientServer.cxx
+  CS Wrapping - generating vtkViewportClientServer.cxx
+  CS Wrapping - generating vtkVisibilitySortClientServer.cxx
+  CS Wrapping - generating vtkVolumeCollectionClientServer.cxx
+  CS Wrapping - generating vtkVolumeClientServer.cxx
+  CS Wrapping - generating vtkVolumePropertyClientServer.cxx
+  CS Wrapping - generating vtkWindowLevelLookupTableClientServer.cxx
+  CS Wrapping - generating vtkWindowToImageFilterClientServer.cxx
+  CS Wrapping - generating vtkAssemblyNodeClientServer.cxx
+  CS Wrapping - generating vtkAssemblyPathClientServer.cxx
+  CS Wrapping - generating vtkAssemblyPathsClientServer.cxx
+  CS Wrapping - generating vtkAreaPickerClientServer.cxx
+  CS Wrapping - generating vtkPickerClientServer.cxx
+  CS Wrapping - generating vtkAbstractPropPickerClientServer.cxx
+  CS Wrapping - generating vtkPropPickerClientServer.cxx
+  CS Wrapping - generating vtkPickingManagerClientServer.cxx
+  CS Wrapping - generating vtkLODProp3DClientServer.cxx
+  CS Wrapping - generating vtkWorldPointPickerClientServer.cxx
+  CS Wrapping - generating vtkCellPickerClientServer.cxx
+  CS Wrapping - generating vtkPointPickerClientServer.cxx
+  CS Wrapping - generating vtkRenderedAreaPickerClientServer.cxx
+  CS Wrapping - generating vtkScenePickerClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyleSwitchBaseClientServer.cxx
+  CS Wrapping - generating vtkInteractorStyle3DClientServer.cxx
+  CS Wrapping - generating vtkTDxInteractorStyleClientServer.cxx
+  CS Wrapping - generating vtkTDxInteractorStyleCameraClientServer.cxx
+  CS Wrapping - generating vtkTDxInteractorStyleSettingsClientServer.cxx
+  CS Wrapping - generating vtkStringToImageClientServer.cxx
+  CS Wrapping - generating vtkTextMapperClientServer.cxx
+  CS Wrapping - generating vtkTextPropertyClientServer.cxx
+  CS Wrapping - generating vtkTextPropertyCollectionClientServer.cxx
+  CS Wrapping - generating vtkTextRendererClientServer.cxx
+  CS Wrapping - generating vtkPointGaussianMapperClientServer.cxx
+  vtkAbstractMapper3DClientServer.cxx
+  vtkAbstractMapperClientServer.cxx
+  vtkAbstractPickerClientServer.cxx
+  vtkAbstractVolumeMapperClientServer.cxx
+  vtkActor2DCollectionClientServer.cxx
+  vtkActor2DClientServer.cxx
+  vtkActorCollectionClientServer.cxx
+  vtkActorClientServer.cxx
+  vtkAssemblyClientServer.cxx
+  vtkBackgroundColorMonitorClientServer.cxx
+  vtkBillboardTextActor3DClientServer.cxx
+  vtkCameraActorClientServer.cxx
+  vtkCameraClientServer.cxx
+  vtkCameraInterpolatorClientServer.cxx
+  vtkCellCenterDepthSortClientServer.cxx
+  vtkColorTransferFunctionClientServer.cxx
+  vtkCompositeDataDisplayAttributesClientServer.cxx
+  vtkCompositePolyDataMapperClientServer.cxx
+  vtkCoordinateClientServer.cxx
+  vtkCullerCollectionClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkCullerClientServer.cxx
+  vtkDataSetMapperClientServer.cxx
+  vtkDiscretizableColorTransferFunctionClientServer.cxx
+  vtkDistanceToCameraClientServer.cxx
+  vtkFollowerClientServer.cxx
+  vtkFrameBufferObjectBaseClientServer.cxx
+  vtkFrustumCoverageCullerClientServer.cxx
+  vtkFXAAOptionsClientServer.cxx
+  vtkGenericRenderWindowInteractorClientServer.cxx
+  vtkGenericVertexAttributeMappingClientServer.cxx
+  vtkGlyph3DMapperClientServer.cxx
+  vtkGPUInfoClientServer.cxx
+  vtkGPUInfoListClientServer.cxx
+  vtkGraphicsFactoryClientServer.cxx
+  vtkGraphMapperClientServer.cxx
+  vtkGraphToGlyphsClientServer.cxx
+  vtkHardwareSelectorClientServer.cxx
+  vtkHierarchicalPolyDataMapperClientServer.cxx
+  vtkImageActorClientServer.cxx
+  vtkImageMapper3DClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageMapperClientServer.cxx
+  vtkImagePropertyClientServer.cxx
+  vtkImageSliceClientServer.cxx
+  vtkImageSliceMapperClientServer.cxx
+  vtkInteractorEventRecorderClientServer.cxx
+  vtkInteractorObserverClientServer.cxx
+  vtkLabeledContourMapperClientServer.cxx
+  vtkLightActorClientServer.cxx
+  vtkLightCollectionClientServer.cxx
+  vtkLightClientServer.cxx
+  vtkLightKitClientServer.cxx
+  vtkLogLookupTableClientServer.cxx
+  vtkLookupTableWithEnablingClientServer.cxx
+  vtkMapArrayValuesClientServer.cxx
+  vtkMapper2DClientServer.cxx
+  vtkMapperCollectionClientServer.cxx
+  vtkMapperClientServer.cxx
+  vtkObserverMediatorClientServer.cxx
+  vtkPolyDataMapper2DClientServer.cxx
+  vtkPolyDataMapperClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkProp3DCollectionClientServer.cxx
+  vtkProp3DClientServer.cxx
+  vtkProp3DFollowerClientServer.cxx
+  vtkPropAssemblyClientServer.cxx
+  vtkPropCollectionClientServer.cxx
+  vtkPropPicker3DClientServer.cxx
+  vtkPropClientServer.cxx
+  vtkProperty2DClientServer.cxx
+  vtkPropertyClientServer.cxx
+  vtkRendererCollectionClientServer.cxx
+  vtkRendererClientServer.cxx
+  vtkRendererDelegateClientServer.cxx
+  vtkRendererSourceClientServer.cxx
+  vtkRenderPassClientServer.cxx
+  vtkRenderWindowCollectionClientServer.cxx
+  vtkRenderWindowClientServer.cxx
+  vtkRenderWindowInteractorClientServer.cxx
+  vtkRenderWindowInteractor3DClientServer.cxx
+  vtkSelectVisiblePointsClientServer.cxx
+  vtkShaderDeviceAdapter2ClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkTextActorClientServer.cxx
+  vtkTextActor3DClientServer.cxx
+  vtkTextureClientServer.cxx
+  vtkTexturedActor2DClientServer.cxx
+  vtkTransformCoordinateSystemsClientServer.cxx
+  vtkTransformInterpolatorClientServer.cxx
+  vtkTupleInterpolatorClientServer.cxx
+  vtkViewDependentErrorMetricClientServer.cxx
+  vtkViewportClientServer.cxx
+  vtkVisibilitySortClientServer.cxx
+  vtkVolumeCollectionClientServer.cxx
+  vtkVolumeClientServer.cxx
+  vtkVolumePropertyClientServer.cxx
+  vtkWindowLevelLookupTableClientServer.cxx
+  vtkWindowToImageFilterClientServer.cxx
+  vtkAssemblyNodeClientServer.cxx
+  vtkAssemblyPathClientServer.cxx
+  vtkAssemblyPathsClientServer.cxx
+  vtkAreaPickerClientServer.cxx
+  vtkPickerClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkAbstractPropPickerClientServer.cxx
+  vtkPropPickerClientServer.cxx
+  vtkPickingManagerClientServer.cxx
+  vtkLODProp3DClientServer.cxx
+  vtkWorldPointPickerClientServer.cxx
+  vtkCellPickerClientServer.cxx
+  vtkPointPickerClientServer.cxx
+  vtkRenderedAreaPickerClientServer.cxx
+  vtkScenePickerClientServer.cxx
+  vtkInteractorStyleClientServer.cxx
+  vtkInteractorStyleSwitchBaseClientServer.cxx
+  vtkInteractorStyle3DClientServer.cxx
+  vtkTDxInteractorStyleClientServer.cxx
+  vtkTDxInteractorStyleCameraClientServer.cxx
+  vtkTDxInteractorStyleSettingsClientServer.cxx
+  vtkStringToImageClientServer.cxx
+  vtkTextMapperClientServer.cxx
+  vtkTextPropertyClientServer.cxx
+  vtkTextPropertyCollectionClientServer.cxx
+  vtkTextRendererClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPointGaussianMapperClientServer.cxx
+  vtkRenderingCoreCSInit.cxx
+  Generating Code...
+  vtkRenderingCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingCoreCS-pv5.3.lib

@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerManager/SMApplication/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerManager/SMApplication/CMakeFiles/generate.stamp is up-to-date.
+  Generating headers for ServerManager XMLs
+  -- Generate module: 3d_widgets
+  -- Generate module: filters
+  -- Generate module: internal_writers
+  -- Generate module: readers
+  -- Generate module: rendering
+  -- Generate module: sources
+  -- Generate module: utilities
+  -- Generate module: views_and_representations
+  -- Generate module: writers
+  -- Generate module: settings
+  -- Generate module: animation
+  -- Generate module: points
+  -- Generate module: proxies_mpi
+  -- Generate module: proxies_opengl2
+  vtkInitializationHelper.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerApplication-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerApplication-pv5.3.exp
+  vtkPVServerManagerApplication.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkPVServerManagerApplication-pv5.3.dll

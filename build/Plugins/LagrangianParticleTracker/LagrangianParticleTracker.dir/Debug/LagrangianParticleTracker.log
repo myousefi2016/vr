@@ -1,0 +1,40 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/LagrangianParticleTracker/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/LagrangianParticleTracker/CMakeFiles/generate.stamp is up-to-date.
+  Generating moc_pqIntegrationModelHelperWidget.cpp
+  Generating moc_pqIntegrationModelSeedHelperWidget.cpp
+  Generating moc_pqIntegrationModelSurfaceHelperWidget.cpp
+  Generating moc_pqIntegrationModelSeedHelperWidgetPWIImplementation.cpp
+  Generating moc_pqIntegrationModelSurfaceHelperWidgetPWIImplementation.cpp
+  CS Wrapping - generating vtkLagrangianHelperBaseClientServer.cxx
+  CS Wrapping - generating vtkLagrangianSeedHelperClientServer.cxx
+  CS Wrapping - generating vtkLagrangianSurfaceHelperClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_LagrangianParticleTracker.h
+  -- Generate module: LagrangianParticleTracker
+  Generating moc_LagrangianParticleTracker_Plugin.cpp
+  moc_pqIntegrationModelHelperWidget.cpp
+  moc_pqIntegrationModelSeedHelperWidget.cpp
+  moc_pqIntegrationModelSurfaceHelperWidget.cpp
+  moc_pqIntegrationModelSeedHelperWidgetPWIImplementation.cpp
+  pqIntegrationModelSeedHelperWidgetPWIImplementation.cxx
+  moc_pqIntegrationModelSurfaceHelperWidgetPWIImplementation.cpp
+  pqIntegrationModelSurfaceHelperWidgetPWIImplementation.cxx
+  pqIntegrationModelHelperWidget.cxx
+  pqIntegrationModelSeedHelperWidget.cxx
+  pqIntegrationModelSurfaceHelperWidget.cxx
+  vtkLagrangianHelperBase.cxx
+  vtkLagrangianSeedHelper.cxx
+  vtkLagrangianSurfaceHelper.cxx
+  vtkLagrangianHelperBaseClientServer.cxx
+  vtkLagrangianSeedHelperClientServer.cxx
+  vtkLagrangianSurfaceHelperClientServer.cxx
+  LagrangianParticleTrackerInit.cxx
+  LagrangianParticleTracker_Plugin.cxx
+  moc_LagrangianParticleTracker_Plugin.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/LagrangianParticleTracker.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/LagrangianParticleTracker.exp
+  LagrangianParticleTracker.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\LagrangianParticleTracker.dll

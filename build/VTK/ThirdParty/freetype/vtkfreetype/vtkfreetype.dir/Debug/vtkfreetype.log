@@ -1,0 +1,33 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/freetype/vtkfreetype/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/freetype/vtkfreetype/CMakeFiles/generate.stamp is up-to-date.
+  ftbase.c
+  ftbbox.c
+  ftbitmap.c
+  ftglyph.c
+  ftinit.c
+  ftmm.c
+  bdf.c
+  ftcache.c
+  cff.c
+  type1cid.c
+  ftgzip.c
+  ftlzw.c
+  pcf.c
+  pfr.c
+  psaux.c
+  pshinter.c
+  psmodule.c
+  raster.c
+  sfnt.c
+  smooth.c
+  Generating Code...
+  Compiling...
+  truetype.c
+  type1.c
+  type42.c
+  winfnt.c
+  ftdebug.c
+  ftsystem.c
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkfreetype-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkfreetype-pv5.3.exp
+  vtkfreetype.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkfreetype-pv5.3.dll

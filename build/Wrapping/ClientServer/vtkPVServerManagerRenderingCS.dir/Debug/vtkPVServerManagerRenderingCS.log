@@ -1,0 +1,89 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPVComparativeAnimationCueClientServer.cxx
+  CS Wrapping - generating vtkPVComparativeViewClientServer.cxx
+  CS Wrapping - generating vtkPVRepresentedArrayListSettingsClientServer.cxx
+  CS Wrapping - generating vtkSMBagChartSeriesListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMBoxRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMCameraLinkClientServer.cxx
+  CS Wrapping - generating vtkSMCameraProxyClientServer.cxx
+  CS Wrapping - generating vtkSMChartRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMChartSeriesListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMChartSeriesSelectionDomainClientServer.cxx
+  CS Wrapping - generating vtkSMChartUseIndexForAxisDomainClientServer.cxx
+  CS Wrapping - generating vtkSMComparativeAnimationCueProxyClientServer.cxx
+  CS Wrapping - generating vtkSMComparativeAnimationCueUndoElementClientServer.cxx
+  CS Wrapping - generating vtkSMComparativeViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMContextViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMDataDeliveryManagerClientServer.cxx
+  CS Wrapping - generating vtkSMFunctionalBagChartSeriesSelectionDomainClientServer.cxx
+  CS Wrapping - generating vtkSMImplicitPlaneRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMMultiSliceViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMNewWidgetRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMOrthographicSliceViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMPlotMatrixViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMPVRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMRenderViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMRepresentationTypeDomainClientServer.cxx
+  CS Wrapping - generating vtkSMRepresentedArrayListDomainClientServer.cxx
+  CS Wrapping - generating vtkSMScalarBarWidgetRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMSelectionHelperClientServer.cxx
+  CS Wrapping - generating vtkSMSpreadSheetRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMTextWidgetRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMTransferFunctionManagerClientServer.cxx
+  CS Wrapping - generating vtkSMTransferFunctionPresetsClientServer.cxx
+  CS Wrapping - generating vtkSMTransferFunctionProxyClientServer.cxx
+  CS Wrapping - generating vtkSMUtilitiesClientServer.cxx
+  CS Wrapping - generating vtkSMViewLayoutProxyClientServer.cxx
+  CS Wrapping - generating vtkSMViewProxyClientServer.cxx
+  CS Wrapping - generating vtkSMViewProxyInteractorHelperClientServer.cxx
+  CS Wrapping - generating vtkSMWidgetRepresentationProxyClientServer.cxx
+  CS Wrapping - generating vtkSMParaViewPipelineControllerWithRenderingClientServer.cxx
+  vtkPVComparativeAnimationCueClientServer.cxx
+  vtkPVComparativeViewClientServer.cxx
+  vtkPVRepresentedArrayListSettingsClientServer.cxx
+  vtkSMBagChartSeriesListDomainClientServer.cxx
+  vtkSMBoxRepresentationProxyClientServer.cxx
+  vtkSMCameraLinkClientServer.cxx
+  vtkSMCameraProxyClientServer.cxx
+  vtkSMChartRepresentationProxyClientServer.cxx
+  vtkSMChartSeriesListDomainClientServer.cxx
+  vtkSMChartSeriesSelectionDomainClientServer.cxx
+  vtkSMChartUseIndexForAxisDomainClientServer.cxx
+  vtkSMComparativeAnimationCueProxyClientServer.cxx
+  vtkSMComparativeAnimationCueUndoElementClientServer.cxx
+  vtkSMComparativeViewProxyClientServer.cxx
+  vtkSMContextViewProxyClientServer.cxx
+  vtkSMDataDeliveryManagerClientServer.cxx
+  vtkSMFunctionalBagChartSeriesSelectionDomainClientServer.cxx
+  vtkSMImplicitPlaneRepresentationProxyClientServer.cxx
+  vtkSMMultiSliceViewProxyClientServer.cxx
+  vtkSMNewWidgetRepresentationProxyClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSMOrthographicSliceViewProxyClientServer.cxx
+  vtkSMPlotMatrixViewProxyClientServer.cxx
+  vtkSMPVRepresentationProxyClientServer.cxx
+  vtkSMRenderViewProxyClientServer.cxx
+  vtkSMRepresentationProxyClientServer.cxx
+  vtkSMRepresentationTypeDomainClientServer.cxx
+  vtkSMRepresentedArrayListDomainClientServer.cxx
+  vtkSMScalarBarWidgetRepresentationProxyClientServer.cxx
+  vtkSMSelectionHelperClientServer.cxx
+  vtkSMSpreadSheetRepresentationProxyClientServer.cxx
+  vtkSMTextWidgetRepresentationProxyClientServer.cxx
+  vtkSMTransferFunctionManagerClientServer.cxx
+  vtkSMTransferFunctionPresetsClientServer.cxx
+  vtkSMTransferFunctionProxyClientServer.cxx
+  vtkSMUtilitiesClientServer.cxx
+  vtkSMViewLayoutProxyClientServer.cxx
+  vtkSMViewProxyClientServer.cxx
+  vtkSMViewProxyInteractorHelperClientServer.cxx
+  vtkSMWidgetRepresentationProxyClientServer.cxx
+  vtkSMParaViewPipelineControllerWithRenderingClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVServerManagerRenderingCSInit.cxx
+  Generating Code...
+  vtkPVServerManagerRenderingCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVServerManagerRenderingCS-pv5.3.lib

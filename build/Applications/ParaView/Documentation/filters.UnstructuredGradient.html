@@ -1,0 +1,144 @@
+
+<html>
+    <head>
+        <title>Gradient Of Unstructured DataSet</title>
+        <meta name="proxy_name" contents="filters.UnstructuredGradient"/>
+        <meta name="filename" contents="filters.UnstructuredGradient.html"/>
+    </head>
+    <body>
+        <h2>Gradient Of Unstructured DataSet (UnstructuredGradient)</h2>
+        <i>
+            <p>Estimate the gradient for each point or cell in any type of dataset.</p>
+        </i>
+        <div class="description">
+                     The Gradient (Unstructured) filter estimates the gradient
+                     vector at each point or cell. It operates on any type of
+                     vtkDataSet, and the output is the same type as the input.
+                     If the dataset is a vtkImageData, use the Gradient filter
+                     instead; it will be more efficient for this type of
+                     dataset.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Gradient
+        (Unstructured) filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array ()
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scalar Array</th>
+                <td>This property lists the name of the scalar array from
+        which to compute the gradient.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ComputeGradient</th>
+                <td>When this flag is on, the gradient filter will compute
+        the gradient of the input array.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ResultArrayName</th>
+                <td>This property provides a name for the output array
+        containing the gradient vectors.</td>
+                <td>Gradients<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FasterApproximation</th>
+                <td>When this flag is on, the gradient filter will provide a
+        less accurate (but close) algorithm that performs fewer derivative
+        calculations (and is therefore faster). The error contains some
+        smoothing of the output data and some possible errors on the boundary.
+        This parameter has no effect when performing the gradient of cell
+        data or when the input grid is not a vtkUnstructuredGrid.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ComputeDivergence</th>
+                <td>When this flag is on, the gradient filter will compute
+        the divergence of a 3 component array.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>DivergenceArrayName</th>
+                <td>This property provides a name for the output array
+        containing the divergence vector.</td>
+                <td>Divergence<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ComputeVorticity</th>
+                <td>When this flag is on, the gradient filter will compute
+        the vorticity/curl of a 3 component array.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>VorticityArrayName</th>
+                <td>This property provides a name for the output array
+        containing the vorticity vector.</td>
+                <td>Vorticity<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ComputeQCriterion</th>
+                <td>When this flag is on, the gradient filter will compute
+        the Q-criterion of a 3 component array.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>QCriterionArrayName</th>
+                <td>This property provides a name for the output array
+        containing Q criterion.</td>
+                <td>Q-criterion<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

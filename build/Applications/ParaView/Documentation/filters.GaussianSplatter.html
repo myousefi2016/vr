@@ -1,0 +1,192 @@
+
+<html>
+    <head>
+        <title>Gaussian Resampling</title>
+        <meta name="proxy_name" contents="filters.GaussianSplatter"/>
+        <meta name="filename" contents="filters.GaussianSplatter.html"/>
+    </head>
+    <body>
+        <h2>Gaussian Resampling (GaussianSplatter)</h2>
+        <i>
+            <p>Splat points into a volume with an elliptical, Gaussian distribution.</p>
+        </i>
+        <div class="description">vtkGaussianSplatter
+                     is a filter that injects input points into a structured
+                     points (volume) dataset. As each point is injected, it
+                     "splats" or distributes values to nearby voxels. Data is
+                     distributed using an elliptical, Gaussian distribution
+                     function. The distribution function is modified using
+                     scalar values (expands distribution) or normals (creates
+                     ellipsoidal distribution rather than spherical). Warning:
+                     results may be incorrect in parallel as points can't splat
+                     into other processor's cells.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Resample Field</th>
+                <td>Choose a scalar array to splat into the output cells. If
+        ignore arrays is chosen, point density will be counted
+        instead.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Resampling Grid</th>
+                <td>Set / get the dimensions of the sampling structured
+        point set. Higher values produce better results but are much
+        slower.</td>
+                <td>50 50 50<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Extent to Resample</th>
+                <td>Set / get the (xmin,xmax, ymin,ymax, zmin,zmax) bounding
+        box in which the sampling is performed. If any of the (min,max) bounds
+        values are min &gt;= max, then the bounds will be computed
+        automatically from the input data. Otherwise, the user-specified bounds
+        will be used.</td>
+                <td>0.0 0.0 0.0 0.0 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Gaussian Splat Radius</th>
+                <td>Set / get the radius of propagation of the splat. This
+        value is expressed as a percentage of the length of the longest side of
+        the sampling volume. Smaller numbers greatly reduce execution
+        time.</td>
+                <td>0.1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Gaussian Exponent Factor</th>
+                <td>Set / get the sharpness of decay of the splats. This is
+        the exponent constant in the Gaussian equation. Normally this is a
+        negative value.</td>
+                <td>-5.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Scale Splats</th>
+                <td>Turn on/off the scaling of splats by scalar
+        value.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scale Factor</th>
+                <td>Multiply Gaussian splat distribution by this value. If
+        ScalarWarping is on, then the Scalar value will be multiplied by the
+        ScaleFactor times the Gaussian function.</td>
+                <td>1.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Elliptical Splats</th>
+                <td>Turn on/off the generation of elliptical splats. If
+        normal warping is on, then the input normals affect the distribution of
+        the splat. This boolean is used in combination with the Eccentricity
+        ivar.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Ellipitical Eccentricity</th>
+                <td>Control the shape of elliptical splatting. Eccentricity
+        is the ratio of the major axis (aligned along normal) to the minor
+        (axes) aligned along other two axes. So Eccentricity gt 1 creates
+        needles with the long axis in the direction of the normal; Eccentricity
+        lt 1 creates pancakes perpendicular to the normal
+        vector.</td>
+                <td>2.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Fill Volume Boundary</th>
+                <td>Turn on/off the capping of the outer boundary of the
+        volume to a specified cap value. This can be used to close surfaces
+        (after iso-surfacing) and create other effects.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Fill Value</th>
+                <td>Specify the cap value to use. (This instance variable
+        only has effect if the ivar Capping is on.)</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Splat Accumulation Mode</th>
+                <td>Specify the scalar accumulation mode. This mode
+        expresses how scalar values are combined when splats are overlapped.
+        The Max mode acts like a set union operation and is the most commonly
+        used; the Min mode acts like a set intersection, and the sum is just
+        weird.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Min (0)</li>
+                            <li>Max (1)</li>
+                            <li>Sum (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Empty Cell Value</th>
+                <td>Set the Null value for output points not receiving a
+        contribution from the input points. (This is the initial value of the
+        voxel samples.)</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkCompositeDataGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkHierarchicalDataSetGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageDataGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageDataToUniformGridClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkLinearToQuadraticCellsFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkProjectSphereFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRectilinearGridGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredGridGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredPointsGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUnstructuredGridGeometryFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkDataSetSurfaceFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkDataSetRegionSurfaceFilterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAbstractGridConnectivityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkDataSetGhostGeneratorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkRectilinearGridPartitionerClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredAMRGridConnectivityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredGridConnectivityClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredGridGhostDataGeneratorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkStructuredGridPartitionerClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkUniformGridGhostDataGeneratorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkFiltersGeometryCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkCompositeDataGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkHierarchicalDataSetGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkImageDataGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkImageDataToUniformGrid.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkLinearToQuadraticCellsFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkProjectSphereFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkRectilinearGridGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredGridGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredPointsGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkUnstructuredGridGeometryFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkDataSetSurfaceFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkDataSetRegionSurfaceFilter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkAbstractGridConnectivity.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkDataSetGhostGenerator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkRectilinearGridPartitioner.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredAMRGridConnectivity.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredGridConnectivity.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredGridGhostDataGenerator.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkStructuredGridPartitioner.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Geometry/vtkUniformGridGhostDataGenerator.h

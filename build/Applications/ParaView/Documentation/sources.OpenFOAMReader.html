@@ -1,0 +1,235 @@
+
+<html>
+    <head>
+        <title>OpenFOAMReader</title>
+        <meta name="proxy_name" contents="sources.OpenFOAMReader"/>
+        <meta name="filename" contents="sources.OpenFOAMReader.html"/>
+    </head>
+    <body>
+        <h2>OpenFOAMReader (OpenFOAMReader)</h2>
+        <i>
+            <p>Reads OpenFOAM data files, producing multi-block dataset.</p>
+        </i>
+        <div class="description">The OpenFOAM reader
+                     reads OpenFOAM data files and outputs multi-block
+                     datasets. Mesh information and time dependent data are
+                     supported. The OpenFOAM format is described fully at
+                     http://www.openfoam.com/docs/user/basic-file-format.php</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the file name for the
+        reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Skip Zero Time</th>
+                <td>Ignore the 0/ time directory.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CaseType</th>
+                <td>The property indicates whether decomposed mesh or
+        reconstructed mesh should be read</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Decomposed Case (0)</li>
+                            <li>Reconstructed Case (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Label Size</th>
+                <td>The expected label-size for the OpenFOAM data.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>32-bit (0)</li>
+                            <li>64-bit (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scalar Size</th>
+                <td>The expected scalar-size for the OpenFOAM data.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>32-bit (SP) (0)</li>
+                            <li>64-bit (DP) (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Create cell-to-point filtered data</th>
+                <td>Create point data from cell data. Beware: the filter
+        does not do inverse distance weighting.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Add dimensional units to array names</th>
+                <td>Read dimensional units from field data and add them to
+        array names as human-readable string.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PatchArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MeshRegions</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CellArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>CellArrays</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PointArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PointArrays</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>LagrangianArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>LagrangianArrays</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Cache mesh</th>
+                <td>Cache the OpenFOAM mesh between GUI selection
+        changes.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Decompose polyhedra</th>
+                <td>Decompose polyhedra into tetrahedra and
+        pyramids.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>List timesteps according to controlDict</th>
+                <td>List time directories listed according to the settings
+        in controlDict.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Lagrangian positions without extra data</th>
+                <td>Lagrangian positions without extra data (before OpenFOAM 1.4, after 2.4)</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Read zones</th>
+                <td>Read point/face/cell-Zones?</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

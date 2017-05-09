@@ -1,0 +1,41 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleDrawPolygonClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleFlightClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleImageClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleJoystickActorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleJoystickCameraClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleMultiTouchCameraClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleRubberBand2DClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleRubberBand3DClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleRubberBandPickClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleRubberBandZoomClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleTerrainClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleTrackballActorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleTrackballCameraClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleTrackballClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleUnicamClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleUserClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractorStyleSwitchClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkParallelCoordinatesInteractorStyleClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractionStyleCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleDrawPolygon.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleFlight.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleImage.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickActor.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleMultiTouchCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand2D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand3D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandPick.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandZoom.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTerrain.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballActor.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackball.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUnicam.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUser.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleSwitch.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkParallelCoordinatesInteractorStyle.h

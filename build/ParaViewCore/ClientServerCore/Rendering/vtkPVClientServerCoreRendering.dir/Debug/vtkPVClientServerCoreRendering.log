@@ -1,0 +1,87 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Rendering/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ClientServerCore/Rendering/CMakeFiles/generate.stamp is up-to-date.
+  vtk3DWidgetRepresentation.cxx
+  vtkAMROutlineRepresentation.cxx
+  vtkAMRStreamingPriorityQueue.cxx
+  vtkAMRStreamingVolumeRepresentation.cxx
+  vtkCacheSizeKeeper.cxx
+  vtkCaveSynchronizedRenderers.cxx
+  vtkChartRepresentation.cxx
+  vtkChartSelectionRepresentation.cxx
+  vtkChartWarning.cxx
+  vtkClientServerMoveData.cxx
+  vtkCompositeRepresentation.cxx
+  vtkDataLabelRepresentation.cxx
+  vtkGeometryRepresentation.cxx
+  vtkGeometryRepresentationWithFaces.cxx
+  vtkGeometrySliceRepresentation.cxx
+  vtkGlyph3DRepresentation.cxx
+  vtkImageSliceRepresentation.cxx
+  vtkImageVolumeRepresentation.cxx
+  vtkMoleculeRepresentation.cxx
+  vtkMPIMoveData.cxx
+  Generating Code...
+  Compiling...
+  vtkOutlineRepresentation.cxx
+  vtkPExtentTranslator.cxx
+  vtkPolarAxesRepresentation.cxx
+  vtkProgressBarSourceRepresentation.cxx
+  vtkPVBagChartRepresentation.cxx
+  vtkPVBoxChartRepresentation.cxx
+  vtkPVCacheKeeper.cxx
+  vtkPVCacheKeeperPipeline.cxx
+  vtkPVCacheSizeInformation.cxx
+  vtkPVClientServerSynchronizedRenderers.cxx
+  vtkPVCompositeOrthographicSliceRepresentation.cxx
+  vtkPVCompositeRepresentation.cxx
+  vtkPVContextInteractorStyle.cxx
+  vtkPVContextView.cxx
+  vtkPVDataDeliveryManager.cxx
+  vtkPVDataRepresentation.cxx
+  vtkPVDataRepresentationPipeline.cxx
+  vtkPVDisplayInformation.cxx
+  vtkPVHardwareSelector.cxx
+  vtkPVHistogramChartRepresentation.cxx
+  Generating Code...
+  Compiling...
+  vtkPVImageSliceMapper.cxx
+  vtkPVImplicitPlaneRepresentation.cxx
+  vtkPVImplicitCylinderRepresentation.cxx
+  vtkPVLastSelectionInformation.cxx
+  vtkPVMultiSliceView.cxx
+  vtkPVOpenGLInformation.cxx
+  vtkPVOpenGLExtensionsInformation.cxx
+  vtkPVOrthographicSliceView.cxx
+  vtkPVParallelCoordinatesRepresentation.cxx
+  vtkPVPlotMatrixRepresentation.cxx
+  vtkPVPlotMatrixView.cxx
+  vtkPVProminentValuesInformation.cxx
+  vtkPVRayCastPickingHelper.cxx
+  vtkPVRenderView.cxx
+  vtkPVRenderViewSettings.cxx
+  vtkPVRepresentedDataInformation.cxx
+  vtkPVSelectionInformation.cxx
+  vtkPVStreamingPiecesInformation.cxx
+  vtkPVSynchronizedRenderer.cxx
+  vtkPVSynchronizedRenderWindows.cxx
+  Generating Code...
+  Compiling...
+  vtkPVView.cxx
+  vtkPVXYChartView.cxx
+  vtkQuartileChartRepresentation.cxx
+  vtkRulerSourceRepresentation.cxx
+  vtkSelectionDeliveryFilter.cxx
+  vtkSelectionRepresentation.cxx
+  vtkSpreadSheetRepresentation.cxx
+  vtkSpreadSheetView.cxx
+  vtkStructuredGridVolumeRepresentation.cxx
+  vtkTableExtentTranslator.cxx
+  vtkTextSourceRepresentation.cxx
+  vtkThreeSliceFilter.cxx
+  vtkUnstructuredGridVolumeRepresentation.cxx
+  vtkXYChartRepresentation.cxx
+  vtkPointGaussianRepresentation.cxx
+  vtkIceTSynchronizedRenderers.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVClientServerCoreRendering-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVClientServerCoreRendering-pv5.3.exp
+  vtkPVClientServerCoreRendering.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkPVClientServerCoreRendering-pv5.3.dll

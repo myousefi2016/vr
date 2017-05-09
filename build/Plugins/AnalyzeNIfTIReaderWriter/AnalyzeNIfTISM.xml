@@ -1,0 +1,143 @@
+<xml>
+    <proxy>
+        <group>sources</group>
+        <name>AnalyzeReader</name>
+        <label>Analyze reader</label>
+        <documentation>
+            <brief>Read Analyze image data files</brief>
+            <long>
+       The Analyze reader reads Analyze data and header files containing image
+       data file. The expected file extensions are .img and .hdr.
+     </long>
+        </documentation>
+        <property>
+            <name>FileName</name>
+            <label>FileName</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property specifies the file name for the Analyze reader.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text> The value(s) must be a filename (or filenames).</text>
+                </domain>
+            </domains>
+        </property>
+        <ReaderFactory extensions="img hdr" file_description="Analyze Files (Plugin)"/>
+    </proxy>
+    <proxy>
+        <group>sources</group>
+        <name>NIfTIReader</name>
+        <label>NIfTI Volume reader</label>
+        <documentation>
+            <brief>Read NIfTI Volume NII image data files</brief>
+            <long>
+       The NIfTI Volume reader reads NIfTI files containing image data. The expected file extensions are .nii.
+     </long>
+        </documentation>
+        <property>
+            <name>FileName</name>
+            <label>FileName</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property specifies the file name for the NIfTI Volume reader.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text> The value(s) must be a filename (or filenames).</text>
+                </domain>
+            </domains>
+        </property>
+        <ReaderFactory extensions="nii img hdr" file_description="NIfTI Files (Plugin)"/>
+    </proxy>
+    <proxy>
+        <group>writers</group>
+        <name>AnalyzeWriter</name>
+        <label>AnalyzeWriter</label>
+        <documentation>
+            <brief>Write Analyze files</brief>
+            <long>
+        Writer to write Analyze files.
+      </long>
+        </documentation>
+        <property>
+            <name>Input</name>
+            <label>Input</label>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>Accepts input of following types:</text>
+                    <list>
+                        <item>vtkImageData</item>
+                    </list>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>FileName</name>
+            <label>FileName</label>
+            <documentation>
+                <brief/>
+                <long>
+          The name of the file to be written.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains/>
+        </property>
+        <WriterFactory extensions="img" file_description="Analyze File Format (Plugin)"/>
+    </proxy>
+    <proxy>
+        <group>writers</group>
+        <name>NIfTIWriter</name>
+        <label>NIfTIWriter</label>
+        <documentation>
+            <brief>Write NIfTI files</brief>
+            <long>
+        Writer to write NIfTI files.
+      </long>
+        </documentation>
+        <property>
+            <name>Input</name>
+            <label>Input</label>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>Accepts input of following types:</text>
+                    <list>
+                        <item>vtkImageData</item>
+                    </list>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>FileName</name>
+            <label>FileName</label>
+            <documentation>
+                <brief/>
+                <long>
+          The name of the file to be written.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains/>
+        </property>
+        <WriterFactory extensions="nii" file_description="NIfTI File Format (Plugin)"/>
+    </proxy>
+    <categoryindex>
+        <label>Readers</label>
+        <item proxy_name="AnalyzeReader" proxy_group="sources"/>
+        <item proxy_name="NIfTIReader" proxy_group="sources"/>
+    </categoryindex>
+    <categoryindex>
+        <label>Writers</label>
+        <item proxy_name="AnalyzeWriter" proxy_group="writers"/>
+        <item proxy_name="NIfTIWriter" proxy_group="writers"/>
+    </categoryindex>
+</xml>

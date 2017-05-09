@@ -1,0 +1,93 @@
+
+<html>
+    <head>
+        <title>CSV Reader</title>
+        <meta name="proxy_name" contents="internal_sources.CSVReaderCore"/>
+        <meta name="filename" contents="internal_sources.CSVReaderCore.html"/>
+    </head>
+    <body>
+        <h2>CSV Reader (CSVReaderCore)</h2>
+        <i>
+            <p>Reads a comma-separated values file into a 1D rectilinear grid.</p>
+        </i>
+        <div class="description">The CSV
+                     reader reads a comma-separated values file into a 1D
+                     rectilinear grid. If the file was saved using the
+                     CSVWriter, then the rectilinear grid's points and point
+                     data can be restored as well as the cell data. Otherwise
+                     all the data in the CSV file is treated as cell data. The
+                     default file extension is .csv.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the file name for the CSV
+        (Command Separated Values) reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>DetectNumericColumns</th>
+                <td>When set to true, the reader will detect numeric columns
+        and create vtkDoubleArray or vtkIntArray for those instead of
+        vtkStringArray.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>UseStringDelimiter</th>
+                <td>This property indicates whether to use the string
+        delimiter.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>HaveHeaders</th>
+                <td>If the value of this property is 1, treat the first line
+        of the file as headers.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>FieldDelimiterCharacters</th>
+                <td>This property lists the characters that may be used to
+        separate fields. For example, a value of "," indicates a
+        comma-separated value file. A value of ".:;" indicates that columns may
+        be separated by a period, colon or semicolon. The order of the
+        characters in the text string does not matter.</td>
+                <td>,<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MergeConsecutiveDelimiters</th>
+                <td>Whether to merge successive delimiters. Use this if (for
+        example) your fields are separated by spaces but you don't know exactly
+        how many.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

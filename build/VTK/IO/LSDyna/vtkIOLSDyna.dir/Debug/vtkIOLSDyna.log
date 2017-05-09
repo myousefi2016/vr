@@ -1,0 +1,12 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/LSDyna/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/LSDyna/CMakeFiles/generate.stamp is up-to-date.
+  vtkLSDynaPart.cxx
+  vtkLSDynaPartCollection.cxx
+  vtkLSDynaReader.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\IO\LSDyna\vtkLSDynaReader.cxx(1693): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  vtkLSDynaSummaryParser.cxx
+  LSDynaFamily.cxx
+  LSDynaMetaData.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOLSDyna-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOLSDyna-pv5.3.exp
+  vtkIOLSDyna.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOLSDyna-pv5.3.dll

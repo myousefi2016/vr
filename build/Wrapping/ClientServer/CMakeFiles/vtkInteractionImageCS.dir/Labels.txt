@@ -1,0 +1,13 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageViewer2ClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageViewerClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkResliceImageViewerClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkResliceImageViewerMeasurementsClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkInteractionImageCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Image/vtkImageViewer2.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Image/vtkImageViewer.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Image/vtkResliceImageViewer.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Image/vtkResliceImageViewerMeasurements.h

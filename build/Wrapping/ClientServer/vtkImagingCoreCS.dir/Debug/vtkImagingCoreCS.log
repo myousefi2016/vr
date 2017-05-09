@@ -1,0 +1,83 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkExtractVOIClientServer.cxx
+  CS Wrapping - generating vtkImageAppendComponentsClientServer.cxx
+  CS Wrapping - generating vtkImageBlendClientServer.cxx
+  CS Wrapping - generating vtkImageCacheFilterClientServer.cxx
+  CS Wrapping - generating vtkImageCastClientServer.cxx
+  CS Wrapping - generating vtkImageChangeInformationClientServer.cxx
+  CS Wrapping - generating vtkImageClipClientServer.cxx
+  CS Wrapping - generating vtkImageConstantPadClientServer.cxx
+  CS Wrapping - generating vtkImageDataStreamerClientServer.cxx
+  CS Wrapping - generating vtkImageDecomposeFilterClientServer.cxx
+  CS Wrapping - generating vtkImageDifferenceClientServer.cxx
+  CS Wrapping - generating vtkImageExtractComponentsClientServer.cxx
+  CS Wrapping - generating vtkImageFlipClientServer.cxx
+  CS Wrapping - generating vtkImageIterateFilterClientServer.cxx
+  CS Wrapping - generating vtkImageMagnifyClientServer.cxx
+  CS Wrapping - generating vtkImageMapToColorsClientServer.cxx
+  CS Wrapping - generating vtkImageMaskClientServer.cxx
+  CS Wrapping - generating vtkImageMirrorPadClientServer.cxx
+  CS Wrapping - generating vtkImagePadFilterClientServer.cxx
+  CS Wrapping - generating vtkImagePermuteClientServer.cxx
+  CS Wrapping - generating vtkImageResampleClientServer.cxx
+  CS Wrapping - generating vtkImageResliceClientServer.cxx
+  CS Wrapping - generating vtkImageResliceToColorsClientServer.cxx
+  CS Wrapping - generating vtkImageShiftScaleClientServer.cxx
+  CS Wrapping - generating vtkImageShrink3DClientServer.cxx
+  CS Wrapping - generating vtkImageThresholdClientServer.cxx
+  CS Wrapping - generating vtkImageTranslateExtentClientServer.cxx
+  CS Wrapping - generating vtkImageWrapPadClientServer.cxx
+  CS Wrapping - generating vtkRTAnalyticSourceClientServer.cxx
+  CS Wrapping - generating vtkImageResizeClientServer.cxx
+  CS Wrapping - generating vtkImageBSplineCoefficientsClientServer.cxx
+  CS Wrapping - generating vtkImageStencilDataClientServer.cxx
+  CS Wrapping - generating vtkImageStencilAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkAbstractImageInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkImageBSplineInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkImageSincInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkImageInterpolatorClientServer.cxx
+  CS Wrapping - generating vtkImageStencilSourceClientServer.cxx
+  vtkExtractVOIClientServer.cxx
+  vtkImageAppendComponentsClientServer.cxx
+  vtkImageBlendClientServer.cxx
+  vtkImageCacheFilterClientServer.cxx
+  vtkImageCastClientServer.cxx
+  vtkImageChangeInformationClientServer.cxx
+  vtkImageClipClientServer.cxx
+  vtkImageConstantPadClientServer.cxx
+  vtkImageDataStreamerClientServer.cxx
+  vtkImageDecomposeFilterClientServer.cxx
+  vtkImageDifferenceClientServer.cxx
+  vtkImageExtractComponentsClientServer.cxx
+  vtkImageFlipClientServer.cxx
+  vtkImageIterateFilterClientServer.cxx
+  vtkImageMagnifyClientServer.cxx
+  vtkImageMapToColorsClientServer.cxx
+  vtkImageMaskClientServer.cxx
+  vtkImageMirrorPadClientServer.cxx
+  vtkImagePadFilterClientServer.cxx
+  vtkImagePermuteClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkImageResampleClientServer.cxx
+  vtkImageResliceClientServer.cxx
+  vtkImageResliceToColorsClientServer.cxx
+  vtkImageShiftScaleClientServer.cxx
+  vtkImageShrink3DClientServer.cxx
+  vtkImageThresholdClientServer.cxx
+  vtkImageTranslateExtentClientServer.cxx
+  vtkImageWrapPadClientServer.cxx
+  vtkRTAnalyticSourceClientServer.cxx
+  vtkImageResizeClientServer.cxx
+  vtkImageBSplineCoefficientsClientServer.cxx
+  vtkImageStencilDataClientServer.cxx
+  vtkImageStencilAlgorithmClientServer.cxx
+  vtkAbstractImageInterpolatorClientServer.cxx
+  vtkImageBSplineInterpolatorClientServer.cxx
+  vtkImageSincInterpolatorClientServer.cxx
+  vtkImageInterpolatorClientServer.cxx
+  vtkImageStencilSourceClientServer.cxx
+  vtkImagingCoreCSInit.cxx
+  Generating Code...
+  vtkImagingCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingCoreCS-pv5.3.lib

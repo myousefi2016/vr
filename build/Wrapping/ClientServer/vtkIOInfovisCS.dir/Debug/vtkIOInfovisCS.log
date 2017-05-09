@@ -1,0 +1,37 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkBiomTableReaderClientServer.cxx
+  CS Wrapping - generating vtkChacoGraphReaderClientServer.cxx
+  CS Wrapping - generating vtkDelimitedTextReaderClientServer.cxx
+  CS Wrapping - generating vtkDIMACSGraphReaderClientServer.cxx
+  CS Wrapping - generating vtkDIMACSGraphWriterClientServer.cxx
+  CS Wrapping - generating vtkFixedWidthTextReaderClientServer.cxx
+  CS Wrapping - generating vtkISIReaderClientServer.cxx
+  CS Wrapping - generating vtkMultiNewickTreeReaderClientServer.cxx
+  CS Wrapping - generating vtkNewickTreeReaderClientServer.cxx
+  CS Wrapping - generating vtkNewickTreeWriterClientServer.cxx
+  CS Wrapping - generating vtkPhyloXMLTreeReaderClientServer.cxx
+  CS Wrapping - generating vtkPhyloXMLTreeWriterClientServer.cxx
+  CS Wrapping - generating vtkRISReaderClientServer.cxx
+  CS Wrapping - generating vtkTulipReaderClientServer.cxx
+  CS Wrapping - generating vtkXGMLReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLTreeReaderClientServer.cxx
+  vtkBiomTableReaderClientServer.cxx
+  vtkChacoGraphReaderClientServer.cxx
+  vtkDelimitedTextReaderClientServer.cxx
+  vtkDIMACSGraphReaderClientServer.cxx
+  vtkDIMACSGraphWriterClientServer.cxx
+  vtkFixedWidthTextReaderClientServer.cxx
+  vtkISIReaderClientServer.cxx
+  vtkMultiNewickTreeReaderClientServer.cxx
+  vtkNewickTreeReaderClientServer.cxx
+  vtkNewickTreeWriterClientServer.cxx
+  vtkPhyloXMLTreeReaderClientServer.cxx
+  vtkPhyloXMLTreeWriterClientServer.cxx
+  vtkRISReaderClientServer.cxx
+  vtkTulipReaderClientServer.cxx
+  vtkXGMLReaderClientServer.cxx
+  vtkXMLTreeReaderClientServer.cxx
+  vtkIOInfovisCSInit.cxx
+  Generating Code...
+  vtkIOInfovisCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOInfovisCS-pv5.3.lib

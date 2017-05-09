@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAdditionalFieldReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRConnectivity.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualClip.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualContour.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualGridHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFileSeriesReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFragmentIntegration.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFragmentsFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAppendArcLength.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAppendRectilinearGrid.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCellIntegrator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCleanUnstructuredGridCells.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCleanUnstructuredGrid.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCSVWriter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkEnsembleDataReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkEquivalenceSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExodusFileSeriesReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExtractScatterPlot.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExtractSelectionRange.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkFileSequenceParser.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkFlashContour.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxes2DActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxes3DActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxesHelper.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxesPlane2DActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridConnectivity.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkHierarchicalFractal.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkHybridProbeFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIntegrateFlowThroughSurface.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIntersectFragments.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIsoVolume.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceCommBuffer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceIdList.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceLoading.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceTransaction.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceTransactionMatrix.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceProcessLoading.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceProcessRing.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceToProcMap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMergeArrays.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMergeCompositeDataSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMinMax.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightGoldBinaryReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightGoldReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEquivalenceSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPExtractTemporalFieldData.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPGenericEnSightReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPhastaReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPlotEdges.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPointHandleRepresentationSphere.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPolyLineToRectilinearGridFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPPhastaReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizContingencyStats.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizDescriptiveStats.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizKMeans.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizMultiCorrelativeStats.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizPCAStats.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRDualClip.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRDualContour.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRFragmentIntegration.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVArrayCalculator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVBox.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVClipClosedSurface.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVClipDataSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVConnectivityFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVContourFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVCylinder.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVDataSetAlgorithmSelectorFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVDReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerReader2.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerTranslator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractBagPlots.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractComponent.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractVOI.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVFrustumActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVGlyphFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVGridAxes3DActor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVImageReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVLegacyGlyphFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVLinearExtrusionFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVMetaClipDataSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVMetaSliceDataSet.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVPlane.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVPLYWriter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVSelectionSource.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVTextSource.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVTransposeTable.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkRulerLineForInput.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkQuerySelectionSource.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkRectilinearGridConnectivity.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSciVizStatistics.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotBlock.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotBlockIterator.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotFileSeriesReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotHistoryReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotIStream.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotReaderMap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotUniReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSurfaceVectors.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkTimeStepProgressFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkTimeToTextConvertor.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkUnstructuredPOPReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkVRMLSource.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkXMLCollectionReader.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkXMLPVDWriter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkInSituPParticlePathFilter.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceIdListItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAdditionalFieldReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRConnectivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualClip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualContour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRDualGridHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFileSeriesReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFragmentIntegration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAMRFragmentsFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAppendArcLength.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkAppendRectilinearGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCellIntegrator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCleanUnstructuredGridCells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCleanUnstructuredGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkCSVWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkEnsembleDataReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkEquivalenceSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExodusFileSeriesReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExtractScatterPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkExtractSelectionRange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkFileSequenceParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkFlashContour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxes2DActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxes3DActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxesHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridAxesPlane2DActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkGridConnectivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkHierarchicalFractal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkHybridProbeFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIntegrateFlowThroughSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIntersectFragments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkIsoVolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceCommBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceIdList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceLoading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceTransaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfacePieceTransactionMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceProcessLoading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceProcessRing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMaterialInterfaceToProcMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMergeArrays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMergeCompositeDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkMinMax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightGoldBinaryReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightGoldReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEnSightReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPEquivalenceSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPExtractTemporalFieldData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPGenericEnSightReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPhastaReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPlotEdges.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPointHandleRepresentationSphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPolyLineToRectilinearGridFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPPhastaReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizContingencyStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizDescriptiveStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizKMeans.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizMultiCorrelativeStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPSciVizPCAStats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRDualClip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRDualContour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVAMRFragmentIntegration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVArrayCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVClipClosedSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVClipDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVConnectivityFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVContourFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVCylinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVDataSetAlgorithmSelectorFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVDReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerReader2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVEnSightMasterServerTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractBagPlots.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVExtractVOI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVFrustumActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVGlyphFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVGridAxes3DActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVImageReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVLegacyGlyphFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVLinearExtrusionFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVMetaClipDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVMetaSliceDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVPlane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVPLYWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVSelectionSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVTextSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkPVTransposeTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkRulerLineForInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkQuerySelectionSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkRectilinearGridConnectivity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSciVizStatistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotBlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotBlockIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotFileSeriesReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotHistoryReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotIStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotReaderMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSpyPlotUniReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkSurfaceVectors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkTimeStepProgressFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkTimeToTextConvertor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkUnstructuredPOPReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkVRMLSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkXMLCollectionReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkXMLPVDWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\vtkInSituPParticlePathFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefaultModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\VTKExtensions\Default\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

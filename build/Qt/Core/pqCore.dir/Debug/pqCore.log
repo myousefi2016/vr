@@ -1,0 +1,362 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Core/CMakeFiles/generate.stamp is up-to-date.
+  Generating qrc_pqCore.cpp
+  Generating moc_pqAnimationCue.cpp
+  Generating moc_pqAnimationScene.cpp
+  Generating moc_pqApplicationCore.cpp
+  Generating moc_pqBoxChartView.cpp
+  Generating moc_pqCheckBoxDelegate.cpp
+  Generating moc_pqCollaborationEventPlayer.cpp
+  Generating moc_pqCollaborationManager.cpp
+  Generating moc_pqComparativeContextView.cpp
+  Generating moc_pqComparativeRenderView.cpp
+  Generating moc_pqComparativeXYBarChartView.cpp
+  Generating moc_pqComparativeXYChartView.cpp
+  Generating moc_pqContextView.cpp
+  Generating moc_pqCoreTestUtility.cpp
+  Generating moc_pqCoreUtilities.cpp
+  Generating moc_pqDataRepresentation.cpp
+  Generating moc_pqDisplayPolicy.cpp
+  Generating moc_pqFileDialogEventPlayer.cpp
+  Generating moc_pqFileDialogEventTranslator.cpp
+  Generating moc_pqFileDialogFavoriteModel.cpp
+  Generating moc_pqFileDialogFilter.cpp
+  Generating moc_pqFileDialog.cpp
+  Generating moc_pqFileDialogModel.cpp
+  Generating moc_pqFileDialogRecentDirsModel.cpp
+  Generating moc_pqFlatTreeViewEventPlayer.cpp
+  Generating moc_pqFlatTreeViewEventTranslator.cpp
+  Generating moc_pqInteractiveViewLink.cpp
+  Generating moc_pqInterfaceTracker.cpp
+  Generating moc_pqLinksModel.cpp
+  Generating moc_pqLinkViewWidget.cpp
+  Generating moc_pqMultiSliceAxisWidget.cpp
+  Generating moc_pqMultiSliceView.cpp
+  Generating moc_pqNonEditableStyledItemDelegate.cpp
+  Generating moc_pqObjectBuilder.cpp
+  Generating moc_pqOutputPort.cpp
+  Generating moc_pqOutputWindowAdapter.cpp
+  Generating moc_pqOutputWindow.cpp
+  Generating moc_pqOutputWindowModel.cpp
+  Generating moc_pqParallelCoordinatesChartView.cpp
+  Generating moc_pqPipelineFilter.cpp
+  Generating moc_pqPipelineRepresentation.cpp
+  Generating moc_pqPipelineSource.cpp
+  Generating moc_pqPlotMatrixView.cpp
+  Generating moc_pqPluginManager.cpp
+  Generating moc_pqProgressManager.cpp
+  Generating moc_pqPropertyLinksConnection.cpp
+  Generating moc_pqPropertyLinks.cpp
+  Generating moc_pqPropertyManager.cpp
+  Generating moc_pqProxy.cpp
+  Generating moc_pqQVTKWidgetEventPlayer.cpp
+  Generating moc_pqQVTKWidgetEventTranslator.cpp
+  Generating moc_pqQVTKWidget.cpp
+  Generating moc_pqRecentlyUsedResourcesList.cpp
+  Generating moc_pqRenderViewBase.cpp
+  Generating moc_pqRenderView.cpp
+  Generating moc_pqRepresentation.cpp
+  Generating moc_pqScalarBarRepresentation.cpp
+  Generating moc_pqScalarsToColors.cpp
+  Generating moc_pqServerConfigurationCollection.cpp
+  Generating moc_pqServer.cpp
+  Generating moc_pqServerManagerModel.cpp
+  Generating moc_pqServerManagerModelItem.cpp
+  Generating moc_pqServerManagerObserver.cpp
+  Generating moc_pqSettings.cpp
+  Generating moc_pqSpreadSheetView.cpp
+  Generating moc_pqSpreadSheetViewModel.cpp
+  Generating moc_pqSpreadSheetViewSelectionModel.cpp
+  Generating moc_pqSpreadSheetViewWidget.cpp
+  Generating moc_pqStandardServerManagerModelInterface.cpp
+  Generating moc_pqTimeKeeper.cpp
+  Generating moc_pqUndoStack.cpp
+  Generating moc_pqView.cpp
+  Generating moc_pqXMLEventObserver.cpp
+  Generating moc_pqXMLEventSource.cpp
+  Generating moc_pqXYBagChartView.cpp
+  Generating moc_pqXYBarChartView.cpp
+  Generating moc_pqXYFunctionalBagChartView.cpp
+  Generating moc_pqXYHistogramChartView.cpp
+  Generating moc_pqXYChartView.cpp
+  Generating ui_pqOutputWindow.h
+  Generating ui_pqFileDialog.h
+  pqAnimationCue.cxx
+  pqAnimationScene.cxx
+  pqAnimationSceneImageWriter.cxx
+  pqApplicationCore.cxx
+  pqAutoStartInterface.cxx
+  pqBoxChartView.cxx
+  pqCheckBoxDelegate.cxx
+  pqCollaborationEventPlayer.cxx
+  pqCollaborationManager.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  pqComparativeContextView.cxx
+  pqComparativeRenderView.cxx
+  pqComparativeXYBarChartView.cxx
+  pqComparativeXYChartView.cxx
+  pqContextView.cxx
+  pqCoreInit.cxx
+  pqCoreTestUtility.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqCoreTestUtility.cxx(447): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqCoreUtilities.cxx
+  pqDataRepresentation.cxx
+  pqDebug.cxx
+  pqDisplayPolicy.cxx
+  Generating Code...
+  Compiling...
+  pqFileDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqFileDialog.cxx(1224): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqFileDialogEventPlayer.cxx
+  pqFileDialogEventTranslator.cxx
+  pqFileDialogFavoriteModel.cxx
+  pqFileDialogFilter.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqFileDialogFilter.cxx(202): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqFileDialogModel.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(645): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(638): note: while compiling class template member function 'void QVector<T>::append(const T &)'
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(258): note: see reference to function template instantiation 'void QVector<T>::append(const T &)' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqFileDialogModel.cxx(490): note: see reference to class template instantiation 'QVector<T>' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(651): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(556): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(533): note: while compiling class template member function 'void QVector<T>::reallocData(const int,const int,QArrayData::AllocationOptions)'
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(390): note: see reference to function template instantiation 'void QVector<T>::reallocData(const int,const int,QArrayData::AllocationOptions)' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<T>::detach(void)'
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(204): note: see reference to function template instantiation 'void QVector<T>::detach(void)' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(601): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<T>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<T>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(411): note: while compiling class template member function 'void QVector<T>::resize(int)'
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(426): note: see reference to function template instantiation 'void QVector<T>::resize(int)' being compiled
+          with
+          [
+              T=pqFileDialogModelFileInfo
+          ]
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqFileDialogModel.cxx(1002): warning C4714: function 'QString QString::toLower(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(408): note: see declaration of 'QString::toLower'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqFileDialogModel.cxx(1002): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqFileDialogRecentDirsModel.cxx
+  pqFlatTreeViewEventPlayer.cxx
+  pqFlatTreeViewEventTranslator.cxx
+  pqGraphLayoutStrategyInterface.cxx
+  pqImageUtil.cxx
+  pqInteractiveViewLink.cxx
+  pqInterfaceTracker.cxx
+  pqLinksModel.cxx
+  pqLinkViewWidget.cxx
+  pqMultiSliceAxisWidget.cxx
+  pqMultiSliceView.cxx
+  pqNonEditableStyledItemDelegate.cxx
+  pqObjectBuilder.cxx
+  pqOptions.cxx
+  Generating Code...
+  Compiling...
+  pqOutputPort.cxx
+  pqOutputWindowAdapter.cxx
+  pqOutputWindow.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqOutputWindow.cxx(503): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqOutputWindow.cxx(503): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  pqOutputWindowModel.cxx
+  pqParallelCoordinatesChartView.cxx
+  pqPipelineFilter.cxx
+  pqPipelineRepresentation.cxx
+  pqPipelineSource.cxx
+  pqPlotMatrixView.cxx
+  pqPluginManager.cxx
+  pqProgressManager.cxx
+  pqPropertyLinks.cxx
+  pqPropertyLinksConnection.cxx
+  pqPropertyManager.cxx
+  pqProxy.cxx
+  pqProxyModifiedStateUndoElement.cxx
+  pqProxySelection.cxx
+  pqQVTKWidget.cxx
+  pqQVTKWidgetEventPlayer.cxx
+  pqQVTKWidgetEventTranslator.cxx
+  Generating Code...
+  Compiling...
+  pqRecentlyUsedResourceLoaderInterface.cxx
+  pqRecentlyUsedResourcesList.cxx
+  pqRenderViewBase.cxx
+  pqRenderView.cxx
+  pqRepresentation.cxx
+  pqScalarBarRepresentation.cxx
+  pqScalarsToColors.cxx
+  pqServer.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  pqServerConfiguration.cxx
+  pqServerConfigurationCollection.cxx
+  pqServerManagerModel.cxx
+  pqServerManagerModelInterface.cxx
+  pqServerManagerModelItem.cxx
+  pqServerManagerObserver.cxx
+  pqServerResource.cxx
+  pqSettings.cxx
+  pqSMAdaptor.cxx
+  pqSMProxy.cxx
+  pqSpreadSheetView.cxx
+  pqSpreadSheetViewModel.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Core\pqSpreadSheetViewModel.cxx(818): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  Generating Code...
+  Compiling...
+  pqSpreadSheetViewSelectionModel.cxx
+  pqSpreadSheetViewWidget.cxx
+  pqStandardServerManagerModelInterface.cxx
+  pqStereoModeHelper.cxx
+  pqTimeKeeper.cxx
+  pqTreeLayoutStrategyInterface.cxx
+  pqUndoStack.cxx
+  pqView.cxx
+  pqXMLEventObserver.cxx
+  pqXMLEventSource.cxx
+  pqXMLUtil.cxx
+  pqXYBagChartView.cxx
+  pqXYBarChartView.cxx
+  pqXYFunctionalBagChartView.cxx
+  pqXYHistogramChartView.cxx
+  pqXYChartView.cxx
+  vtkPVGUIPluginInterface.cxx
+  qrc_pqCore.cpp
+  moc_pqAnimationCue.cpp
+  moc_pqAnimationScene.cpp
+  Generating Code...
+  Compiling...
+  moc_pqApplicationCore.cpp
+  moc_pqBoxChartView.cpp
+  moc_pqCheckBoxDelegate.cpp
+  moc_pqCollaborationEventPlayer.cpp
+  moc_pqCollaborationManager.cpp
+  moc_pqComparativeContextView.cpp
+  moc_pqComparativeRenderView.cpp
+  moc_pqComparativeXYBarChartView.cpp
+  moc_pqComparativeXYChartView.cpp
+  moc_pqContextView.cpp
+  moc_pqCoreTestUtility.cpp
+  moc_pqCoreUtilities.cpp
+  moc_pqDataRepresentation.cpp
+  moc_pqDisplayPolicy.cpp
+  moc_pqFileDialogEventPlayer.cpp
+  moc_pqFileDialogEventTranslator.cpp
+  moc_pqFileDialogFavoriteModel.cpp
+  moc_pqFileDialogFilter.cpp
+  moc_pqFileDialog.cpp
+  moc_pqFileDialogModel.cpp
+  Generating Code...
+  Compiling...
+  moc_pqFileDialogRecentDirsModel.cpp
+  moc_pqFlatTreeViewEventPlayer.cpp
+  moc_pqFlatTreeViewEventTranslator.cpp
+  moc_pqInteractiveViewLink.cpp
+  moc_pqInterfaceTracker.cpp
+  moc_pqLinksModel.cpp
+  moc_pqLinkViewWidget.cpp
+  moc_pqMultiSliceAxisWidget.cpp
+  moc_pqMultiSliceView.cpp
+  moc_pqNonEditableStyledItemDelegate.cpp
+  moc_pqObjectBuilder.cpp
+  moc_pqOutputPort.cpp
+  moc_pqOutputWindowAdapter.cpp
+  moc_pqOutputWindow.cpp
+  moc_pqOutputWindowModel.cpp
+  moc_pqParallelCoordinatesChartView.cpp
+  moc_pqPipelineFilter.cpp
+  moc_pqPipelineRepresentation.cpp
+  moc_pqPipelineSource.cpp
+  moc_pqPlotMatrixView.cpp
+  Generating Code...
+  Compiling...
+  moc_pqPluginManager.cpp
+  moc_pqProgressManager.cpp
+  moc_pqPropertyLinksConnection.cpp
+  moc_pqPropertyLinks.cpp
+  moc_pqPropertyManager.cpp
+  moc_pqProxy.cpp
+  moc_pqQVTKWidgetEventPlayer.cpp
+  moc_pqQVTKWidgetEventTranslator.cpp
+  moc_pqQVTKWidget.cpp
+  moc_pqRecentlyUsedResourcesList.cpp
+  moc_pqRenderViewBase.cpp
+  moc_pqRenderView.cpp
+  moc_pqRepresentation.cpp
+  moc_pqScalarBarRepresentation.cpp
+  moc_pqScalarsToColors.cpp
+  moc_pqServerConfigurationCollection.cpp
+  moc_pqServer.cpp
+  moc_pqServerManagerModel.cpp
+  moc_pqServerManagerModelItem.cpp
+  moc_pqServerManagerObserver.cpp
+  Generating Code...
+  Compiling...
+  moc_pqSettings.cpp
+  moc_pqSpreadSheetView.cpp
+  moc_pqSpreadSheetViewModel.cpp
+  moc_pqSpreadSheetViewSelectionModel.cpp
+  moc_pqSpreadSheetViewWidget.cpp
+  moc_pqStandardServerManagerModelInterface.cpp
+  moc_pqTimeKeeper.cpp
+  moc_pqUndoStack.cpp
+  moc_pqView.cpp
+  moc_pqXMLEventObserver.cpp
+  moc_pqXMLEventSource.cpp
+  moc_pqXYBagChartView.cpp
+  moc_pqXYBarChartView.cpp
+  moc_pqXYFunctionalBagChartView.cpp
+  moc_pqXYHistogramChartView.cpp
+  moc_pqXYChartView.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqCore-pv5.3.exp
+  pqCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkpqCore-pv5.3.dll

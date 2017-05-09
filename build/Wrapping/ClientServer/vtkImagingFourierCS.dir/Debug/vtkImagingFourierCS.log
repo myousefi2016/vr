@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkImageButterworthHighPassClientServer.cxx
+  CS Wrapping - generating vtkImageButterworthLowPassClientServer.cxx
+  CS Wrapping - generating vtkImageFFTClientServer.cxx
+  CS Wrapping - generating vtkImageFourierCenterClientServer.cxx
+  CS Wrapping - generating vtkImageFourierFilterClientServer.cxx
+  CS Wrapping - generating vtkImageIdealHighPassClientServer.cxx
+  CS Wrapping - generating vtkImageIdealLowPassClientServer.cxx
+  CS Wrapping - generating vtkImageRFFTClientServer.cxx
+  CS Wrapping - generating vtkTableFFTClientServer.cxx
+  vtkImageButterworthHighPassClientServer.cxx
+  vtkImageButterworthLowPassClientServer.cxx
+  vtkImageFFTClientServer.cxx
+  vtkImageFourierCenterClientServer.cxx
+  vtkImageFourierFilterClientServer.cxx
+  vtkImageIdealHighPassClientServer.cxx
+  vtkImageIdealLowPassClientServer.cxx
+  vtkImageRFFTClientServer.cxx
+  vtkTableFFTClientServer.cxx
+  vtkImagingFourierCSInit.cxx
+  Generating Code...
+  vtkImagingFourierCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingFourierCS-pv5.3.lib

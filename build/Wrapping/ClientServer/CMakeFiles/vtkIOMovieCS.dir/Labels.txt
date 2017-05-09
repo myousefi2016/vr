@@ -1,0 +1,11 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkGenericMovieWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkOggTheoraWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkAVIWriterClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkIOMovieCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Movie/vtkGenericMovieWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Movie/vtkOggTheoraWriter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Movie/vtkAVIWriter.h

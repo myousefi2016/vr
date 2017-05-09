@@ -1,0 +1,42 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Filters/Sources/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Filters/Sources/CMakeFiles/generate.stamp is up-to-date.
+  vtkArcSource.cxx
+  vtkArrowSource.cxx
+  vtkButtonSource.cxx
+  vtkConeSource.cxx
+  vtkCubeSource.cxx
+  vtkCylinderSource.cxx
+  vtkDiskSource.cxx
+  vtkEllipseArcSource.cxx
+  vtkEllipticalButtonSource.cxx
+  vtkFrustumSource.cxx
+  vtkGlyphSource2D.cxx
+  vtkHyperOctreeFractalSource.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Filters\Sources\vtkHyperOctreeFractalSource.cxx(211): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  vtkHyperTreeGridSource.cxx
+  vtkLineSource.cxx
+  vtkOutlineCornerFilter.cxx
+  vtkOutlineCornerSource.cxx
+  vtkOutlineSource.cxx
+  vtkParametricFunctionSource.cxx
+  vtkPlaneSource.cxx
+  vtkPlatonicSolidSource.cxx
+  Generating Code...
+  Compiling...
+  vtkPointSource.cxx
+  vtkPolyLineSource.cxx
+  vtkProgrammableDataObjectSource.cxx
+  vtkProgrammableSource.cxx
+  vtkRectangularButtonSource.cxx
+  vtkRegularPolygonSource.cxx
+  vtkSelectionSource.cxx
+  vtkSphereSource.cxx
+  vtkSuperquadricSource.cxx
+  vtkTessellatedBoxSource.cxx
+  vtkTextSource.cxx
+  vtkTexturedSphereSource.cxx
+  vtkGraphToPolyData.cxx
+  vtkDiagonalMatrixSource.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersSources-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkFiltersSources-pv5.3.exp
+  vtkFiltersSources.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkFiltersSources-pv5.3.dll

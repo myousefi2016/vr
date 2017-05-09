@@ -1,0 +1,55 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAbstractParticleWriterClientServer.cxx
+  CS Wrapping - generating vtkArrayReaderClientServer.cxx
+  CS Wrapping - generating vtkArrayWriterClientServer.cxx
+  CS Wrapping - generating vtkASCIITextCodecClientServer.cxx
+  CS Wrapping - generating vtkBase64InputStreamClientServer.cxx
+  CS Wrapping - generating vtkBase64OutputStreamClientServer.cxx
+  CS Wrapping - generating vtkBase64UtilitiesClientServer.cxx
+  CS Wrapping - generating vtkDataCompressorClientServer.cxx
+  CS Wrapping - generating vtkDelimitedTextWriterClientServer.cxx
+  CS Wrapping - generating vtkGlobFileNamesClientServer.cxx
+  CS Wrapping - generating vtkInputStreamClientServer.cxx
+  CS Wrapping - generating vtkJavaScriptDataWriterClientServer.cxx
+  CS Wrapping - generating vtkLZ4DataCompressorClientServer.cxx
+  CS Wrapping - generating vtkOutputStreamClientServer.cxx
+  CS Wrapping - generating vtkSortFileNamesClientServer.cxx
+  CS Wrapping - generating vtkTextCodecClientServer.cxx
+  CS Wrapping - generating vtkTextCodecFactoryClientServer.cxx
+  CS Wrapping - generating vtkUTF16TextCodecClientServer.cxx
+  CS Wrapping - generating vtkUTF8TextCodecClientServer.cxx
+  CS Wrapping - generating vtkAbstractPolyDataReaderClientServer.cxx
+  CS Wrapping - generating vtkWriterClientServer.cxx
+  CS Wrapping - generating vtkZLibDataCompressorClientServer.cxx
+  CS Wrapping - generating vtkArrayDataReaderClientServer.cxx
+  CS Wrapping - generating vtkArrayDataWriterClientServer.cxx
+  vtkAbstractParticleWriterClientServer.cxx
+  vtkArrayReaderClientServer.cxx
+  vtkArrayWriterClientServer.cxx
+  vtkASCIITextCodecClientServer.cxx
+  vtkBase64InputStreamClientServer.cxx
+  vtkBase64OutputStreamClientServer.cxx
+  vtkBase64UtilitiesClientServer.cxx
+  vtkDataCompressorClientServer.cxx
+  vtkDelimitedTextWriterClientServer.cxx
+  vtkGlobFileNamesClientServer.cxx
+  vtkInputStreamClientServer.cxx
+  vtkJavaScriptDataWriterClientServer.cxx
+  vtkLZ4DataCompressorClientServer.cxx
+  vtkOutputStreamClientServer.cxx
+  vtkSortFileNamesClientServer.cxx
+  vtkTextCodecClientServer.cxx
+  vtkTextCodecFactoryClientServer.cxx
+  vtkUTF16TextCodecClientServer.cxx
+  vtkUTF8TextCodecClientServer.cxx
+  vtkAbstractPolyDataReaderClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkWriterClientServer.cxx
+  vtkZLibDataCompressorClientServer.cxx
+  vtkArrayDataReaderClientServer.cxx
+  vtkArrayDataWriterClientServer.cxx
+  vtkIOCoreCSInit.cxx
+  Generating Code...
+  vtkIOCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOCoreCS-pv5.3.lib

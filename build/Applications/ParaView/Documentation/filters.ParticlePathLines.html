@@ -1,0 +1,123 @@
+
+<html>
+    <head>
+        <title>Temporal Particles To Pathlines</title>
+        <meta name="proxy_name" contents="filters.ParticlePathLines"/>
+        <meta name="filename" contents="filters.ParticlePathLines.html"/>
+    </head>
+    <body>
+        <h2>Temporal Particles To Pathlines (ParticlePathLines)</h2>
+        <i>
+            <p>Creates polylines representing pathlines of animating particles</p>
+        </i>
+        <div class="description">
+        Particle Pathlines takes any dataset as input, it extracts the
+        point locations of all cells over time to build up a polyline
+        trail.  The point number (index) is used as the 'key' if the points
+        are randomly changing their respective order in the points list,
+        then you should specify a scalar that represents the unique
+        ID. This is intended to handle the output of a filter such as the
+        TemporalStreamTracer.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>
+          The input cells to create pathlines for.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPointSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Selection</th>
+                <td>
+          Set a second input, which is a selection. Particles with the same
+          Id in the selection as the primary input will be chosen for
+          pathlines Note that you must have the same IdChannelArray in the
+          selection as the input
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>MaskPoints</th>
+                <td>
+          Set the number of particles to track as a ratio of the input.
+          Example: setting MaskPoints to 10 will track every 10th point.
+        </td>
+                <td>100<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaxTrackLength</th>
+                <td>
+          If the Particles being traced animate for a long time, the trails
+          or traces will become long and stringy. Setting the
+          MaxTraceTimeLength will limit how much of the trace is
+          displayed. Tracks longer then the Max will disappear and the
+          trace will apppear like a snake of fixed length which progresses
+          as the particle moves.  This length is given with respect to
+          timesteps.
+        </td>
+                <td>25<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaxStepDistance</th>
+                <td>
+            If a particle disappears from one end of a simulation and
+            reappears on the other side, the track left will be
+            unrepresentative.  Set a MaxStepDistance{x,y,z} which acts as a
+            threshold above which if a step occurs larger than the value (for
+            the dimension), the track will be dropped and restarted after the
+            step. (ie the part before the wrap around will be dropped and the
+            newer part kept).
+          </td>
+                <td>1.0 1.0 1.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>IdChannelArray</th>
+                <td>
+            Specify the name of a scalar array which will be used to fetch
+            the index of each point. This is necessary only if the particles
+            change position (Id order) on each time step. The Id can be used
+            to identify particles at each step and hence track them properly.
+            If this array is set to "Global or Local IDs", the global point
+            ids are used if they exist or the point index is otherwise.
+          </td>
+                <td>Global or Local IDs<span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

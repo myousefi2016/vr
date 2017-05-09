@@ -1,0 +1,11 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTestingClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTestingInteractorClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTestingObjectFactoryClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkTestingRenderingCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTesting.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingInteractor.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Testing/Rendering/vtkTestingObjectFactory.h

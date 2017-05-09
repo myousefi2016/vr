@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>Extract Attributes</title>
+        <meta name="proxy_name" contents="filters.AttributeDataToTableFilter"/>
+        <meta name="filename" contents="filters.AttributeDataToTableFilter.html"/>
+    </head>
+    <body>
+        <h2>Extract Attributes (AttributeDataToTableFilter)</h2>
+        <i>
+            <p>Extract attribute data as a table.</p>
+        </i>
+        <div class="description">This is a
+                     filter that produces a vtkTable from the chosen attribute
+                     in the input dataobject. This filter can accept composite
+                     datasets. If the input is a composite dataset, the output
+                     is a multiblock with vtkTable leaves.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input of the
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataObject</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>FieldAssociation</th>
+                <td>Select the attribute data to pass.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Points (0)</li>
+                            <li>Cells (1)</li>
+                            <li>Field Data (2)</li>
+                            <li>Vertices (4)</li>
+                            <li>Edges (5)</li>
+                            <li>Rows (6)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>AddMetaData</th>
+                <td>It is possible for this filter to add additional
+        meta-data to the field data such as point coordinates (when point
+        attributes are selected and input is pointset) or structured
+        coordinates etc. To enable this addition of extra information, turn
+        this flag on. Off by default.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

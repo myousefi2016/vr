@@ -1,0 +1,61 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAdaptiveSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkBandedPolyDataContourFilterClientServer.cxx
+  CS Wrapping - generating vtkButterflySubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkContourLoopExtractionClientServer.cxx
+  CS Wrapping - generating vtkCookieCutterClientServer.cxx
+  CS Wrapping - generating vtkDijkstraGraphGeodesicPathClientServer.cxx
+  CS Wrapping - generating vtkDijkstraImageGeodesicPathClientServer.cxx
+  CS Wrapping - generating vtkFillHolesFilterClientServer.cxx
+  CS Wrapping - generating vtkGeodesicPathClientServer.cxx
+  CS Wrapping - generating vtkGraphGeodesicPathClientServer.cxx
+  CS Wrapping - generating vtkLinearExtrusionFilterClientServer.cxx
+  CS Wrapping - generating vtkLinearSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkLoopSubdivisionFilterClientServer.cxx
+  CS Wrapping - generating vtkPolyDataPointSamplerClientServer.cxx
+  CS Wrapping - generating vtkProjectedTextureClientServer.cxx
+  CS Wrapping - generating vtkQuadRotationalExtrusionFilterClientServer.cxx
+  CS Wrapping - generating vtkRibbonFilterClientServer.cxx
+  CS Wrapping - generating vtkRotationalExtrusionFilterClientServer.cxx
+  CS Wrapping - generating vtkRuledSurfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkSelectEnclosedPointsClientServer.cxx
+  CS Wrapping - generating vtkSelectPolyDataClientServer.cxx
+  CS Wrapping - generating vtkSpherePuzzleArrowsClientServer.cxx
+  CS Wrapping - generating vtkSpherePuzzleClientServer.cxx
+  CS Wrapping - generating vtkSubdivideTetraClientServer.cxx
+  CS Wrapping - generating vtkOutlineFilterClientServer.cxx
+  CS Wrapping - generating vtkSectorSourceClientServer.cxx
+  CS Wrapping - generating vtkVolumeOfRevolutionFilterClientServer.cxx
+  vtkAdaptiveSubdivisionFilterClientServer.cxx
+  vtkBandedPolyDataContourFilterClientServer.cxx
+  vtkButterflySubdivisionFilterClientServer.cxx
+  vtkContourLoopExtractionClientServer.cxx
+  vtkCookieCutterClientServer.cxx
+  vtkDijkstraGraphGeodesicPathClientServer.cxx
+  vtkDijkstraImageGeodesicPathClientServer.cxx
+  vtkFillHolesFilterClientServer.cxx
+  vtkGeodesicPathClientServer.cxx
+  vtkGraphGeodesicPathClientServer.cxx
+  vtkLinearExtrusionFilterClientServer.cxx
+  vtkLinearSubdivisionFilterClientServer.cxx
+  vtkLoopSubdivisionFilterClientServer.cxx
+  vtkPolyDataPointSamplerClientServer.cxx
+  vtkProjectedTextureClientServer.cxx
+  vtkQuadRotationalExtrusionFilterClientServer.cxx
+  vtkRibbonFilterClientServer.cxx
+  vtkRotationalExtrusionFilterClientServer.cxx
+  vtkRuledSurfaceFilterClientServer.cxx
+  vtkSelectEnclosedPointsClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSelectPolyDataClientServer.cxx
+  vtkSpherePuzzleArrowsClientServer.cxx
+  vtkSpherePuzzleClientServer.cxx
+  vtkSubdivideTetraClientServer.cxx
+  vtkOutlineFilterClientServer.cxx
+  vtkSectorSourceClientServer.cxx
+  vtkVolumeOfRevolutionFilterClientServer.cxx
+  vtkFiltersModelingCSInit.cxx
+  Generating Code...
+  vtkFiltersModelingCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersModelingCS-pv5.3.lib

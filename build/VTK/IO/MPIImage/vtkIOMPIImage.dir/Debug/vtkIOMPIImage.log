@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/MPIImage/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/MPIImage/CMakeFiles/generate.stamp is up-to-date.
+  vtkPNrrdReader.cxx
+  vtkMPIImageReader.cxx
+  vtkIOMPIImageObjectFactory.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOMPIImage-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOMPIImage-pv5.3.exp
+  vtkIOMPIImage.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOMPIImage-pv5.3.dll

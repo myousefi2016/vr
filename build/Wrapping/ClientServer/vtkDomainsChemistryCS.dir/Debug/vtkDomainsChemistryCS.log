@@ -1,0 +1,33 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCMLMoleculeReaderClientServer.cxx
+  CS Wrapping - generating vtkGaussianCubeReader2ClientServer.cxx
+  CS Wrapping - generating vtkMoleculeAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkMoleculeMapperClientServer.cxx
+  CS Wrapping - generating vtkMoleculeToAtomBallFilterClientServer.cxx
+  CS Wrapping - generating vtkMoleculeToBondStickFilterClientServer.cxx
+  CS Wrapping - generating vtkMoleculeToPolyDataFilterClientServer.cxx
+  CS Wrapping - generating vtkPeriodicTableClientServer.cxx
+  CS Wrapping - generating vtkProgrammableElectronicDataClientServer.cxx
+  CS Wrapping - generating vtkProteinRibbonFilterClientServer.cxx
+  CS Wrapping - generating vtkSimpleBondPerceiverClientServer.cxx
+  CS Wrapping - generating vtkVASPAnimationReaderClientServer.cxx
+  CS Wrapping - generating vtkVASPTessellationReaderClientServer.cxx
+  CS Wrapping - generating vtkXYZMolReader2ClientServer.cxx
+  vtkCMLMoleculeReaderClientServer.cxx
+  vtkGaussianCubeReader2ClientServer.cxx
+  vtkMoleculeAlgorithmClientServer.cxx
+  vtkMoleculeMapperClientServer.cxx
+  vtkMoleculeToAtomBallFilterClientServer.cxx
+  vtkMoleculeToBondStickFilterClientServer.cxx
+  vtkMoleculeToPolyDataFilterClientServer.cxx
+  vtkPeriodicTableClientServer.cxx
+  vtkProgrammableElectronicDataClientServer.cxx
+  vtkProteinRibbonFilterClientServer.cxx
+  vtkSimpleBondPerceiverClientServer.cxx
+  vtkVASPAnimationReaderClientServer.cxx
+  vtkVASPTessellationReaderClientServer.cxx
+  vtkXYZMolReader2ClientServer.cxx
+  vtkDomainsChemistryCSInit.cxx
+  Generating Code...
+  vtkDomainsChemistryCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkDomainsChemistryCS-pv5.3.lib

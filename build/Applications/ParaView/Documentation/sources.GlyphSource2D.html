@@ -1,0 +1,70 @@
+
+<html>
+    <head>
+        <title>2D Glyph</title>
+        <meta name="proxy_name" contents="sources.GlyphSource2D"/>
+        <meta name="filename" contents="sources.GlyphSource2D.html"/>
+    </head>
+    <body>
+        <h2>2D Glyph (GlyphSource2D)</h2>
+        <i>
+            <p>Create a 2D glyph (e.g., arrow, cross, dash, etc.)</p>
+        </i>
+        <div class="description">The 2D Glyph source is used
+                     for generating a family of 2D glyphs, each of which lies
+                     in the x-y plane. The output of the 2D Glyph source is
+                     polygonal data.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>GlyphType</th>
+                <td>This property specifies the type of the 2D
+        glyph.</td>
+                <td>9<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Vertex (1)</li>
+                            <li>Dash (2)</li>
+                            <li>Cross (3)</li>
+                            <li>ThickCross (4)</li>
+                            <li>Triangle (5)</li>
+                            <li>Square (6)</li>
+                            <li>Circle (7)</li>
+                            <li>Diamond (8)</li>
+                            <li>Arrow (9)</li>
+                            <li>ThickArrow (10)</li>
+                            <li>HookedArrow (11)</li>
+                            <li>EdgeArrow (12)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Filled</th>
+                <td>If the value of this property is 1, the 2D glyph will be
+        a filled polygon; otherwise, only the edges (line segments) will be
+        included in the output. This only applies to closed 2D
+        glyphs.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>Set the x, y, z coordinates of the origin of the 2D
+        glyph.</td>
+                <td>0.0 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

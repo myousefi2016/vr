@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{60A772ED-A9B5-3181-ADF1-9CBD627C3B0B}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>VPIC</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VPIC.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">vtkVPIC-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VPIC.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">vtkVPIC-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">VPIC.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">vtkVPIC-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">VPIC.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">vtkVPIC-pv5.3</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Debug";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Debug\";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Debug\vtksys-pv5.3.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkVPIC-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Debug/vtkVPIC-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="Release";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"Release\";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\Release\vtksys-pv5.3.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Release/vtkVPIC-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/Release/vtkVPIC-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="MinSizeRel";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"MinSizeRel\";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\MinSizeRel\vtksys-pv5.3.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/MinSizeRel/vtkVPIC-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/MinSizeRel/vtkVPIC-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR="RelWithDebInfo";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_PARALLEL_VPIC;MPICH_IGNORE_CXX_SEEK;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;VTK_IN_VTK;CMAKE_INTDIR=\"RelWithDebInfo\";VPIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Common\Core;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWIML;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\Utilities\KWSys;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)  /machine:x64</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\lib\RelWithDebInfo\vtksys-pv5.3.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;C:\Program Files (x86)\Microsoft SDKs\MPI\lib\x64\msmpi.lib;ws2_32.lib;Psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/RelWithDebInfo/vtkVPIC-pv5.3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/bin/RelWithDebInfo/vtkVPIC-pv5.3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/VPIC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDefinition.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/VPIC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDefinition.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/VPIC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDefinition.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/VPIC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/VPIC/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\module.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkCommonCore.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtkkwiml.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\cmake\paraview-5.3\Modules\vtksys.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\vtkModuleInfo.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDefinition.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\VPIC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDataSet.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICDefinition.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICGlobal.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICHeader.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICPart.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\VPICView.cxx"  />
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\VPIC\GridExchange.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj">
+      <Project>A7ABF817-AB95-33CE-A23D-B18D6C4D18BD</Project>
+      <Name>vtksys</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

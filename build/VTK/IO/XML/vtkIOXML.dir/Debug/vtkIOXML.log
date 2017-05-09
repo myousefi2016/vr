@@ -1,0 +1,52 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/XML/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/XML/CMakeFiles/generate.stamp is up-to-date.
+  vtkRTXMLPolyDataReader.cxx
+  vtkXMLCompositeDataReader.cxx
+  vtkXMLCompositeDataWriter.cxx
+  vtkXMLDataReader.cxx
+  vtkXMLDataSetWriter.cxx
+  vtkXMLFileReadTester.cxx
+  vtkXMLGenericDataObjectReader.cxx
+  vtkXMLHierarchicalBoxDataFileConverter.cxx
+  vtkXMLHierarchicalBoxDataReader.cxx
+  vtkXMLHierarchicalBoxDataWriter.cxx
+  vtkXMLHierarchicalDataReader.cxx
+  vtkXMLHyperOctreeReader.cxx
+  vtkXMLHyperOctreeWriter.cxx
+  vtkXMLImageDataReader.cxx
+  vtkXMLImageDataWriter.cxx
+  vtkXMLMultiBlockDataReader.cxx
+  vtkXMLMultiBlockDataWriter.cxx
+  vtkXMLMultiGroupDataReader.cxx
+  vtkXMLPDataReader.cxx
+  vtkXMLPImageDataReader.cxx
+  Generating Code...
+  Compiling...
+  vtkXMLPolyDataReader.cxx
+  vtkXMLPolyDataWriter.cxx
+  vtkXMLPPolyDataReader.cxx
+  vtkXMLPRectilinearGridReader.cxx
+  vtkXMLPStructuredDataReader.cxx
+  vtkXMLPStructuredGridReader.cxx
+  vtkXMLPUnstructuredDataReader.cxx
+  vtkXMLPUnstructuredGridReader.cxx
+  vtkXMLReader.cxx
+  vtkXMLRectilinearGridReader.cxx
+  vtkXMLRectilinearGridWriter.cxx
+  vtkXMLStructuredDataReader.cxx
+  vtkXMLStructuredDataWriter.cxx
+  vtkXMLStructuredGridReader.cxx
+  vtkXMLStructuredGridWriter.cxx
+  vtkXMLUniformGridAMRReader.cxx
+  vtkXMLUniformGridAMRWriter.cxx
+  vtkXMLUnstructuredDataReader.cxx
+  vtkXMLUnstructuredDataWriter.cxx
+  vtkXMLUnstructuredGridReader.cxx
+  Generating Code...
+  Compiling...
+  vtkXMLUnstructuredGridWriter.cxx
+  vtkXMLWriterC.cxx
+  vtkXMLWriter.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOXML-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOXML-pv5.3.exp
+  vtkIOXML.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOXML-pv5.3.dll

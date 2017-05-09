@@ -1,0 +1,89 @@
+
+<html>
+    <head>
+        <title>Ghost Cells Generator</title>
+        <meta name="proxy_name" contents="filters.GhostCellsGenerator"/>
+        <meta name="filename" contents="filters.GhostCellsGenerator.html"/>
+    </head>
+    <body>
+        <h2>Ghost Cells Generator (GhostCellsGenerator)</h2>
+        <i>
+            <p>Generate ghost cells for unstructured grids.</p>
+        </i>
+        <div class="description">
+                     The GhostCellGenerator filter is available when ParaView is
+                     run in parallel (ie. with MPI). It operates on unstructured
+                     grids only.
+                     This filter does not redistribute the input data, it only
+                     generates ghost cells at processor boundary by fetching
+                     topological and geometrical information of those cells on
+                     neighbor ranks. The filter can take benefit of global point
+                     ids if they are available - if so it will perform faster,
+                     otherwise point coordinates will be exchanged and processed.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the ghost cells
+        generator.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkUnstructuredGrid</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>BuildIfRequired</th>
+                <td>Specify if the filter must generate the ghost cells only
+          if required by the pipeline downstream. To force at least a fixed level
+          of ghosts, this must be set to 0 (unchecked).</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>MinimumNumberOfGhostLevels</th>
+                <td>
+          When <b>BuildIfRequired</b> if off, use this to specify the minimum number of
+          ghost cells to request. The filter may request more ghost levels than indicated if a
+          downstream filter asked for more ghost levels.
+        </td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UseGlobalIds</th>
+                <td>Specify if the filter must take benefit of global point
+        ids if they exist or if point coordinates should be used instead.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>GlobalPointIdsArrayName</th>
+                <td>This property provides the name for the input array
+        containing the global point ids if the GlobalIds array of the point
+        data if not set. Default is GlobalNodeIds.</td>
+                <td>GlobalNodeIds<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

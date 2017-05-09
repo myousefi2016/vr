@@ -1,0 +1,299 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVCatalystSessionCore.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVFilePathEncodingHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVProxyDefinitionIterator.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionBase.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionCore.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionCoreInterpreterHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionServer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIArraySelectionProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIndexSelectionProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSICollaborationManager.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSICompoundSourceProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDataArrayProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDirectoryProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDoubleMapProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDoubleVectorProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIMetaReaderProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIdTypeVectorProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIInputProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIntVectorProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIObject.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxyDefinitionManager.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxyProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSISILProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSISourceProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIStringVectorProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeLabelProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeRangeProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeStepsProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIVectorProperty.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIWriterProxy.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSMMessage.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSMMessageMinimal.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerImplementation/Core/vtkPVMessage.pb.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIVectorPropertyTemplate.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVCatalystSessionCore.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVFilePathEncodingHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVProxyDefinitionIterator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionBase.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionCore.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionCoreInterpreterHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkPVSessionServer.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIArraySelectionProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIndexSelectionProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSICollaborationManager.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSICompoundSourceProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDataArrayProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDirectoryProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDoubleMapProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIDoubleVectorProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIMetaReaderProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIdTypeVectorProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIInputProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIIntVectorProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIObject.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxyDefinitionManager.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIProxyProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSISILProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSISourceProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIStringVectorProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeLabelProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeRangeProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSITimeStepsProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIVectorProperty.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSIWriterProxy.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/vtkSMMessage.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerImplementation/Core/vtkPVServerImplementationCoreModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerImplementation/Core/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/89dee596934807ffd6b02b4ca5c9dedd/vtkPVMessage.pb.h.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkPVServerImplementationCore" ],
+		"name" : "vtkPVServerImplementationCore"
+	}
+}

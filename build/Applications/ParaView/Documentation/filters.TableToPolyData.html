@@ -1,0 +1,97 @@
+
+<html>
+    <head>
+        <title>Table To Points</title>
+        <meta name="proxy_name" contents="filters.TableToPolyData"/>
+        <meta name="filename" contents="filters.TableToPolyData.html"/>
+    </head>
+    <body>
+        <h2>Table To Points (TableToPolyData)</h2>
+        <i>
+            <p>Converts table to set of points.</p>
+        </i>
+        <div class="description">The
+                     TableToPolyData filter converts a vtkTable to a set of
+                     points in a vtkPolyData. One must specifies the columns in
+                     the input table to use as the X, Y and Z coordinates for
+                     the points in the output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input..</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkTable</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (row)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>XColumn</th>
+                <td>This property specifies which data array is going to be
+        used as the X coordinate in the generated polydata
+        dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>YColumn</th>
+                <td>This property specifies which data array is going to be
+        used as the Y coordinate in the generated polydata
+        dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ZColumn</th>
+                <td>This property specifies which data array is going to be
+        used as the Z coordinate in the generated polydata
+        dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>2D Points</th>
+                <td>Specify whether the points of the polydata are 3D or 2D.
+        If this is set to true then the Z Column will be ignored and the z
+        value of each point on the polydata will be set to 0. By default this
+        will be off.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>KeepAllDataArrays</th>
+                <td>Allow user to keep columns specified as X,Y,Z as Data
+        arrays. By default this will be off.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

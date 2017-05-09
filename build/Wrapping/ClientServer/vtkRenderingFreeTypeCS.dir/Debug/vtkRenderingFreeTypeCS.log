@@ -1,0 +1,17 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkFreeTypeStringToImageClientServer.cxx
+  CS Wrapping - generating vtkMathTextFreeTypeTextRendererClientServer.cxx
+  CS Wrapping - generating vtkMathTextUtilitiesClientServer.cxx
+  CS Wrapping - generating vtkTextRendererStringToImageClientServer.cxx
+  CS Wrapping - generating vtkScaledTextActorClientServer.cxx
+  CS Wrapping - generating vtkVectorTextClientServer.cxx
+  vtkFreeTypeStringToImageClientServer.cxx
+  vtkMathTextFreeTypeTextRendererClientServer.cxx
+  vtkMathTextUtilitiesClientServer.cxx
+  vtkTextRendererStringToImageClientServer.cxx
+  vtkScaledTextActorClientServer.cxx
+  vtkVectorTextClientServer.cxx
+  vtkRenderingFreeTypeCSInit.cxx
+  Generating Code...
+  vtkRenderingFreeTypeCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingFreeTypeCS-pv5.3.lib

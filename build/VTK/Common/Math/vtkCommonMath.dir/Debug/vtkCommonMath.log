@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Common/Math/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Common/Math/CMakeFiles/generate.stamp is up-to-date.
+  vtkAmoebaMinimizer.cxx
+  vtkFunctionSet.cxx
+  vtkInitialValueProblemSolver.cxx
+  vtkMatrix3x3.cxx
+  vtkMatrix4x4.cxx
+  vtkPolynomialSolversUnivariate.cxx
+  vtkQuaternionInterpolator.cxx
+  vtkRungeKutta2.cxx
+  vtkRungeKutta4.cxx
+  vtkRungeKutta45.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonMath-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkCommonMath-pv5.3.exp
+  vtkCommonMath.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkCommonMath-pv5.3.dll

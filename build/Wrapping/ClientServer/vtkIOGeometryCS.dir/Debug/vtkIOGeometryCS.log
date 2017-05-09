@@ -1,0 +1,59 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAVSucdReaderClientServer.cxx
+  CS Wrapping - generating vtkBYUReaderClientServer.cxx
+  CS Wrapping - generating vtkBYUWriterClientServer.cxx
+  CS Wrapping - generating vtkChacoReaderClientServer.cxx
+  CS Wrapping - generating vtkFacetWriterClientServer.cxx
+  CS Wrapping - generating vtkFLUENTReaderClientServer.cxx
+  CS Wrapping - generating vtkGAMBITReaderClientServer.cxx
+  CS Wrapping - generating vtkGaussianCubeReaderClientServer.cxx
+  CS Wrapping - generating vtkHoudiniPolyDataWriterClientServer.cxx
+  CS Wrapping - generating vtkIVWriterClientServer.cxx
+  CS Wrapping - generating vtkMCubesReaderClientServer.cxx
+  CS Wrapping - generating vtkMCubesWriterClientServer.cxx
+  CS Wrapping - generating vtkMFIXReaderClientServer.cxx
+  CS Wrapping - generating vtkMoleculeReaderBaseClientServer.cxx
+  CS Wrapping - generating vtkOBJReaderClientServer.cxx
+  CS Wrapping - generating vtkOpenFOAMReaderClientServer.cxx
+  CS Wrapping - generating vtkParticleReaderClientServer.cxx
+  CS Wrapping - generating vtkPDBReaderClientServer.cxx
+  CS Wrapping - generating vtkProStarReaderClientServer.cxx
+  CS Wrapping - generating vtkPTSReaderClientServer.cxx
+  CS Wrapping - generating vtkSTLReaderClientServer.cxx
+  CS Wrapping - generating vtkSTLWriterClientServer.cxx
+  CS Wrapping - generating vtkTecplotReaderClientServer.cxx
+  CS Wrapping - generating vtkUGFacetReaderClientServer.cxx
+  CS Wrapping - generating vtkWindBladeReaderClientServer.cxx
+  CS Wrapping - generating vtkXYZMolReaderClientServer.cxx
+  vtkAVSucdReaderClientServer.cxx
+  vtkBYUReaderClientServer.cxx
+  vtkBYUWriterClientServer.cxx
+  vtkChacoReaderClientServer.cxx
+  vtkFacetWriterClientServer.cxx
+  vtkFLUENTReaderClientServer.cxx
+  vtkGAMBITReaderClientServer.cxx
+  vtkGaussianCubeReaderClientServer.cxx
+  vtkHoudiniPolyDataWriterClientServer.cxx
+  vtkIVWriterClientServer.cxx
+  vtkMCubesReaderClientServer.cxx
+  vtkMCubesWriterClientServer.cxx
+  vtkMFIXReaderClientServer.cxx
+  vtkMoleculeReaderBaseClientServer.cxx
+  vtkOBJReaderClientServer.cxx
+  vtkOpenFOAMReaderClientServer.cxx
+  vtkParticleReaderClientServer.cxx
+  vtkPDBReaderClientServer.cxx
+  vtkProStarReaderClientServer.cxx
+  vtkPTSReaderClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSTLReaderClientServer.cxx
+  vtkSTLWriterClientServer.cxx
+  vtkTecplotReaderClientServer.cxx
+  vtkUGFacetReaderClientServer.cxx
+  vtkWindBladeReaderClientServer.cxx
+  vtkXYZMolReaderClientServer.cxx
+  vtkIOGeometryCSInit.cxx
+  Generating Code...
+  vtkIOGeometryCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOGeometryCS-pv5.3.lib

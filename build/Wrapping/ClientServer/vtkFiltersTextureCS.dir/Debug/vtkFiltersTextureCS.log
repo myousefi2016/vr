@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkTextureMapToCylinderClientServer.cxx
+  CS Wrapping - generating vtkTextureMapToPlaneClientServer.cxx
+  CS Wrapping - generating vtkTextureMapToSphereClientServer.cxx
+  CS Wrapping - generating vtkImplicitTextureCoordsClientServer.cxx
+  CS Wrapping - generating vtkThresholdTextureCoordsClientServer.cxx
+  CS Wrapping - generating vtkTransformTextureCoordsClientServer.cxx
+  CS Wrapping - generating vtkTriangularTCoordsClientServer.cxx
+  vtkTextureMapToCylinderClientServer.cxx
+  vtkTextureMapToPlaneClientServer.cxx
+  vtkTextureMapToSphereClientServer.cxx
+  vtkImplicitTextureCoordsClientServer.cxx
+  vtkThresholdTextureCoordsClientServer.cxx
+  vtkTransformTextureCoordsClientServer.cxx
+  vtkTriangularTCoordsClientServer.cxx
+  vtkFiltersTextureCSInit.cxx
+  Generating Code...
+  vtkFiltersTextureCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersTextureCS-pv5.3.lib

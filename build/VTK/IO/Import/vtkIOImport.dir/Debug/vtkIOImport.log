@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Import/CMakeFiles/generate.stamp is up-to-date.
+  vtk3DSImporter.cxx
+  vtkImporter.cxx
+  vtkVRMLImporter.cxx
+  vtkOBJImporter.cxx
+  vtkOBJImporterInternals.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOImport-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOImport-pv5.3.exp
+  vtkIOImport.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOImport-pv5.3.dll

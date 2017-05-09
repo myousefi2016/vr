@@ -1,0 +1,60 @@
+
+<html>
+    <head>
+        <title>Texture Map to Sphere</title>
+        <meta name="proxy_name" contents="filters.TextureMapToSphere"/>
+        <meta name="filename" contents="filters.TextureMapToSphere.html"/>
+    </head>
+    <body>
+        <h2>Texture Map to Sphere (TextureMapToSphere)</h2>
+        <i>
+            <p>Generate texture coordinates by mapping points to sphere.</p>
+        </i>
+        <div class="description">
+                     This is a filter that generates 2D texture coordinates by
+                     mapping input dataset points onto a sphere. The sphere is
+                     generated automatically. The sphere is generated
+                     automatically by computing the center i.e. averaged
+                     coordinates, of the sphere. Note that the generated
+                     texture coordinates range between (0,1). The s-coordinate
+                     lies in the angular direction around the z-axis, measured
+                     counter-clockwise from the x-axis. The t-coordinate lies
+                     in the angular direction measured down from the north pole
+                     towards the south pole.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>Set the input to the Texture Map to Sphere
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>PreventSeam</th>
+                <td>Control how the texture coordinates are generated. If
+        Prevent Seam is set, the s-coordinate ranges from 0-&gt;1 and 1-&gt;0
+        corresponding to the theta angle variation between 0-&gt;180 and
+        180-&gt;0 degrees. Otherwise, the s-coordinate ranges from 0-&gt;1
+        between 0-&gt;360 degrees.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

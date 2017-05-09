@@ -1,0 +1,47 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerID.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerID.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerInterpreter.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerInterpreter.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerStream.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerStream.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/vtkClientServerInterpreterNoImpl.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ClientServerStream/vtkClientServerModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerStream/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkClientServer" ],
+		"name" : "vtkClientServer"
+	}
+}

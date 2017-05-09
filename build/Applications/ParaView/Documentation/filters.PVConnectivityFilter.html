@@ -1,0 +1,74 @@
+
+<html>
+    <head>
+        <title>Connectivity</title>
+        <meta name="proxy_name" contents="filters.PVConnectivityFilter"/>
+        <meta name="filename" contents="filters.PVConnectivityFilter.html"/>
+    </head>
+    <body>
+        <h2>Connectivity (PVConnectivityFilter)</h2>
+        <i>
+            <p>Mark connected components with integer point attribute array.</p>
+        </i>
+        <div class="description">The Connectivity
+                     filter assigns a region id to connected components of the
+                     input data set. (The region id is assigned as a point
+                     scalar value.) This filter takes any data set type as
+                     input and produces unstructured grid
+                     output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Connectivity
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>ExtractionMode</th>
+                <td>Controls the extraction of connected
+        surfaces.</td>
+                <td>5<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Extract Largest Region (4)</li>
+                            <li>Extract All Regions (5)</li>
+                            <li>Extract Closest Point Region (6)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>ColorRegions</th>
+                <td>Controls the coloring of the connected
+        regions.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ClosestPoint</th>
+                <td>Specifies the point to use in closest point mode.</td>
+                <td>0 0 0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

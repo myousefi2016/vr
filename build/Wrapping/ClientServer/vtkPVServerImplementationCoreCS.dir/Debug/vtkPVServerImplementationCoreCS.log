@@ -1,0 +1,71 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkPVCatalystSessionCoreClientServer.cxx
+  CS Wrapping - generating vtkPVFilePathEncodingHelperClientServer.cxx
+  CS Wrapping - generating vtkPVProxyDefinitionIteratorClientServer.cxx
+  CS Wrapping - generating vtkPVSessionBaseClientServer.cxx
+  CS Wrapping - generating vtkPVSessionCoreClientServer.cxx
+  CS Wrapping - generating vtkPVSessionCoreInterpreterHelperClientServer.cxx
+  CS Wrapping - generating vtkPVSessionServerClientServer.cxx
+  CS Wrapping - generating vtkSIArraySelectionPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIIndexSelectionPropertyClientServer.cxx
+  CS Wrapping - generating vtkSICollaborationManagerClientServer.cxx
+  CS Wrapping - generating vtkSICompoundSourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSIDataArrayPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIDirectoryProxyClientServer.cxx
+  CS Wrapping - generating vtkSIDoubleMapPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIDoubleVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIMetaReaderProxyClientServer.cxx
+  CS Wrapping - generating vtkSIIdTypeVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIInputPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIIntVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIObjectClientServer.cxx
+  CS Wrapping - generating vtkSIPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIProxyClientServer.cxx
+  CS Wrapping - generating vtkSIProxyDefinitionManagerClientServer.cxx
+  CS Wrapping - generating vtkSIProxyPropertyClientServer.cxx
+  CS Wrapping - generating vtkSISILPropertyClientServer.cxx
+  CS Wrapping - generating vtkSISourceProxyClientServer.cxx
+  CS Wrapping - generating vtkSIStringVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSITimeLabelPropertyClientServer.cxx
+  CS Wrapping - generating vtkSITimeRangePropertyClientServer.cxx
+  CS Wrapping - generating vtkSITimeStepsPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIVectorPropertyClientServer.cxx
+  CS Wrapping - generating vtkSIWriterProxyClientServer.cxx
+  vtkPVCatalystSessionCoreClientServer.cxx
+  vtkPVFilePathEncodingHelperClientServer.cxx
+  vtkPVProxyDefinitionIteratorClientServer.cxx
+  vtkPVSessionBaseClientServer.cxx
+  vtkPVSessionCoreClientServer.cxx
+  vtkPVSessionCoreInterpreterHelperClientServer.cxx
+  vtkPVSessionServerClientServer.cxx
+  vtkSIArraySelectionPropertyClientServer.cxx
+  vtkSIIndexSelectionPropertyClientServer.cxx
+  vtkSICollaborationManagerClientServer.cxx
+  vtkSICompoundSourceProxyClientServer.cxx
+  vtkSIDataArrayPropertyClientServer.cxx
+  vtkSIDirectoryProxyClientServer.cxx
+  vtkSIDoubleMapPropertyClientServer.cxx
+  vtkSIDoubleVectorPropertyClientServer.cxx
+  vtkSIMetaReaderProxyClientServer.cxx
+  vtkSIIdTypeVectorPropertyClientServer.cxx
+  vtkSIInputPropertyClientServer.cxx
+  vtkSIIntVectorPropertyClientServer.cxx
+  vtkSIObjectClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSIPropertyClientServer.cxx
+  vtkSIProxyClientServer.cxx
+  vtkSIProxyDefinitionManagerClientServer.cxx
+  vtkSIProxyPropertyClientServer.cxx
+  vtkSISILPropertyClientServer.cxx
+  vtkSISourceProxyClientServer.cxx
+  vtkSIStringVectorPropertyClientServer.cxx
+  vtkSITimeLabelPropertyClientServer.cxx
+  vtkSITimeRangePropertyClientServer.cxx
+  vtkSITimeStepsPropertyClientServer.cxx
+  vtkSIVectorPropertyClientServer.cxx
+  vtkSIWriterProxyClientServer.cxx
+  vtkPVServerImplementationCoreCSInit.cxx
+  Generating Code...
+  vtkPVServerImplementationCoreCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVServerImplementationCoreCS-pv5.3.lib

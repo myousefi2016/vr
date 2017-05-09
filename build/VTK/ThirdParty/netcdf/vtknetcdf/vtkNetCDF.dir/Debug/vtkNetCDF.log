@@ -1,0 +1,44 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/netcdf/vtknetcdf/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/netcdf/vtknetcdf/CMakeFiles/generate.stamp is up-to-date.
+  string.c
+  v1hpg.c
+  utf8proc.c
+  nclistmgr.c
+  putget.c
+  attr.c
+  nc3dispatch.c
+  nc.c
+  ncx.c
+  lookup3.c
+  posixio.c
+  error4.c
+  nc4dispatch.c
+  nc4attr.c
+  nc4dim.c
+  nc4file.c
+  nc4grp.c
+  nc4type.c
+  nc4var.c
+  ncfunc.c
+  Generating Code...
+  Compiling...
+  nc4internal.c
+  nc4hdf.c
+  parallel.c
+  copy.c
+  file.c
+  att.c
+  error.c
+  dispatch.c
+  nc_url.c
+  nclist.c
+  ncbytes.c
+  nc4.c
+  stub.c
+  Generating Code...
+  var.c
+  dim.c
+  dim.c
+  var.c
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkNetCDF-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkNetCDF-pv5.3.exp
+  vtkNetCDF.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkNetCDF-pv5.3.dll

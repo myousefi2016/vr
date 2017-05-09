@@ -1,0 +1,39 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAutoCorrelativeStatisticsClientServer.cxx
+  CS Wrapping - generating vtkBivariateLinearTableThresholdClientServer.cxx
+  CS Wrapping - generating vtkComputeQuartilesClientServer.cxx
+  CS Wrapping - generating vtkContingencyStatisticsClientServer.cxx
+  CS Wrapping - generating vtkCorrelativeStatisticsClientServer.cxx
+  CS Wrapping - generating vtkDescriptiveStatisticsClientServer.cxx
+  CS Wrapping - generating vtkHighestDensityRegionsStatisticsClientServer.cxx
+  CS Wrapping - generating vtkExtractFunctionalBagPlotClientServer.cxx
+  CS Wrapping - generating vtkKMeansDistanceFunctorCalculatorClientServer.cxx
+  CS Wrapping - generating vtkKMeansDistanceFunctorClientServer.cxx
+  CS Wrapping - generating vtkKMeansStatisticsClientServer.cxx
+  CS Wrapping - generating vtkMultiCorrelativeStatisticsClientServer.cxx
+  CS Wrapping - generating vtkOrderStatisticsClientServer.cxx
+  CS Wrapping - generating vtkPCAStatisticsClientServer.cxx
+  CS Wrapping - generating vtkStatisticsAlgorithmClientServer.cxx
+  CS Wrapping - generating vtkStrahlerMetricClientServer.cxx
+  CS Wrapping - generating vtkStreamingStatisticsClientServer.cxx
+  vtkAutoCorrelativeStatisticsClientServer.cxx
+  vtkBivariateLinearTableThresholdClientServer.cxx
+  vtkComputeQuartilesClientServer.cxx
+  vtkContingencyStatisticsClientServer.cxx
+  vtkCorrelativeStatisticsClientServer.cxx
+  vtkDescriptiveStatisticsClientServer.cxx
+  vtkHighestDensityRegionsStatisticsClientServer.cxx
+  vtkExtractFunctionalBagPlotClientServer.cxx
+  vtkKMeansDistanceFunctorCalculatorClientServer.cxx
+  vtkKMeansDistanceFunctorClientServer.cxx
+  vtkKMeansStatisticsClientServer.cxx
+  vtkMultiCorrelativeStatisticsClientServer.cxx
+  vtkOrderStatisticsClientServer.cxx
+  vtkPCAStatisticsClientServer.cxx
+  vtkStatisticsAlgorithmClientServer.cxx
+  vtkStrahlerMetricClientServer.cxx
+  vtkStreamingStatisticsClientServer.cxx
+  vtkFiltersStatisticsCSInit.cxx
+  Generating Code...
+  vtkFiltersStatisticsCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersStatisticsCS-pv5.3.lib

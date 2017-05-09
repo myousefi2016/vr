@@ -1,0 +1,93 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkRTXMLPolyDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLCompositeDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLCompositeDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLDataSetWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLFileReadTesterClientServer.cxx
+  CS Wrapping - generating vtkXMLGenericDataObjectReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLHierarchicalBoxDataFileConverterClientServer.cxx
+  CS Wrapping - generating vtkXMLHierarchicalBoxDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLHierarchicalBoxDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLHierarchicalDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLHyperOctreeReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLHyperOctreeWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLImageDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLImageDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLMultiBlockDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLMultiBlockDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLMultiGroupDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPImageDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPolyDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPolyDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPPolyDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPRectilinearGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPStructuredDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPStructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPUnstructuredDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLPUnstructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLRectilinearGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLRectilinearGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLStructuredDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLStructuredDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLStructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLStructuredGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLUniformGridAMRReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLUniformGridAMRWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLUnstructuredDataReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLUnstructuredDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLUnstructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkXMLUnstructuredGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLWriterClientServer.cxx
+  vtkRTXMLPolyDataReaderClientServer.cxx
+  vtkXMLCompositeDataReaderClientServer.cxx
+  vtkXMLCompositeDataWriterClientServer.cxx
+  vtkXMLDataReaderClientServer.cxx
+  vtkXMLDataSetWriterClientServer.cxx
+  vtkXMLFileReadTesterClientServer.cxx
+  vtkXMLGenericDataObjectReaderClientServer.cxx
+  vtkXMLHierarchicalBoxDataFileConverterClientServer.cxx
+  vtkXMLHierarchicalBoxDataReaderClientServer.cxx
+  vtkXMLHierarchicalBoxDataWriterClientServer.cxx
+  vtkXMLHierarchicalDataReaderClientServer.cxx
+  vtkXMLHyperOctreeReaderClientServer.cxx
+  vtkXMLHyperOctreeWriterClientServer.cxx
+  vtkXMLImageDataReaderClientServer.cxx
+  vtkXMLImageDataWriterClientServer.cxx
+  vtkXMLMultiBlockDataReaderClientServer.cxx
+  vtkXMLMultiBlockDataWriterClientServer.cxx
+  vtkXMLMultiGroupDataReaderClientServer.cxx
+  vtkXMLPDataReaderClientServer.cxx
+  vtkXMLPImageDataReaderClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkXMLPolyDataReaderClientServer.cxx
+  vtkXMLPolyDataWriterClientServer.cxx
+  vtkXMLPPolyDataReaderClientServer.cxx
+  vtkXMLPRectilinearGridReaderClientServer.cxx
+  vtkXMLPStructuredDataReaderClientServer.cxx
+  vtkXMLPStructuredGridReaderClientServer.cxx
+  vtkXMLPUnstructuredDataReaderClientServer.cxx
+  vtkXMLPUnstructuredGridReaderClientServer.cxx
+  vtkXMLReaderClientServer.cxx
+  vtkXMLRectilinearGridReaderClientServer.cxx
+  vtkXMLRectilinearGridWriterClientServer.cxx
+  vtkXMLStructuredDataReaderClientServer.cxx
+  vtkXMLStructuredDataWriterClientServer.cxx
+  vtkXMLStructuredGridReaderClientServer.cxx
+  vtkXMLStructuredGridWriterClientServer.cxx
+  vtkXMLUniformGridAMRReaderClientServer.cxx
+  vtkXMLUniformGridAMRWriterClientServer.cxx
+  vtkXMLUnstructuredDataReaderClientServer.cxx
+  vtkXMLUnstructuredDataWriterClientServer.cxx
+  vtkXMLUnstructuredGridReaderClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkXMLUnstructuredGridWriterClientServer.cxx
+  vtkXMLWriterClientServer.cxx
+  vtkIOXMLCSInit.cxx
+  Generating Code...
+  vtkIOXMLCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOXMLCS-pv5.3.lib

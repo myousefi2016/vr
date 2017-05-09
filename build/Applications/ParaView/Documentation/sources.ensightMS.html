@@ -1,0 +1,106 @@
+
+<html>
+    <head>
+        <title>EnSight Master Server Reader</title>
+        <meta name="proxy_name" contents="sources.ensightMS"/>
+        <meta name="filename" contents="sources.ensightMS.html"/>
+    </head>
+    <body>
+        <h2>EnSight Master Server Reader (ensightMS)</h2>
+        <i>
+            <p>Reads files in EnSight's Master Server format.</p>
+        </i>
+        <div class="description">The EnSight
+                     Master Server reader reads EnSight's parallel files. The
+                     master file ususally has a .sos extension and may point to
+                     multiple .case files. The output is a multi-block
+                     dataset.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>CaseFileName</th>
+                <td>This property specifies the name of the .sos file for
+        the EnSight Master Server reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ByteOrder</th>
+                <td>This property indicates the byte order of the binary
+        file(s).</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>BigEndian (0)</li>
+                            <li>LittleEndian (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>SetTimeValue</th>
+                <td>This property indicates which time value to
+        read.</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>CellArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Cell Arrays</th>
+                <td>This property lists which cell-centered arrays to
+        read.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PointArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Point Arrays</th>
+                <td>This property lists which point-centered arrays to
+        read.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

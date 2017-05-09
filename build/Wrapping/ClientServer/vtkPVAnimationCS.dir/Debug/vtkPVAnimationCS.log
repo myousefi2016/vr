@@ -1,0 +1,63 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkCompositeAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkPVAnimationCueClientServer.cxx
+  CS Wrapping - generating vtkPVBooleanKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVCameraAnimationCueClientServer.cxx
+  CS Wrapping - generating vtkPVCameraCueManipulatorClientServer.cxx
+  CS Wrapping - generating vtkPVCameraKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVCueManipulatorClientServer.cxx
+  CS Wrapping - generating vtkPVExponentialKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVKeyFrameAnimationCueClientServer.cxx
+  CS Wrapping - generating vtkPVKeyFrameAnimationCueForProxiesClientServer.cxx
+  CS Wrapping - generating vtkPVKeyFrameCueManipulatorClientServer.cxx
+  CS Wrapping - generating vtkPVKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVRampKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkPVRepresentationAnimationHelperClientServer.cxx
+  CS Wrapping - generating vtkPVServerSideAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkPVSinusoidKeyFrameClientServer.cxx
+  CS Wrapping - generating vtkRealtimeAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkSequenceAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkSIXMLAnimationWriterRepresentationPropertyClientServer.cxx
+  CS Wrapping - generating vtkSMAnimationSceneClientServer.cxx
+  CS Wrapping - generating vtkSMAnimationSceneGeometryWriterClientServer.cxx
+  CS Wrapping - generating vtkSMAnimationSceneImageWriterClientServer.cxx
+  CS Wrapping - generating vtkSMAnimationSceneProxyClientServer.cxx
+  CS Wrapping - generating vtkSMAnimationSceneWriterClientServer.cxx
+  CS Wrapping - generating vtkTimestepsAnimationPlayerClientServer.cxx
+  CS Wrapping - generating vtkXMLPVAnimationWriterClientServer.cxx
+  vtkAnimationPlayerClientServer.cxx
+  vtkCompositeAnimationPlayerClientServer.cxx
+  vtkPVAnimationCueClientServer.cxx
+  vtkPVBooleanKeyFrameClientServer.cxx
+  vtkPVCameraAnimationCueClientServer.cxx
+  vtkPVCameraCueManipulatorClientServer.cxx
+  vtkPVCameraKeyFrameClientServer.cxx
+  vtkPVCompositeKeyFrameClientServer.cxx
+  vtkPVCueManipulatorClientServer.cxx
+  vtkPVExponentialKeyFrameClientServer.cxx
+  vtkPVKeyFrameAnimationCueClientServer.cxx
+  vtkPVKeyFrameAnimationCueForProxiesClientServer.cxx
+  vtkPVKeyFrameCueManipulatorClientServer.cxx
+  vtkPVKeyFrameClientServer.cxx
+  vtkPVRampKeyFrameClientServer.cxx
+  vtkPVRepresentationAnimationHelperClientServer.cxx
+  vtkPVServerSideAnimationPlayerClientServer.cxx
+  vtkPVSinusoidKeyFrameClientServer.cxx
+  vtkRealtimeAnimationPlayerClientServer.cxx
+  vtkSequenceAnimationPlayerClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkSIXMLAnimationWriterRepresentationPropertyClientServer.cxx
+  vtkSMAnimationSceneClientServer.cxx
+  vtkSMAnimationSceneGeometryWriterClientServer.cxx
+  vtkSMAnimationSceneImageWriterClientServer.cxx
+  vtkSMAnimationSceneProxyClientServer.cxx
+  vtkSMAnimationSceneWriterClientServer.cxx
+  vtkTimestepsAnimationPlayerClientServer.cxx
+  vtkXMLPVAnimationWriterClientServer.cxx
+  vtkPVAnimationCSInit.cxx
+  Generating Code...
+  vtkPVAnimationCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVAnimationCS-pv5.3.lib

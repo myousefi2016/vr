@@ -1,0 +1,111 @@
+
+<html>
+    <head>
+        <title>Hierarchical Fractal</title>
+        <meta name="proxy_name" contents="sources.HierarchicalFractal"/>
+        <meta name="filename" contents="sources.HierarchicalFractal.html"/>
+    </head>
+    <body>
+        <h2>Hierarchical Fractal (HierarchicalFractal)</h2>
+        <i>
+            <p>Test source for AMR with HierarchicalDataSet</p>
+        </i>
+        <div class="description">The Hierarchical Fractal
+                     source is a collection of uniform grids. All have the same
+                     dimensions. Each block has a different origin and spacing.
+                     This source uses the Mandelbrot source to create cell
+                     data. The fractal array is scaled to look like a volume
+                     fraction.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Dimensions</th>
+                <td>This property specifies the X, Y, Z cell dimensions of a
+        block.</td>
+                <td>10<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FractalValue</th>
+                <td>The value of this property will be mapped to 0.5 for use
+        as a volume fraction.</td>
+                <td>9.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaximumLevel</th>
+                <td>This property specifies how many levels of refinement
+        should be included in this hierarchical dataset.</td>
+                <td>5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>GhostLevels</th>
+                <td>This property specifies whether ghost levels should be
+        generated at processor boundaries.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TwoDimensional</th>
+                <td>If this property is set to 1, the generated dataset will
+        be 2D; otherwise it will be 3D.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Asymetric</th>
+                <td>If this property is set to 0, all the blocks will be the
+        same size. If it is set to 1, an asymmetric dataset will be created:
+        some blocks will have an X dimension that is larger by 2
+        units.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>RectilinearGrids</th>
+                <td>If this property is set to 1, the hierarchical dataset
+        will contain rectilinear grids; otherwise it will contain uniform
+        grids.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimeStepRangeInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TimeStep</th>
+                <td>This property specifies the timestep to use for this
+        dataset.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Morphological/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Imaging/Morphological/CMakeFiles/generate.stamp is up-to-date.
+  vtkImageConnector.cxx
+  vtkImageConnectivityFilter.cxx
+  vtkImageContinuousDilate3D.cxx
+  vtkImageContinuousErode3D.cxx
+  vtkImageDilateErode3D.cxx
+  vtkImageIslandRemoval2D.cxx
+  vtkImageNonMaximumSuppression.cxx
+  vtkImageOpenClose3D.cxx
+  vtkImageSeedConnectivity.cxx
+  vtkImageSkeleton2D.cxx
+  vtkImageThresholdConnectivity.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingMorphological-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingMorphological-pv5.3.exp
+  vtkImagingMorphological.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkImagingMorphological-pv5.3.dll

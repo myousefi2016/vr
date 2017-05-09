@@ -1,0 +1,111 @@
+
+<html>
+    <head>
+        <title>Compute Derivatives</title>
+        <meta name="proxy_name" contents="filters.CellDerivatives"/>
+        <meta name="filename" contents="filters.CellDerivatives.html"/>
+    </head>
+    <body>
+        <h2>Compute Derivatives (CellDerivatives)</h2>
+        <i>
+            <p>This filter computes derivatives of scalars and vectors.</p>
+        </i>
+        <div class="description">
+                     CellDerivatives is a filter that computes derivatives of
+                     scalars and vectors at the center of cells. You can choose
+                     to generate different output including the scalar gradient
+                     (a vector), computed tensor vorticity (a vector), gradient
+                     of input vectors (a tensor), and strain matrix of the
+                     input vectors (a tensor); or you may choose to pass data
+                     through to the output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 1 component(s).
+      </p>
+                    <p>
+      The dataset must contain a field array (point)
+      
+        with 3 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Scalars</th>
+                <td>This property indicates the name of the scalar array to
+        differentiate.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Vectors</th>
+                <td>This property indicates the name of the vector array to
+        differentiate.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>An array of vectors is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>OutputVectorType</th>
+                <td>This property Controls how the filter works to generate
+        vector cell data. You can choose to compute the gradient of the input
+        scalars, or extract the vorticity of the computed vector gradient
+        tensor. By default, the filter will take the gradient of the input
+        scalar data.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Nothing (0)</li>
+                            <li>Scalar Gradient (1)</li>
+                            <li>Vorticity (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>OutputTensorType</th>
+                <td>This property controls how the filter works to generate
+        tensor cell data. You can choose to compute the gradient of the input
+        vectors, or compute the strain tensor of the vector gradient tensor. By
+        default, the filter will take the gradient of the vector data to
+        construct a tensor.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Nothing (0)</li>
+                            <li>Vector Gradient (1)</li>
+                            <li>Strain (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

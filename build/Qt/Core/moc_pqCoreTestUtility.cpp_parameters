@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Core/moc_pqCoreTestUtility.cpp
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Core/pqCoreTestUtility.h

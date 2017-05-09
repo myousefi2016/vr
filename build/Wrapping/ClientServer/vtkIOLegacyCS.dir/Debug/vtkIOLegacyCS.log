@@ -1,0 +1,63 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCompositeDataReaderClientServer.cxx
+  CS Wrapping - generating vtkCompositeDataWriterClientServer.cxx
+  CS Wrapping - generating vtkDataObjectReaderClientServer.cxx
+  CS Wrapping - generating vtkDataObjectWriterClientServer.cxx
+  CS Wrapping - generating vtkDataReaderClientServer.cxx
+  CS Wrapping - generating vtkDataSetReaderClientServer.cxx
+  CS Wrapping - generating vtkDataSetWriterClientServer.cxx
+  CS Wrapping - generating vtkDataWriterClientServer.cxx
+  CS Wrapping - generating vtkGenericDataObjectReaderClientServer.cxx
+  CS Wrapping - generating vtkGenericDataObjectWriterClientServer.cxx
+  CS Wrapping - generating vtkGraphReaderClientServer.cxx
+  CS Wrapping - generating vtkGraphWriterClientServer.cxx
+  CS Wrapping - generating vtkPolyDataReaderClientServer.cxx
+  CS Wrapping - generating vtkPolyDataWriterClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridReaderClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridWriterClientServer.cxx
+  CS Wrapping - generating vtkSimplePointsReaderClientServer.cxx
+  CS Wrapping - generating vtkSimplePointsWriterClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridWriterClientServer.cxx
+  CS Wrapping - generating vtkStructuredPointsReaderClientServer.cxx
+  CS Wrapping - generating vtkStructuredPointsWriterClientServer.cxx
+  CS Wrapping - generating vtkTableReaderClientServer.cxx
+  CS Wrapping - generating vtkTableWriterClientServer.cxx
+  CS Wrapping - generating vtkTreeReaderClientServer.cxx
+  CS Wrapping - generating vtkTreeWriterClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridReaderClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridWriterClientServer.cxx
+  vtkCompositeDataReaderClientServer.cxx
+  vtkCompositeDataWriterClientServer.cxx
+  vtkDataObjectReaderClientServer.cxx
+  vtkDataObjectWriterClientServer.cxx
+  vtkDataReaderClientServer.cxx
+  vtkDataSetReaderClientServer.cxx
+  vtkDataSetWriterClientServer.cxx
+  vtkDataWriterClientServer.cxx
+  vtkGenericDataObjectReaderClientServer.cxx
+  vtkGenericDataObjectWriterClientServer.cxx
+  vtkGraphReaderClientServer.cxx
+  vtkGraphWriterClientServer.cxx
+  vtkPolyDataReaderClientServer.cxx
+  vtkPolyDataWriterClientServer.cxx
+  vtkRectilinearGridReaderClientServer.cxx
+  vtkRectilinearGridWriterClientServer.cxx
+  vtkSimplePointsReaderClientServer.cxx
+  vtkSimplePointsWriterClientServer.cxx
+  vtkStructuredGridReaderClientServer.cxx
+  vtkStructuredGridWriterClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkStructuredPointsReaderClientServer.cxx
+  vtkStructuredPointsWriterClientServer.cxx
+  vtkTableReaderClientServer.cxx
+  vtkTableWriterClientServer.cxx
+  vtkTreeReaderClientServer.cxx
+  vtkTreeWriterClientServer.cxx
+  vtkUnstructuredGridReaderClientServer.cxx
+  vtkUnstructuredGridWriterClientServer.cxx
+  vtkIOLegacyCSInit.cxx
+  Generating Code...
+  vtkIOLegacyCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOLegacyCS-pv5.3.lib

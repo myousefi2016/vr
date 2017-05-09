@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title>Merge Blocks</title>
+        <meta name="proxy_name" contents="filters.MergeBlocks"/>
+        <meta name="filename" contents="filters.MergeBlocks.html"/>
+    </head>
+    <body>
+        <h2>Merge Blocks (MergeBlocks)</h2>
+        <i>
+            <p>Appends vtkCompositeDataSet leaves into a single vtkUnstructuredGrid</p>
+        </i>
+        <div class="description">
+      vtkCompositeDataToUnstructuredGridFilter appends all vtkDataSet leaves of
+      the input composite dataset to a single unstructure grid. The subtree to
+      be combined can be choosen using the SubTreeCompositeIndex. If the
+      SubTreeCompositeIndex is a leaf node, then no appending is
+      required.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>Set the input composite dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkCompositeDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>SubTreeCompositeIndex</th>
+                <td>Select the index of the subtree to be appended. For now,
+        this property is internal.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Merge Points</th>
+                <td/>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

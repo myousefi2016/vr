@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <title>Extract Cells By Region</title>
+        <meta name="proxy_name" contents="filters.ExtractGeometry"/>
+        <meta name="filename" contents="filters.ExtractGeometry.html"/>
+    </head>
+    <body>
+        <h2>Extract Cells By Region (ExtractGeometry)</h2>
+        <i>
+            <p>This filter extracts cells that are inside/outside a region or at a region boundary.</p>
+        </i>
+        <div class="description">
+      This filter extracts from its input dataset all cells that are either
+      completely inside or outside of a specified region (implicit function).
+      On output, the filter generates an unstructured grid. To use this filter
+      you must specify a region (implicit function). You must also specify
+      whethter to extract cells lying inside or outside of the region. An
+      option exists to extract cells that are neither inside or outside (i.e.,
+      boundary).</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Slice
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Intersect With</th>
+                <td>This property sets the region used to extract
+        cells.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value can be one of the following:<ul>
+                            <li>Plane (implicit_functions)
+        </li>
+                            <li>Box (implicit_functions)
+        </li>
+                            <li>Sphere (implicit_functions)
+        </li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>InputBounds</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Extraction Side</th>
+                <td>This parameter controls whether to extract cells that
+        are inside or outside the region.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>outside (0)</li>
+                            <li>inside (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Extract only intersected</th>
+                <td>This parameter controls whether to extract only cells
+        that are on the boundary of the region. If this parameter is set, the
+        Extraction Side parameter is ignored. If Extract Intersected is off,
+        this parameter has no effect.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Extract intersected</th>
+                <td>This parameter controls whether to extract cells that
+        are on the boundary of the region.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

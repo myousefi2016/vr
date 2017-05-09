@@ -1,0 +1,77 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkBMPReaderClientServer.cxx
+  CS Wrapping - generating vtkBMPWriterClientServer.cxx
+  CS Wrapping - generating vtkDEMReaderClientServer.cxx
+  CS Wrapping - generating vtkDICOMImageReaderClientServer.cxx
+  CS Wrapping - generating vtkGESignaReaderClientServer.cxx
+  CS Wrapping - generating vtkImageExportClientServer.cxx
+  CS Wrapping - generating vtkImageImportClientServer.cxx
+  CS Wrapping - generating vtkImageImportExecutiveClientServer.cxx
+  CS Wrapping - generating vtkImageReaderClientServer.cxx
+  CS Wrapping - generating vtkImageReader2ClientServer.cxx
+  CS Wrapping - generating vtkImageReader2CollectionClientServer.cxx
+  CS Wrapping - generating vtkImageReader2FactoryClientServer.cxx
+  CS Wrapping - generating vtkImageWriterClientServer.cxx
+  CS Wrapping - generating vtkJPEGReaderClientServer.cxx
+  CS Wrapping - generating vtkJPEGWriterClientServer.cxx
+  CS Wrapping - generating vtkJSONImageWriterClientServer.cxx
+  CS Wrapping - generating vtkMedicalImagePropertiesClientServer.cxx
+  CS Wrapping - generating vtkMedicalImageReader2ClientServer.cxx
+  CS Wrapping - generating vtkMetaImageReaderClientServer.cxx
+  CS Wrapping - generating vtkMetaImageWriterClientServer.cxx
+  CS Wrapping - generating vtkNIFTIImageHeaderClientServer.cxx
+  CS Wrapping - generating vtkNIFTIImageReaderClientServer.cxx
+  CS Wrapping - generating vtkNIFTIImageWriterClientServer.cxx
+  CS Wrapping - generating vtkNrrdReaderClientServer.cxx
+  CS Wrapping - generating vtkPNGReaderClientServer.cxx
+  CS Wrapping - generating vtkPNGWriterClientServer.cxx
+  CS Wrapping - generating vtkPNMReaderClientServer.cxx
+  CS Wrapping - generating vtkPNMWriterClientServer.cxx
+  CS Wrapping - generating vtkPostScriptWriterClientServer.cxx
+  CS Wrapping - generating vtkSLCReaderClientServer.cxx
+  CS Wrapping - generating vtkTIFFReaderClientServer.cxx
+  CS Wrapping - generating vtkTIFFWriterClientServer.cxx
+  CS Wrapping - generating vtkVolume16ReaderClientServer.cxx
+  CS Wrapping - generating vtkVolumeReaderClientServer.cxx
+  CS Wrapping - generating vtkMRCReaderClientServer.cxx
+  vtkBMPReaderClientServer.cxx
+  vtkBMPWriterClientServer.cxx
+  vtkDEMReaderClientServer.cxx
+  vtkDICOMImageReaderClientServer.cxx
+  vtkGESignaReaderClientServer.cxx
+  vtkImageExportClientServer.cxx
+  vtkImageImportClientServer.cxx
+  vtkImageImportExecutiveClientServer.cxx
+  vtkImageReaderClientServer.cxx
+  vtkImageReader2ClientServer.cxx
+  vtkImageReader2CollectionClientServer.cxx
+  vtkImageReader2FactoryClientServer.cxx
+  vtkImageWriterClientServer.cxx
+  vtkJPEGReaderClientServer.cxx
+  vtkJPEGWriterClientServer.cxx
+  vtkJSONImageWriterClientServer.cxx
+  vtkMedicalImagePropertiesClientServer.cxx
+  vtkMedicalImageReader2ClientServer.cxx
+  vtkMetaImageReaderClientServer.cxx
+  vtkMetaImageWriterClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkNIFTIImageHeaderClientServer.cxx
+  vtkNIFTIImageReaderClientServer.cxx
+  vtkNIFTIImageWriterClientServer.cxx
+  vtkNrrdReaderClientServer.cxx
+  vtkPNGReaderClientServer.cxx
+  vtkPNGWriterClientServer.cxx
+  vtkPNMReaderClientServer.cxx
+  vtkPNMWriterClientServer.cxx
+  vtkPostScriptWriterClientServer.cxx
+  vtkSLCReaderClientServer.cxx
+  vtkTIFFReaderClientServer.cxx
+  vtkTIFFWriterClientServer.cxx
+  vtkVolume16ReaderClientServer.cxx
+  vtkVolumeReaderClientServer.cxx
+  vtkMRCReaderClientServer.cxx
+  vtkIOImageCSInit.cxx
+  Generating Code...
+  vtkIOImageCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOImageCS-pv5.3.lib

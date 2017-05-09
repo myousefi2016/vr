@@ -1,0 +1,30 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/src/ice-t/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/src/ice-t/CMakeFiles/generate.stamp is up-to-date.
+  porting.c
+  context.c
+  state.c
+  diagnostics.c
+  communication.c
+  tiles.c
+  timing.c
+  matrix.c
+  projections.c
+  draw.c
+  image.c
+  common.c
+  select.c
+  direct.c
+  sequential.c
+  split.c
+  reduce.c
+  vtree.c
+  bswap.c
+  radixk.c
+  Generating Code...
+  Compiling...
+  radixkr.c
+  tree.c
+  automatic.c
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTCore.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/IceTCore.exp
+  IceTCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\IceTCore.dll

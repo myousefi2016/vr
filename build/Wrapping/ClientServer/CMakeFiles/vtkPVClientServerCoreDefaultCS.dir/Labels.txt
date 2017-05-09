@@ -1,0 +1,19 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkNetworkImageSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVEnsembleDataReaderInformationClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVEnvironmentInformationClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVEnvironmentInformationHelperClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVFileInformationClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVSingleOutputExtractSelectionClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkSliceAlongPolyPlaneClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkPVClientServerCoreDefaultCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkNetworkImageSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkPVEnsembleDataReaderInformation.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkPVEnvironmentInformation.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkPVEnvironmentInformationHelper.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkPVFileInformation.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkPVSingleOutputExtractSelection.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ClientServerCore/Default/vtkSliceAlongPolyPlane.h

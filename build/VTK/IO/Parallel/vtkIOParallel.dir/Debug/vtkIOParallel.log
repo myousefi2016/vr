@@ -1,0 +1,18 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Parallel/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Parallel/CMakeFiles/generate.stamp is up-to-date.
+  vtkEnSightWriter.cxx
+  vtkMultiBlockPLOT3DReader.cxx
+  vtkMultiBlockPLOT3DReaderInternals.cxx
+  vtkPlot3DMetaReader.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'Json::Exception'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: see declaration of 'std::exception'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): note: see declaration of 'Json::Exception'
+  vtkPChacoReader.cxx
+  vtkPDataSetReader.cxx
+  vtkPDataSetWriter.cxx
+  vtkPImageWriter.cxx
+  vtkPOpenFOAMReader.cxx
+  vtkPSLACReader.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOParallel-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOParallel-pv5.3.exp
+  vtkIOParallel.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOParallel-pv5.3.dll

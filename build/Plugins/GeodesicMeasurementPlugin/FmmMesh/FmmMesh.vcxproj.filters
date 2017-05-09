@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Face.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_FaceIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_SmartCounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Vertex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_VertexIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicFace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicPath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicVertex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Linear.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Quadratic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Cubic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Face.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_FaceIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_VertexIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_core\GW_SmartCounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicFace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicPath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_GeodesicVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Linear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Quadratic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\gw_geodesic\GW_TriangularInterpolation_Cubic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\GeodesicMeasurementPlugin\FmmMesh\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3BFCE233-05B1-307D-B421-2CA0001B0493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{70999883-14A8-390D-A91C-213FE09BFFF4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

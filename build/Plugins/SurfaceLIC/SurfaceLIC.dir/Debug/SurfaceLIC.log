@@ -1,0 +1,27 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/SurfaceLIC/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/SurfaceLIC/CMakeFiles/generate.stamp is up-to-date.
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  CS Wrapping - generating vtkSurfaceLICRepresentationClientServer.cxx
+  Generating vtkSMXML_SurfaceLIC.h
+  -- Generate module: vtkSurfaceLICRepresentation
+  Compiling Qt help project SurfaceLIC.qhp
+  Building up file structure...
+  Insert custom filters...
+  Insert help data for filter section (1 of 1)...
+  Insert files...
+  Insert contents...
+  Insert indices...
+  Documentation successfully generated.
+  Generating SurfaceLIC_doc.h
+  -- Generate module: SurfaceLIC
+  vtkSurfaceLICRepresentation.cxx
+  vtkSurfaceLICRepresentationClientServer.cxx
+  SurfaceLICInit.cxx
+  SurfaceLIC_Plugin.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SurfaceLIC.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SurfaceLIC.exp
+  SurfaceLIC.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\SurfaceLIC.dll

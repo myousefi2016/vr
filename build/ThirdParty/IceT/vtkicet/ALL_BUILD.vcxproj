@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{8C6B271D-BAEC-30F1-A749-81D065428C6D}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\include;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT;C:\Program Files (x86)\Microsoft SDKs\MPI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.8\Modules\Dart.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include\IceTConfig.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfigVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.8\Modules\Dart.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include\IceTConfig.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfigVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.8\Modules\Dart.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include\IceTConfig.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfigVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/vr/Desktop/ParaView-v5.3.0-VR/src -BC:/Users/vr/Desktop/ParaView-v5.3.0-VR/build --check-stamp-file C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/IceT/vtkicet/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/IceT/vtkicet/CMakeLists.txt;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.8\Modules\Dart.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindMPI.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\CMake\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\src\include\IceTConfig.h.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\cmake\IceTConfigVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.8\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.8\Templates\CPackConfig.cmake.in;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\IceT\vtkicet\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj">
+      <Project>2C5B6F66-E362-3986-8020-A9F180827BCA</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj">
+      <Project>A464A903-4A4B-356F-85B8-CD4917624165</Project>
+      <Name>IceTCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj">
+      <Project>0ED0A15B-8404-3DD8-B048-20FC5D693CC7</Project>
+      <Name>IceTGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj">
+      <Project>A3E60F76-61C4-3128-AE5A-5014BA1E97C6</Project>
+      <Name>IceTMPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\strategies\strategies_target.vcxproj">
+      <Project>7BD44CCF-6B8A-3226-BC68-4DD865BD4C29</Project>
+      <Name>strategies_target</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

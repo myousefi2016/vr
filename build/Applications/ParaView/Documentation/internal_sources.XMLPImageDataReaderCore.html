@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+        <title>XML Partitioned Image Data Reader</title>
+        <meta name="proxy_name" contents="internal_sources.XMLPImageDataReaderCore"/>
+        <meta name="filename" contents="internal_sources.XMLPImageDataReaderCore.html"/>
+    </head>
+    <body>
+        <h2>XML Partitioned Image Data Reader (XMLPImageDataReaderCore)</h2>
+        <i>
+            <p>Reads the summary file and the associated VTK XML image data files.</p>
+        </i>
+        <div class="description">
+                     The XML Partitioned Image Data reader reads the
+                     partitioned VTK image data file format. It reads the
+                     partitioned format's summary file and then the associated
+                     VTK XML image data files. The expected file extension is
+                     .pvti.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the file name for the
+        partitioned VTK XML uniform rectilinear grid (image/volume)
+        reader.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CellArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Cell Arrays</th>
+                <td>This propert lists which cell-centered arrays to
+        read.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PointArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Point Arrays</th>
+                <td>This property lists which point-centered arrays to
+        read.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

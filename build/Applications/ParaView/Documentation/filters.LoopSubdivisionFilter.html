@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+        <title>Loop Subdivision</title>
+        <meta name="proxy_name" contents="filters.LoopSubdivisionFilter"/>
+        <meta name="filename" contents="filters.LoopSubdivisionFilter.html"/>
+    </head>
+    <body>
+        <h2>Loop Subdivision (LoopSubdivisionFilter)</h2>
+        <i>
+            <p>This filter iteratively divides each triangle into four triangles.  New points are placed so the output surface is smooth.</p>
+        </i>
+        <div class="description">
+                     The Loop Subdivision filter increases the granularity of a
+                     polygonal mesh. It works by dividing each triangle in the
+                     input into four new triangles. It is named for Charles
+                     Loop, the person who devised this subdivision scheme. This
+                     filter only operates on triangles, so a data set that
+                     contains other types of polygons should be passed through
+                     the Triangulate filter before applying this filter to it.
+                     This filter only operates on polygonal data (specifically
+                     triangle meshes), and it produces polygonal
+                     output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Loop
+        Subdivision filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPolyData</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Number of Subdivisions</th>
+                <td>Set the number of subdivision iterations to perform.
+        Each subdivision divides single triangles into four new
+        triangles.</td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/SierraPlotTools/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/SierraPlotTools/CMakeFiles/generate.stamp is up-to-date.
+  Generating qrc_SierraPlotTools.cpp
+  Generating moc_pqElementPlotter.cpp
+  Generating moc_pqHoverLabel.cpp
+  Generating moc_pqGlobalPlotter.cpp
+  Generating moc_pqNodePlotter.cpp
+  Generating moc_pqPlotVariablesDialog.cpp
+  Generating moc_pqPlotter.cpp
+  Generating moc_pqResizingScrollArea.cpp
+  Generating moc_pqSierraPlotToolsActionGroup.cpp
+  Generating moc_pqSierraPlotToolsDataLoadManager.cpp
+  Generating moc_pqSierraPlotToolsManager.cpp
+  Generating moc_pqVariableVariablePlotter.cpp
+  Generating ui_pqSierraPlotToolsActionHolder.h
+  Generating ui_pqSierraPlotToolsDataLoadManager.h
+  Generating ui_pqVariablePlot.h
+  Generating ui_pqSierraToolsRichTextDocs.h
+  Generating moc_pqSierraPlotToolsActionGroupImplementation.cpp
+  Generating moc_SierraPlotTools_Plugin.cpp
+  qrc_SierraPlotTools.cpp
+  moc_pqElementPlotter.cpp
+  moc_pqHoverLabel.cpp
+  moc_pqGlobalPlotter.cpp
+  moc_pqNodePlotter.cpp
+  moc_pqPlotVariablesDialog.cpp
+  moc_pqPlotter.cpp
+  moc_pqResizingScrollArea.cpp
+  moc_pqSierraPlotToolsActionGroup.cpp
+  moc_pqSierraPlotToolsDataLoadManager.cpp
+  moc_pqSierraPlotToolsManager.cpp
+  moc_pqVariableVariablePlotter.cpp
+  pqSierraPlotToolsActionGroupImplementation.cxx
+  moc_pqSierraPlotToolsActionGroupImplementation.cpp
+  pqElementPlotter.cxx
+  pqGlobalPlotter.cxx
+  pqHoverLabel.cxx
+  pqNodePlotter.cxx
+  pqPlotVariablesDialog.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(645): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(638): note: while compiling class template member function 'void QVector<pqRangeWidget *>::append(const T &)'
+          with
+          [
+              T=pqRangeWidget *
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\SierraPlotTools\pqPlotVariablesDialog.cxx(670): note: see reference to function template instantiation 'void QVector<pqRangeWidget *>::append(const T &)' being compiled
+          with
+          [
+              T=pqRangeWidget *
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\SierraPlotTools\pqPlotVariablesDialog.cxx(596): note: see reference to class template instantiation 'QVector<pqRangeWidget *>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(651): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(749): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(727): note: while compiling class template member function 'pqRangeWidget **QVector<pqRangeWidget *>::erase(pqRangeWidget **,pqRangeWidget **)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(454): note: see reference to function template instantiation 'pqRangeWidget **QVector<pqRangeWidget *>::erase(pqRangeWidget **,pqRangeWidget **)' being compiled
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(426): note: while compiling class template member function 'void QVector<pqRangeWidget *>::clear(void)'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\SierraPlotTools\pqPlotVariablesDialog.cxx(283): note: see reference to function template instantiation 'void QVector<pqRangeWidget *>::clear(void)' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(753): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<pqRangeWidget *>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=pqRangeWidget *
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<pqRangeWidget *>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=pqRangeWidget *
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(411): note: while compiling class template member function 'void QVector<pqRangeWidget *>::resize(int)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(426): note: see reference to function template instantiation 'void QVector<pqRangeWidget *>::resize(int)' being compiled
+  pqPlotter.cxx
+  Generating Code...
+  Compiling...
+  pqResizingScrollArea.cxx
+  pqSierraPlotToolsActionGroup.cxx
+  pqSierraPlotToolsDataLoadManager.cxx
+  pqSierraPlotToolsManager.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(645): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(638): note: while compiling class template member function 'void QVector<T>::append(const T &)'
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(258): note: see reference to function template instantiation 'void QVector<T>::append(const T &)' being compiled
+          with
+          [
+              T=QString
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\SierraPlotTools\pqSierraPlotToolsManager.cxx(247): note: see reference to class template instantiation 'QVector<T>' being compiled
+          with
+          [
+              T=QString
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(651): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(819): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(803): note: while compiling class template member function 'QVector<int> &QVector<int>::operator +=(const QVector<int> &)'
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\SierraPlotTools\pqSierraPlotToolsManager.cxx(306): note: see reference to function template instantiation 'QVector<int> &QVector<int>::operator +=(const QVector<int> &)' being compiled
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qabstractitemmodel.h(254): note: see reference to class template instantiation 'QVector<int>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<T>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<T>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(533): note: while compiling class template member function 'void QVector<T>::reallocData(const int,const int,QArrayData::AllocationOptions)'
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(390): note: see reference to function template instantiation 'void QVector<T>::reallocData(const int,const int,QArrayData::AllocationOptions)' being compiled
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<T>::detach(void)'
+          with
+          [
+              T=QString
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(208): note: see reference to function template instantiation 'void QVector<T>::detach(void)' being compiled
+          with
+          [
+              T=QString
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<int>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=int
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<int>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=int
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<int>::QVector(const QVector<int> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(471): note: see reference to function template instantiation 'QVector<int>::QVector(const QVector<int> &)' being compiled
+  pqSierraPlotToolsUtils.cxx
+  pqVariableVariablePlotter.cxx
+  SierraPlotTools_Plugin.cxx
+  moc_SierraPlotTools_Plugin.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SierraPlotTools.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/SierraPlotTools.exp
+  SierraPlotTools.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\SierraPlotTools.dll

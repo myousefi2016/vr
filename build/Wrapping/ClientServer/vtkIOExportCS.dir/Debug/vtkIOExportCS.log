@@ -1,0 +1,27 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkExporterClientServer.cxx
+  CS Wrapping - generating vtkGL2PSExporterClientServer.cxx
+  CS Wrapping - generating vtkIVExporterClientServer.cxx
+  CS Wrapping - generating vtkOBJExporterClientServer.cxx
+  CS Wrapping - generating vtkOOGLExporterClientServer.cxx
+  CS Wrapping - generating vtkPOVExporterClientServer.cxx
+  CS Wrapping - generating vtkRIBExporterClientServer.cxx
+  CS Wrapping - generating vtkRIBLightClientServer.cxx
+  CS Wrapping - generating vtkRIBPropertyClientServer.cxx
+  CS Wrapping - generating vtkVRMLExporterClientServer.cxx
+  CS Wrapping - generating vtkX3DExporterClientServer.cxx
+  vtkExporterClientServer.cxx
+  vtkGL2PSExporterClientServer.cxx
+  vtkIVExporterClientServer.cxx
+  vtkOBJExporterClientServer.cxx
+  vtkOOGLExporterClientServer.cxx
+  vtkPOVExporterClientServer.cxx
+  vtkRIBExporterClientServer.cxx
+  vtkRIBLightClientServer.cxx
+  vtkRIBPropertyClientServer.cxx
+  vtkVRMLExporterClientServer.cxx
+  vtkX3DExporterClientServer.cxx
+  vtkIOExportCSInit.cxx
+  Generating Code...
+  vtkIOExportCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOExportCS-pv5.3.lib

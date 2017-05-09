@@ -1,0 +1,68 @@
+
+<html>
+    <head>
+        <title>Unstructured NetCDF POP reader</title>
+        <meta name="proxy_name" contents="internal_sources.UnstructuredPOPReaderCore"/>
+        <meta name="filename" contents="internal_sources.UnstructuredPOPReaderCore.html"/>
+    </head>
+    <body>
+        <h2>Unstructured NetCDF POP reader (UnstructuredPOPReaderCore)</h2>
+        <i>
+            <p>Reads rectilinear grid data from a NetCDF POP file and converts it into unstructured data.</p>
+        </i>
+        <div class="description">
+      The reader reads regular rectilinear grid (image/volume) data from a
+      NetCDF file and turns it into an unstructured spherical
+      grid.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>This property specifies the file name to
+        read.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Stride</th>
+                <td>This property indicate the number of indices per
+        dimension (i,j,k) to skip between each point included in this
+        output.</td>
+                <td>1 1 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>VOI</th>
+                <td>The data volume of interest (VOI). The VOI is a
+        sub-extent of the data that you want loaded. Setting a VOI is useful
+        when reading from a large data set and you are only interested in a
+        small portion of the data. If left containing all 0's, then the reader
+        will load in the entire data set.</td>
+                <td>0 -1 0 -1 0 -1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>VerticalVelocity</th>
+                <td>If there is a velocity vector with only 2 components,
+        specify that the reader should compute the third
+        component.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

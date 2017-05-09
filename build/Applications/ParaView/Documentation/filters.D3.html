@@ -1,0 +1,74 @@
+
+<html>
+    <head>
+        <title>D3</title>
+        <meta name="proxy_name" contents="filters.D3"/>
+        <meta name="filename" contents="filters.D3.html"/>
+    </head>
+    <body>
+        <h2>D3 (D3)</h2>
+        <i>
+            <p>Repartition a data set into load-balanced spatially convex regions.  Create ghost cells if requested.</p>
+        </i>
+        <div class="description">The D3 filter is
+                     available when ParaView is run in parallel. It operates on
+                     any type of data set to evenly divide it across the
+                     processors into spatially contiguous regions. The output
+                     of this filter is of type unstructured
+                     grid.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the D3
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>BoundaryMode</th>
+                <td>This property determines how cells that lie on processor
+        boundaries are handled. The "Assign cells uniquely" option assigns each
+        boundary cell to exactly one process, which is useful for isosurfacing.
+        Selecting "Duplicate cells" causes the cells on the boundaries to be
+        copied to each process that shares that boundary. The "Divide cells"
+        option breaks cells across process boundary lines so that pieces of the
+        cell lie in different processes. This option is useful for volume
+        rendering.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Assign cells uniquely (0)</li>
+                            <li>Duplicate cells (1)</li>
+                            <li>Divide cells (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Minimal Memory</th>
+                <td>If this property is set to 1, the D3 filter requires
+        communication routines to use minimal memory than without this
+        restriction.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

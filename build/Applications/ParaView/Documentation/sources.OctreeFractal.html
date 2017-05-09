@@ -1,0 +1,99 @@
+
+<html>
+    <head>
+        <title>Octree Fractal</title>
+        <meta name="proxy_name" contents="sources.OctreeFractal"/>
+        <meta name="filename" contents="sources.OctreeFractal.html"/>
+    </head>
+    <body>
+        <h2>Octree Fractal (OctreeFractal)</h2>
+        <i>
+            <p>Test source for octree with Mandelbrot fractal</p>
+        </i>
+        <div class="description">Create an octree from a
+                     Mandelbrot fractal. See the Mandelbrot source for a
+                     description of the variables used.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Dimension</th>
+                <td>This property specifies the dimensionality of the
+        fractal: 1D - Binary tree line, 2D - Quadtree plane, 3D - Octree
+        volume.</td>
+                <td>2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaximumLevel</th>
+                <td>This property specifies the maximum refinement level for
+        the grid.</td>
+                <td>5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MinimumLevel</th>
+                <td>This property specifies the minimum refinement level for
+        the grid.</td>
+                <td>3<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ProjectionAxes</th>
+                <td>This property indicates which axes of the dataset to
+        display. See Mandelbrot source for a description of the possible
+        axes.</td>
+                <td>0 1 2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>OriginCX</th>
+                <td>This property specifies the imaginary and real values
+        for C (constant) and X (initial value). See Mandelbrot source for a
+        description of the C and X variables.</td>
+                <td>-1.75 -1.25 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>SizeCX</th>
+                <td>The four values of this property indicate the length of
+        the output in each of the four dimensions (the real and imaginary
+        components of C and the real and imaginary components of X). The three
+        dimensions specified in the Projection Axes property will determine
+        which of these values specify the length of the axes in the
+        output.</td>
+                <td>2.5 2.5 2.0 1.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Maximum Number of Iterations</th>
+                <td>The value of this property specifies the limit on
+        computational iterations (i.e., the maximum number of iterations to
+        perform to determine if the value will go above 2). Values less than
+        2.0 after the specified number of iterations are considered in the
+        fractal set.</td>
+                <td>100<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Threshold</th>
+                <td>This property specifies a threshold value that
+        determines when to subdivide a leaf node.</td>
+                <td>2.0<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

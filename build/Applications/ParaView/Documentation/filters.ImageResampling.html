@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <title>ImageResampling</title>
+        <meta name="proxy_name" contents="filters.ImageResampling"/>
+        <meta name="filename" contents="filters.ImageResampling.html"/>
+    </head>
+    <body>
+        <h2>ImageResampling (ImageResampling)</h2>
+        <i>
+            <p>Sample data attributes using a 3D image as probing mesh.</p>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the dataset whose data will
+        be probed</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                            <li>vtkCompositeDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>SamplingDimension</th>
+                <td>
+        How many linear resampling we want along each axis
+        </td>
+                <td>10 10 10<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UseInputBounds</th>
+                <td>
+        Do we use input bounds or custom ones?
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CustomSamplingBounds</th>
+                <td>
+        Custom probing bounds if needed
+        </td>
+                <td>0 1 0 1 0 1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

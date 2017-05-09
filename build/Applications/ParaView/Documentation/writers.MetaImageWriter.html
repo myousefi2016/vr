@@ -1,0 +1,48 @@
+
+<html>
+    <head>
+        <title>MetaImageWriter</title>
+        <meta name="proxy_name" contents="writers.MetaImageWriter"/>
+        <meta name="filename" contents="writers.MetaImageWriter.html"/>
+    </head>
+    <body>
+        <h2>MetaImageWriter (MetaImageWriter)</h2>
+        <i>
+            <p>Write a binary UNC meta image data.</p>
+        </i>
+        <div class="description">Writer to
+      write a binary UNC meta image data. This is a fairly simple yet powerful
+      format consisting of a text header and a binary data section. MetaImage
+      headers are expected to have extension: ".mha" or ".mhd"</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>The input filter/source whose output dataset is to
+        written to the file.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkImageData</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>The name of the file to be written.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

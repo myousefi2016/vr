@@ -1,0 +1,763 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationKeyFrame.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationKeyFrame.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationModel.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationModel.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationTrack.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationTrack.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationWidget.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqAnimationWidget.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCheckableHeaderView.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCheckableHeaderView.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCheckBoxPixMaps.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCheckBoxPixMaps.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCollapsedGroup.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqCollapsedGroup.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorButtonEventPlayer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorDialogEventPlayer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorDialogEventPlayer.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorDialogEventTranslator.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorDialogEventTranslator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorButtonEventPlayer.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorButtonEventTranslator.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorButtonEventTranslator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorChooserButton.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqColorChooserButton.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConnect.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConnect.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidget.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidget.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidgetEventPlayer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidgetEventPlayer.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidgetEventTranslator.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqConsoleWidgetEventTranslator.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDelimitedTextParser.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDelimitedTextParser.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleRangeDialog.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleRangeDialog.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleRangeWidget.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleRangeWidget.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleSpinBox.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqDoubleSpinBox.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqExpandableTableView.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqExpandableTableView.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqExpanderButton.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqExpanderButton.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqFlatTreeView.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqFlatTreeView.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqHighlightablePushButton.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqHighlightablePushButton.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqLineEdit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqLineEdit.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqLineEditEventPlayer.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqLineEditEventPlayer.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqListWidgetCheckHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqListWidgetCheckHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqListWidgetItemObject.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqListWidgetItemObject.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqProgressBar.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqProgressBar.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqProgressWidget.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqProgressWidget.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqQuickLaunchDialog.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqQuickLaunchDialog.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSectionVisibilityContextMenu.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSectionVisibilityContextMenu.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSetData.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSetData.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSetName.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSetName.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSignalAdaptors.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSignalAdaptors.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSpinBox.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqSpinBox.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTableView.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTableView.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTextEdit.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTextEdit.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeView.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeView.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeViewSelectionHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeViewSelectionHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetCheckHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetCheckHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidget.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidget.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetItem.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetItem.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetItemObject.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetItemObject.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetSelectionHelper.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqTreeWidgetSelectionHelper.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqWaitCursor.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqWaitCursor.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqHelpWindow.cxx"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/pqHelpWindow.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqAnimationKeyFrame.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqAnimationModel.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqAnimationTrack.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqAnimationWidget.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqCheckableHeaderView.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqCheckBoxPixMaps.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqCollapsedGroup.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqColorButtonEventPlayer.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqColorButtonEventTranslator.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqColorChooserButton.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqColorDialogEventPlayer.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqColorDialogEventTranslator.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqConsoleWidget.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqConsoleWidgetEventPlayer.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqConsoleWidgetEventTranslator.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqDelimitedTextParser.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqDoubleRangeDialog.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqDoubleRangeWidget.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqDoubleSpinBox.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqExpandableTableView.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqExpanderButton.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqFlatTreeView.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqHighlightablePushButton.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqLineEdit.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqLineEditEventPlayer.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqListWidgetCheckHelper.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqListWidgetItemObject.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqProgressBar.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqProgressWidget.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqQuickLaunchDialog.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqSectionVisibilityContextMenu.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqSignalAdaptors.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqSpinBox.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTableView.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTextEdit.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeView.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeWidget.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeWidgetCheckHelper.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeWidgetItemObject.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeWidgetSelectionHelper.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqTreeViewSelectionHelper.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/moc_pqHelpWindow.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/qrc_QtWidgets.cpp"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/ui_pqExpanderButton.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/ui_pqHelpWindow.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/ui_pqQuickLaunchDialog.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Widgets/pqWidgetsModule.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/CMakeLists.txt"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqAnimationKeyFrame.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqAnimationModel.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqAnimationTrack.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqAnimationWidget.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqCheckableHeaderView.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqCheckBoxPixMaps.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqCollapsedGroup.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqColorButtonEventPlayer.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqColorButtonEventTranslator.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqColorChooserButton.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqColorDialogEventPlayer.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqColorDialogEventTranslator.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqConsoleWidget.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqConsoleWidgetEventPlayer.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqConsoleWidgetEventTranslator.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqDelimitedTextParser.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqDoubleRangeDialog.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqDoubleRangeWidget.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqDoubleSpinBox.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqExpandableTableView.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqExpanderButton.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqFlatTreeView.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqHighlightablePushButton.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqLineEdit.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqLineEditEventPlayer.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqListWidgetCheckHelper.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqListWidgetItemObject.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqProgressBar.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqProgressWidget.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqQuickLaunchDialog.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqSectionVisibilityContextMenu.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqSignalAdaptors.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqSpinBox.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTableView.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTextEdit.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeView.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeWidget.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeWidgetCheckHelper.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeWidgetItemObject.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeWidgetSelectionHelper.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqTreeViewSelectionHelper.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/CMakeFiles/e7edf7b430049c34330f84eb7d06e2a1/moc_pqHelpWindow.cpp.rule"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/Resources/QtWidgets.qrc"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/Resources/UI/pqExpanderButton.ui"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/Resources/UI/pqHelpWindow.ui"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Widgets/Resources/UI/pqQuickLaunchDialog.ui"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "pqWidgets" ],
+		"name" : "pqWidgets"
+	}
+}

@@ -1,0 +1,9 @@
+# Target labels
+ vtkViewsContext2D
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextView.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextInteractorStyle.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextView.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextInteractorStyle.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Views/Context2D/vtkViewsContext2DModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/CMakeLists.txt

@@ -1,0 +1,137 @@
+
+<html>
+    <head>
+        <title>Resample With Dataset</title>
+        <meta name="proxy_name" contents="filters.ResampleWithDataset"/>
+        <meta name="filename" contents="filters.ResampleWithDataset.html"/>
+    </head>
+    <body>
+        <h2>Resample With Dataset (ResampleWithDataset)</h2>
+        <i>
+            <p>Sample data attributes at the points of a dataset.</p>
+        </i>
+        <div class="description">
+          This filter takes two inputs - Input and Source, and samples the
+          point and cell values of Input on to the point locations of Source.
+          The output has the same structure as Source but its point data
+          have the resampled values from Input."
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the dataset from which to obtain
+        probe values. The data attributes come from this dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                            <li>vtkCompositeDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>This property specifies the dataset whose geometry will
+        be used in determining positions to probe. The mesh comes from this
+        dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                            <li>vtkCompositeDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>CategoricalData</th>
+                <td>Control whether the source point data is to be
+        treated as categorical. If the data is categorical, then the
+        resultant data will be determined by a nearest neighbor
+        interpolation scheme rather than by linear interpolation.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PassCellArrays</th>
+                <td>
+        When set the input's cell data arrays are shallow copied to the output.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PassPointArrays</th>
+                <td>
+        When set the input's point data arrays are shallow copied to the output.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PassFieldArrays</th>
+                <td>
+        Set whether to pass the field-data arrays from the Input i.e. the input
+        providing the geometry to the output. On by default.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ComputeTolerance</th>
+                <td>
+        Set whether to compute the tolerance or to use a user provided
+        value. On by default.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Tolerance</th>
+                <td>Set the tolerance to use for
+        vtkDataSet::FindCell</td>
+                <td>2.2204460492503131e-16<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MarkBlankPointsAndCells</th>
+                <td>
+        When set, points that did not get valid values during resampling, and
+        cells containing such points, are marked as blank.
+        </td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,226 @@
+
+<html>
+    <head>
+        <title>Stream Tracer</title>
+        <meta name="proxy_name" contents="filters.StreamTracer"/>
+        <meta name="filename" contents="filters.StreamTracer.html"/>
+    </head>
+    <body>
+        <h2>Stream Tracer (StreamTracer)</h2>
+        <i>
+            <p>Integrate streamlines in a vector field.</p>
+        </i>
+        <div class="description">The
+                     Stream Tracer filter generates streamlines in a vector
+                     field from a collection of seed points. Production of
+                     streamlines terminates if a streamline crosses the
+                     exterior boundary of the input dataset. Other reasons for
+                     termination are listed for the MaximumNumberOfSteps,
+                     TerminalSpeed, and MaximumPropagation properties. This
+                     filter operates on any type of dataset, provided it has
+                     point-centered vectors. The output is polygonal data
+                     containing polylines.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Stream Tracer
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array ()
+      
+        with 3 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Vectors</th>
+                <td>This property contains the name of the vector array from
+        which to generate streamlines.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of vectors is required.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>InterpolatorType</th>
+                <td>This property determines which interpolator to use for
+        evaluating the velocity vector field. The first is faster though the
+        second is more robust in locating cells during streamline
+        integration.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Interpolator with Point Locator (0)</li>
+                            <li>Interpolator with Cell Locator (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Surface Streamlines</th>
+                <td>Specify whether or not to compute surface
+        streamlines.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>IntegrationDirection</th>
+                <td>This property determines in which direction(s) a
+        streamline is generated.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>FORWARD (0)</li>
+                            <li>BACKWARD (1)</li>
+                            <li>BOTH (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>IntegratorType</th>
+                <td>This property determines which integrator (with
+        increasing accuracy) to use for creating streamlines.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Runge-Kutta 2 (0)</li>
+                            <li>Runge-Kutta 4 (1)</li>
+                            <li>Runge-Kutta 4-5 (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Integration Step Unit</th>
+                <td>This property specifies the unit for
+        Minimum/Initial/Maximum integration step size. The Length unit refers
+        to the arc length that a particle travels/advects within a single step.
+        The Cell Length unit represents the step size as a number of
+        cells.</td>
+                <td>2<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Length (1)</li>
+                            <li>Cell Length (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Initial Step Length</th>
+                <td>This property specifies the initial integration step
+        size. For non-adaptive integrators (Runge-Kutta 2 and Runge-Kutta 4),
+        it is fixed (always equal to this initial value) throughout the
+        integration. For an adaptive integrator (Runge-Kutta 4-5), the actual
+        step size varies such that the numerical error is less than a specified
+        threshold.</td>
+                <td>0.2<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Minimum Step Length</th>
+                <td>When using the Runge-Kutta 4-5 ingrator, this property
+        specifies the minimum integration step size.</td>
+                <td>0.01<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Maximum Step Length</th>
+                <td>When using the Runge-Kutta 4-5 ingrator, this property
+        specifies the maximum integration step size.</td>
+                <td>0.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Maximum Steps</th>
+                <td>This property specifies the maximum number of steps,
+        beyond which streamline integration is terminated.</td>
+                <td>2000<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Maximum Streamline Length</th>
+                <td>This property specifies the maximum streamline length
+        (i.e., physical arc length), beyond which line integration is
+        terminated.</td>
+                <td>1.0<span/>
+                </td>
+                <td>
+                    <p>
+  The value must be less than the largest dimension of the
+  dataset multiplied by a scale factor of
+  1.0.
+  </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Terminal Speed</th>
+                <td>This property specifies the terminal speed, below which
+        particle advection/integration is terminated.</td>
+                <td>0.000000000001<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>MaximumError</th>
+                <td>This property specifies the maximum error (for
+        Runge-Kutta 4-5) tolerated throughout streamline integration. The
+        Runge-Kutta 4-5 integrator tries to adjust the step size such that the
+        estimated error is less than this threshold.</td>
+                <td>0.000001<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ComputeVorticity</th>
+                <td>Specify whether or not to compute
+        vorticity.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Seed Type</th>
+                <td>The value of this property determines how the seeds for
+        the streamlines will be generated.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The value can be one of the following:<ul/>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

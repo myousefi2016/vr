@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+        <title>Temporal Interpolator</title>
+        <meta name="proxy_name" contents="filters.TemporalInterpolator"/>
+        <meta name="filename" contents="filters.TemporalInterpolator.html"/>
+    </head>
+    <body>
+        <h2>Temporal Interpolator (TemporalInterpolator)</h2>
+        <i>
+            <p>Interpolate between time steps.</p>
+        </i>
+        <div class="description">The Temporal
+                     Interpolator converts data that is defined at discrete
+                     time steps to one that is defined over a continuum of time
+                     by linearly interpolating the data's field data between
+                     two adjacent time steps. The interpolated values are a
+                     simple approximation and should not be interpreted as
+                     anything more. The Temporal Interpolator assumes that the
+                     topology between adjacent time steps does not
+                     change.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input of the Temporal
+        Interpolator.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataObject</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>DiscreteTimeStepInterval</th>
+                <td>If Discrete Time Step Interval is set to 0, then the
+        Temporal Interpolator will provide a continuous region of time on its
+        output. If set to anything else, then the output will define a finite
+        set of time points on its output, each spaced by the Discrete Time Step
+        Interval. The output will have (time range)/(discrete time step
+        interval) time steps. (Note that the time range is defined by the time
+        range of the data of the input filter, which may be different from
+        other pipeline objects or the range defined in the animation
+        inspector.) This is a useful option to use if you have a dataset with
+        one missing time step and wish to 'file-in' the missing data with an
+        interpolated value from the steps on either side.</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TimeRange</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

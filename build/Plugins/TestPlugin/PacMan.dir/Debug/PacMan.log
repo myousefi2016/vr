@@ -1,0 +1,12 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/TestPlugin/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/TestPlugin/CMakeFiles/generate.stamp is up-to-date.
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_PacMan.h
+  -- Generate module: PacMan
+  PacMan_Plugin.cxx
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/PacMan.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/PacMan.exp
+  PacMan.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\PacMan.dll

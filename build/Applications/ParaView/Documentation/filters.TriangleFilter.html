@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>Triangulate</title>
+        <meta name="proxy_name" contents="filters.TriangleFilter"/>
+        <meta name="filename" contents="filters.TriangleFilter.html"/>
+    </head>
+    <body>
+        <h2>Triangulate (TriangleFilter)</h2>
+        <i>
+            <p>This filter converts polygons and triangle strips to basic triangles.</p>
+        </i>
+        <div class="description">The
+                     Triangulate filter decomposes polygonal data into only
+                     triangles, points, and lines. It separates triangle strips
+                     and polylines into individual triangles and lines,
+                     respectively. The output is polygonal data. Some filters
+                     that take polygonal data as input require that the data be
+                     composed of triangles rather than other polygons, so
+                     passing your data through this filter first is useful in
+                     such situations. You should use this filter in these cases
+                     rather than the Tetrahedralize filter because they produce
+                     different output dataset types. The filters referenced
+                     require polygonal input, and the Tetrahedralize filter
+                     produces unstructured grid output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Triangulate
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkPolyData</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

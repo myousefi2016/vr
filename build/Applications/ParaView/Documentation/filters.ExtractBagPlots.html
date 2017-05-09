@@ -1,0 +1,104 @@
+
+<html>
+    <head>
+        <title>Extract Bag Plots</title>
+        <meta name="proxy_name" contents="filters.ExtractBagPlots"/>
+        <meta name="filename" contents="filters.ExtractBagPlots.html"/>
+    </head>
+    <body>
+        <h2>Extract Bag Plots (ExtractBagPlots)</h2>
+        <i>
+            <p>Extract Bag Plots.</p>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkTable</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array (row)
+      
+        with 1 component(s).
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Variables of Interest</th>
+                <td>Choose arrays whose entries will be used to form
+        observations for statistical analysis.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UseSilvermanRule</th>
+                <td>This flag indicates kernel width must be automatically
+        computed using Silverman's rules (sigma*n^(-1/(d+4))).</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>KernelWidth</th>
+                <td>Specify the kernel width used to compute the HDR.
+        </td>
+                <td>1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>GridSize</th>
+                <td>Width and height of the grid image to perform the PCA on.
+        </td>
+                <td>100<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>UserQuantile</th>
+                <td/>
+                <td>95<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Process the transposed of the input table</th>
+                <td>This flag indicates if the input table must
+        be transposed first.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>RobustPCA</th>
+                <td>This flag indicates if the PCA should be run
+        in robust mode or not.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

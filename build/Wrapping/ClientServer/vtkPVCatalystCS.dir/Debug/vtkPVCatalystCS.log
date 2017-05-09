@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCPAdaptorAPIClientServer.cxx
+  CS Wrapping - generating vtkCPDataDescriptionClientServer.cxx
+  CS Wrapping - generating vtkCPInputDataDescriptionClientServer.cxx
+  CS Wrapping - generating vtkCPPipelineClientServer.cxx
+  CS Wrapping - generating vtkCPProcessorClientServer.cxx
+  vtkCPAdaptorAPIClientServer.cxx
+  vtkCPDataDescriptionClientServer.cxx
+  vtkCPInputDataDescriptionClientServer.cxx
+  vtkCPPipelineClientServer.cxx
+  vtkCPProcessorClientServer.cxx
+  vtkPVCatalystCSInit.cxx
+  Generating Code...
+  vtkPVCatalystCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVCatalystCS-pv5.3.lib

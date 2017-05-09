@@ -1,0 +1,42 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Image/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Image/CMakeFiles/generate.stamp is up-to-date.
+  vtkBMPReader.cxx
+  vtkBMPWriter.cxx
+  vtkDEMReader.cxx
+  vtkDICOMImageReader.cxx
+  vtkGESignaReader.cxx
+  vtkImageExport.cxx
+  vtkImageImport.cxx
+  vtkImageImportExecutive.cxx
+  vtkImageReader.cxx
+  vtkImageReader2.cxx
+  vtkImageReader2Collection.cxx
+  vtkImageReader2Factory.cxx
+  vtkImageWriter.cxx
+  vtkJPEGReader.cxx
+  vtkJPEGWriter.cxx
+  vtkJSONImageWriter.cxx
+  vtkMedicalImageProperties.cxx
+  vtkMedicalImageReader2.cxx
+  vtkMetaImageReader.cxx
+  vtkMetaImageWriter.cxx
+  Generating Code...
+  Compiling...
+  vtkNIFTIImageHeader.cxx
+  vtkNIFTIImageReader.cxx
+  vtkNIFTIImageWriter.cxx
+  vtkNrrdReader.cxx
+  vtkPNGReader.cxx
+  vtkPNGWriter.cxx
+  vtkPNMReader.cxx
+  vtkPNMWriter.cxx
+  vtkPostScriptWriter.cxx
+  vtkSLCReader.cxx
+  vtkTIFFReader.cxx
+  vtkTIFFWriter.cxx
+  vtkVolume16Reader.cxx
+  vtkVolumeReader.cxx
+  vtkMRCReader.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOImage-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOImage-pv5.3.exp
+  vtkIOImage.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOImage-pv5.3.dll

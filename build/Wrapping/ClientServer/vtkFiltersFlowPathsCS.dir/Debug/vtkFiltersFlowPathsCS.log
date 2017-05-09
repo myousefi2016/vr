@@ -1,0 +1,49 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAbstractInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkAMRInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkCachingInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkCellLocatorInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkCompositeInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkLagrangianParticleTrackerClientServer.cxx
+  CS Wrapping - generating vtkLagrangianBasicIntegrationModelClientServer.cxx
+  CS Wrapping - generating vtkLagrangianMatidaIntegrationModelClientServer.cxx
+  CS Wrapping - generating vtkModifiedBSPTreeClientServer.cxx
+  CS Wrapping - generating vtkParticlePathFilterClientServer.cxx
+  CS Wrapping - generating vtkParticleTracerClientServer.cxx
+  CS Wrapping - generating vtkParticleTracerBaseClientServer.cxx
+  CS Wrapping - generating vtkStreaklineFilterClientServer.cxx
+  CS Wrapping - generating vtkStreamTracerClientServer.cxx
+  CS Wrapping - generating vtkTemporalInterpolatedVelocityFieldClientServer.cxx
+  CS Wrapping - generating vtkTemporalStreamTracerClientServer.cxx
+  CS Wrapping - generating vtkDashedStreamLineClientServer.cxx
+  CS Wrapping - generating vtkStreamLineClientServer.cxx
+  CS Wrapping - generating vtkStreamPointsClientServer.cxx
+  CS Wrapping - generating vtkStreamerClientServer.cxx
+  vtkAbstractInterpolatedVelocityFieldClientServer.cxx
+  vtkAMRInterpolatedVelocityFieldClientServer.cxx
+  vtkCachingInterpolatedVelocityFieldClientServer.cxx
+  vtkCellLocatorInterpolatedVelocityFieldClientServer.cxx
+  vtkCompositeInterpolatedVelocityFieldClientServer.cxx
+  vtkInterpolatedVelocityFieldClientServer.cxx
+  vtkLagrangianParticleTrackerClientServer.cxx
+  vtkLagrangianBasicIntegrationModelClientServer.cxx
+  vtkLagrangianMatidaIntegrationModelClientServer.cxx
+  vtkModifiedBSPTreeClientServer.cxx
+  vtkParticlePathFilterClientServer.cxx
+  vtkParticleTracerClientServer.cxx
+  vtkParticleTracerBaseClientServer.cxx
+  vtkStreaklineFilterClientServer.cxx
+  vtkStreamTracerClientServer.cxx
+  vtkTemporalInterpolatedVelocityFieldClientServer.cxx
+  vtkTemporalStreamTracerClientServer.cxx
+  vtkDashedStreamLineClientServer.cxx
+  vtkStreamLineClientServer.cxx
+  vtkStreamPointsClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkStreamerClientServer.cxx
+  vtkFiltersFlowPathsCSInit.cxx
+  Generating Code...
+  vtkFiltersFlowPathsCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersFlowPathsCS-pv5.3.lib

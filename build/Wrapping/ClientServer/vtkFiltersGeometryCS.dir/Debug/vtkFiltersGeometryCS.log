@@ -1,0 +1,49 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCompositeDataGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkHierarchicalDataSetGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkImageDataGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkImageDataToUniformGridClientServer.cxx
+  CS Wrapping - generating vtkLinearToQuadraticCellsFilterClientServer.cxx
+  CS Wrapping - generating vtkProjectSphereFilterClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkStructuredPointsGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridGeometryFilterClientServer.cxx
+  CS Wrapping - generating vtkDataSetSurfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkDataSetRegionSurfaceFilterClientServer.cxx
+  CS Wrapping - generating vtkAbstractGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkDataSetGhostGeneratorClientServer.cxx
+  CS Wrapping - generating vtkRectilinearGridPartitionerClientServer.cxx
+  CS Wrapping - generating vtkStructuredAMRGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridConnectivityClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridGhostDataGeneratorClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridPartitionerClientServer.cxx
+  CS Wrapping - generating vtkUniformGridGhostDataGeneratorClientServer.cxx
+  vtkCompositeDataGeometryFilterClientServer.cxx
+  vtkGeometryFilterClientServer.cxx
+  vtkHierarchicalDataSetGeometryFilterClientServer.cxx
+  vtkImageDataGeometryFilterClientServer.cxx
+  vtkImageDataToUniformGridClientServer.cxx
+  vtkLinearToQuadraticCellsFilterClientServer.cxx
+  vtkProjectSphereFilterClientServer.cxx
+  vtkRectilinearGridGeometryFilterClientServer.cxx
+  vtkStructuredGridGeometryFilterClientServer.cxx
+  vtkStructuredPointsGeometryFilterClientServer.cxx
+  vtkUnstructuredGridGeometryFilterClientServer.cxx
+  vtkDataSetSurfaceFilterClientServer.cxx
+  vtkDataSetRegionSurfaceFilterClientServer.cxx
+  vtkAbstractGridConnectivityClientServer.cxx
+  vtkDataSetGhostGeneratorClientServer.cxx
+  vtkRectilinearGridPartitionerClientServer.cxx
+  vtkStructuredAMRGridConnectivityClientServer.cxx
+  vtkStructuredGridConnectivityClientServer.cxx
+  vtkStructuredGridGhostDataGeneratorClientServer.cxx
+  vtkStructuredGridPartitionerClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkUniformGridGhostDataGeneratorClientServer.cxx
+  vtkFiltersGeometryCSInit.cxx
+  Generating Code...
+  vtkFiltersGeometryCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkFiltersGeometryCS-pv5.3.lib

@@ -1,0 +1,79 @@
+
+<html>
+    <head>
+        <title>GMV Reader</title>
+        <meta name="proxy_name" contents="sources.GMVSeriesReader"/>
+        <meta name="filename" contents="sources.GMVSeriesReader.html"/>
+    </head>
+    <body>
+        <h2>GMV Reader (GMVSeriesReader)</h2>
+        <i>
+            <p>Read binary or ASCII files stored in GMV format.</p>
+        </i>
+        <div class="description">
+        The GMV reader reads binary or ASCII files stored in GMV format.
+        The default file extension is .gmv. The output of this reader is
+        a multi-block dataset.
+        This reader also supports file series.
+      </div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileNameInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>FileNames</th>
+                <td>
+          The list of files to be read by the reader. If more than 1 file is
+          specified, the reader will switch to file series mode in which it will
+          pretend that it can support time and provide 1 file per time step.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>
+          Available time step values.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Ignore stored time step values / PROBTIME keyword</th>
+                <td>
+          Toggle whether to ignore time step values stored with PROBTIME keyword.
+	  If unchecked, the entire file sequence (!) is parsed once to
+          determine time step values. Depending on its total size, this can
+          take a considerable amount of time. Also, if checked, files with
+          duplicate time step values will be ignored. (Convenient for
+          restarted simulations where simulated times overlap.)
+	  If checked, fake time step values will be used. This allows for
+          stepping through all files of a given series even if all files contain
+          the PROBTIME keyword and all specify a dummy setting of e.g. 0.000.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

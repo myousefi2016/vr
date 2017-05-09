@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/FreeType/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Rendering/FreeType/CMakeFiles/generate.stamp is up-to-date.
+  vtkFreeTypeStringToImage.cxx
+  vtkFreeTypeTools.cxx
+  vtkMathTextFreeTypeTextRenderer.cxx
+  vtkMathTextUtilities.cxx
+  vtkTextRendererStringToImage.cxx
+  vtkScaledTextActor.cxx
+  vtkVectorText.cxx
+  vtkRenderingFreeTypeObjectFactory.cxx
+  face_arial_bold.cxx
+  face_arial_bold_italic.cxx
+  face_arial.cxx
+  face_arial_italic.cxx
+  face_courier_bold.cxx
+  face_courier_bold_italic.cxx
+  face_courier.cxx
+  face_courier_italic.cxx
+  face_times_bold.cxx
+  face_times_bold_italic.cxx
+  face_times.cxx
+  face_times_italic.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingFreeType-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingFreeType-pv5.3.exp
+  vtkRenderingFreeType.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkRenderingFreeType-pv5.3.dll

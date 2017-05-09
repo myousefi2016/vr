@@ -1,0 +1,226 @@
+<xml>
+    <proxy>
+        <group>internal_sources</group>
+        <name>GMVReader</name>
+        <label>GMV Reader</label>
+        <documentation>
+            <brief>Read binary or ASCII files stored in GMV format.</brief>
+            <long>
+        The GMV reader reads binary or ASCII files stored in GMV format.
+        The default file extension is .gmv. The output of this reader is
+        a multi-block dataset.
+      </long>
+        </documentation>
+        <property>
+            <name>FileName</name>
+            <label>FileName</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property specifies the file name for the GMV reader.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text> The value(s) must be a filename (or filenames).</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>PointArrayInfo</name>
+            <label>PointArrayInfo</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>PointArrayStatus</name>
+            <label>Point Arrays</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property contains a list of the point-centered arrays to read.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>The list of array names is provided by the reader.</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>CellArrayInfo</name>
+            <label>CellArrayInfo</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>CellArrayStatus</name>
+            <label>Cell Arrays</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property contains a list of the cell-centered arrays to read.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>The list of array names is provided by the reader.</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>FieldArrayInfo</name>
+            <label>FieldArrayInfo</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>FieldArrayStatus</name>
+            <label>Field Arrays</label>
+            <documentation>
+                <brief/>
+                <long>
+          This property contains a list of the global variables to read.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>The list of array names is provided by the reader.</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>HasTracers</name>
+            <label>HasTracers</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>ImportTracers</name>
+            <label>ImportTracers</label>
+            <documentation>
+                <brief/>
+                <long>
+          If this property is set to 1, tracers will be read (and stored in a separate block).
+        </long>
+            </documentation>
+            <defaults>1</defaults>
+            <domains>
+                <domain>
+                    <text>Accepts boolean values (0 or 1).</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>HasPolygons</name>
+            <label>HasPolygons</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>ImportPolygons</name>
+            <label>ImportPolygons</label>
+            <documentation>
+                <brief/>
+                <long>
+          If this property is set to 1, polygons will be read (and stored in a separate block).
+        </long>
+            </documentation>
+            <defaults>1</defaults>
+            <domains>
+                <domain>
+                    <text>Accepts boolean values (0 or 1).</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>HasProbtimeKeyword</name>
+            <label>HasProbtimeKeyword</label>
+            <defaults/>
+            <domains/>
+        </property>
+    </proxy>
+    <proxy>
+        <group>sources</group>
+        <name>GMVSeriesReader</name>
+        <label>GMV Reader</label>
+        <documentation>
+            <brief>Read binary or ASCII files stored in GMV format.</brief>
+            <long>
+        The GMV reader reads binary or ASCII files stored in GMV format.
+        The default file extension is .gmv. The output of this reader is
+        a multi-block dataset.
+        This reader also supports file series.
+      </long>
+        </documentation>
+        <property>
+            <name>FileNameInfo</name>
+            <label>FileNameInfo</label>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>FileNames</name>
+            <label>FileNames</label>
+            <documentation>
+                <brief/>
+                <long>
+          The list of files to be read by the reader. If more than 1 file is
+          specified, the reader will switch to file series mode in which it will
+          pretend that it can support time and provide 1 file per time step.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text> The value(s) must be a filename (or filenames).</text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>TimestepValues</name>
+            <label>TimestepValues</label>
+            <documentation>
+                <brief/>
+                <long>
+          Available time step values.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains/>
+        </property>
+        <property>
+            <name>IgnoreReaderTime</name>
+            <label>Ignore stored time step values / PROBTIME keyword</label>
+            <documentation>
+                <brief/>
+                <long>
+          Toggle whether to ignore time step values stored with PROBTIME keyword.
+	  If unchecked, the entire file sequence (!) is parsed once to
+          determine time step values. Depending on its total size, this can
+          take a considerable amount of time. Also, if checked, files with
+          duplicate time step values will be ignored. (Convenient for
+          restarted simulations where simulated times overlap.)
+	  If checked, fake time step values will be used. This allows for
+          stepping through all files of a given series even if all files contain
+          the PROBTIME keyword and all specify a dummy setting of e.g. 0.000.
+        </long>
+            </documentation>
+            <defaults>1</defaults>
+            <domains>
+                <domain>
+                    <text>Accepts boolean values (0 or 1).</text>
+                </domain>
+            </domains>
+        </property>
+        <ReaderFactory extensions="gmv" file_description="GMV Binary/ASCII Files (Plugin)"/>
+    </proxy>
+    <categoryindex>
+        <label>Readers</label>
+        <item proxy_name="GMVSeriesReader" proxy_group="sources"/>
+    </categoryindex>
+</xml>

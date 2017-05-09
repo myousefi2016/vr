@@ -1,0 +1,193 @@
+<xml>
+    <proxy>
+        <group>filters</group>
+        <name>SamplePlaneSource</name>
+        <label>Sample Plane Source</label>
+        <documentation>
+            <brief>Internal filter for creating planes with even samping.</brief>
+            <long>
+        Internal for creating planes to use for probing.
+      </long>
+        </documentation>
+        <property>
+            <name>Input</name>
+            <label>Input</label>
+            <documentation>
+                <brief/>
+                <long>
+          The input of this filter simply provides the bounds that will be used
+          to set the size of the plane.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>Accepts input of following types:</text>
+                    <list>
+                        <item>vtkDataSet</item>
+                    </list>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>Center</name>
+            <label>Center</label>
+            <documentation>
+                <brief/>
+                <long>
+          The center of the geometry created.
+        </long>
+            </documentation>
+            <defaults>0.0 0.0 0.0</defaults>
+            <domains>
+                <domain>
+                    <text>
+      The value must lie within the bounding box of the dataset.
+      
+        It will default to the mid in each dimension.
+      </text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>Normal</name>
+            <label>Normal</label>
+            <documentation>
+                <brief/>
+                <long>
+          The normal to the plane.
+        </long>
+            </documentation>
+            <defaults>0.0 0.0 1.0</defaults>
+            <domains>
+  Value(s) must be in the range (
+    ,
+    ).
+</domains>
+        </property>
+        <property>
+            <name>Resolution</name>
+            <label>Resolution</label>
+            <documentation>
+                <brief/>
+                <long>
+          The number of probe samples to have in each direction.
+        </long>
+            </documentation>
+            <defaults>100</defaults>
+            <domains/>
+        </property>
+    </proxy>
+    <proxy>
+        <group>filters</group>
+        <name>PlaneGlyphs</name>
+        <label>Plane Glyphs</label>
+        <documentation>
+            <brief>Create evenly spaced glyphs on the plane.</brief>
+            <long>
+        This filter probes a volume with regularly spaced samples on a
+        plane and generates oriented glyphs.  It also supports some special
+        scaling of the glyphs to look nice on electric field data.
+      </long>
+        </documentation>
+        <property>
+            <name>Input</name>
+            <label>Input</label>
+            <documentation>
+                <brief/>
+                <long>
+          The input of this filter simply provides the bounds that will be used
+          to set the size of the plane.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>Accepts input of following types:</text>
+                    <list>
+                        <item>vtkDataSet</item>
+                    </list>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>Center</name>
+            <label>Center</label>
+            <documentation>
+                <brief/>
+                <long>
+          The center of the geometry created.
+        </long>
+            </documentation>
+            <defaults>0.0 0.0 0.0</defaults>
+            <domains>
+                <domain>
+                    <text>
+      The value must lie within the bounding box of the dataset.
+      
+        It will default to the mid in each dimension.
+      </text>
+                </domain>
+            </domains>
+        </property>
+        <property>
+            <name>Normal</name>
+            <label>Normal</label>
+            <documentation>
+                <brief/>
+                <long>
+          The normal to the plane.
+        </long>
+            </documentation>
+            <defaults>0.0 0.0 1.0</defaults>
+            <domains>
+  Value(s) must be in the range (
+    ,
+    ).
+</domains>
+        </property>
+        <property>
+            <name>Resolution</name>
+            <label>Resolution</label>
+            <documentation>
+                <brief/>
+                <long>
+          The number of probe samples to have in each direction.
+        </long>
+            </documentation>
+            <defaults>10</defaults>
+            <domains/>
+        </property>
+    </proxy>
+    <proxy>
+        <group>filters</group>
+        <name>TemporalRanges</name>
+        <label>Temporal Ranges</label>
+        <documentation>
+            <brief>Internal filter for finding information about ranges over time.</brief>
+            <long>
+        Internal filter for computing the ranges of fields over all time steps.
+      </long>
+        </documentation>
+        <property>
+            <name>Input</name>
+            <label>Input</label>
+            <documentation>
+                <brief/>
+                <long>
+          The input, which should be defined over time to make things
+          interesting.
+        </long>
+            </documentation>
+            <defaults/>
+            <domains>
+                <domain>
+                    <text>Accepts input of following types:</text>
+                    <list>
+                        <item>vtkDataSet</item>
+                    </list>
+                </domain>
+            </domains>
+        </property>
+    </proxy>
+</xml>

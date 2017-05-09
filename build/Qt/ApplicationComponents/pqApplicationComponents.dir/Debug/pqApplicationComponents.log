@@ -1,0 +1,644 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/ApplicationComponents/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/ApplicationComponents/CMakeFiles/generate.stamp is up-to-date.
+  Generating qrc_pqApplicationComponents.cpp
+  Generating moc_pqAboutDialogReaction.cpp
+  Generating moc_pqAlwaysConnectedBehavior.cpp
+  Generating moc_pqAnimationTimeToolbar.cpp
+  Generating moc_pqAnimationTimeWidget.cpp
+  Generating moc_pqApplicationSettingsReaction.cpp
+  Generating moc_pqApplyBehavior.cpp
+  Generating moc_pqAutoApplyReaction.cpp
+  Generating moc_pqAutoLoadPluginXMLBehavior.cpp
+  Generating moc_pqAxesToolbar.cpp
+  Generating moc_pqBackgroundEditorWidget.cpp
+  Generating moc_pqBoolPropertyWidgetDecorator.cpp
+  Generating moc_pqBoxPropertyWidget.cpp
+  Generating moc_pqCTHArraySelectionDecorator.cpp
+  Generating moc_pqCameraLinkReaction.cpp
+  Generating moc_pqCameraManipulatorWidget.cpp
+  Generating moc_pqCameraReaction.cpp
+  Generating moc_pqCameraToolbar.cpp
+  Generating moc_pqCameraUndoRedoReaction.cpp
+  Generating moc_pqCatalystConnectReaction.cpp
+  Generating moc_pqCatalystContinueReaction.cpp
+  Generating moc_pqCatalystPauseSimulationReaction.cpp
+  Generating moc_pqCatalystRemoveBreakpointReaction.cpp
+  Generating moc_pqCatalystSetBreakpointReaction.cpp
+  Generating moc_pqCategoryToolbarsBehavior.cpp
+  Generating moc_pqChangePipelineInputReaction.cpp
+  Generating moc_pqChartSelectionReaction.cpp
+  Generating moc_pqChooseColorPresetReaction.cpp
+  Generating moc_pqCollaborationBehavior.cpp
+  Generating moc_pqColorAnnotationsPropertyWidget.cpp
+  Generating moc_pqColorEditorPropertyWidget.cpp
+  Generating moc_pqColorMapEditor.cpp
+  Generating moc_pqColorOpacityEditorWidget.cpp
+  Generating moc_pqColorPaletteSelectorWidget.cpp
+  Generating moc_pqColorSelectorPropertyWidget.cpp
+  Generating moc_pqColorTableModel.cpp
+  Generating moc_pqColorToolbar.cpp
+  Generating moc_pqCommandButtonPropertyWidget.cpp
+  Generating moc_pqCommandLineOptionsBehavior.cpp
+  Generating moc_pqCopyReaction.cpp
+  Generating moc_pqCrashRecoveryBehavior.cpp
+  Generating moc_pqCreateCustomFilterReaction.cpp
+  Generating moc_pqCylinderPropertyWidget.cpp
+  Generating moc_pqDataQueryReaction.cpp
+  Generating moc_pqDataTimeStepBehavior.cpp
+  Generating moc_pqDefaultMainWindow.cpp
+  Generating moc_pqDefaultViewBehavior.cpp
+  Generating moc_pqDeleteReaction.cpp
+  Generating moc_pqDesktopServicesReaction.cpp
+  Generating moc_pqDoubleRangeSliderPropertyWidget.cpp
+  Generating moc_pqEditCameraReaction.cpp
+  Generating moc_pqEditColorMapReaction.cpp
+  Generating moc_pqEditScalarBarReaction.cpp
+  Generating moc_pqEnableWidgetDecorator.cpp
+  Generating moc_pqExampleVisualizationsDialog.cpp
+  Generating moc_pqExampleVisualizationsDialogReaction.cpp
+  Generating moc_pqExportReaction.cpp
+  Generating moc_pqFileNamePropertyWidget.cpp
+  Generating moc_pqFiltersMenuReaction.cpp
+  Generating moc_pqFixPathsInStateFilesBehavior.cpp
+  Generating moc_pqFontPropertyWidget.cpp
+  Generating moc_pqGenericPropertyWidgetDecorator.cpp
+  Generating moc_pqGlyphScaleFactorPropertyWidget.cpp
+  Generating moc_pqHandlePropertyWidget.cpp
+  Generating moc_pqHideAllReaction.cpp
+  Generating moc_pqIgnoreSourceTimeReaction.cpp
+  Generating moc_pqImageCompressorWidget.cpp
+  Generating moc_pqImplicitPlanePropertyWidget.cpp
+  Generating moc_pqImportCinemaReaction.cpp
+  Generating moc_pqInputDataTypeDecorator.cpp
+  Generating moc_pqInteractivePropertyWidget.cpp
+  Generating moc_pqLightsEditor.cpp
+  Generating moc_pqLinePropertyWidget.cpp
+  Generating moc_pqLinkSelectionReaction.cpp
+  Generating moc_pqListPropertyWidget.cpp
+  Generating moc_pqLoadDataReaction.cpp
+  Generating moc_pqLoadPaletteReaction.cpp
+  Generating moc_pqLoadRestoreWindowLayoutReaction.cpp
+  Generating moc_pqLoadStateReaction.cpp
+  Generating moc_pqLockPanelsBehavior.cpp
+  Generating moc_pqLockPanelsReaction.cpp
+  Generating moc_pqMainControlsToolbar.cpp
+  Generating moc_pqManageCustomFiltersReaction.cpp
+  Generating moc_pqManageLinksReaction.cpp
+  Generating moc_pqManagePluginsReaction.cpp
+  Generating moc_pqMasterOnlyReaction.cpp
+  Generating moc_pqModelTransformSupportBehavior.cpp
+  Generating moc_pqObjectPickingBehavior.cpp
+  Generating moc_pqOpacityTableModel.cpp
+  Generating moc_pqOSPRayHidingDecorator.cpp
+  Generating moc_pqPVAnimationWidget.cpp
+  Generating moc_pqPVApplicationCore.cpp
+  Generating moc_pqParaViewBehaviors.cpp
+  Generating moc_pqPersistentMainWindowStateBehavior.cpp
+  Generating moc_pqPipelineContextMenuBehavior.cpp
+  Generating moc_pqPluginActionGroupBehavior.cpp
+  Generating moc_pqPluginDockWidgetsBehavior.cpp
+  Generating moc_pqPluginSettingsBehavior.cpp
+  Generating moc_pqPointPickingHelper.cpp
+  Generating moc_pqPropertyGroupButton.cpp
+  Generating moc_pqProxyGroupMenuManager.cpp
+  Generating moc_pqPythonShellReaction.cpp
+  Generating moc_pqQtMessageHandlerBehavior.cpp
+  Generating moc_pqReaction.cpp
+  Generating moc_pqReloadFilesReaction.cpp
+  Generating moc_pqRenameProxyReaction.cpp
+  Generating moc_pqRenderViewSelectionReaction.cpp
+  Generating moc_pqRepresentationToolbar.cpp
+  Generating moc_pqResetScalarRangeReaction.cpp
+  Generating moc_pqSaveAnimationGeometryReaction.cpp
+  Generating moc_pqSaveAnimationReaction.cpp
+  Generating moc_pqSaveDataReaction.cpp
+  Generating moc_pqSaveScreenshotReaction.cpp
+  Generating moc_pqSaveStateReaction.cpp
+  Generating moc_pqScalarBarVisibilityReaction.cpp
+  Generating moc_pqSelectionReaction.cpp
+  Generating moc_pqSeriesEditorPropertyWidget.cpp
+  Generating moc_pqServerConnectReaction.cpp
+  Generating moc_pqServerDisconnectReaction.cpp
+  Generating moc_pqShowWidgetDecorator.cpp
+  Generating moc_pqSourcesMenuReaction.cpp
+  Generating moc_pqSpherePropertyWidget.cpp
+  Generating moc_pqSplinePropertyWidget.cpp
+  Generating moc_pqSpreadSheetViewDecorator.cpp
+  Generating moc_pqSpreadSheetVisibilityBehavior.cpp
+  Generating moc_pqStandardPropertyWidgetInterface.cpp
+  Generating moc_pqStandardRecentlyUsedResourceLoaderImplementation.cpp
+  Generating moc_pqStandardViewFrameActionsImplementation.cpp
+  Generating moc_pqStatusBar.cpp
+  Generating moc_pqStreamingTestingEventPlayer.cpp
+  Generating moc_pqTestingReaction.cpp
+  Generating moc_pqTextLocationWidget.cpp
+  Generating moc_pqTimeInspectorWidget.cpp
+  Generating moc_pqTimerLogReaction.cpp
+  Generating moc_pqToggleInteractionViewMode.cpp
+  Generating moc_pqTransferFunctionWidgetPropertyWidget.cpp
+  Generating moc_pqUndoRedoBehavior.cpp
+  Generating moc_pqUndoRedoReaction.cpp
+  Generating moc_pqVCRToolbar.cpp
+  Generating moc_pqVerifyRequiredPluginBehavior.cpp
+  Generating moc_pqViewMenuManager.cpp
+  Generating moc_pqViewStreamingBehavior.cpp
+  Generating moc_pqViewTypePropertyWidget.cpp
+  Generating moc_pqWelcomeDialog.cpp
+  Generating moc_pqYoungsMaterialPropertyWidget.cpp
+  Generating moc_pqHelpReaction.cpp
+  Generating moc_pqPluginDocumentationBehavior.cpp
+  Generating ui_pqAnimationTimeWidget.h
+  Generating ui_pqAxesToolbar.h
+  Generating ui_pqBackgroundEditorWidget.h
+  Generating ui_pqBoxPropertyWidget.h
+  Generating ui_pqCameraManipulatorWidget.h
+  Generating ui_pqCameraToolbar.h
+  Generating ui_pqColorAnnotationsPropertyWidget.h
+  Generating ui_pqColorEditorPropertyWidget.h
+  Generating ui_pqColorMapEditor.h
+  Generating ui_pqColorOpacityEditorWidget.h
+  Generating ui_pqColorToolbar.h
+  Generating ui_pqCylinderPropertyWidget.h
+  Generating ui_pqDefaultMainWindow.h
+  Generating ui_pqDoubleRangeSliderPropertyWidget.h
+  Generating ui_pqEditMenuBuilder.h
+  Generating ui_pqExampleVisualizationsDialog.h
+  Generating ui_pqFileMenuBuilder.h
+  Generating ui_pqFontPropertyWidget.h
+  Generating ui_pqHandlePropertyWidget.h
+  Generating ui_pqImageCompressorWidget.h
+  Generating ui_pqImplicitPlanePropertyWidget.h
+  Generating ui_pqLightsEditor.h
+  Generating ui_pqLinePropertyWidget.h
+  Generating ui_pqMainControlsToolbar.h
+  Generating ui_pqPipelineBrowserContextMenu.h
+  Generating ui_pqResetScalarRangeToDataOverTime.h
+  Generating ui_pqSavePresetOptions.h
+  Generating ui_pqSeriesEditorPropertyWidget.h
+  Generating ui_pqSpherePropertyWidget.h
+  Generating ui_pqSplinePropertyWidget.h
+  Generating ui_pqSpreadSheetViewDecorator.h
+  Generating ui_pqTextLocationWidget.h
+  Generating ui_pqTimeInspectorWidget.h
+  Generating ui_pqTransferFunctionWidgetPropertyWidgetDialog.h
+  Generating ui_pqVCRToolbar.h
+  Generating ui_pqWelcomeDialog.h
+  Generating ui_pqYoungsMaterialPropertyWidget.h
+  pqAboutDialogReaction.cxx
+  pqAlwaysConnectedBehavior.cxx
+  pqAnimationTimeToolbar.cxx
+  pqAnimationTimeWidget.cxx
+  pqApplicationComponentsInit.cxx
+  pqApplicationSettingsReaction.cxx
+  pqApplyBehavior.cxx
+  pqAutoApplyReaction.cxx
+  pqAutoLoadPluginXMLBehavior.cxx
+  pqAxesToolbar.cxx
+  pqBackgroundEditorWidget.cxx
+  pqBoolPropertyWidgetDecorator.cxx
+  pqBoxPropertyWidget.cxx
+  pqCTHArraySelectionDecorator.cxx
+  pqCameraLinkReaction.cxx
+  pqCameraManipulatorWidget.cxx
+  pqCameraReaction.cxx
+  pqCameraToolbar.cxx
+  pqCameraUndoRedoReaction.cxx
+  pqCatalystConnectReaction.cxx
+  Generating Code...
+  Compiling...
+  pqCatalystPauseSimulationReaction.cxx
+  pqCatalystRemoveBreakpointReaction.cxx
+  pqCatalystSetBreakpointReaction.cxx
+  pqCategoryToolbarsBehavior.cxx
+  pqChangePipelineInputReaction.cxx
+  pqChartSelectionReaction.cxx
+  pqChooseColorPresetReaction.cxx
+  pqCollaborationBehavior.cxx
+  pqColorAnnotationsPropertyWidget.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(700): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(692): note: while compiling class template member function '`anonymous-namespace'::pqAnnotationsModel::ItemType *QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::insert(`anonymous-namespace'::pqAnnotationsModel::ItemType *,int,const T &)'
+          with
+          [
+              T=`anonymous-namespace'::pqAnnotationsModel::ItemType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(442): note: see reference to function template instantiation '`anonymous-namespace'::pqAnnotationsModel::ItemType *QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::insert(`anonymous-namespace'::pqAnnotationsModel::ItemType *,int,const T &)' being compiled
+          with
+          [
+              T=`anonymous-namespace'::pqAnnotationsModel::ItemType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::QVector(const QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(924): note: see reference to function template instantiation 'QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::QVector(const QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType> &)' being compiled
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqColorAnnotationsPropertyWidget.cxx(182): note: see reference to class template instantiation 'QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(749): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(727): note: while compiling class template member function '`anonymous-namespace'::pqAnnotationsModel::ItemType *QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::erase(`anonymous-namespace'::pqAnnotationsModel::ItemType *,`anonymous-namespace'::pqAnnotationsModel::ItemType *)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(454): note: see reference to function template instantiation '`anonymous-namespace'::pqAnnotationsModel::ItemType *QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::erase(`anonymous-namespace'::pqAnnotationsModel::ItemType *,`anonymous-namespace'::pqAnnotationsModel::ItemType *)' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(753): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(556): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(533): note: while compiling class template member function 'void QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::reallocData(const int,const int,QArrayData::AllocationOptions)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(422): note: see reference to function template instantiation 'void QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::reallocData(const int,const int,QArrayData::AllocationOptions)' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(601): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=`anonymous-namespace'::pqAnnotationsModel::ItemType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<`anonymous-namespace'::pqAnnotationsModel::ItemType>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=`anonymous-namespace'::pqAnnotationsModel::ItemType
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<vtkTuple<QString,2>>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=vtkTuple<QString,2>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(485): note: see reference to function template instantiation 'void QVector<vtkTuple<QString,2>>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=vtkTuple<QString,2>
+          ]
+  pqColorEditorPropertyWidget.cxx
+  pqColorMapEditor.cxx
+  pqColorOpacityEditorWidget.cxx
+  pqColorPaletteSelectorWidget.cxx
+  pqColorSelectorPropertyWidget.cxx
+  pqColorTableModel.cxx
+  pqColorToolbar.cxx
+  pqCommandButtonPropertyWidget.cxx
+  pqCommandLineOptionsBehavior.cxx
+  pqCopyReaction.cxx
+  pqCrashRecoveryBehavior.cxx
+  Generating Code...
+  Compiling...
+  pqCreateCustomFilterReaction.cxx
+  pqCylinderPropertyWidget.cxx
+  pqDataQueryReaction.cxx
+  pqDataTimeStepBehavior.cxx
+  pqDefaultMainWindow.cxx
+  pqDefaultViewBehavior.cxx
+  pqDeleteReaction.cxx
+  pqDesktopServicesReaction.cxx
+  pqDoubleRangeSliderPropertyWidget.cxx
+  pqEditCameraReaction.cxx
+  pqEditColorMapReaction.cxx
+  pqEditScalarBarReaction.cxx
+  pqEnableWidgetDecorator.cxx
+  pqExampleVisualizationsDialog.cxx
+  pqExampleVisualizationsDialogReaction.cxx
+  pqExportReaction.cxx
+  pqFileNamePropertyWidget.cxx
+  pqFiltersMenuReaction.cxx
+  pqFixPathsInStateFilesBehavior.cxx
+  pqFontPropertyWidget.cxx
+  Generating Code...
+  Compiling...
+  pqGenericPropertyWidgetDecorator.cxx
+  pqGlyphScaleFactorPropertyWidget.cxx
+  pqHandlePropertyWidget.cxx
+  pqHideAllReaction.cxx
+  pqIgnoreSourceTimeReaction.cxx
+  pqImageCompressorWidget.cxx
+  pqImplicitPlanePropertyWidget.cxx
+  pqImportCinemaReaction.cxx
+  pqInputDataTypeDecorator.cxx
+  pqInteractivePropertyWidget.cxx
+  pqLightsEditor.cxx
+  pqLinePropertyWidget.cxx
+  pqLinkSelectionReaction.cxx
+  pqListPropertyWidget.cxx
+  pqLoadDataReaction.cxx
+  pqLoadPaletteReaction.cxx
+  pqLoadRestoreWindowLayoutReaction.cxx
+  pqLoadStateReaction.cxx
+  pqLockPanelsBehavior.cxx
+  pqLockPanelsReaction.cxx
+  Generating Code...
+  Compiling...
+  pqMainControlsToolbar.cxx
+  pqManageCustomFiltersReaction.cxx
+  pqManageLinksReaction.cxx
+  pqManagePluginsReaction.cxx
+  pqMasterOnlyReaction.cxx
+  pqModelTransformSupportBehavior.cxx
+  pqObjectPickingBehavior.cxx
+  pqOpacityTableModel.cxx
+  pqOSPRayHidingDecorator.cxx
+  pqPVAnimationWidget.cxx
+  pqPVApplicationCore.cxx
+  pqParaViewBehaviors.cxx
+  pqParaViewMenuBuilders.cxx
+  pqPersistentMainWindowStateBehavior.cxx
+  pqPipelineContextMenuBehavior.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<vtkIdType>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=vtkIdType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<vtkIdType>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=vtkIdType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<vtkIdType>::QVector(const QVector<vtkIdType> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(924): note: see reference to function template instantiation 'QVector<vtkIdType>::QVector(const QVector<vtkIdType> &)' being compiled
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqPipelineContextMenuBehavior.cxx(199): note: see reference to class template instantiation 'QVector<vtkIdType>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<vtkIdType>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=vtkIdType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<vtkIdType>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=vtkIdType
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<vtkIdType>::detach(void)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(129): note: see reference to function template instantiation 'void QVector<vtkIdType>::detach(void)' being compiled
+  pqPluginActionGroupBehavior.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqPluginActionGroupBehavior.cxx(167): warning C4714: function 'QString QString::toLower(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(410): note: see declaration of 'QString::toLower'
+  pqPluginDockWidgetsBehavior.cxx
+  pqPluginSettingsBehavior.cxx
+  pqPointPickingHelper.cxx
+  pqPropertyGroupButton.cxx
+  Generating Code...
+  Compiling...
+  pqProxyGroupMenuManager.cxx
+  pqPythonShellReaction.cxx
+  pqQtMessageHandlerBehavior.cxx
+  pqReaction.cxx
+  pqReloadFilesReaction.cxx
+  pqRenameProxyReaction.cxx
+  pqRenderViewSelectionReaction.cxx
+  pqRepresentationToolbar.cxx
+  pqResetScalarRangeReaction.cxx
+  pqSaveAnimationGeometryReaction.cxx
+  pqSaveAnimationReaction.cxx
+  pqSaveDataReaction.cxx
+  pqSaveScreenshotReaction.cxx
+  pqSaveStateReaction.cxx
+  pqScalarBarVisibilityReaction.cxx
+  pqSelectionReaction.cxx
+  pqSeriesEditorPropertyWidget.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(645): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(638): note: while compiling class template member function 'void QVector<QPair<QString,bool>>::append(const T &)'
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(258): note: see reference to function template instantiation 'void QVector<QPair<QString,bool>>::append(const T &)' being compiled
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqSeriesEditorPropertyWidget.cxx(75): note: see reference to class template instantiation 'QVector<QPair<QString,bool>>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(651): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(700): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(692): note: while compiling class template member function 'QPair<QString,bool> *QVector<QPair<QString,bool>>::insert(QPair<QString,bool> *,int,const T &)'
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(442): note: see reference to function template instantiation 'QPair<QString,bool> *QVector<QPair<QString,bool>>::insert(QPair<QString,bool> *,int,const T &)' being compiled
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<QPair<QString,bool>>::QVector(const QVector<QPair<QString,bool>> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(924): note: see reference to function template instantiation 'QVector<QPair<QString,bool>>::QVector(const QVector<QPair<QString,bool>> &)' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<QPair<QString,bool>>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<QPair<QString,bool>>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(556): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(533): note: while compiling class template member function 'void QVector<QPair<QString,QColor>>::reallocData(const int,const int,QArrayData::AllocationOptions)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(422): note: see reference to function template instantiation 'void QVector<QPair<QString,QColor>>::reallocData(const int,const int,QArrayData::AllocationOptions)' being compiled
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<QPair<QString,QColor>>::QVector(const QVector<QPair<QString,QColor>> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(924): note: see reference to function template instantiation 'QVector<QPair<QString,QColor>>::QVector(const QVector<QPair<QString,QColor>> &)' being compiled
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(926): note: see reference to class template instantiation 'QVector<QPair<QString,QColor>>' being compiled
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqSeriesEditorPropertyWidget.cxx(341): note: see reference to class template instantiation 'QForeachContainer<const QVector<QPair<QString,QColor>>>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(601): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<QPair<QString,bool>>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<QPair<QString,bool>>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QPair<QString,bool>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<QPair<QString,bool>>::detach(void)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(204): note: see reference to function template instantiation 'void QVector<QPair<QString,bool>>::detach(void)' being compiled
+  pqServerConnectReaction.cxx
+  pqServerDisconnectReaction.cxx
+  pqShowWidgetDecorator.cxx
+  Generating Code...
+  Compiling...
+  pqSourcesMenuReaction.cxx
+  pqSpherePropertyWidget.cxx
+  pqSplinePropertyWidget.cxx
+  pqSpreadSheetViewDecorator.cxx
+  pqSpreadSheetVisibilityBehavior.cxx
+  pqStandardPropertyWidgetInterface.cxx
+  pqStandardRecentlyUsedResourceLoaderImplementation.cxx
+  pqStandardViewFrameActionsImplementation.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\ApplicationComponents\pqStandardViewFrameActionsImplementation.cxx(793): warning C4714: function 'QString QString::toLower(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(408): note: see declaration of 'QString::toLower'
+  pqStatusBar.cxx
+  pqStreamingTestingEventPlayer.cxx
+  pqTestingReaction.cxx
+  pqTextLocationWidget.cxx
+  pqTimeInspectorWidget.cxx
+  pqTimerLogReaction.cxx
+  pqToggleInteractionViewMode.cxx
+  pqTransferFunctionWidgetPropertyWidget.cxx
+  pqUndoRedoBehavior.cxx
+  pqUndoRedoReaction.cxx
+  pqVCRToolbar.cxx
+  pqVerifyRequiredPluginBehavior.cxx
+  Generating Code...
+  Compiling...
+  pqViewMenuManager.cxx
+  pqViewStreamingBehavior.cxx
+  pqViewTypePropertyWidget.cxx
+  pqWelcomeDialog.cxx
+  pqYoungsMaterialPropertyWidget.cxx
+  pqHelpReaction.cxx
+  pqPluginDocumentationBehavior.cxx
+  qrc_pqApplicationComponents.cpp
+  moc_pqAboutDialogReaction.cpp
+  moc_pqAlwaysConnectedBehavior.cpp
+  moc_pqAnimationTimeToolbar.cpp
+  moc_pqAnimationTimeWidget.cpp
+  moc_pqApplicationSettingsReaction.cpp
+  moc_pqApplyBehavior.cpp
+  moc_pqAutoApplyReaction.cpp
+  moc_pqAutoLoadPluginXMLBehavior.cpp
+  moc_pqAxesToolbar.cpp
+  moc_pqBackgroundEditorWidget.cpp
+  moc_pqBoolPropertyWidgetDecorator.cpp
+  moc_pqBoxPropertyWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqCTHArraySelectionDecorator.cpp
+  moc_pqCameraLinkReaction.cpp
+  moc_pqCameraManipulatorWidget.cpp
+  moc_pqCameraReaction.cpp
+  moc_pqCameraToolbar.cpp
+  moc_pqCameraUndoRedoReaction.cpp
+  moc_pqCatalystConnectReaction.cpp
+  moc_pqCatalystContinueReaction.cpp
+  moc_pqCatalystPauseSimulationReaction.cpp
+  moc_pqCatalystRemoveBreakpointReaction.cpp
+  moc_pqCatalystSetBreakpointReaction.cpp
+  moc_pqCategoryToolbarsBehavior.cpp
+  moc_pqChangePipelineInputReaction.cpp
+  moc_pqChartSelectionReaction.cpp
+  moc_pqChooseColorPresetReaction.cpp
+  moc_pqCollaborationBehavior.cpp
+  moc_pqColorAnnotationsPropertyWidget.cpp
+  moc_pqColorEditorPropertyWidget.cpp
+  moc_pqColorMapEditor.cpp
+  moc_pqColorOpacityEditorWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqColorPaletteSelectorWidget.cpp
+  moc_pqColorSelectorPropertyWidget.cpp
+  moc_pqColorTableModel.cpp
+  moc_pqColorToolbar.cpp
+  moc_pqCommandButtonPropertyWidget.cpp
+  moc_pqCommandLineOptionsBehavior.cpp
+  moc_pqCopyReaction.cpp
+  moc_pqCrashRecoveryBehavior.cpp
+  moc_pqCreateCustomFilterReaction.cpp
+  moc_pqCylinderPropertyWidget.cpp
+  moc_pqDataQueryReaction.cpp
+  moc_pqDataTimeStepBehavior.cpp
+  moc_pqDefaultMainWindow.cpp
+  moc_pqDefaultViewBehavior.cpp
+  moc_pqDeleteReaction.cpp
+  moc_pqDesktopServicesReaction.cpp
+  moc_pqDoubleRangeSliderPropertyWidget.cpp
+  moc_pqEditCameraReaction.cpp
+  moc_pqEditColorMapReaction.cpp
+  moc_pqEditScalarBarReaction.cpp
+  Generating Code...
+  Compiling...
+  moc_pqEnableWidgetDecorator.cpp
+  moc_pqExampleVisualizationsDialog.cpp
+  moc_pqExampleVisualizationsDialogReaction.cpp
+  moc_pqExportReaction.cpp
+  moc_pqFileNamePropertyWidget.cpp
+  moc_pqFiltersMenuReaction.cpp
+  moc_pqFixPathsInStateFilesBehavior.cpp
+  moc_pqFontPropertyWidget.cpp
+  moc_pqGenericPropertyWidgetDecorator.cpp
+  moc_pqGlyphScaleFactorPropertyWidget.cpp
+  moc_pqHandlePropertyWidget.cpp
+  moc_pqHideAllReaction.cpp
+  moc_pqIgnoreSourceTimeReaction.cpp
+  moc_pqImageCompressorWidget.cpp
+  moc_pqImplicitPlanePropertyWidget.cpp
+  moc_pqImportCinemaReaction.cpp
+  moc_pqInputDataTypeDecorator.cpp
+  moc_pqInteractivePropertyWidget.cpp
+  moc_pqLightsEditor.cpp
+  moc_pqLinePropertyWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqLinkSelectionReaction.cpp
+  moc_pqListPropertyWidget.cpp
+  moc_pqLoadDataReaction.cpp
+  moc_pqLoadPaletteReaction.cpp
+  moc_pqLoadRestoreWindowLayoutReaction.cpp
+  moc_pqLoadStateReaction.cpp
+  moc_pqLockPanelsBehavior.cpp
+  moc_pqLockPanelsReaction.cpp
+  moc_pqMainControlsToolbar.cpp
+  moc_pqManageCustomFiltersReaction.cpp
+  moc_pqManageLinksReaction.cpp
+  moc_pqManagePluginsReaction.cpp
+  moc_pqMasterOnlyReaction.cpp
+  moc_pqModelTransformSupportBehavior.cpp
+  moc_pqObjectPickingBehavior.cpp
+  moc_pqOpacityTableModel.cpp
+  moc_pqOSPRayHidingDecorator.cpp
+  moc_pqPVAnimationWidget.cpp
+  moc_pqPVApplicationCore.cpp
+  moc_pqParaViewBehaviors.cpp
+  Generating Code...
+  Compiling...
+  moc_pqPersistentMainWindowStateBehavior.cpp
+  moc_pqPipelineContextMenuBehavior.cpp
+  moc_pqPluginActionGroupBehavior.cpp
+  moc_pqPluginDockWidgetsBehavior.cpp
+  moc_pqPluginSettingsBehavior.cpp
+  moc_pqPointPickingHelper.cpp
+  moc_pqPropertyGroupButton.cpp
+  moc_pqProxyGroupMenuManager.cpp
+  moc_pqPythonShellReaction.cpp
+  moc_pqQtMessageHandlerBehavior.cpp
+  moc_pqReaction.cpp
+  moc_pqReloadFilesReaction.cpp
+  moc_pqRenameProxyReaction.cpp
+  moc_pqRenderViewSelectionReaction.cpp
+  moc_pqRepresentationToolbar.cpp
+  moc_pqResetScalarRangeReaction.cpp
+  moc_pqSaveAnimationGeometryReaction.cpp
+  moc_pqSaveAnimationReaction.cpp
+  moc_pqSaveDataReaction.cpp
+  moc_pqSaveScreenshotReaction.cpp
+  Generating Code...
+  Compiling...
+  moc_pqSaveStateReaction.cpp
+  moc_pqScalarBarVisibilityReaction.cpp
+  moc_pqSelectionReaction.cpp
+  moc_pqSeriesEditorPropertyWidget.cpp
+  moc_pqServerConnectReaction.cpp
+  moc_pqServerDisconnectReaction.cpp
+  moc_pqShowWidgetDecorator.cpp
+  moc_pqSourcesMenuReaction.cpp
+  moc_pqSpherePropertyWidget.cpp
+  moc_pqSplinePropertyWidget.cpp
+  moc_pqSpreadSheetViewDecorator.cpp
+  moc_pqSpreadSheetVisibilityBehavior.cpp
+  moc_pqStandardPropertyWidgetInterface.cpp
+  moc_pqStandardRecentlyUsedResourceLoaderImplementation.cpp
+  moc_pqStandardViewFrameActionsImplementation.cpp
+  moc_pqStatusBar.cpp
+  moc_pqStreamingTestingEventPlayer.cpp
+  moc_pqTestingReaction.cpp
+  moc_pqTextLocationWidget.cpp
+  moc_pqTimeInspectorWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqTimerLogReaction.cpp
+  moc_pqToggleInteractionViewMode.cpp
+  moc_pqTransferFunctionWidgetPropertyWidget.cpp
+  moc_pqUndoRedoBehavior.cpp
+  moc_pqUndoRedoReaction.cpp
+  moc_pqVCRToolbar.cpp
+  moc_pqVerifyRequiredPluginBehavior.cpp
+  moc_pqViewMenuManager.cpp
+  moc_pqViewStreamingBehavior.cpp
+  moc_pqViewTypePropertyWidget.cpp
+  moc_pqWelcomeDialog.cpp
+  moc_pqYoungsMaterialPropertyWidget.cpp
+  moc_pqHelpReaction.cpp
+  moc_pqPluginDocumentationBehavior.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqApplicationComponents-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqApplicationComponents-pv5.3.exp
+  pqApplicationComponents.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkpqApplicationComponents-pv5.3.dll

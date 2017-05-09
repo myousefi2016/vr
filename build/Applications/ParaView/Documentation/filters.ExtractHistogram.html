@@ -1,0 +1,100 @@
+
+<html>
+    <head>
+        <title>Histogram</title>
+        <meta name="proxy_name" contents="filters.ExtractHistogram"/>
+        <meta name="filename" contents="filters.ExtractHistogram.html"/>
+    </head>
+    <body>
+        <h2>Histogram (ExtractHistogram)</h2>
+        <i>
+            <p>Extract a histogram from field data.</p>
+        </i>
+        <div class="description"/>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Histogram
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataObject</li>
+                        </ul>
+                    </p>
+                    <p>
+      The dataset must contain a field array ()
+      </p>
+                </td>
+            </tr>
+            <tr>
+                <th>SelectInputArray</th>
+                <td>This property indicates the name of the array from which
+        to compute the histogram.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>An array of scalars is required.</p>
+                    <p>The value must be field array name.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>BinCount</th>
+                <td>The value of this property specifies the number of bins
+        for the histogram.</td>
+                <td>10<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Component</th>
+                <td>The value of this property specifies the array component
+        from which the histogram should be computed.</td>
+                <td>0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>CalculateAverages</th>
+                <td>This option controls whether the algorithm calculates
+        averages of variables other than the primary variable that fall into
+        each bin.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>UseCustomBinRanges</th>
+                <td>When set to true, CustomBinRanges will be used instead
+        of using the full range for the selected array. By default, set to
+        false.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CustomBinRanges</th>
+                <td>Set custom bin ranges to use. These are used only when
+        UseCustomBinRanges is set to true.</td>
+                <td>0.0 100.0<span/>
+                </td>
+                <td>
+                    <p>The value must lie within the range of the selected data array.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

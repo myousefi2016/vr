@@ -1,0 +1,45 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/Volume/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Rendering/Volume/CMakeFiles/generate.stamp is up-to-date.
+  vtkDirectionEncoder.cxx
+  vtkEncodedGradientEstimator.cxx
+  vtkEncodedGradientShader.cxx
+  vtkFiniteDifferenceGradientEstimator.cxx
+  vtkFixedPointRayCastImage.cxx
+  vtkFixedPointVolumeRayCastCompositeGOHelper.cxx
+  vtkFixedPointVolumeRayCastCompositeGOShadeHelper.cxx
+  vtkFixedPointVolumeRayCastCompositeHelper.cxx
+  vtkFixedPointVolumeRayCastCompositeShadeHelper.cxx
+  vtkFixedPointVolumeRayCastHelper.cxx
+  vtkFixedPointVolumeRayCastMIPHelper.cxx
+  vtkFixedPointVolumeRayCastMapper.cxx
+  vtkOSPRayVolumeInterface.cxx
+  vtkProjectedTetrahedraMapper.cxx
+  vtkRayCastImageDisplayHelper.cxx
+  vtkRecursiveSphereDirectionEncoder.cxx
+  vtkSphericalDirectionEncoder.cxx
+  vtkUnstructuredGridBunykRayCastFunction.cxx
+  vtkUnstructuredGridHomogeneousRayIntegrator.cxx
+  vtkUnstructuredGridLinearRayIntegrator.cxx
+  Generating Code...
+  Compiling...
+  vtkUnstructuredGridPartialPreIntegration.cxx
+  vtkUnstructuredGridPreIntegration.cxx
+  vtkUnstructuredGridVolumeMapper.cxx
+  vtkUnstructuredGridVolumeRayCastFunction.cxx
+  vtkUnstructuredGridVolumeRayCastIterator.cxx
+  vtkUnstructuredGridVolumeRayCastMapper.cxx
+  vtkUnstructuredGridVolumeRayIntegrator.cxx
+  vtkUnstructuredGridVolumeZSweepMapper.cxx
+  vtkVolumeMapper.cxx
+  vtkVolumeOutlineSource.cxx
+  vtkVolumePicker.cxx
+  vtkVolumeRayCastCompositeFunction.cxx
+  vtkVolumeRayCastFunction.cxx
+  vtkVolumeRayCastIsosurfaceFunction.cxx
+  vtkVolumeRayCastMIPFunction.cxx
+  vtkVolumeRayCastMapper.cxx
+  vtkVolumeRayCastSpaceLeapingImageFilter.cxx
+  Generating Code...
+  vtkGPUVolumeRayCastMapper.cxx
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingVolume-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkRenderingVolume-pv5.3.exp
+  vtkRenderingVolume.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkRenderingVolume-pv5.3.dll

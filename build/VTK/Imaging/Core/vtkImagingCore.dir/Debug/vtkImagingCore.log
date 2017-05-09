@@ -1,0 +1,51 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Imaging/Core/CMakeFiles/generate.stamp is up-to-date.
+  vtkExtractVOI.cxx
+  vtkImageAppendComponents.cxx
+  vtkImageBlend.cxx
+  vtkImageCacheFilter.cxx
+  vtkImageCast.cxx
+  vtkImageChangeInformation.cxx
+  vtkImageClip.cxx
+  vtkImageConstantPad.cxx
+  vtkImageDataStreamer.cxx
+  vtkImageDecomposeFilter.cxx
+  vtkImageDifference.cxx
+  vtkImageExtractComponents.cxx
+  vtkImageFlip.cxx
+  vtkImageIterateFilter.cxx
+  vtkImageMagnify.cxx
+  vtkImageMapToColors.cxx
+  vtkImageMask.cxx
+  vtkImageMirrorPad.cxx
+  vtkImagePadFilter.cxx
+  vtkImagePermute.cxx
+  Generating Code...
+  Compiling...
+  vtkImagePointDataIterator.cxx
+  vtkImagePointIterator.cxx
+  vtkImageResample.cxx
+  vtkImageReslice.cxx
+  vtkImageResliceToColors.cxx
+  vtkImageShiftScale.cxx
+  vtkImageShrink3D.cxx
+  vtkImageStencilIterator.cxx
+  vtkImageThreshold.cxx
+  vtkImageTranslateExtent.cxx
+  vtkImageWrapPad.cxx
+  vtkRTAnalyticSource.cxx
+  vtkImageResize.cxx
+  vtkImageBSplineCoefficients.cxx
+  vtkImageStencilData.cxx
+  vtkImageStencilAlgorithm.cxx
+  vtkAbstractImageInterpolator.cxx
+  vtkImageBSplineInternals.cxx
+  vtkImageBSplineInterpolator.cxx
+  vtkImageSincInterpolator.cxx
+  Generating Code...
+  Compiling...
+  vtkImageInterpolator.cxx
+  vtkImageStencilSource.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingCore-pv5.3.exp
+  vtkImagingCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkImagingCore-pv5.3.dll

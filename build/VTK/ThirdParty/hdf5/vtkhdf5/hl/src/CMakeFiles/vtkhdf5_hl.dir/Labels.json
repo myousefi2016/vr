@@ -1,0 +1,83 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5DO.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5DS.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5IM.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5LT.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5LTanalyze.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5LTparse.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5PT.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5TB.c"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5DOpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5DSpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5IMpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5LTparse.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5LTpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5PTpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/H5TBpublic.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/hdf5_hl.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/vtk_libhdf5_hl_mangle.h"
+		},
+		
+		{
+			"file" : "C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/hdf5/vtkhdf5/hl/src/CMakeLists.txt"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "vtkhdf5" ],
+		"name" : "vtkhdf5_hl"
+	}
+}

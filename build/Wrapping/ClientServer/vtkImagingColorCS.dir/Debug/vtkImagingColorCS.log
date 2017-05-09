@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkImageHSIToRGBClientServer.cxx
+  CS Wrapping - generating vtkImageHSVToRGBClientServer.cxx
+  CS Wrapping - generating vtkImageYIQToRGBClientServer.cxx
+  CS Wrapping - generating vtkImageLuminanceClientServer.cxx
+  CS Wrapping - generating vtkImageMapToRGBAClientServer.cxx
+  CS Wrapping - generating vtkImageMapToWindowLevelColorsClientServer.cxx
+  CS Wrapping - generating vtkImageQuantizeRGBToIndexClientServer.cxx
+  CS Wrapping - generating vtkImageRGBToHSIClientServer.cxx
+  CS Wrapping - generating vtkImageRGBToHSVClientServer.cxx
+  CS Wrapping - generating vtkImageRGBToYIQClientServer.cxx
+  vtkImageHSIToRGBClientServer.cxx
+  vtkImageHSVToRGBClientServer.cxx
+  vtkImageYIQToRGBClientServer.cxx
+  vtkImageLuminanceClientServer.cxx
+  vtkImageMapToRGBAClientServer.cxx
+  vtkImageMapToWindowLevelColorsClientServer.cxx
+  vtkImageQuantizeRGBToIndexClientServer.cxx
+  vtkImageRGBToHSIClientServer.cxx
+  vtkImageRGBToHSVClientServer.cxx
+  vtkImageRGBToYIQClientServer.cxx
+  vtkImagingColorCSInit.cxx
+  Generating Code...
+  vtkImagingColorCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkImagingColorCS-pv5.3.lib

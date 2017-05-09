@@ -1,0 +1,4 @@
+--compiler-flavor=msvc
+-o
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/NonOrthogonalSource/moc_pqNonOrthogonalAutoStart.cpp
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/NonOrthogonalSource/pqNonOrthogonalAutoStart.h

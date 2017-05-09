@@ -1,0 +1,33 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Geometry/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Geometry/CMakeFiles/generate.stamp is up-to-date.
+  vtkAVSucdReader.cxx
+  vtkBYUReader.cxx
+  vtkBYUWriter.cxx
+  vtkChacoReader.cxx
+  vtkFacetWriter.cxx
+  vtkFLUENTReader.cxx
+  vtkGAMBITReader.cxx
+  vtkGaussianCubeReader.cxx
+  vtkHoudiniPolyDataWriter.cxx
+  vtkIVWriter.cxx
+  vtkMCubesReader.cxx
+  vtkMCubesWriter.cxx
+  vtkMFIXReader.cxx
+  vtkMoleculeReaderBase.cxx
+  vtkOBJReader.cxx
+  vtkOpenFOAMReader.cxx
+  vtkParticleReader.cxx
+  vtkPDBReader.cxx
+  vtkProStarReader.cxx
+  vtkPTSReader.cxx
+  Generating Code...
+  Compiling...
+  vtkSTLReader.cxx
+  vtkSTLWriter.cxx
+  vtkTecplotReader.cxx
+  vtkUGFacetReader.cxx
+  vtkWindBladeReader.cxx
+  vtkXYZMolReader.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOGeometry-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOGeometry-pv5.3.exp
+  vtkIOGeometry.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOGeometry-pv5.3.dll

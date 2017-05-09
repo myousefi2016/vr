@@ -1,0 +1,13 @@
+set(vtkFiltersParallelFlowPaths_HEADERS_LOADED 1)
+set(vtkFiltersParallelFlowPaths_HEADERS "vtkPLagrangianParticleTracker;vtkPTemporalStreamTracer;vtkPStreamTracer;vtkPParticleTracer;vtkPParticlePathFilter;vtkPStreaklineFilter;vtkPParticleTracerBase;vtkFiltersParallelFlowPathsObjectFactory")
+
+foreach(header ${vtkFiltersParallelFlowPaths_HEADERS})
+  set(vtkFiltersParallelFlowPaths_HEADER_${header}_EXISTS 1)
+endforeach()
+
+set(vtkFiltersParallelFlowPaths_HEADER_vtkPParticleTracerBase_ABSTRACT 1)
+
+set(vtkFiltersParallelFlowPaths_HEADER_vtkFiltersParallelFlowPathsObjectFactory_WRAP_EXCLUDE 1)
+
+set(vtkFiltersParallelFlowPaths_HEADER_vtkFiltersParallelFlowPathsObjectFactory_WRAP_EXCLUDE_PYTHON 1)
+

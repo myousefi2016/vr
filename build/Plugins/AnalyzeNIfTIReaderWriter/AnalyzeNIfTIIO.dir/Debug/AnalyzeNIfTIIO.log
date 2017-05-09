@@ -1,0 +1,32 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/AnalyzeNIfTIReaderWriter/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/AnalyzeNIfTIReaderWriter/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAnalyzeReaderClientServer.cxx
+  CS Wrapping - generating vtkAnalyzeWriterClientServer.cxx
+  CS Wrapping - generating vtkNIfTIReaderClientServer.cxx
+  CS Wrapping - generating vtkNIfTIWriterClientServer.cxx
+  CS Wrapping - generating vtknifti1_ioClientServer.cxx
+  CS Wrapping - generating vtkznzlibClientServer.cxx
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_AnalyzeNIfTIIO.h
+  -- Generate module: AnalyzeNIfTISM
+  vtkAnalyzeReader.cxx
+  vtkAnalyzeWriter.cxx
+  vtkNIfTIReader.cxx
+  vtkNIfTIWriter.cxx
+  vtknifti1_io.cxx
+  vtkznzlib.cxx
+  vtkAnalyzeReaderClientServer.cxx
+  vtkAnalyzeWriterClientServer.cxx
+  vtkNIfTIReaderClientServer.cxx
+  vtkNIfTIWriterClientServer.cxx
+  vtknifti1_ioClientServer.cxx
+  vtkznzlibClientServer.cxx
+  AnalyzeNIfTIIOInit.cxx
+  AnalyzeNIfTIIO_Plugin.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/AnalyzeNIfTIIO.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/AnalyzeNIfTIIO.exp
+  AnalyzeNIfTIIO.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\AnalyzeNIfTIIO.dll

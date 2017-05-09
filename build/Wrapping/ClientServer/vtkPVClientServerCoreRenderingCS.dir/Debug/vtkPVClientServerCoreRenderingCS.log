@@ -1,0 +1,159 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtk3DWidgetRepresentationClientServer.cxx
+  CS Wrapping - generating vtkAMROutlineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkAMRStreamingPriorityQueueClientServer.cxx
+  CS Wrapping - generating vtkAMRStreamingVolumeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkCaveSynchronizedRenderersClientServer.cxx
+  CS Wrapping - generating vtkChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkChartSelectionRepresentationClientServer.cxx
+  CS Wrapping - generating vtkChartWarningClientServer.cxx
+  CS Wrapping - generating vtkClientServerMoveDataClientServer.cxx
+  CS Wrapping - generating vtkCompositeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkDataLabelRepresentationClientServer.cxx
+  CS Wrapping - generating vtkGeometryRepresentationClientServer.cxx
+  CS Wrapping - generating vtkGeometryRepresentationWithFacesClientServer.cxx
+  CS Wrapping - generating vtkGeometrySliceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkGlyph3DRepresentationClientServer.cxx
+  CS Wrapping - generating vtkImageSliceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkImageVolumeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkMoleculeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkMPIMoveDataClientServer.cxx
+  CS Wrapping - generating vtkOutlineRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPolarAxesRepresentationClientServer.cxx
+  CS Wrapping - generating vtkProgressBarSourceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVBagChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVBoxChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVCacheKeeperClientServer.cxx
+  CS Wrapping - generating vtkPVCacheKeeperPipelineClientServer.cxx
+  CS Wrapping - generating vtkPVCacheSizeInformationClientServer.cxx
+  CS Wrapping - generating vtkPVClientServerSynchronizedRenderersClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeOrthographicSliceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVCompositeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVContextInteractorStyleClientServer.cxx
+  CS Wrapping - generating vtkPVContextViewClientServer.cxx
+  CS Wrapping - generating vtkPVDataDeliveryManagerClientServer.cxx
+  CS Wrapping - generating vtkPVDataRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVDataRepresentationPipelineClientServer.cxx
+  CS Wrapping - generating vtkPVDisplayInformationClientServer.cxx
+  CS Wrapping - generating vtkPVHardwareSelectorClientServer.cxx
+  CS Wrapping - generating vtkPVHistogramChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVImageSliceMapperClientServer.cxx
+  CS Wrapping - generating vtkPVImplicitPlaneRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVImplicitCylinderRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVLastSelectionInformationClientServer.cxx
+  CS Wrapping - generating vtkPVMultiSliceViewClientServer.cxx
+  CS Wrapping - generating vtkPVOpenGLInformationClientServer.cxx
+  CS Wrapping - generating vtkPVOpenGLExtensionsInformationClientServer.cxx
+  CS Wrapping - generating vtkPVOrthographicSliceViewClientServer.cxx
+  CS Wrapping - generating vtkPVParallelCoordinatesRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVPlotMatrixRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPVPlotMatrixViewClientServer.cxx
+  CS Wrapping - generating vtkPVProminentValuesInformationClientServer.cxx
+  CS Wrapping - generating vtkPVRayCastPickingHelperClientServer.cxx
+  CS Wrapping - generating vtkPVRenderViewClientServer.cxx
+  CS Wrapping - generating vtkPVRenderViewSettingsClientServer.cxx
+  CS Wrapping - generating vtkPVRepresentedDataInformationClientServer.cxx
+  CS Wrapping - generating vtkPVSelectionInformationClientServer.cxx
+  CS Wrapping - generating vtkPVStreamingPiecesInformationClientServer.cxx
+  CS Wrapping - generating vtkPVSynchronizedRendererClientServer.cxx
+  CS Wrapping - generating vtkPVSynchronizedRenderWindowsClientServer.cxx
+  CS Wrapping - generating vtkPVViewClientServer.cxx
+  CS Wrapping - generating vtkPVXYChartViewClientServer.cxx
+  CS Wrapping - generating vtkQuartileChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkRulerSourceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSelectionDeliveryFilterClientServer.cxx
+  CS Wrapping - generating vtkSelectionRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSpreadSheetRepresentationClientServer.cxx
+  CS Wrapping - generating vtkSpreadSheetViewClientServer.cxx
+  CS Wrapping - generating vtkStructuredGridVolumeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkTableExtentTranslatorClientServer.cxx
+  CS Wrapping - generating vtkTextSourceRepresentationClientServer.cxx
+  CS Wrapping - generating vtkThreeSliceFilterClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeRepresentationClientServer.cxx
+  CS Wrapping - generating vtkXYChartRepresentationClientServer.cxx
+  CS Wrapping - generating vtkPointGaussianRepresentationClientServer.cxx
+  CS Wrapping - generating vtkIceTSynchronizedRenderersClientServer.cxx
+  vtk3DWidgetRepresentationClientServer.cxx
+  vtkAMROutlineRepresentationClientServer.cxx
+  vtkAMRStreamingPriorityQueueClientServer.cxx
+  vtkAMRStreamingVolumeRepresentationClientServer.cxx
+  vtkCaveSynchronizedRenderersClientServer.cxx
+  vtkChartRepresentationClientServer.cxx
+  vtkChartSelectionRepresentationClientServer.cxx
+  vtkChartWarningClientServer.cxx
+  vtkClientServerMoveDataClientServer.cxx
+  vtkCompositeRepresentationClientServer.cxx
+  vtkDataLabelRepresentationClientServer.cxx
+  vtkGeometryRepresentationClientServer.cxx
+  vtkGeometryRepresentationWithFacesClientServer.cxx
+  vtkGeometrySliceRepresentationClientServer.cxx
+  vtkGlyph3DRepresentationClientServer.cxx
+  vtkImageSliceRepresentationClientServer.cxx
+  vtkImageVolumeRepresentationClientServer.cxx
+  vtkMoleculeRepresentationClientServer.cxx
+  vtkMPIMoveDataClientServer.cxx
+  vtkOutlineRepresentationClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPolarAxesRepresentationClientServer.cxx
+  vtkProgressBarSourceRepresentationClientServer.cxx
+  vtkPVBagChartRepresentationClientServer.cxx
+  vtkPVBoxChartRepresentationClientServer.cxx
+  vtkPVCacheKeeperClientServer.cxx
+  vtkPVCacheKeeperPipelineClientServer.cxx
+  vtkPVCacheSizeInformationClientServer.cxx
+  vtkPVClientServerSynchronizedRenderersClientServer.cxx
+  vtkPVCompositeOrthographicSliceRepresentationClientServer.cxx
+  vtkPVCompositeRepresentationClientServer.cxx
+  vtkPVContextInteractorStyleClientServer.cxx
+  vtkPVContextViewClientServer.cxx
+  vtkPVDataDeliveryManagerClientServer.cxx
+  vtkPVDataRepresentationClientServer.cxx
+  vtkPVDataRepresentationPipelineClientServer.cxx
+  vtkPVDisplayInformationClientServer.cxx
+  vtkPVHardwareSelectorClientServer.cxx
+  vtkPVHistogramChartRepresentationClientServer.cxx
+  vtkPVImageSliceMapperClientServer.cxx
+  vtkPVImplicitPlaneRepresentationClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkPVImplicitCylinderRepresentationClientServer.cxx
+  vtkPVLastSelectionInformationClientServer.cxx
+  vtkPVMultiSliceViewClientServer.cxx
+  vtkPVOpenGLInformationClientServer.cxx
+  vtkPVOpenGLExtensionsInformationClientServer.cxx
+  vtkPVOrthographicSliceViewClientServer.cxx
+  vtkPVParallelCoordinatesRepresentationClientServer.cxx
+  vtkPVPlotMatrixRepresentationClientServer.cxx
+  vtkPVPlotMatrixViewClientServer.cxx
+  vtkPVProminentValuesInformationClientServer.cxx
+  vtkPVRayCastPickingHelperClientServer.cxx
+  vtkPVRenderViewClientServer.cxx
+  vtkPVRenderViewSettingsClientServer.cxx
+  vtkPVRepresentedDataInformationClientServer.cxx
+  vtkPVSelectionInformationClientServer.cxx
+  vtkPVStreamingPiecesInformationClientServer.cxx
+  vtkPVSynchronizedRendererClientServer.cxx
+  vtkPVSynchronizedRenderWindowsClientServer.cxx
+  vtkPVViewClientServer.cxx
+  vtkPVXYChartViewClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkQuartileChartRepresentationClientServer.cxx
+  vtkRulerSourceRepresentationClientServer.cxx
+  vtkSelectionDeliveryFilterClientServer.cxx
+  vtkSelectionRepresentationClientServer.cxx
+  vtkSpreadSheetRepresentationClientServer.cxx
+  vtkSpreadSheetViewClientServer.cxx
+  vtkStructuredGridVolumeRepresentationClientServer.cxx
+  vtkTableExtentTranslatorClientServer.cxx
+  vtkTextSourceRepresentationClientServer.cxx
+  vtkThreeSliceFilterClientServer.cxx
+  vtkUnstructuredGridVolumeRepresentationClientServer.cxx
+  vtkXYChartRepresentationClientServer.cxx
+  vtkPointGaussianRepresentationClientServer.cxx
+  vtkIceTSynchronizedRenderersClientServer.cxx
+  vtkPVClientServerCoreRenderingCSInit.cxx
+  Generating Code...
+  vtkPVClientServerCoreRenderingCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkPVClientServerCoreRenderingCS-pv5.3.lib

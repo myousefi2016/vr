@@ -1,0 +1,43 @@
+# Target labels
+ vtkInteractionStyle
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleDrawPolygon.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleFlight.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleImage.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickActor.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickCamera.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleMultiTouchCamera.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand2D.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand3D.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandPick.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandZoom.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTerrain.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballActor.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballCamera.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackball.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUnicam.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUser.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleSwitch.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkParallelCoordinatesInteractorStyle.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Interaction/Style/vtkInteractionStyleObjectFactory.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleDrawPolygon.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleFlight.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleImage.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickActor.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleJoystickCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleMultiTouchCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand2D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBand3D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandPick.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleRubberBandZoom.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTerrain.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballActor.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackballCamera.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleTrackball.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUnicam.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleUser.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkInteractorStyleSwitch.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/vtkParallelCoordinatesInteractorStyle.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Interaction/Style/vtkInteractionStyleObjectFactory.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Interaction/Style/vtkInteractionStyleModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Interaction/Style/CMakeLists.txt

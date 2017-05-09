@@ -1,0 +1,19 @@
+# Target labels
+ VTKModular
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageCanvasSource2DClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageEllipsoidSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageGaussianSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageGridSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageMandelbrotSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageNoiseSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImageSinusoidSourceClientServer.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkImagingSourcesCSInit.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageCanvasSource2D.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageEllipsoidSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageGaussianSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageGridSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageMandelbrotSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageNoiseSource.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Sources/vtkImageSinusoidSource.h

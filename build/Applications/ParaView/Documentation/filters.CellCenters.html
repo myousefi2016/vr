@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+        <title>Cell Centers</title>
+        <meta name="proxy_name" contents="filters.CellCenters"/>
+        <meta name="filename" contents="filters.CellCenters.html"/>
+    </head>
+    <body>
+        <h2>Cell Centers (CellCenters)</h2>
+        <i>
+            <p>Create a point (no geometry) at the center of each input cell.</p>
+        </i>
+        <div class="description">The Cell Centers
+                     filter places a point at the center of each cell in the
+                     input data set. The center computed is the parametric
+                     center of the cell, not necessarily the geometric or
+                     bounding box center. The cell attributes of the input will
+                     be associated with these newly created points of the
+                     output. You have the option of creating a vertex cell per
+                     point in the outpuut. This is useful because vertex cells
+                     are rendered, but points are not. The points themselves
+                     could be used for placing glyphs (using the Glyph filter).
+                     The Cell Centers filter takes any type of data set as
+                     input and produces a polygonal data set as
+                     output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Cell Centers
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>VertexCells</th>
+                <td>If set to 1, a vertex cell will be generated per point
+        in the output. Otherwise only points will be generated.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

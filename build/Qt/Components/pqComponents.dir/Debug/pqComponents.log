@@ -1,0 +1,617 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/Components/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/Components/CMakeFiles/generate.stamp is up-to-date.
+  Generating qrc_pqComponents.cpp
+  Generating moc_pqAboutDialog.cpp
+  Generating moc_pqActiveObjects.cpp
+  Generating moc_pqAnimatablePropertiesComboBox.cpp
+  Generating moc_pqAnimatableProxyComboBox.cpp
+  Generating moc_pqAnimationManager.cpp
+  Generating moc_pqAnimationViewWidget.cpp
+  Generating moc_pqArrayListDomain.cpp
+  Generating moc_pqArrayStatusPropertyWidget.cpp
+  Generating moc_pqCalculatorWidget.cpp
+  Generating moc_pqCameraDialog.cpp
+  Generating moc_pqCameraKeyFrameWidget.cpp
+  Generating moc_pqChangeInputDialog.cpp
+  Generating moc_pqColorChooserButtonWithPalettes.cpp
+  Generating moc_pqCollaborationPanel.cpp
+  Generating moc_pqComboBoxDomain.cpp
+  Generating moc_pqCommandPropertyWidget.cpp
+  Generating moc_pqComparativeCueWidget.cpp
+  Generating moc_pqComparativeVisPanel.cpp
+  Generating moc_pqComponentsTestUtility.cpp
+  Generating moc_pqCustomFilterDefinitionWizard.cpp
+  Generating moc_pqCustomFilterManager.cpp
+  Generating moc_pqCustomFilterManagerModel.cpp
+  Generating moc_pqCustomViewButtonDialog.cpp
+  Generating moc_pqDataInformationModel.cpp
+  Generating moc_pqDataInformationWidget.cpp
+  Generating moc_pqDialog.cpp
+  Generating moc_pqDisplayColorWidget.cpp
+  Generating moc_pqDisplayPanel.cpp
+  Generating moc_pqDisplayPanelPropertyWidget.cpp
+  Generating moc_pqDisplayRepresentationWidget.cpp
+  Generating moc_pqDoubleVectorPropertyWidget.cpp
+  Generating moc_pqExodusIIVariableSelectionWidget.cpp
+  Generating moc_pqFieldSelectionAdaptor.cpp
+  Generating moc_pqFileChooserWidget.cpp
+  Generating moc_pqFindDataCreateSelectionFrame.cpp
+  Generating moc_pqFindDataCurrentSelectionFrame.cpp
+  Generating moc_pqFindDataDialog.cpp
+  Generating moc_pqFindDataSelectionDisplayFrame.cpp
+  Generating moc_pqFixStateFilenamesDialog.cpp
+  Generating moc_pqHighlightItemDelegate.cpp
+  Generating moc_pqImageTip.cpp
+  Generating moc_pqIndexSelectionWidget.cpp
+  Generating moc_pqIntMaskPropertyWidget.cpp
+  Generating moc_pqIntRangeWidget.cpp
+  Generating moc_pqIntVectorPropertyWidget.cpp
+  Generating moc_pqItemViewSearchWidgetEventPlayer.cpp
+  Generating moc_pqItemViewSearchWidget.cpp
+  Generating moc_pqKeyFrameEditor.cpp
+  Generating moc_pqKeyFrameTimeValidator.cpp
+  Generating moc_pqKeyFrameTypeWidget.cpp
+  Generating moc_pqLabel.cpp
+  Generating moc_pqLinksEditor.cpp
+  Generating moc_pqLinksManager.cpp
+  Generating moc_pqLiveInsituManager.cpp
+  Generating moc_pqLiveInsituVisualizationManager.cpp
+  Generating moc_pqLockViewSizeCustomDialog.cpp
+  Generating moc_pqMemoryInspectorPanel.cpp
+  Generating moc_pqMultiBlockInspectorPanel.cpp
+  Generating moc_pqMultiViewWidget.cpp
+  Generating moc_pqOrbitCreatorDialog.cpp
+  Generating moc_pqOutputPortComboBox.cpp
+  Generating moc_pqPipelineAnnotationFilterModel.cpp
+  Generating moc_pqPipelineBrowserWidget.cpp
+  Generating moc_pqPipelineModel.cpp
+  Generating moc_pqPipelineModelSelectionAdaptor.cpp
+  Generating moc_pqPipelineTimeKeyFrameEditor.cpp
+  Generating moc_pqPluginDialog.cpp
+  Generating moc_pqPluginTreeWidgetEventPlayer.cpp
+  Generating moc_pqPluginTreeWidgetEventTranslator.cpp
+  Generating moc_pqPluginTreeWidget.cpp
+  Generating moc_pqPopOutWidget.cpp
+  Generating moc_pqPresetDialog.cpp
+  Generating moc_pqPresetToPixmap.cpp
+  Generating moc_pqPropertiesPanel.cpp
+  Generating moc_pqPropertyGroupWidget.cpp
+  Generating moc_pqPropertyWidgetDecorator.cpp
+  Generating moc_pqPropertyWidget.cpp
+  Generating moc_pqProxiesWidget.cpp
+  Generating moc_pqProxyEditorPropertyWidget.cpp
+  Generating moc_pqProxyInformationWidget.cpp
+  Generating moc_pqProxyPropertyWidget.cpp
+  Generating moc_pqProxySelectionWidget.cpp
+  Generating moc_pqProxySILModel.cpp
+  Generating moc_pqProxyWidgetDialog.cpp
+  Generating moc_pqProxyWidget.cpp
+  Generating moc_pqQueryClauseWidget.cpp
+  Generating moc_pqRecentFilesMenu.cpp
+  Generating moc_pqRemoteCommandDialog.cpp
+  Generating moc_pqRemoteCommandTemplateDialog.cpp
+  Generating moc_pqRescaleRange.cpp
+  Generating moc_pqSampleScalarAddRangeDialog.cpp
+  Generating moc_pqSampleScalarWidget.cpp
+  Generating moc_pqSaveSnapshotDialog.cpp
+  Generating moc_pqScalarSetModel.cpp
+  Generating moc_pqScalarValueListPropertyWidget.cpp
+  Generating moc_pqSearchBox.cpp
+  Generating moc_pqSelectionAdaptor.cpp
+  Generating moc_pqSelectionInputWidget.cpp
+  Generating moc_pqSelectionManager.cpp
+  Generating moc_pqSelectReaderDialog.cpp
+  Generating moc_pqServerConfigurationImporter.cpp
+  Generating moc_pqServerConnectDialog.cpp
+  Generating moc_pqServerLauncher.cpp
+  Generating moc_pqSetBreakpointDialog.cpp
+  Generating moc_pqSettingsDialog.cpp
+  Generating moc_pqSignalAdaptorCompositeTreeWidget.cpp
+  Generating moc_pqSignalAdaptorKeyFrameType.cpp
+  Generating moc_pqSignalAdaptorSelectionTreeWidget.cpp
+  Generating moc_pqSignalAdaptorTreeWidget.cpp
+  Generating moc_pqSILModel.cpp
+  Generating moc_pqSILWidget.cpp
+  Generating moc_pqSMSignalAdaptors.cpp
+  Generating moc_pqStringVectorPropertyWidget.cpp
+  Generating moc_pqTabbedMultiViewWidget.cpp
+  Generating moc_pqTextureComboBox.cpp
+  Generating moc_pqTextureSelectorPropertyWidget.cpp
+  Generating moc_pqTimerLogDisplay.cpp
+  Generating moc_pqToolTipTrapper.cpp
+  Generating moc_pqTransferFunctionWidget.cpp
+  Generating moc_pqTriggerOnIdleHelper.cpp
+  Generating moc_pqVCRController.cpp
+  Generating moc_pqViewContextMenuHandler.cpp
+  Generating moc_pqViewContextMenuManager.cpp
+  Generating moc_pqViewFrame.cpp
+  Generating moc_pqViewManager.cpp
+  Generating moc_pqWidgetRangeDomain.cpp
+  Generating moc_pqAbstractItemSelectionModel.cpp
+  Generating ui_pqAbortAnimation.h
+  Generating ui_pqAboutDialog.h
+  Generating ui_pqAnimationSettings.h
+  Generating ui_pqCalculatorWidget.h
+  Generating ui_pqCameraDialog.h
+  Generating ui_pqCameraKeyFrameWidget.h
+  Generating ui_pqChangeInputDialog.h
+  Generating ui_pqCollaborationPanel.h
+  Generating ui_pqComparativeParameterRangeDialog.h
+  Generating ui_pqComparativeVisPanel.h
+  Generating ui_pqContourControls.h
+  Generating ui_pqCustomFilterDefinitionWizard.h
+  Generating ui_pqCustomFilterManager.h
+  Generating ui_pqCustomViewButtonDialog.h
+  Generating ui_pqDisplayRepresentationWidget.h
+  Generating ui_pqEmptyView.h
+  Generating ui_pqFindDataCreateSelectionFrame.h
+  Generating ui_pqFindDataCurrentSelectionFrame.h
+  Generating ui_pqFindDataDialog.h
+  Generating ui_pqFindDataSelectionDisplayFrame.h
+  Generating ui_pqFixStateFilenamesDialog.h
+  Generating ui_pqItemViewSearchWidget.h
+  Generating ui_pqKeyFrameEditor.h
+  Generating ui_pqKeyFrameTypeWidget.h
+  Generating ui_pqLinksEditor.h
+  Generating ui_pqLinksManager.h
+  Generating ui_pqLockViewSizeCustomDialog.h
+  Generating ui_pqMemoryInspectorPanelForm.h
+  Generating ui_pqOrbitCreatorDialog.h
+  Generating ui_pqPipelineTimeKeyFrameEditor.h
+  Generating ui_pqPluginDialog.h
+  Generating ui_pqPresetDialog.h
+  Generating ui_pqPropertiesPanel.h
+  Generating ui_pqProxyInformationWidget.h
+  Generating ui_pqProxySelectionWidget.h
+  Generating ui_pqProxyWidgetDialog.h
+  Generating ui_pqPythonAnimationCue.h
+  Generating ui_pqQueryClauseWidget.h
+  Generating ui_pqQueryCompositeTreeDialog.h
+  Generating ui_pqRemoteCommandDialogForm.h
+  Generating ui_pqRemoteCommandTemplateDialogForm.h
+  Generating ui_pqRescaleRangeDialog.h
+  Generating ui_pqSampleScalarAddRangeDialog.h
+  Generating ui_pqSampleScalarWidget.h
+  Generating ui_pqSaveSnapshotDialog.h
+  Generating ui_pqScalarValueListPropertyWidget.h
+  Generating ui_pqSearchBox.h
+  Generating ui_pqSelectionInputWidget.h
+  Generating ui_pqSelectReaderDialog.h
+  Generating ui_pqServerConnectDialog.h
+  Generating ui_pqServerLauncherDialog.h
+  Generating ui_pqSetBreakpointDialog.h
+  Generating ui_pqSettingsDialog.h
+  Generating ui_pqTimerLogDisplay.h
+  Generating ui_pqViewFrame.h
+  pqAboutDialog.cxx
+  pqActionGroupInterface.cxx
+  pqActiveObjects.cxx
+  pqAnimatablePropertiesComboBox.cxx
+  pqAnimatableProxyComboBox.cxx
+  pqAnimationManager.cxx
+  pqAnimationViewWidget.cxx
+  pqArrayListDomain.cxx
+  pqArrayStatusPropertyWidget.cxx
+  pqCalculatorWidget.cxx
+  pqCameraDialog.cxx
+  pqCameraKeyFrameWidget.cxx
+  pqChangeInputDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqChangeInputDialog.cxx(299): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  pqCollaborationPanel.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqCollaborationPanel.cxx(466): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqCollaborationPanel.cxx(466): warning C4714: function 'QString QString::trimmed(void) &&' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(422): note: see declaration of 'QString::trimmed'
+  pqColorChooserButtonWithPalettes.cxx
+  pqComboBoxDomain.cxx
+  pqCommandPropertyWidget.cxx
+  pqComparativeCueWidget.cxx
+  pqComparativeVisPanel.cxx
+  pqComponentsInit.cxx
+  Generating Code...
+  Compiling...
+  pqComponentsTestUtility.cxx
+  pqCustomFilterDefinitionModel.cxx
+  pqCustomFilterDefinitionWizard.cxx
+  pqCustomFilterManager.cxx
+  pqCustomFilterManagerModel.cxx
+  pqCustomViewButtonDialog.cxx
+  pqDataInformationModel.cxx
+  pqDataInformationWidget.cxx
+  pqDialog.cxx
+  pqDisplayColorWidget.cxx
+  pqDisplayPanel.cxx
+  pqDisplayPanelInterface.cxx
+  pqDisplayPanelPropertyWidget.cxx
+  pqDisplayRepresentationWidget.cxx
+  pqDockWindowInterface.cxx
+  pqDoubleVectorPropertyWidget.cxx
+  pqExodusIIVariableSelectionWidget.cxx
+  pqFieldSelectionAdaptor.cxx
+  pqFileChooserWidget.cxx
+  pqFindDataCreateSelectionFrame.cxx
+  Generating Code...
+  Compiling...
+  pqFindDataCurrentSelectionFrame.cxx
+  pqFindDataSelectionDisplayFrame.cxx
+  pqFindDataDialog.cxx
+  pqFixStateFilenamesDialog.cxx
+  pqHighlightItemDelegate.cxx
+  pqImageTip.cxx
+  pqIndexSelectionWidget.cxx
+  pqIntMaskPropertyWidget.cxx
+  pqIntRangeWidget.cxx
+  pqIntVectorPropertyWidget.cxx
+  pqItemViewSearchWidget.cxx
+  pqItemViewSearchWidgetEventPlayer.cxx
+  pqKeyFrameEditor.cxx
+  pqKeyFrameTimeValidator.cxx
+  pqKeyFrameTypeWidget.cxx
+  pqLabel.cxx
+  pqLinksEditor.cxx
+  pqLinksManager.cxx
+  pqLiveInsituManager.cxx
+  pqLiveInsituVisualizationManager.cxx
+  Generating Code...
+  Compiling...
+  pqLockViewSizeCustomDialog.cxx
+  pqMemoryInspectorPanel.cxx
+  pqMultiBlockInspectorPanel.cxx
+  pqMultiViewWidget.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<QPointer<QWidget>>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=QPointer<QWidget>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<QPointer<QWidget>>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=QPointer<QWidget>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<QPointer<QWidget>>::QVector(const QVector<QPointer<QWidget>> &)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qglobal.h(924): note: see reference to function template instantiation 'QVector<QPointer<QWidget>>::QVector(const QVector<QPointer<QWidget>> &)' being compiled
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqMultiViewWidget.cxx(66): note: see reference to class template instantiation 'QVector<QPointer<QWidget>>' being compiled
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<QPointer<QWidget>>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QPointer<QWidget>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<QPointer<QWidget>>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QPointer<QWidget>
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<QPointer<QWidget>>::detach(void)'
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(129): note: see reference to function template instantiation 'void QVector<QPointer<QWidget>>::detach(void)' being compiled
+  pqOrbitCreatorDialog.cxx
+  pqOutputPortComboBox.cxx
+  pqPipelineAnnotationFilterModel.cxx
+  pqPipelineBrowserWidget.cxx
+  pqPipelineModel.cxx
+  pqPipelineModelSelectionAdaptor.cxx
+  pqPipelineTimeKeyFrameEditor.cxx
+  pqPluginDialog.cxx
+c:\qt\5.8\msvc2015_64\include\qtcore\qvariant.h(518): warning C4127: conditional expression is constant
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvariant.h(536): note: see reference to function template instantiation 'void qVariantSetValue<T>(QVariant &,const T &)' being compiled
+          with
+          [
+              T=unsigned int
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqPluginDialog.cxx(248): note: see reference to function template instantiation 'void QVariant::setValue<unsigned int>(const T &)' being compiled
+          with
+          [
+              T=unsigned int
+          ]
+  pqPluginTreeWidgetEventPlayer.cxx
+  pqPluginTreeWidgetEventTranslator.cxx
+  pqPopOutWidget.cxx
+  pqPresetDialog.cxx
+  pqPresetToPixmap.cxx
+  pqPropertiesPanel.cxx
+  pqPropertyGroupWidget.cxx
+  pqPropertyWidget.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqPropertyWidget.cxx(217): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  Generating Code...
+  Compiling...
+  pqPropertyWidgetDecorator.cxx
+  pqPropertyWidgetInterface.cxx
+  pqProxiesWidget.cxx
+  pqProxyEditorPropertyWidget.cxx
+  pqProxyInformationWidget.cxx
+  pqProxyPropertyWidget.cxx
+  pqProxySelectionWidget.cxx
+  pqProxySILModel.cxx
+  pqProxyWidget.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqProxyWidget.cxx(824): warning C4456: declaration of '_container_' hides previous local declaration
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqProxyWidget.cxx(814): note: see declaration of '_container_'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqProxyWidget.cxx(995): warning C4456: declaration of '_container_' hides previous local declaration
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqProxyWidget.cxx(991): note: see declaration of '_container_'
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqProxyWidget.cxx(1234): warning C4714: function 'QString QString::toLower(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(408): note: see declaration of 'QString::toLower'
+  pqProxyWidgetDialog.cxx
+  pqQueryClauseWidget.cxx
+  pqRecentFilesMenu.cxx
+  pqRemoteCommandDialog.cxx
+  pqRemoteCommandTemplateDialog.cxx
+  pqRescaleRange.cxx
+  pqSampleScalarAddRangeDialog.cxx
+  pqSampleScalarWidget.cxx
+  pqSaveSnapshotDialog.cxx
+  pqScalarSetModel.cxx
+  pqScalarValueListPropertyWidget.cxx
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(700): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(692): note: while compiling class template member function 'QVariant *QVector<T>::insert(QVariant *,int,const T &)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(442): note: see reference to function template instantiation 'QVariant *QVector<T>::insert(QVariant *,int,const T &)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(362): note: while compiling class template member function 'QVector<T>::QVector(const QVector<T> &)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqScalarValueListPropertyWidget.cxx(199): note: see reference to function template instantiation 'QVector<T>::QVector(const QVector<T> &)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqScalarValueListPropertyWidget.cxx(60): note: see reference to class template instantiation 'QVector<T>' being compiled
+          with
+          [
+              T=QVariant
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(749): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(727): note: while compiling class template member function 'QVariant *QVector<T>::erase(QVariant *,QVariant *)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(450): note: see reference to function template instantiation 'QVariant *QVector<T>::erase(QVariant *,QVariant *)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(753): warning C4127: conditional expression is constant
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(333): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(332): note: while compiling class template member function 'void QVector<T>::copyConstruct(const T *,const T *,T *)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(375): note: see reference to function template instantiation 'void QVector<T>::copyConstruct(const T *,const T *,T *)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(317): warning C4127: conditional expression is constant
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(316): note: while compiling class template member function 'void QVector<T>::defaultConstruct(T *,T *)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(573): note: see reference to function template instantiation 'void QVector<T>::defaultConstruct(T *,T *)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(383): note: while compiling class template member function 'void QVector<T>::detach(void)'
+          with
+          [
+              T=QVariant
+          ]
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qvector.h(204): note: see reference to function template instantiation 'void QVector<T>::detach(void)' being compiled
+          with
+          [
+              T=QVariant
+          ]
+  Generating Code...
+  Compiling...
+  pqSearchBox.cxx
+  pqSelectionAdaptor.cxx
+  pqSelectionInputWidget.cxx
+  pqSelectionManager.cxx
+  pqSelectReaderDialog.cxx
+  pqServerConfigurationImporter.cxx
+  pqServerConnectDialog.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqServerConnectDialog.cxx(849): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  c:\qt\5.8\msvc2015_64\include\qtcore\qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqServerLauncher.cxx
+  pqSetBreakpointDialog.cxx
+  pqSettingsDialog.cxx
+  pqSignalAdaptorCompositeTreeWidget.cxx
+  pqSignalAdaptorKeyFrameType.cxx
+  pqSignalAdaptorSelectionTreeWidget.cxx
+  pqSignalAdaptorTreeWidget.cxx
+  pqSILModel.cxx
+  pqSILWidget.cxx
+  pqSMSignalAdaptors.cxx
+c:\qt\5.8\msvc2015_64\include\qtcore\qvariant.h(518): warning C4127: conditional expression is constant
+  c:\qt\5.8\msvc2015_64\include\qtcore\qvariant.h(536): note: see reference to function template instantiation 'void qVariantSetValue<T>(QVariant &,const T &)' being compiled
+          with
+          [
+              T=pqSMProxy
+          ]
+  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqSMSignalAdaptors.cxx(73): note: see reference to function template instantiation 'void QVariant::setValue<pqSMProxy>(const T &)' being compiled
+          with
+          [
+              T=pqSMProxy
+          ]
+  pqStringVectorPropertyWidget.cxx
+C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Qt\Components\pqStringVectorPropertyWidget.cxx(479): warning C4714: function 'QString QString::trimmed(void) const &' marked as __forceinline not inlined
+  C:\Qt\5.8\msvc2015_64\include\QtCore/qstring.h(420): note: see declaration of 'QString::trimmed'
+  pqTabbedMultiViewWidget.cxx
+  pqTextureComboBox.cxx
+  Generating Code...
+  Compiling...
+  pqTextureSelectorPropertyWidget.cxx
+  pqTimerLogDisplay.cxx
+  pqToolTipTrapper.cxx
+  pqTransferFunctionWidget.cxx
+  pqTriggerOnIdleHelper.cxx
+  pqUndoStackBuilder.cxx
+  pqVCRController.cxx
+  pqViewContextMenuHandler.cxx
+  pqViewContextMenuManager.cxx
+  pqViewFrameActionsInterface.cxx
+  pqViewFrame.cxx
+  pqViewManager.cxx
+  pqWidgetRangeDomain.cxx
+  pqAbstractItemSelectionModel.cxx
+  qrc_pqComponents.cpp
+  moc_pqAboutDialog.cpp
+  moc_pqActiveObjects.cpp
+  moc_pqAnimatablePropertiesComboBox.cpp
+  moc_pqAnimatableProxyComboBox.cpp
+  moc_pqAnimationManager.cpp
+  Generating Code...
+  Compiling...
+  moc_pqAnimationViewWidget.cpp
+  moc_pqArrayListDomain.cpp
+  moc_pqArrayStatusPropertyWidget.cpp
+  moc_pqCalculatorWidget.cpp
+  moc_pqCameraDialog.cpp
+  moc_pqCameraKeyFrameWidget.cpp
+  moc_pqChangeInputDialog.cpp
+  moc_pqColorChooserButtonWithPalettes.cpp
+  moc_pqCollaborationPanel.cpp
+  moc_pqComboBoxDomain.cpp
+  moc_pqCommandPropertyWidget.cpp
+  moc_pqComparativeCueWidget.cpp
+  moc_pqComparativeVisPanel.cpp
+  moc_pqComponentsTestUtility.cpp
+  moc_pqCustomFilterDefinitionWizard.cpp
+  moc_pqCustomFilterManager.cpp
+  moc_pqCustomFilterManagerModel.cpp
+  moc_pqCustomViewButtonDialog.cpp
+  moc_pqDataInformationModel.cpp
+  moc_pqDataInformationWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqDialog.cpp
+  moc_pqDisplayColorWidget.cpp
+  moc_pqDisplayPanel.cpp
+  moc_pqDisplayPanelPropertyWidget.cpp
+  moc_pqDisplayRepresentationWidget.cpp
+  moc_pqDoubleVectorPropertyWidget.cpp
+  moc_pqExodusIIVariableSelectionWidget.cpp
+  moc_pqFieldSelectionAdaptor.cpp
+  moc_pqFileChooserWidget.cpp
+  moc_pqFindDataCreateSelectionFrame.cpp
+  moc_pqFindDataCurrentSelectionFrame.cpp
+  moc_pqFindDataDialog.cpp
+  moc_pqFindDataSelectionDisplayFrame.cpp
+  moc_pqFixStateFilenamesDialog.cpp
+  moc_pqHighlightItemDelegate.cpp
+  moc_pqImageTip.cpp
+  moc_pqIndexSelectionWidget.cpp
+  moc_pqIntMaskPropertyWidget.cpp
+  moc_pqIntRangeWidget.cpp
+  moc_pqIntVectorPropertyWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqItemViewSearchWidgetEventPlayer.cpp
+  moc_pqItemViewSearchWidget.cpp
+  moc_pqKeyFrameEditor.cpp
+  moc_pqKeyFrameTimeValidator.cpp
+  moc_pqKeyFrameTypeWidget.cpp
+  moc_pqLabel.cpp
+  moc_pqLinksEditor.cpp
+  moc_pqLinksManager.cpp
+  moc_pqLiveInsituManager.cpp
+  moc_pqLiveInsituVisualizationManager.cpp
+  moc_pqLockViewSizeCustomDialog.cpp
+  moc_pqMemoryInspectorPanel.cpp
+  moc_pqMultiBlockInspectorPanel.cpp
+  moc_pqMultiViewWidget.cpp
+  moc_pqOrbitCreatorDialog.cpp
+  moc_pqOutputPortComboBox.cpp
+  moc_pqPipelineAnnotationFilterModel.cpp
+  moc_pqPipelineBrowserWidget.cpp
+  moc_pqPipelineModel.cpp
+  moc_pqPipelineModelSelectionAdaptor.cpp
+  Generating Code...
+  Compiling...
+  moc_pqPipelineTimeKeyFrameEditor.cpp
+  moc_pqPluginDialog.cpp
+  moc_pqPluginTreeWidgetEventPlayer.cpp
+  moc_pqPluginTreeWidgetEventTranslator.cpp
+  moc_pqPluginTreeWidget.cpp
+  moc_pqPopOutWidget.cpp
+  moc_pqPresetDialog.cpp
+  moc_pqPresetToPixmap.cpp
+  moc_pqPropertiesPanel.cpp
+  moc_pqPropertyGroupWidget.cpp
+  moc_pqPropertyWidgetDecorator.cpp
+  moc_pqPropertyWidget.cpp
+  moc_pqProxiesWidget.cpp
+  moc_pqProxyEditorPropertyWidget.cpp
+  moc_pqProxyInformationWidget.cpp
+  moc_pqProxyPropertyWidget.cpp
+  moc_pqProxySelectionWidget.cpp
+  moc_pqProxySILModel.cpp
+  moc_pqProxyWidgetDialog.cpp
+  moc_pqProxyWidget.cpp
+  Generating Code...
+  Compiling...
+  moc_pqQueryClauseWidget.cpp
+  moc_pqRecentFilesMenu.cpp
+  moc_pqRemoteCommandDialog.cpp
+  moc_pqRemoteCommandTemplateDialog.cpp
+  moc_pqRescaleRange.cpp
+  moc_pqSampleScalarAddRangeDialog.cpp
+  moc_pqSampleScalarWidget.cpp
+  moc_pqSaveSnapshotDialog.cpp
+  moc_pqScalarSetModel.cpp
+  moc_pqScalarValueListPropertyWidget.cpp
+  moc_pqSearchBox.cpp
+  moc_pqSelectionAdaptor.cpp
+  moc_pqSelectionInputWidget.cpp
+  moc_pqSelectionManager.cpp
+  moc_pqSelectReaderDialog.cpp
+  moc_pqServerConfigurationImporter.cpp
+  moc_pqServerConnectDialog.cpp
+  moc_pqServerLauncher.cpp
+  moc_pqSetBreakpointDialog.cpp
+  moc_pqSettingsDialog.cpp
+  Generating Code...
+  Compiling...
+  moc_pqSignalAdaptorCompositeTreeWidget.cpp
+  moc_pqSignalAdaptorKeyFrameType.cpp
+  moc_pqSignalAdaptorSelectionTreeWidget.cpp
+  moc_pqSignalAdaptorTreeWidget.cpp
+  moc_pqSILModel.cpp
+  moc_pqSILWidget.cpp
+  moc_pqSMSignalAdaptors.cpp
+  moc_pqStringVectorPropertyWidget.cpp
+  moc_pqTabbedMultiViewWidget.cpp
+  moc_pqTextureComboBox.cpp
+  moc_pqTextureSelectorPropertyWidget.cpp
+  moc_pqTimerLogDisplay.cpp
+  moc_pqToolTipTrapper.cpp
+  moc_pqTransferFunctionWidget.cpp
+  moc_pqTriggerOnIdleHelper.cpp
+  moc_pqVCRController.cpp
+  moc_pqViewContextMenuHandler.cpp
+  moc_pqViewContextMenuManager.cpp
+  moc_pqViewFrame.cpp
+  moc_pqViewManager.cpp
+  Generating Code...
+  Compiling...
+  moc_pqWidgetRangeDomain.cpp
+  moc_pqAbstractItemSelectionModel.cpp
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqComponents-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpqComponents-pv5.3.exp
+  pqComponents.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkpqComponents-pv5.3.dll

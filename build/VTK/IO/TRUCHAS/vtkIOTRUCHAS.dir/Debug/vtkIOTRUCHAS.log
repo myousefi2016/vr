@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/TRUCHAS/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/TRUCHAS/CMakeFiles/generate.stamp is up-to-date.
+  vtkTRUCHASReader.cxx
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOTRUCHAS-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOTRUCHAS-pv5.3.exp
+  vtkIOTRUCHAS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOTRUCHAS-pv5.3.dll

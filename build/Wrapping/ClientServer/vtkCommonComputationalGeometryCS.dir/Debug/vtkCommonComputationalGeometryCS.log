@@ -1,0 +1,57 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkCardinalSplineClientServer.cxx
+  CS Wrapping - generating vtkKochanekSplineClientServer.cxx
+  CS Wrapping - generating vtkParametricBoyClientServer.cxx
+  CS Wrapping - generating vtkParametricConicSpiralClientServer.cxx
+  CS Wrapping - generating vtkParametricCrossCapClientServer.cxx
+  CS Wrapping - generating vtkParametricDiniClientServer.cxx
+  CS Wrapping - generating vtkParametricEllipsoidClientServer.cxx
+  CS Wrapping - generating vtkParametricEnneperClientServer.cxx
+  CS Wrapping - generating vtkParametricFigure8KleinClientServer.cxx
+  CS Wrapping - generating vtkParametricFunctionClientServer.cxx
+  CS Wrapping - generating vtkParametricKleinClientServer.cxx
+  CS Wrapping - generating vtkParametricMobiusClientServer.cxx
+  CS Wrapping - generating vtkParametricRandomHillsClientServer.cxx
+  CS Wrapping - generating vtkParametricRomanClientServer.cxx
+  CS Wrapping - generating vtkParametricSplineClientServer.cxx
+  CS Wrapping - generating vtkParametricSuperEllipsoidClientServer.cxx
+  CS Wrapping - generating vtkParametricSuperToroidClientServer.cxx
+  CS Wrapping - generating vtkParametricTorusClientServer.cxx
+  CS Wrapping - generating vtkParametricKuenClientServer.cxx
+  CS Wrapping - generating vtkParametricPseudosphereClientServer.cxx
+  CS Wrapping - generating vtkParametricBohemianDomeClientServer.cxx
+  CS Wrapping - generating vtkParametricHennebergClientServer.cxx
+  CS Wrapping - generating vtkParametricCatalanMinimalClientServer.cxx
+  CS Wrapping - generating vtkParametricBourClientServer.cxx
+  CS Wrapping - generating vtkParametricPluckerConoidClientServer.cxx
+  vtkCardinalSplineClientServer.cxx
+  vtkKochanekSplineClientServer.cxx
+  vtkParametricBoyClientServer.cxx
+  vtkParametricConicSpiralClientServer.cxx
+  vtkParametricCrossCapClientServer.cxx
+  vtkParametricDiniClientServer.cxx
+  vtkParametricEllipsoidClientServer.cxx
+  vtkParametricEnneperClientServer.cxx
+  vtkParametricFigure8KleinClientServer.cxx
+  vtkParametricFunctionClientServer.cxx
+  vtkParametricKleinClientServer.cxx
+  vtkParametricMobiusClientServer.cxx
+  vtkParametricRandomHillsClientServer.cxx
+  vtkParametricRomanClientServer.cxx
+  vtkParametricSplineClientServer.cxx
+  vtkParametricSuperEllipsoidClientServer.cxx
+  vtkParametricSuperToroidClientServer.cxx
+  vtkParametricTorusClientServer.cxx
+  vtkParametricKuenClientServer.cxx
+  vtkParametricPseudosphereClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkParametricBohemianDomeClientServer.cxx
+  vtkParametricHennebergClientServer.cxx
+  vtkParametricCatalanMinimalClientServer.cxx
+  vtkParametricBourClientServer.cxx
+  vtkParametricPluckerConoidClientServer.cxx
+  vtkCommonComputationalGeometryCSInit.cxx
+  Generating Code...
+  vtkCommonComputationalGeometryCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkCommonComputationalGeometryCS-pv5.3.lib

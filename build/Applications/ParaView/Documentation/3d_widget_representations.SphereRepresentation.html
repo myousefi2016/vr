@@ -1,0 +1,153 @@
+
+<html>
+    <head>
+        <title>SphereRepresentation</title>
+        <meta name="proxy_name" contents="3d_widget_representations.SphereRepresentation"/>
+        <meta name="filename" contents="3d_widget_representations.SphereRepresentation.html"/>
+    </head>
+    <body>
+        <h2>SphereRepresentation (SphereRepresentation)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">Proxy for vtkSphereRepresentation. Don't confuse this with
+      the vtkSMRepresentation proxy for the sphere widget (which is the
+      SphereWidgetRepresentation).</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Visibility</th>
+                <td/>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PlaceWidget</th>
+                <td/>
+                <td>none<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>PlaceFactor</th>
+                <td/>
+                <td>1.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Representation</th>
+                <td>Set the representation (i.e., appearance) of the sphere.
+        Different representations are useful depending on the
+        application.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Off (0)</li>
+                            <li>Wireframe (1)</li>
+                            <li>Surface (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>The center position of the sphere. Note that this may
+        adjust the direction from the handle to the center, as well as the
+        radius of the sphere.</td>
+                <td>0.0 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>CenterInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Radius</th>
+                <td>The radius of sphere. Default is 0.5. Note that this may
+        modify the position of the handle based on the handle
+        direction.</td>
+                <td>0.5<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>RadiusInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>HandleVisibility</th>
+                <td>The handle sits on the surface of the sphere and may be
+        moved around the surface by picking (left mouse) and then moving. The
+        position of the handle can be retrieved, this is useful for positioning
+        cameras and lights. By default, the handle is turned
+        off.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>HandleText</th>
+                <td>Enable/disable a label that displays the location of the
+        handle in spherical coordinates (radius,theta,phi). The two angles,
+        theta and phi, are displayed in degrees. Note that phi is measured from
+        the north pole down towards the equator; and theta is the angle around
+        the north/south axis.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>RadialLine</th>
+                <td>Enable/disable a radial line segment that joins the
+        center of the outer sphere and the handle.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CenterCursor</th>
+                <td>Enable/disable a cursor that is shown at the
+        center of the sphere.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>HandleDirection</th>
+                <td>Set/Get the direction vector of the handle relative to
+        the center of the sphere. This may affect the position of the handle
+        and the radius of the sphere.</td>
+                <td>0 0 1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

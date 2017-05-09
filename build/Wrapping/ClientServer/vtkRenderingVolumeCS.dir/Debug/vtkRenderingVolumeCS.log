@@ -1,0 +1,83 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkDirectionEncoderClientServer.cxx
+  CS Wrapping - generating vtkEncodedGradientEstimatorClientServer.cxx
+  CS Wrapping - generating vtkEncodedGradientShaderClientServer.cxx
+  CS Wrapping - generating vtkFiniteDifferenceGradientEstimatorClientServer.cxx
+  CS Wrapping - generating vtkFixedPointRayCastImageClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastCompositeGOHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastCompositeGOShadeHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastCompositeHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastCompositeShadeHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastMIPHelperClientServer.cxx
+  CS Wrapping - generating vtkFixedPointVolumeRayCastMapperClientServer.cxx
+  CS Wrapping - generating vtkGPUVolumeRayCastMapperClientServer.cxx
+  CS Wrapping - generating vtkOSPRayVolumeInterfaceClientServer.cxx
+  CS Wrapping - generating vtkProjectedTetrahedraMapperClientServer.cxx
+  CS Wrapping - generating vtkRayCastImageDisplayHelperClientServer.cxx
+  CS Wrapping - generating vtkRecursiveSphereDirectionEncoderClientServer.cxx
+  CS Wrapping - generating vtkSphericalDirectionEncoderClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridBunykRayCastFunctionClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridHomogeneousRayIntegratorClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridLinearRayIntegratorClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridPartialPreIntegrationClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridPreIntegrationClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeMapperClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeRayCastFunctionClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeRayCastIteratorClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeRayCastMapperClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeRayIntegratorClientServer.cxx
+  CS Wrapping - generating vtkUnstructuredGridVolumeZSweepMapperClientServer.cxx
+  CS Wrapping - generating vtkVolumeMapperClientServer.cxx
+  CS Wrapping - generating vtkVolumeOutlineSourceClientServer.cxx
+  CS Wrapping - generating vtkVolumePickerClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastCompositeFunctionClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastFunctionClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastIsosurfaceFunctionClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastMIPFunctionClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastMapperClientServer.cxx
+  CS Wrapping - generating vtkVolumeRayCastSpaceLeapingImageFilterClientServer.cxx
+  vtkDirectionEncoderClientServer.cxx
+  vtkEncodedGradientEstimatorClientServer.cxx
+  vtkEncodedGradientShaderClientServer.cxx
+  vtkFiniteDifferenceGradientEstimatorClientServer.cxx
+  vtkFixedPointRayCastImageClientServer.cxx
+  vtkFixedPointVolumeRayCastCompositeGOHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastCompositeGOShadeHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastCompositeHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastCompositeShadeHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastMIPHelperClientServer.cxx
+  vtkFixedPointVolumeRayCastMapperClientServer.cxx
+  vtkGPUVolumeRayCastMapperClientServer.cxx
+  vtkOSPRayVolumeInterfaceClientServer.cxx
+  vtkProjectedTetrahedraMapperClientServer.cxx
+  vtkRayCastImageDisplayHelperClientServer.cxx
+  vtkRecursiveSphereDirectionEncoderClientServer.cxx
+  vtkSphericalDirectionEncoderClientServer.cxx
+  vtkUnstructuredGridBunykRayCastFunctionClientServer.cxx
+  vtkUnstructuredGridHomogeneousRayIntegratorClientServer.cxx
+  Generating Code...
+  Compiling...
+  vtkUnstructuredGridLinearRayIntegratorClientServer.cxx
+  vtkUnstructuredGridPartialPreIntegrationClientServer.cxx
+  vtkUnstructuredGridPreIntegrationClientServer.cxx
+  vtkUnstructuredGridVolumeMapperClientServer.cxx
+  vtkUnstructuredGridVolumeRayCastFunctionClientServer.cxx
+  vtkUnstructuredGridVolumeRayCastIteratorClientServer.cxx
+  vtkUnstructuredGridVolumeRayCastMapperClientServer.cxx
+  vtkUnstructuredGridVolumeRayIntegratorClientServer.cxx
+  vtkUnstructuredGridVolumeZSweepMapperClientServer.cxx
+  vtkVolumeMapperClientServer.cxx
+  vtkVolumeOutlineSourceClientServer.cxx
+  vtkVolumePickerClientServer.cxx
+  vtkVolumeRayCastCompositeFunctionClientServer.cxx
+  vtkVolumeRayCastFunctionClientServer.cxx
+  vtkVolumeRayCastIsosurfaceFunctionClientServer.cxx
+  vtkVolumeRayCastMIPFunctionClientServer.cxx
+  vtkVolumeRayCastMapperClientServer.cxx
+  vtkVolumeRayCastSpaceLeapingImageFilterClientServer.cxx
+  vtkRenderingVolumeCSInit.cxx
+  Generating Code...
+  vtkRenderingVolumeCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingVolumeCS-pv5.3.lib

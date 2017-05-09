@@ -1,0 +1,13 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Imaging/Math/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Imaging/Math/CMakeFiles/generate.stamp is up-to-date.
+  vtkImageDivergence.cxx
+  vtkImageDotProduct.cxx
+  vtkImageLogarithmicScale.cxx
+  vtkImageLogic.cxx
+  vtkImageMagnitude.cxx
+  vtkImageMaskBits.cxx
+  vtkImageMathematics.cxx
+  vtkImageWeightedSum.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingMath-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkImagingMath-pv5.3.exp
+  vtkImagingMath.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkImagingMath-pv5.3.dll

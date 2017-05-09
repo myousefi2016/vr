@@ -1,0 +1,39 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkAbstractContextBufferIdClientServer.cxx
+  CS Wrapping - generating vtkAbstractContextItemClientServer.cxx
+  CS Wrapping - generating vtkBlockItemClientServer.cxx
+  CS Wrapping - generating vtkBrushClientServer.cxx
+  CS Wrapping - generating vtkContext2DClientServer.cxx
+  CS Wrapping - generating vtkContextActorClientServer.cxx
+  CS Wrapping - generating vtkContextClipClientServer.cxx
+  CS Wrapping - generating vtkContextItemClientServer.cxx
+  CS Wrapping - generating vtkContextMapper2DClientServer.cxx
+  CS Wrapping - generating vtkContextSceneClientServer.cxx
+  CS Wrapping - generating vtkContextTransformClientServer.cxx
+  CS Wrapping - generating vtkImageItemClientServer.cxx
+  CS Wrapping - generating vtkMarkerUtilitiesClientServer.cxx
+  CS Wrapping - generating vtkPenClientServer.cxx
+  CS Wrapping - generating vtkPolyDataItemClientServer.cxx
+  CS Wrapping - generating vtkPropItemClientServer.cxx
+  CS Wrapping - generating vtkTooltipItemClientServer.cxx
+  vtkAbstractContextBufferIdClientServer.cxx
+  vtkAbstractContextItemClientServer.cxx
+  vtkBlockItemClientServer.cxx
+  vtkBrushClientServer.cxx
+  vtkContext2DClientServer.cxx
+  vtkContextActorClientServer.cxx
+  vtkContextClipClientServer.cxx
+  vtkContextItemClientServer.cxx
+  vtkContextMapper2DClientServer.cxx
+  vtkContextSceneClientServer.cxx
+  vtkContextTransformClientServer.cxx
+  vtkImageItemClientServer.cxx
+  vtkMarkerUtilitiesClientServer.cxx
+  vtkPenClientServer.cxx
+  vtkPolyDataItemClientServer.cxx
+  vtkPropItemClientServer.cxx
+  vtkTooltipItemClientServer.cxx
+  vtkRenderingContext2DCSInit.cxx
+  Generating Code...
+  vtkRenderingContext2DCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkRenderingContext2DCS-pv5.3.lib

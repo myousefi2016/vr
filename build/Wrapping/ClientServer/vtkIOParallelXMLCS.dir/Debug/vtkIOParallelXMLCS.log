@@ -1,0 +1,29 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkXMLPDataSetWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPImageDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPPolyDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPRectilinearGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPStructuredDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPStructuredGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPUnstructuredDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPUnstructuredGridWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPHierarchicalBoxDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPMultiBlockDataWriterClientServer.cxx
+  CS Wrapping - generating vtkXMLPUniformGridAMRWriterClientServer.cxx
+  vtkXMLPDataSetWriterClientServer.cxx
+  vtkXMLPDataWriterClientServer.cxx
+  vtkXMLPImageDataWriterClientServer.cxx
+  vtkXMLPPolyDataWriterClientServer.cxx
+  vtkXMLPRectilinearGridWriterClientServer.cxx
+  vtkXMLPStructuredDataWriterClientServer.cxx
+  vtkXMLPStructuredGridWriterClientServer.cxx
+  vtkXMLPUnstructuredDataWriterClientServer.cxx
+  vtkXMLPUnstructuredGridWriterClientServer.cxx
+  vtkXMLPHierarchicalBoxDataWriterClientServer.cxx
+  vtkXMLPMultiBlockDataWriterClientServer.cxx
+  vtkXMLPUniformGridAMRWriterClientServer.cxx
+  vtkIOParallelXMLCSInit.cxx
+  Generating Code...
+  vtkIOParallelXMLCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkIOParallelXMLCS-pv5.3.lib

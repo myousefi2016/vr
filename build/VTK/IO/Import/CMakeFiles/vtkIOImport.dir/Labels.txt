@@ -1,0 +1,16 @@
+# Target labels
+ vtkIOImport
+# Source files and their labels
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtk3DSImporter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkImporter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkVRMLImporter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkOBJImporter.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkOBJImporterInternals.cxx
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtk3DS.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtk3DSImporter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkImporter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkVRMLImporter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkOBJImporter.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/vtkOBJImporterInternals.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Import/vtkIOImportModule.h
+C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Import/CMakeLists.txt

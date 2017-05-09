@@ -1,0 +1,54 @@
+
+==Analyze reader==
+
+Read Analyze image data files
+The Analyze reader reads Analyze data and header files containing image
+data file. The expected file extensions are .img and .hdr.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''FileName''' (FileName)
+|
+
+This property specifies the file name for the Analyze reader.
+
+|
+
+|
+The value(s) must be a filename (or filenames).
+
+|}
+
+==NIfTI Volume reader==
+
+Read NIfTI Volume NII image data files
+The NIfTI Volume reader reads NIfTI files containing image data. The expected file extensions are .nii.
+
+
+{| class="PropertiesTable" border="1" cellpadding="5"
+|-
+| '''Property'''
+| '''Description'''
+| '''Default Value(s)'''
+| '''Restrictions'''
+
+|-
+|'''FileName''' (FileName)
+|
+
+This property specifies the file name for the NIfTI Volume reader.
+
+|
+
+|
+The value(s) must be a filename (or filenames).
+
+|}
+

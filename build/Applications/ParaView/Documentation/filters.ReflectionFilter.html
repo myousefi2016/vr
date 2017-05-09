@@ -1,0 +1,86 @@
+
+<html>
+    <head>
+        <title>Reflect</title>
+        <meta name="proxy_name" contents="filters.ReflectionFilter"/>
+        <meta name="filename" contents="filters.ReflectionFilter.html"/>
+    </head>
+    <body>
+        <h2>Reflect (ReflectionFilter)</h2>
+        <i>
+            <p>This filter takes the union of the input and its reflection over an axis-aligned plane.</p>
+        </i>
+        <div class="description">The
+                     Reflect filter reflects the input dataset across the
+                     specified plane. This filter operates on any type of data
+                     set and produces an unstructured grid
+                     output.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Reflect
+        filter.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Plane</th>
+                <td>The value of this property determines which plane to
+        reflect across. If the value is X, Y, or Z, the value of the Center
+        property determines where the plane is placed along the specified axis.
+        The other six options (X Min, X Max, etc.) place the reflection plane
+        at the specified face of the bounding box of the input
+        dataset.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>X Min (0)</li>
+                            <li>Y Min (1)</li>
+                            <li>Z Min (2)</li>
+                            <li>X Max (3)</li>
+                            <li>Y Max (4)</li>
+                            <li>Z Max (5)</li>
+                            <li>X (6)</li>
+                            <li>Y (7)</li>
+                            <li>Z (8)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>If the value of the Plane property is X, Y, or Z, then
+        the value of this property specifies the center of the reflection
+        plane.</td>
+                <td>0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>CopyInput</th>
+                <td>If this property is set to 1, the output will contain
+        the union of the input dataset and its reflection. Otherwise the output
+        will contain only the reflection of the input data.</td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

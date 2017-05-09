@@ -1,0 +1,22 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/png/vtkpng/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/ThirdParty/png/vtkpng/CMakeFiles/generate.stamp is up-to-date.
+  pngget.c
+  pngrio.c
+  pngwrite.c
+  png.c
+  pngmem.c
+  pngrtran.c
+  pngtrans.c
+  pngwtran.c
+  pngerror.c
+  pngpread.c
+  pngrutil.c
+  pngvcrd.c
+  pngwutil.c
+  pnggccrd.c
+  pngread.c
+  pngset.c
+  pngwio.c
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpng-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkpng-pv5.3.exp
+  vtkpng.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkpng-pv5.3.dll

@@ -1,0 +1,157 @@
+
+<html>
+    <head>
+        <title>VPIC Reader</title>
+        <meta name="proxy_name" contents="sources.VPICReader"/>
+        <meta name="filename" contents="sources.VPICReader.html"/>
+    </head>
+    <body>
+        <h2>VPIC Reader (VPICReader)</h2>
+        <i>
+            <p>Reads distributed VPIC files into an ImageData.</p>
+        </i>
+        <div class="description">VPIC is a 3D
+                     kinetic plasma particle-in-cell simulation. The input file
+                     (.vpc) opened by the VPIC reader is an ASCII description
+                     of the data files which are written one file per
+                     processor, per category and per time step. These are
+                     arranged in subdirectories per category (field data and
+                     hydrology data) and then in time step
+                     subdirectories.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>FileName</th>
+                <td>ASCII .vpc file describes locations of data files, grid
+        sizes, time step sizes and type and order of data written to the
+        files.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>PointArrayInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Point Arrays</th>
+                <td>Variables written to the data files are described in the
+        .vpc file and are presented for selection. Only selected variables are
+        loaded for a time step.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>The list of array names is provided by the reader.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Stride</th>
+                <td>VPIC data may be very large and not all is needed for
+        effective visualization. Setting the stride selects every nth data item
+        within the files for display.</td>
+                <td>1 1 1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>DefaultXExtent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Default extent is all files
+        available.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>DefaultYExtent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Default extent is all files
+        available.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>DefaultZExtent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Default extent is all files
+        available.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>X Extent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Ghost cell overlap is handled within the reader.
+        To limit the View of VPIC information the extent in the X dimension of
+        "files" can be specified. Only the files selected will be displayed and
+        they will be partitioned between the visualizing processors, allowing a
+        higher resolution over a smaller area.</td>
+                <td>-1 -1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Y Extent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Ghost cell overlap is handled within the reader.
+        To limit the View of VPIC information the extent in the Y dimension of
+        "files" can be specified. Only the files selected will be displayed and
+        they will be partitioned between the visualizing processors, allowing a
+        higher resolution over a smaller area.</td>
+                <td>-1 -1<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Z Extent</th>
+                <td>VPIC data is written one file per simulation processor.
+        This coarse map of files is used in partitioning files between
+        visualizing processors so that each ParaView processor has its own set
+        of files to display. Ghost cell overlap is handled within the reader.
+        To limit the View of VPIC information the extent in the Z dimension of
+        "files" can be specified. Only the files selected will be displayed and
+        they will be partitioned between the visualizing processors, allowing a
+        higher resolution over a smaller area.</td>
+                <td>-1 -1<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

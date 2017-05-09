@@ -1,0 +1,19 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/CMakeFiles/generate.stamp is up-to-date.
+  CS Wrapping - generating vtkClientSocketClientServer.cxx
+  CS Wrapping - generating vtkDirectoryClientServer.cxx
+  CS Wrapping - generating vtkServerSocketClientServer.cxx
+  CS Wrapping - generating vtkSocketClientServer.cxx
+  CS Wrapping - generating vtkSocketCollectionClientServer.cxx
+  CS Wrapping - generating vtkThreadMessagerClientServer.cxx
+  CS Wrapping - generating vtkTimerLogClientServer.cxx
+  vtkClientSocketClientServer.cxx
+  vtkDirectoryClientServer.cxx
+  vtkServerSocketClientServer.cxx
+  vtkSocketClientServer.cxx
+  vtkSocketCollectionClientServer.cxx
+  vtkThreadMessagerClientServer.cxx
+  vtkTimerLogClientServer.cxx
+  vtkCommonSystemCSInit.cxx
+  Generating Code...
+  vtkCommonSystemCS.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\lib\Debug\vtkCommonSystemCS-pv5.3.lib

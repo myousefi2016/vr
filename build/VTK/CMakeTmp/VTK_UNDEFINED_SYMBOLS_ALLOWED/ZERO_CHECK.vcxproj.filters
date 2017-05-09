@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\CMakeTmp\VTK_UNDEFINED_SYMBOLS_ALLOWED\CMakeFiles\b50a935f6d97579e4f9b7a521dfb8f04\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D0DAAACC-6E3C-3BE1-A9C5-045472A2FC59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

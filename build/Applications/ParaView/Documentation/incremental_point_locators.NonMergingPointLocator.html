@@ -1,0 +1,43 @@
+
+<html>
+    <head>
+        <title>Don't Merge Points</title>
+        <meta name="proxy_name" contents="incremental_point_locators.NonMergingPointLocator"/>
+        <meta name="filename" contents="incremental_point_locators.NonMergingPointLocator.html"/>
+    </head>
+    <body>
+        <h2>Don't Merge Points (NonMergingPointLocator)</h2>
+        <i>
+            <p/>
+        </i>
+        <div class="description">Perform direct / check-free point insertion (any point is
+      inserted to a vtkPoints object) and therefore there can be duplicate
+      points.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Divisions</th>
+                <td>Specify the number of divisions in each axis / direction
+        (x, y, z) for creating a search structure of uniform fixed-resolution
+        bins / buckets.</td>
+                <td>50 50 50<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Number of points per bucket</th>
+                <td>Specify the average number of points in each bin /
+        bucket that determines the initial and growing sizes (in terms of
+        number of points) of each bin / bucket.</td>
+                <td>8<span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

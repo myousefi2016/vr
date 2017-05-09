@@ -1,0 +1,31 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Core/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Core/CMakeFiles/generate.stamp is up-to-date.
+  vtkAbstractParticleWriter.cxx
+  vtkArrayReader.cxx
+  vtkArrayWriter.cxx
+  vtkASCIITextCodec.cxx
+  vtkBase64InputStream.cxx
+  vtkBase64OutputStream.cxx
+  vtkBase64Utilities.cxx
+  vtkDataCompressor.cxx
+  vtkDelimitedTextWriter.cxx
+  vtkGlobFileNames.cxx
+  vtkInputStream.cxx
+  vtkJavaScriptDataWriter.cxx
+  vtkLZ4DataCompressor.cxx
+  vtkOutputStream.cxx
+  vtkSortFileNames.cxx
+  vtkTextCodec.cxx
+  vtkTextCodecFactory.cxx
+  vtkUTF16TextCodec.cxx
+  vtkUTF8TextCodec.cxx
+  vtkAbstractPolyDataReader.cxx
+  Generating Code...
+  Compiling...
+  vtkWriter.cxx
+  vtkZLibDataCompressor.cxx
+  vtkArrayDataReader.cxx
+  vtkArrayDataWriter.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOCore-pv5.3.exp
+  vtkIOCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOCore-pv5.3.dll

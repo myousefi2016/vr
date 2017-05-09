@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title>PLOT3D Reader</title>
+        <meta name="proxy_name" contents="sources.P3DReader"/>
+        <meta name="filename" contents="sources.P3DReader.html"/>
+    </head>
+    <body>
+        <h2>PLOT3D Reader (P3DReader)</h2>
+        <i>
+            <p>Reads ASCII or binary PLOT3D files.</p>
+        </i>
+        <div class="description">PLOT3D is a plotting
+                     package developed at NASA. The PLOT3D reader can read both
+                     ASCII and binary PLOT3D files. The default file extension
+                     for the geometry files is .xyz, and the default file
+                     extension for the solution files is .q. The output of this
+                     reader is a multi-block dataset containing curvilinear
+                     (structured grid) datasets.</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>QFileName</th>
+                <td>The list of .q (solution) files for the PLOT3D reader.
+        There can be more than one. If more that one file is specified, the
+        reader will switch to file-series mode in which it will pretend that it
+        can support time and provide one file per time step.</td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p> The value(s) must be a filename (or filenames).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>FileNameInfo</th>
+                <td/>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>TimestepValues</th>
+                <td>Available timestep values.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+        </table>
+    </body>
+</html>

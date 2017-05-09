@@ -1,0 +1,21 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/Infovis/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/Infovis/CMakeFiles/generate.stamp is up-to-date.
+  vtkBiomTableReader.cxx
+  vtkChacoGraphReader.cxx
+  vtkDelimitedTextReader.cxx
+  vtkDIMACSGraphReader.cxx
+  vtkDIMACSGraphWriter.cxx
+  vtkFixedWidthTextReader.cxx
+  vtkISIReader.cxx
+  vtkMultiNewickTreeReader.cxx
+  vtkNewickTreeReader.cxx
+  vtkNewickTreeWriter.cxx
+  vtkPhyloXMLTreeReader.cxx
+  vtkPhyloXMLTreeWriter.cxx
+  vtkRISReader.cxx
+  vtkTulipReader.cxx
+  vtkXGMLReader.cxx
+  vtkXMLTreeReader.cxx
+  Generating Code...
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOInfovis-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkIOInfovis-pv5.3.exp
+  vtkIOInfovis.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkIOInfovis-pv5.3.dll

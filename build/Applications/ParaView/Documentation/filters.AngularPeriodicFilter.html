@@ -1,0 +1,133 @@
+
+<html>
+    <head>
+        <title>Angular Periodic Filter</title>
+        <meta name="proxy_name" contents="filters.AngularPeriodicFilter"/>
+        <meta name="filename" contents="filters.AngularPeriodicFilter.html"/>
+    </head>
+    <body>
+        <h2>Angular Periodic Filter (AngularPeriodicFilter)</h2>
+        <i>
+            <p>This filter generate a periodic multiblock dataset.</p>
+        </i>
+        <div class="description">This filter generate a periodic
+                     multiblock dataset</div>
+        <table width="97%" border="2px">
+            <tr bgcolor="#9acd32">
+                <th>Property</th>
+                <th width="60%">Description</th>
+                <th width="5%">Default(s)</th>
+                <th width="20%">Restrictions</th>
+            </tr>
+            <tr>
+                <th>Input</th>
+                <td>This property specifies the input to the Periodic filter.
+        </td>
+                <td>
+                    <span/>
+                </td>
+                <td>
+                    <p>Accepts input of following types:<ul>
+                            <li>vtkDataSet</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>BlockIndices</th>
+                <td>This property lists the ids of the blocks to make periodic
+        from the input multiblock dataset.</td>
+                <td>
+                    <span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>IterationMode</th>
+                <td>This property specifies the mode of iteration, either a user-provided number
+        of periods, or the maximum number of periods to rotate to 360°. </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Manual (0)</li>
+                            <li>Maximum (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>NumberOfPeriods</th>
+                <td>This property specifies the number of iteration</td>
+                <td>3<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>RotationMode</th>
+                <td>This property specifies the mode of rotation, either from a user provided
+        angle or from an array in the data.</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Direct Angle (0)</li>
+                            <li>Array Value (1)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>RotationAngle</th>
+                <td>Rotation angle in degree.
+        </td>
+                <td>10<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>RotationArrayName</th>
+                <td>Field array name that contains the rotation angle in radian.
+        </td>
+                <td>periodic angle<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>Axis</th>
+                <td>This property specifies the axis of rotation</td>
+                <td>0<span/>
+                </td>
+                <td>
+                    <p>The value(s) is an enumeration of the following:<ul>
+                            <li>Axis X (0)</li>
+                            <li>Axis Y (1)</li>
+                            <li>Axis Z (2)</li>
+                        </ul>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Center</th>
+                <td>This property specifies the 3D coordinates for the
+        center of the rotation.</td>
+                <td>0.0 0.0 0.0<span/>
+                </td>
+                <td/>
+            </tr>
+            <tr>
+                <th>ComputeRotationsOnTheFly</th>
+                <td>
+        Specify whether the rotations should be computed on-the-fly, which is
+        compute intensive, or if the arrays should be explicitly generated and
+        stored, at the cost of using more memory.
+        </td>
+                <td>1<span/>
+                </td>
+                <td>
+                    <p>Accepts boolean values (0 or 1).</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

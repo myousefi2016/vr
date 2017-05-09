@@ -1,0 +1,12 @@
+﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/AcceleratedAlgorithms/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/AcceleratedAlgorithms/CMakeFiles/generate.stamp is up-to-date.
+  Generating Documentation HTMLs from xmls
+  Processing wiki sources
+  Processing wiki filters
+  Processing wiki writers
+  Processing wiki readers
+  Generating vtkSMXML_AcceleratedAlgorithms.h
+  -- Generate module: AcceleratedAlgorithms
+  AcceleratedAlgorithms_Plugin.cxx
+     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/AcceleratedAlgorithms.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/AcceleratedAlgorithms.exp
+  AcceleratedAlgorithms.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\AcceleratedAlgorithms.dll
