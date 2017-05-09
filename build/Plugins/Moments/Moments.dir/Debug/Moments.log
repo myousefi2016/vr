@@ -1,20 +1,683 @@
-﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Plugins/Moments/CMakeLists.txt
-  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/Moments/CMakeFiles/generate.stamp is up-to-date.
-  CS Wrapping - generating vtkMomentGlyphsClientServer.cxx
-  CS Wrapping - generating vtkMomentVectorsClientServer.cxx
-  Generating Documentation HTMLs from xmls
-  Processing wiki sources
-  Processing wiki filters
-  Processing wiki writers
-  Processing wiki readers
-  Generating vtkSMXML_Moments.h
-  -- Generate module: Moments
-  vtkMomentGlyphs.cxx
-  vtkMomentVectors.cxx
-  vtkMomentGlyphsClientServer.cxx
-  vtkMomentVectorsClientServer.cxx
-  MomentsInit.cxx
-  Moments_Plugin.cxx
-  Generating Code...
-     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/Moments.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/Moments.exp
-  Moments.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\Moments.dll
+﻿Build started 09/05/2017 13:36:18.
+     1>Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" on node 2 (Build target(s)).
+     1>Building with tools version "14.0".
+     1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (entry point):
+       Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Message"
+         Configuration=Debug
+       Done executing task "Message".
+       Task "Message"
+         Platform=x64
+       Done executing task "Message".
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' != '' and !HasTrailingSlash('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\')).
+       Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+       Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Moments.dir\Debug\' != '' and !HasTrailingSlash('Moments.dir\Debug\')).
+     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "Moments.vcxproj".
+     1>Target "_PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "Build" depends on it):
+       Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+     1>Done building target "_PrepareForBuild" in project "Moments.vcxproj".
+     1>Target "_PrepareForReferenceResolution" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveReferences" depends on it):
+       Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+     1>Done building target "_PrepareForReferenceResolution" in project "Moments.vcxproj".
+       Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\Moments\vtkMomentGlyphs.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Plugins\Moments\vtkMomentVectors.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Plugins\Moments\vtkMomentGlyphsClientServer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Plugins\Moments\vtkMomentVectorsClientServer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Plugins\Moments\MomentsInit.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Plugins\Moments\Moments_Plugin.cxx'!='' and 'false'=='true' and '' != 'false').
+     1>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveReferences" depends on it):
+     1>Done building target "BeforeResolveReferences" in project "Moments.vcxproj".
+     1>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveReferences" depends on it):
+       Task "AssignProjectConfiguration"
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj" has not been resolved.
+       Done executing task "AssignProjectConfiguration".
+     1>Done building target "AssignProjectConfiguration" in project "Moments.vcxproj".
+       Target "AssignProjectConfiguration" skipped. Previously built successfully.
+     1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveProjectReferences" depends on it):
+       Task "ResolveNonMSBuildProjectOutput"
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj" has not been resolved.
+       Done executing task "ResolveNonMSBuildProjectOutput".
+     1>Done building target "_SplitProjectReferencesByFileExistence" in project "Moments.vcxproj".
+     1>Target "_RemoveNameMetadataFromProjectReferenceItems" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveProjectReferences" depends on it):
+     1>Done building target "_RemoveNameMetadataFromProjectReferenceItems" in project "Moments.vcxproj".
+     1>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveReferences" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' != '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' == '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj' != '' and 'true' == 'true' and '' != '').
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\ice-t\IceTCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\gl\IceTGL.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\IceT\vtkicet\src\communication\IceTMPI.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\ProcessXML\kwProcessXML.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Charts\Core\vtkChartsCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ComputationalGeometry\vtkCommonComputationalGeometry.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Domains\Chemistry\vtkDomainsChemistry.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\AMR\vtkFiltersAMR.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\FlowPaths\vtkFiltersFlowPaths.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Generic\vtkFiltersGeneric.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\HyperTree\vtkFiltersHyperTree.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelFlowPaths\vtkFiltersParallelFlowPaths.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelMPI\vtkFiltersParallelMPI.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\ParallelStatistics\vtkFiltersParallelStatistics.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Statistics\vtkFiltersStatistics.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\GUISupport\Qt\vtkGUISupportQt.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\EnSight\vtkIOEnSight.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Exodus\vtkIOExodus.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Export\vtkIOExport.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ExportOpenGL2\vtkIOExportOpenGL2.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Geometry\vtkIOGeometry.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Import\vtkIOImport.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\MPIImage\vtkIOMPIImage.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\NetCDF\vtkIONetCDF.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Parallel\vtkIOParallel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelExodus\vtkIOParallelExodus.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\ParallelXML\vtkIOParallelXML.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XML\vtkIOXML.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Core\vtkImagingCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Fourier\vtkImagingFourier.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Math\vtkImagingMath.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Imaging\Sources\vtkImagingSources.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Style\vtkInteractionStyle.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Interaction\Widgets\vtkInteractionWidgets.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\netcdf\vtknetcdf\vtkNetCDF_cxx.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Animation\vtkPVAnimation.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Rendering\vtkPVClientServerCoreRendering.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Rendering\vtkPVServerImplementationRendering.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\SMApplication\vtkPVServerManagerApplication.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Wrapping\ClientServer\vtkPVServerManagerApplicationCS.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Default\vtkPVServerManagerDefault.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerManager\Rendering\vtkPVServerManagerRendering.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Default\vtkPVVTKExtensionsDefault.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Rendering\vtkPVVTKExtensionsRendering.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Annotation\vtkRenderingAnnotation.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Context2D\vtkRenderingContext2D.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Core\vtkRenderingCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\FreeType\vtkRenderingFreeType.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\GL2PSOpenGL2\vtkRenderingGL2PSOpenGL2.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Label\vtkRenderingLabel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\OpenGL2\vtkRenderingOpenGL2.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Parallel\vtkRenderingParallel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\Volume\vtkRenderingVolume.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeAMR\vtkRenderingVolumeAMR.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Rendering\VolumeOpenGL2\vtkRenderingVolumeOpenGL2.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Context2D\vtkViewsContext2D.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Views\Core\vtkViewsCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\Utilities\WrapClientServer\vtkWrapClientServer.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\alglib\vtkalglib.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\exodusII\vtkexodusII\vtkexoIIc.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\freetype\vtkfreetype\vtkfreetype.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\glew\vtkglew\vtkglew.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\src\vtkhdf5.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\hdf5\vtkhdf5\hl\src\vtkhdf5_hl.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\zlib\vtkzlib\vtkzlib.vcxproj' does not exist.
+       Done executing task "Warning".
+     1>Done building target "ResolveProjectReferences" in project "Moments.vcxproj".
+       Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+       Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+     1>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+     1>Done building target "GetFrameworkPaths" in project "Moments.vcxproj".
+       Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+     1>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+     1>Done building target "GetReferenceAssemblyPaths" in project "Moments.vcxproj".
+     1>Target "SetBuildDefaultEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Current.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "PrepareForBuild" depends on it):
+       Using "SetEnv" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+       Task "SetEnv"
+         PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\Scripts;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\calibre2\;c:\program files\miktex 2.9\miktex\bin\x64\;c:\program files (x86)\quicktime\qtsystem\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Android;C:\Windows\System32;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\adb;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\gnuplot\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\Qt\5.8\msvc2015_64\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Lord\scoop\shims;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\php;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;C:\Program Files\emacs\bin\;C:\Program Files\Microsoft MPI\Bin\;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x64
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+       Done executing task "SetEnv".
+     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "Moments.vcxproj".
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+     1>Target "GetResolvedWinMD" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "PrepareForBuild" depends on it):
+     1>Done building target "GetResolvedWinMD" in project "Moments.vcxproj".
+     1>Target "PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v110').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v100').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v90').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' != 'v90' and 'v140' != 'v100' and 'v140' != 'v110').
+     1>Done building target "PlatformPrepareForBuild" in project "Moments.vcxproj".
+     1>Target "Desktop_PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Platforms\x64\PlatformToolsets\v140\Toolset.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ($(MissingSDKProps) == 'true') was evaluated as ( == 'true').
+     1>Done building target "Desktop_PlatformPrepareForBuild" in project "Moments.vcxproj".
+       Target "GetFrameworkPaths" skipped. Previously built successfully.
+       Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+       Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+     1>Target "SetCABuildNativeEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "PrepareForBuild" depends on it):
+       Initializing task factory "CodeTaskFactory" from assembly "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Build.Tasks.Core.dll".
+       Using "SetEnvironmentVariable" task from the task factory "Code Task Factory".
+       Task "SetEnvironmentVariable"
+       Done executing task "SetEnvironmentVariable".
+     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "Moments.vcxproj".
+     1>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'DynamicLibrary'!='Application' and 'DynamicLibrary'!='DynamicLibrary' and 'DynamicLibrary'!='StaticLibrary').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and 'v140'=='v90').
+       Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Windows Kits\8.1\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+       Task "VCMessage" skipped, due to false condition; ('$(_MBCS_Using)' == 'true' and '$(_MBCS_Installed)' != 'true' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' == 'true' and '' != 'true' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as ('' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+       Task "MakeDir"
+         Creating directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(403,5): error MSB3191: Unable to create directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\". Access to the path 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' is denied.
+       Done executing task "MakeDir" -- FAILED.
+     1>Done building target "PrepareForBuild" in project "Moments.vcxproj" -- FAILED.
+     1>Done Building Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\Plugins\Moments\Moments.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.06

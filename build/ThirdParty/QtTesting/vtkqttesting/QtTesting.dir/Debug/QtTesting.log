@@ -1,164 +1,119 @@
-﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ThirdParty/QtTesting/vtkqttesting/CMakeLists.txt
-  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ThirdParty/QtTesting/vtkqttesting/CMakeFiles/generate.stamp is up-to-date.
-  Generating moc_pq3DViewEventPlayer.cpp
-  Generating moc_pq3DViewEventTranslator.cpp
-  Generating moc_pqAbstractActivateEventPlayer.cpp
-  Generating moc_pqAbstractBooleanEventPlayer.cpp
-  Generating moc_pqAbstractButtonEventTranslator.cpp
-  Generating moc_pqAbstractDoubleEventPlayer.cpp
-  Generating moc_pqAbstractIntEventPlayer.cpp
-  Generating moc_pqAbstractItemViewEventPlayer.cpp
-  Generating moc_pqAbstractItemViewEventPlayerBase.cpp
-  Generating moc_pqAbstractItemViewEventTranslator.cpp
-  Generating moc_pqAbstractItemViewEventTranslatorBase.cpp
-  Generating moc_pqAbstractMiscellaneousEventPlayer.cpp
-  Generating moc_pqAbstractSliderEventTranslator.cpp
-  Generating moc_pqAbstractStringEventPlayer.cpp
-  Generating moc_pqBasicWidgetEventPlayer.cpp
-  Generating moc_pqBasicWidgetEventTranslator.cpp
-  Generating moc_pqCheckEventOverlay.cpp
-  Generating moc_pqComboBoxEventTranslator.cpp
-  Generating moc_pqComboBoxEventPlayer.cpp
-  Generating moc_pqCommentEventPlayer.cpp
-  Generating moc_pqDoubleSpinBoxEventTranslator.cpp
-  Generating moc_pqEventComment.cpp
-  Generating moc_pqEventDispatcher.cpp
-  Generating moc_pqEventObserver.cpp
-  Generating moc_pqEventPlayer.cpp
-  Generating moc_pqEventRecorder.cpp
-  Generating moc_pqEventSource.cpp
-  Generating moc_pqEventTranslator.cpp
-  Generating moc_pqLineEditEventTranslator.cpp
-  Generating moc_pqListViewEventPlayer.cpp
-  Generating moc_pqListViewEventTranslator.cpp
-  Generating moc_pqMenuEventTranslator.cpp
-  Generating moc_pqNativeFileDialogEventPlayer.cpp
-  Generating moc_pqNativeFileDialogEventTranslator.cpp
-  Generating moc_pqPlayBackEventsDialog.cpp
-  Generating moc_pqRecordEventsDialog.cpp
-  Generating moc_pqSpinBoxEventTranslator.cpp
-  Generating moc_pqStdoutEventObserver.cpp
-  Generating moc_pqTabBarEventPlayer.cpp
-  Generating moc_pqTabBarEventTranslator.cpp
-  Generating moc_pqTableViewEventPlayer.cpp
-  Generating moc_pqTableViewEventTranslator.cpp
-  Generating moc_pqTestUtility.cpp
-  Generating moc_pqThreadedEventSource.cpp
-  Generating moc_pqTimer.cpp
-  Generating moc_pqTreeViewEventPlayer.cpp
-  Generating moc_pqTreeViewEventTranslator.cpp
-  Generating moc_pqWidgetEventPlayer.cpp
-  Generating moc_pqWidgetEventTranslator.cpp
-  Generating ui_pqPlayBackEventsDialog.h
-  Generating ui_pqRecordEventsDialog.h
-  Generating qrc_QtTesting.cpp
-  pq3DViewEventPlayer.cxx
-  pq3DViewEventTranslator.cxx
-  pqAbstractActivateEventPlayer.cxx
-  pqAbstractBooleanEventPlayer.cxx
-  pqAbstractButtonEventTranslator.cxx
-  pqAbstractDoubleEventPlayer.cxx
-  pqAbstractIntEventPlayer.cxx
-  pqAbstractItemViewEventPlayer.cxx
-  pqAbstractItemViewEventPlayerBase.cxx
-  pqAbstractItemViewEventTranslator.cxx
-  pqAbstractItemViewEventTranslatorBase.cxx
-  pqAbstractMiscellaneousEventPlayer.cxx
-  pqAbstractSliderEventTranslator.cxx
-  pqAbstractStringEventPlayer.cxx
-  pqBasicWidgetEventPlayer.cxx
-  pqBasicWidgetEventTranslator.cxx
-  pqCheckEventOverlay.cxx
-  pqComboBoxEventTranslator.cxx
-  pqComboBoxEventPlayer.cxx
-  pqCommentEventPlayer.cxx
-  Generating Code...
-  Compiling...
-  pqDoubleSpinBoxEventTranslator.cxx
-  pqEventComment.cxx
-  pqEventDispatcher.cxx
-  pqEventObserver.cxx
-  pqEventPlayer.cxx
-  pqEventRecorder.cxx
-  pqEventTranslator.cxx
-  pqLineEditEventTranslator.cxx
-  pqListViewEventPlayer.cxx
-  pqListViewEventTranslator.cxx
-  pqMenuEventTranslator.cxx
-  pqNativeFileDialogEventPlayer.cxx
-  pqNativeFileDialogEventTranslator.cxx
-  pqObjectNaming.cxx
-  pqPlayBackEventsDialog.cxx
-  pqRecordEventsDialog.cxx
-  pqSpinBoxEventTranslator.cxx
-  pqStdoutEventObserver.cxx
-  pqTabBarEventPlayer.cxx
-  pqTabBarEventTranslator.cxx
-  Generating Code...
-  Compiling...
-  pqTableViewEventPlayer.cxx
-  pqTableViewEventTranslator.cxx
-  pqTestUtility.cxx
-  pqThreadedEventSource.cxx
-  pqTimer.cxx
-  pqTreeViewEventPlayer.cxx
-  pqTreeViewEventTranslator.cxx
-  pqWidgetEventPlayer.cxx
-  pqWidgetEventTranslator.cxx
-  moc_pq3DViewEventPlayer.cpp
-  moc_pq3DViewEventTranslator.cpp
-  moc_pqAbstractActivateEventPlayer.cpp
-  moc_pqAbstractBooleanEventPlayer.cpp
-  moc_pqAbstractButtonEventTranslator.cpp
-  moc_pqAbstractDoubleEventPlayer.cpp
-  moc_pqAbstractIntEventPlayer.cpp
-  moc_pqAbstractItemViewEventPlayer.cpp
-  moc_pqAbstractItemViewEventPlayerBase.cpp
-  moc_pqAbstractItemViewEventTranslator.cpp
-  moc_pqAbstractItemViewEventTranslatorBase.cpp
-  Generating Code...
-  Compiling...
-  moc_pqAbstractMiscellaneousEventPlayer.cpp
-  moc_pqAbstractSliderEventTranslator.cpp
-  moc_pqAbstractStringEventPlayer.cpp
-  moc_pqBasicWidgetEventPlayer.cpp
-  moc_pqBasicWidgetEventTranslator.cpp
-  moc_pqCheckEventOverlay.cpp
-  moc_pqComboBoxEventTranslator.cpp
-  moc_pqComboBoxEventPlayer.cpp
-  moc_pqCommentEventPlayer.cpp
-  moc_pqDoubleSpinBoxEventTranslator.cpp
-  moc_pqEventComment.cpp
-  moc_pqEventDispatcher.cpp
-  moc_pqEventObserver.cpp
-  moc_pqEventPlayer.cpp
-  moc_pqEventRecorder.cpp
-  moc_pqEventSource.cpp
-  moc_pqEventTranslator.cpp
-  moc_pqLineEditEventTranslator.cpp
-  moc_pqListViewEventPlayer.cpp
-  moc_pqListViewEventTranslator.cpp
-  Generating Code...
-  Compiling...
-  moc_pqMenuEventTranslator.cpp
-  moc_pqNativeFileDialogEventPlayer.cpp
-  moc_pqNativeFileDialogEventTranslator.cpp
-  moc_pqPlayBackEventsDialog.cpp
-  moc_pqRecordEventsDialog.cpp
-  moc_pqSpinBoxEventTranslator.cpp
-  moc_pqStdoutEventObserver.cpp
-  moc_pqTabBarEventPlayer.cpp
-  moc_pqTabBarEventTranslator.cpp
-  moc_pqTableViewEventPlayer.cpp
-  moc_pqTableViewEventTranslator.cpp
-  moc_pqTestUtility.cpp
-  moc_pqThreadedEventSource.cpp
-  moc_pqTimer.cpp
-  moc_pqTreeViewEventPlayer.cpp
-  moc_pqTreeViewEventTranslator.cpp
-  moc_pqWidgetEventPlayer.cpp
-  moc_pqWidgetEventTranslator.cpp
-  qrc_QtTesting.cpp
-  Generating Code...
-     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/QtTesting.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/QtTesting.exp
-  QtTesting.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\QtTesting.dll
+﻿Build started 09/05/2017 13:34:12.
+     1>Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" on node 3 (Build target(s)).
+     1>Building with tools version "14.0".
+     1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (entry point):
+       Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Message"
+         Configuration=Debug
+       Done executing task "Message".
+       Task "Message"
+         Platform=x64
+       Done executing task "Message".
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' != '' and !HasTrailingSlash('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\')).
+       Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+       Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('QtTesting.dir\Debug\' != '' and !HasTrailingSlash('QtTesting.dir\Debug\')).
+     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "QtTesting.vcxproj".
+     1>Target "_PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "Build" depends on it):
+       Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+     1>Done building target "_PrepareForBuild" in project "QtTesting.vcxproj".
+     1>Target "_PrepareForReferenceResolution" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveReferences" depends on it):
+       Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+     1>Done building target "_PrepareForReferenceResolution" in project "QtTesting.vcxproj".
+       Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pq3DViewEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pq3DViewEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractActivateEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractBooleanEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractButtonEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractDoubleEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractIntEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractItemViewEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractItemViewEventPlayerBase.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractItemViewEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractItemViewEventTranslatorBase.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractMiscellaneousEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractSliderEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqAbstractStringEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqBasicWidgetEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqBasicWidgetEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqCheckEventOverlay.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqComboBoxEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqComboBoxEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqCommentEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqDoubleSpinBoxEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventComment.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventDispatcher.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventObserver.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventRecorder.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqLineEditEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqListViewEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqListViewEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqMenuEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqNativeFileDialogEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqNativeFileDialogEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqObjectNaming.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqPlayBackEventsDialog.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqRecordEventsDialog.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqSpinBoxEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqStdoutEventObserver.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTabBarEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTabBarEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTableViewEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTableViewEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTestUtility.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqThreadedEventSource.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTimer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTreeViewEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqTreeViewEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqWidgetEventPlayer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\QtTesting\vtkqttesting\pqWidgetEventTranslator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pq3DViewEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pq3DViewEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractActivateEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractBooleanEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractButtonEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractDoubleEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractIntEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractItemViewEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractItemViewEventPlayerBase.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractItemViewEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractItemViewEventTranslatorBase.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractMiscellaneousEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractSliderEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqAbstractStringEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqBasicWidgetEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqBasicWidgetEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqCheckEventOverlay.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqComboBoxEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqComboBoxEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqCommentEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqDoubleSpinBoxEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventComment.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventDispatcher.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventObserver.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventRecorder.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventSource.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqLineEditEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqListViewEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqListViewEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqMenuEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqNativeFileDialogEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqNativeFileDialogEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqPlayBackEventsDialog.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqRecordEventsDialog.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqSpinBoxEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqStdoutEventObserver.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTabBarEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTabBarEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTableViewEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTableViewEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTestUtility.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqThreadedEventSource.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTimer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTreeViewEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqTreeViewEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqWidgetEventPlayer.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\moc_pqWidgetEventTranslator.cpp;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\QtTesting\vtkqttesting\qrc_QtTesting.cpp'!='' and 'false'=='true' and '' != 'false').
+     1>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveReferences" depends on it):
+     1>Done building target "BeforeResolveReferences" in project "QtTesting.vcxproj".
+     1>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveReferences" depends on it):
+       Task "AssignProjectConfiguration"
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+       Done executing task "AssignProjectConfiguration".
+     1>Done building target "AssignProjectConfiguration" in project "QtTesting.vcxproj".
+       Target "AssignProjectConfiguration" skipped. Previously built successfully.
+     1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveProjectReferences" depends on it):
+       Task "ResolveNonMSBuildProjectOutput"
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+       Done executing task "ResolveNonMSBuildProjectOutput".
+     1>Done building target "_SplitProjectReferencesByFileExistence" in project "QtTesting.vcxproj".
+     1>Target "_RemoveNameMetadataFromProjectReferenceItems" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveProjectReferences" depends on it):
+     1>Done building target "_RemoveNameMetadataFromProjectReferenceItems" in project "QtTesting.vcxproj".
+     1>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveReferences" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' != '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' == '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' != '' and 'true' == 'true' and '' != '').
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' does not exist.
+       Done executing task "Warning".
+     1>Done building target "ResolveProjectReferences" in project "QtTesting.vcxproj".
+       Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+       Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+     1>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+     1>Done building target "GetFrameworkPaths" in project "QtTesting.vcxproj".
+       Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+     1>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+     1>Done building target "GetReferenceAssemblyPaths" in project "QtTesting.vcxproj".
+     1>Target "SetBuildDefaultEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Current.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "PrepareForBuild" depends on it):
+       Using "SetEnv" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+       Task "SetEnv"
+         PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\Scripts;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\calibre2\;c:\program files\miktex 2.9\miktex\bin\x64\;c:\program files (x86)\quicktime\qtsystem\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Android;C:\Windows\System32;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\adb;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\gnuplot\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\Qt\5.8\msvc2015_64\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Lord\scoop\shims;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\php;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;C:\Program Files\emacs\bin\;C:\Program Files\Microsoft MPI\Bin\;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x64
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+       Done executing task "SetEnv".
+     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "QtTesting.vcxproj".
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+     1>Target "GetResolvedWinMD" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "PrepareForBuild" depends on it):
+     1>Done building target "GetResolvedWinMD" in project "QtTesting.vcxproj".
+     1>Target "PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v110').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v100').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v90').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' != 'v90' and 'v140' != 'v100' and 'v140' != 'v110').
+     1>Done building target "PlatformPrepareForBuild" in project "QtTesting.vcxproj".
+     1>Target "Desktop_PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Platforms\x64\PlatformToolsets\v140\Toolset.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ($(MissingSDKProps) == 'true') was evaluated as ( == 'true').
+     1>Done building target "Desktop_PlatformPrepareForBuild" in project "QtTesting.vcxproj".
+       Target "GetFrameworkPaths" skipped. Previously built successfully.
+       Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+       Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+     1>Target "SetCABuildNativeEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "PrepareForBuild" depends on it):
+       Initializing task factory "CodeTaskFactory" from assembly "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Build.Tasks.Core.dll".
+       Using "SetEnvironmentVariable" task from the task factory "Code Task Factory".
+       Task "SetEnvironmentVariable"
+       Done executing task "SetEnvironmentVariable".
+     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "QtTesting.vcxproj".
+     1>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'DynamicLibrary'!='Application' and 'DynamicLibrary'!='DynamicLibrary' and 'DynamicLibrary'!='StaticLibrary').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and 'v140'=='v90').
+       Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Windows Kits\8.1\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+       Task "VCMessage" skipped, due to false condition; ('$(_MBCS_Using)' == 'true' and '$(_MBCS_Installed)' != 'true' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' == 'true' and '' != 'true' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as ('' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+       Task "MakeDir"
+         Creating directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(403,5): error MSB3191: Unable to create directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\". Access to the path 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' is denied.
+       Done executing task "MakeDir" -- FAILED.
+     1>Done building target "PrepareForBuild" in project "QtTesting.vcxproj" -- FAILED.
+     1>Done Building Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ThirdParty\QtTesting\vtkqttesting\QtTesting.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.01

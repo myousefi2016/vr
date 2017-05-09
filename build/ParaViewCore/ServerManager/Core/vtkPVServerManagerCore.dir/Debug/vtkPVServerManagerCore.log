@@ -1,256 +1,293 @@
-﻿  Building Custom Rule C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/ServerManager/Core/CMakeLists.txt
-  CMake does not need to re-run because C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/ServerManager/Core/CMakeFiles/generate.stamp is up-to-date.
-  vtkLiveInsituLink.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMArrayListDomain.cxx
-  vtkSMArrayRangeDomain.cxx
-  vtkSMArraySelectionDomain.cxx
-  vtkSMBooleanDomain.cxx
-  vtkSMBoundsDomain.cxx
-  vtkSMCollaborationManager.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMCompositeTreeDomain.cxx
-  vtkSMCompoundProxyDefinitionLoader.cxx
-  vtkSMCompoundSourceProxy.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMCompoundSourceProxyDefinitionBuilder.cxx
-  vtkSMCoreUtilities.cxx
-  vtkSMDataSourceProxy.cxx
-  vtkSMDataTypeDomain.cxx
-  vtkSMDeserializer.cxx
-  vtkSMDeserializerProtobuf.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMDeserializerXMLCache.cxx
-  vtkSMDeserializerXML.cxx
-  vtkSMDimensionsDomain.cxx
-  vtkSMDocumentation.cxx
-  Generating Code...
-  Compiling...
-  vtkSMDomain.cxx
-  vtkSMDomainIterator.cxx
-  vtkSMDoubleMapProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMDoubleMapPropertyIterator.cxx
-  vtkSMDoubleRangeDomain.cxx
-  vtkSMDoubleVectorProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMEnumerationDomain.cxx
-  vtkSMExtentDomain.cxx
-  vtkSMFieldDataDomain.cxx
-  vtkSMFileListDomain.cxx
-  vtkSMInputFileNameDomain.cxx
-  vtkSMFixedTypeDomain.cxx
-  vtkSMGlobalPropertiesLinkUndoElement.cxx
-  vtkSMGlobalPropertiesProxy.cxx
-  vtkSMIdTypeVectorProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMIndexSelectionDomain.cxx
-  vtkSMInputArrayDomain.cxx
-  vtkSMInputProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMInsituStateLoader.cxx
-  vtkSMIntRangeDomain.cxx
-  Generating Code...
-  Compiling...
-  vtkSMIntVectorProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMLink.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMLiveInsituLinkProxy.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMMapProperty.cxx
-  vtkSMNamedPropertyIterator.cxx
-  vtkSMNumberOfComponentsDomain.cxx
-  vtkSMObject.cxx
-  vtkSMOrderedPropertyIterator.cxx
-  vtkSMOutputPort.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMParaViewPipelineController.cxx
-  vtkSMPWriterProxy.cxx
-  vtkSMPipelineState.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMPluginLoaderProxy.cxx
-  vtkSMPluginManager.cxx
-  vtkSMProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMPropertyGroup.cxx
-  vtkSMPropertyHelper.cxx
-  vtkSMPropertyIterator.cxx
-  vtkSMNullProxy.cxx
-  vtkSMPropertyLink.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-  Compiling...
-  vtkSMProxy.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMProxyDefinitionManager.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMProxyGroupDomain.cxx
-  vtkSMProxyInitializationHelper.cxx
-  vtkSMProxyIterator.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMProxyLink.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMProxyListDomain.cxx
-  vtkSMProxyLocator.cxx
-  vtkSMProxyManager.cxx
-  vtkSMProxyProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMProxySelectionModel.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMReaderFactory.cxx
-  vtkSMRemoteObject.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMRemoteObjectUpdateUndoElement.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMSILDomain.cxx
-  vtkSMSILModel.cxx
-  vtkSMSelectionLink.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMSelfGeneratingSourceProxy.cxx
-  vtkSMServerStateLocator.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMSession.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-  Compiling...
-  vtkSMSessionClient.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMSessionObject.cxx
-  vtkSMSessionProxyManager.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMSettings.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'Json::Exception'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: see declaration of 'std::exception'
-  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\VTK\ThirdParty\jsoncpp\vtkjsoncpp/json/json.h(390): note: see declaration of 'Json::Exception'
-  vtkSMSettingsProxy.cxx
-  vtkSMSourceProxy.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMStateLoader.cxx
-  vtkSMStateLocator.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMStateVersionController.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\pugixml\pugixml.h(1144): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'vtkpugi::xpath_exception'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: see declaration of 'std::exception'
-  C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\pugixml\pugixml.h(1143): note: see declaration of 'vtkpugi::xpath_exception'
-  vtkSMStringListDomain.cxx
-  vtkSMStringVectorProperty.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMTimeKeeper.cxx
-  vtkSMTimeKeeperProxy.cxx
-  vtkSMTimeStepIndexDomain.cxx
-  vtkSMTrace.cxx
-  vtkSMUncheckedPropertyHelper.cxx
-  vtkSMUndoElement.cxx
-  vtkSMUndoStack.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMUndoStackBuilder.cxx
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(986): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/io/coded_stream.h(991): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(118): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ThirdParty\protobuf\vtkprotobuf\src\google/protobuf/unknown_field_set.h(200): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  vtkSMVectorProperty.cxx
-  Generating Code...
-c:\users\vr\desktop\paraview-v5.3.0-vr\src\paraviewcore\servermanager\core\vtksmsessionproxymanager.cxx(574): warning C4702: unreachable code
-  Compiling...
-  vtkSMWriterFactory.cxx
-  vtkSMWriterProxy.cxx
-  Generating Code...
-     Creating library C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerCore-pv5.3.lib and object C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/Debug/vtkPVServerManagerCore-pv5.3.exp
-  vtkPVServerManagerCore.vcxproj -> C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\vtkPVServerManagerCore-pv5.3.dll
+﻿Build started 09/05/2017 13:33:28.
+     1>Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" on node 3 (Build target(s)).
+     1>Building with tools version "14.0".
+     1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (entry point):
+       Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Message"
+         Configuration=Debug
+       Done executing task "Message".
+       Task "Message"
+         Platform=x64
+       Done executing task "Message".
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' != '' and !HasTrailingSlash('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\')).
+       Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+       Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('vtkPVServerManagerCore.dir\Debug\' != '' and !HasTrailingSlash('vtkPVServerManagerCore.dir\Debug\')).
+     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "_PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "Build" depends on it):
+       Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+     1>Done building target "_PrepareForBuild" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "_PrepareForReferenceResolution" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveReferences" depends on it):
+       Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+     1>Done building target "_PrepareForReferenceResolution" in project "vtkPVServerManagerCore.vcxproj".
+       Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkLiveInsituLink.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMArrayListDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMArrayRangeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMArraySelectionDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMBooleanDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMBoundsDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCollaborationManager.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCompositeTreeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCompoundProxyDefinitionLoader.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCompoundSourceProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCompoundSourceProxyDefinitionBuilder.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMCoreUtilities.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDataSourceProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDataTypeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDeserializer.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDeserializerProtobuf.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDeserializerXMLCache.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDeserializerXML.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDimensionsDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDocumentation.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDomainIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDoubleMapProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDoubleMapPropertyIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDoubleRangeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMDoubleVectorProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMEnumerationDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMExtentDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMFieldDataDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMFileListDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMInputFileNameDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMFixedTypeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMGlobalPropertiesLinkUndoElement.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMGlobalPropertiesProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMIdTypeVectorProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMIndexSelectionDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMInputArrayDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMInputProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMInsituStateLoader.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMIntRangeDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMIntVectorProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMLink.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMLiveInsituLinkProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMMapProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMNamedPropertyIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMNumberOfComponentsDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMObject.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMOrderedPropertyIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMOutputPort.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMParaViewPipelineController.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPWriterProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPipelineState.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPluginLoaderProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPluginManager.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPropertyGroup.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPropertyHelper.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPropertyIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMNullProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMPropertyLink.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyDefinitionManager.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyGroupDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyInitializationHelper.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyIterator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyLink.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyListDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyLocator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyManager.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxyProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMProxySelectionModel.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMReaderFactory.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMRemoteObject.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMRemoteObjectUpdateUndoElement.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSILDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSILModel.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSelectionLink.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSelfGeneratingSourceProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMServerStateLocator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSession.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSessionClient.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSessionObject.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSessionProxyManager.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSettings.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSettingsProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMSourceProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMStateLoader.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMStateLocator.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMStateVersionController.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMStringListDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMStringVectorProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMTimeKeeper.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMTimeKeeperProxy.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMTimeStepIndexDomain.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMTrace.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMUncheckedPropertyHelper.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMUndoElement.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMUndoStack.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMUndoStackBuilder.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMVectorProperty.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMWriterFactory.cxx;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\ParaViewCore\ServerManager\Core\vtkSMWriterProxy.cxx'!='' and 'false'=='true' and '' != 'false').
+     1>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveReferences" depends on it):
+     1>Done building target "BeforeResolveReferences" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveReferences" depends on it):
+       Task "AssignProjectConfiguration"
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj" has not been resolved.
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj" has not been resolved.
+       Done executing task "AssignProjectConfiguration".
+     1>Done building target "AssignProjectConfiguration" in project "vtkPVServerManagerCore.vcxproj".
+       Target "AssignProjectConfiguration" skipped. Previously built successfully.
+     1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveProjectReferences" depends on it):
+       Task "ResolveNonMSBuildProjectOutput"
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj" has not been resolved.
+         Resolving project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj".
+         Project reference "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj" has not been resolved.
+       Done executing task "ResolveNonMSBuildProjectOutput".
+     1>Done building target "_SplitProjectReferencesByFileExistence" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "_RemoveNameMetadataFromProjectReferenceItems" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveProjectReferences" depends on it):
+     1>Done building target "_RemoveNameMetadataFromProjectReferenceItems" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveReferences" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' != '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' != '' and ('true' == 'true' or 'true' != 'true') and '14.0' == '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj;C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' != '' and 'true' == 'true' and '' != '').
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ZERO_CHECK.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\protobuf\vtkprotobuf\src\protobuf.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerStream\vtkClientServer.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Core\vtkCommonCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\DataModel\vtkCommonDataModel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\ExecutionModel\vtkCommonExecutionModel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Math\vtkCommonMath.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Misc\vtkCommonMisc.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\System\vtkCommonSystem.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Common\Transforms\vtkCommonTransforms.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Core\vtkFiltersCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Extraction\vtkFiltersExtraction.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\General\vtkFiltersGeneral.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Geometry\vtkFiltersGeometry.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Modeling\vtkFiltersModeling.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Parallel\vtkFiltersParallel.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Filters\Sources\vtkFiltersSources.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Core\vtkIOCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Image\vtkIOImage.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\Legacy\vtkIOLegacy.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\IO\XMLParser\vtkIOXMLParser.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ClientServerCore\Core\vtkPVClientServerCoreCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\Common\vtkPVCommon.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\ServerImplementation\Core\vtkPVServerImplementationCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ParaViewCore\VTKExtensions\Core\vtkPVVTKExtensionsCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\Core\vtkParallelCore.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Parallel\MPI\vtkParallelMPI.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\ThirdParty\jsoncpp\vtkjsoncpp\vtkjsoncpp.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\ThirdParty\pugixml\vtkpugixml.vcxproj' does not exist.
+       Done executing task "Warning".
+       Task "Warning"
+     1>C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\VTK\Utilities\KWSys\vtksys\vtksys.vcxproj' does not exist.
+       Done executing task "Warning".
+     1>Done building target "ResolveProjectReferences" in project "vtkPVServerManagerCore.vcxproj".
+       Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+       Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+     1>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+     1>Done building target "GetFrameworkPaths" in project "vtkPVServerManagerCore.vcxproj".
+       Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+     1>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+     1>Done building target "GetReferenceAssemblyPaths" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "SetBuildDefaultEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Current.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "PrepareForBuild" depends on it):
+       Using "SetEnv" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+       Task "SetEnv"
+         PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries\x86;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\;C:\Users\Lord\AppData\Local\Programs\Python\Python2711\Scripts;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\calibre2\;c:\program files\miktex 2.9\miktex\bin\x64\;c:\program files (x86)\quicktime\qtsystem\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Android;C:\Windows\System32;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\adb;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\gnuplot\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\CMake\bin;C:\Qt\5.8\msvc2015_64\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Lord\scoop\shims;C:\Users\Lord\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Lord\AppData\Local\Programs\Python\Python35\;C:\Program Files\Java\jdk1.8.0_65\bin\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\php;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;C:\Program Files\emacs\bin\;C:\Program Files\Microsoft MPI\Bin\;C:\Users\Lord\AppData\Local\Microsoft\WindowsApps;;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x64;;;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x64
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib\amd64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+       Done executing task "SetEnv".
+     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "vtkPVServerManagerCore.vcxproj".
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+     1>Target "GetResolvedWinMD" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "PrepareForBuild" depends on it):
+     1>Done building target "GetResolvedWinMD" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v110').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v100').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v90').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' != 'v90' and 'v140' != 'v100' and 'v140' != 'v110').
+     1>Done building target "PlatformPrepareForBuild" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "Desktop_PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Platforms\x64\PlatformToolsets\v140\Toolset.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ($(MissingSDKProps) == 'true') was evaluated as ( == 'true').
+     1>Done building target "Desktop_PlatformPrepareForBuild" in project "vtkPVServerManagerCore.vcxproj".
+       Target "GetFrameworkPaths" skipped. Previously built successfully.
+       Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+       Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+     1>Target "SetCABuildNativeEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "PrepareForBuild" depends on it):
+       Initializing task factory "CodeTaskFactory" from assembly "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Build.Tasks.Core.dll".
+       Using "SetEnvironmentVariable" task from the task factory "Code Task Factory".
+       Task "SetEnvironmentVariable"
+       Done executing task "SetEnvironmentVariable".
+     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "vtkPVServerManagerCore.vcxproj".
+     1>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'DynamicLibrary'!='Application' and 'DynamicLibrary'!='DynamicLibrary' and 'DynamicLibrary'!='StaticLibrary').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and 'v140'=='v90').
+       Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Windows Kits\8.1\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+       Task "VCMessage" skipped, due to false condition; ('$(_MBCS_Using)' == 'true' and '$(_MBCS_Installed)' != 'true' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' == 'true' and '' != 'true' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as ('' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+       Task "MakeDir"
+         Creating directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(403,5): error MSB3191: Unable to create directory "C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\". Access to the path 'C:\Users\vr\Desktop\ParaView-v5.3.0-VR\build\bin\Debug\' is denied.
+       Done executing task "MakeDir" -- FAILED.
+     1>Done building target "PrepareForBuild" in project "vtkPVServerManagerCore.vcxproj" -- FAILED.
+     1>Done Building Project "F:\Documents\Universita\Erasmus\Thesis\vrinterface\build\ParaViewCore\ServerManager\Core\vtkPVServerManagerCore.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.03
