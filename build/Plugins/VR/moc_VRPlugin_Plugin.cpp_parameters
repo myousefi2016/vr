@@ -1,4 +1,0 @@
---compiler-flavor=msvc
--o
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/VR/moc_VRPlugin_Plugin.cpp
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/VR/VRPlugin_Plugin.h

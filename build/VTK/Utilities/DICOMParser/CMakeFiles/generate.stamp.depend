@@ -1,7 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Utilities/DICOMParser/CMakeLists.txt
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Utilities/DICOMParser/module.cmake
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/lib/cmake/paraview-5.3/Modules/vtksys.cmake
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkModuleInfo.cmake.in
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/CMake/vtkModuleInfo.cmake.in
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Utilities/DICOMParser/DICOMCMakeConfig.h.in

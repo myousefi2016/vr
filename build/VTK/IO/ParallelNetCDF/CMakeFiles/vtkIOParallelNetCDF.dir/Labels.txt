@@ -1,7 +1,0 @@
-# Target labels
- vtkIOParallelNetCDF
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelNetCDF/vtkPNetCDFPOPReader.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelNetCDF/vtkPNetCDFPOPReader.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/IO/ParallelNetCDF/vtkIOParallelNetCDFModule.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/IO/ParallelNetCDF/CMakeLists.txt

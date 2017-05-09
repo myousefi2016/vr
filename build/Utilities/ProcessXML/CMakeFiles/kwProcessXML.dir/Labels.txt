@@ -1,5 +1,0 @@
-# Target labels
- vtkUtilitiesProcessXML
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Utilities/ProcessXML/ProcessXML.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Utilities/ProcessXML/CMakeLists.txt

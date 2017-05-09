@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/paraview/Configuration">
-    <file alias="ParaViewSources.xml">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Applications\ParaView\ParaViewSources.xml</file>
-    <file alias="ParaViewFilters.xml">C:\Users\vr\Desktop\ParaView-v5.3.0-VR\src\Applications\ParaView\ParaViewFilters.xml</file>
-  </qresource>
-</RCC>
-

@@ -1,9 +1,0 @@
-# Target labels
- vtkPVVTKExtensionsPoints
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedPlaneSource.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedVolumeSource.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedPlaneSource.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/vtkBoundedVolumeSource.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/ParaViewCore/VTKExtensions/Points/vtkPVVTKExtensionsPointsModule.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/ParaViewCore/VTKExtensions/Points/CMakeLists.txt

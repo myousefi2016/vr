@@ -1,7 +1,0 @@
-# Target labels
- vtkexpat
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/expat/vtkexpat/xmlparse.c
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/expat/vtkexpat/xmltok.c
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/expat/vtkexpat/xmlrole.c
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/ThirdParty/expat/vtkexpat/CMakeLists.txt

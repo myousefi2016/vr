@@ -1,8 +1,0 @@
---compiler-flavor=msvc
--I
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/ApplicationComponents/../Components
--I
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/ApplicationComponents/../Core
--o
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Qt/ApplicationComponents/moc_pqStatusBar.cpp
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Qt/ApplicationComponents/pqStatusBar.h

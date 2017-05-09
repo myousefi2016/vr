@@ -1,4 +1,0 @@
---compiler-flavor=msvc
--o
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/SLACTools/moc_SLACTools_Plugin.cpp
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Plugins/SLACTools/SLACTools_Plugin.h

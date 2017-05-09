@@ -1,9 +1,0 @@
-# Target labels
- VTKModular
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkContextViewClientServer.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkContextInteractorStyleClientServer.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/Wrapping/ClientServer/vtkViewsContext2DCSInit.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/Wrapping/ClientServer/CMakeLists.txt
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextView.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Views/Context2D/vtkContextInteractorStyle.h

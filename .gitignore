@@ -6,8 +6,14 @@ build/bin/*
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+build/*
+
 # Logfiles
 *.lastbuildstate
+*/CMakeFiles/*
+*.cxx
+*.cmake
+
 
 # User-specific files
 *.suo

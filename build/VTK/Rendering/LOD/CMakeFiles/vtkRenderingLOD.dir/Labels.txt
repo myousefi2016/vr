@@ -1,9 +1,0 @@
-# Target labels
- vtkRenderingLOD
-# Source files and their labels
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/LOD/vtkLODActor.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/LOD/vtkQuadricLODActor.cxx
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/LOD/vtkLODActor.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/LOD/vtkQuadricLODActor.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/build/VTK/Rendering/LOD/vtkRenderingLODModule.h
-C:/Users/vr/Desktop/ParaView-v5.3.0-VR/src/VTK/Rendering/LOD/CMakeLists.txt
