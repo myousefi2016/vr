@@ -614,7 +614,7 @@ void pqVRDockPanel::updateDebugLabel()
     QString debugString =
       QString("Camera position: %1 %2 %3\n").arg(pos[0]).arg(pos[1]).arg(pos[2]);
     vtkMatrix4x4* mv = this->Internals->Camera->GetModelViewTransformMatrix();
-    debugString += "ModelView Matrix:\n";
+    debugString += "!!ModelView Matrix:\n";
     for (int i = 0; i < 4; ++i)
     {
       double e0 = mv->GetElement(i, 0);
