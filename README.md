@@ -9,27 +9,34 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Install [CMake 3.8](https://cmake.org/download/)
 * Install [MS-MPI v8](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx) (sdk + runtime)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
-* Download [ParaView 5.3.0](http://www.paraview.org/download/)
-* Extract Paraview into the following structure:
-    * Paraview
-        * build (empty)
-        * src (all the content of the zip)
-    * [cpDependencies.bat](https://drive.google.com/open?id=0BzDYQBRp4j3nVHp4M2VQdXhMN2s)
+* Set up SDL2
+	* Download [SDL2 source](https://www.libsdl.org/release/SDL2-2.0.5.zip)
+	* Unzip the source code
+	* Open a Powershell to the unzipped location
+	* `mkdir build`
+	* `cd build`
+	* `cmake ..`
+	* Open Visual Studio **AS ADMINISTRATOR**
+	* Load the solution in `SDL/build/SLD2.sln`
+	* Build the project `INSTALL` (it will install things in `C:/Program Files (x86)/SLD2)
+* Take ParaView from our [repo](https://github.com/vrcranfield/vr)
+	* `git clone https://github.com/vrcranfield/vr`
 
 ### CMake:
 * Set source to Paraview/src/, dest to Paraview/build/
 * Set Generator to VS14 2015 Win64
 * Tick “Advanced” box
 * Run Configure
-    * Change PARAVIEW_QT_VERSION to 5
-    * Check PARAVIEW_USE_MPI
+	* Check `Module_vtkRenderingOpenVR`
+    * Check `PARAVIEW_BUILD_PLUGIN_VRPlugin`
 * Run Configure
-    * Check PARAVIEW_BUILD_PLUGIN_VRPlugin
-    * Change Qt5_DIR to C:/Qt/5.8/msvc2015_64/lib/cmake/Qt5
+	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
 * Run Configure
-    * Change QT_HELP_GENERATOR to C:/Qt/5.8/msvc2015_64/bin/qhelpgenerator.exe
-    * Change QT_XMLPATTERNS_EXECUTABLE to C:/Qt/5.8/msvc2015_64/bin/xmlpatterns.exe
-    * Check PARAVIEW_AUTOLOAD_PLUGIN_VRPlugin
+	* Set `SDL2MAIN_LIBRARY` to `C:/Program Files (x86)/SLD2/lib/SDL2main.lib`
+	* Set `SDL2_LIBRARY_TEMP` to `C:/Program Files (x86)/SLD2/lib/SDL.lib`
+	* Set `SDL2_INCLUDE_DIR` to `C:/Program Files (x86)/SLD2/include`
+* Run Configure
+    * Check `PARAVIEW_AUTOLOAD_PLUGIN_VRPlugin`
 * Run Configure
 * Run Generate
 
