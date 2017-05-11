@@ -18,6 +18,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
     * Check `PARAVIEW_BUILD_PLUGIN_VRPlugin`
 * Run Configure
 	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
+	* Set `OPENVR_HEADERS_ROOT_DIR` to `[Paraview]/src/OpenVR/headers` (replace `[Paraview]` with path to repo)
 * Run Configure
 	* Set `SDL2MAIN_LIBRARY` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
 	* Set `SDL2_INCLUDE_DIR` to `[Paraview]/src/SDL2/include`
