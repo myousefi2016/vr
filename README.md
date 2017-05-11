@@ -31,7 +31,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Run Configure
 	* Set `SDL2MAIN_LIBRARY` to `C:/Program Files (x86)/SLD2/lib/SDL2main.lib`
 	* Set `SDL2_LIBRARY_TEMP` to `C:/Program Files (x86)/SLD2/lib/SDL.lib`
-	* Set `SDL2_INCLUDE_DIR` to `C:/Program Files (x86)/SLD2/include`
+	* Set `SDL2_INCLUDE_DIR` to `C:/Program Files (x86)/SLD2/include/SDL2`
 * Run Configure
     * Check `PARAVIEW_AUTOLOAD_PLUGIN_VRPlugin`
 * Run Configure
