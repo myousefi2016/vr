@@ -4,27 +4,22 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 ## Preparation:
 * Install [Qt 5.8](https://www.qt.io/download-open-source) (both 32 and 64 bit versions)
 * Install [CMake 3.8](https://cmake.org/download/)
-* Install [MS-MPI v8](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx) (sdk + runtime)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
 * Take ParaView from our [repo](https://github.com/vrcranfield/vr)
 	* `git clone https://github.com/vrcranfield/vr`
 
 ## CMake:
 * Set source to `Paraview/src/`, dest to `Paraview/src/build/` (**note that `build` is INSIDE `src`**)
-* Set Generator to VS14 2015 Win64
+* Set Generator to `Visual Studio 14 2015 Win64`
 * Tick “Advanced” box
-* Run Configure
-	* Check `Module_vtkRenderingOpenVR`
-    * Check `PARAVIEW_BUILD_PLUGIN_VRPlugin`
-* Run Configure
+* Run Configure (**TODO** Check if `PARAVIEW_USE_OPENVR` is ON)
 	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
 	* Set `OPENVR_HEADERS_ROOT_DIR` to `[Paraview]/src/OpenVR/headers` (replace `[Paraview]` with path to repo)
+	* Set `OPENVR_LIBRARY_TEMP` to `[Paraview]/src/OpenVR/lib/win64/openvr_api.lib
 * Run Configure
 	* Set `SDL2MAIN_LIBRARY` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
 	* Set `SDL2_INCLUDE_DIR` to `[Paraview]/src/SDL2/include`
-	* Set `SDL2_LIBRARY_TEMP` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
-* Run Configure
-    * Check `PARAVIEW_AUTOLOAD_PLUGIN_VRPlugin`
+	* Set `SDL2_LIBRARY_TEMP` to `[Paraview]/src/SDL2/lib/x64/SDL2.lib`
 * Run Configure
 * Run Generate
 
@@ -45,4 +40,3 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 
 # TODO LIST
 * Fix CMake files so that we don't need `cpDependencies.bat` anymore
-* Fix CMake files so that `Module_vtkRenderingOpenVR` is on by default
