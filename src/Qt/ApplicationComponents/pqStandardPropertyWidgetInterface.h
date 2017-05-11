@@ -65,6 +65,7 @@ public:
   * \li \c double_range : pqDoubleRangeSliderPropertyWidget
   * \li \c image_compressor_config : pqImageCompressorWidget
   * \li \c index_selection : pqIndexSelectionWidget
+  * \li \c input_selector : pqInputSelectorWidget
   * \li \c list : pqListPropertyWidget
   * \li \c texture_selector : pqTextureSelectorPropertyWidget
   * \li \c transfer_function_editor : pqTransferFunctionWidgetPropertyWidget
@@ -73,6 +74,7 @@ public:
   * \li \c proxy_editor: pqProxyEditorPropertyWidget
   * \li \c int_mask: pqIntMaskPropertyWidget
   * \li \c filename_widget: pqFileNamePropertyWidget
+  * \li \c view_resolution: pqViewResolutionPropertyWidget
   */
   virtual pqPropertyWidget* createWidgetForProperty(vtkSMProxy* proxy, vtkSMProperty* property);
 
@@ -115,6 +117,7 @@ public:
   * \li \c InputDataTypeDecorator : pqInputDataTypeDecorator
   * \li \c GenericDecorator: pqGenericPropertyWidgetDecorator
   * \li \c OSPRayHidingDecorator: pqOSPRayHidingDecorator
+  * \li \c OpenVRHidingDecorator: pqOpenVRHidingDecorator
   */
   virtual pqPropertyWidgetDecorator* createWidgetDecorator(
     const QString& type, vtkPVXMLElement* config, pqPropertyWidget* widget);

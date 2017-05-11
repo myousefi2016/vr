@@ -122,7 +122,7 @@ class RasterWrangler(object):
         elif extension == 'jpg' or extension == 'jpeg':
             return vtkJPEGWriter()
         elif extension == 'vti':
-            return vtkXMLImageDataWriter()  # noqa: E731
+            return vtkXMLImageDataWriter()  # noqa: F821
         else:
             raise RuntimeError(
                 "Cannot infer filetype from extension:", extension)
@@ -148,7 +148,7 @@ class RasterWrangler(object):
         elif extension == 'jpg' or extension == 'jpeg':
             return vtkJPEGReader()
         elif extension == 'vti':
-            return vtkXMLImageDataReader()  # noqa: E731
+            return vtkXMLImageDataReader()  # noqa: F821
         else:
             raise RuntimeError(
                 "Cannot infer filetype from extension:", extension)
@@ -346,7 +346,7 @@ class RasterWrangler(object):
         # Adjust the filename, replace .im with .npz
         baseName, ext = os.path.splitext(fname)
         adjustedName = baseName + ".Z"
-        with open(adjustedName, mode='w') as file:
+        with open(adjustedName, mode='wb') as file:
             file.write(zlib.compress(numpy.array(imageslice)))
 
     def assertvalidimage(self, filename):
@@ -371,7 +371,8 @@ class RasterWrangler(object):
             with open(adjustedName, mode='rb') as file:
                 with numpy.load(file) as tz:
                     if not isinstance(tz[tz.files[0]], numpy.ndarray):
-                        raise IOError(adjustedName + " does not load correctly.")
+                        raise IOError(
+                            adjustedName + " does not load correctly.")
             return
 
         if not os.path.isfile(filename):

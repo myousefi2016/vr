@@ -4,6 +4,7 @@ paraview_test_load_data_dirs(""
   "Iron Xdmf"
   amr
   ANALYZE
+  CompositeGlyphTree
   dualSphereAnimation
   ensemble-wavelet
   EnSight
@@ -33,6 +34,8 @@ paraview_test_load_data(""
   can.ex2
   comb.q
   combxyz.bin
+  CompositeGlyphInput.vtp
+  CompositeGlyphTree.vtm
   CubeStringArray.vtk
   cylinder_run1.e
   cylinder_run2.e
@@ -41,8 +44,8 @@ paraview_test_load_data(""
   dualSphereAnimation.clone.pvd
   dualSphereAnimation.pvd
   "iron protein.vtk"
-  LoadStateMultiView.pvsm
   LoadState.pvsm
+  LoadStateDialog.pvsm
   minimal.nii
   MultiBlockWithPieces_0_0.vtp
   MultiBlockWithPieces_1_0.vtp
@@ -127,6 +130,7 @@ SET (TESTS_WITH_INLINE_COMPARES
 
 SET(TESTS_WITH_BASELINES
   ${CMAKE_CURRENT_SOURCE_DIR}/MoleculeScalarBar.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/TestDataGridAxes.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/TestHiddenLineRemoval.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/TestOpacityRendering.xml
 )
@@ -284,11 +288,13 @@ list(APPEND TESTS_WITH_BASELINES
   ${CMAKE_CURRENT_SOURCE_DIR}/FieldDataBlocks.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/Flow.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/Flow2.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/FollowHiddenData.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/ForceTime.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/Fractal2D.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/FunctionalBagPlots.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/Glyph3DRepresentation.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/GlyphUseCellCenters.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/H5PartReader.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/HideAll.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/ImageVolumeRendering.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/InteractiveSelection.xml
@@ -298,6 +304,9 @@ list(APPEND TESTS_WITH_BASELINES
   ${CMAKE_CURRENT_SOURCE_DIR}/LoadPartiallyUpdatedStateFiles.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/LoadSaveStateAnimation.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/LoadState.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/LoadStateChooseDirectory.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/LoadStateChooseFiles.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/LoadStateUseExisting.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/LoadSaveStateVolume.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/MultiBlockAttributes1.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/MultiBlockSingleBlock.xml
@@ -351,10 +360,13 @@ list(APPEND TESTS_WITH_BASELINES
   ${CMAKE_CURRENT_SOURCE_DIR}/SPTimeseries.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SpyPlotHistoryReader.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkBasic.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkConverted.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkHistogram.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkInitial.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkMultiple.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkRemove.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkReaction.xml
+  ${CMAKE_CURRENT_SOURCE_DIR}/SelectionLinkReactionNonConverted.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/SortLineChartData.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/StreamTracerSurface.xml
   ${CMAKE_CURRENT_SOURCE_DIR}/StockColors.xml
@@ -410,6 +422,9 @@ if("${VTK_RENDERING_BACKEND}" STREQUAL "OpenGL2")
 
     # PlotMatrixView is bugging in OpenGL1
     ${CMAKE_CURRENT_SOURCE_DIR}/PlotMatrixViewArraySelection.xml
+
+    # Composite Glyph Trees are only implemented in OpenGL2
+    ${CMAKE_CURRENT_SOURCE_DIR}/CompositeGlyphTree.xml
     )
 endif()
 
@@ -474,12 +489,8 @@ if (PARAVIEW_USE_MPI)
       )
 
   endif()
-  if (PARAVIEW_ENABLE_CGNS)
-    list(APPEND TESTS_WITH_BASELINES
-      ${CMAKE_CURRENT_SOURCE_DIR}/CGNSReader-5blocks_cgns.xml
-    )
-    set(CGNSReader-5blocks_cgns_DISABLE_CRS TRUE)
-  endif()
+  list(APPEND TESTS_WITH_BASELINES
+    ${CMAKE_CURRENT_SOURCE_DIR}/CGNSReader-5blocks_cgns.xml)
 
   # PointInterpolator only works in non-distributed modes.
   set(PointInterpolator_DISABLE_CRS TRUE)
@@ -796,7 +807,7 @@ SET (NiftiReaderWriterPlugin_DISABLE_CS TRUE)
 SET (NiftiReaderWriterPlugin_DISABLE_CRS TRUE)
 
 # Set image threshold overrides for the tests.
-SET(SaveLargeScreenshot_THRESHOLD 10000)
+SET(SaveLargeScreenshot_THRESHOLD 40)
 
 # Make these tests use reverse connection.
 SET (CutMulti_REVERSE_CONNECT TRUE)
@@ -1044,4 +1055,37 @@ if (TARGET paraview)
     --stereo-type=SplitViewportHorizontal
     BASELINE_DIR ${PARAVIEW_TEST_BASELINE_DIR}
     TEST_SCRIPTS ${CMAKE_CURRENT_SOURCE_DIR}/StereoSplitViewportHorizontal.xml)
+endif()
+
+#----------------------------------------------------------------------
+# Tests that produce some output (other than rendered images) from ParaView
+# that should be checked for correctness. These work by executing an XML
+# test in the UI that produces some output, then pvpython runs a Python script
+# that checks the file for correctness. Example use: checking a CSV
+# file for expected content.
+#
+# Tests listed here are required to define the following files:
+# - <test>.xml - XML test script to play in the uI
+# - <test>Verify.py - Python code to verify output saved out in the XML
+#   script
+#----------------------------------------------------------------------
+set(paraview_python_verify_tests
+  ExportSceneSpreadSheetView
+)
+
+if (PARAVIEW_ENABLE_PYTHON)
+  foreach(test_name ${paraview_python_verify_tests})
+    add_test(NAME ${test_name}
+      COMMAND ${CMAKE_COMMAND}
+      -DPARAVIEW_EXECUTABLE:FILEPATH=$<TARGET_FILE:paraview>
+      -DPVPYTHON_EXECUTABLE:FILEPATH=$<TARGET_FILE:pvpython>
+      -DPARAVIEW_TEST_OUTPUT_DIR:PATH=${PARAVIEW_TEST_OUTPUT_DIR}
+      -DTEST_NAME:STRING=${test_name}
+      -DTEST_SCRIPT:FILEPATH=${CMAKE_CURRENT_SOURCE_DIR}/${test_name}.xml
+      -DTEST_DRIVER:FILEPATH=${CMAKE_CURRENT_SOURCE_DIR}/${test_name}Verify.py
+      -DTEMPORARY_DIR:PATH=${PARAVIEW_TEST_OUTPUT_DIR}
+      -P ${CMAKE_CURRENT_SOURCE_DIR}/PythonScriptTestDriver.cmake
+    )
+    set_tests_properties(${python_state_test} PROPERTIES LABELS "PARAVIEW")
+  endforeach()
 endif()

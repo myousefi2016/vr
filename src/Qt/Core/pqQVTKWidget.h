@@ -34,6 +34,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pqCoreModule.h"
 #include "pqQVTKWidgetBase.h"
+#include "vtkEventQtSlotConnect.h"
+#include "vtkNew.h"
 #include "vtkSmartPointer.h"
 #include "vtkWeakPointer.h"
 #include <QPointer>
@@ -91,13 +93,13 @@ protected:
   */
   virtual void resizeEvent(QResizeEvent* event);
 
-  // method called in paintEvent() to render the image cache on to the device.
-  // return false, if cache couldn;t be used for painting. In that case, the
-  // paintEvent() method will continue with the default painting code.
-  virtual bool paintCachedImage();
-
+  /**
+   * skip rendering is not ready for it.
+   */
+  virtual void doDeferredRender();
 private slots:
   void updateSizeProperties();
+  void handleViewSizeForModifiedQt4();
 
 private:
   Q_DISABLE_COPY(pqQVTKWidget)
@@ -105,6 +107,9 @@ private:
   vtkWeakPointer<vtkSMSession> Session;
   QImage MousePointerToDraw;
   QString SizePropertyName;
+
+  vtkNew<vtkEventQtSlotConnect> VTKConnect;
+  bool SkipHandleViewSizeForModifiedQt4;
 };
 
 #endif

@@ -186,25 +186,20 @@ endif()
 #------------------------------------------------------------------------------
 # Define ParaView specific options.
 #------------------------------------------------------------------------------
-set(default_testing ON)
-if (NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.ExternalData/README.rst")
-  # Source tarball without the data, so turn off testing.
-  set(default_testing OFF)
-endif ()
-option(BUILD_TESTING "Build ParaView Testing" ${default_testing})
+option(BUILD_TESTING "Build ParaView Testing" OFF)
 option(BUILD_EXAMPLES "Build ParaView examples" OFF)
 option(BUILD_SHARED_LIBS "Build ParaView using shared libraries" ON)
 option(PARAVIEW_BUILD_QT_GUI "Enable ParaView Qt-based client" ON)
 option(PARAVIEW_USE_VTKM "Build ParaView with VTKm many-core filters" OFF)
-option(PARAVIEW_USE_MPI "Enable MPI support for parallel computing" ON)
+option(PARAVIEW_USE_MPI "Enable MPI support for parallel computing" OFF)
 option(PARAVIEW_USE_OSPRAY "Build ParaView with OSPRay Ray Traced rendering" OFF)
+option(PARAVIEW_USE_OPENVR "Build ParaView with OpenVR rendering" OFF)
+set(VTK_OPENVR_OBJECT_FACTORY OFF
+    CACHE INTERNAL "ParaView requires the OpenVR factory be disabled" FORCE)
 option(PARAVIEW_USE_VISITBRIDGE "Build ParaView with VisIt readers." OFF)
 
 # Xdmf3 is not ON by default since it depends on Boost.
 option(PARAVIEW_ENABLE_XDMF3 "Enable Xdmf3 support (requires Boost)." OFF)
-
-# Enable CGNS support
-option(PARAVIEW_ENABLE_CGNS "Enable the CGNS file reader" OFF)
 
 if (UNIX)
   option(PARAVIEW_ENABLE_FFMPEG "Enable FFMPEG Support." OFF)

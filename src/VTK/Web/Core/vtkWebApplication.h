@@ -26,6 +26,7 @@
 
 #include "vtkObject.h"
 #include "vtkWebCoreModule.h" // needed for exports
+#include <string> // needed for std::string
 
 class vtkObjectIdMap;
 class vtkRenderWindow;
@@ -115,6 +116,14 @@ public:
   const char* GetWebGLBinaryData(vtkRenderWindow *view, const char* id, int partIndex);
 
   vtkObjectIdMap* GetObjectIdMap();
+
+  /**
+   * Return a hexadecimal formatted string of the VTK object's memory address,
+   * useful for uniquely identifying the object when exporting data.
+   *
+   * e.g. 0x8f05a90
+   */
+  static std::string GetObjectId(vtkObject* obj);
 
 protected:
   vtkWebApplication();

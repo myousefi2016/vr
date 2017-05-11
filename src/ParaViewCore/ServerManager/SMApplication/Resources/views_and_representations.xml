@@ -69,6 +69,20 @@
                      repeatable="1">
         <Documentation>Representations in this view.</Documentation>
       </ProxyProperty>
+      <IntVectorProperty command="SetPPI"
+                         default_values="96"
+                         name="PPI"
+                         number_of_elements="1"
+                         panel_visibility="never">
+        <Documentation>Set the screen ppi (pixels per inch). This is used
+                       when mapping font sizes in points to screen pixels.
+        </Documentation>
+        <Hints>
+          <PropertyLink group="settings"
+                        proxy="GeneralSettings"
+                        property="ScreenPixelsPerInch"/>
+        </Hints>
+      </IntVectorProperty>
     </Proxy>
 
     <!-- ================================================================== -->
@@ -2380,7 +2394,7 @@
                          ignore_synchronization="1"
                          name="CameraParallelProjection"
                          number_of_elements="1"
-                         panel_visibility="advanced">
+                         panel_visibility="default">
         <BooleanDomain name="bool" />
         <Documentation>
           Enable/disable parallel projection mode.
@@ -2580,6 +2594,14 @@
           <PropertyWidgetDecorator type="OSPRayHidingDecorator" />
         </Hints>
       </IntVectorProperty>
+      <Property name="Send to OpenVR"
+          command="SendToOpenVR"
+          >
+        <Documentation>Sends the scene to OpenVR virtual reality.</Documentation>
+        <Hints>
+          <PropertyWidgetDecorator type="OpenVRHidingDecorator" />
+        </Hints>
+      </Property>
       <IntVectorProperty
           name="Shadows"
           command="SetShadows"
@@ -3456,6 +3478,14 @@
         Update(). Note that changing this will clean all cache.</Documentation>
         <BooleanDomain name="bool" />
       </IntVectorProperty>
+      <IntVectorProperty command="SetGenerateCellConnectivity"
+                         default_values="0"
+                         name="GenerateCellConnectivity"
+                         number_of_elements="1"
+                         panel_visibility="never">
+        <BooleanDomain name="bool" />
+        <Documentation>Generation of the cell connectivity.</Documentation>
+      </IntVectorProperty>
       <StringVectorProperty command="SetColumnNameToSort"
                             name="ColumnToSort"
                             number_of_elements="1"
@@ -3779,6 +3809,12 @@
             <Property name="GlyphType"
                       panel_visibility="advanced"
                       panel_visibility_default_for_representation="3d glyphs"/>
+            <Property name="UseGlyphTable"
+                      panel_visibility="advanced"/>
+            <Property name="GlyphTableIndexArray"
+                      panel_visibility="advanced"/>
+            <Property name="UseCompositeGlyphTable"
+                      panel_visibility="advanced"/>
             <Hints>
                 <PropertyWidgetDecorator type="GenericDecorator"
                                          mode="visibility"
@@ -3792,6 +3828,18 @@
           <Exception name="Visibility" />
         </ShareProperties>
       </SubProxy>
+      <ProxyProperty name="DataAxesGrid"
+                     command="SetGridAxesRepresentation"
+                     panel_widget="proxy_editor">
+        <ProxyListDomain name="proxy_list">
+          <Proxy group="representations" name="GridAxesRepresentation" />
+        </ProxyListDomain>
+        <Hints>
+          <!-- tell pqProxyEditorPropertyWidget that use the "GridAxesVisibility"
+               property on the GridAxes3DRepr for a checkbox on the UI -->
+          <ProxyEditorPropertyWidget property="GridAxesVisibility" />
+        </Hints>
+      </ProxyProperty>
       <SubProxy>
         <Proxy name="SelectionRepresentation"
                proxygroup="representations"
@@ -3825,6 +3873,7 @@
           </PropertyGroup>
           <Property exposed_name="SelectionCellLabelFormat" name="CellLabelFormat" panel_visibility="never"/>
           <Property exposed_name="SelectionPointLabelVisibility" name="PointLabelVisibility" panel_visibility="never"/>
+          <Property exposed_name="SelectionMaximumNumberOfLabels" name="MaximumNumberOfLabels"/>
           <PropertyGroup label="Point Label Font" panel_visibility="never" panel_widget="FontEditor">
             <Property exposed_name="SelectionPointLabelBold" name="PointLabelBold" function="Bold"/>
             <Property exposed_name="SelectionPointLabelColor" name="PointLabelColor" function="Color"/>
@@ -3921,8 +3970,7 @@
         </ShareProperties>
         <ExposedProperties>
           <PropertyGroup label="Volume Rendering">
-            <Property name="ScalarOpacityFunction"
-                      panel_visibility="never" />
+            <Property name="ScalarOpacityFunction" />
             <Property name="ScalarOpacityUnitDistance"
                       panel_visibility="advanced" />
             <Property name="ExtractedBlockIndex"
@@ -3989,8 +4037,7 @@
         </ShareProperties>
         <ExposedProperties>
           <PropertyGroup label="Volume Rendering">
-            <Property name="ScalarOpacityFunction"
-                      panel_visibility="never" />
+            <Property name="ScalarOpacityFunction" />
             <Property name="ScalarOpacityUnitDistance"
                       panel_visibility="advanced" />
             <Property name="ExtractedBlockIndex"
@@ -4054,8 +4101,7 @@
         </ShareProperties>
         <ExposedProperties>
           <PropertyGroup label="Volume Rendering">
-            <Property name="ScalarOpacityFunction"
-                      panel_visibility="never" />
+            <Property name="ScalarOpacityFunction" />
             <Property name="ScalarOpacityUnitDistance"
                       panel_visibility="advanced" />
             <Property name="ExtractedBlockIndex"
@@ -4124,8 +4170,7 @@
           <PropertyGroup label="Volume Rendering">
             <Property name="ScalarOpacityUnitDistance"
                       panel_visibility="advanced" />
-            <Property name="ScalarOpacityFunction"
-                      panel_visibility="never" />
+            <Property name="ScalarOpacityFunction" />
             <Property name="VolumeRenderingMode"
                       panel_visibility="advanced"
                       panel_visibility_default_for_representation="volume" />
@@ -4451,7 +4496,7 @@
           <Entry text="Smart" value="0" />
           <Entry text="Ray Cast Only" value="2" />
           <Entry text="GPU Based" value="4" />
-          <Entry text="OSPRay Based" value="6" />
+          <Entry text="OSPRay Based" value="5" />
         </EnumerationDomain>
       </IntVectorProperty>
       <DoubleVectorProperty command="SetScalarOpacityUnitDistance"
@@ -4792,6 +4837,7 @@
         <Documentation>Specify the source objects.</Documentation>
         <DataTypeDomain name="input_type">
           <DataType value="vtkPolyData" />
+          <DataType value="vtkDataObjectTree" />
         </DataTypeDomain>
         <ProxyListDomain name="proxy_list">
           <Proxy group="sources" name="ArrowSource" />
@@ -4801,6 +4847,7 @@
           <Proxy group="sources" name="LineSource" />
           <Proxy group="sources" name="SphereSource" />
           <Proxy group="sources" name="GlyphSource2D" />
+          <Proxy group="internal_filters" name="PipelineConnection" />
         </ProxyListDomain>
         <Hints>
           <ProxyPropertyWidget selected_proxy_panel_visibility="advanced" />
@@ -4937,6 +4984,38 @@
         is set and the there is no such name), masking is silently ignored. A
         mask array is a vtkBitArray with only one component.</Documentation>
       </IntVectorProperty>
+      <IntVectorProperty command="SetSourceIndexing"
+                         default_values="0"
+                         name="UseGlyphTable"
+                         number_of_elements="1">
+        <BooleanDomain name="bool" />
+        <Documentation>When true, the glyph data is expected to be a multiblock
+        dataset, where each top-level node contains a separate glyph which may
+        be selected by a point data array on the input dataset.</Documentation>
+      </IntVectorProperty>
+      <StringVectorProperty command="SetSourceIndexArray"
+                            default_values=""
+                            name="GlyphTableIndexArray"
+                            number_of_elements="1">
+        <ArrayListDomain attribute_type="Scalars"
+                         input_domain_name="input_array_point"
+                         name="array_list"
+                         none_string="None">
+          <RequiredProperties>
+            <Property function="Input"
+                      name="Input" />
+          </RequiredProperties>
+        </ArrayListDomain>
+      </StringVectorProperty>
+      <IntVectorProperty command="SetUseSourceTableTree"
+                         default_values="0"
+                         name="UseCompositeGlyphTable"
+                         number_of_elements="1">
+        <BooleanDomain name="bool" />
+        <Documentation>When true, the glyph data is expected to be a multiblock
+        dataset, where each top-level node contains a separate glyph which may
+        be selected by a point data array on the input dataset.</Documentation>
+      </IntVectorProperty>
       <!-- end of Glyph3DRepresentation -->
     </RepresentationProxy>
     <!-- ================================================================== -->
@@ -4986,6 +5065,18 @@
           <Entry text="Times"
                  value="2" />
         </EnumerationDomain>
+      </IntVectorProperty>
+      <IntVectorProperty command="SetMaximumNumberOfLabels"
+                         default_values="100"
+                         name="MaximumNumberOfLabels"
+                         number_of_elements="1">
+        <IntRangeDomain min="1"
+                        name="range" />
+        <Hints>
+          <PropertyLink group="settings"
+                        proxy="GeneralSettings"
+                        property="MaximumNumberOfDataRepresentationLabels"/>
+        </Hints>
       </IntVectorProperty>
       <IntVectorProperty command="SetPointLabelBold"
                          default_values="0"
@@ -5364,6 +5455,7 @@
           <Property name="PointLabelOpacity" />
           <Property name="PointLabelShadow" />
           <Property name="PointLabelVisibility" />
+          <Property name="MaximumNumberOfLabels" />
         </ExposedProperties>
       </SubProxy>
 
@@ -5388,8 +5480,173 @@
         <Property name="PointLabelOpacity" function="Opacity"/>
         <Property name="PointLabelShadow" function="Shadow"/>
       </PropertyGroup>
-
       <!-- End of SelectionRepresentation -->
+    </RepresentationProxy>
+    <!-- ================================================================== -->
+    <RepresentationProxy class="vtkPVGridAxes3DRepresentation"
+                         name="GridAxesRepresentation"
+                         processes="client|renderserver|dataserver"
+                         si_class="vtkSIProxy">
+      <Documentation>Proxy to show a selection as geometry.</Documentation>
+      <InputProperty command="SetInputConnection"
+                     name="Input">
+        <InputArrayDomain name="input_array_any"></InputArrayDomain>
+      </InputProperty>
+      <IntVectorProperty command="SetForceUseCache"
+                         default_values="0"
+                         is_internal="1"
+                         name="ForceUseCache"
+                         number_of_elements="1">
+        <BooleanDomain name="bool" />
+        <Documentation>Typically UseCache and CacheKey are updated by the View
+        and representations cache based on what the view tells it. However in
+        some cases we may want to force a representation to cache irrespective
+        of the view (e.g. comparative views). In which case these ivars can up
+        set. If ForcedCacheKey is true, it overrides UseCache and CacheKey.
+        Instead, ForcedCacheKey is used.</Documentation>
+      </IntVectorProperty>
+      <DoubleVectorProperty command="SetForcedCacheKey"
+                            default_values="none"
+                            is_internal="1"
+                            name="ForcedCacheKey"
+                            number_of_elements="1">
+        <DoubleRangeDomain name="range" />
+        <Documentation>Typically UseCache and CacheKey are updated by the View
+        and representations cache based on what the view tells it. However in
+        some cases we may want to force a representation to cache irrespective
+        of the view (e.g. comparative views). In which case these ivars can up
+        set. If ForcedCacheKey is true, it overrides UseCache and CacheKey.
+        Instead, ForcedCacheKey is used.</Documentation>
+      </DoubleVectorProperty>
+      <IntVectorProperty command="SetGridAxesVisibility"
+                         name="GridAxesVisibility"
+                         default_values="0"
+                         panel_visibility="never"
+                         number_of_elements="1">
+        <BooleanDomain name="bool" />
+        <Documentation>Used for the checkbox in the UI.</Documentation>
+      </IntVectorProperty>
+      <DoubleVectorProperty command="SetPosition"
+                            default_values="0 0 0"
+                            name="Position"
+                            panel_visibility="never"
+                            number_of_elements="3">
+        <DoubleRangeDomain name="range" />
+        <Documentation>Keeps axes synced with actor transforms.</Documentation>
+      </DoubleVectorProperty>
+      <DoubleVectorProperty command="SetScale"
+                            default_values="1 1 1"
+                            name="Scale"
+                            panel_visibility="never"
+                            number_of_elements="3">
+        <DoubleRangeDomain name="range" />
+        <Documentation>Keeps axes synced with actor transforms.</Documentation>
+      </DoubleVectorProperty>
+      <Hints>
+        <ProxyList>
+          <Link name="Scale" with_property="Scale" />
+          <Link name="Position" with_property="Position" />
+        </ProxyList>
+      </Hints>
+
+      <SubProxy command="SetGridAxes">
+        <Proxy name="GridAxes"
+               proxygroup="annotations"
+               proxyname="GridAxes3DActor" />
+        <ExposedProperties>
+          <PropertyGroup label="Title Texts">
+            <Property name="XTitle"/>
+            <Property name="YTitle"/>
+            <Property name="ZTitle"/>
+          </PropertyGroup>
+          <PropertyGroup label="X Title Font Properties" panel_widget="FontEditor">
+            <Property name="XTitleColor" function="Color"/>
+            <Property name="XTitleFontFamily" function="Family"/>
+            <Property name="XTitleBold" function="Bold" />
+            <Property name="XTitleItalic" function="Italics"/>
+            <Property name="XTitleFontSize" function="Size" />
+            <Property name="XTitleShadow" function="Shadow" />
+            <Property name="XTitleOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="Y Title Font Properties" panel_widget="FontEditor">
+            <Property name="YTitleColor" function="Color"/>
+            <Property name="YTitleFontFamily" function="Family"/>
+            <Property name="YTitleBold" function="Bold" />
+            <Property name="YTitleItalic" function="Italics"/>
+            <Property name="YTitleFontSize" function="Size" />
+            <Property name="YTitleShadow" function="Shadow" />
+            <Property name="YTitleOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="Z Title Font Properties" panel_widget="FontEditor">
+            <Property name="ZTitleColor" function="Color"/>
+            <Property name="ZTitleFontFamily" function="Family"/>
+            <Property name="ZTitleBold" function="Bold" />
+            <Property name="ZTitleItalic" function="Italics"/>
+            <Property name="ZTitleFontSize" function="Size" />
+            <Property name="ZTitleShadow" function="Shadow" />
+            <Property name="ZTitleOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="Face Properties">
+            <Property name="FacesToRender" />
+            <Property name="CullBackface" />
+            <Property name="CullFrontface" />
+            <Property name="GridColor"/>
+          </PropertyGroup>
+          <Property name="ShowGrid"/>
+          <Property name="ShowEdges"/>
+          <Property name="ShowTicks"/>
+          <PropertyGroup label="Label Properties">
+            <Property name="LabelUniqueEdgesOnly" />
+            <Property name="AxesToLabel" />
+          </PropertyGroup>
+          <PropertyGroup label="X Axis Label Font Properties" panel_widget="FontEditor">
+            <Property name="XLabelColor" function="Color"/>
+            <Property name="XLabelFontFamily" function="Family"/>
+            <Property name="XLabelBold" function="Bold" />
+            <Property name="XLabelItalic" function="Italics"/>
+            <Property name="XLabelFontSize" function="Size" />
+            <Property name="XLabelShadow" function="Shadow" />
+            <Property name="XLabelOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="Y Axis Label Font Properties" panel_widget="FontEditor">
+            <Property name="YLabelColor" function="Color"/>
+            <Property name="YLabelFontFamily" function="Family"/>
+            <Property name="YLabelBold" function="Bold" />
+            <Property name="YLabelItalic" function="Italics"/>
+            <Property name="YLabelFontSize" function="Size" />
+            <Property name="YLabelShadow" function="Shadow" />
+            <Property name="YLabelOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="Z Axis Label Font Properties" panel_widget="FontEditor">
+            <Property name="ZLabelColor" function="Color"/>
+            <Property name="ZLabelFontFamily" function="Family"/>
+            <Property name="ZLabelBold" function="Bold" />
+            <Property name="ZLabelItalic" function="Italics"/>
+            <Property name="ZLabelFontSize" function="Size" />
+            <Property name="ZLabelShadow" function="Shadow" />
+            <Property name="ZLabelOpacity" function="Opacity" />
+          </PropertyGroup>
+          <PropertyGroup label="X Axis Label Properties">
+            <Property name="XAxisNotation" />
+            <Property name="XAxisPrecision" />
+            <Property name="XAxisUseCustomLabels" />
+            <Property name="XAxisLabels" />
+          </PropertyGroup>
+          <PropertyGroup label="Y Axis Label Properties">
+            <Property name="YAxisNotation" />
+            <Property name="YAxisPrecision" />
+            <Property name="YAxisUseCustomLabels" />
+            <Property name="YAxisLabels" />
+          </PropertyGroup>
+          <PropertyGroup label="Z Axis Label Properties">
+            <Property name="ZAxisNotation" />
+            <Property name="ZAxisPrecision" />
+            <Property name="ZAxisUseCustomLabels" />
+            <Property name="ZAxisLabels" />
+          </PropertyGroup>
+        </ExposedProperties>
+      </SubProxy>
+      <!-- End of GridAxesRepresentation -->
     </RepresentationProxy>
     <!-- ================================================================== -->
     <RepresentationProxy class="vtkMoleculeRepresentation"
@@ -6672,7 +6929,7 @@
       <IntVectorProperty name="ShowMedian"
                          command="SetMedianVisibility"
                          number_of_elements="1"
-                         default_values="1">
+                         default_values="0">
         <BooleanDomain name="bool" />
         <Documentation>
           Set whether to render the line for the median value, if available.
@@ -7307,9 +7564,11 @@
                          command="AddCompositeDataSetIndex"
                          name="CompositeDataSetIndex"
                          number_of_elements_per_command="1"
+                         number_of_elements="1"
+                         default_values="0"
                          panel_visibility="default"
                          repeat_command="1">
-        <CompositeTreeDomain mode="all" name="tree" default_mode="nonempty-leaf">
+        <CompositeTreeDomain mode="all" name="tree">
           <RequiredProperties>
             <Property function="Input" name="Input" />
           </RequiredProperties>
@@ -8837,6 +9096,7 @@
           <Property name="HiddenProps" />
           <Property name="LODThreshold" />
           <Property name="LODResolution" />
+          <Property name="AxesGrid" />
 
           <Property name="CenterAxesVisibility" />
           <PropertyGroup label="Orientation Axes">

@@ -704,7 +704,7 @@ public:
                                         arrayId,arrayName,
                                         this->LoadedCellFlag);
 
-        // DONT USE GetScalarType() or GetNumberOfScalarComponents() on
+        // DON'T USE GetScalarType() or GetNumberOfScalarComponents() on
         // ImageData as it deals only with point data...
 
         int scalarType=scalars->GetDataType();
@@ -770,10 +770,12 @@ public:
               scale=VTK_INT_MAX/(tableRange[1]-tableRange[0]);
               break;
             case VTK_DOUBLE:
+#if !defined(VTK_LEGACY_REMOVE)
             case VTK___INT64:
+            case VTK_UNSIGNED___INT64:
+#endif
             case VTK_LONG:
             case VTK_LONG_LONG:
-            case VTK_UNSIGNED___INT64:
             case VTK_UNSIGNED_LONG:
             case VTK_UNSIGNED_LONG_LONG:
               needTypeConversion=1; // to float
@@ -1251,7 +1253,7 @@ public:
                                         arrayId,arrayName,
                                         this->LoadedCellFlag);
 
-        // DONT USE GetScalarType() or GetNumberOfScalarComponents() on
+        // DON'T USE GetScalarType() or GetNumberOfScalarComponents() on
         // ImageData as it deals only with point data...
 
         int scalarType=scalars->GetDataType();
@@ -2192,27 +2194,6 @@ void vtkOpenGLGPUVolumeRayCastMapper::LoadExtensions(
   }
   vtkOpenGLExtensionManager *extensions = context->GetExtensionManager();
 
-  // It does not work on Mac OS X 10.6 (Snow Leopard) with nVidia.
-  // There is a bug in that OpenGL driver with an error in the
-  // Cg compiler about an infinite loop.
-  // However it works with Mac OS X 10.7 (Lion) with nVidia.
-#if defined(__APPLE__) && (MAC_OS_X_VERSION_MIN_REQUIRED < 1070)
-  // Gestalt() is deprecated, but all this code will go away when 10.7 is VTK's minimum.
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-  SInt32 major, minor;
-  Gestalt (gestaltSystemVersionMajor, &major);
-  Gestalt (gestaltSystemVersionMinor, &minor);
-  #pragma clang diagnostic pop
-  if (extensions->DriverIsNvidia() && (major == 10) && (minor == 6))
-  {
-    this->UnsupportedRequiredExtensions->Stream <<
-      " Disabled on unsupported Apple OS X driver.";
-    this->LoadExtensionsSucceeded=0;
-    return;
-  }
-#endif
-
   // mesa notes:
   // 8.0.0 -- missing some required extensions
   // 8.0.5 -- tests pass but there are invalid enum opengl errors reported (mesa bug)
@@ -3009,10 +2990,12 @@ void vtkOpenGLGPUVolumeRayCastMapper::GetTextureFormat(
         *type=GL_INT;
         break;
       case VTK_DOUBLE:
-      case VTK___INT64:
       case VTK_LONG:
       case VTK_LONG_LONG:
+#if !defined(VTK_LEGACY_REMOVE)
+      case VTK___INT64:
       case VTK_UNSIGNED___INT64:
+#endif
       case VTK_UNSIGNED_LONG:
       case VTK_UNSIGNED_LONG_LONG:
         if(this->Supports_GL_ARB_texture_float)

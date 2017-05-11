@@ -101,6 +101,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pqTraceReaction.h"
 #endif
 
+#include <QApplication>
 #include <QDockWidget>
 #include <QFileInfo>
 #include <QKeySequence>
@@ -118,7 +119,7 @@ void pqParaViewMenuBuilders::buildFileMenu(QMenu& menu)
   menu.setObjectName(objectName);
 
   QObject::connect(
-    ui.actionFileExit, SIGNAL(triggered()), pqApplicationCore::instance(), SLOT(quit()));
+    ui.actionFileExit, SIGNAL(triggered()), QApplication::instance(), SLOT(closeAllWindows()));
 
   // now setup reactions.
   new pqLoadDataReaction(ui.actionFileOpen);
@@ -238,10 +239,6 @@ void pqParaViewMenuBuilders::buildToolsMenu(QMenu& menu)
     pqTestingReaction::LOCK_VIEW_SIZE_CUSTOM);
   menu.addSeparator();
   new pqTimerLogReaction(menu.addAction("Timer Log") << pqSetName("actionToolsTimerLog"));
-  QAction* action = menu.addAction("&Output Window") << pqSetName("actionToolsOutputWindow");
-  QObject::connect(
-    action, SIGNAL(triggered()), pqApplicationCore::instance(), SLOT(showOutputWindow()));
-
   menu.addSeparator(); // --------------------------------------------------
 
   new pqPythonShellReaction(menu.addAction("Python Shell") << pqSetName("actionToolsPythonShell"));

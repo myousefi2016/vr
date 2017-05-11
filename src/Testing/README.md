@@ -39,7 +39,10 @@ for that one machine.
 Alternate baseline to generating dashboard configuration map
 ------------------------------------------------------------
 
-LoadStateMultiView_1.png - bigmac-osx-shared-debug+clang+gui+opengl2+python
-LoadStateMultiView_2.png - nemesis-windows-shared-release+gui+mpi+opengl2
 AxesGridTestLines_1.png  - amber8-linux-static-release+mpi+offscreen+osmesa+python
+ColorOpacityTableEditing_1.png - bigmac-osx-shared-debug+clang+gui+python+qt4]
+LoadStateMultiView_1.png - ista-osx-shared-release+gui+kits+python
+SaveColorMap_1.png - tylo-windows-shared-release+gui+python+python3+tbb]
+SaveLargeScreenshot_1.png - nemesis-windows-shared-release+gui+kits+mpi+python
+ScalarOpacityFunctionPythonState_1.png - tylo-windows-shared-release+gui+python+python3+tbb
 TestSubhaloFinder_1.png  - vall-linux-shared-debug+doc+extdeps+gui+mpi+python+python3

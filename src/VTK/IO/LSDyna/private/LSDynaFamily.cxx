@@ -102,7 +102,7 @@ vtkLSDynaFile_t VTK_LSDYNA_OPENFILE(const char* fname)
     if ( number > 0 )
     {
       char n[4];
-      sprintf(n, "%02d", number);
+      snprintf(n, sizeof(n), "%02d", number);
       blorb += n;
     }
 
@@ -185,7 +185,7 @@ LSDynaFamily::~LSDynaFamily()
 }
 
 //-----------------------------------------------------------------------------
-void LSDynaFamily::SetDatabaseDirectory( std::string dd )
+void LSDynaFamily::SetDatabaseDirectory( const std::string& dd )
 {
   this->DatabaseDirectory = dd;
 }
@@ -195,7 +195,7 @@ std::string LSDynaFamily::GetDatabaseDirectory()
 }
 
 //-----------------------------------------------------------------------------
-void LSDynaFamily::SetDatabaseBaseName( std::string bn )
+void LSDynaFamily::SetDatabaseBaseName( const std::string& bn )
 {
   this->DatabaseBaseName = bn;
 }

@@ -18,8 +18,7 @@ PURPOSE.  See the above copyright notice for more information.
  *
  *
  * vtkCocoaRenderWindow is a concrete implementation of the abstract
- * class vtkOpenGLRenderWindow. It is only available on Mac OS X 10.6
- * and later.
+ * class vtkOpenGLRenderWindow. It is only available on Mac OS X.
  * To use this class, build VTK with VTK_USE_COCOA turned ON (this is
  * the default).
  * This class can be used by 32 and 64 bit processes, and either in
@@ -341,6 +340,19 @@ public:
   virtual void *GetParentId();
   void *GetGenericParentId() VTK_OVERRIDE { return this->GetParentId(); }
 
+  /**
+   * Set to true if you want to force NSViews created by this object to
+   * have their wantsBestResolutionOpenGLSurface property set to YES.
+   * Otherwise, the bundle's Info.plist will be checked for the
+   * "NSHighResolutionCapable" key, if it is present and YES,
+   * wantsBestResolutionOpenGLSurface will be set to YES. In all other cases,
+   * setWantsBestResolutionOpenGLSurface: is not invoked at all. Notably,
+   * setWantsBestResolutionOpenGLSurface: is never invoked on NSViews not created
+   * by VTK itself.
+   */
+  void SetWantsBestResolution(bool wantsBest);
+  bool GetWantsBestResolution();
+
   //@{
   /**
    * Accessors for the pixel format object (Really an NSOpenGLPixelFormat*).
@@ -406,6 +418,8 @@ private:
   int      CursorHidden;
 
   int      ForceMakeCurrent;
+
+  bool     WantsBestResolution;
 };
 
 #endif

@@ -67,11 +67,15 @@
 #define VTK_LONG_LONG          16
 #define VTK_UNSIGNED_LONG_LONG 17
 
+#if !defined(VTK_LEGACY_REMOVE)
+
 /* Legacy.  This type is never enabled.  */
 #define VTK___INT64            18
 
 /* Legacy.  This type is never enabled.  */
 #define VTK_UNSIGNED___INT64   19
+
+#endif
 
 /* These types are required by vtkVariant and vtkVariantArray */
 #define VTK_VARIANT 20
@@ -326,12 +330,14 @@ typedef long long vtkIdType;
 #  define VTK_SIZEOF_ID_TYPE VTK_SIZEOF_LONG_LONG
 #  define VTK_ID_MIN VTK_LONG_LONG_MIN
 #  define VTK_ID_MAX VTK_LONG_LONG_MAX
+#  define VTK_ID_TYPE_PRId "lld"
 # elif VTK_SIZEOF_LONG == 8
 typedef long vtkIdType;
 #  define VTK_ID_TYPE_IMPL VTK_LONG
 #  define VTK_SIZEOF_ID_TYPE VTK_SIZEOF_LONG
 #  define VTK_ID_MIN VTK_LONG_MIN
 #  define VTK_ID_MAX VTK_LONG_MAX
+#  define VTK_ID_TYPE_PRId "ld"
 # else
 #  error "VTK_USE_64BIT_IDS is ON but no 64-bit integer type is available."
 # endif
@@ -341,6 +347,14 @@ typedef int vtkIdType;
 # define VTK_SIZEOF_ID_TYPE VTK_SIZEOF_INT
 # define VTK_ID_MIN VTK_INT_MIN
 # define VTK_ID_MAX VTK_INT_MAX
+# define VTK_ID_TYPE_PRId "d"
+#endif
+
+#ifndef __cplusplus
+  // Make sure that when VTK headers are used by the C compiler we make
+  // sure to define the bool type. This is possible when using IO features
+  // like vtkXMLWriterC.h
+  #include "stdbool.h"
 #endif
 
 /*--------------------------------------------------------------------------*/

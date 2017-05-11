@@ -188,7 +188,7 @@ public:
     this->Group = in.Group;
     this->GroupId = in.GroupId;
   }
-  void operator=(const vtkOpenVROverlaySpot&);  // Not implemented.
+  vtkOpenVROverlaySpot& operator=(const vtkOpenVROverlaySpot&) VTK_DELETE_FUNCTION;
 };
 
 //****************************************************************************

@@ -410,8 +410,10 @@ bool vtkXdmf3DataSet::VTKToXdmfArray(
     case VTK_OPAQUE:
     case VTK_LONG_LONG:
     case VTK_UNSIGNED_LONG_LONG:
+#if !defined(VTK_LEGACY_REMOVE)
     case VTK___INT64:
     case VTK_UNSIGNED___INT64:
+#endif
     case VTK_VARIANT:
     case VTK_OBJECT:
     case VTK_UNICODE_STRING:
@@ -1486,7 +1488,7 @@ void vtkXdmf3DataSet::CopyShape(
         if (unknownCell)
         {
           // encountered an unknown cell.
-          cerr << "Unkown cell type." << endl;
+          cerr << "Unknown cell type." << endl;
           vCells->Delete();
           delete [] cell_types;
           vtkXdmf3DataSet_ReleaseIfNeeded(xTopology.get(), freeMe);
@@ -1947,7 +1949,7 @@ void vtkXdmf3DataSet::VTKToXdmf(
 
 //==========================================================================
 //TODO: meld this with Grid XdmfToVTKAttributes
-//TODO: enable set atribute selections
+//TODO: enable set attribute selections
 void vtkXdmf3DataSet::XdmfToVTKAttributes(
 /*
   vtkXdmf3ArraySelection *fselection,

@@ -25,6 +25,9 @@ except ImportError:
 from paraview import calculator
 from vtk import vtkDataObject
 from vtk.numpy_interface import dataset_adapter as dsa
+import sys # also for sys.stderr
+if sys.version_info >= (3,):
+    xrange = range
 
 def _get_ns(self, do, association):
     if association == vtkDataObject.FIELD:
@@ -55,7 +58,7 @@ def _get_ns(self, do, association):
         ns["t_value"] = ns["time_value"]
 
     if self.GetNumberOfTimeSteps() > 0:
-        ns["time_steps"] = [self.GetTimeStep(x) for x in xrange(self.GetNumberOfTimeSteps())]
+        ns["time_steps"] = [self.GetTimeStep(x) for x in range(self.GetNumberOfTimeSteps())]
         ns["t_steps"] = ns["time_steps"]
 
     if self.GetTimeRangeValid():
@@ -85,12 +88,11 @@ def execute(self):
     try:
         result = calculator.compute(inputs, expression, ns=ns)
     except:
-        from sys import stderr
         print("Failed to evaluate expression '%s'. "\
             "The following exception stack should provide additional "\
             "developer specific information. This typically implies a malformed "\
             "expression. Verify that the expression is valid.\n\n" \
-            "Variables in current scope are %s \n" % (expression, ns.keys()), file=sys.stderr)
+            "Variables in current scope are %s \n" % (expression, list(ns)), file=sys.stderr)
         raise
     self.SetComputedAnnotationValue("%s" % result)
     return True
@@ -137,7 +139,13 @@ def execute_on_global_data(self):
             chosen_element = chosen_element.GetValue(0)
     except: pass
     expression = self.GetPrefix() if self.GetPrefix() else ""
-    expression += str(chosen_element)
+    try:
+        import vtk
+        if type(chosen_element) is not vtk.numpy_interface.dataset_adapter.VTKNoneArray:
+            expression += self.GetFormat() % (chosen_element,)
+    except TypeError:
+        expression += chosen_element
+        print("Warning: invalid format for Annotate Global Data")
     expression += self.GetPostfix() if self.GetPostfix() else ""
     self.SetComputedAnnotationValue(expression)
     return True

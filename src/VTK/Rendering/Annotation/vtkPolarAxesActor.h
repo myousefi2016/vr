@@ -780,7 +780,7 @@ protected:
   std::string FindExponentAndAdjustValues(std::list<double>& valuesList);
 
   /**
-   * Yield a string array whith the float part of each values. 0.01e-2 -> 0.0001
+   * Yield a string array with the float part of each values. 0.01e-2 -> 0.0001
    */
   void GetSignificantPartFromValues(vtkStringArray* valuesStr, std::list<double>& valuesList);
 
@@ -978,7 +978,7 @@ protected:
   int EnableViewAngleLOD;
 
   /**
-   * This determines at what view angle to geometry will make the geometry not visibile.
+   * This determines at what view angle to geometry will make the geometry not visible.
    * Default is 0.3.
    */
   double ViewAngleLODThreshold;
@@ -1082,12 +1082,12 @@ protected:
   int PolarArcsVisibility;
 
   /**
-   * Visibility of the inner axes (overriden to 0 if RadialAxesVisibility is set to 0)
+   * Visibility of the inner axes (overridden to 0 if RadialAxesVisibility is set to 0)
    */
   int DrawRadialGridlines;
 
   /**
-   * Visibility of the inner arcs (overriden to 0 if PolarArcsVisibility is set to 0)
+   * Visibility of the inner arcs (overridden to 0 if PolarArcsVisibility is set to 0)
    */
   int DrawPolarArcsGridlines;
 

@@ -306,6 +306,7 @@
         { "class": "vtkMergeCells" },
         { "class": "vtkMultiBlockDataGroupFilter" },
         { "class": "vtkPassArrays" },
+        { "class": "vtkPassThrough" },
         { "class": "vtkSplitColumnComponents" },
         { "class": "vtkTransformPolyDataFilter" }
       ],
@@ -552,12 +553,13 @@
         { "class": "vtkPVCacheKeeperPipeline" },
         { "class": "vtkPVClientServerSynchronizedRenderers" },
         { "class": "vtkPVCompositeRepresentation" },
-        { "class": "vtkPVContextView" },
         { "class": "vtkPVContextInteractorStyle" },
+        { "class": "vtkPVContextView" },
         { "class": "vtkPVDataDeliveryManager" },
         { "class": "vtkPVDataRepresentation" },
         { "class": "vtkPVDataRepresentationPipeline" },
         { "class": "vtkPVDisplayInformation" },
+        { "class": "vtkPVGridAxes3DRepresentation" },
         { "class": "vtkPVHardwareSelector" },
         { "class": "vtkPVImplicitPlaneRepresentation" },
         { "class": "vtkPVLastSelectionInformation" },
@@ -948,6 +950,7 @@
         "DataSetSurfaceFilter",
         "ExtractHistogram",
         "IntegrateAttributes",
+        "PipelineConnection",
         "WarpScalar",
         "WarpVector"
       ]
@@ -970,6 +973,7 @@
         "DataLabelRepresentation",
         "GeometryRepresentation",
         "Glyph3DRepresentation",
+        "GridAxesRepresentation",
         "ImageSliceRepresentation",
         "MoleculeRepresentation",
         "OutlineRepresentation",

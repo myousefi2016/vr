@@ -126,7 +126,6 @@ myMainWindow::myMainWindow()
   // only the components we want
   pqParaViewBehaviors::setEnableStandardPropertyWidgets(false);
   pqParaViewBehaviors::setEnableStandardRecentlyUsedResourceLoader(false);
-  pqParaViewBehaviors::setEnableQtMessageHandlerBehavior(false);
   pqParaViewBehaviors::setEnableDataTimeStepBehavior(false);
   pqParaViewBehaviors::setEnableSpreadSheetVisibilityBehavior(false);
   pqParaViewBehaviors::setEnablePipelineContextMenuBehavior(false);
@@ -136,7 +135,6 @@ myMainWindow::myMainWindow()
   pqParaViewBehaviors::setEnablePluginDockWidgetsBehavior(false);
   pqParaViewBehaviors::setEnableVerifyRequiredPluginBehavior(false);
   pqParaViewBehaviors::setEnablePluginActionGroupBehavior(false);
-  pqParaViewBehaviors::setEnableFixPathsInStateFilesBehavior(false);
   pqParaViewBehaviors::setEnableCommandLineOptionsBehavior(false);
   pqParaViewBehaviors::setEnablePersistentMainWindowStateBehavior(false);
   pqParaViewBehaviors::setEnableCollaborationBehavior(false);

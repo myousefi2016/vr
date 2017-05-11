@@ -48,10 +48,12 @@ protected:
   void dragEnterEvent(QDragEnterEvent* evt);
   void dropEvent(QDropEvent* evt);
   void showEvent(QShowEvent* evt);
+  void closeEvent(QCloseEvent* evt);
 
 protected slots:
   void showHelpForProxy(const QString& groupname, const QString& proxyname);
   void showWelcomeDialog();
+  void handleMessage(const QString&, int);
 
 private:
   Q_DISABLE_COPY(ParaViewMainWindow)

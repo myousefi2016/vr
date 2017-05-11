@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define pqApplicationCore_h
 
 #include "pqCoreModule.h"
+#include "vtkSetGet.h" // for VTK_LEGACY
 #include <QObject>
 #include <QPointer>
 
@@ -41,8 +42,6 @@ class pqInterfaceTracker;
 class pqLinksModel;
 class pqObjectBuilder;
 class pqOptions;
-class pqOutputWindow;
-class pqOutputWindowAdapter;
 class pqPipelineSource;
 class pqPluginManager;
 class pqProgressManager;
@@ -63,6 +62,11 @@ class QStringList;
 class vtkPVXMLElement;
 class vtkSMProxyLocator;
 class vtkSMStateLoader;
+
+#if !defined(VTK_LEGACY_REMOVE)
+class pqOutputWindow;
+class pqOutputWindowAdapter;
+#endif
 
 /**
 * This class is the crux of the ParaView application. It creates
@@ -200,10 +204,10 @@ public:
 
   /**
   * Returns the output window.
+  * @deprecated as of ParaView 5.4. See `pqOutputWidget`.
   */
-  pqOutputWindowAdapter* outputWindowAdapter() { return this->OutputWindowAdapter; }
-
-  pqOutputWindow* outputWindow() { return this->OutputWindow; }
+  VTK_LEGACY(inline pqOutputWindowAdapter* outputWindowAdapter());
+  VTK_LEGACY(inline pqOutputWindow* outputWindow());
 
   /**
   * It is possible to change the display policy used by
@@ -259,6 +263,8 @@ public:
   void loadStateFromString(
     const char* xmlcontents, pqServer* server, vtkSMStateLoader* loader = NULL);
 
+  void clearViewsForLoadingState(pqServer* server);
+
   /**
   * Same as loadState() except that it doesn't clear the current visualization
   * state.
@@ -269,9 +275,14 @@ public:
     const QString& filename, pqServer* server, vtkSMStateLoader* loader = NULL);
 
   /**
+  * Set the loading state flag
+  */
+  void setLoadingState(bool value) { this->LoadingState = value; };
+
+  /**
   * Check to see if its in the process of loading a state
   * Reliance on this flag is chimerical since we cannot set this ivar when
-  * state file is  being loaded from python shell.
+  * state file is being loaded from python shell.
   */
   bool isLoadingState() { return this->LoadingState; };
 
@@ -306,6 +317,7 @@ public slots:
 
   /**
   * Causes the output window to be shown.
+  * @deprecated as of ParaView 5.4. See `pqOutputWidget`.
   */
   void showOutputWindow();
 
@@ -369,14 +381,15 @@ signals:
 protected slots:
   void onStateLoaded(vtkPVXMLElement* root, vtkSMProxyLocator* locator);
   void onStateSaved(vtkPVXMLElement* root);
+  void onHelpEngineWarning(const QString&);
 
 protected:
-  void clearViewsForLoadingState(pqServer* server);
-
   bool LoadingState;
 
+#if !defined(VTK_LEGACY_REMOVE)
   pqOutputWindow* OutputWindow;
   pqOutputWindowAdapter* OutputWindowAdapter;
+#endif
   pqOptions* Options;
 
   pqDisplayPolicy* DisplayPolicy;
@@ -403,7 +416,22 @@ private:
   pqInternals* Internal;
   static pqApplicationCore* Instance;
   void constructor();
+
+#if !defined(VTK_LEGACY_REMOVE)
   void createOutputWindow();
+#endif
 };
+
+#if !defined(VTK_LEGACY_REMOVE)
+pqOutputWindowAdapter* pqApplicationCore::outputWindowAdapter()
+{
+  return this->OutputWindowAdapter;
+}
+
+pqOutputWindow* pqApplicationCore::outputWindow()
+{
+  return this->OutputWindow;
+}
+#endif
 
 #endif

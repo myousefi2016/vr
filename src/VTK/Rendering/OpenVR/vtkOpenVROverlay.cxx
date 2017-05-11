@@ -39,8 +39,8 @@ vtkStandardNewMacro(vtkOpenVROverlay);
 
 vtkOpenVROverlay::vtkOpenVROverlay()
 {
-  this->OverlayHandle = NULL;
-  this->OverlayThumbnailHandle = NULL;
+  this->OverlayHandle = 0;
+  this->OverlayThumbnailHandle = 0;
   this->OriginalTextureData = NULL;
   this->CurrentTextureData = NULL;
   this->LastSpot = NULL;
@@ -69,7 +69,7 @@ vtkOpenVROverlay::~vtkOpenVROverlay()
 
 vtkOpenVRCameraPose *vtkOpenVROverlay::GetSavedCameraPose(size_t i)
 {
-  if (i >= 0 && i < this->SavedCameraPoses.size())
+  if (i < this->SavedCameraPoses.size())
   {
     return &(this->SavedCameraPoses[i]);
   }

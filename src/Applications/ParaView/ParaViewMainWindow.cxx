@@ -49,6 +49,7 @@ void vtkPVInitializePythonModules();
 #include "pqOptions.h"
 #include "pqParaViewBehaviors.h"
 #include "pqParaViewMenuBuilders.h"
+#include "pqSaveStateReaction.h"
 #include "pqSettings.h"
 #include "pqTimer.h"
 #include "pqWelcomeDialog.h"
@@ -63,6 +64,7 @@ void vtkPVInitializePythonModules();
 
 #include <QDragEnterEvent>
 #include <QDropEvent>
+#include <QMessageBox>
 #include <QMimeData>
 #include <QTextCodec>
 #include <QUrl>
@@ -118,6 +120,11 @@ ParaViewMainWindow::ParaViewMainWindow()
 
   this->Internals = new pqInternals();
   this->Internals->setupUi(this);
+  this->Internals->outputWidgetDock->hide();
+
+  // show output widget if we received an error message.
+  this->connect(this->Internals->outputWidget, SIGNAL(messageDisplayed(const QString&, int)),
+    SLOT(handleMessage(const QString&, int)));
 
   // Setup default GUI layout.
   this->setTabPosition(Qt::LeftDockWidgetArea, QTabWidget::North);
@@ -144,6 +151,7 @@ ParaViewMainWindow::ParaViewMainWindow()
   this->Internals->timeInspectorDock->hide();
 
   this->tabifyDockWidget(this->Internals->animationViewDock, this->Internals->statisticsDock);
+  this->tabifyDockWidget(this->Internals->animationViewDock, this->Internals->outputWidgetDock);
 
   // setup properties dock
   this->tabifyDockWidget(this->Internals->propertiesDock, this->Internals->viewPropertiesDock);
@@ -315,8 +323,48 @@ void ParaViewMainWindow::showEvent(QShowEvent* evt)
 }
 
 //-----------------------------------------------------------------------------
+void ParaViewMainWindow::closeEvent(QCloseEvent* evt)
+{
+  pqApplicationCore* core = pqApplicationCore::instance();
+  if (core->settings()->value("GeneralSettings.ShowSaveStateOnExit", false).toBool())
+  {
+    if (QMessageBox::question(this, "Exit ParaView?",
+          "Do you want to save the state before exiting ParaView?",
+          QMessageBox::Save | QMessageBox::Discard) == QMessageBox::Save)
+    {
+      pqSaveStateReaction::saveState();
+    }
+  }
+  evt->accept();
+}
+
+//-----------------------------------------------------------------------------
 void ParaViewMainWindow::showWelcomeDialog()
 {
   pqWelcomeDialog dialog(this);
   dialog.exec();
+}
+
+//-----------------------------------------------------------------------------
+void ParaViewMainWindow::handleMessage(const QString&, int type)
+{
+  QDockWidget* dock = this->Internals->outputWidgetDock;
+  if (!dock->isVisible() && (type == pqOutputWidget::ERROR || type == pqOutputWidget::WARNING))
+  {
+    // if dock is not visible, we always pop it up as a floating dialog. This
+    // avoids causing re-renders which may cause more errors and more confusion.
+    QRect rectApp = this->geometry();
+
+    QRect rectDock(
+      QPoint(0, 0), QSize(static_cast<int>(rectApp.width() * 0.4), dock->sizeHint().height()));
+    rectDock.moveCenter(
+      QPoint(rectApp.center().x(), rectApp.bottom() - dock->sizeHint().height() / 2));
+    dock->setFloating(true);
+    dock->setGeometry(rectDock);
+    dock->show();
+  }
+  if (dock->isVisible())
+  {
+    dock->raise();
+  }
 }

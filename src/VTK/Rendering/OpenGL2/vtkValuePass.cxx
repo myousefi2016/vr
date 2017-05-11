@@ -17,7 +17,6 @@
 #include "vtkCompositeDataSet.h"
 #include "vtkCompositePolyDataMapper2.h"
 #include "vtkDataSet.h"
-#include "vtkDataObjectTreeIterator.h"
 #include "vtkExecutive.h"
 #include "vtkFloatArray.h"
 #include "vtkLookupTable.h"
@@ -153,7 +152,7 @@ public:
   vtkTextureObject* CellFloatTexture;
   vtkOpenGLBufferObject* CellFloatBuffer;
   vtkFloatArray* OutputFloatArray;
-  std::vector<unsigned int> CellCellMap;
+  std::vector<vtkIdType> CellCellMap;
   vtkMTimeType CCMapTime;
 private:
   vtkInternalsFloat(const vtkInternalsFloat&) VTK_DELETE_FUNCTION;
@@ -419,22 +418,22 @@ void vtkValuePass::PopulateCellCellMap(const vtkRenderState *s)
 
     vtkMTimeType maptime = pdm->GetInputDataObject(0,0)->GetMTime();
     if (this->ImplFloat->CCMapTime >= maptime)
-      {
+    {
       //reuse
       return;
-      }
+    }
     this->ImplFloat->CellCellMap.clear();
     this->ImplFloat->CCMapTime = maptime;
 
     vtkCompositePolyDataMapper2 *cpdm =
       vtkCompositePolyDataMapper2::SafeDownCast(mapper);
     if (cpdm)
-      {
-      unsigned int offset = 0;
+    {
+      vtkIdType offset = 0;
       std::vector<vtkPolyData *> pdl = cpdm->GetRenderedList();
       std::vector<vtkPolyData *>::iterator it;
       for (it=pdl.begin(); it!=pdl.end(); ++it)
-        {
+      {
         vtkPolyData *poly = *it;
         vtkCellArray *prims[4];
         prims[0] = poly->GetVerts();
@@ -443,20 +442,20 @@ void vtkValuePass::PopulateCellCellMap(const vtkRenderState *s)
         prims[3] = poly->GetStrips();
         int representation = property->GetRepresentation();
         vtkPoints *points = poly->GetPoints();
-        std::vector<unsigned int> aCellCellMap;
+        std::vector<vtkIdType> aCellCellMap;
         vtkOpenGLPolyDataMapper::MakeCellCellMap
           (aCellCellMap,
            cpdm->GetHaveAppleBug(),
            poly, prims, representation, points);
-        for (unsigned int c = 0; c < aCellCellMap.size(); ++c)
-          {
+        for (size_t c = 0; c < aCellCellMap.size(); ++c)
+        {
           this->ImplFloat->CellCellMap.push_back(aCellCellMap[c]+offset);
-          }
-        offset += poly->GetNumberOfCells();
         }
+        offset += poly->GetNumberOfCells();
       }
+    }
     else if (pdm)
-      {
+    {
       vtkPolyData *poly = pdm->CurrentInput;
       vtkCellArray *prims[4];
       prims[0] = poly->GetVerts();
@@ -469,7 +468,7 @@ void vtkValuePass::PopulateCellCellMap(const vtkRenderState *s)
           (this->ImplFloat->CellCellMap,
            pdm->GetHaveAppleBug(),
            poly, prims, representation, points);
-      }
+    }
 
     break; //only ever draw one actor at a time in value mode so OK
   }
@@ -557,8 +556,10 @@ void vtkValuePass::BeginPass(vtkRenderer* ren)
 
     if (this->InitializeFBO(ren))
     {
-      this->ImplFloat->ValueFBO->SaveCurrentBindings();
+      this->ImplFloat->ValueFBO->SaveCurrentBindingsAndBuffers(
+        GL_DRAW_FRAMEBUFFER);
       this->ImplFloat->ValueFBO->Bind(GL_DRAW_FRAMEBUFFER);
+      this->ImplFloat->ValueFBO->ActivateDrawBuffer(0);
     }
 
     this->InitializeBuffers(ren);
@@ -596,7 +597,8 @@ void vtkValuePass::EndPass()
   {
   case vtkValuePass::FLOATING_POINT:
     // Unbind the float FBO and glReadPixels to host side.
-    this->ImplFloat->ValueFBO->UnBind(GL_DRAW_FRAMEBUFFER);
+    this->ImplFloat->ValueFBO->RestorePreviousBindingsAndBuffers(
+      GL_DRAW_FRAMEBUFFER);
     break;
 
   case vtkValuePass::INVERTIBLE_LUT:
@@ -652,12 +654,14 @@ bool vtkValuePass::InitializeFBO(vtkRenderer* ren)
   // Initialize the FBO into which the float value pass is rendered.
   this->ImplFloat->ValueFBO = vtkOpenGLFramebufferObject::New();
   this->ImplFloat->ValueFBO->SetContext(renWin);
-  this->ImplFloat->ValueFBO->SaveCurrentBindings();
+  this->ImplFloat->ValueFBO->SaveCurrentBindingsAndBuffers(GL_FRAMEBUFFER);
   this->ImplFloat->ValueFBO->Bind(GL_FRAMEBUFFER);
   this->ImplFloat->ValueFBO->InitializeViewport(size[0], size[1]);
   /* GL_COLOR_ATTACHMENT0 */
-  this->ImplFloat->ValueFBO->AddColorAttachment(GL_FRAMEBUFFER, 0, this->ImplFloat->ValueRBO);
-  this->ImplFloat->ValueFBO->AddDepthAttachment(GL_FRAMEBUFFER, this->ImplFloat->DepthRBO);
+  this->ImplFloat->ValueFBO->AddColorAttachment(GL_FRAMEBUFFER,
+    0, this->ImplFloat->ValueRBO);
+  this->ImplFloat->ValueFBO->AddDepthAttachment(GL_FRAMEBUFFER,
+    this->ImplFloat->DepthRBO);
 
   // Verify FBO
   if(!this->ImplFloat->ValueFBO->CheckFrameBufferStatus(GL_FRAMEBUFFER))
@@ -667,7 +671,8 @@ bool vtkValuePass::InitializeFBO(vtkRenderer* ren)
     return false;
   }
 
-  this->ImplFloat->ValueFBO->UnBind(GL_FRAMEBUFFER);
+  this->ImplFloat->ValueFBO->RestorePreviousBindingsAndBuffers(
+    GL_FRAMEBUFFER);
   this->ImplFloat->FBOAllocated = true;
 
   return true;
@@ -753,12 +758,10 @@ void vtkValuePass::GetFloatImageData(int const format, int const width,
   int const height, void* data)
 {
   // Prepare and bind value texture and FBO.
-  this->ImplFloat->ValueFBO->SaveCurrentBindings();
+  this->ImplFloat->ValueFBO->SaveCurrentBindingsAndBuffers(
+    GL_READ_FRAMEBUFFER);
   this->ImplFloat->ValueFBO->Bind(GL_READ_FRAMEBUFFER);
-
-  GLint originalReadBuff;
-  glGetIntegerv(GL_READ_BUFFER, &originalReadBuff);
-  glReadBuffer(GL_COLOR_ATTACHMENT0);
+  this->ImplFloat->ValueFBO->ActivateReadBuffer(0);
 
   // Calling pack alignment ensures any window size can be grabbed.
   glPixelStorei(GL_PACK_ALIGNMENT, 1);
@@ -769,8 +772,8 @@ void vtkValuePass::GetFloatImageData(int const format, int const width,
   glReadPixels(0, 0, width, height, format, GL_FLOAT,
     data);
 
-  glReadBuffer(originalReadBuff);
-  this->ImplFloat->ValueFBO->UnBind(GL_READ_FRAMEBUFFER);
+  this->ImplFloat->ValueFBO->RestorePreviousBindingsAndBuffers(
+    GL_READ_FRAMEBUFFER);
 
   vtkOpenGLCheckErrorMacro("Failed to read pixels from OpenGL buffer!");
 }
@@ -899,8 +902,8 @@ void vtkValuePass::RenderPieceStart(vtkDataArray* dataArr, vtkMapper *mapper)
       //gets a copy of the value from its parent cell
       //todo: cache and reuse if are stuck with uploading always
       size_t len = this->ImplFloat->CellCellMap.size();
-      float *unrolled_data = new float[this->ImplFloat->CellCellMap.size()];
-      for (unsigned int i = 0; i < len; ++i)
+      float *unrolled_data = new float[len];
+      for (size_t i = 0; i < len; ++i)
       {
         unrolled_data[i] = data[this->ImplFloat->CellCellMap[i]];
       }

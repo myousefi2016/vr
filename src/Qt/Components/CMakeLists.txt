@@ -29,7 +29,7 @@
 #
 #==========================================================================
 set (Module_SRCS
-  
+
   pqAboutDialog.cxx
   pqAboutDialog.h
   pqActionGroupInterface.cxx
@@ -62,8 +62,8 @@ set (Module_SRCS
   pqColorChooserButtonWithPalettes.h
   pqComboBoxDomain.cxx
   pqComboBoxDomain.h
-  pqCommandPropertyWidget.h
   pqCommandPropertyWidget.cxx
+  pqCommandPropertyWidget.h
   pqComparativeCueWidget.cxx
   pqComparativeCueWidget.h
   pqComparativeVisPanel.cxx
@@ -72,6 +72,10 @@ set (Module_SRCS
   pqComponentsInit.h
   pqComponentsTestUtility.cxx
   pqComponentsTestUtility.h
+  pqCompositeDataInformationTreeModel.cxx
+  pqCompositeDataInformationTreeModel.h
+  pqCompositeTreePropertyWidget.cxx
+  pqCompositeTreePropertyWidget.h
   pqCustomFilterDefinitionModel.cxx
   pqCustomFilterDefinitionModel.h
   pqCustomFilterDefinitionWizard.cxx
@@ -116,14 +120,14 @@ set (Module_SRCS
   pqFindDataSelectionDisplayFrame.h
   pqFindDataDialog.cxx
   pqFindDataDialog.h
-  pqFixStateFilenamesDialog.cxx
-  pqFixStateFilenamesDialog.h
   pqHighlightItemDelegate.cxx
   pqHighlightItemDelegate.h
   pqImageTip.cxx
   pqImageTip.h
   pqIndexSelectionWidget.cxx
   pqIndexSelectionWidget.h
+  pqInputSelectorWidget.cxx
+  pqInputSelectorWidget.h
   pqIntMaskPropertyWidget.cxx
   pqIntMaskPropertyWidget.h
   pqIntRangeWidget.cxx
@@ -166,6 +170,8 @@ set (Module_SRCS
   pqPipelineAnnotationFilterModel.h
   pqPipelineBrowserWidget.cxx
   pqPipelineBrowserWidget.h
+  pqPipelineInputComboBox.cxx
+  pqPipelineInputComboBox.h
   pqPipelineModel.cxx
   pqPipelineModel.h
   pqPipelineModelSelectionAdaptor.cxx
@@ -225,8 +231,6 @@ set (Module_SRCS
   pqSampleScalarAddRangeDialog.h
   pqSampleScalarWidget.cxx
   pqSampleScalarWidget.h
-  pqSaveSnapshotDialog.cxx
-  pqSaveSnapshotDialog.h
   pqScalarSetModel.cxx
   pqScalarSetModel.h
   pqScalarValueListPropertyWidget.cxx
@@ -237,6 +241,8 @@ set (Module_SRCS
   pqSelectionAdaptor.h
   pqSelectionInputWidget.cxx
   pqSelectionInputWidget.h
+  pqSelectionLinkDialog.cxx
+  pqSelectionLinkDialog.h
   pqSelectionManager.cxx
   pqSelectionManager.h
   pqSelectReaderDialog.cxx
@@ -251,8 +257,6 @@ set (Module_SRCS
   pqSetBreakpointDialog.h
   pqSettingsDialog.cxx
   pqSettingsDialog.h
-  pqSignalAdaptorCompositeTreeWidget.cxx
-  pqSignalAdaptorCompositeTreeWidget.h
   pqSignalAdaptorKeyFrameType.cxx
   pqSignalAdaptorKeyFrameType.h
   pqSignalAdaptorSelectionTreeWidget.cxx
@@ -321,6 +325,8 @@ set (Module_MOC_HDRS
   pqComparativeCueWidget.h
   pqComparativeVisPanel.h
   pqComponentsTestUtility.h
+  pqCompositeDataInformationTreeModel.h
+  pqCompositeTreePropertyWidget.h
   pqCustomFilterDefinitionWizard.h
   pqCustomFilterManager.h
   pqCustomFilterManagerModel.h
@@ -340,10 +346,10 @@ set (Module_MOC_HDRS
   pqFindDataCurrentSelectionFrame.h
   pqFindDataDialog.h
   pqFindDataSelectionDisplayFrame.h
-  pqFixStateFilenamesDialog.h
   pqHighlightItemDelegate.h
   pqImageTip.h
   pqIndexSelectionWidget.h
+  pqInputSelectorWidget.h
   pqIntMaskPropertyWidget.h
   pqIntRangeWidget.h
   pqIntVectorPropertyWidget.h
@@ -365,6 +371,7 @@ set (Module_MOC_HDRS
   pqOutputPortComboBox.h
   pqPipelineAnnotationFilterModel.h
   pqPipelineBrowserWidget.h
+  pqPipelineInputComboBox.h
   pqPipelineModel.h
   pqPipelineModelSelectionAdaptor.h
   pqPipelineTimeKeyFrameEditor.h
@@ -394,12 +401,12 @@ set (Module_MOC_HDRS
   pqRescaleRange.h
   pqSampleScalarAddRangeDialog.h
   pqSampleScalarWidget.h
-  pqSaveSnapshotDialog.h
   pqScalarSetModel.h
   pqScalarValueListPropertyWidget.h
   pqSearchBox.h
   pqSelectionAdaptor.h
   pqSelectionInputWidget.h
+  pqSelectionLinkDialog.h
   pqSelectionManager.h
   pqSelectReaderDialog.h
   pqServerConfigurationImporter.h
@@ -407,7 +414,6 @@ set (Module_MOC_HDRS
   pqServerLauncher.h
   pqSetBreakpointDialog.h
   pqSettingsDialog.h
-  pqSignalAdaptorCompositeTreeWidget.h
   pqSignalAdaptorKeyFrameType.h
   pqSignalAdaptorSelectionTreeWidget.h
   pqSignalAdaptorTreeWidget.h
@@ -434,7 +440,6 @@ set (Module_MOC_HDRS
 set (Module_UI_FILES
   Resources/UI/pqAbortAnimation.ui
   Resources/UI/pqAboutDialog.ui
-  Resources/UI/pqAnimationSettings.ui
   Resources/UI/pqCalculatorWidget.ui
   Resources/UI/pqCameraDialog.ui
   Resources/UI/pqCameraKeyFrameWidget.ui
@@ -452,7 +457,6 @@ set (Module_UI_FILES
   Resources/UI/pqFindDataCurrentSelectionFrame.ui
   Resources/UI/pqFindDataDialog.ui
   Resources/UI/pqFindDataSelectionDisplayFrame.ui
-  Resources/UI/pqFixStateFilenamesDialog.ui
   Resources/UI/pqItemViewSearchWidget.ui
   Resources/UI/pqKeyFrameEditor.ui
   Resources/UI/pqKeyFrameTypeWidget.ui
@@ -476,10 +480,10 @@ set (Module_UI_FILES
   Resources/UI/pqRescaleRangeDialog.ui
   Resources/UI/pqSampleScalarAddRangeDialog.ui
   Resources/UI/pqSampleScalarWidget.ui
-  Resources/UI/pqSaveSnapshotDialog.ui
   Resources/UI/pqScalarValueListPropertyWidget.ui
   Resources/UI/pqSearchBox.ui
   Resources/UI/pqSelectionInputWidget.ui
+  Resources/UI/pqSelectionLinkDialog.ui
   Resources/UI/pqSelectReaderDialog.ui
   Resources/UI/pqServerConnectDialog.ui
   Resources/UI/pqServerLauncherDialog.ui

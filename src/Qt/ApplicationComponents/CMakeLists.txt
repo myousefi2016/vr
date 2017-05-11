@@ -146,8 +146,6 @@ set (Module_SRCS
   pqFileNamePropertyWidget.h
   pqFiltersMenuReaction.cxx
   pqFiltersMenuReaction.h
-  pqFixPathsInStateFilesBehavior.cxx
-  pqFixPathsInStateFilesBehavior.h
   pqFontPropertyWidget.cxx
   pqFontPropertyWidget.h
   pqGenericPropertyWidgetDecorator.cxx
@@ -206,6 +204,8 @@ set (Module_SRCS
   pqObjectPickingBehavior.h
   pqOpacityTableModel.cxx
   pqOpacityTableModel.h
+  pqOpenVRHidingDecorator.cxx
+  pqOpenVRHidingDecorator.h
   pqOSPRayHidingDecorator.cxx
   pqOSPRayHidingDecorator.h
   pqPVAnimationWidget.cxx
@@ -312,6 +312,8 @@ set (Module_SRCS
   pqVerifyRequiredPluginBehavior.h
   pqViewMenuManager.cxx
   pqViewMenuManager.h
+  pqViewResolutionPropertyWidget.cxx
+  pqViewResolutionPropertyWidget.h
   pqViewStreamingBehavior.cxx
   pqViewStreamingBehavior.h
   pqViewTypePropertyWidget.cxx
@@ -381,7 +383,6 @@ set (Module_MOC_HDRS
   pqExportReaction.h
   pqFileNamePropertyWidget.h
   pqFiltersMenuReaction.h
-  pqFixPathsInStateFilesBehavior.h
   pqFontPropertyWidget.h
   pqGenericPropertyWidgetDecorator.h
   pqGlyphScaleFactorPropertyWidget.h
@@ -411,6 +412,7 @@ set (Module_MOC_HDRS
   pqModelTransformSupportBehavior.h
   pqObjectPickingBehavior.h
   pqOpacityTableModel.h
+  pqOpenVRHidingDecorator.h
   pqOSPRayHidingDecorator.h
   pqPVAnimationWidget.h
   pqPVApplicationCore.h
@@ -463,6 +465,7 @@ set (Module_MOC_HDRS
   pqVCRToolbar.h
   pqVerifyRequiredPluginBehavior.h
   pqViewMenuManager.h
+  pqViewResolutionPropertyWidget.h
   pqViewStreamingBehavior.h
   pqViewTypePropertyWidget.h
   pqWelcomeDialog.h
@@ -518,6 +521,7 @@ set (Module_UI_FILES
   Resources/UI/pqTextLocationWidget.ui
   Resources/UI/pqTimeInspectorWidget.ui
   Resources/UI/pqTransferFunctionWidgetPropertyWidgetDialog.ui
+  Resources/UI/pqViewResolutionPropertyWidget.ui
   Resources/UI/pqVCRToolbar.ui
   Resources/UI/pqWelcomeDialog.ui
   Resources/UI/pqYoungsMaterialPropertyWidget.ui

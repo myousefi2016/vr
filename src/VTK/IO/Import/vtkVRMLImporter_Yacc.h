@@ -390,11 +390,12 @@ VrmlNodeType::addField(const char *nodeName, int type)
 void
 VrmlNodeType::addExposedField(const char *nodeName, int type)
 {
-  std::vector<char> tmp(20 + strlen(nodeName));
+  size_t length = 20 + strlen(nodeName);
+  std::vector<char> tmp(length);
   add(fields, nodeName, type);
-  sprintf(&tmp[0], "set_%s", nodeName);
+  snprintf(&tmp[0], length, "set_%s", nodeName);
   add(eventIns, &tmp[0], type);
-  sprintf(&tmp[0], "%s_changed", nodeName);
+  snprintf(&tmp[0], length, "%s_changed", nodeName);
   add(eventOuts, &tmp[0], type);
 };
 
@@ -987,7 +988,7 @@ int vtkVRMLYaccData::yyparse(vtkVRMLImporter* self)
   short yyssa[YYINITDEPTH];     /*  the state stack                     */
   YYSTYPE yyvsa[YYINITDEPTH];   /*  the semantic value stack            */
 
-  short *yyss = yyssa;          /*  refer to the stacks thru separate pointers */
+  short *yyss = yyssa;          /*  refer to the stacks through separate pointers */
   YYSTYPE *yyvs = yyvsa;        /*  to allow yyoverflow to reallocate them elsewhere */
 
 #ifdef YYLSP_NEEDED

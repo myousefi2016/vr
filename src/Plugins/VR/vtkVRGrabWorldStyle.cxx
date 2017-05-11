@@ -56,7 +56,7 @@ vtkStandardNewMacro(vtkVRGrabWorldStyle)
   vtkVRGrabWorldStyle::vtkVRGrabWorldStyle()
   : Superclass()
 {
-  this->AddButtonRole("Rotate worlds");
+  this->AddButtonRole("Rotate world");
   this->AddButtonRole("Translate world");
   this->AddButtonRole("Reset world");
   this->EnableTranslate = false;

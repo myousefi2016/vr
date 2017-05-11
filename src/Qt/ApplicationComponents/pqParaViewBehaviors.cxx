@@ -41,7 +41,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pqCrashRecoveryBehavior.h"
 #include "pqDataTimeStepBehavior.h"
 #include "pqDefaultViewBehavior.h"
-#include "pqFixPathsInStateFilesBehavior.h"
 #include "pqInterfaceTracker.h"
 #include "pqLockPanelsBehavior.h"
 #include "pqObjectPickingBehavior.h"
@@ -61,6 +60,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pqUndoStack.h"
 #include "pqVerifyRequiredPluginBehavior.h"
 #include "pqViewStreamingBehavior.h"
+#include "vtkSetGet.h" // for VTK_LEGACY_REMOVE
 
 #include <QMainWindow>
 #include <QShortcut>
@@ -69,7 +69,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 PQ_BEHAVIOR_DEFINE_FLAG(StandardPropertyWidgets, true);
 PQ_BEHAVIOR_DEFINE_FLAG(StandardViewFrameActions, true);
 PQ_BEHAVIOR_DEFINE_FLAG(StandardRecentlyUsedResourceLoader, true);
-PQ_BEHAVIOR_DEFINE_FLAG(QtMessageHandlerBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(DataTimeStepBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(SpreadSheetVisibilityBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(PipelineContextMenuBehavior, true);
@@ -82,7 +81,6 @@ PQ_BEHAVIOR_DEFINE_FLAG(AutoLoadPluginXMLBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(PluginDockWidgetsBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(VerifyRequiredPluginBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(PluginActionGroupBehavior, true);
-PQ_BEHAVIOR_DEFINE_FLAG(FixPathsInStateFilesBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(CommandLineOptionsBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(PersistentMainWindowStateBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(CollaborationBehavior, true);
@@ -91,6 +89,11 @@ PQ_BEHAVIOR_DEFINE_FLAG(PluginSettingsBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(ApplyBehavior, true);
 PQ_BEHAVIOR_DEFINE_FLAG(QuickLaunchShortcuts, true);
 PQ_BEHAVIOR_DEFINE_FLAG(LockPanelsBehavior, true);
+
+#if !defined(VTK_LEGACY_REMOVE)
+PQ_BEHAVIOR_DEFINE_FLAG(QtMessageHandlerBehavior, true);
+#endif
+
 #undef PQ_BEHAVIOR_DEFINE_FLAG
 
 #define PQ_IS_BEHAVIOR_ENABLED(_name) enable##_name()
@@ -123,11 +126,14 @@ pqParaViewBehaviors::pqParaViewBehaviors(QMainWindow* mainWindow, QObject* paren
   // Load plugins distributed with application.
   pqApplicationCore::instance()->loadDistributedPlugins();
 
-  // Define application behaviors.
-  if (PQ_IS_BEHAVIOR_ENABLED(QtMessageHandlerBehavior))
+// Define application behaviors.
+#if !defined(VTK_LEGACY_REMOVE)
+  // we directly access ivar to avoid deprecation warnings.
+  if (pqParaViewBehaviors::QtMessageHandlerBehavior)
   {
     new pqQtMessageHandlerBehavior(this);
   }
+#endif
   if (PQ_IS_BEHAVIOR_ENABLED(DataTimeStepBehavior))
   {
     new pqDataTimeStepBehavior(this);
@@ -175,10 +181,6 @@ pqParaViewBehaviors::pqParaViewBehaviors(QMainWindow* mainWindow, QObject* paren
   if (PQ_IS_BEHAVIOR_ENABLED(PluginActionGroupBehavior))
   {
     new pqPluginActionGroupBehavior(mainWindow);
-  }
-  if (PQ_IS_BEHAVIOR_ENABLED(FixPathsInStateFilesBehavior))
-  {
-    new pqFixPathsInStateFilesBehavior(this);
   }
   if (PQ_IS_BEHAVIOR_ENABLED(CommandLineOptionsBehavior))
   {

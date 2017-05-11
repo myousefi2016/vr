@@ -32,21 +32,27 @@ set(lib_srcs
 
 #needed to properly setup language wrappers
 set(headers
+  vtkmAverageToPoints.h
+  vtkmCleanGrid.h
   vtkmClip.h
   vtkmContour.h
+  vtkmExternalFaces.h
   vtkmThreshold.h
   vtkmLevelOfDetail.h
-  vtkmCellAverage.h
+  vtkmAverageToCells.h
   vtkmGradient.h
   )
 
 #implementation of the algorithms for cpu accelerators
 set(cpu_accelerator_srcs
+  vtkmAverageToPoints.cxx
+  vtkmCleanGrid.cxx
   vtkmClip.cxx
   vtkmContour.cxx
+  vtkmExternalFaces.cxx
   vtkmThreshold.cxx
   vtkmLevelOfDetail.cxx
-  vtkmCellAverage.cxx
+  vtkmAverageToCells.cxx
   vtkmCellSetExplicit.cxx
   vtkmCellSetSingleType.cxx
   vtkmConnectivityExec.cxx
@@ -56,11 +62,14 @@ set(cpu_accelerator_srcs
 
 #implementation of the algorithms for gpu accelerators
 set(cuda_accelerator_srcs
+  vtkmAverageToPoints.cu
+  vtkmCleanGrid.cu
   vtkmClip.cu
   vtkmContour.cu
+  vtkmExternalFaces.cu
   vtkmThreshold.cu
   vtkmLevelOfDetail.cu
-  vtkmCellAverage.cu
+  vtkmAverageToCells.cu
   vtkmCellSetExplicit.cu
   vtkmCellSetSingleType.cu
   vtkmConnectivityExec.cu

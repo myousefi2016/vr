@@ -145,8 +145,8 @@ public:
     TextureRenderMode=3,
 #endif // !VTK_LEGACY_REMOVE
     GPURenderMode=4,
-    UndefinedRenderMode=5,
-    OSPRayRenderMode=6,
+    OSPRayRenderMode=5,
+    UndefinedRenderMode=6,
     InvalidRenderMode=7
   };
 
@@ -334,7 +334,7 @@ public:
     COMPONENT = 1,
   };
 
-  vtkSetClampMacro(VectorMode, int, -1, 1);
+  void SetVectorMode(int mode);
   vtkGetMacro(VectorMode, int);
 
   vtkSetClampMacro(VectorComponent, int, 0, 3);
@@ -495,6 +495,7 @@ protected:
    */
   int VectorMode;
   int VectorComponent;
+  vtkTimeStamp MagnitudeUploadTime;
   //@}
 
 private:

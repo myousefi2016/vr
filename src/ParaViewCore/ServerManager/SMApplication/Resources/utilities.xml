@@ -898,7 +898,7 @@
     </TransferFunctionProxy>
   </ProxyGroup>
   <ProxyGroup name="annotations">
-    <Proxy class="vtkPVScalarBarActor"
+    <Proxy class="vtkContext2DScalarBarActor"
            name="ScalarBarActor" >
       <ProxyProperty command="SetLookupTable"
                      name="LookupTable"
@@ -914,25 +914,20 @@
                          number_of_elements="1">
         <BooleanDomain name="bool" />
       </IntVectorProperty>
-      <DoubleVectorProperty command="SetAspectRatio"
-                            default_values="20"
-                            name="AspectRatio"
-                            number_of_elements="1">
-        <DoubleRangeDomain min="0.001"
-                           name="range" />
-      </DoubleVectorProperty>
       <StringVectorProperty animateable="0"
                             command="SetTitle"
                             default_values="Name"
                             no_custom_default="1"
                             name="Title"
-                            number_of_elements="1"></StringVectorProperty>
+                            number_of_elements="1">
+      </StringVectorProperty>
       <StringVectorProperty animateable="0"
                             command="SetComponentTitle"
                             default_values="Component"
                             no_custom_default="1"
                             name="ComponentTitle"
-                            number_of_elements="1"></StringVectorProperty>
+                            number_of_elements="1">
+      </StringVectorProperty>
       <IntVectorProperty animateable="0"
                          command="SetTitleJustification"
                          default_values="1"
@@ -948,6 +943,16 @@
         </EnumerationDomain>
         <Documentation>Sets the justification of the title text with respect to the scalar color bar.</Documentation>
       </IntVectorProperty>
+      <IntVectorProperty command="SetScalarBarThickness"
+                         default_values="10"
+                         name="ScalarBarThickness"
+                         label="Color Bar Thickness"
+                         number_of_elements="1">
+        <Documentation>
+          Sets the width of the scalar bar when vertically oriented
+          and the height when horizontally oriented.
+        </Documentation>
+      </IntVectorProperty>
       <IntVectorProperty command="SetAutomaticLabelFormat"
                          default_values="1"
                          name="AutomaticLabelFormat"
@@ -962,33 +967,6 @@
         <Hints>
           <PropertyWidgetDecorator type="EnableWidgetDecorator">
             <Property name="AutomaticLabelFormat" function="boolean_invert" index="0" />
-          </PropertyWidgetDecorator>
-        </Hints>
-      </StringVectorProperty>
-      <IntVectorProperty command="SetNumberOfLabels"
-                         default_values="5"
-                         name="NumberOfLabels"
-                         label="Maximum Number of Labels"
-                         number_of_elements="1">
-        <IntRangeDomain min="2"
-                        name="range" />
-      </IntVectorProperty>
-      <IntVectorProperty command="SetAddRangeLabels"
-                         number_of_elements="1"
-                         default_values="1"
-                         name="AddRangeLabels"
-                         label="Add Range Labels">
-        <BooleanDomain name="bool" />
-      </IntVectorProperty>
-      <StringVectorProperty animateable="0"
-                            command="SetRangeLabelFormat"
-                            number_of_elements="1"
-                            default_values="%4.3e"
-                            name="RangeLabelFormat"
-                            label="Range Label Format">
-        <Hints>
-          <PropertyWidgetDecorator type="EnableWidgetDecorator">
-            <Property name="AddRangeLabels" function="boolean" index="0" />
           </PropertyWidgetDecorator>
         </Hints>
       </StringVectorProperty>
@@ -1024,6 +1002,25 @@
           of colors shown on the scalar bar.
         </Documentation>
       </IntVectorProperty>
+      <IntVectorProperty command="SetAddRangeLabels"
+                         number_of_elements="1"
+                         default_values="1"
+                         name="AddRangeLabels"
+                         label="Add Range Labels">
+        <BooleanDomain name="bool" />
+      </IntVectorProperty>
+      <StringVectorProperty animateable="0"
+                            command="SetRangeLabelFormat"
+                            number_of_elements="1"
+                            default_values="%-#6.1e"
+                            name="RangeLabelFormat"
+                            label="Range Label Format">
+        <Hints>
+          <PropertyWidgetDecorator type="EnableWidgetDecorator">
+            <Property name="AddRangeLabels" function="boolean" index="0" />
+          </PropertyWidgetDecorator>
+        </Hints>
+      </StringVectorProperty>
       <StringVectorProperty animateable="0"
                             command="SetNanAnnotation"
                             default_values="NaN"
@@ -1044,19 +1041,6 @@
         <Documentation>Enable/disable drawing the color legend tick marks.</Documentation>
       </IntVectorProperty>
       <IntVectorProperty animateable="0"
-                         command="SetDrawSubTickMarks"
-                         default_values="1"
-                         name="DrawSubTickMarks"
-                         number_of_elements="1">
-        <BooleanDomain name="bool" />
-        <Documentation>Enable/disable drawing the color legend sub-tick marks.</Documentation>
-        <Hints>
-          <PropertyWidgetDecorator type="EnableWidgetDecorator">
-            <Property name="DrawTickMarks" function="boolean" index="0" />
-          </PropertyWidgetDecorator>
-        </Hints>
-      </IntVectorProperty>
-      <IntVectorProperty animateable="0"
                          command="SetDrawTickLabels"
                          default_values="1"
                          name="DrawTickLabels"
@@ -1064,6 +1048,27 @@
         <BooleanDomain name="bool" />
         <Documentation>Enable/disable drawing the color legend labels for tick marks.</Documentation>
       </IntVectorProperty>
+      <IntVectorProperty animateable="0"
+                         command="SetUseCustomLabels"
+                         name="UseCustomLabels"
+                         number_of_elements="1"
+                         default_values="0" >
+        <BooleanDomain name="bool" />
+        <Documentation>Enable the use of custom label values.</Documentation>
+      </IntVectorProperty>
+      <DoubleVectorProperty command="SetCustomLabel"
+                            name="CustomLabels"
+                            set_number_command="SetNumberOfCustomLabels"
+                            number_of_elements="0"
+                            number_of_elements_per_command="1"
+                            repeat_command="1"
+                            use_index="1" >
+        <Hints>
+          <PropertyWidgetDecorator type="ShowWidgetDecorator">
+            <Property name="UseCustomLabels" function="boolean" />
+          </PropertyWidgetDecorator>
+        </Hints>
+      </DoubleVectorProperty>
       <IntVectorProperty animateable="0"
                          command="SetTextPosition"
                          default_values="1"
@@ -1078,6 +1083,7 @@
         </EnumerationDomain>
         <Documentation>Determines where the tick labels are drawn.</Documentation>
       </IntVectorProperty>
+
       <!--label text property -->
       <SubProxy command="SetLabelTextProperty">
         <Proxy name="LabelTextProperty"
@@ -1100,14 +1106,6 @@
                     name="FontSize" />
         </ExposedProperties>
       </SubProxy>
-      <!--annotation text property -->
-      <SubProxy command="SetAnnotationTextProperty">
-        <Proxy name="AnnotationTextProperty"
-               proxygroup="properties"
-               proxyname="TextProperty"></Proxy>
-        <ShareProperties subproxy="LabelTextProperty" />
-      </SubProxy>
-
       <!--title text property -->
       <SubProxy command="SetTitleTextProperty">
         <Proxy name="TitleTextProperty"
@@ -1139,11 +1137,11 @@
       <Documentation>
         GridAxes3DActor can be used to render a grid in a render view.
       </Documentation>
-
       <IntVectorProperty name="Visibility"
                          command="SetVisibility"
                          number_of_elements="1"
-                         default_values="0">
+                         default_values="0"
+                         panel_visibility="advanced">
         <BooleanDomain name="bool" />
         <Documentation>
           Show/hide the axes grid.
@@ -2573,8 +2571,15 @@
     </Proxy>
     <ViewLayoutProxy name="ViewLayout"
                      processes="client">
-      <Documentation>Proxy used to manage layout for mutliple
-      views.</Documentation>
+      <Documentation>Proxy used to manage layout for mutliple views.</Documentation>
+      <IntVectorProperty name="ShowWindowDecorations"
+        number_of_elements="1"
+        default_values="1">
+        <Documentation>
+          Set whether the UI should show extra decorations for the layout
+          e.g. view frames, view toolbars etc.
+        </Documentation>
+      </IntVectorProperty>
     </ViewLayoutProxy>
     <Proxy class="vtkViewLayout"
            name="InternalViewLayoutHelper"
@@ -3431,6 +3436,12 @@
         <IntRangeDomain name="range" min="1" />
       </IntVectorProperty>
 
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
+      </IntVectorProperty>
+
      <Hints>
       <!-- TODO: this doesn't work yet -->
       <PipelineIcon name=":pqComponents/pqSave32.png" />
@@ -3465,6 +3476,12 @@
         number_of_elements="1"
         default_values="1">
         <IntRangeDomain name="range" min="1" />
+      </IntVectorProperty>
+
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
       </IntVectorProperty>
 
      <Hints>
@@ -3503,6 +3520,12 @@
         <IntRangeDomain name="range" min="1" />
       </IntVectorProperty>
 
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
+      </IntVectorProperty>
+
      <Hints>
       <!-- TODO: this doesn't work yet -->
       <PipelineIcon name=":pqComponents/pqSave32.png" />
@@ -3537,6 +3560,12 @@
         number_of_elements="1"
         default_values="1">
         <IntRangeDomain name="range" min="1" />
+      </IntVectorProperty>
+
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
       </IntVectorProperty>
 
      <Hints>
@@ -3575,6 +3604,12 @@
         <IntRangeDomain name="range" min="1" />
       </IntVectorProperty>
 
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
+      </IntVectorProperty>
+
      <Hints>
       <!-- TODO: this doesn't work yet -->
       <PipelineIcon name=":pqComponents/pqSave32.png" />
@@ -3609,6 +3644,12 @@
         number_of_elements="1"
         default_values="1">
         <IntRangeDomain name="range" min="1" />
+      </IntVectorProperty>
+
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
       </IntVectorProperty>
 
      <Hints>
@@ -3647,6 +3688,12 @@
         <IntRangeDomain name="range" min="1" />
       </IntVectorProperty>
 
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
+      </IntVectorProperty>
+
      <Hints>
       <!-- TODO: this doesn't work yet -->
       <PipelineIcon name=":pqComponents/pqSave32.png" />
@@ -3681,6 +3728,12 @@
         number_of_elements="1"
         default_values="1">
         <IntRangeDomain name="range" min="1" />
+      </IntVectorProperty>
+
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
       </IntVectorProperty>
 
      <Hints>
@@ -3722,6 +3775,12 @@
         <IntRangeDomain name="range" min="1" />
       </IntVectorProperty>
 
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="0">
+        <IntRangeDomain name="range" min="0" />
+      </IntVectorProperty>
+
       <Hints>
         <!-- TODO: this doesn't work yet -->
         <PipelineIcon name=":pqComponents/pqSave32.png" />
@@ -3753,12 +3812,18 @@
 
       <StringVectorProperty name="FileName"
                             number_of_elements="1"
-                            default_values="filename.e-s.%t">
+                            default_values="filename.e-s">
       </StringVectorProperty>
       <IntVectorProperty name="WriteFrequency"
         number_of_elements="1"
         default_values="1">
         <IntRangeDomain name="range" min="1" />
+      </IntVectorProperty>
+
+      <IntVectorProperty name="PaddingAmount"
+        number_of_elements="1"
+        default_values="5">
+        <IntRangeDomain name="range" min="0" />
       </IntVectorProperty>
 
       <Hints>
@@ -3857,6 +3922,7 @@
       </Hints>
     </Proxy>
   </ProxyGroup>
+
   <ProxyGroup name="seed_sources">
     <Proxy group="extended_sources"
            name="PointSource"/>
@@ -3876,5 +3942,199 @@
            name="RungeKutta45"
            label="Runge Kutta 4/5">
     </Proxy>
+  </ProxyGroup>
+
+  <ProxyGroup name="misc">
+    <SaveScreenshotProxy name="SaveScreenshot" processes="client">
+      <Documentation>
+        Proxy used to save screenshots from view(s) or layouts.
+      </Documentation>
+      <ProxyProperty name="Layout" panel_visibility="never" />
+      <ProxyProperty name="View" panel_visibility="never" />
+
+      <IntVectorProperty name="SaveAllViews"
+        number_of_elements="1"
+        default_values="0">
+        <BooleanDomain name="bool" />
+        <Documentation>
+          When checked, all views in the active layout will be saved in the image.
+          Otherwise only the active view will be saved.
+        </Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty name="ImageResolution"
+        number_of_elements="2"
+        default_values="none"
+        panel_widget="view_resolution" >
+        <ViewResolutionDomain name="range" default_mode="max">
+          <RequiredProperties>
+            <Property name="SaveAllViews" function="UseLayout" />
+            <Property name="Layout"       function="Layout" />
+            <Property name="View"         function="View" />
+          </RequiredProperties>
+        </ViewResolutionDomain>
+        <Documentation>
+          Choose the image resolution in pixels.
+        </Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty name="FontScaling"
+        number_of_elements="1"
+        default_values="0"
+        panel_visibility="advanced">
+        <EnumerationDomain name="enum">
+          <Entry value="0" text="Scale fonts proportionally" />
+          <Entry value="1" text="Do not scale fonts" />
+        </EnumerationDomain>
+        <Documentation>
+          Select how fonts are to be scaled when saving images at different
+          resolution than the current size.
+        </Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty name="SeparatorWidth"
+        number_of_elements="1"
+        default_values="0"
+        panel_visibility="advanced">
+        <IntRangeDomain name="range" min="0" max="10" />
+        <Documentation>
+          Specify the width of border (in pixels) to use around views when
+          **Save All Views** is checked.
+        </Documentation>
+        <Hints>
+          <PropertyWidgetDecorator type="GenericDecorator"
+                                   mode="enabled_state"
+                                   property="SaveAllViews"
+                                   value="1" />
+        </Hints>
+      </IntVectorProperty>
+
+      <DoubleVectorProperty name="SeparatorColor"
+        number_of_elements="3"
+        default_values="0 0 0"
+        panel_widget="color_selector_with_palette"
+        panel_visibility="advanced">
+        <DoubleRangeDomain name="range" min="0 0 0" max="1 1 1" />
+        <Documentation>
+          Select the separator color.
+        </Documentation>
+        <Hints>
+          <PropertyWidgetDecorator type="GenericDecorator"
+                                   mode="enabled_state"
+                                   property="SaveAllViews"
+                                   value="1" />
+        </Hints>
+      </DoubleVectorProperty>
+
+      <StringVectorProperty name="OverrideColorPalette"
+        number_of_elements="1"
+        default_values=""
+        panel_widget="color_palette_selector" >
+        <StringListDomain name="list" />
+        <Documentation>
+          Choose the color palette to load before saving the image.
+        </Documentation>
+      </StringVectorProperty>
+
+      <IntVectorProperty name="StereoMode"
+        number_of_elements="1"
+        default_values="-1"
+        panel_visibility="advanced">
+        <Documentation>
+          Select a stereo mode, as needed.
+        </Documentation>
+        <EnumerationDomain name="enum">
+          <Entry text="No change" value="-1" />
+          <Entry text="No stereo" value="0" />
+          <Entry text="Red-Blue" value="2" />
+          <Entry text="Interlaced" value="3" />
+          <Entry text="Left Eye Only" value="4" />
+          <Entry text="Right Eye Only" value="5" />
+          <Entry text="Dresden" value="6" />
+          <Entry text="Anaglyph" value="7" />
+          <Entry text="Checkerboard" value="8" />
+          <Entry text="Side-by-Side Horizontal" value="9" />
+        </EnumerationDomain>
+      </IntVectorProperty>
+
+      <IntVectorProperty name="TransparentBackground"
+        number_of_elements="1"
+        default_values="0">
+        <BooleanDomain name="bool" />
+        <Documentation>
+           Set whether to use a transparent background.
+        </Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty name="ImageQuality"
+        number_of_elements="1"
+        default_values="100"
+        panel_visibility="advanced">
+        <IntRangeDomain name="range" min="0" max="100" />
+        <Documentation>
+          Specify output image quality (or compression), if applicable.
+          **0** - low quality, **100** - high quality.
+        </Documentation>
+      </IntVectorProperty>
+
+      <PropertyGroup label="Size and Scaling">
+        <Property name="SaveAllViews" />
+        <Property name="ImageResolution" />
+        <Property name="FontScaling" />
+      </PropertyGroup>
+
+      <PropertyGroup label="Separator Options" >
+        <Property name="SeparatorWidth" />
+        <Property name="SeparatorColor" />
+      </PropertyGroup>
+
+      <PropertyGroup label="Coloring">
+        <Property name="OverrideColorPalette" />
+        <Property name="StereoMode" />
+        <Property name="TransparentBackground" />
+      </PropertyGroup>
+
+      <PropertyGroup label="Compression Options">
+        <Property name="ImageQuality" />
+      </PropertyGroup>
+
+    </SaveScreenshotProxy>
+  </ProxyGroup>
+
+  <ProxyGroup name="options">
+    <LoadStateOptionsProxy class="vtkLoadStateOptions"
+                           name="LoadStateOptions">
+      <Documentation>
+        Options proxy used to prompt user for options when loading pvsm state files.
+      </Documentation>
+
+      <IntVectorProperty name="LoadStateDataFileOptions"
+        default_values="0"
+        number_of_elements="1">
+        <Documentation>
+          Decide how to locate data files in loaded state.
+        </Documentation>
+        <EnumerationDomain name="enum">
+          <Entry text="Use File Names From State" value="0" />
+          <Entry text="Search files under specified directory" value="1" />
+          <Entry text="Choose File Names" value="2" />
+        </EnumerationDomain>
+      </IntVectorProperty>
+
+      <StringVectorProperty name="DataDirectory"
+                            command="SetDataDirectory"
+                            number_of_elements="1"
+                            default_values="">
+        <FileListDomain name="files" />
+        <Documentation>
+          Directory to look for data files under. Defaults to the state file's directory.
+        </Documentation>
+        <Hints>
+          <PropertyWidgetDecorator type="GenericDecorator" mode="visibility" property="LoadStateDataFileOptions" value="1">
+          </PropertyWidgetDecorator>
+          <UseDirectoryName />
+        </Hints>
+      </StringVectorProperty>
+    </LoadStateOptionsProxy>
   </ProxyGroup>
 </ServerManagerConfiguration>

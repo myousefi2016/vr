@@ -379,7 +379,7 @@ public:
 
   //@{
   /**
-   * Normally called by pipeline executives or algoritms only. This method
+   * Normally called by pipeline executives or algorithms only. This method
    * computes the ghost arrays for a given dataset. The zeroExt argument
    * specifies the extent of the region which ghost type = 0.
    */
@@ -502,7 +502,7 @@ protected:
 
   //@{
   /**
-   * These arrays pointers are caches used to avoid a string comparision (when
+   * These arrays pointers are caches used to avoid a string comparison (when
    * getting ghost arrays using GetArray(name))
    */
   vtkUnsignedCharArray* PointGhostArray;

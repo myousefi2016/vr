@@ -148,13 +148,13 @@ public:
    */
   void AddShaderReplacement(
     vtkShader::Type shaderType, // vertex, fragment, etc
-    std::string originalValue,
+    const std::string& originalValue,
     bool replaceFirst,  // do this replacement before the default
-    std::string replacementValue,
+    const std::string& replacementValue,
     bool replaceAll);
   void ClearShaderReplacement(
     vtkShader::Type shaderType, // vertex, fragment, etc
-    std::string originalValue,
+    const std::string& originalValue,
     bool replaceFirst);
   //@}
 
@@ -230,7 +230,7 @@ public:
   /**
    * Get access to the map of glprim to vtkcell ids
    */
-  static void MakeCellCellMap(std::vector<unsigned int> &CellCellMap,
+  static void MakeCellCellMap(std::vector<vtkIdType> &CellCellMap,
                               bool HaveAppleBug,
                               vtkPolyData *poly,
                               vtkCellArray **prims, int representation,

@@ -800,7 +800,7 @@ LRESULT vtkWin32OpenGLRenderWindow::MessageProc(HWND hWnd, UINT message,
   {
     case WM_CREATE:
     {
-    // nothing to be done here, opengl is initilized after the call to
+    // nothing to be done here, opengl is initialized after the call to
     // create now
     return 0;
     }
@@ -908,7 +908,7 @@ void vtkWin32OpenGLRenderWindow::CreateAWindow()
         + (int)ceil( (double) log10( (double)(count+1) ) )
         + 1;
       windowName = new char [ len ];
-      sprintf(windowName,"Visualization Toolkit - Win32OpenGL #%i",count++);
+      snprintf(windowName,len,"Visualization Toolkit - Win32OpenGL #%i",count++);
       this->SetWindowName(windowName);
       delete [] windowName;
 

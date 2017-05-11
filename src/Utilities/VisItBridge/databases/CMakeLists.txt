@@ -5,7 +5,7 @@ include(${VISIT_BINARY_DIR}/VisItBridgeUse.cmake)
 macro(VISIT_INCLUDE_READER_SOURCE name state)
 option(VISIT_BUILD_READER_${name} "Build VisIt Reader ${name}" ${state})
 if (VISIT_BUILD_READER_${name})
-  add_subdirectory(${name})
+  add_subdirectory(readers/${name})
 endif()
 endmacro(VISIT_INCLUDE_READER_SOURCE name)
 
@@ -50,10 +50,10 @@ set(DEFAULT_BRIDGE_READERS
   OpenFOAM
   OVERFLOW
   paraDIS
+  paraDIS_tecplot
   PATRAN
   PFLOTRAN
   Pixie
-  PLOT2D
   PLOT3D
   Point3D
   ProteinDataBank
@@ -84,27 +84,11 @@ add_subdirectory(AvtAlgorithms)
 
 #add the default readers to the library
 foreach(db ${DEFAULT_BRIDGE_READERS})
-  add_subdirectory(${db})
+  add_subdirectory(readers/${db})
 endforeach(db)
 
 add_definitions("-DRC_CPP_VISIT_BUILD")
 
-
-#-----------------------------------------------------------------------------
-# GMV Reader needs OpenGLU library. So check if it exists before enabling the
-# GMV reader.
-include(vtkOpenGL)
-set (__gmv_default_status OFF)
-if (OPENGL_GLU_FOUND)
-  # BUG #13489. There are cases in FindOpenGL.cmake when OPENGL_GLU_FOUND is not
-  # set at all. Hence, don't use ${OPENGL_GLU_FOUND} directly.
-  set (__gmv_default_status ON)
-endif()
-visit_include_reader_source(GMV ${__gmv_default_status})
-
-if (VISIT_BUILD_READER_GMV AND NOT OPENGL_GLU_FOUND)
-  message(FATAL_ERROR "Unable to locate GLU library required for GMV reader.")
-endif()
 
 #-----------------------------------------------------------------------------
 visit_include_reader_source(Silo OFF)
@@ -133,18 +117,6 @@ endif(VISIT_BUILD_READER_Boxlib3D)
 visit_include_reader_source(Boxlib3D OFF)
 
 #-----------------------------------------------------------------------------
-visit_include_reader_source(CGNS OFF)
-if(VISIT_BUILD_READER_CGNS)
-  if(NOT HAVE_LIBCGNS)
-    #if we currently don't have silo setup make it required
-    find_package(CGNS REQUIRED)
-  endif(NOT HAVE_LIBCGNS)
-  if(NOT CGNS_FOUND)
-    message(FATAL_ERROR "Unable to locate CGNS library.")
-  endif(NOT CGNS_FOUND)
-endif(VISIT_BUILD_READER_CGNS)
-
-#-----------------------------------------------------------------------------
 visit_include_reader_source(Mili OFF)
 if(VISIT_BUILD_READER_Mili)
   if(NOT HAVE_LIBMILI)
@@ -161,7 +133,6 @@ endif(VISIT_BUILD_READER_Mili)
 #the visit files
 include_directories(BEFORE
   ${VISIT_DB_INC_DIRS}
-  ${CMAKE_CURRENT_SOURCE_DIR}/Common
   )
 
 include_directories(
@@ -175,10 +146,6 @@ endif(HAVE_LIBSILO AND VISIT_BUILD_READER_Silo)
 if(Boxlib_FOUND AND VISIT_BUILD_READER_Boxlib3D)
   include_directories(${Boxlib_INCLUDE_DIR})
 endif(Boxlib_FOUND AND VISIT_BUILD_READER_Boxlib3D)
-
-if(HAVE_LIBCGNS AND VISIT_BUILD_READER_CGNS)
-  include_directories(${CGNS_INCLUDE_DIR})
-endif(HAVE_LIBCGNS AND VISIT_BUILD_READER_CGNS)
 
 if(HAVE_LIBMILI AND VISIT_BUILD_READER_Mili)
   include_directories(${Mili_INCLUDE_DIR})
@@ -204,12 +171,12 @@ vtk_module_library(vtkIOVisItBridge ${Module_SRCS} ${VISIT_DB_SOURCES})
 if(VISIT_PARALLEL)
    target_link_libraries(vtkIOVisItBridge
         LINK_PRIVATE
-          visitcommon avtdatabase_par avtpipeline_par avtivp
+          visitcommon avtdatabase_par avtpipeline_par
           visit_vtk)
 else(VISIT_PARALLEL)
   target_link_libraries(vtkIOVisItBridge
         LINK_PRIVATE
-          visitcommon avtdatabase_ser avtpipeline_ser avtivp
+          visitcommon avtdatabase_ser avtpipeline_ser
           visit_vtk)
 endif(VISIT_PARALLEL)
 
@@ -225,14 +192,6 @@ if(Boxlib_FOUND AND VISIT_BUILD_READER_Boxlib3D)
   endif()
 endif(Boxlib_FOUND AND VISIT_BUILD_READER_Boxlib3D)
 
-if(HAVE_LIBCGNS AND VISIT_BUILD_READER_CGNS)
-  target_link_libraries(vtkIOVisItBridge LINK_PRIVATE ${CGNS_LIBRARIES})
-endif(HAVE_LIBCGNS AND VISIT_BUILD_READER_CGNS)
-
 if(HAVE_LIBMILI AND VISIT_BUILD_READER_Mili)
   target_link_libraries(vtkIOVisItBridge LINK_PRIVATE ${Mili_LIBRARIES})
 endif(HAVE_LIBMILI AND VISIT_BUILD_READER_Mili)
-
-if (VISIT_BUILD_READER_GMV)
-  vtk_opengl_link(vtkIOVisItBridge)
-endif()

@@ -420,7 +420,7 @@ public:
     /**
    * Copy from the currently bound READ FBO to the currently
    * bound DRAW FBO. The method is static so that one doesn't
-   * need to ccreate an instance when transfering between attachments
+   * need to ccreate an instance when transferring between attachments
    * in the default FBO.
    */
   static int Blit(
@@ -430,7 +430,7 @@ public:
    * Download data from the read color attachment of the currently
    * bound FBO into the retruned PBO. The PBO must be free'd when
    * you are finished with it. The number of components in the
-   * PBO is the same as in the name of the specific  download fucntion.
+   * PBO is the same as in the name of the specific download function.
    * When downloading a single color channel, the channel must be
    * identified by index, 1->red, 2->green, 3-> blue.
    */

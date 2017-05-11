@@ -15,7 +15,6 @@
 #include "vtkIceTCompositePass.h"
 
 #include "vtkBoundingBox.h"
-#include "vtkCubeAxesActor.h"
 #include "vtkFloatArray.h"
 #include "vtkFrameBufferObjectBase.h"
 #include "vtkIceTContext.h"
@@ -35,6 +34,7 @@
 #include "vtkSmartPointer.h"
 #include "vtkTextureObject.h"
 #include "vtkTilesHelper.h"
+#include "vtkTimerLog.h"
 
 #include "vtk_icet.h"
 #include <assert.h>
@@ -90,11 +90,20 @@ void MergeCubeAxesBounds(double bounds[6], const vtkRenderState* rState)
   for (int cc = 0; cc < rState->GetPropArrayCount(); cc++)
   {
     vtkProp* prop = rState->GetPropArray()[cc];
-    vtkCubeAxesActor* cubeAxes = vtkCubeAxesActor::SafeDownCast(prop);
-    if (cubeAxes != NULL && prop->GetVisibility() && prop->GetUseBounds())
+    if (prop->GetVisibility() && prop->GetUseBounds())
     {
-      // Use custom bounds API for cube axes to embed titles and labels
-      bbox.AddBounds(cubeAxes->GetRenderedBounds());
+      if (prop->IsA("vtkGridAxes3DActor") || prop->IsA("vtkCubeAxesActor"))
+      {
+        vtkProp3D* prop3D = static_cast<vtkProp3D*>(prop);
+        vtkBoundingBox box(prop3D->GetBounds());
+        // This is the same trick used by vtkCubeAxesActor::GetRenderedBounds():
+        if (box.IsValid())
+        {
+          box.Inflate(box.GetMaxLength());
+          box.GetBounds(bounds);
+          bbox.AddBounds(bounds);
+        }
+      }
     }
   }
 
@@ -575,6 +584,22 @@ void vtkIceTCompositePass::Render(const vtkRenderState* render_state)
   }
 
   this->CleanupContext(render_state);
+
+  double val = 0.;
+  icetGetDoublev(ICET_COMPOSITE_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_COMPOSITE_TIME", val, 0);
+  icetGetDoublev(ICET_BLEND_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_BLEND_TIME", val, 0);
+  icetGetDoublev(ICET_COMPRESS_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_COMPRESS_TIME", val, 0);
+  icetGetDoublev(ICET_COLLECT_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_COLLECT_TIME", val, 0);
+  icetGetDoublev(ICET_RENDER_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_RENDER_TIME", val, 0);
+  icetGetDoublev(ICET_BUFFER_READ_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_BUFFER_READ_TIME", val, 0);
+  icetGetDoublev(ICET_BUFFER_WRITE_TIME, &val);
+  vtkTimerLog::InsertTimedEvent("ICET_BUFFER_WRITE_TIME", val, 0);
 }
 
 // ----------------------------------------------------------------------------

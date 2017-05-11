@@ -107,6 +107,16 @@
 #include "vtkOSPRayRendererNode.h"
 #endif
 
+#ifdef PARAVIEW_USE_OPENVR
+#include "vtkCullerCollection.h"
+#include "vtkOpenGLPolyDataMapper.h"
+#include "vtkOpenGLVertexBufferObject.h"
+#include "vtkOpenVRCamera.h"
+#include "vtkOpenVRRenderWindow.h"
+#include "vtkOpenVRRenderWindowInteractor.h"
+#include "vtkOpenVRRenderer.h"
+#endif
+
 #include <cassert>
 #include <map>
 #include <set>
@@ -795,20 +805,13 @@ void vtkPVRenderView::SetGridAxes3DActor(vtkPVGridAxes3DActor* gridActor)
     const bool in_tile_display_mode = this->InTileDisplayMode();
     if (this->GridAxes3DActor)
     {
-      this->GetNonCompositedRenderer()->RemoveViewProp(this->GridAxes3DActor);
       this->GetRenderer()->RemoveViewProp(this->GridAxes3DActor);
       culler->DoNotCullList.erase(this->GridAxes3DActor);
     }
     this->GridAxes3DActor = gridActor;
     if (this->GridAxes3DActor && !in_tile_display_mode)
     {
-      this->GetNonCompositedRenderer()->AddViewProp(this->GridAxes3DActor);
       this->GetRenderer()->AddViewProp(this->GridAxes3DActor);
-
-      this->GridAxes3DActor->SetEnableLayerSupport(true);
-      this->GridAxes3DActor->SetBackgroundLayer(this->GetRenderer()->GetLayer());
-      this->GridAxes3DActor->SetGeometryLayer(this->GetRenderer()->GetLayer());
-      this->GridAxes3DActor->SetForegroundLayer(this->GetNonCompositedRenderer()->GetLayer());
       culler->DoNotCullList.insert(this->GridAxes3DActor);
     }
   }
@@ -1631,7 +1634,7 @@ int vtkPVRenderView::GetDataDistributionMode(bool use_remote_rendering)
 
 //----------------------------------------------------------------------------
 void vtkPVRenderView::SetPiece(vtkInformation* info, vtkPVDataRepresentation* repr,
-  vtkDataObject* data, unsigned long trueSize /*=0*/)
+  vtkDataObject* data, unsigned long trueSize /*=0*/, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1640,12 +1643,12 @@ void vtkPVRenderView::SetPiece(vtkInformation* info, vtkPVDataRepresentation* re
     return;
   }
 
-  view->GetDeliveryManager()->SetPiece(repr, data, false, trueSize);
+  view->GetDeliveryManager()->SetPiece(repr, data, false, trueSize, port);
 }
 
 //----------------------------------------------------------------------------
 vtkAlgorithmOutput* vtkPVRenderView::GetPieceProducer(
-  vtkInformation* info, vtkPVDataRepresentation* repr)
+  vtkInformation* info, vtkPVDataRepresentation* repr, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1654,12 +1657,12 @@ vtkAlgorithmOutput* vtkPVRenderView::GetPieceProducer(
     return NULL;
   }
 
-  return view->GetDeliveryManager()->GetProducer(repr, false);
+  return view->GetDeliveryManager()->GetProducer(repr, false, port);
 }
 
 //----------------------------------------------------------------------------
 void vtkPVRenderView::SetPieceLOD(
-  vtkInformation* info, vtkPVDataRepresentation* repr, vtkDataObject* data)
+  vtkInformation* info, vtkPVDataRepresentation* repr, vtkDataObject* data, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1668,12 +1671,12 @@ void vtkPVRenderView::SetPieceLOD(
     return;
   }
 
-  view->GetDeliveryManager()->SetPiece(repr, data, true);
+  view->GetDeliveryManager()->SetPiece(repr, data, true, port);
 }
 
 //----------------------------------------------------------------------------
 vtkAlgorithmOutput* vtkPVRenderView::GetPieceProducerLOD(
-  vtkInformation* info, vtkPVDataRepresentation* repr)
+  vtkInformation* info, vtkPVDataRepresentation* repr, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1682,12 +1685,12 @@ vtkAlgorithmOutput* vtkPVRenderView::GetPieceProducerLOD(
     return NULL;
   }
 
-  return view->GetDeliveryManager()->GetProducer(repr, true);
+  return view->GetDeliveryManager()->GetProducer(repr, true, port);
 }
 
 //----------------------------------------------------------------------------
 void vtkPVRenderView::MarkAsRedistributable(
-  vtkInformation* info, vtkPVDataRepresentation* repr, bool value /*=true*/)
+  vtkInformation* info, vtkPVDataRepresentation* repr, bool value /*=true*/, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1696,7 +1699,7 @@ void vtkPVRenderView::MarkAsRedistributable(
     return;
   }
 
-  view->GetDeliveryManager()->MarkAsRedistributable(repr, value);
+  view->GetDeliveryManager()->MarkAsRedistributable(repr, value, port);
 }
 
 //----------------------------------------------------------------------------
@@ -1763,7 +1766,7 @@ void vtkPVRenderView::SetDeliverToAllProcesses(
 
 //----------------------------------------------------------------------------
 void vtkPVRenderView::SetDeliverToClientAndRenderingProcesses(vtkInformation* info,
-  vtkPVDataRepresentation* repr, bool deliver_to_client, bool gather_before_delivery)
+  vtkPVDataRepresentation* repr, bool deliver_to_client, bool gather_before_delivery, int port)
 {
   vtkPVRenderView* view = vtkPVRenderView::SafeDownCast(info->Get(VIEW()));
   if (!view)
@@ -1773,7 +1776,7 @@ void vtkPVRenderView::SetDeliverToClientAndRenderingProcesses(vtkInformation* in
   }
 
   view->GetDeliveryManager()->SetDeliverToClientAndRenderingProcesses(
-    repr, deliver_to_client, gather_before_delivery, false);
+    repr, deliver_to_client, gather_before_delivery, false, port);
 }
 
 //----------------------------------------------------------------------------
@@ -2790,13 +2793,8 @@ void vtkPVRenderView::SetValueRenderingModeCommand(int mode)
     {
 #ifdef PARAVIEW_USE_ICE_T
       IceTPassEnableFloatPass(true, this->SynchronizedRenderers);
-      this->Internals->ValuePasses->SetRenderingMode(mode);
-#else
-      vtkWarningMacro("vtkValuePass::FLOATING_POINT mode is only supported in IceT"
-                      " enabled builds. Falling back to INVERTIBLE_LUT.");
-
-      this->Internals->ValuePasses->SetRenderingMode(vtkValuePass::INVERTIBLE_LUT);
 #endif
+      this->Internals->ValuePasses->SetRenderingMode(mode);
     }
     break;
 
@@ -2821,11 +2819,7 @@ void vtkPVRenderView::SetValueRenderingModeCommand(int mode)
 int vtkPVRenderView::GetValueRenderingModeCommand()
 {
 #ifdef VTKGL2
-#ifdef PARAVIEW_USE_ICE_T
   return this->Internals->ValuePasses->GetRenderingMode();
-#else
-  return vtkValuePass::INVERTIBLE_LUT;
-#endif
 #else
   return 1; // vtkValuePass::INVERTIBLE_LUT
 #endif
@@ -2975,12 +2969,12 @@ vtkFloatArray* vtkPVRenderView::GetCapturedZBuffer()
 void vtkPVRenderView::CaptureValuesFloat()
 {
 #ifdef VTKGL2
+  vtkFloatArray* values = NULL;
 #ifdef PARAVIEW_USE_ICE_T
   vtkIceTSynchronizedRenderers* IceTSynchronizedRenderers =
     vtkIceTSynchronizedRenderers::SafeDownCast(
       this->SynchronizedRenderers->GetParallelSynchronizer());
 
-  vtkFloatArray* values = NULL;
   if (IceTSynchronizedRenderers)
   {
     vtkIceTCompositePass* iceTPass = IceTSynchronizedRenderers->GetIceTCompositePass();
@@ -2990,6 +2984,7 @@ void vtkPVRenderView::CaptureValuesFloat()
     }
   }
   else
+#endif
   {
     if (this->GetUseDistributedRenderingForStillRender() &&
       vtkProcessModule::GetProcessType() == vtkProcessModule::PROCESS_CLIENT)
@@ -3012,17 +3007,13 @@ void vtkPVRenderView::CaptureValuesFloat()
     this->Internals->ArrayHolder->SetNumberOfTuples(values->GetNumberOfTuples());
     this->Internals->ArrayHolder->CopyComponent(0, values, 0);
   }
-#else
-  vtkErrorMacro("vtkValuePass::FLOATING_POINT mode is only supported in IceT enabled"
-                " builds.");
-#endif
 #endif
 }
 
 //-----------------------------------------------------------------------------
 vtkFloatArray* vtkPVRenderView::GetCapturedValuesFloat()
 {
-#if defined(VTKGL2) && defined(PARAVIEW_USE_ICE_T)
+#ifdef VTKGL2
   return this->Internals->ArrayHolder.GetPointer();
 #else
   return NULL;
@@ -3051,7 +3042,6 @@ void vtkPVRenderView::SetEnableOSPRay(bool v)
     this->SynchronizedRenderers->SetRenderPass(this->Internals->SavedRenderPass);
   }
   this->Modified();
-  this->Render(false, false);
 #else
   if (v)
   {
@@ -3067,13 +3057,103 @@ bool vtkPVRenderView::GetEnableOSPRay()
   return this->Internals->IsInOSPRay;
 }
 
+void vtkPVRenderView::SendToOpenVR()
+{
+#ifdef PARAVIEW_USE_OPENVR
+  vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::New();
+  renWin->SetMultiSamples(8);
+  vtkOpenVRRenderer* ren = vtkOpenVRRenderer::New();
+  renWin->AddRenderer(ren);
+  vtkOpenVRRenderWindowInteractor* iren = vtkOpenVRRenderWindowInteractor::New();
+  renWin->SetInteractor(iren);
+  vtkOpenVRCamera* cam = vtkOpenVRCamera::New();
+  ren->SetActiveCamera(cam);
+  cam->Delete();
+
+  ren->RemoveCuller(ren->GetCullers()->GetLastItem());
+  ren->SetBackground(this->RenderView->GetRenderer()->GetBackground());
+
+  // create 4 lights for even lighting
+  {
+    vtkLight* light = vtkLight::New();
+    light->SetPosition(0.0, 1.0, 0.0);
+    light->SetIntensity(1.0);
+    light->SetLightTypeToSceneLight();
+    ren->AddLight(light);
+    light->Delete();
+  }
+  {
+    vtkLight* light = vtkLight::New();
+    light->SetPosition(0.8, -0.2, 0.0);
+    light->SetIntensity(0.8);
+    light->SetLightTypeToSceneLight();
+    ren->AddLight(light);
+    light->Delete();
+  }
+  {
+    vtkLight* light = vtkLight::New();
+    light->SetPosition(-0.3, -0.2, 0.7);
+    light->SetIntensity(0.6);
+    light->SetLightTypeToSceneLight();
+    ren->AddLight(light);
+    light->Delete();
+  }
+  {
+    vtkLight* light = vtkLight::New();
+    light->SetPosition(-0.3, -0.2, -0.7);
+    light->SetIntensity(0.4);
+    light->SetLightTypeToSceneLight();
+    ren->AddLight(light);
+    light->Delete();
+  }
+
+  // send the first renderer to openVR
+  vtkRenderer* ren2 = this->RenderView->GetRenderer();
+  renWin->InitializeViewFromCamera(ren2->GetActiveCamera());
+
+  vtkActorCollection* acol = ren2->GetActors();
+  vtkCollectionSimpleIterator pit;
+  vtkActor* actor;
+  for (acol->InitTraversal(pit); (actor = acol->GetNextActor(pit));)
+  {
+    actor->ReleaseGraphicsResources(NULL);
+    ren->AddActor(actor);
+    // always use shift scale, everyone should
+    vtkOpenGLPolyDataMapper* pdm = vtkOpenGLPolyDataMapper::SafeDownCast(actor->GetMapper());
+    if (pdm)
+    {
+      pdm->SetVBOShiftScaleMethod(vtkOpenGLVertexBufferObject::AUTO_SHIFT_SCALE);
+    }
+  }
+  renWin->Initialize();
+  if (renWin->GetHMD())
+  {
+    renWin->Render();
+    ren->ResetCamera();
+    iren->Start();
+  }
+  for (acol->InitTraversal(pit); (actor = acol->GetNextActor(pit));)
+  {
+    actor->ReleaseGraphicsResources(renWin);
+  }
+  ren->Delete();
+  iren->Delete();
+  renWin->Delete();
+#else
+  vtkWarningMacro("Refusing to switch to OpenVR since it is not built into this copy of ParaView");
+#endif
+}
+
 //----------------------------------------------------------------------------
 void vtkPVRenderView::SetShadows(bool v)
 {
 #ifdef PARAVIEW_USE_OSPRAY
   this->Internals->OSPRayShadows = v;
   vtkRenderer* ren = this->GetRenderer();
-  ren->SetUseShadows(v);
+  if (this->Internals->IsInOSPRay)
+  {
+    ren->SetUseShadows(v);
+  }
 #else
   (void)v;
 #endif

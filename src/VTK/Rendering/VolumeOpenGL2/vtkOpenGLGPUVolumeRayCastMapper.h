@@ -16,9 +16,9 @@
 #ifndef vtkOpenGLGPUVolumeRayCastMapper_h
 #define vtkOpenGLGPUVolumeRayCastMapper_h
 
+#include "vtkNew.h"                          // For vtkNew
 #include "vtkRenderingVolumeOpenGL2Module.h" // For export macro
-
-#include <vtkGPUVolumeRayCastMapper.h>
+#include "vtkGPUVolumeRayCastMapper.h"
 
 // Forward declarations
 class vtkGenericOpenGLResourceFreeCallback;
@@ -92,6 +92,16 @@ public:
    * trying to compute an optimum number of partitions.
    */
   void SetPartitions(unsigned short x, unsigned short y, unsigned short z);
+
+  /**
+   *  Load the volume texture into GPU memory.  Actual loading occurs
+   *  in vtkVolumeTexture::LoadVolume.  The mapper by default loads data
+   *  lazily (at render time), so it is most commonly not necessary to call
+   *  this function.  This method is only exposed in order to support on-site
+   *  loading which is useful in cases where the user needs to know a-priori
+   *  whether loading will succeed  or not.
+   */
+  bool PreLoadData(vtkRenderer* ren, vtkVolume* vol);
 
 protected:
   vtkOpenGLGPUVolumeRayCastMapper();
@@ -169,6 +179,30 @@ protected:
   {
     return 1;
   }
+
+  //@{
+  /**
+   *  \brief vtkOpenGLRenderPass API
+   */
+  vtkMTimeType GetRenderPassStageMTime(vtkVolume* vol);
+
+  /**
+   *  RenderPass string replacements on shader templates.
+   */
+  void ReplaceShaderRenderPass(std::string& vertShader, std::string& fragShader,
+    vtkVolume* vol, bool prePass);
+
+  /**
+   *  Update parameters from RenderPass
+   */
+  void SetShaderParametersRenderPass(vtkVolume* vol);
+  /**
+   *  Caches the vtkOpenGLRenderPass::RenderPasses() information.
+   *  Note: Do not dereference the pointers held by this object. There is no
+   *  guarantee that they are still valid!
+   */
+  vtkNew<vtkInformation> LastRenderPassInfo;
+  //@}
 
   double ReductionFactor;
   int    CurrentPass;

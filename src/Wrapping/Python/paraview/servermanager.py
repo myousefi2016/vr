@@ -934,7 +934,10 @@ class FileNameProperty(VectorProperty):
     def _UpdateProperty(self):
         "Pushes the value of this property to the server."
         VectorProperty._UpdateProperty(self)
-        self.Proxy.FileNameChanged()
+        try:
+            self.Proxy.FileNameChanged()
+        except AttributeError:
+            pass
 
 class ArraySelectionProperty(VectorProperty):
     "Property to select an array to be processed by a filter."
@@ -1576,7 +1579,7 @@ class FieldDataInformation(object):
         return vals
 
     def iteritems(self):
-        """Implementation of the dictionary API"""
+        """Implementation of the PY2 dictionary API"""
         return FieldDataInformationIterator(self, True)
 
     def items(self):
@@ -1589,7 +1592,7 @@ class FieldDataInformation(object):
         return itms
 
     def has_key(self, key):
-        """Implementation of the dictionary API"""
+        """Implementation of the PY2 dictionary API"""
         if self.GetArray(key):
             return True
         return False
@@ -2364,7 +2367,7 @@ def AnimateReader(reader, view, filename=None):
     # We need to have the reader and the view registered with
     # the time keeper. This is how the scene gets its time values.
     try:
-        tk = ProxyManager().GetProxiesInGroup("timekeeper").values()[0]
+        tk = next(iter(ProxyManager().GetProxiesInGroup("timekeeper").values()))
         scene.TimeKeeper = tk
     except IndexError:
         tk = misc.TimeKeeper()

@@ -33,8 +33,6 @@ set(Module_SRCS
   pqAnimationCue.h
   pqAnimationScene.cxx
   pqAnimationScene.h
-  pqAnimationSceneImageWriter.cxx
-  pqAnimationSceneImageWriter.h
   pqApplicationCore.cxx
   pqApplicationCore.h
   pqAutoStartInterface.cxx
@@ -111,6 +109,8 @@ set(Module_SRCS
   pqOptions.h
   pqOutputPort.cxx
   pqOutputPort.h
+  pqOutputWidget.cxx
+  pqOutputWidget.h
   pqOutputWindowAdapter.cxx
   pqOutputWindowAdapter.h
   pqOutputWindow.cxx
@@ -196,8 +196,6 @@ set(Module_SRCS
   pqSpreadSheetViewWidget.h
   pqStandardServerManagerModelInterface.cxx
   pqStandardServerManagerModelInterface.h
-  pqStereoModeHelper.cxx
-  pqStereoModeHelper.h
   pqTimeKeeper.cxx
   pqTimeKeeper.h
   pqTreeLayoutStrategyInterface.cxx
@@ -261,6 +259,7 @@ set (Module_MOC_HDRS
   pqNonEditableStyledItemDelegate.h
   pqObjectBuilder.h
   pqOutputPort.h
+  pqOutputWidget.h
   pqOutputWindowAdapter.h
   pqOutputWindow.h
   pqOutputWindowModel.h
@@ -309,6 +308,7 @@ set (Module_MOC_HDRS
 )
 
 set (Module_UI_FILES
+  Resources/UI/pqOutputWidget.ui
   Resources/UI/pqOutputWindow.ui
   Resources/UI/pqFileDialog.ui
 )

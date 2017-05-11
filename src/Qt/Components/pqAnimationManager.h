@@ -32,8 +32,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef pqAnimationManager_h
 #define pqAnimationManager_h
 
-#include "pqComponentsModule.h"
 #include <QObject>
+
+#include "pqComponentsModule.h" // for exports
+#include "vtkSetGet.h"          // for VTK_LEGACY
 
 class QSize;
 
@@ -76,27 +78,17 @@ public:
     pqAnimationScene* scene, vtkSMProxy* proxy, const char* propertyname, int index) const;
 
   /**
-  * Saves the animation from the active scene. The active scene
-  * is determined using the active server.
-  * Returns true if the save was successful.
+  * @deprecated in ParaView 5.4.
+  * No longer supported as of ParaView 5.4.
+  * Please use pqSaveScreenshotReaction instead.
   */
-  bool saveAnimation();
+  VTK_LEGACY(bool saveAnimation());
 
   /**
   * Saves the animation geometry from the active scene
   * as visible in the given view.
   */
   bool saveGeometry(const QString& filename, pqView* view);
-
-  /**
-  * Save the settings of "save animation" with QSettings.
-  */
-  void saveSettings();
-
-  /**
-  * Apply the settings from QSettings to "save animation".
-  */
-  void restoreSettings();
 
   /**
   * Query whether or not an animation is currently playing
@@ -132,13 +124,6 @@ signals:
   void endNonUndoableChanges();
 
   /**
-  * emitted to request the application to disconnect from the server
-  * connection. This is done when the user requested to save animation after
-  * disconnecting from the server.
-  */
-  void disconnectServer();
-
-  /**
   * emitted to indicate an animation is being written out to a file.
   */
   void writeAnimation(const QString& filename, int magnification, double frameRate);
@@ -153,6 +138,12 @@ signals:
   */
   void endPlay();
 
+  /**
+   * private signal. do not use. will be removed once `saveAnimation` method is
+   * removed.
+   */
+  void deprecatedSaveAnimationCalled();
+
 public slots:
   // Called when the active server changes.
   void onActiveServerChanged(pqServer*);
@@ -160,13 +151,6 @@ public slots:
 protected slots:
   void onProxyAdded(pqProxy*);
   void onProxyRemoved(pqProxy*);
-
-  void updateGUI();
-
-  /**
-  * Update the ViewModules property in the active scene.
-  */
-  void updateViewModules();
 
   /**
   * Called on every tick while saving animation.
@@ -179,21 +163,11 @@ protected slots:
   void onBeginPlay();
   void onEndPlay();
 
-  /**
-  * Manages locking the aspect ratio.
-  */
-  void onWidthEdited();
-  void onHeightEdited();
-  void onLockAspectRatio(bool lock);
-
 private:
   Q_DISABLE_COPY(pqAnimationManager)
 
   class pqInternals;
   pqInternals* Internals;
-
-  // the most recently used file extension
-  QString AnimationExtension;
 };
 
 #endif

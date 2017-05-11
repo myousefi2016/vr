@@ -119,7 +119,7 @@ public:
   //@{
   /**
    * Set/Get the rendering context. A reference is not explicity held,
-   * thus refernce to the context must be held externally.
+   * thus reference to the context must be held externally.
    */
   void SetContext(vtkRenderWindow *context);
   vtkRenderWindow *GetContext();
@@ -151,7 +151,7 @@ public:
    * over all fragments.
 
    * This increase the dynamic range and contrast in the LIC'd image, both of which
-   * are natuarly attenuated by the LI conovlution proccess.
+   * are naturally attenuated by the LI convolution process.
 
    * ENHANCE_CONTRAST_OFF  -- don't enhance contrast
    * ENHANCE_CONTRAST_ON   -- enhance high-pass input and final stage output
