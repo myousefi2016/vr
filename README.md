@@ -10,7 +10,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 	* `git clone https://github.com/vrcranfield/vr`
 
 ## CMake:
-* Set source to `Paraview/src/`, dest to `Paraview/build/`
+* Set source to `Paraview/src/`, dest to `Paraview/src/build/` (**note that `build` is INSIDE `src`**)
 * Set Generator to VS14 2015 Win64
 * Tick “Advanced” box
 * Run Configure
