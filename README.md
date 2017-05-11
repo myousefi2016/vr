@@ -4,7 +4,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 ## Preparation:
 * Install [Qt 5.8](https://www.qt.io/download-open-source) (both 32 and 64 bit versions)
 	* Append `C:\Qt\5.8\msvc2015_64\bin` to `PATH` System Environment Variable
-	* Substitute `C:\Qt\5.8\msvc2015_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake` with the same file found [here](https://drive.google.com/file/d/0ByDlFL3T6833eWpuaXU2dWdhNDg/view?usp=sharing) *([relevant link](https://codereview.qt-project.org/#/c/184321/2/src/corelib/Qt5CoreMacros.cmake))*
+	* Substitute `C:\Qt\5.8\msvc2015_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake` with the file found [here](https://drive.google.com/file/d/0ByDlFL3T6833eWpuaXU2dWdhNDg/view?usp=sharing) *([relevant link](https://codereview.qt-project.org/#/c/184321/2/src/corelib/Qt5CoreMacros.cmake))*
 * Install [CMake 3.8](https://cmake.org/download/)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
 	* Install `Qt Visual Studio Tools` from Extensions and Updates.
@@ -13,10 +13,10 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 	* `git clone https://github.com/vrcranfield/vr`
 
 ## CMake:
-* Set source to `Paraview/src/`, dest to `Paraview/src/build/` (**note that `build` is INSIDE `src`**)
+* Set source to `Paraview/src/`, dest to `Paraview/src/build/` *(note that `build` is INSIDE `src`)*
 * Set Generator to `Visual Studio 14 2015 Win64`
 * Tick “Advanced” box
-* Run Configure (**TODO** Check if `PARAVIEW_USE_OPENVR` is ON)
+* Run Configure
 	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
 	* Set `OPENVR_HEADERS_ROOT_DIR` to `[Paraview]/src/OpenVR/headers` (replace `[Paraview]` with path to repo)
 	* Set `OPENVR_LIBRARY_TEMP` to `[Paraview]/src/OpenVR/lib/win64/openvr_api.lib
@@ -28,18 +28,14 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Run Generate
 * Click “Open Project in VS” in CMake
 
-## Pre-Visual Studio:
-
 ## Visual Studio:
-* Run `[Paraview]/cpDependencies.bat` and check that it’s copying everything
-* Wait for Visual Studio to load and parse everything. 
-* Right click on `ALL_BUILD` project. 
+* Wait for Visual Studio to load and parse everything.
 * Build > Build Solution
 * *Go grab a beer. It’s gonna take a while.*
 
 ## Run:
-* Run Paraview (`Paraview/build/bin/Debug/Paraview.exe`)
+* Run Paraview (`Paraview/src/build/bin/Debug/Paraview.exe`)
 * **BOOM DONE.**
 
 # TODO LIST
-* Fix CMake files so that we don't need `cpDependencies.bat` anymore
+* Fix CMake files so that it finds `OpenVR` and `SDL2`.
