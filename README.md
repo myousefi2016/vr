@@ -6,16 +6,6 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Install [CMake 3.8](https://cmake.org/download/)
 * Install [MS-MPI v8](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx) (sdk + runtime)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
-* Set up SDL2
-	* Download [SDL2 source](https://www.libsdl.org/release/SDL2-2.0.5.zip)
-	* Unzip the source code
-	* Open a Powershell to the unzipped location
-	* `mkdir build`
-	* `cd build`
-	* `cmake ..`
-	* Open Visual Studio **AS ADMINISTRATOR**
-	* Load the solution in `SDL/build/SLD2.sln`
-	* Build the project `INSTALL` (it will install things in `C:/Program Files (x86)/SLD2)
 * Take ParaView from our [repo](https://github.com/vrcranfield/vr)
 	* `git clone https://github.com/vrcranfield/vr`
 
@@ -29,9 +19,9 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Run Configure
 	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
 * Run Configure
-	* Set `SDL2MAIN_LIBRARY` to `C:/Program Files (x86)/SLD2/lib/SDL2main.lib`
-	* Set `SDL2_LIBRARY_TEMP` to `C:/Program Files (x86)/SLD2/lib/SDL.lib`
-	* Set `SDL2_INCLUDE_DIR` to `C:/Program Files (x86)/SLD2/include/SDL2`
+	* Set `SDL2MAIN_LIBRARY` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
+	* Set `SDL2_INCLUDE_DIR` to `[Paraview]/src/SDL2/include`
+	* Set `SDL2_LIBRARY_TEMP` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
 * Run Configure
     * Check `PARAVIEW_AUTOLOAD_PLUGIN_VRPlugin`
 * Run Configure
