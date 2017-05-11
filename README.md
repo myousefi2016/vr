@@ -3,8 +3,11 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 
 ## Preparation:
 * Install [Qt 5.8](https://www.qt.io/download-open-source) (both 32 and 64 bit versions)
+	* Append `C:\Qt\5.8\msvc2015_64\bin` to `PATH` System Environment Variable
 * Install [CMake 3.8](https://cmake.org/download/)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
+	* Install `Qt Visual Studio Tools` from Extensions and Updates.
+	* Restart VS as requested
 * Take ParaView from our [repo](https://github.com/vrcranfield/vr)
 	* `git clone https://github.com/vrcranfield/vr`
 
@@ -22,14 +25,12 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 	* Set `SDL2_LIBRARY_TEMP` to `[Paraview]/src/SDL2/lib/x64/SDL2.lib`
 * Run Configure
 * Run Generate
-
-## Pre-Visual Studio:
-* Append `C:\Qt\5.8\msvc2015_64\bin` to `PATH` System Environment Variable
-* Run `cpDependencies.bat` and check that it’s copying everything
 * Click “Open Project in VS” in CMake
 
+## Pre-Visual Studio:
+
 ## Visual Studio:
-* Install Qt Visual Studio Tools from Extensions and Updates. Restart VS as requested
+* Run `[Paraview]/cpDependencies.bat` and check that it’s copying everything
 * Wait for Visual Studio to load and parse everything. 
 * Build > Build Solution
 * *Go grab a beer. It’s gonna take a while.*
