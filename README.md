@@ -41,3 +41,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 ## Run:
 * Run Paraview (`Paraview/build/bin/Debug/Paraview.exe`)
 * **BOOM DONE.**
+
+# TODO LIST
+* Fix CMake files so that we don't need `cpDependencies.bat` anymore
+* Fix CMake files so that `Module_vtkRenderingOpenVR` is on by default
