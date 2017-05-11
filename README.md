@@ -20,7 +20,7 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 	* `git clone https://github.com/vrcranfield/vr`
 
 ## CMake:
-* Set source to Paraview/src/, dest to Paraview/build/
+* Set source to `Paraview/src/`, dest to `Paraview/build/`
 * Set Generator to VS14 2015 Win64
 * Tick “Advanced” box
 * Run Configure
@@ -38,8 +38,8 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Run Generate
 
 ## Pre-Visual Studio:
-* Append C:\Qt\5.8\msvc2015_64\bin to PATH System Environment Variable
-* Run cpDependencies.bat and check that it’s copying everything
+* Append `C:\Qt\5.8\msvc2015_64\bin` to `PATH` System Environment Variable
+* Run `cpDependencies.bat` and check that it’s copying everything
 * Click “Open Project in VS” in CMake
 
 ## Visual Studio:
@@ -49,5 +49,5 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * *Go grab a beer. It’s gonna take a while.*
 
 ## Run:
-* Run Paraview (Paraview/build/bin/Debug/Paraview.exe)
+* Run Paraview (`Paraview/build/bin/Debug/Paraview.exe`)
 * **BOOM DONE.**
