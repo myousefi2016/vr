@@ -17,14 +17,6 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 * Set Generator to `Visual Studio 14 2015 Win64`
 * Tick “Advanced” box
 * Run Configure
-	* Set `OPENVR_ROOT_DIR` to `[Paraview]/src/OpenVR/` (replace `[Paraview]` with path to repo)
-	* Set `OPENVR_HEADERS_ROOT_DIR` to `[Paraview]/src/OpenVR/headers` (replace `[Paraview]` with path to repo)
-	* Set `OPENVR_LIBRARY_TEMP` to `[Paraview]/src/OpenVR/lib/win64/openvr_api.lib
-* Run Configure
-	* Set `SDL2MAIN_LIBRARY` to `[Paraview]/src/SDL2/lib/x64/SDL2main.lib`
-	* Set `SDL2_INCLUDE_DIR` to `[Paraview]/src/SDL2/include`
-	* Set `SDL2_LIBRARY_TEMP` to `[Paraview]/src/SDL2/lib/x64/SDL2.lib`
-* Run Configure
 * Run Generate
 * Click “Open Project in VS” in CMake
 
@@ -36,6 +28,3 @@ see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Insta
 ## Run:
 * Run Paraview (`Paraview/src/build/bin/Debug/Paraview.exe`)
 * **BOOM DONE.**
-
-# TODO LIST
-* Fix CMake files so that it finds `OpenVR` and `SDL2`.
