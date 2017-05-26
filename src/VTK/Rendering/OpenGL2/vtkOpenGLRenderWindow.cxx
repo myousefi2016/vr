@@ -36,6 +36,7 @@
 #include "vtkOpenGLVertexBufferObjectCache.h"
 #include "vtkOutputWindow.h"
 #include "vtkRendererCollection.h"
+#include "vtkRenderTimerLog.h"
 #include "vtkShaderProgram.h"
 #include "vtkStdString.h"
 #include "vtkStringOutputWindow.h"
@@ -348,6 +349,8 @@ void vtkOpenGLRenderWindow::ReleaseGraphicsResources(vtkRenderWindow *renWin)
       vtkErrorMacro("Leaked for texture object: " << const_cast<vtkTextureObject *>(found->first));
     }
   }
+
+  this->RenderTimer->ReleaseGraphicsResources();
   this->Initialized = false;
 }
 
@@ -517,12 +520,15 @@ void vtkOpenGLRenderWindow::SetSize(int x, int y)
 void vtkOpenGLRenderWindow::OpenGLInit()
 {
   OpenGLInitContext();
-  OpenGLInitState();
+  if (this->Initialized)
+  {
+    OpenGLInitState();
 
-  // This is required for some reason when using vtkSynchronizedRenderers.
-  // Without it, the initial render of an offscreen context will always be
-  // empty:
-  glFlush();
+    // This is required for some reason when using vtkSynchronizedRenderers.
+    // Without it, the initial render of an offscreen context will always be
+    // empty:
+    glFlush();
+  }
 }
 
 void vtkOpenGLRenderWindow::OpenGLInitState()
@@ -2345,6 +2351,9 @@ int vtkOpenGLRenderWindow::SupportsOpenGL()
   if (rw->GlewInitValid == false)
   {
     this->OpenGLSupportMessage = "glewInit failed for this window, OpenGL not supported.";
+    rw->Delete();
+    vtkOutputWindow::SetInstance(oldOW);
+    oldOW->Delete();
     return 0;
   }
   if (rw->GetContextSupportsOpenGL32())

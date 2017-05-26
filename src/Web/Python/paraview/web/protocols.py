@@ -20,7 +20,7 @@ from paraview.servermanager import ProxyProperty, InputProperty
 from paraview.web import helper
 from vtk.web import protocols as vtk_protocols
 from vtk.web import iteritems
-from vtk.web.render_window_serializer import SynchronizationContext, initializeSerializers, serializeInstance
+from vtk.web.render_window_serializer import SynchronizationContext, initializeSerializers, serializeInstance, getReferenceId
 from paraview.web.decorators import *
 
 from vtk.vtkWebCore import vtkWebInteractionEvent
@@ -548,7 +548,10 @@ class ParaViewWebLocalRendering(ParaViewWebProtocol):
             return { 'error': 'Unable to get view with id %s' % viewId }
 
         realViewId = sView.GetGlobalIDAsString()
-        observerInfo = self.trackingViews[realViewId]
+
+        observerInfo = None
+        if realViewId in self.trackingViews:
+            observerInfo = self.trackingViews[realViewId]
 
         if not observerInfo:
             return { 'error': 'Unable to find subscription for view %s' % realViewId }
@@ -574,6 +577,11 @@ class ParaViewWebLocalRendering(ParaViewWebProtocol):
         renderWindow = sView.GetRenderWindow()
         renderWindowId = sView.GetGlobalIDAsString()
         viewInstance = serializeInstance(None, renderWindow, renderWindowId, self.context, 1)
+        viewInstance['extra'] = {
+            'vtkRefId': getReferenceId(renderWindow),
+            'centerOfRotation': sView.CenterOfRotation.GetData(),
+            'camera': getReferenceId(sView.GetActiveCamera())
+        }
 
         self.context.setIgnoreLastDependencies(False)
         self.context.checkForArraysToRelease()

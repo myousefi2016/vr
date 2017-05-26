@@ -258,8 +258,8 @@ bool vtkSMLoadStateOptionsProxy::PrepareToLoad(const char* statefilename)
       }
 
       exposedName.append(".").append(propertyXML.attribute("name").value());
-      this->ExposeSubProxyProperty(
-        newProxyName.c_str(), propertyXML.attribute("name").value(), exposedName.c_str());
+      this->ExposeSubProxyProperty(newProxyName.c_str(), propertyXML.attribute("name").value(),
+        exposedName.c_str(), 1 /*override*/);
       propertyGroupElement.append_child("Property")
         .append_attribute("name")
         .set_value(exposedName.c_str());
@@ -279,7 +279,8 @@ bool vtkSMLoadStateOptionsProxy::HasDataFiles()
 }
 
 //----------------------------------------------------------------------------
-bool vtkSMLoadStateOptionsProxy::LocateFilesInDirectory(std::vector<std::string>& filepaths)
+bool vtkSMLoadStateOptionsProxy::LocateFilesInDirectory(
+  std::vector<std::string>& filepaths, bool clearFilenameIfNotFound)
 {
   std::string lastLocatedPath = "";
   int numOfPathMatches = 0;
@@ -314,6 +315,11 @@ bool vtkSMLoadStateOptionsProxy::LocateFilesInDirectory(std::vector<std::string>
         }
         lastLocatedPath = locatedPath;
       }
+      else if (clearFilenameIfNotFound)
+      {
+        vtkErrorMacro(<< "Could not find file " << *fIter << " in data directory.");
+        *fIter = "";
+      }
       else
       {
         return false;
@@ -337,6 +343,8 @@ bool vtkSMLoadStateOptionsProxy::Load()
   SM_SCOPED_TRACE(LoadState).arg("filename", this->StateFileName).arg("options", this);
 
   this->SetDataFileOptions(vtkSMPropertyHelper(this, "LoadStateDataFileOptions").GetAsInt());
+  this->SetOnlyUseFilesInDataDirectory(
+    vtkSMPropertyHelper(this, "OnlyUseFilesInDataDirectory").GetAsInt() == 1);
   switch (this->DataFileOptions)
   {
     case USE_FILES_FROM_STATE:
@@ -355,7 +363,7 @@ bool vtkSMLoadStateOptionsProxy::Load()
 
           if (pIter->first.find("FilePattern") == std::string::npos)
           {
-            if (this->LocateFilesInDirectory(info.FilePaths))
+            if (this->LocateFilesInDirectory(info.FilePaths, this->OnlyUseFilesInDataDirectory))
             {
               info.Modified = true;
             }

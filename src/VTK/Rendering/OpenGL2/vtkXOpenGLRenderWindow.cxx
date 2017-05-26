@@ -60,6 +60,7 @@ typedef OSMesaContext GLAPIENTRY (*OSMesaCreateContextAttribs_func)( const int *
 #include "vtkObjectFactory.h"
 #include "vtkOpenGLShaderCache.h"
 #include "vtkRendererCollection.h"
+#include "vtkRenderTimerLog.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkStringOutputWindow.h"
 
@@ -377,7 +378,10 @@ void vtkXOpenGLRenderWindow::Frame()
   if (!this->AbortRender && this->DoubleBuffer && this->SwapBuffers
       && this->WindowId!=0)
   {
+    this->RenderTimer->MarkStartEvent("glXSwapBuffers (may stall for VSync)");
     glXSwapBuffers(this->DisplayId, this->WindowId);
+    this->RenderTimer->MarkEndEvent();
+
     vtkDebugMacro(<< " glXSwapBuffers\n");
   }
 }
@@ -1036,6 +1040,12 @@ void vtkXOpenGLRenderWindow::WindowRemap()
 void vtkXOpenGLRenderWindow::Start(void)
 {
   this->Initialize();
+
+  // When mixing on-screen render windows with offscreen render windows,
+  // the active context state can easily get messed up. Ensuring that before we
+  // start rendering we force making the context current is a reasonable
+  // workaround for now.
+  this->SetForceMakeCurrent();
 
   // set the current window
   this->MakeCurrent();

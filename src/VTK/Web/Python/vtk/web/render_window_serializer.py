@@ -135,6 +135,7 @@ def initializeSerializers():
   # RenderWindows
   registerInstanceSerializer('vtkCocoaRenderWindow', renderWindowSerializer)
   registerInstanceSerializer('vtkXOpenGLRenderWindow', renderWindowSerializer)
+  registerInstanceSerializer('vtkWin32OpenGLRenderWindow', renderWindowSerializer)
 
   # Renderers
   registerInstanceSerializer('vtkOpenGLRenderer', rendererSerializer)
@@ -226,7 +227,7 @@ def getArrayDescription(array, context):
 
 # -----------------------------------------------------------------------------
 
-def extractRequiredFields(fields, mapper, dataset, context):
+def extractRequiredFields(extractedFields, mapper, dataset, context, requestedFields=['Normals', 'TCoords']):
   # FIXME should evolve and support funky mapper which leverage many arrays
   if mapper.IsA('vtkMapper'):
     scalarVisibility = mapper.GetScalarVisibility()
@@ -236,13 +237,34 @@ def extractRequiredFields(fields, mapper, dataset, context):
     scalarMode = mapper.GetScalarMode()
     if scalarMode == 3:
       arrayMeta = getArrayDescription(dataset.GetPointData().GetArray(colorArrayName), context)
-      arrayMeta['location'] = 'pointData';
-      fields.append(arrayMeta)
+      if arrayMeta:
+        arrayMeta['location'] = 'pointData';
+        extractedFields.append(arrayMeta)
     if scalarMode == 4:
-      arrayMeta = dataset.GetCellData().GetArray(colorArrayName)
-      arrayMeta['location'] = 'cellData';
-      fields.append(getArrayDescription(arrayMeta, context))
+      arrayMeta = getArrayDescription(dataset.GetCellData().GetArray(colorArrayName), context)
+      if arrayMeta:
+        arrayMeta['location'] = 'cellData';
+        extractedFields.append(arrayMeta)
 
+  # Normal handling
+  if 'Normals' in requestedFields:
+    normals = dataset.GetPointData().GetNormals()
+    if normals:
+      arrayMeta = getArrayDescription(normals, context)
+      if arrayMeta:
+        arrayMeta['location'] = 'pointData'
+        arrayMeta['registration'] = 'setNormals'
+        extractedFields.append(arrayMeta)
+
+  # TCoord handling
+  if 'TCoords' in requestedFields:
+    tcoords = dataset.GetPointData().GetTCoords()
+    if tcoords:
+      arrayMeta = getArrayDescription(tcoords, context)
+      if arrayMeta:
+        arrayMeta['location'] = 'pointData'
+        arrayMeta['registration'] = 'setTCoords'
+        extractedFields.append(arrayMeta)
 
 # -----------------------------------------------------------------------------
 # Concrete instance serializers
@@ -283,7 +305,7 @@ def genericActorSerializer(parent, actor, actorId, context, depth):
         dependencies.append(propertyInstance)
         calls.append(['setProperty', [ wrapId(propId) ]])
 
-  if mapperInstance and propertyInstance:
+  if actorVisibility == 0 or (mapperInstance and propertyInstance):
     return {
       'parent': getReferenceId(parent),
       'id': actorId,
@@ -371,40 +393,17 @@ def lookupTableSerializer(parent, lookupTable, lookupTableId, context, depth):
   # No children in this case, so no additions to bindings and return empty list
   # But we do need to add instance
 
-  lookupTableRange = [0, 1]
-  try:
-    # In ParaView 5.3, something is wrong with the wrapping of the
-    # GetRange() method which is supposed to return a pointer to an
-    # array of double.  So we try calling the alternate which takes
-    # the array in which to write, but that doesn't seem to work.  The
-    # same issue happens with the GetHueRange() method and it's
-    # alternate form.
-    lookupTable.GetRange(lookupTableRange)
-  except Exception as inst:
-    # if context.debugAll: print('Failed to GetRange on the lookup table:')
-    # if context.debugAll: print(inst)
-    pass
+  lookupTableRange = lookupTable.GetRange()
 
   lookupTableHueRange = [0.5, 0]
   if hasattr(lookupTable, 'GetHueRange'):
     try:
       lookupTable.GetHueRange(lookupTableHueRange)
     except Exception as inst:
-      # if context.debugAll: print('Failed to GetHueRange on the lookup table:')
-      # if context.debugAll: print(inst)
       pass
 
-  lutSatRange = [0, 1]
-  try:
-    lookupTable.GetSaturationRange(lutSatRange)
-  except Exception as inst:
-    pass
-
-  lutAlphaRange = [0, 1]
-  try:
-    lookupTable.GetAlphaRange(lutAlphaRange)
-  except Exception as inst:
-    pass
+  lutSatRange = lookupTable.GetSaturationRange()
+  lutAlphaRange = lookupTable.GetAlphaRange()
 
   return {
     'parent': getReferenceId(parent),

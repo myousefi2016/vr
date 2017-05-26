@@ -35,6 +35,7 @@ class vtkCellArray;
 class vtkGenericOpenGLResourceFreeCallback;
 class vtkMatrix4x4;
 class vtkMatrix3x3;
+class vtkOpenGLRenderTimer;
 class vtkOpenGLTexture;
 class vtkOpenGLBufferObject;
 class vtkOpenGLVertexBufferObject;
@@ -407,6 +408,7 @@ protected:
 
   // values we use to determine if we need to rebuild shaders
   std::map<const vtkOpenGLHelper *, int> LastLightComplexity;
+  std::map<const vtkOpenGLHelper *, int> LastLightCount;
   std::map<const vtkOpenGLHelper *, vtkTimeStamp> LightComplexityChanged;
 
   int LastSelectionState;
@@ -503,7 +505,7 @@ protected:
   char *VertexShaderCode;
   char *FragmentShaderCode;
   char *GeometryShaderCode;
-  unsigned int TimerQuery;
+  vtkOpenGLRenderTimer *TimerQuery;
 
   // are we currently drawing spheres/tubes
   bool DrawingSpheres(vtkOpenGLHelper &cellBO, vtkActor *actor);

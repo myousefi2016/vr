@@ -112,19 +112,6 @@ if (BUILD_TESTING)
   add_subdirectory(Testing)
 endif ()
 
-# If using OpenVR, automatically copy the required DLL to the bin folder after the Build event
-if (PARAVIEW_USE_OPENVR)
-  add_custom_command(TARGET paraview
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
-      ${CMAKE_SOURCE_DIR}/Externals/openvr_api.dll
-      ${CMAKE_BINARY_DIR}/bin/${CMAKE_CFG_INTDIR}
-    COMMAND ${CMAKE_COMMAND} -E copy
-      ${CMAKE_SOURCE_DIR}/Externals/SDL2.dll
-      ${CMAKE_BINARY_DIR}/bin/${CMAKE_CFG_INTDIR}
-  )
-endif()
-
 #------------------------------------------------------------------------------
 if (APPLE AND NOT PARAVIEW_DO_UNIX_STYLE_INSTALLS)
   # For Macs, we add install rule to package everything that's built into a single

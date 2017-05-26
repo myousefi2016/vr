@@ -414,6 +414,21 @@ void vtkOSPRayRendererNode::Traverse(int operation)
     }
     it->GoToNextItem();
   }
+#if OSPRAY_VERSION_MAJOR > 1 || \
+    (OSPRAY_VERSION_MAJOR == 1 && OSPRAY_VERSION_MINOR >= 2)
+  if (this->GetAmbientSamples(static_cast<vtkRenderer*>(this->Renderable)) > 0)
+  {
+    //hardcode an ambient light for AO since OSP 1.2 stopped doing so.
+    //todo: remove when more user level light controls are ready
+    OSPLight ospAmbient = ospNewLight(oRenderer, "AmbientLight");
+    ospSetString(ospAmbient, "name", "default_ambient");
+    ospSet3f(ospAmbient, "color", 1.f, 1.f, 1.f);
+    ospSet1f(ospAmbient, "intensity",
+             0.13f*vtkOSPRayLightNode::GetLightScale()*vtkMath::Pi());
+    ospCommit(ospAmbient);
+    this->Lights.push_back(ospAmbient);
+  }
+#endif
   OSPData lightArray = ospNewData(this->Lights.size(), OSP_OBJECT,
     (this->Lights.size()?&this->Lights[0]:NULL), 0);
   ospSetData(oRenderer, "lights", lightArray);
@@ -561,7 +576,13 @@ void vtkOSPRayRendererNode::Render(bool prepass)
     if (bbox.IsValid())
     {
       float diam = static_cast<float>(bbox.GetDiagonalLength());
-      ospSet1f(oRenderer, "epsilon", diam*.0005);
+      diam = log(bbox.GetMaxLength());
+      if (diam < 0.f)
+        {
+        diam = 1.f/(fabs(diam));
+        }
+      float epsilon = 1e-5*diam;
+      ospSet1f(oRenderer, "epsilon", epsilon);
       ospSet1f(oRenderer, "aoDistance", diam*0.3);
     }
 
@@ -573,8 +594,13 @@ void vtkOSPRayRendererNode::Render(bool prepass)
       (this->GetCompositeOnGL(static_cast<vtkRenderer*>(this->Renderable))!=0);
 
     double *bg = ren->GetBackground();
-    //todo: request bgAlpha and set to 255.0*ren->GetBackgroundAlpha();
+#if OSPRAY_VERSION_MAJOR > 1 || \
+    (OSPRAY_VERSION_MAJOR == 1 && OSPRAY_VERSION_MINOR >= 3)
+   ospSet4f(oRenderer,"bgColor", bg[0], bg[1], bg[2], ren->GetBackgroundAlpha());
+#else
     ospSet3f(oRenderer,"bgColor", bg[0], bg[1], bg[2]);
+#endif
+
   }
   else
   {
@@ -771,8 +797,11 @@ void vtkOSPRayRendererNode::Render(bool prepass)
 
     const void* rgba = ospMapFrameBuffer(this->OFrameBuffer, OSP_FB_COLOR);
     memcpy((void*)this->Buffer, rgba, this->Size[0]*this->Size[1]*sizeof(char)*4);
+#if OSPRAY_VERSION_MAJOR > 1 || \
+    (OSPRAY_VERSION_MAJOR == 1 && OSPRAY_VERSION_MINOR >= 3)
+    //nothing, already preset
+#else
     //with qt5 VTK requires alpha channel, set it here
-    //see todo comment about bgAlpha above
     unsigned char *pix = this->Buffer;
     for (int i = 0; i < this->Size[0]*this->Size[1]; i++)
     {
@@ -780,6 +809,7 @@ void vtkOSPRayRendererNode::Render(bool prepass)
       *pix = 255*ren->GetBackgroundAlpha();
       pix++;
     }
+#endif
     ospUnmapFrameBuffer(rgba, this->OFrameBuffer);
 
     if (this->ComputeDepth)
