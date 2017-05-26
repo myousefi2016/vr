@@ -19,20 +19,23 @@
 # http://www.boost.org/LICENSE_1_0.txt)
 
 set(OPENVR_ROOT_DIR
-  "${OPENVR_ROOT_DIR}"
+  "${CMAKE_SOURCE_DIR}/ThirdParty/OpenVR"
   CACHE
   PATH
   "Directory to search for OpenVR SDK")
 
-set(OPENVR_HEADERS_ROOT_DIR
-  "${OPENVR_HEADERS_ROOT_DIR}"
-  CACHE
-  PATH
-  "Directory to search for private OpenVR headers")
+#set(OPENVR_HEADERS_ROOT_DIR
+#  "${OPENVR_HEADERS_ROOT_DIR}"
+#  CACHE
+#  PATH
+#  "Directory to search for private OpenVR headers")
 
 set(_root_dirs)
 if(OPENVR_ROOT_DIR)
-  set(_root_dirs "${OPENVR_ROOT_DIR}" "${OPENVR_HEADERS_ROOT_DIR}" "${OPENVR_ROOT_DIR}/public")
+  set(_root_dirs 
+    "${OPENVR_ROOT_DIR}"
+    "${OPENVR_ROOT_DIR}/public"
+  )
 endif()
 
 # todo fails for universal builds
