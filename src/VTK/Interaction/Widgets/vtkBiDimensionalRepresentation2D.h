@@ -131,9 +131,6 @@ protected:
   vtkBiDimensionalRepresentation2D();
   ~vtkBiDimensionalRepresentation2D() VTK_OVERRIDE;
 
-  // Keep track if modifier is set
-  int Modifier;
-
   // Geometry of the lines
   vtkCellArray        *LineCells;
   vtkPoints           *LinePoints;
@@ -147,18 +144,6 @@ protected:
   vtkTextProperty *TextProperty;
   vtkTextMapper   *TextMapper;
   vtkActor2D      *TextActor;
-
-  // Internal variables
-  double P1World[3];
-  double P2World[3];
-  double P3World[3];
-  double P4World[3];
-  double P21World[3];
-  double P43World[3];
-  double T21;
-  double T43;
-  double CenterWorld[3];
-  double StartEventPositionWorld[4];
 
   // Helper method
   void ProjectOrthogonalPoint(double x[4], double y[3], double x1[3], double x2[3], double x21[3],

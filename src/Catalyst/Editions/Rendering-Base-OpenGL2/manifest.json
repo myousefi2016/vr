@@ -416,6 +416,7 @@
         { "class": "vtkRendererDelegate" },
         { "class": "vtkRenderPass" },
         { "class": "vtkRenderState" },
+        { "class": "vtkRenderTimerLog" },
         { "class": "vtkRenderWindow" },
         { "class": "vtkRenderWindowInteractor" },
         { "class": "vtkShaderDeviceAdapter2" },
@@ -956,6 +957,9 @@
     },
     { "name": "vtkgl2ps",
       "path": "VTK/ThirdParty/gl2ps"
+    },
+    { "name": "vtklibharu",
+      "path": "VTK/ThirdParty/libharu"
     }
   ],
   "proxies":[
@@ -1001,7 +1005,6 @@
         "SurfaceRepresentationBase",
         "UniformGridBaseRepresentation",
         "UniformGridRepresentation",
-        "UnstructuredGridBaseRepresentation",
         "UnstructuredGridRepresentation",
         "ViewBase"
       ]

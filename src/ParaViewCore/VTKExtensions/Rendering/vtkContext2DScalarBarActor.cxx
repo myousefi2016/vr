@@ -1,6 +1,7 @@
 #include "vtkContext2DScalarBarActor.h"
 
 #include "vtkAxis.h"
+#include "vtkBoundingRectContextDevice2D.h"
 #include "vtkBrush.h"
 #include "vtkColorTransferFunction.h"
 #include "vtkContext2D.h"
@@ -113,7 +114,8 @@ vtkContext2DScalarBarActor::vtkContext2DScalarBarActor()
 
   this->TitleJustification = VTK_TEXT_LEFT;
 
-  this->ScalarBarThickness = 20;
+  this->ScalarBarThickness = 16;
+  this->ScalarBarLength = 0.33;
 
   this->AutomaticLabelFormat = 1;
 
@@ -144,9 +146,6 @@ vtkContext2DScalarBarActor::vtkContext2DScalarBarActor()
 
   this->Axis = vtkAxis::New();
   this->Axis->SetScene(localScene);
-
-  // Add a little offset between labels and tick marks
-  this->Axis->SetLabelOffset(this->Axis->GetLabelOffset() + 2);
 }
 
 //----------------------------------------------------------------------------
@@ -293,6 +292,13 @@ void vtkContext2DScalarBarActor::GetSize(double size[2], vtkContext2D* painter)
     return;
   }
 
+  // Convert scalar bar length from normalized viewport coordinates to pixels
+  vtkNew<vtkCoordinate> lengthCoord;
+  lengthCoord->SetCoordinateSystemToNormalizedViewport();
+  lengthCoord->SetValue(this->Orientation == VTK_ORIENT_VERTICAL ? 0.0 : this->ScalarBarLength,
+    this->Orientation == VTK_ORIENT_VERTICAL ? this->ScalarBarLength : 0.0);
+  int* lengthOffset = lengthCoord->GetComputedDisplayValue(this->CurrentViewport);
+
   // The scalar bar thickness is defined in terms of points. That is,
   // if the thickness size is 12, that matches the height of a "|"
   // character in a 12 point font.
@@ -304,27 +310,14 @@ void vtkContext2DScalarBarActor::GetSize(double size[2], vtkContext2D* painter)
   painter->ComputeStringBounds("|", bounds);
   double thickness = bounds[3];
 
-  int* displayPosition = this->PositionCoordinate->GetComputedDisplayValue(this->CurrentViewport);
-  int* displayPosition2 = this->Position2Coordinate->GetComputedDisplayValue(this->CurrentViewport);
-
-  size[0] = displayPosition2[0] - displayPosition[0];
-  if (size[0] < 0.0)
-  {
-    size[0] = -size[0];
-  }
-
-  size[1] = displayPosition2[1] - displayPosition[1];
-  if (size[1] < 0.0)
-  {
-    size[1] = -size[1];
-  }
-
   if (this->Orientation == VTK_ORIENT_VERTICAL)
   {
     size[0] = thickness;
+    size[1] = lengthOffset[1];
   }
   else
   {
+    size[0] = lengthOffset[0];
     size[1] = thickness;
   }
 }
@@ -767,20 +760,54 @@ void vtkContext2DScalarBarActor::PaintAxis(vtkContext2D* painter, double size[2]
 {
   vtkRectf rect = this->GetColorBarRect(size);
 
+  vtkWindow* renWin = this->CurrentViewport->GetVTKWindow();
+  int tileScale[2];
+  renWin->GetTileScale(tileScale);
+
+  // Use the length of the character "|" at the label font size for various
+  // measurements.
+  float bounds[4];
+  painter->ApplyTextProp(this->LabelTextProperty);
+  painter->ComputeStringBounds("|", bounds);
+  float pipeHeight = bounds[3];
+
+  // Compute a horizontal shift amount for tick marks when the orientation is
+  // vertical.
+  float axisShift = 0.25 * pipeHeight;
+
+  // Compute tick lengths and label offsets based on the label font size
+  float tickLength = 0.75 * pipeHeight;
+  if (this->Orientation == VTK_ORIENT_VERTICAL)
+  {
+    this->Axis->SetTickLength(tickLength);
+
+    // Offset the labels from the tick marks a bit
+    float labelOffset = tickLength + (0.5 * tickLength);
+    this->Axis->SetLabelOffset(labelOffset);
+  }
+  else
+  {
+    this->Axis->SetTickLength(tickLength);
+
+    float labelOffset = tickLength + (0.3 * tickLength);
+    this->Axis->SetLabelOffset(labelOffset);
+  }
+
+  // Position the axis
   if (this->TextPosition == PrecedeScalarBar)
   {
     // Left
     if (this->Orientation == VTK_ORIENT_VERTICAL)
     {
-      this->Axis->SetPoint1(rect.GetX() - 2, rect.GetY());
-      this->Axis->SetPoint2(rect.GetX() - 2, rect.GetY() + rect.GetHeight());
+      this->Axis->SetPoint1(rect.GetX() + axisShift, rect.GetY());
+      this->Axis->SetPoint2(rect.GetX() + axisShift, rect.GetY() + rect.GetHeight());
       this->Axis->SetPosition(vtkAxis::LEFT);
     }
     else
     {
       // Bottom
-      this->Axis->SetPoint1(rect.GetX(), rect.GetY());
-      this->Axis->SetPoint2(rect.GetX() + rect.GetWidth(), rect.GetY());
+      this->Axis->SetPoint1(rect.GetX(), rect.GetY() + axisShift);
+      this->Axis->SetPoint2(rect.GetX() + rect.GetWidth(), rect.GetY() + axisShift);
       this->Axis->SetPosition(vtkAxis::BOTTOM);
     }
   }
@@ -789,15 +816,17 @@ void vtkContext2DScalarBarActor::PaintAxis(vtkContext2D* painter, double size[2]
     // Right
     if (this->Orientation == VTK_ORIENT_VERTICAL)
     {
-      this->Axis->SetPoint1(rect.GetX() + rect.GetWidth() + 2, rect.GetY());
-      this->Axis->SetPoint2(rect.GetX() + rect.GetWidth() + 2, rect.GetY() + rect.GetHeight());
+      this->Axis->SetPoint1(rect.GetX() + rect.GetWidth() - axisShift, rect.GetY());
+      this->Axis->SetPoint2(
+        rect.GetX() + rect.GetWidth() - axisShift, rect.GetY() + rect.GetHeight());
       this->Axis->SetPosition(vtkAxis::RIGHT);
     }
     else
     {
       // Top
-      this->Axis->SetPoint1(rect.GetX(), rect.GetY() + rect.GetHeight());
-      this->Axis->SetPoint2(rect.GetX() + rect.GetWidth(), rect.GetY() + rect.GetHeight());
+      this->Axis->SetPoint1(rect.GetX(), rect.GetY() + rect.GetHeight() - axisShift);
+      this->Axis->SetPoint2(
+        rect.GetX() + rect.GetWidth(), rect.GetY() + rect.GetHeight() - axisShift);
       this->Axis->SetPosition(vtkAxis::TOP);
     }
   }
@@ -897,7 +926,9 @@ void vtkContext2DScalarBarActor::PaintTitle(vtkContext2D* painter, double size[2
   float titleWidth = titleBounds[2];
   float titleHeight = titleBounds[3];
 
-  vtkRectf axisRect = this->Axis->GetBoundingRect(painter);
+  // vtkAxis::GetBoundingRect() is not accurate.  Compute it ourselves.
+  vtkRectf axisRect =
+    vtkBoundingRectContextDevice2D::GetBoundingRect(this->Axis, this->CurrentViewport);
 
   vtkRectf rect = this->GetColorBarRect(size);
   float titleX = rect.GetX() + 0.5 * rect.GetWidth();
@@ -914,15 +945,26 @@ void vtkContext2DScalarBarActor::PaintTitle(vtkContext2D* painter, double size[2
     }
     if (this->GetTextPosition() == vtkContext2DScalarBarActor::PrecedeScalarBar)
     {
-      titleY = axisRect.GetY() - axisRect.GetHeight() - titleHeight;
+      titleY = axisRect.GetY() - titleHeight - 0.25 * titleHeight;
     }
     else
     {
-      titleY = axisRect.GetY() + axisRect.GetHeight() + rect.GetHeight();
+      // Handle zero-height axis.
+      if (axisRect.GetHeight() < 1.0)
+      {
+        axisRect.SetHeight(rect.GetHeight());
+      }
+      titleY = axisRect.GetY() + axisRect.GetHeight() + 0.25 * titleHeight;
+      std::cout << axisRect << std::endl;
     }
   }
   else // Vertical orientation
   {
+    // Handle zero-width axis.
+    if (axisRect.GetWidth() < 1.0)
+    {
+      axisRect.SetWidth(0.25 * rect.GetWidth());
+    }
     if (this->GetTitleJustification() == VTK_TEXT_LEFT)
     {
       titleY = 0.0;
@@ -984,6 +1026,16 @@ bool vtkContext2DScalarBarActor::Paint(vtkContext2D* painter)
   double size[2];
   this->GetSize(size, painter);
 
+  // Scale only the scalar bar length.
+  if (this->Orientation == VTK_ORIENT_VERTICAL)
+  {
+    size[1] *= tileScale[1];
+  }
+  else
+  {
+    size[0] *= tileScale[0];
+  }
+
   // Paint the various components
   vtkNew<vtkTransform2D> tform;
   tform->Translate(displayPosition[0], displayPosition[1]);
@@ -1000,6 +1052,13 @@ bool vtkContext2DScalarBarActor::Paint(vtkContext2D* painter)
   painter->PopMatrix();
 
   return false;
+}
+
+//----------------------------------------------------------------------------
+vtkRectf vtkContext2DScalarBarActor::GetBoundingRect()
+{
+  return vtkBoundingRectContextDevice2D::GetBoundingRect(
+    this->ScalarBarItem, this->CurrentViewport);
 }
 
 //----------------------------------------------------------------------------

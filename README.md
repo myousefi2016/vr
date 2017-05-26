@@ -2,10 +2,10 @@
 see also [Paraview's Wiki](http://www.paraview.org/Wiki/ParaView:Build_And_Install)
 
 ## Preparation:
-* Install [Qt 5.8](https://www.qt.io/download-open-source) (both 32 and 64 bit versions)
+* Install [Qt 5.8 64bit](https://www.qt.io/download-open-source) (make sure it's 64bit version)
 	* Append `C:\Qt\5.8\msvc2015_64\bin` to `PATH` System Environment Variable
 	* Substitute `C:\Qt\5.8\msvc2015_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake` with the file found [here](https://drive.google.com/file/d/0ByDlFL3T6833eWpuaXU2dWdhNDg/view?usp=sharing) *([relevant link](https://codereview.qt-project.org/#/c/184321/2/src/corelib/Qt5CoreMacros.cmake))*
-* Install [CMake 3.8](https://cmake.org/download/)
+* Install [CMake 3.8.1](https://cmake.org/download/)
 * Install [Visual Studio 2015 Community](https://drive.google.com/open?id=0BzDYQBRp4j3nZS04R0NKdmVJbFE)
 	* Install `Qt Visual Studio Tools` from Extensions and Updates.
 	* Restart VS as requested

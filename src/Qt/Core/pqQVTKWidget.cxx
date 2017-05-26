@@ -89,6 +89,9 @@ pqQVTKWidget::pqQVTKWidget(QWidget* parentObject, Qt::WindowFlags f)
 
 #if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
   this->connect(this, SIGNAL(resized()), SLOT(updateSizeProperties()));
+
+  // disable HiDPI if we are running tests
+  this->setEnableHiDPI(getenv("DASHBOARD_TEST_FROM_CTEST") ? false : true);
 #endif
 }
 
@@ -177,6 +180,27 @@ void pqQVTKWidget::setSession(vtkSMSession* session)
 //----------------------------------------------------------------------------
 void pqQVTKWidget::doDeferredRender()
 {
+#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
+  if (this->canRender())
+  {
+    this->Superclass::doDeferredRender();
+  }
+#endif
+}
+
+//----------------------------------------------------------------------------
+bool pqQVTKWidget::renderVTK()
+{
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+  return this->canRender() ? this->Superclass::renderVTK() : false;
+#else
+  return false;
+#endif
+}
+
+//----------------------------------------------------------------------------
+bool pqQVTKWidget::canRender()
+{
   // despite our best efforts, it's possible that the paint event happens while
   // the server manager is busy processing some other request that yields
   // progress (e.g. pvcrs.UndoRedo2 test).
@@ -184,15 +208,15 @@ void pqQVTKWidget::doDeferredRender()
   // rendering in those cases.
   if (this->ViewProxy && this->ViewProxy->GetSession()->GetPendingProgress())
   {
-    return;
+    return false;
   }
 
   if (this->Session && this->Session->GetPendingProgress())
   {
-    return;
+    return false;
   }
 
-  this->Superclass::doDeferredRender();
+  return true;
 }
 
 //----------------------------------------------------------------------------

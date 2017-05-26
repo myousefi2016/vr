@@ -453,9 +453,7 @@
             <Property name="WindowLocation" />
           </PropertyGroup>
           <Property name="Position" panel_visibility="never"/>
-          <Property name="Position2" panel_visibility="never"/>
           <Property name="PositionInfo" />
-          <Property name="Position2Info" />
         </ExposedProperties>
       </SubProxy>
       <SubProxy>
@@ -518,6 +516,7 @@
             <Property name="NanAnnotation" panel_visibility="advanced" />
             <Property name="TextPosition" />
             <Property name="ScalarBarThickness" />
+            <Property name="ScalarBarLength" />
           </PropertyGroup>
         </ExposedProperties>
       </SubProxy>
@@ -1410,20 +1409,6 @@
                             name="PositionInfo">
         <SimpleDoubleInformationHelper />
       </DoubleVectorProperty>
-      <DoubleVectorProperty command="SetPosition2"
-                            default_values="0.07 0.35"
-                            information_property="Position2Info"
-                            name="Position2"
-                            number_of_elements="2">
-        <DoubleRangeDomain max="1 1"
-                           min="0 0"
-                           name="range" />
-      </DoubleVectorProperty>
-      <DoubleVectorProperty command="GetPosition2"
-                            information_only="1"
-                            name="Position2Info">
-        <SimpleDoubleInformationHelper />
-      </DoubleVectorProperty>
       <IntVectorProperty command="SetAutoOrient"
                          default_values="1"
                          name="AutoOrient"
@@ -1466,19 +1451,19 @@
                          name="WindowLocation"
                          number_of_elements="1">
         <EnumerationDomain name="enum">
-          <Entry text="Any Location"
+          <Entry text="AnyLocation"
                  value="0" />
-          <Entry text="Lower Left Corner"
+          <Entry text="LowerLeftCorner"
                  value="1" />
-          <Entry text="Lower Right Corner"
+          <Entry text="LowerRightCorner"
                  value="2" />
-          <Entry text="Lower Center"
+          <Entry text="LowerCenter"
                  value="3" />
-          <Entry text="Upper Left Corner"
+          <Entry text="UpperLeftCorner"
                  value="4" />
-          <Entry text="Upper Right Corner"
+          <Entry text="UpperRightCorner"
                  value="5" />
-          <Entry text="Upper Center"
+          <Entry text="UpperCenter"
                  value="6" />
         </EnumerationDomain>
         <Documentation>Specify placement of the scalar bar actor.</Documentation>
