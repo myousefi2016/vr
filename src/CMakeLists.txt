@@ -63,16 +63,8 @@ if (NOT BUILD_SHARED_LIBS)
 endif ()
 
 #-------------------------------------------------------------------------------
-set (ParaView_CMAKE_BINARY_DIR "${ParaView_BINARY_DIR}/CMake")
 set (ParaView_CMAKE_DIR "${ParaView_SOURCE_DIR}/CMake")
-
-#-------------------------------------------------------------------------------
-# Set up CMAKE_MODULE_PATH
-set (CMAKE_MODULE_PATH
-  ${CMAKE_MODULE_PATH}
-  ${ParaView_CMAKE_BINARY_DIR}
-  ${ParaView_CMAKE_DIR}
-)
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ParaView_CMAKE_DIR})
 
 # Use the new version of the variable names for output of build process.
 # Make sure these are consistent with what VTK sets.
@@ -201,7 +193,7 @@ option(PARAVIEW_BUILD_QT_GUI "Enable ParaView Qt-based client" ON)
 option(PARAVIEW_USE_VTKM "Build ParaView with VTKm many-core filters" OFF)
 option(PARAVIEW_USE_MPI "Enable MPI support for parallel computing" OFF)
 option(PARAVIEW_USE_OSPRAY "Build ParaView with OSPRay Ray Traced rendering" OFF)
-option(PARAVIEW_USE_OPENVR "Build ParaView with OpenVR rendering" OFF)
+option(PARAVIEW_USE_OPENVR "Build ParaView with OpenVR rendering" ON)
 set(VTK_OPENVR_OBJECT_FACTORY OFF
     CACHE INTERNAL "ParaView requires the OpenVR factory be disabled" FORCE)
 option(PARAVIEW_USE_VISITBRIDGE "Build ParaView with VisIt readers." OFF)
@@ -487,21 +479,6 @@ endif()
 if (PARAVIEW_BUILD_QT_GUI)
   # Request the pqApplicationComponents module.
   list (APPEND pqApplicationComponents_REQUEST_BY "Option PARAVIEW_BUILD_QT_GUI")
-
-  if (APPLE)
-    # Enable high resolution when using Qt5, disable it when using Qt4
-    if (${PARAVIEW_QT_VERSION} EQUAL 5)
-      set(MAC_HIGH_RESOLUTION_CAPABLE "true")
-    else()
-      set(MAC_HIGH_RESOLUTION_CAPABLE "false")
-    endif()
-    file(MAKE_DIRECTORY ${ParaView_CMAKE_BINARY_DIR})
-    configure_file(
-      "${ParaView_CMAKE_DIR}/MacOSXBundleInfo.plist.in.in"
-      "${ParaView_CMAKE_BINARY_DIR}/MacOSXBundleInfo.plist.in"
-      @ONLY
-    )
-  endif()
 endif()
 
 #------------------------------------------------------------------------------
