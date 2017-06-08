@@ -43,6 +43,14 @@ public:
   void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
+  //@{
+  /**
+  * Override Swiping (Touchpad) to increment/decrement numbers.
+  */
+  void OnSwipe() VTK_OVERRIDE;
+  void OnLongTap() VTK_OVERRIDE;
+  //@}
+
 protected:
   vtkOpenVRInteractorStyleDial();
   ~vtkOpenVRInteractorStyleDial() VTK_OVERRIDE;
