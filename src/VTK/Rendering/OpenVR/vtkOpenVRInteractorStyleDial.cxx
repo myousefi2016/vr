@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleDialTouchpad.cxx
+Module:    vtkOpenVRInteractorStyleDial.cxx
 
 Copyright (c) Ventura Romero
 All rights reserved.
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRInteractorStyleDialTouchpad.h"
+#include "vtkOpenVRInteractorStyleDial.h"
 
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
@@ -21,38 +21,45 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 #include <valarray>
+#include "vtkRenderWindowInteractor3D.h"
 
-vtkStandardNewMacro(vtkOpenVRInteractorStyleDialTouchpad);
+vtkStandardNewMacro(vtkOpenVRInteractorStyleDial);
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleDialTouchpad::vtkOpenVRInteractorStyleDialTouchpad()
+vtkOpenVRInteractorStyleDial::vtkOpenVRInteractorStyleDial()
 {
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleDialTouchpad::~vtkOpenVRInteractorStyleDialTouchpad()
+vtkOpenVRInteractorStyleDial::~vtkOpenVRInteractorStyleDial()
 {
 }
 
 //----------------------------------------------------------------------------
 //TODO add behaviour if needed
-void vtkOpenVRInteractorStyleDialTouchpad::OnRightButtonDown()
+void vtkOpenVRInteractorStyleDial::OnRightButtonDown()
 {
-	int x = this->Interactor->GetEventPosition()[0];
-	int y = this->Interactor->GetEventPosition()[1];
+	//Downcast to a 3D Interactor.
+	vtkRenderWindowInteractor3D *rwi =
+		static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);
 
-	this->FindPokedRenderer(x, y);
-	if (this->CurrentRenderer == NULL)
-	{
-		return;
-	}
+	//int x = this->Interactor->GetEventPosition()[0];
+	//int y = this->Interactor->GetEventPosition()[1];
+	float x = rwi->GetTouchPadPosition()[0];	// Values between -1 and 1.
+	float y = rwi->GetTouchPadPosition()[1];
 
-	double radius = sqrt(x*x + y*y);
-	int region = int(5. * atan2(x, y) / vtkMath::Pi);	// 10 regions. Integer values in range [0, 9]
-														// Clockwise, starting in (x,y) = (0,1)
+	//this->FindPokedRenderer(x, y);
+	//if (this->CurrentRenderer == NULL)
+	//{
+	//	return;
+	//}
+
+	float radius = sqrt(x*x + y*y);
+	int region = int(5. * atan2(x, y) / vtkMath::Pi());	// 10 regions. Integer values in range [0, 9]
+	// Clockwise, starting in (x,y) = (0,1)
 	if(radius > .75)
 	{
-        //Display number, which is equal to region number
+		//Display number, which is equal to region number
 		vtkDebugMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 	}
 	else
@@ -66,11 +73,14 @@ void vtkOpenVRInteractorStyleDialTouchpad::OnRightButtonDown()
 			vtkDebugMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
 		}
 	}
+
+	vr::VREvent_ButtonTouch
+
 }
 
 //----------------------------------------------------------------------------
 //TODO add behaviour
-void vtkOpenVRInteractorStyleDialTouchpad::OnRightButtonUp()
+void vtkOpenVRInteractorStyleDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 
@@ -85,7 +95,7 @@ void vtkOpenVRInteractorStyleDialTouchpad::OnRightButtonUp()
 	*/
 }
 
-void vtkOpenVRInteractorStyleDialTouchpad::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStyleDial::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleDialTouchpad.h
+Module:    vtkOpenVRInteractorStyleDial.h
 
 Copyright (c) Ventura Romero
 All rights reserved.
@@ -13,22 +13,23 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStyleDialTouchpad
- * @brief   extended from vtkInteractorStyle3D to override command methods
+ * @class   vtkOpenVRInteractorStyleDial
+ * @brief   extended from vtkInteractorStyle3D to override command methods on Touchpad.
+ *          Divides touchpad in circular crown sectors for numbers 0-9.
 */
 
-#ifndef vtkOpenVRInteractorStyleDialTouchpad_h
-#define vtkOpenVRInteractorStyleDialTouchpad_h
+#ifndef vtkOpenVRInteractorStyleDial_h
+#define vtkOpenVRInteractorStyleDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 
 #include "vtkInteractorStyle3D.h"
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleDialTouchpad : public vtkInteractorStyle3D
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleDial : public vtkInteractorStyle3D
 {
 public:
-  static vtkOpenVRInteractorStyleDialTouchpad *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleDialTouchpad, vtkInteractorStyle3D);
+  static vtkOpenVRInteractorStyleDial *New();
+  vtkTypeMacro(vtkOpenVRInteractorStyleDial, vtkInteractorStyle3D);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -43,12 +44,12 @@ public:
   //@}
 
 protected:
-  vtkOpenVRInteractorStyleDialTouchpad();
-  ~vtkOpenVRInteractorStyleDialTouchpad() VTK_OVERRIDE;
+  vtkOpenVRInteractorStyleDial();
+  ~vtkOpenVRInteractorStyleDial() VTK_OVERRIDE;
 
 private:
-  vtkOpenVRInteractorStyleDialTouchpad(const vtkOpenVRInteractorStyleDialTouchpad&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleDialTouchpad&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStyleDial(const vtkOpenVRInteractorStyleDial&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStyleDial&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif
