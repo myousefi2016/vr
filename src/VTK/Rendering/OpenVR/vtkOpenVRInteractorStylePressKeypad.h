@@ -1,9 +1,9 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleKeypad.h
+Module:    vtkOpenVRInteractorStylePressKeypad.h
 
-Copyright (c) Ventura Romero
+Copyright (c) Ventura Romero Mendo
 All rights reserved.
 See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
 
@@ -13,23 +13,23 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStyleDialTouchpad
- * @brief   extended from vtkInteractorStyle3D to override command methods on Touchpad.
+ * @class   vtkOpenVRInteractorStylePressDialTouchpad
+ * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
  *          Divides touchpad in squared sectors for numbers 0-9.
 */
 
-#ifndef vtkOpenVRInteractorStyleKeypad_h
-#define vtkOpenVRInteractorStyleKeypad_h
+#ifndef vtkOpenVRInteractorStylePressKeypad_h
+#define vtkOpenVRInteractorStylePressKeypad_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 
 #include "vtkOpenVRInteractorStyle.h"
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleKeypad : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeypad : public vtkOpenVRInteractorStyle
 {
 public:
-  static vtkOpenVRInteractorStyleKeypad *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleKeypad, vtkInteractorStyle3D);
+  static vtkOpenVRInteractorStylePressKeypad *New();
+  vtkTypeMacro(vtkOpenVRInteractorStylePressKeypad, vtkInteractorStyle3D);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -43,12 +43,12 @@ public:
   //@}
 
 protected:
-  vtkOpenVRInteractorStyleKeypad();
-  ~vtkOpenVRInteractorStyleKeypad() VTK_OVERRIDE;
+  vtkOpenVRInteractorStylePressKeypad();
+  ~vtkOpenVRInteractorStylePressKeypad() VTK_OVERRIDE;
 
 private:
-  vtkOpenVRInteractorStyleKeypad(const vtkOpenVRInteractorStyleKeypad&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleKeypad&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStylePressKeypad(const vtkOpenVRInteractorStylePressKeypad&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStylePressKeypad&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif

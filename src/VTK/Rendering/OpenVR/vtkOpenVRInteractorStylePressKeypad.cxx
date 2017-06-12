@@ -1,9 +1,9 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleDialTouchpad.cxx
+Module:    vtkOpenVRInteractorStylePressKeypad.cxx
 
-Copyright (c) Ventura Romero
+Copyright (c) Ventura Romero Mendo
 All rights reserved.
 See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
 
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRInteractorStyleKeypad.h"
+#include "vtkOpenVRInteractorStylePressKeypad.h"
 
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
@@ -23,20 +23,20 @@ PURPOSE.  See the above copyright notice for more information.
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
-vtkStandardNewMacro(vtkOpenVRInteractorStyleKeypad);
+vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeypad);
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleKeypad::vtkOpenVRInteractorStyleKeypad()
+vtkOpenVRInteractorStylePressKeypad::vtkOpenVRInteractorStylePressKeypad()
 {
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleKeypad::~vtkOpenVRInteractorStyleKeypad()
+vtkOpenVRInteractorStylePressKeypad::~vtkOpenVRInteractorStylePressKeypad()
 {
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleKeypad::OnRightButtonDown()
+void vtkOpenVRInteractorStylePressKeypad::OnRightButtonDown()
 {
 	//Downcast to a 3D Interactor.
 	vtkRenderWindowInteractor3D *rwi =
@@ -81,12 +81,12 @@ void vtkOpenVRInteractorStyleKeypad::OnRightButtonDown()
 
 //----------------------------------------------------------------------------
 //TODO add behaviour if needed
-void vtkOpenVRInteractorStyleKeypad::OnRightButtonUp()
+void vtkOpenVRInteractorStylePressKeypad::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonUp behavior
 }
 
-void vtkOpenVRInteractorStyleKeypad::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStylePressKeypad::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

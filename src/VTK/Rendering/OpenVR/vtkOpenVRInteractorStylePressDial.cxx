@@ -1,9 +1,9 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleDial.cxx
+Module:    vtkOpenVRInteractorStylePressDial.cxx
 
-Copyright (c) Ventura Romero
+Copyright (c) Ventura Romero Mendo
 All rights reserved.
 See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
 
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRInteractorStyleDial.h"
+#include "vtkOpenVRInteractorStylePressDial.h"
 
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
@@ -23,21 +23,21 @@ PURPOSE.  See the above copyright notice for more information.
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
-vtkStandardNewMacro(vtkOpenVRInteractorStyleDial);
+vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleDial::vtkOpenVRInteractorStyleDial()
+vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 {
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStyleDial::~vtkOpenVRInteractorStyleDial()
+vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 {
 }
 
 //----------------------------------------------------------------------------
 //TODO add behaviour if needed
-void vtkOpenVRInteractorStyleDial::OnRightButtonDown()
+void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 {
 	//Downcast to a 3D Interactor.
 	vtkRenderWindowInteractor3D *rwi =
@@ -77,7 +77,7 @@ void vtkOpenVRInteractorStyleDial::OnRightButtonDown()
 
 //----------------------------------------------------------------------------
 //TODO add behaviour
-void vtkOpenVRInteractorStyleDial::OnRightButtonUp()
+void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 
@@ -92,48 +92,7 @@ void vtkOpenVRInteractorStyleDial::OnRightButtonUp()
 	*/
 }
 
-void vtkOpenVRInteractorStyleDial::OnSwipe()	//adapted from vtkInteractorStyle3D::OnMouseMove()
-{
-	//NOTE May be useful on the future: vr::VREvent_ButtonTouch
-
-	//Do I need another function where to set state == VTKIS_SWIPE ? I think so.
-	switch(this->State)
-	{
-		//case VTKIS_ ...
-	}
-
-}
-
-void vtkOpenVRInteractorStyleDial::OnLongTap()
-{
-	int x = this->Interactor->GetEventPosition()[0];
-	int y = this->Interactor->GetEventPosition()[1];
-	this->FindPokedRenderer(x, y);
-	if (this->CurrentRenderer == NULL)
-	{
-		return;
-	}
-
-
-
-
-
-	//
-	/*this->GrabFocus(this->EventCallbackCommand);
-	vtkCamera* cam = this->CurrentRenderer->GetActiveCamera();
-	switch (this->State)
-	{
-	case VTKIS_REVERSEFLY:
-		this->State = VTKIS_FORWARDFLY;
-		break;
-	default:
-		this->SetupMotionVars(cam);
-		this->StartForwardFly();
-		break;
-	}*/
-}
-
-void vtkOpenVRInteractorStyleDial::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

@@ -8,8 +8,11 @@ set(Module_SRCS
   vtkOpenVRCamera.cxx
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
-  vtkOpenVRInteractorStyleDial.cxx
-  vtkOpenVRInteractorStyleKeypad.cxx
+  vtkOpenVRInteractorStylePressDial.cxx
+  vtkOpenVRInteractorStylePressKeypad.cxx
+  vtkOpenVRInteractorStyleSwipeDial.cxx
+  vtkOpenVRInteractorStyleSwipeKeypad.cxx
+  vtkOpenVRInteractorStyleSwitchInput.cxx
   vtkOpenVRModel.cxx
   vtkOpenVROverlay.cxx
   vtkOpenVRPropPicker.cxx
@@ -22,8 +25,11 @@ set_source_files_properties(
   vtkOpenVRCamera
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
-  vtkOpenVRInteractorStyleDial
-  vtkOpenVRInteractorStyleKeypad
+  vtkOpenVRInteractorStylePressDial
+  vtkOpenVRInteractorStylePressKeypad
+  vtkOpenVRInteractorStyleSwipeDial
+  vtkOpenVRInteractorStyleSwipeKeypad
+  vtkOpenVRInteractorStyleSwitchInput
   vtkOpenVRModel
   vtkOpenVROverlay
   vtkOpenVRPropPicker
