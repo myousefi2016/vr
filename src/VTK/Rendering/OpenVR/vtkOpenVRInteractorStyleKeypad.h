@@ -23,9 +23,9 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 
-#include "vtkInteractorStyle3D.h"
+#include "vtkOpenVRInteractorStyle.h"
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleKeypad : public vtkInteractorStyle3D
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleKeypad : public vtkOpenVRInteractorStyle
 {
 public:
   static vtkOpenVRInteractorStyleKeypad *New();

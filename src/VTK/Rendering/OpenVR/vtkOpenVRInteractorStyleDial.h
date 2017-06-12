@@ -23,9 +23,9 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 
-#include "vtkInteractorStyle3D.h"
+#include "vtkOpenVRInteractorStyle.h"
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleDial : public vtkInteractorStyle3D
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleDial : public vtkOpenVRInteractorStyle
 {
 public:
   static vtkOpenVRInteractorStyleDial *New();
@@ -46,6 +46,7 @@ public:
   //@{
   /**
   * Override Swiping (Touchpad) to increment/decrement numbers.
+  * SWIPING MAY BE IMPLEMENTED IN A NEW CLASS!
   */
   void OnSwipe() VTK_OVERRIDE;
   void OnLongTap() VTK_OVERRIDE;
