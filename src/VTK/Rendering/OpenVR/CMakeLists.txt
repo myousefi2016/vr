@@ -12,7 +12,6 @@ set(Module_SRCS
   vtkOpenVRInteractorStylePressKeypad.cxx
   vtkOpenVRInteractorStyleSwipeDial.cxx
   vtkOpenVRInteractorStyleSwipeKeypad.cxx
-  vtkOpenVRInteractorStyleSwitchInput.cxx
   vtkOpenVRModel.cxx
   vtkOpenVROverlay.cxx
   vtkOpenVRPropPicker.cxx
@@ -29,7 +28,6 @@ set_source_files_properties(
   vtkOpenVRInteractorStylePressKeypad
   vtkOpenVRInteractorStyleSwipeDial
   vtkOpenVRInteractorStyleSwipeKeypad
-  vtkOpenVRInteractorStyleSwitchInput
   vtkOpenVRModel
   vtkOpenVROverlay
   vtkOpenVRPropPicker

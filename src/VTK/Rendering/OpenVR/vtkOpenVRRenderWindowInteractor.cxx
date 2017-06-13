@@ -32,6 +32,8 @@
 #include "vtkOpenVRCamera.h"
 #include "vtkPropPicker3D.h"
 #include "vtkTextureObject.h"
+//New Interactor style includes:
+#include "vtkOpenVRInteractorStylePressDial.h"
 
 vtkStandardNewMacro(vtkOpenVRRenderWindowInteractor);
 
@@ -43,8 +45,9 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 // Construct object so that light follows camera motion.
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
-    vtkNew<vtkOpenVRInteractorStyle> style;
-    this->SetInteractorStyle(style.Get());
+    //vtkNew<vtkOpenVRInteractorStyle> style;
+	vtkNew<vtkOpenVRInteractorStylePressDial> style;
+	this->SetInteractorStyle(style.Get());
 }
 
 //----------------------------------------------------------------------------

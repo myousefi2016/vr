@@ -21,6 +21,7 @@
  * TO END DESCRIPTION, USE TEMPLATE FROM vtkInteractorStyleSwitch
  * @sa
  * vtkOpenVRInteractorStylePressDial vtkOpenVRInteractorStylePressKeypad
+ * vtkOpenVRInteractorStyleSwipeDial vtkOpenVRInteractorStyleSwipeKeypad
 */
 
 #ifndef vtkOpenVRInteractorStyleSwitchInput_h
