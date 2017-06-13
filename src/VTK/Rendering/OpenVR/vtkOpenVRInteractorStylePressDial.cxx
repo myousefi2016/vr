@@ -81,21 +81,23 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 }
 
 //----------------------------------------------------------------------------
-//TODO add behaviour
 void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
-
-	/* PREVIOUS CODE.
-	  vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
-	  if (!renWin)
-	  {
-	    return;
-	  }
-	  vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
-	  ovl->LoadNextCameraPose();
-	*/
 }
+
+//TODO get a white pointer over the touchpad.
+void vtkOpenVRInteractorStylePressDial::OnTap()
+{
+	vtkErrorMacro(<< "Touchpad tapped!");	// Just for debugging purposes.
+	
+	/*int pointer = this->Interactor->GetPointerIndex();
+
+	this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+		this->Interactor->GetEventPositions(pointer)[1]);*/
+
+}
+
 
 void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)
 {

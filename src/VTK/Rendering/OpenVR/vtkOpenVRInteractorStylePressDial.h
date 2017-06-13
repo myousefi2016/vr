@@ -43,8 +43,12 @@ public:
   void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
+  //Delete trigger behaviour brom base class.
   void OnLeftButtonDown() VTK_OVERRIDE {};
   void OnLeftButtonUp() VTK_OVERRIDE {};
+
+  //Launch touchpad touched event
+  void OnTap() VTK_OVERRIDE;
 
 protected:
   vtkOpenVRInteractorStylePressDial();
