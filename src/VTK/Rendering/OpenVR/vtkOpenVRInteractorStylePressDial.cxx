@@ -55,8 +55,12 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 	//}
 
 	float radius = sqrt(x*x + y*y);
-	int region = int(5. * atan2(x, y) / vtkMath::Pi());	// 10 regions. Integer values in range [0, 9]
-	// Clockwise, starting in (x,y) = (0,1)
+	//int region = int(5. * atan2(x, y) / vtkMath::Pi());
+	//(x > 0 ? x : (2 * vtkMath::Pi() + x)) * 360 / (2 * vtkMath::Pi());
+
+	int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
+	region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
+	
 	if(radius > .75)
 	{
 		//Display number, which is equal to region number
@@ -70,6 +74,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 		}
 		else	// region in range [5,9]
 		{
+			//Negative angles
 			vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
 		}
 	}
