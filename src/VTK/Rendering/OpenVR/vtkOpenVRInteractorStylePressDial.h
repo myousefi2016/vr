@@ -43,6 +43,9 @@ public:
   void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
+  void OnLeftButtonDown() VTK_OVERRIDE {};
+  void OnLeftButtonUp() VTK_OVERRIDE {};
+
 protected:
   vtkOpenVRInteractorStylePressDial();
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;

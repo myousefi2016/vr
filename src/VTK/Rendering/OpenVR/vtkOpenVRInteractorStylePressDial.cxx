@@ -60,17 +60,17 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 	if(radius > .75)
 	{
 		//Display number, which is equal to region number
-		vtkDebugMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
+		vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 	}
 	else
 	{
 		if(region <= 4)
 		{
-			vtkDebugMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
+			vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
 		}
 		else	// region in range [5,9]
 		{
-			vtkDebugMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
+			vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
 		}
 	}
 }
