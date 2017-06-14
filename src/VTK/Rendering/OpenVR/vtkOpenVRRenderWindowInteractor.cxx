@@ -45,8 +45,8 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 // Construct object so that light follows camera motion.
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
-    //vtkNew<vtkOpenVRInteractorStyle> style;
-	vtkNew<vtkOpenVRInteractorStylePressDial> style;
+    vtkNew<vtkOpenVRInteractorStyle> style;
+	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
 	this->SetInteractorStyle(style.Get());
 }
 
@@ -271,7 +271,9 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
       if (pHMD->GetTrackedDeviceClass(tdi) ==
           vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
             (event.eventType == vr::VREvent_ButtonPress ||
-             event.eventType == vr::VREvent_ButtonUnpress))
+             event.eventType == vr::VREvent_ButtonUnpress ||
+			 event.eventType == vr::VREvent_ButtonTouch ||
+			 event.eventType == vr::VREvent_ButtonUntouch))
       {
         vr::ETrackedControllerRole role = pHMD->GetControllerRoleForTrackedDeviceIndex(tdi);
 
@@ -339,6 +341,20 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
             this->FourthButtonReleaseEvent();
           }
         }
+				if (event.eventType == vr::VREvent_ButtonTouch)
+				{
+					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
+					{
+						//this->TouchPadTouchEvent();
+					}
+				}
+				if (event.eventType == vr::VREvent_ButtonUntouch)
+				{
+					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
+					{
+						//this->TouchPadUntouchEvent();
+					}
+				}
       }
     }
     else
