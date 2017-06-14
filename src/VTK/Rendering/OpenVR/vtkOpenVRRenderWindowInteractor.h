@@ -79,6 +79,14 @@ public:
   virtual double *GetPhysicalTranslation(vtkCamera *);
   //@}
 
+	//@{
+	/**
+	* Handlers for Touch/Untouch Touchpad Events.
+	*/
+	virtual void TouchPadTouchEvent();
+	virtual void TouchPadUntouchEvent();
+	//@}
+
   virtual void DoOneEvent(vtkOpenVRRenderWindow *renWin, vtkRenderer *ren);
 
 protected:

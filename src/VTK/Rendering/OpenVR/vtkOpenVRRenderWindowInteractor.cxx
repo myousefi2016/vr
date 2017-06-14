@@ -175,7 +175,27 @@ void vtkOpenVRRenderWindowInteractor::UpdateTouchPadPosition(
 }
 
 //----------------------------------------------------------------------------
-void  vtkOpenVRRenderWindowInteractor::StartEventLoop()
+void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
+{
+	//TODO fill method
+	if (!this->Enabled)
+	{
+		return;
+	}
+
+	//Multitouch is not used here
+	this->InvokeEvent(vtkCommand::TapEvent, NULL);
+		//Give a try also to vtkCommand::LongTapEvent
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
+{
+	//TODO fill method
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRRenderWindowInteractor::StartEventLoop()
 {
   this->StartedMessageLoop = 1;
   this->Done = false;
@@ -272,8 +292,8 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
           vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
             (event.eventType == vr::VREvent_ButtonPress ||
              event.eventType == vr::VREvent_ButtonUnpress ||
-			 event.eventType == vr::VREvent_ButtonTouch ||
-			 event.eventType == vr::VREvent_ButtonUntouch))
+						 event.eventType == vr::VREvent_ButtonTouch ||
+						 event.eventType == vr::VREvent_ButtonUntouch))
       {
         vr::ETrackedControllerRole role = pHMD->GetControllerRoleForTrackedDeviceIndex(tdi);
 
@@ -345,14 +365,14 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
-						//this->TouchPadTouchEvent();
+						this->TouchPadTouchEvent();
 					}
 				}
 				if (event.eventType == vr::VREvent_ButtonUntouch)
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
-						//this->TouchPadUntouchEvent();
+						this->TouchPadUntouchEvent();
 					}
 				}
       }
