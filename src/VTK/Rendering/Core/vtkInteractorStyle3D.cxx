@@ -95,6 +95,7 @@ void vtkInteractorStyle3D::OnLeftButtonDown()
 
   this->FindPokedRenderer(x, y);
   this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+
   if (this->CurrentRenderer == NULL || this->InteractionProp == NULL)
   {
     return;
@@ -110,6 +111,9 @@ void vtkInteractorStyle3D::OnLeftButtonUp()
   this->AppliedTranslation[0] = 0;
   this->AppliedTranslation[1] = 0;
   this->AppliedTranslation[2] = 0;
+
+	//Stop highlighting current Prop, if any.
+	this->HighlightProp(NULL);
 
   switch (this->State)
   {
@@ -133,6 +137,12 @@ void vtkInteractorStyle3D::Rotate()
   {
     return;
   }
+
+	//Highlight current Prop.
+	if (this->InteractionProp != NULL)
+	{
+		this->HighlightProp3D(this->InteractionProp);
+	}
 
   vtkRenderWindowInteractor3D *rwi =
     static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);

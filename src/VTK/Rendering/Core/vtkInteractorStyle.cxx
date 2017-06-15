@@ -32,6 +32,7 @@
 #include "vtkRenderer.h"
 #include "vtkEventForwarderCommand.h"
 #include "vtkTDxInteractorStyleCamera.h"
+#include "vtkSphereSource.h"
 
 vtkStandardNewMacro(vtkInteractorStyle);
 vtkCxxSetObjectMacro(vtkInteractorStyle,TDxStyle,vtkTDxInteractorStyle);
@@ -75,6 +76,20 @@ vtkInteractorStyle::vtkInteractorStyle()
   this->PickColor[2]        = 0.0;
   this->PickedActor2D       = NULL;
 
+/*	//Touch pointer
+	this->Pointer = vtkSphereSource::New();
+	this->Pointer->SetRadius(0.1);
+	this->PointerActor = vtkActor::New();
+	this->PointerActor->GetProperty()->SetColor(1.0000, 0.3882, 0.2784);
+	this->PointerMapper = vtkPolyDataMapper::New();
+
+	if (this->PointerMapper && this->Pointer && this->PointerActor)
+	{
+		this->PointerMapper->SetInputConnection(this->Pointer->GetOutputPort());
+		this->PointerActor->SetMapper(PointerMapper);
+	}
+	//Is the pointer always visible?*/
+
   this->MouseWheelMotionFactor = 1.0;
 
   this->TimerDuration = 10;
@@ -114,6 +129,21 @@ vtkInteractorStyle::~vtkInteractorStyle()
   {
     this->TDxStyle->Delete();
   }
+
+	//Remove pointer
+/*	if (this->PointerActor)
+	{
+		this->PointerActor->Delete();
+	}
+
+	if (this->PointerMapper)
+	{
+		this->PointerMapper->Delete();
+	}
+
+	this->Pointer->Delete();
+	this->Pointer = NULL;*/
+
 }
 
 //----------------------------------------------------------------------------

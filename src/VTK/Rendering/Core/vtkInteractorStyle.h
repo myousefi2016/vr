@@ -124,6 +124,7 @@ class vtkPolyDataMapper;
 class vtkProp3D;
 class vtkProp;
 class vtkTDxInteractorStyle;
+class vtkSphereSource;
 
 class VTKRENDERINGCORE_EXPORT vtkInteractorStyle : public vtkInteractorObserver
 {
@@ -409,6 +410,10 @@ protected:
   vtkEventForwarderCommand * EventForwarder;
 
   vtkTDxInteractorStyle *TDxStyle;
+
+	vtkSphereSource *Pointer;
+	vtkPolyDataMapper *PointerMapper;
+	vtkActor *PointerActor;
 
 private:
   vtkInteractorStyle(const vtkInteractorStyle&) VTK_DELETE_FUNCTION;

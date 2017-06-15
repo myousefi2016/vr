@@ -26,6 +26,9 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 {
+	//this->TouchPtr = vtkPoints::New();
+
+	//this->Outline
 }
 
 //----------------------------------------------------------------------------
@@ -49,6 +52,20 @@ void vtkOpenVRInteractorStyle::OnMiddleButtonUp()
   }
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
   ovl->LoadNextCameraPose();
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyle::OnTap()
+{
+	vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
+	if (!renWin)
+	{
+		return;
+	}
+	//
+
+	//this->Interactor->
+
 }
 
 void vtkOpenVRInteractorStyle::PrintSelf(ostream& os, vtkIndent indent)

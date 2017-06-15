@@ -40,6 +40,7 @@ vtkRenderWindowInteractor3D::vtkRenderWindowInteractor3D()
   vtkNew<vtkInteractorStyle3D> style;
   this->SetInteractorStyle(style.Get());
   this->Done = false;
+
 }
 
 //----------------------------------------------------------------------------

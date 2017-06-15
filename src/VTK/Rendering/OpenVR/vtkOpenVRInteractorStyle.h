@@ -39,6 +39,14 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
+	//@{
+	/**
+	* Override Tap to show pointer on touchpad.
+	*/
+	void OnTap() VTK_OVERRIDE;
+	//void OnUntap() VTK_OVERRIDE;	//create if needed.
+	//@}
+
 protected:
   vtkOpenVRInteractorStyle();
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
@@ -46,6 +54,9 @@ protected:
 private:
   vtkOpenVRInteractorStyle(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
+
+	//vtkPoints *TouchPtr;
+	
 };
 
 #endif
