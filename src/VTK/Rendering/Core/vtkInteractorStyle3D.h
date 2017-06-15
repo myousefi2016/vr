@@ -60,6 +60,7 @@ class vtkProp3D;
 class vtkMatrix3x3;
 class vtkMatrix4x4;
 class vtkTransform;
+class vtkSphereSource;
 
 class VTKRENDERINGCORE_EXPORT vtkInteractorStyle3D : public vtkInteractorStyle
 {
@@ -132,6 +133,13 @@ public:
    */
   void SetDistance(vtkCamera *cam, double distance);
 
+  //@{
+  /**
+  * Set touchpad pointer
+  */
+  virtual void SetTouchPadPointer(bool activate /*, double* coords*/);
+  //@}
+
 protected:
   vtkInteractorStyle3D();
   ~vtkInteractorStyle3D() VTK_OVERRIDE;
@@ -152,6 +160,14 @@ protected:
   double AppliedTranslation[3];
 
   double DollyMotionFactor;
+
+  //Touchpad Pointer.
+  vtkSphereSource *Pointer;
+  vtkPolyDataMapper *PointerMapper;
+  vtkActor *PointerActor;
+  vtkRenderer *PointerRenderer;
+  double PointerColor[3];
+  //bool PointerActive;
 
 private:
   vtkInteractorStyle3D(const vtkInteractorStyle3D&) VTK_DELETE_FUNCTION;  // Not implemented.

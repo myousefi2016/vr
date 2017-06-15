@@ -87,10 +87,14 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 }
 
 //TODO get a white pointer over the touchpad.
-void vtkOpenVRInteractorStylePressDial::OnTap()
+void vtkOpenVRInteractorStylePressDial::OnTap()	//touch touchpad
 {
 	vtkErrorMacro(<< "Touchpad tapped!");	// Just for debugging purposes.
 	
+	//TODO test this. Continue developing here.
+	this->SetTouchPadPointer(true);
+
+
 	/*int pointer = this->Interactor->GetPointerIndex();
 
 	this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],

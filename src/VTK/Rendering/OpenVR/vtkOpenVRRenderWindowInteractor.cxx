@@ -177,7 +177,6 @@ void vtkOpenVRRenderWindowInteractor::UpdateTouchPadPosition(
 //----------------------------------------------------------------------------
 void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 {
-	//TODO fill method
 	if (!this->Enabled)
 	{
 		return;
@@ -186,9 +185,9 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 	//Multitouch is not used here
 	this->InvokeEvent(vtkCommand::TapEvent, NULL);
 		//Give a try also to vtkCommand::LongTapEvent
+		//Give a try also to vtkCommand::SwipeEvent
 }
 
-//----------------------------------------------------------------------------
 void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 {
 	//TODO fill method

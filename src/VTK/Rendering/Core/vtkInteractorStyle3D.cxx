@@ -29,6 +29,9 @@
 #include "vtkMatrix3x3.h"
 #include "vtkTransform.h"
 #include "vtkCamera.h"
+#include "vtkPolyDataMapper.h"
+#include "vtkSphereSource.h"
+#include "vtkProperty.h"
 
 vtkStandardNewMacro(vtkInteractorStyle3D);
 
@@ -44,6 +47,29 @@ vtkInteractorStyle3D::vtkInteractorStyle3D()
   this->AppliedTranslation[2] = 0;
   this->TempTransform = vtkTransform::New();
   this->DollyMotionFactor = 2.0;
+
+
+  //-----------------------------------------------------------
+  //Touch pointer
+  this->Pointer = vtkSphereSource::New();
+  this->PointerActor = vtkActor::New();
+  this->PointerMapper = vtkPolyDataMapper::New();
+
+  if (this->PointerMapper && this->Pointer && this->PointerActor)
+  {
+	  this->PointerMapper->SetInputConnection(this->Pointer->GetOutputPort());
+	  //this->PointerActor->SetMapper(PointerMapper);
+  }
+
+  this->PointerRenderer = NULL;
+  this->PointerColor[0] = 0.0;
+  this->PointerColor[1] = 1.0;
+  this->PointerColor[2] = 0.0;
+  //this->PointerActive = false;
+
+  //-----------------------------------------------------------
+
+
 }
 
 //----------------------------------------------------------------------------
@@ -53,6 +79,25 @@ vtkInteractorStyle3D::~vtkInteractorStyle3D()
   this->TempMatrix3->Delete();
   this->TempMatrix4->Delete();
   this->TempTransform->Delete();
+
+
+  //Remove pointer
+
+  //this->SetTouchPadPointer(false);
+
+  /*	if (this->PointerActor)
+  {
+  this->PointerActor->Delete();
+  }
+
+  if (this->PointerMapper)
+  {
+  this->PointerMapper->Delete();
+  }
+
+  this->Pointer->Delete();
+  this->Pointer = NULL;*/
+
 }
 
 //----------------------------------------------------------------------------
@@ -141,7 +186,7 @@ void vtkInteractorStyle3D::Rotate()
 	//Highlight current Prop.
 	if (this->InteractionProp != NULL)
 	{
-		this->HighlightProp3D(this->InteractionProp);
+		this->HighlightProp(this->InteractionProp);
 	}
 
   vtkRenderWindowInteractor3D *rwi =
@@ -205,6 +250,64 @@ void vtkInteractorStyle3D::Rotate()
     this->CurrentRenderer->ResetCameraClippingRange();
   }
 }
+
+
+
+//-----------------------------------------------------------------------------
+// Pointer on Touchpad
+//-----------------------------------------------------------------------------
+void vtkInteractorStyle3D::SetTouchPadPointer(bool activate)
+{
+	//to disable it
+	if (!activate)
+	{
+		if (this->PointerRenderer != NULL && this->PointerActor)
+		{
+			this->PointerRenderer->RemoveActor(this->PointerActor);
+			this->PointerRenderer = NULL;
+		}
+	}
+	//to enable it
+	else
+	{
+		//chech if it is already active
+		if (!this->PointerActor)
+		{
+			//create and place in coordinates.
+			this->PointerActor = vtkActor::New();
+			this->PointerActor->PickableOff();
+			this->PointerActor->DragableOff();
+			this->PointerActor->SetMapper(this->PointerMapper);
+			this->PointerActor->GetProperty()->SetColor(this->PointerColor);
+			this->PointerActor->GetProperty()->SetAmbient(1.0);
+			this->PointerActor->GetProperty()->SetDiffuse(0.0);
+		}
+
+		//check if used different renderer to previous visualization
+		if (this->CurrentRenderer != this->PointerRenderer)
+		{
+			if (this->PointerRenderer != NULL && this->PointerActor)
+			{
+				this->PointerRenderer->RemoveActor(this->PointerActor);
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddActor(this->PointerActor);
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->PointerRenderer = this->CurrentRenderer;
+		}
+
+		int *coords = this->Interactor->GetEventPositions(Interactor->GetPointerIndex());
+		this->Pointer->SetCenter(coords[0], coords[1], coords[2]);
+	}
+}
+
+
+
 
 //----------------------------------------------------------------------------
 void vtkInteractorStyle3D::PrintSelf(ostream& os, vtkIndent indent)
