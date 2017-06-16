@@ -275,6 +275,9 @@ void vtkInteractorStyle::SetInteractor(vtkRenderWindowInteractor *i)
     i->AddObserver(vtkCommand::TapEvent,
                    this->EventCallbackCommand,
                    this->Priority);
+		i->AddObserver(vtkCommand::EndTapEvent,
+									 this->EventCallbackCommand,
+									 this->Priority);
     i->AddObserver(vtkCommand::LongTapEvent,
                    this->EventCallbackCommand,
                    this->Priority);
@@ -1265,6 +1268,18 @@ void vtkInteractorStyle::ProcessEvents(vtkObject* vtkNotUsed(object),
         self->OnTap();
       }
       break;
+
+		case vtkCommand::EndTapEvent:
+			if (self->HandleObservers &&
+					self->HasObserver(vtkCommand::EndTapEvent))
+			{
+				self->InvokeEvent(vtkCommand::EndTapEvent, NULL);
+			}
+			else
+			{
+				self->OnUntap();
+			}
+			break;
 
     case vtkCommand::LongTapEvent:
       if (self->HandleObservers &&

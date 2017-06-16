@@ -26,9 +26,6 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 {
-	//this->TouchPtr = vtkPoints::New();
-
-	//this->Outline
 }
 
 //----------------------------------------------------------------------------
@@ -54,19 +51,56 @@ void vtkOpenVRInteractorStyle::OnMiddleButtonUp()
   ovl->LoadNextCameraPose();
 }
 
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyle::OnTap()
+
+
+
+
+
+
+
+
+//TODO get a white pointer over the touchpad.
+void vtkOpenVRInteractorStyle::OnTap()	//touch touchpad
 {
+	vtkErrorMacro(<< "Touchpad tapped!");	// Just for debugging purposes.
+
+																				//TODO test this. Continue developing here.
 	vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
 	if (!renWin)
 	{
 		return;
 	}
-	//
 
-	//this->Interactor->
+	this->SetTouchPadPointer(true);
+
+
+	/*int pointer = this->Interactor->GetPointerIndex();
+
+	this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+	this->Interactor->GetEventPositions(pointer)[1]);*/
 
 }
+
+void vtkOpenVRInteractorStyle::OnUntap()
+{
+	vtkErrorMacro(<< "Touchpad untapped!");	// Just for debugging purposes.
+
+//	this->SetTouchPadPointer(false);		//Uncomment in final version. Commented to allow testing
+
+	/*int pointer = this->Interactor->GetPointerIndex();
+
+	this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+	this->Interactor->GetEventPositions(pointer)[1]);*/
+
+}
+
+
+
+
+
+
+
+
 
 void vtkOpenVRInteractorStyle::PrintSelf(ostream& os, vtkIndent indent)
 {

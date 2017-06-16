@@ -44,7 +44,7 @@ public:
 	* Override Tap to show pointer on touchpad.
 	*/
 	void OnTap() VTK_OVERRIDE;
-	//void OnUntap() VTK_OVERRIDE;	//create if needed.
+	void OnUntap() VTK_OVERRIDE;
 	//@}
 
 protected:

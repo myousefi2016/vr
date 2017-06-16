@@ -29,7 +29,7 @@ class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOp
 {
 public:
   static vtkOpenVRInteractorStylePressDial *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkInteractorStyle3D);
+  vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -48,7 +48,7 @@ public:
   void OnLeftButtonUp() VTK_OVERRIDE {};
 
   //Launch touchpad touched event
-  void OnTap() VTK_OVERRIDE;
+  //void OnTap() VTK_OVERRIDE;	//moved to its superclass
 
 protected:
   vtkOpenVRInteractorStylePressDial();

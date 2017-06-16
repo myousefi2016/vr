@@ -335,6 +335,7 @@
     _vtk_add_event(PanEvent)\
     _vtk_add_event(EndPanEvent)\
     _vtk_add_event(TapEvent)\
+    _vtk_add_event(EndTapEvent)\
     _vtk_add_event(LongTapEvent)\
     _vtk_add_event(SwipeEvent)\
     _vtk_add_event(FourthButtonPressEvent)\

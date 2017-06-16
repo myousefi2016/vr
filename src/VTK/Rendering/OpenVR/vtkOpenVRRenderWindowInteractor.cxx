@@ -45,7 +45,7 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 // Construct object so that light follows camera motion.
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
-    vtkNew<vtkOpenVRInteractorStyle> style;
+  vtkNew<vtkOpenVRInteractorStyle> style;
 	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
 	this->SetInteractorStyle(style.Get());
 }
@@ -190,7 +190,13 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 
 void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 {
-	//TODO fill method
+	if (!this->Enabled)
+	{
+		return;
+	}
+
+	//Multitouch is not used here
+	this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
 }
 
 //----------------------------------------------------------------------------

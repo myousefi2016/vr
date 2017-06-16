@@ -287,6 +287,7 @@ public:
   virtual void OnRotate() {}
   virtual void OnPan() {}
   virtual void OnTap() {}
+	virtual void OnUntap() {}
   virtual void OnLongTap() {}
   virtual void OnSwipe() {}
 
