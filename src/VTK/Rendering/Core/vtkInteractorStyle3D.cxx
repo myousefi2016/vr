@@ -333,14 +333,17 @@ void vtkInteractorStyle3D::SetTouchPadPointer(bool activate)
 		vtkErrorMacro(<< "Orientation: " << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3]);
 		
 		//3D Rotation and Translation Maths
-		double d = 0.15;	//Distance from center of controller to center of touchpad TODO adjust
+		double d = 0.15;	// Distance from center of controller to center of touchpad. TODO adjust value
+		double r = 0.1;		// Radius of touchpad, for a proper adjustment. TODO adjust value
 		//TODO add touchpad position
 		double cosw = cos(wori[0]);
 		double sinw = sin(wori[0]);
 		double ptrpos[3];
-		ptrpos[0] = wpos[0] + d*(wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw);
-		ptrpos[1] = wpos[1] + d*(wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
-		ptrpos[2] = wpos[2] + d*(cosw + wori[3] * wori[3] * (1 - cosw));
+		//ptrpos = controller position + center to touchpad + adjustment to exact point touched.
+		//TODO test first only with first two sumands and check that it is placed on the middle of the touchpad.
+		ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw) + r * (wori[1] * wori[2] * (1-cosw) + wori[3] * sinw);
+		ptrpos[1] = wpos[1] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r * (cosw + wori[2] * wori[2] * (1-cosw));
+		ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw)) + r * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 	}
