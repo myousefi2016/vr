@@ -200,6 +200,14 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 
+
+#define TEST
+#ifdef TEST
+		rwi->SetWorldEventPosition(0.0, 0.0, -2.0, rwi->GetPointerIndex());
+		rwi->SetWorldEventOrientation(90.0, 0.0, 1.0, 0.0, rwi->GetPointerIndex());
+#endif
+
+
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
@@ -210,7 +218,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 
 		//3D Rotation and Translation Maths
-		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
+		double d = 0.5;	// Distance from center of controller to center of touchpad. TODO adjust value
 		double r = 0.1;		// Radius of touchpad, for a proper adjustment. TODO adjust value
 											//TODO add touchpad position
 		double cosw = cos(wori[0]);
@@ -236,12 +244,12 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 
 		//Assuming d in z-axis (touchpad coordinates)
-		//ptrpos[0] = wpos[0] - d * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw);// +r * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
-		//ptrpos[1] = wpos[1] - d * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);// +r * (cosw + wori[2] * wori[2] * (1 - cosw));
-		//ptrpos[2] = wpos[2] - d * (cosw + wori[3] * wori[3] * (1 - cosw));// +r * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
+		ptrpos[0] = wpos[0] - d * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw);// +r * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
+		ptrpos[1] = wpos[1] - d * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);// +r * (cosw + wori[2] * wori[2] * (1 - cosw));
+		ptrpos[2] = wpos[2] - d * (cosw + wori[3] * wori[3] * (1 - cosw));// +r * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
 
 		//Using result from sheet B1
-		ptrpos[0] = 
+		//ptrpos[0] = 
 
 
 
@@ -254,9 +262,12 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		//ptrpos[0] = wpos[0]; ptrpos[1] = wpos[1]; ptrpos[2] = wpos[2];
 
 
-	//	vtkErrorMacro(<< "Pointer: " << ptrpos[0] << ", " << ptrpos[1] << ", " << ptrpos[2]);
+		vtkErrorMacro(<< "Pointer: " << ptrpos[0] << ", " << ptrpos[1] << ", " << ptrpos[2]);
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 		//this->Pointer->SetCenter(0.,0.,0.);
+#ifdef TEST
+		vtkErrorMacro(<< "Pointer: should be -0.5, 0, -2");
+#endif
 	}
 
 	if (this->Interactor)
