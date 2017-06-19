@@ -18,19 +18,60 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
 #include "vtkRenderWindow.h"
+#include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
+
+#include "vtkRenderer.h"
+#include "vtkPolyDataMapper.h"
+#include "vtkSphereSource.h"
+#include "vtkProperty.h"
+#include "vtkActor.h"
+#include "vtkMatrix4x4.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 {
+	//-----------------------------------------------------------
+	//Touch pointer
+	this->Pointer = vtkSphereSource::New();
+	this->PointerActor = NULL;
+	this->PointerMapper = vtkPolyDataMapper::New();
+
+	if (this->PointerMapper && this->Pointer)
+	{
+		this->PointerMapper->SetInputConnection(this->Pointer->GetOutputPort());
+		//this->PointerActor->SetMapper(PointerMapper);
+	}
+
+	this->PointerRenderer = NULL;
+	this->PointerColor[0] = 0.0;
+	this->PointerColor[1] = 1.0;
+	this->PointerColor[2] = 0.0;
+	//this->PointerActive = false;
+	//-----------------------------------------------------------
 }
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::~vtkOpenVRInteractorStyle()
 {
+	//Remove pointer
+	this->SetTouchPadPointer(false);
+
+	if (this->PointerActor)
+	{
+		this->PointerActor->Delete();
+	}
+
+	if (this->PointerMapper)
+	{
+		this->PointerMapper->Delete();
+	}
+
+	this->Pointer->Delete();
+	this->Pointer = NULL;
 }
 
 //----------------------------------------------------------------------------
@@ -92,6 +133,136 @@ void vtkOpenVRInteractorStyle::OnUntap()
 	this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
 	this->Interactor->GetEventPositions(pointer)[1]);*/
 
+}
+
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// Pointer on Touchpad
+//-----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
+{
+	//current renderer
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+														this->Interactor->GetEventPositions(pointer)[1]);
+	}
+
+	//to disable it
+	if (!activate)
+	{
+		if (this->PointerRenderer != NULL && this->PointerActor)
+		{
+			this->PointerRenderer->RemoveActor(this->PointerActor);
+			this->PointerRenderer = NULL;
+		}
+	}
+	//to enable it
+	else
+	{
+		//chech if it is already active
+		if (!this->PointerActor)
+		{
+			//create and place in coordinates.
+			this->Pointer->SetRadius(.005);
+			this->PointerActor = vtkActor::New();
+			this->PointerActor->PickableOff();
+			this->PointerActor->DragableOff();
+			this->PointerActor->SetMapper(this->PointerMapper);
+			this->PointerActor->GetProperty()->SetColor(this->PointerColor);
+			this->PointerActor->GetProperty()->SetAmbient(1.0);
+			this->PointerActor->GetProperty()->SetDiffuse(0.0);
+		}
+
+		//check if used different renderer to previous visualization
+		if (this->CurrentRenderer != this->PointerRenderer)
+		{
+			if (this->PointerRenderer != NULL && this->PointerActor)
+			{
+				this->PointerRenderer->RemoveActor(this->PointerActor);
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddActor(this->PointerActor);
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->PointerRenderer = this->CurrentRenderer;
+		}
+
+		vtkOpenVRRenderWindowInteractor *rwi =
+			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
+
+		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
+		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
+		float *tpos = rwi->GetTouchPadPosition();
+
+	//	vtkErrorMacro(<< "Position: " << wpos[0] << ", " << wpos[1] << ", " << wpos[2]);
+		vtkErrorMacro(<< "Orientation: " << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3]);
+	//	vtkErrorMacro(<< "Touchpad: " << tpos[0] << ", " << tpos[1]);
+
+
+		//3D Rotation and Translation Maths
+		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
+		double r = 0.1;		// Radius of touchpad, for a proper adjustment. TODO adjust value
+											//TODO add touchpad position
+		double cosw = cos(wori[0]);
+		double sinw = sin(wori[0]);
+		double ptrpos[3];
+		//ptrpos = controller position + center to touchpad + adjustment to exact point touched.
+		//TODO test first only with first two sumands and check that it is placed on the middle of the touchpad.
+
+		//vtkMatrix4x4 *c2t = vtkMatrix4x4::New();		//Controller to Touchpad coordinates
+		//vtkMatrix4x4::DeepCopy(c2t, {})
+		
+
+		//Assuming d in x-axis (touchpad coordinates)
+		//ptrpos[0] = wpos[0] + d * (cosw + wori[1] * wori[1] * (1 - cosw)); 
+		//ptrpos[1] = wpos[1] + d * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw);
+		//ptrpos[2] = wpos[2] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
+
+
+		//Assuming d in y-axis (touchpad coordinates)
+		//ptrpos[0] = wpos[0] + d * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
+		//ptrpos[1] = wpos[1] + d * (cosw + wori[2] * wori[2] * (1 - cosw));
+		//ptrpos[2] = wpos[2] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
+
+
+		//Assuming d in z-axis (touchpad coordinates)
+		//ptrpos[0] = wpos[0] - d * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw);// +r * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
+		//ptrpos[1] = wpos[1] - d * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);// +r * (cosw + wori[2] * wori[2] * (1 - cosw));
+		//ptrpos[2] = wpos[2] - d * (cosw + wori[3] * wori[3] * (1 - cosw));// +r * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
+
+		//Using result from sheet B1
+		ptrpos[0] = 
+
+
+
+		//Using columns (A2):
+		//ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
+		//ptrpos[1] = wpos[1] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
+		//ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw));
+
+
+		//ptrpos[0] = wpos[0]; ptrpos[1] = wpos[1]; ptrpos[2] = wpos[2];
+
+
+	//	vtkErrorMacro(<< "Pointer: " << ptrpos[0] << ", " << ptrpos[1] << ", " << ptrpos[2]);
+		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
+		//this->Pointer->SetCenter(0.,0.,0.);
+	}
+
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
 }
 
 

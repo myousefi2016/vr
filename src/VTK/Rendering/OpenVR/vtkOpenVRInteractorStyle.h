@@ -24,6 +24,8 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkInteractorStyle3D.h"
 
+class vtkSphereSource;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyle : public vtkInteractorStyle3D
 {
 public:
@@ -47,9 +49,24 @@ public:
 	void OnUntap() VTK_OVERRIDE;
 	//@}
 
+	virtual void SetTouchPadPointer(bool activate /*, double* coords*/) VTK_OVERRIDE;
+
 protected:
   vtkOpenVRInteractorStyle();
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
+
+
+
+	//Touchpad Pointer.
+	vtkSphereSource *Pointer;
+	vtkPolyDataMapper *PointerMapper;
+	vtkActor *PointerActor;
+	vtkRenderer *PointerRenderer;
+	double PointerColor[3];
+	//bool PointerActive;
+
+
+
 
 private:
   vtkOpenVRInteractorStyle(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
