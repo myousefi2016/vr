@@ -686,16 +686,18 @@ void vtkInteractorStyle::EndTwoPointer()
 //----------------------------------------------------------------------------
 void vtkInteractorStyle::StartTap()
 {
+	//Maybe delete this and substitute by VTKIS_SKIPE when a swipe event starts.
 	if (this->State != VTKIS_NONE)
 	{
 		return;
 	}
-	this->StartState(VTKIS_TAP);
+	this->StartState(VTKIS_TAP);	//Maybe delete this and substitute by VTKIS_SKIPE when a swipe event starts.
 }
 
 //----------------------------------------------------------------------------
 void vtkInteractorStyle::EndTap()
 {
+	//Same than in StartTap here.
 	if (this->State != VTKIS_TAP)
 	{
 		return;

@@ -297,8 +297,8 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
           vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
             (event.eventType == vr::VREvent_ButtonPress ||
              event.eventType == vr::VREvent_ButtonUnpress ||
-						 event.eventType == vr::VREvent_ButtonTouch ||
-						 event.eventType == vr::VREvent_ButtonUntouch))
+             event.eventType == vr::VREvent_ButtonTouch ||
+             event.eventType == vr::VREvent_ButtonUntouch))
       {
         vr::ETrackedControllerRole role = pHMD->GetControllerRoleForTrackedDeviceIndex(tdi);
 
@@ -381,14 +381,25 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 					}
 				}
       }
-      else if(pHMD->GetTrackedDeviceClass(tdi) ==
-		  vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
-		  event.eventType == vr::VREvent_TouchPadMove &&
-		  event.data.touchPadMove.bFingerDown)
+      /* IMPOSSIBLE TO DO. bFingerDown IS ALWAYS TRUE, REGARDLESS THE STATE OF TOUCHPAD.
+      else if(event.data.touchPadMove.bFingerDown)
       {
         vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
-        this->MouseMoveEvent();
+        this->MouseMoveEvent();	//I want to repaint the controller pointer.
+      }*/
+      else if(event.eventType == vr::VREvent_TouchPadMove)
+      {
+        //Continue here to handle SWIPE events
+		  int i = 0;
       }
+      else if(event.eventType == vr::VREvent_TrackedDeviceUpdated)
+	  {
+        //Other swipe alternative.
+		  int k = 0;
+      }
+		//Debugging purposes.
+	  int type = event.eventType;
+	  vtkErrorMacro(<< "eventType = " << type);
     }
     else
     {
