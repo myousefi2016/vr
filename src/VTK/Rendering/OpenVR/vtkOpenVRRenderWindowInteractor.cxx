@@ -236,6 +236,8 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
   bool result = false;
 
+	this->MouseMoveEvent();
+
   if (vr::VROverlay() &&
      vr::VROverlay()->IsOverlayVisible( ovl->GetOverlayHandle() ))
   {
@@ -327,7 +329,7 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
         this->SetPhysicalEventPosition(ppos[0], ppos[1], ppos[2], pointerIndex);
         this->SetWorldEventOrientation(wxyz[0],wxyz[1],wxyz[2],wxyz[3],pointerIndex);
         this->SetPointerIndex(pointerIndex);
-
+				
         if (event.eventType == vr::VREvent_ButtonPress)
         {
           if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis1)
@@ -381,13 +383,11 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 					}
 				}
       }
-	  else if(pHMD->GetTrackedDeviceClass(tdi) ==
-		      vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
-		      (event.eventType == vr::VREvent_TouchPadMove))
-	  {
-		  vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
-		  this->MouseMoveEvent();
-	  }
+			else if(event.data.touchPadMove.bFingerDown)
+			{
+				vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
+				this->MouseMoveEvent();
+			}
     }
     else
     {
