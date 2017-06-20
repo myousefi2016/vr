@@ -690,13 +690,13 @@ void vtkInteractorStyle::StartTap()
 	{
 		return;
 	}
-	this->StartState(VTKIS_TAP);
+	this->StartState(VTKIS_TIMER);
 }
 
 //----------------------------------------------------------------------------
 void vtkInteractorStyle::EndTap()
 {
-	if (this->State != VTKIS_TAP)
+	if (this->State != VTKIS_TIMER)
 	{
 		return;
 	}

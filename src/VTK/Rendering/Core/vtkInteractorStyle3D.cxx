@@ -631,7 +631,7 @@ void vtkInteractorStyle3D::OnUntap()
 
 	switch (this->State)
 	{
-	case VTKIS_TAP:
+	case VTKIS_TIMER:
 		this->EndTap();
 		break;
 	}
