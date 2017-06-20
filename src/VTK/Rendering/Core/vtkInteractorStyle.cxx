@@ -751,11 +751,11 @@ void vtkInteractorStyle::OnTimer()
     case VTKIS_USCALE:
       this->UniformScale();
       break;
-
+/*
 	case VTKIS_TAP:
 	  this->Tap();
 	  break;
-
+*/
     case VTKIS_TIMER:
       rwi->Render();
       break;

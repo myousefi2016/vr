@@ -23,6 +23,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVROverlay.h"
 
 #include "vtkCommand.h"
+#include "vtkCallbackCommand.h"
 #include "vtkRenderer.h"
 #include "vtkPolyDataMapper.h"
 #include "vtkSphereSource.h"
@@ -91,6 +92,43 @@ void vtkOpenVRInteractorStyle::OnMiddleButtonUp()
   }
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
   ovl->LoadNextCameraPose();
+}
+
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyle::OnTap()
+{
+	int x = this->Interactor->GetEventPosition()[0];
+	int y = this->Interactor->GetEventPosition()[1];
+
+	this->FindPokedRenderer(x, y);
+	if (this->CurrentRenderer == NULL)
+	{
+		return;
+	}
+
+	this->SetTouchPadPointer(true);
+
+	this->GrabFocus(this->EventCallbackCommand);
+	this->StartTap();
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyle::OnUntap()
+{
+	this->SetTouchPadPointer(false);
+
+	switch (this->State)
+	{
+	case VTKIS_TAP:
+		this->EndTap();
+		break;
+	}
+
+	if (this->Interactor)
+	{
+		this->ReleaseFocus();
+	}
 }
 
 //-----------------------------------------------------------------------------

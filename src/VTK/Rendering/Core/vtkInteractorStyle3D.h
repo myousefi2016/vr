@@ -96,13 +96,14 @@ public:
   /**
   * Event bindings for gestures over the touchpad.
   */
-  void OnTap() VTK_OVERRIDE;
-  void OnUntap() VTK_OVERRIDE;
+//  void OnTap() VTK_OVERRIDE;
+//  void OnUntap() VTK_OVERRIDE;
   //@}
 
   // This method handles updating the pointer based on changes in touchpad
   // position, when it is being touched
-  void Tap() VTK_OVERRIDE;
+//  void Tap() VTK_OVERRIDE;
+//  void Untap() VTK_OVERRIDE;
 
   // This method handles updating the prop based on changes in the devices
   // pose. We use rotate as the state to mean adjusting-the-actor-pose

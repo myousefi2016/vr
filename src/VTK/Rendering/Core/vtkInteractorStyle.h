@@ -280,7 +280,7 @@ public:
   virtual void Dolly() {}
   virtual void Zoom() {}
   virtual void UniformScale() {}
-  virtual void Tap() {}
+//  virtual void Tap() {}
 
   /**
    * gesture based events
