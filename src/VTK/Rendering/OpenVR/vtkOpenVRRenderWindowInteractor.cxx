@@ -381,6 +381,13 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 					}
 				}
       }
+	  else if(pHMD->GetTrackedDeviceClass(tdi) ==
+		      vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
+		      (event.eventType == vr::VREvent_TouchPadMove))
+	  {
+		  vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
+		  this->MouseMoveEvent();
+	  }
     }
     else
     {
