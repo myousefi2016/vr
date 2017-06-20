@@ -193,19 +193,24 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
+		float *tpos = rwi->GetTouchPadPosition();
+		double r = 0.02;
 
 		//3D Rotation and Translation Maths
 		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
 		double cosw = cos(wori[0] * vtkMath::Pi() / 180);
 		double sinw = sin(wori[0] * vtkMath::Pi() / 180);
-
+		
 		double ptrpos[3];
 		
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
-		ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
+		/*ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
 		ptrpos[1] = wpos[1] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
-		ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw));
+		ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw));*/
+		ptrpos[0] = wpos[0] + (d+r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw));
+		ptrpos[1] = wpos[1] + (d+r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw);
+		ptrpos[2] = wpos[2] + (d+r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw);
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 

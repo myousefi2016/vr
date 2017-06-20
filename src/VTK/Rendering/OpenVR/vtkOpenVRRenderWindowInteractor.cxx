@@ -236,8 +236,6 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
   bool result = false;
 
-	this->MouseMoveEvent();
-
   if (vr::VROverlay() &&
      vr::VROverlay()->IsOverlayVisible( ovl->GetOverlayHandle() ))
   {
@@ -368,14 +366,14 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
             this->FourthButtonReleaseEvent();
           }
         }
-				if (event.eventType == vr::VREvent_ButtonTouch)
+        if (event.eventType == vr::VREvent_ButtonTouch)
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
 						this->TouchPadTouchEvent();
 					}
 				}
-				if (event.eventType == vr::VREvent_ButtonUntouch)
+        if (event.eventType == vr::VREvent_ButtonUntouch)
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
@@ -383,11 +381,14 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 					}
 				}
       }
-			else if(event.data.touchPadMove.bFingerDown)
-			{
-				vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
-				this->MouseMoveEvent();
-			}
+      else if(pHMD->GetTrackedDeviceClass(tdi) ==
+		  vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
+		  event.eventType == vr::VREvent_TouchPadMove &&
+		  event.data.touchPadMove.bFingerDown)
+      {
+        vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
+        this->MouseMoveEvent();
+      }
     }
     else
     {
