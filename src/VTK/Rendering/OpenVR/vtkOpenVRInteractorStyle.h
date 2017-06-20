@@ -45,11 +45,11 @@ public:
 	/**
 	* Override Tap to show pointer on touchpad.
 	*/
-	void OnTap() VTK_OVERRIDE;
-	void OnUntap() VTK_OVERRIDE;
+//	void OnTap() VTK_OVERRIDE;
+//	void OnUntap() VTK_OVERRIDE;
 	//@}
 
-	virtual void SetTouchPadPointer(bool activate /*, double* coords*/) VTK_OVERRIDE;
+	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
 
 protected:
   vtkOpenVRInteractorStyle();

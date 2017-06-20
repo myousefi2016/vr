@@ -683,6 +683,25 @@ void vtkInteractorStyle::EndTwoPointer()
   this->StopState();
 }
 
+//----------------------------------------------------------------------------
+void vtkInteractorStyle::StartTap()
+{
+	if (this->State != VTKIS_NONE)
+	{
+		return;
+	}
+	this->StartState(VTKIS_TAP);
+}
+
+//----------------------------------------------------------------------------
+void vtkInteractorStyle::EndTap()
+{
+	if (this->State != VTKIS_TAP)
+	{
+		return;
+	}
+	this->StopState();
+}
 
 //----------------------------------------------------------------------------
 // By overriding the Rotate, Rotate members we can
@@ -732,6 +751,10 @@ void vtkInteractorStyle::OnTimer()
     case VTKIS_USCALE:
       this->UniformScale();
       break;
+
+	case VTKIS_TAP:
+	  this->Tap();
+	  break;
 
     case VTKIS_TIMER:
       rwi->Render();

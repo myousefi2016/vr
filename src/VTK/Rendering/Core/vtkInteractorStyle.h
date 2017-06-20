@@ -111,6 +111,7 @@
 #define VTKIS_REVERSEFLY   9
 #define VTKIS_TWO_POINTER 10
 #define VTKIS_CLIP        11
+#define VTKIS_TAP         12
 
 #define VTKIS_ANIM_OFF 0
 #define VTKIS_ANIM_ON  1
@@ -279,6 +280,7 @@ public:
   virtual void Dolly() {}
   virtual void Zoom() {}
   virtual void UniformScale() {}
+  virtual void Tap() {}
 
   /**
    * gesture based events
@@ -287,7 +289,7 @@ public:
   virtual void OnRotate() {}
   virtual void OnPan() {}
   virtual void OnTap() {}
-	virtual void OnUntap() {}
+  virtual void OnUntap() {}
   virtual void OnLongTap() {}
   virtual void OnSwipe() {}
 
@@ -321,6 +323,8 @@ public:
   virtual void EndTimer();
   virtual void StartTwoPointer();
   virtual void EndTwoPointer();
+  virtual void StartTap();
+  virtual void EndTap();
   //@}
 
   //@{

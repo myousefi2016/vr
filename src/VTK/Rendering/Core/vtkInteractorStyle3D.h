@@ -92,6 +92,18 @@ public:
   void OnPan() VTK_OVERRIDE;
   //@}
 
+  //@{
+  /**
+  * Event bindings for gestures over the touchpad.
+  */
+  void OnTap() VTK_OVERRIDE;
+  void OnUntap() VTK_OVERRIDE;
+  //@}
+
+  // This method handles updating the pointer based on changes in touchpad
+  // position, when it is being touched
+  void Tap() VTK_OVERRIDE;
+
   // This method handles updating the prop based on changes in the devices
   // pose. We use rotate as the state to mean adjusting-the-actor-pose
   void Rotate() VTK_OVERRIDE;
@@ -136,9 +148,10 @@ public:
 
   //@{
   /**
-  * Set touchpad pointer
+  * Set touchpad pointer when the touchpad is touched
+  * (may be extended to other haptic buttons).
   */
-	virtual void SetTouchPadPointer(bool activate /*, double* coords*/) {};
+	virtual void SetTouchPadPointer(bool activate) {};
   //@}
 
 

@@ -47,29 +47,6 @@ vtkInteractorStyle3D::vtkInteractorStyle3D()
   this->AppliedTranslation[2] = 0;
   this->TempTransform = vtkTransform::New();
   this->DollyMotionFactor = 2.0;
-
-	/*
-  //-----------------------------------------------------------
-  //Touch pointer
-  this->Pointer = vtkSphereSource::New();
-  this->PointerActor = NULL;
-  this->PointerMapper = vtkPolyDataMapper::New();
-
-  if (this->PointerMapper && this->Pointer)
-  {
-	  this->PointerMapper->SetInputConnection(this->Pointer->GetOutputPort());
-	  //this->PointerActor->SetMapper(PointerMapper);
-  }
-
-  this->PointerRenderer = NULL;
-  this->PointerColor[0] = 0.0;
-  this->PointerColor[1] = 1.0;
-  this->PointerColor[2] = 0.0;
-  //this->PointerActive = false;
-
-  //-----------------------------------------------------------
-	*/
-
 }
 
 //----------------------------------------------------------------------------
@@ -79,24 +56,6 @@ vtkInteractorStyle3D::~vtkInteractorStyle3D()
   this->TempMatrix3->Delete();
   this->TempMatrix4->Delete();
   this->TempTransform->Delete();
-
-	/*
-  //Remove pointer
-  this->SetTouchPadPointer(false);
-
-	if (this->PointerActor)
-  {
-		this->PointerActor->Delete();
-  }
-
-  if (this->PointerMapper)
-  {
-		this->PointerMapper->Delete();
-  }
-
-  this->Pointer->Delete();
-  this->Pointer = NULL;
-	*/
 }
 
 //----------------------------------------------------------------------------
@@ -249,169 +208,6 @@ void vtkInteractorStyle3D::Rotate()
     this->CurrentRenderer->ResetCameraClippingRange();
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#if 0
-//-----------------------------------------------------------------------------
-// Pointer on Touchpad
-//-----------------------------------------------------------------------------
-void vtkInteractorStyle3D::SetTouchPadPointer(bool activate)
-{
-	//currend renderer
-	if (this->Interactor)
-	{
-		int pointer = this->Interactor->GetPointerIndex();
-		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-														this->Interactor->GetEventPositions(pointer)[1]);
-	}
-	
-	//to disable it
-	if (!activate)
-	{
-		if (this->PointerRenderer != NULL && this->PointerActor)
-		{
-			this->PointerRenderer->RemoveActor(this->PointerActor);
-			this->PointerRenderer = NULL;
-		}
-	}
-	//to enable it
-	else
-	{
-		//chech if it is already active
-		if (!this->PointerActor)
-		{
-			//create and place in coordinates.
-			this->Pointer->SetRadius(.01);
-			this->PointerActor = vtkActor::New();
-			this->PointerActor->PickableOff();
-			this->PointerActor->DragableOff();
-			this->PointerActor->SetMapper(this->PointerMapper);
-			this->PointerActor->GetProperty()->SetColor(this->PointerColor);
-			this->PointerActor->GetProperty()->SetAmbient(1.0);
-			this->PointerActor->GetProperty()->SetDiffuse(0.0);
-		}
-
-		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != this->PointerRenderer)
-		{
-			if (this->PointerRenderer != NULL && this->PointerActor)
-			{
-				this->PointerRenderer->RemoveActor(this->PointerActor);
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddActor(this->PointerActor);
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->PointerRenderer = this->CurrentRenderer;
-		}
-
-		vtkRenderWindowInteractor3D *rwi =
-			static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);
-		//rwi = vtkRenderWindowInteractor3D::SafeDownCast
-		
-		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
-		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
-		float *tpos = rwi->GetTouchPadPosition();
-		
-		vtkErrorMacro(<< "Position: " << wpos[0] << ", " << wpos[1] << ", " << wpos[2]);
-		vtkErrorMacro(<< "Orientation: " << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3]);
-		vtkErrorMacro(<< "Touchpad: " << tpos[0] << ", " << tpos[1]);
-
-
-
-
-
-		//from vktOpenVRRwnderWindowinteractor
-	/*	for (int i = 0; i < VTKI_MAX_POINTERS; i++)
-		{
-			if (this->PointersDown[i])
-			{
-				this->UpdateTouchPadPosition(pHMD,
-																		 static_cast<vr::TrackedDeviceIndex_t>(this->PointerIndexLookup[i]));
-				vr::TrackedDevicePose_t &tdPose =
-					renWin->GetTrackedDevicePose(
-						static_cast<vr::TrackedDeviceIndex_t>(this->PointerIndexLookup[i]));
-				double pos[3];
-				double ppos[3];
-				double wxyz[4];
-				this->ConvertPoseToWorldCoordinates(ren, tdPose, pos, wxyz, ppos);
-
-				// so even though we have world coordinates we have to convert them to
-				// screen coordinates because all of VTKs picking code is currently
-				// based on screen coordinates
-				ren->SetWorldPoint(pos[0], pos[1], pos[2], 1.0);
-				ren->WorldToDisplay();
-				double *displayCoords = ren->GetDisplayPoint();
-				this->SetEventPosition(displayCoords[0], displayCoords[1], i);
-				this->SetWorldEventPosition(pos[0], pos[1], pos[2], i);
-				this->SetWorldEventOrientation(wxyz[0], wxyz[1], wxyz[2], wxyz[3], i);
-				this->SetPhysicalEventPosition(ppos[0], ppos[1], ppos[2], i);
-			}
-		}
-		*/
-
-
-
-
-
-
-		//vtkMatrix4x4 *rot = vtkMatrix4x4::New();
-		//vtkMatrix4x4::DeepCopy(rot, )
-
-		//3D Rotation and Translation Maths
-		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
-		double r = 0.1;		// Radius of touchpad, for a proper adjustment. TODO adjust value
-		//TODO add touchpad position
-		double cosw = cos(wori[0]);
-		double sinw = sin(wori[0]);
-		double ptrpos[3];
-		//ptrpos = controller position + center to touchpad + adjustment to exact point touched.
-		//TODO test first only with first two sumands and check that it is placed on the middle of the touchpad.
-
-		//Assuming d in y-axis (touchpad coordinates)
-		ptrpos[0] = wpos[0] + d * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
-		ptrpos[1] = wpos[1] + d * (cosw + wori[2] * wori[2] * (1 - cosw));
-		ptrpos[2] = wpos[2] + d * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
-
-
-		//Assuming d in z-axis (touchpad coordinates)
-		//ptrpos[0] = wpos[0] +d * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw);// +r * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw);
-		//ptrpos[1] = wpos[1] +d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);// +r * (cosw + wori[2] * wori[2] * (1 - cosw));
-		//ptrpos[2] = wpos[2] +d * (cosw + wori[3] * wori[3] * (1 - cosw));// +r * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw);
-
-		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
-		//this->Pointer->SetCenter(0.,0.,0.);
-	}
-
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
-}
-
-
-#endif
-
-
-
-
 
 //----------------------------------------------------------------------------
 void vtkInteractorStyle3D::PrintSelf(ostream& os, vtkIndent indent)
@@ -809,4 +605,49 @@ void vtkInteractorStyle3D::Clip()
   }
   rwi->Render();
 
+}
+
+
+//----------------------------------------------------------------------------
+void vtkInteractorStyle3D::OnTap()
+{
+	int x = this->Interactor->GetEventPosition()[0];
+	int y = this->Interactor->GetEventPosition()[1];
+
+	this->FindPokedRenderer(x, y);
+	if (this->CurrentRenderer == NULL)
+	{
+		return;
+	}
+
+	this->GrabFocus(this->EventCallbackCommand);
+	this->StartTap();
+}
+
+//----------------------------------------------------------------------------
+void vtkInteractorStyle3D::OnUntap()
+{
+	this->SetTouchPadPointer(false);
+
+	switch (this->State)
+	{
+	case VTKIS_TAP:
+		this->EndTap();
+		break;
+	}
+
+	if (this->Interactor)
+	{
+		this->ReleaseFocus();
+	}
+}
+
+void vtkInteractorStyle3D::Tap()
+{
+	if (this->CurrentRenderer == NULL)
+	{
+		return;
+	}
+
+	this->SetTouchPadPointer(true);
 }
