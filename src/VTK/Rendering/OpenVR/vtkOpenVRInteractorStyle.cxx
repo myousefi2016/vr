@@ -208,9 +208,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		/*ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
 		ptrpos[1] = wpos[1] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
 		ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw));*/
-		ptrpos[0] = wpos[0] + (d+r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw));
-		ptrpos[1] = wpos[1] + (d+r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw);
-		ptrpos[2] = wpos[2] + (d+r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw);
+		ptrpos[0] = wpos[0] + (d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw));
+		ptrpos[1] = wpos[1] + (d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw);
+		ptrpos[2] = wpos[2] + (d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw);
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 
