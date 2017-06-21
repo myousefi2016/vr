@@ -165,6 +165,8 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		{
 			//create and place in coordinates.
 			////this->Pointer->SetRadius(.008);
+			this->Pointer->SetPhiResolution(50);
+			this->Pointer->SetThetaResolution(50);
 			this->PointerActor = vtkActor::New();
 			this->PointerActor->PickableOff();
 			this->PointerActor->DragableOff();
@@ -294,23 +296,33 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		k += 1;
 		*/
 
+		//CONTINUE HERE
+		vr::TrackedDeviceIndex_t tdi = win->GetDeviceIndex();
+		win->GetTrackedDevicePose(tdi);
+		win->GetTrackedDeviceModel(tdi);
+
 		vtkMatrix4x4 *tcdc;
 		camera->GetTrackingToDCMatrix(tcdc);
-		//vtkErrorMacro(<< "tcdc matrix");
-		//for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< *tcdc->Element[i] << " " << *tcdc->Element[i+1] << " " << *tcdc->Element[i+2] << " " << *tcdc->Element[i+3]);
-
-		//Scale will be adjusted for tcdc[0]==-1
-		double wscale = -(*tcdc->Element[0]);
+		vtkErrorMacro(<< *tcdc->Element[0] << " " << *tcdc->Element[1] << " " << *tcdc->Element[2] << " " << *tcdc->Element[3]);
+/*		vtkErrorMacro("Sum: " << *tcdc->Element[0] + *tcdc->Element[1] + *tcdc->Element[2] + *tcdc->Element[3]);
+		vtkErrorMacro("Sqrt(pow): " << sqrt(pow(*tcdc->Element[0],2) + pow(*tcdc->Element[1], 2) + pow(*tcdc->Element[2], 2) + pow(*tcdc->Element[3], 2)));
+		vtkErrorMacro("Sum 0-2: " << *tcdc->Element[0] + *tcdc->Element[1] + *tcdc->Element[2]);
+		vtkErrorMacro("Sqrt(pow) 0-2: " << sqrt(pow(*tcdc->Element[0], 2) + pow(*tcdc->Element[1], 2) + pow(*tcdc->Element[2], 2)));
+		vtkErrorMacro("Sum 1-3: " << *tcdc->Element[1] + *tcdc->Element[2] + *tcdc->Element[3]);
+		vtkErrorMacro("Sqrt(pow) 1-3: " << sqrt(pow(*tcdc->Element[1], 2) + pow(*tcdc->Element[2], 2) + pow(*tcdc->Element[3], 2)));
+*/
+		//Scale will be adjusted for tcdc[0]==1
+		double wscale = abs(*tcdc->Element[0]);
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
 
 		double r = 0.02;	//Touchpad radius
-		this->Pointer->SetRadius(.01*wscale);	//Pointer radius
+		this->Pointer->SetRadius(.014*wscale);	//Pointer radius
 
 		//3D Rotation and Translation Maths
-		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
+		double d = 0.06;	// Distance from center of controller to center of touchpad. TODO adjust value
 		double cosw = cos(wori[0] * vtkMath::Pi() / 180);
 		double sinw = sin(wori[0] * vtkMath::Pi() / 180);
 		
