@@ -164,7 +164,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		if (!this->PointerActor)
 		{
 			//create and place in coordinates.
-			this->Pointer->SetRadius(.008);
+			////this->Pointer->SetRadius(.008);
 			this->PointerActor = vtkActor::New();
 			this->PointerActor->PickableOff();
 			this->PointerActor->DragableOff();
@@ -296,15 +296,18 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 		vtkMatrix4x4 *tcdc;
 		camera->GetTrackingToDCMatrix(tcdc);
-		vtkErrorMacro(<< "tcdc matrix");
-		for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< *tcdc->Element[i] << " " << *tcdc->Element[i+1] << " " << *tcdc->Element[i+2] << " " << *tcdc->Element[i+3]);
+		//vtkErrorMacro(<< "tcdc matrix");
+		//for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< *tcdc->Element[i] << " " << *tcdc->Element[i+1] << " " << *tcdc->Element[i+2] << " " << *tcdc->Element[i+3]);
 
-		double wscale = 1;
+		//Scale will be adjusted for tcdc[0]==-1
+		double wscale = -(*tcdc->Element[0]);
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
-		double r = 0.02 * wscale;
+
+		double r = 0.02;	//Touchpad radius
+		this->Pointer->SetRadius(.01*wscale);	//Pointer radius
 
 		//3D Rotation and Translation Maths
 		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
