@@ -287,11 +287,15 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
   else
   {
     result = pHMD->PollNextEvent(&event, sizeof(vr::VREvent_t));
-
     if (result)
     {
       vr::TrackedDeviceIndex_t tdi = event.trackedDeviceIndex;
-
+	  /*
+      vr::VRControllerState_t *cs;
+	  uint64_t mask = vr::ButtonMaskFromId(vr::EVRButtonId::k_EButton_SteamVR_Touchpad);
+      if(pHMD->GetControllerState((tdi,&cs,sizeof(vr::VRControllerState_t)) == mask){};
+	   */
+	  
       // is it a controller button action?
       if (pHMD->GetTrackedDeviceClass(tdi) ==
           vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
@@ -387,7 +391,7 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
         vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
         this->MouseMoveEvent();	//I want to repaint the controller pointer.
       }*/
-      else if(event.eventType == vr::VREvent_TouchPadMove)
+      else if(/*event.data == vr::VREvent_Data_t::mouse &&*/ event.eventType == vr::VREvent_TouchPadMove)
       {
         //Continue here to handle SWIPE events
 		  int i = 0;

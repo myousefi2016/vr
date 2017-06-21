@@ -156,7 +156,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 	//to enable it
 	else
 	{
-		//chech if it is already active
+		//check if it is already active
 		if (!this->PointerActor)
 		{
 			//create and place in coordinates.
@@ -190,7 +190,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
-
+		double wscale = rwi->GetScale();
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
@@ -205,12 +205,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
-		/*ptrpos[0] = wpos[0] + d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
-		ptrpos[1] = wpos[1] + d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
-		ptrpos[2] = wpos[2] + d * (cosw + wori[3] * wori[3] * (1 - cosw));*/
-		ptrpos[0] = wpos[0] + (d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw));
-		ptrpos[1] = wpos[1] + (d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw);
-		ptrpos[2] = wpos[2] + (d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw);
+		ptrpos[0] = wpos[0] + wscale*((d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw)));
+		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
+		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 
