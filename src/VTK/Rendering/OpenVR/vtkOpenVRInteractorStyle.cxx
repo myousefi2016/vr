@@ -193,7 +193,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		}
 
 		//Get world scale!!!
-/*
+
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 		vtkOpenVRRenderWindow *win =
@@ -203,7 +203,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 			vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 		vr::IVRSystem *pHMD = win->GetHMD();
 		
-
+/*
 		vtkMatrix4x4 *WCVCMatrix = vtkMatrix4x4::New();
 		vtkMatrix3x3 *normalMatrix = vtkMatrix3x3::New();
 		vtkMatrix4x4 *VCDCMatrix = vtkMatrix4x4::New();
@@ -223,10 +223,6 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 		double sc = rwi->GetScale();
 		double lsc = rwi->GetLastScale();
-
-		//Got the controller
-		vtkOpenVRModel *controller = win->GetTrackedDeviceModel(vr::TrackedDeviceClass_Controller);
-		double scaleController = controller->GetPoseMatrix()->Get()->GetElement(3, 3);
 
 		//-------------------------------------------------------------------------
 
@@ -273,20 +269,32 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 
 
+		//Got the controller
+		/*vtkOpenVRModel *controller = win->GetTrackedDeviceModel(vr::TrackedDeviceClass_Controller);
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				double scaleController = controller->GetPoseMatrix()->Get()->GetElement(i, j);
+			}
+		}*/
 
 
-		double wscale = 10;
+
+
+
+
+		int k = 0;
+		double wscale = 50;
 		double *ppos = rwi->GetPhysicalTranslation(camera);
 		for (int i = 0; i < 3; i++) {
-			double pposx = ppos[i];
+			k = ppos[i];
 		}
-
+		k += 1;
 
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
-		double r = 0.02;
+		double r = 0.02 * wscale;
 
 		//3D Rotation and Translation Maths
 		double d = 0.05;	// Distance from center of controller to center of touchpad. TODO adjust value
