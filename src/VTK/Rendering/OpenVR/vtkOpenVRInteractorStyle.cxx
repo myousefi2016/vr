@@ -297,7 +297,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		vtkMatrix4x4 *tcdc;
 		camera->GetTrackingToDCMatrix(tcdc);
 		vtkErrorMacro(<< "tcdc matrix");
-		for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< tcdc[i] << " " << tcdc[i+1] << " " << tcdc[i+2] << " " << tcdc[i+3]);
+		for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< *tcdc->Element[i] << " " << *tcdc->Element[i+1] << " " << *tcdc->Element[i+2] << " " << *tcdc->Element[i+3]);
 
 		double wscale = 1;
 
