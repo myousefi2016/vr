@@ -200,7 +200,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 		vtkOpenVRCamera *camera =
 			vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
+		
 		vtkMatrix4x4 *WCVCMatrix = vtkMatrix4x4::New();
 		vtkMatrix3x3 *normalMatrix = vtkMatrix3x3::New();
 		vtkMatrix4x4 *VCDCMatrix = vtkMatrix4x4::New();
@@ -210,6 +210,17 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		double scaleWCVC = WCVCMatrix->GetElement(3, 3);
 		double scaleVCDC = VCDCMatrix->GetElement(3, 3);
 		double scaleWCDC = WCDCMatrix->GetElement(3, 3);
+
+		//double wExpl = (camera->GetExplicitProjectionTransformMatrix())->GetElement(3,3);
+
+		int pointer = this->Interactor->GetPointerIndex();
+
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+														this->Interactor->GetEventPositions(pointer)[1]);
+
+		double sc = rwi->GetScale();
+		double lsc = rwi->GetLastScale();
+
 
 		double wscale = 10;
 		//rwi->GetPhysicalTranslation();
@@ -228,9 +239,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
-		ptrpos[0] = wpos[0] + wscale*((d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw)));
-		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
-		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
+		ptrpos[0] = wpos[0] + scaleWCDC*((d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw)));
+		ptrpos[1] = wpos[1] + scaleWCDC*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
+		ptrpos[2] = wpos[2] + scaleWCDC*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 
