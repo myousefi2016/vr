@@ -278,18 +278,28 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		}*/
 
 
+		/*
+		double unitV[4] = { 0, 0, 0, 1 };
+		double scaleFactor =
+			vtkMath::Norm(poseMatrix->MultiplyDoublePoint(unitV));
+*/
 
 
-
-
+		/*
 		int k = 0;
-		double wscale = 50;
 		double *ppos = rwi->GetPhysicalTranslation(camera);
 		for (int i = 0; i < 3; i++) {
 			k = ppos[i];
 		}
 		k += 1;
+		*/
 
+		vtkMatrix4x4 *tcdc;
+		camera->GetTrackingToDCMatrix(tcdc);
+		vtkErrorMacro(<< "tcdc matrix");
+		for (int i = 0; i < 16; i+=4) vtkErrorMacro(<< tcdc[i] << " " << tcdc[i+1] << " " << tcdc[i+2] << " " << tcdc[i+3]);
+
+		double wscale = 1;
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
