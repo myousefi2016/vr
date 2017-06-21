@@ -65,6 +65,11 @@ public:
   void SetShowRay(bool v);
   void SetRayLength(double length);
 
+  vtkNew<vtkMatrix4x4>* GetPoseMatrix()
+  {
+	  return &PoseMatrix;
+  }
+
   void ReleaseGraphicsResources(vtkRenderWindow *win);
 
   vr::RenderModel_t *RawModel;

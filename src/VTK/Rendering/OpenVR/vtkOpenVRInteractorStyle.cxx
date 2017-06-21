@@ -33,6 +33,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkActor.h"
 #include "vtkMatrix4x4.h"
 #include "vtkMatrix3x3.h"
+#include "vtkOpenVRModel.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 
@@ -192,7 +193,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		}
 
 		//Get world scale!!!
-
+/*
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 		vtkOpenVRRenderWindow *win =
@@ -200,7 +201,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 		vtkOpenVRCamera *camera =
 			vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+		vr::IVRSystem *pHMD = win->GetHMD();
 		
+
 		vtkMatrix4x4 *WCVCMatrix = vtkMatrix4x4::New();
 		vtkMatrix3x3 *normalMatrix = vtkMatrix3x3::New();
 		vtkMatrix4x4 *VCDCMatrix = vtkMatrix4x4::New();
@@ -221,9 +224,64 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		double sc = rwi->GetScale();
 		double lsc = rwi->GetLastScale();
 
+		//Got the controller
+		vtkOpenVRModel *controller = win->GetTrackedDeviceModel(vr::TrackedDeviceClass_Controller);
+		double scaleController = controller->GetPoseMatrix()->Get()->GetElement(3, 3);
+
+		//-------------------------------------------------------------------------
+
+		//https://github.com/ValveSoftware/openvr/blob/master/samples/hellovr_opengl/hellovr_opengl_main.cpp
+		// Process SteamVR controller state
+		for (vr::TrackedDeviceIndex_t unDevice = 0; unDevice < vr::k_unMaxTrackedDeviceCount; unDevice++)
+		{
+			vr::VRControllerState_t state;
+			if (m_pHMD->GetControllerState(unDevice, &state, sizeof(state)))
+			{
+				m_rbShowTrackedDevice[unDevice] = state.ulButtonPressed == 0;
+			}
+		}
+
+			//vr::TrackedDeviceIndex_t
+
+
+
+
+		//Other try from https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetControllerState
+//		for (vr::TrackedDeviceIndex_t unDevice = 0; unDevice < vr::k_unMaxTrackedDeviceCount; unDevice++)
+//		{
+			vr::TrackedDeviceIndex_t unDevice = 0;	//Lets assume that there is only one controller.
+			vr::TrackingUniverseOrigin eOrigin = vr::TrackingUniverseOrigin::TrackingUniverseStanding;
+			vr::VRControllerState_t	pControllerState;
+			vr::TrackedDevicePose_t pTrackedDevicePose;
+			pHMD->GetControllerStateWithPose(eOrigin, unDevice, &pControllerState, sizeof(pControllerState), &pTrackedDevicePose);
+			if(pControllerState.ulButtonTouched == 1 &&
+				vr::ButtonMaskFromId(vr::EVRButtonId::k_EButton_SteamVR_Touchpad))	//If I am touching that button.
+			{
+				//pTrackedDevicePose.mDeviceToAbsoluteTracking
+				//See vtkOVRRWI (72).
+				//not this way....
+				//------------
+				//-----------
+	
+			}
+//		}
+
+		
+*/
+		//-------------------------------------------------------------------------
+
+
+
+
+
 
 		double wscale = 10;
-		//rwi->GetPhysicalTranslation();
+		double *ppos = rwi->GetPhysicalTranslation(camera);
+		for (int i = 0; i < 3; i++) {
+			double pposx = ppos[i];
+		}
+
+
 
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
@@ -239,9 +297,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
-		ptrpos[0] = wpos[0] + scaleWCDC*((d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw)));
-		ptrpos[1] = wpos[1] + scaleWCDC*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
-		ptrpos[2] = wpos[2] + scaleWCDC*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
+		ptrpos[0] = wpos[0] + wscale*((d-r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1]*wori[1]*(1-cosw)));
+		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
+		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
 		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
 
