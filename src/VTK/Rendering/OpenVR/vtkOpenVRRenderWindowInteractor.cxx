@@ -312,7 +312,7 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
         int pointerIndex =
           (role == vr::ETrackedControllerRole::TrackedControllerRole_RightHand ? 0 : 1);
         this->PointerIndexLookup[pointerIndex] = tdi;
-
+		
         vr::TrackedDevicePose_t &tdPose = renWin->GetTrackedDevicePose(tdi);
         double pos[3];
         double ppos[3];

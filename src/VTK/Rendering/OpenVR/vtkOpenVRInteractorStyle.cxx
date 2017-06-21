@@ -22,6 +22,8 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 
+#include "vtkOpenVRCamera.h"
+#include "vtkOpenVRRenderer.h"
 #include "vtkCommand.h"
 #include "vtkCallbackCommand.h"
 #include "vtkRenderer.h"
@@ -30,6 +32,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkProperty.h"
 #include "vtkActor.h"
 #include "vtkMatrix4x4.h"
+#include "vtkMatrix3x3.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 
@@ -188,10 +191,29 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 			this->PointerRenderer = this->CurrentRenderer;
 		}
 
+		//Get world scale!!!
+
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
+		vtkOpenVRRenderWindow *win =
+			vtkOpenVRRenderWindow::SafeDownCast(rwi->GetRenderWindow());
+		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+		vtkOpenVRCamera *camera =
+			vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+
+		vtkMatrix4x4 *WCVCMatrix = vtkMatrix4x4::New();
+		vtkMatrix3x3 *normalMatrix = vtkMatrix3x3::New();
+		vtkMatrix4x4 *VCDCMatrix = vtkMatrix4x4::New();
+		vtkMatrix4x4 *WCDCMatrix = vtkMatrix4x4::New();
+		camera->GetKeyMatrices(ren,WCVCMatrix,normalMatrix,VCDCMatrix,WCDCMatrix);
+		
+		double scaleWCVC = WCVCMatrix->GetElement(3, 3);
+		double scaleVCDC = VCDCMatrix->GetElement(3, 3);
+		double scaleWCDC = WCDCMatrix->GetElement(3, 3);
+
 		double wscale = 10;
-		this->CurrentRenderer->S
+		//rwi->GetPhysicalTranslation();
+
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
