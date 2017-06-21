@@ -190,7 +190,8 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
-		double wscale = rwi->GetScale();
+		double wscale = 10;
+		this->CurrentRenderer->S
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());
 		float *tpos = rwi->GetTouchPadPosition();
