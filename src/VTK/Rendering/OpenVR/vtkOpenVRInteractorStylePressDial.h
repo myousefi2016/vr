@@ -25,7 +25,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRInteractorStyle.h"
 #include "vtkTextMapper.h"
 
-//class vtkTextActor3D;
+class vtkTextActor3D;
 class vtkBillboardTextActor3D;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
@@ -69,6 +69,7 @@ protected:
 
   //Text3D to modify Props' attributes.
   vtkBillboardTextActor3D *TextActor;
+	//vtkTextActor3D *TextActor;
   vtkTextMapper *TextMapper;
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;

@@ -117,10 +117,11 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//First Click. Not created yet: create it.
 	if(!this->TextActor)
 	{
+		//this->TextActor = vtkTextActor3D::New();
 		this->TextActor = vtkBillboardTextActor3D::New();
 		this->TextActor->SetInput("Input data madafaka");
 		this->TextActor->PickableOff();
-		this->TextActor->DragableOff();
+		//this->TextActor->DragableOff();this->TextActor->Set
 		this->CurrentRenderer->AddActor(this->TextActor);
 	}
 	//Second Click. Already created: check if can be destroyed.
@@ -130,12 +131,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		if(this->TextHasUnsavedChanges)
 		{
 			//Right now, we delete it anyway.
+			this->CurrentRenderer->RemoveActor(this->TextActor);
 			this->TextActor->Delete();
 			this->TextActor = NULL;
 		}
 		//Changes save: can be deleted.
 		else
 		{
+			this->CurrentRenderer->RemoveActor(this->TextActor);
 			this->TextActor->Delete();
 			this->TextActor = NULL;
 		}
