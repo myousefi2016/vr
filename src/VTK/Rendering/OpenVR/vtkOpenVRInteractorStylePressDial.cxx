@@ -75,7 +75,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 		vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 
 		//Actual code:
-		this->TextActor->SetInput(this->TextActor->GetInput() + region);
+		if(this->TextActor) this->TextActor->SetInput(this->TextActor->GetInput() + region);
 	}
 	else
 	{
