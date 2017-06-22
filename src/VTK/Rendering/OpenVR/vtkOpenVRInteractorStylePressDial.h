@@ -22,8 +22,10 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStylePressDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-
 #include "vtkOpenVRInteractorStyle.h"
+
+//class vtkTextActor3D;
+class vtkBillboardTextActor3D;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
@@ -43,9 +45,19 @@ public:
   void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
-  //Delete trigger behaviour brom base class.
-  void OnLeftButtonDown() VTK_OVERRIDE {};
-  void OnLeftButtonUp() VTK_OVERRIDE {};
+  //@{
+  /**
+  * Override Middle Button (Grip) which will select Prop and attribute to modify.
+  */
+  void OnMiddleButtonDown() VTK_OVERRIDE;
+  void OnMiddleButtonUp() VTK_OVERRIDE;
+  //@}
+
+  //Delete trigger behaviour from base class.
+  //void OnLeftButtonDown() VTK_OVERRIDE {};
+  //void OnLeftButtonUp() VTK_OVERRIDE {};
+
+
 
   //Launch touchpad touched event
   //void OnTap() VTK_OVERRIDE;	//moved to its superclass
@@ -53,6 +65,10 @@ public:
 protected:
   vtkOpenVRInteractorStylePressDial();
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
+
+  //Text3D to modify Props' attributes.
+  vtkBillboardTextActor3D *TextActor;
+  bool TextHasUnsavedChanges;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

@@ -23,16 +23,24 @@ PURPOSE.  See the above copyright notice for more information.
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
+#include "vtkTextActor3D.h"
+#include "vtkBillboardTextActor3D.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 {
+	//Text3D to modify Props' attributes.
+	this->TextActor = NULL;
+	this->TextHasUnsavedChanges = false;
 }
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 {
+	//Remove Text3D
+	this->TextActor->Delete();
 }
 
 //----------------------------------------------------------------------------
@@ -65,6 +73,9 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 	{
 		//Display number, which is equal to region number
 		vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
+
+		//Actual code:
+		this->TextActor->SetInput(this->TextActor->GetInput() + region);
 	}
 	else
 	{
@@ -86,9 +97,42 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
 
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
+{
+	//First Click. Not created yet: create it.
+	if(!this->TextActor)
+	{
+		this->TextActor = vtkBillboardTextActor3D::New();
+		//this->TextActor->SetDisplayOffset();		//Specifies screen coords (pixels)
+		this->TextActor->SetInput("Input data madafaka");
+	}
+	//Second Click. Already created: check if can be destroyed.
+	else
+	{
+		//Unsaved changes: don't delete.
+		if(this->TextHasUnsavedChanges)
+		{
+			//Right now, we delete it anyway.
+			this->TextActor->Delete();
+			this->TextActor = NULL;
+		}
+		//Changes save: can be deleted.
+		else
+		{
+			this->TextActor->Delete();
+			this->TextActor = NULL;
+		}
+	}
+}
 
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
+{
+	// do nothing except overriding the default OnMiddleButtonUp behavior
+}
 
-
+//----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);

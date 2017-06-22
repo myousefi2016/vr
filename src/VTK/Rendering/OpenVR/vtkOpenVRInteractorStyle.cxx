@@ -164,7 +164,6 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		if (!this->PointerActor)
 		{
 			//create and place in coordinates.
-			////this->Pointer->SetRadius(.008);
 			this->PointerActor = vtkActor::New();
 			this->PointerActor->PickableOff();
 			this->PointerActor->DragableOff();

@@ -55,8 +55,6 @@ protected:
   vtkOpenVRInteractorStyle();
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
 
-
-
 	//Touchpad Pointer.
 	vtkSphereSource *Pointer;
 	vtkPolyDataMapper *PointerMapper;
@@ -65,15 +63,10 @@ protected:
 	double PointerColor[3];
 	//bool PointerActive;
 
-
-
-
 private:
   vtkOpenVRInteractorStyle(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
-
-	//vtkPoints *TouchPtr;
-	
+  	
 };
 
 #endif
