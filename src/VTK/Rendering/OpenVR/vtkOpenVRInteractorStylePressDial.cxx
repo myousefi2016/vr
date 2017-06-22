@@ -25,6 +25,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkTextActor3D.h"
 #include "vtkBillboardTextActor3D.h"
+#include "vtkTextProperty.h"
 #include "vtkTextMapper.h"
 #include "vtkRenderer.h"
 
@@ -112,8 +113,63 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 {
+	//Get current renderer
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+			this->Interactor->GetEventPositions(pointer)[1]);
+	}
 
 
+
+
+	//Second Click. Already created and changes saved: can be destroyed.
+	if (this->TextActor && !this->TextHasUnsavedChanges)
+	{
+		//Remove from renderer
+		if (this->TextRenderer != NULL && this->TextActor)
+		{
+			this->TextRenderer->RemoveActor(this->TextActor);
+			this->TextRenderer = NULL;
+		}
+	}
+	//to enable it
+	else
+	{
+		//First Click. Not created yet: create it and place it properly.
+		if (!this->TextActor)
+		{
+			this->TextActor = vtkBillboardTextActor3D::New();
+			this->TextActor->SetInput("Input data madafaka");
+			this->TextActor->PickableOff();
+			this->TextActor->DragableOff();
+			//this->TextActor->GetTextProperty()->
+		}
+
+		//check if used different renderer to previous visualization
+		if (this->CurrentRenderer != this->PointerRenderer)
+		{
+			if (this->TextRenderer != NULL && this->TextActor)
+			{
+				this->TextRenderer->RemoveActor(this->TextActor);
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddActor(this->TextActor);
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->TextRenderer = this->CurrentRenderer;
+		}
+	}
+
+
+
+
+/*
 	//First Click. Not created yet: create it.
 	if(!this->TextActor)
 	{
@@ -140,7 +196,9 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextActor = NULL;
 		}
 	}
+*/
 }
+
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
