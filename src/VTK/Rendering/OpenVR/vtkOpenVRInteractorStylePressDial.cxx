@@ -34,6 +34,8 @@ vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 {
+	//this->Interactor->SetRecognizeGestures(false);
+
 	//Text3D to modify Props' attributes.
 	this->TextActor = NULL;
 	this->TextMapper = vtkTextMapper::New();
@@ -113,6 +115,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 {
+	/*
 	//Get current renderer
 	if (this->Interactor)
 	{
@@ -121,7 +124,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->Interactor->GetEventPositions(pointer)[1]);
 	}
 
-
+	*/
 
 
 	//Second Click. Already created and changes saved: can be destroyed.
@@ -131,7 +134,9 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		if (this->TextRenderer != NULL && this->TextActor)
 		{
 			this->TextRenderer->RemoveActor(this->TextActor);
-			this->TextRenderer = NULL;
+			//REVIEW THIS. MAY BE SOURCE OF ERROR
+			this->TextActor->Delete();
+			this->TextActor = NULL;
 		}
 	}
 	//to enable it
@@ -148,7 +153,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		}
 
 		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != this->PointerRenderer)
+		if (this->CurrentRenderer != this->TextRenderer)
 		{
 			if (this->TextRenderer != NULL && this->TextActor)
 			{
@@ -200,6 +205,12 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		}
 	}
 */
+
+
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
 }
 
 
