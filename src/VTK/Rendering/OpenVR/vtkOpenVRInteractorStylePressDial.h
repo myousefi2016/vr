@@ -23,6 +23,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
+#include "vtkTextMapper.h"
 
 //class vtkTextActor3D;
 class vtkBillboardTextActor3D;
@@ -68,6 +69,8 @@ protected:
 
   //Text3D to modify Props' attributes.
   vtkBillboardTextActor3D *TextActor;
+  vtkTextMapper *TextMapper;
+  vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
 
 private:

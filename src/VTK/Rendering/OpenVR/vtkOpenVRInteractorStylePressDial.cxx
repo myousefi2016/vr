@@ -25,6 +25,8 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkTextActor3D.h"
 #include "vtkBillboardTextActor3D.h"
+#include "vtkTextMapper.h"
+#include "vtkRenderer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -33,6 +35,8 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 {
 	//Text3D to modify Props' attributes.
 	this->TextActor = NULL;
+	this->TextMapper = vtkTextMapper::New();
+	this->TextRenderer = NULL;
 	this->TextHasUnsavedChanges = false;
 }
 
@@ -40,7 +44,15 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 {
 	//Remove Text3D
-	this->TextActor->Delete();
+	if(this->TextActor)
+	{
+		this->TextActor->Delete();
+	}
+
+	if(this->TextMapper)
+	{
+		this->TextMapper->Delete();
+	}
 }
 
 //----------------------------------------------------------------------------
@@ -100,12 +112,16 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 {
+
+
 	//First Click. Not created yet: create it.
 	if(!this->TextActor)
 	{
 		this->TextActor = vtkBillboardTextActor3D::New();
-		//this->TextActor->SetDisplayOffset();		//Specifies screen coords (pixels)
 		this->TextActor->SetInput("Input data madafaka");
+		this->TextActor->PickableOff();
+		this->TextActor->DragableOff();
+		this->CurrentRenderer->AddActor(this->TextActor);
 	}
 	//Second Click. Already created: check if can be destroyed.
 	else
