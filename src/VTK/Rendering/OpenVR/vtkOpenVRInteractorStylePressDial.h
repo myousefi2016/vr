@@ -23,10 +23,11 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
-#include "vtkTextMapper.h"
 
 class vtkTextActor3D;
 class vtkBillboardTextActor3D;
+class vtkTextMapper;
+class vtkTextSource;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
@@ -68,9 +69,10 @@ protected:
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-  vtkBillboardTextActor3D *TextActor;
-	//vtkTextActor3D *TextActor;
+  vtkTextSource *Text;
   vtkTextMapper *TextMapper;
+  //vtkBillboardTextActor3D *TextActor;
+  vtkTextActor3D *TextActor;
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
 
