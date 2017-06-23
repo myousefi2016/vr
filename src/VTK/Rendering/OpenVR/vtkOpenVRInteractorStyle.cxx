@@ -199,7 +199,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 		
 		//Get world information
-		double wscale = camera->GetDistance();                                 //Scalation
+		double wscale = camera->GetDistance();                                 //Scale
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 

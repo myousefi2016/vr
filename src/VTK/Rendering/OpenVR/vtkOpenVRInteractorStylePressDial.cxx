@@ -32,6 +32,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
+#include "vtkMatrixToHomogeneousTransform.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -158,15 +159,52 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
-	double *camPos = camera->GetPosition();
-	double *camOri = camera->GetOrientation();
+	double wscale = camera->GetDistance();          //World Scale
+	double *camPos = camera->GetPosition();         //Camera Position
+	double *camOri = camera->GetOrientation();		//Camera Orientation
 
 	vtkErrorMacro(<< "camPos (x, y, z):");
 	vtkErrorMacro(<< "(" << camPos[0] << ", " << camPos[1] << ", " << camPos[2] << ")");
 	vtkErrorMacro(<< "camOri (w, ux, uy, uz)");
 	vtkErrorMacro(<< "(" << camOri[0] << ", " << camOri[1] << ", " << camOri[2] << ", " << camOri[3] << ")");
 	vtkErrorMacro(<< "------------------------------------------------------------");
-/*
+
+	const double d2c = 0.5;		//Distance to camera. MAy be needed to multiply by scale.
+	
+	
+	//3D Rotation and Translation Maths
+	double cosw = cos(camOri[0] * vtkMath::Pi() / 180);
+	double sinw = sin(camOri[0] * vtkMath::Pi() / 180);
+	double ptrPos[3];
+	double ptrOri[4];
+	
+/*	//To try:
+	vtkMatrix4x4 *m_d2t = vtkMatrix4x4::New();
+	m_d2t->SetElement(0, 3, d2c);		// Apply traslation on x-axis.
+	m_d2t->SetElement(0, 0, -1);		// Apply rotation of 180º on y-axis.
+	m_d2t->SetElement(2, 2, -1);
+	camera->SetUserViewTransform(vtkHomogeneousTransform::SafeDownCast(m_d2t));
+	//camera->SetUserTransform();
+	*/
+
+	//Transformation matrix (X' = R · T · X)
+	vtkMatrix4x4 *w2d = vtkMatrix4x4::New();	//World to device
+	camera->GetTrackingToDCMatrix(w2d);	//Go from world coordinates to device coordinates?
+	vtkMatrix4x4 *d2t = vtkMatrix4x4::New();	//Device to text
+	d2t->SetElement(0, 3, d2c);		// Apply traslation on x-axis.
+	d2t->SetElement(0, 0, -1);		// Apply rotation of 180º on y-axis.
+	d2t->SetElement(2, 2, -1);
+
+	vtkMatrix4x4 *w2t = vtkMatrix4x4::New();	//World to text
+	vtkMatrix4x4::Multiply4x4(w2d, d2t, w2t);
+	
+	vtkErrorMacro(<< "W2D:");
+	for(int i=0;i<4;i++)
+	vtkErrorMacro(<< "(" << w2d[0] << ", " << w2d[1] << ", " << w2d[2] << ", " << w2d[3] << ")");
+	
+	
+	
+	/*
 	vtkOpenVRRenderWindow *renWin =
 		vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
 	if (!renWin)
