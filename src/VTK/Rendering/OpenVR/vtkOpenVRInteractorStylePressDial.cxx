@@ -38,11 +38,12 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	//this->Interactor->SetRecognizeGestures(false);
 
 	//Text3D to modify Props' attributes.
-	this->Text = vtkTextSource::New();
 	this->TextActor = NULL;
-	this->TextMapper = vtkTextMapper::New();
 	this->TextRenderer = NULL;
 	this->TextHasUnsavedChanges = false;
+
+	this->Text = vtkTextSource::New();
+	this->TextMapper = vtkTextMapper::New();
 
 	if (this->TextMapper && this->Text)
 	{
@@ -133,26 +134,26 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		//Remove from renderer
 		if (this->TextRenderer != NULL && this->TextActor)
 		{
-			this->TextRenderer->RemoveActor(this->TextActor);
-			//REVIEW THIS. MAY BE SOURCE OF ERROR
-			//this->TextActor->Delete();
-			//this->TextActor = NULL;
+			//this->TextRenderer->RemoveActor(this->TextActor);
+			this->TextRenderer->RemoveViewProp(this->TextActor);
 			this->TextRenderer = NULL;
 		}
 	}
-	//to enable it
+	//Either or is not created or has changes
 	else
 	{
 		//First Click. Not created yet: create it and place it properly.
 		if (!this->TextActor)
 		{
 			//this->TextActor = vtkBillboardTextActor3D::New();
-			this->Text->SetText("Input data madafaka");
+			////this->Text->SetText("Input data madafaka");
 			this->TextActor = vtkTextActor3D::New();
-			//this->TextActor->SetInput("Input data madafaka");
+			this->TextActor->SetInput("Input data madafaka");
 			this->TextActor->PickableOff();
 			this->TextActor->DragableOff();
 			//this->TextActor->GetTextProperty()->
+			//this->TextActor->SetMapper(this->textMapper);
+			
 		}
 
 		//check if used different renderer to previous visualization
@@ -160,11 +161,13 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		{
 			if (this->TextRenderer != NULL && this->TextActor)
 			{
-				this->TextRenderer->RemoveActor(this->TextActor);
+				//this->TextRenderer->RemoveActor(this->TextActor);
+				this->TextRenderer->RemoveViewProp(this->TextActor);
 			}
 			if (this->CurrentRenderer != 0)
 			{
-				this->CurrentRenderer->AddActor(this->TextActor);
+				//this->CurrentRenderer->AddActor(this->TextActor);
+				this->CurrentRenderer->AddViewProp(this->TextActor);
 			}
 			else
 			{

@@ -391,19 +391,19 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
         vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
         this->MouseMoveEvent();	//I want to repaint the controller pointer.
       }*/
-      else if(/*event.data == vr::VREvent_Data_t::mouse &&*/ event.eventType == vr::VREvent_TouchPadMove)
-      {
-        //Continue here to handle SWIPE events
-		  int i = 0;
-      }
-      else if(event.eventType == vr::VREvent_TrackedDeviceUpdated)
-	  {
-        //Other swipe alternative.
-		  int k = 0;
-      }
+//      else if(/*event.data == vr::VREvent_Data_t::mouse &&*/ event.eventType == vr::VREvent_TouchPadMove)
+//      {
+//        //Continue here to handle SWIPE events
+//		  int i = 0;
+//      }
+//      else if(event.eventType == vr::VREvent_TrackedDeviceUpdated)
+//	  {
+//        //Other swipe alternative.
+//		  int k = 0;
+//      }
 		//Debugging purposes.
-	  int type = event.eventType;
-	  vtkErrorMacro(<< "eventType = " << type);
+	  //int type = event.eventType;
+	  //vtkErrorMacro(<< "eventType = " << type);
     }
     else
     {
