@@ -69,9 +69,6 @@ protected:
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-  vtkTextSource *Text;
-  vtkTextMapper *TextMapper;
-  //vtkBillboardTextActor3D *TextActor;
   vtkTextActor3D *TextActor;
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
