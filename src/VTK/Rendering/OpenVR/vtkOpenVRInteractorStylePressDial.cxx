@@ -29,6 +29,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkTextMapper.h"
 #include "vtkRenderer.h"
 #include "vtkTextSource.h"
+#include "vtkOpenVRRenderer.h"
+#include "vtkOpenVRRenderWindowInteractor.h"
+#include "vtkOpenVRCamera.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -103,7 +106,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	{
 		int pointer = this->Interactor->GetPointerIndex();
 		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-														this->Interactor->GetEventPositions(pointer)[1]);
+		                        this->Interactor->GetEventPositions(pointer)[1]);
 	}
 
 	//Second Click. Already created and changes saved: can be destroyed.
@@ -119,7 +122,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//Either or is not created or has changes
 	else
 	{
-		//First Click. Not created yet: create it and place it properly.
+		//First Click ever. Not created yet: create it and place it properly.
 		if (!this->TextActor)
 		{
 			this->TextActor = vtkTextActor3D::New();
@@ -129,7 +132,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			
 		}
 
-		//check if used different renderer to previous visualization
+		//First Click. Created but not shown. Check if used different renderer to previous visualization.
 		if (this->CurrentRenderer != this->TextRenderer)
 		{
 			if (this->TextRenderer != NULL && this->TextActor)
@@ -148,6 +151,41 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		}
 	}
 	
+
+
+	//vtkOpenVRRenderWindowInteractor *rwi =
+	//	static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
+	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+
+	double *camPos = camera->GetPosition();
+	double *camOri = camera->GetOrientation();
+
+	vtkErrorMacro(<< "camPos (x, y, z):");
+	vtkErrorMacro(<< "(" << camPos[0] << ", " << camPos[1] << ", " << camPos[2] << ")");
+	vtkErrorMacro(<< "camOri (w, ux, uy, uz)");
+	vtkErrorMacro(<< "(" << camOri[0] << ", " << camOri[1] << ", " << camOri[2] << ", " << camOri[3] << ")");
+	vtkErrorMacro(<< "------------------------------------------------------------");
+/*
+	vtkOpenVRRenderWindow *renWin =
+		vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
+	if (!renWin)
+	{
+		return;
+	}
+
+	vr::IVRSystem *pHMD = renWin->GetHMD();
+	if (!pHMD)
+	{
+		return;
+	}
+	//pHMD->GetPo
+	*/
+
+
+
+
+
 	if (this->Interactor)
 	{
 		this->Interactor->Render();
