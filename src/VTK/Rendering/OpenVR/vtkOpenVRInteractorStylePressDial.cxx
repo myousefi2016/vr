@@ -152,40 +152,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		}
 	}
 	
-
-
-	//vtkOpenVRRenderWindowInteractor *rwi =
-	//	static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
 	double wscale = camera->GetDistance();          //World Scale
 	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
-	//double *camOri = camera->GetOrientationWXYZ();	//Camera Orientation (W,Ux,Uy,Uz)
-	/*double lookFW[3];// = { camOriXYZ[1], 0, camOriXYZ[3] };	//Projection over ground.
-	double lookFW2[3];
-	camera->GetEyePosition(lookFW2);
-	for (int i = 0; i < 3; i++) lookFW[i] = lookFW2[i];
-	lookFW[1] = 0;
-	vtkMath::Normalize(lookFW);*/
-	vtkErrorMacro(<< "camPos (x, y, z):");
-	vtkErrorMacro(<< "(" << camPos[0] << ", " << camPos[1] << ", " << camPos[2] << ")");
-	vtkErrorMacro(<< "camOri (w, ux, uy, uz)");
-	vtkErrorMacro(<< "(" << camOri[0] << ", " << camOri[1] << ", " << camOri[2] << ")");
-	/*vtkErrorMacro(<< "GetEyePosition (x, y, z):");
-	vtkErrorMacro(<< "(" << lookFW2[0] << ", " << lookFW2[1] << ", " << lookFW2[2] << ")");
-	vtkErrorMacro(<< "lookFW (x, y, z):");
-	vtkErrorMacro(<< "(" << lookFW[0] << ", " << lookFW[1] << ", " << lookFW[2] << ")");*/
-	vtkErrorMacro(<< "------------------------------------------------------------");
+	double *camOri = camera->GetOrientation();			//Camera Orientation: rotation in (X,Y,Z)
 	
-
-	
-	double *textScale = this->TextActor->GetScale();
-	vtkErrorMacro(<< "textscale: " << *textScale);
-
 	const double d2c = 0.5;		//Distance to camera. MAy be needed to multiply by scale.
-	
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
@@ -194,70 +168,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	vtkMath::Normalize(projection);
 
 	double txtPos[3];
-	//double txtOri[4];
-	
-/*	//To try:
-	vtkMatrix4x4 *m_d2t = vtkMatrix4x4::New();
-	m_d2t->SetElement(0, 3, d2c);		// Apply traslation on x-axis.
-	m_d2t->SetElement(0, 0, -1);		// Apply rotation of 180º on y-axis.
-	m_d2t->SetElement(2, 2, -1);
-	camera->SetUserViewTransform(vtkHomogeneousTransform::SafeDownCast(m_d2t));
-	//camera->SetUserTransform();
-	*/
-/*	//Transformation matrix (X' = R · T · X)
-	vtkMatrix4x4 *w2d = vtkMatrix4x4::New();	//World to device
-	camera->GetTrackingToDCMatrix(w2d);	//Go from world coordinates to device coordinates?
-	vtkMatrix4x4 *d2t = vtkMatrix4x4::New();	//Device to text
-	d2t->SetElement(0, 3, d2c);		// Apply traslation on x-axis.
-	d2t->SetElement(0, 0, -1);		// Apply rotation of 180º on y-axis.
-	d2t->SetElement(2, 2, -1);
-	vtkMatrix4x4 *w2t = vtkMatrix4x4::New();	//World to text
-	vtkMatrix4x4::Multiply4x4(w2d, d2t, w2t);
-	
-	vtkErrorMacro(<< "W2D:");
-	for(int i=0;i<4;i++)
-		vtkErrorMacro(<< "|" << w2d->Element[i][0] << ", " << w2d->Element[i][1] << ", " << w2d->Element[i][2] << ", " << w2d->Element[i][3] << "|");
-	vtkErrorMacro(<< "D2T:");
-	for (int i = 0; i<4; i++)
-		vtkErrorMacro(<< "|" << d2t->Element[i][0] << ", " << d2t->Element[i][1] << ", " << d2t->Element[i][2] << ", " << d2t->Element[i][3] << "|");
-	vtkErrorMacro(<< "W2T:");
-	for (int i = 0; i<4; i++)
-		vtkErrorMacro(<< "|" << w2t->Element[i][0] << ", " << w2t->Element[i][1] << ", " << w2t->Element[i][2] << ", " << w2t->Element[i][3] << "|");
-*/	
-	/*
-	double _scale = camera->GetModelTransformMatrix()->Element[3][3];
-	vtkErrorMacro(<< "Scale (from TM): " << _scale);
-	*/
-
-	///Math stuff...
-/*	txtPos[0] = camPos[0] + wscale * d2c * (camOri[1] * camOri[3] * (1 - cosw) + camOri[2] * sinw);// +r*tpos[0] * (cosw + camOri[1] * camOri[1] * (1 - cosw)));
-	txtPos[1] = camPos[1] + wscale * d2c * (camOri[2] * camOri[3] * (1 - cosw) - camOri[1] * sinw);// +r*tpos[0] * (camOri[1] * camOri[2] * (1 - cosw) + camOri[3] * sinw));
-	txtPos[2] = camPos[2] + wscale * d2c * (cosw + camOri[3] * camOri[3] * (1 - cosw));// +r*tpos[0] * (camOri[1] * camOri[3] * (1 - cosw) - camOri[2] * sinw));
-*/
-
-
-	//double *camOriXYZ = camera->GetOrientation();	//Camera Orientation
-	//vtkMath::RotateVectorByWXYZ();
-	//vtkMath::RotateVectorByNormalizedQuaternion(camOriXYZ, , camOriXYZ);
 
 	for (int i = 0; i < 3; i++)
 		txtPos[i] = camPos[i] + projection[i] * d2c;
 
-/*	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i];// +d2c * lookFW[i];
-	*/																																							 
-/*
-	ptrOri[0] = camOri[0] + 180;
-	ptrOri[1] = -camOri[3];
-	ptrOri[2] = camOri[2];
-	ptrOri[3] = -camOri[1];
-	*/
-
 	//Place text
 	this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
-	//this->TextActor->SetOrientation(0, -camOri[0], 0);
+	this->TextActor->SetOrientation(0, -camOri[1], 0);
 	this->TextActor->SetPosition(txtPos);
-
 
 	//Render Scene
 	if (this->Interactor)
