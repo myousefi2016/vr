@@ -220,7 +220,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
 		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
-		this->Pointer->SetCenter(ptrpos[0], ptrpos[1], ptrpos[2]);
+		this->Pointer->SetCenter(ptrpos);
 	}
 
 	if (this->Interactor)

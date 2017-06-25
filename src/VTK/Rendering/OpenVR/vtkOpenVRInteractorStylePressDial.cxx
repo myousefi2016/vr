@@ -188,7 +188,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//camera->SetUserTransform();
 	*/
 
-	//Transformation matrix (X' = R · T · X)
+/*	//Transformation matrix (X' = R · T · X)
 	vtkMatrix4x4 *w2d = vtkMatrix4x4::New();	//World to device
 	camera->GetTrackingToDCMatrix(w2d);	//Go from world coordinates to device coordinates?
 	vtkMatrix4x4 *d2t = vtkMatrix4x4::New();	//Device to text
@@ -207,27 +207,26 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	vtkErrorMacro(<< "W2T:");
 	for (int i = 0; i<4; i++)
 		vtkErrorMacro(<< "|" << w2t->Element[i][0] << ", " << w2t->Element[i][1] << ", " << w2t->Element[i][2] << ", " << w2t->Element[i][3] << "|");
-	
-	/*
-	vtkOpenVRRenderWindow *renWin =
-		vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
-	if (!renWin)
-	{
-		return;
-	}
+*/	
 
-	vr::IVRSystem *pHMD = renWin->GetHMD();
-	if (!pHMD)
-	{
-		return;
-	}
-	//pHMD->GetPo
+	double _scale = camera->GetModelTransformMatrix()->Element[3][3];
+	vtkErrorMacro(<< "Scale: " << _scale);
+
+	///Math stuff...
+	ptrPos[0] = camPos[0] + wscale * d2c * (camOri[1] * camOri[3] * (1 - cosw) + camOri[2] * sinw);// +r*tpos[0] * (cosw + camOri[1] * camOri[1] * (1 - cosw)));
+	ptrPos[1] = camPos[1] + wscale * d2c * (camOri[2] * camOri[3] * (1 - cosw) - camOri[1] * sinw);// +r*tpos[0] * (camOri[1] * camOri[2] * (1 - cosw) + camOri[3] * sinw));
+	ptrPos[2] = camPos[2] + wscale * d2c * (cosw + camOri[3] * camOri[3] * (1 - cosw));// +r*tpos[0] * (camOri[1] * camOri[3] * (1 - cosw) - camOri[2] * sinw));
+	/*
+	ptrOri[0] = camOri[0] + 180;
+	ptrOri[1] = -camOri[3];
+	ptrOri[2] = camOri[2];
+	ptrOri[3] = -camOri[1];
 	*/
 
+	//Place text
+	this->TextActor->SetPosition(ptrPos);
 
-
-
-
+	//Render Scene
 	if (this->Interactor)
 	{
 		this->Interactor->Render();
