@@ -190,7 +190,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
 	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
-	double projection[3] = {cosw, 0, sinw};
+	double projection[3] = {sinw, 0, -cosw};
 	vtkMath::Normalize(projection);
 
 	double txtPos[3];
