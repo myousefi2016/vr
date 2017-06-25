@@ -210,8 +210,8 @@ void vtkOpenVRInteractorStyle::SetTouchPadPointer(bool activate)
 		this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
 
 		//3D Rotation and Translation Maths
-		double cosw = cos(wori[0] * vtkMath::Pi() / 180);
-		double sinw = sin(wori[0] * vtkMath::Pi() / 180);
+		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
+		double sinw = sin(vtkMath::RadiansFromDegrees(wori[0]));
 		double ptrpos[3];
 		
 		//Transformation matrix (X' = R · T · X)

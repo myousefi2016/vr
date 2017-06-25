@@ -237,7 +237,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 
 
 	for (int i = 0; i > 3; i++)
-		txtPos[i] = camPos[i] + d2c * lookFW[i];
+		txtPos[i] = camPos[i];// +d2c * lookFW[i];
 
 
 																																										 
