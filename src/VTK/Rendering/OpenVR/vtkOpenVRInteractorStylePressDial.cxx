@@ -164,7 +164,8 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//double *camOri = camera->GetOrientation();		//Camera Orientation
 	double *camOri = camera->GetOrientationWXYZ();	//Camera Orientation (W,Ux,Uy,Uz)
 	double *camOriXYZ = camera->GetOrientation();	//Camera Orientation (X,Y,Z)
-	double *lookFW = camera->GetDirectionOfProjection();	//Projection over ground.
+
+	double lookFW[3] = { camOri[1], 0, camOri[3]};	//Projection over ground.
 	vtkMath::Normalize(lookFW);
 
 	vtkErrorMacro(<< "camPos (x, y, z):");
@@ -180,7 +181,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	double *textScale = this->TextActor->GetScale();
 	vtkErrorMacro(<< "textscale: " << *textScale);
 
-	const double d2c = 1.5;		//Distance to camera. MAy be needed to multiply by scale.
+	const double d2c = 0.5;		//Distance to camera. MAy be needed to multiply by scale.
 	
 	
 	//3D Rotation and Translation Maths
