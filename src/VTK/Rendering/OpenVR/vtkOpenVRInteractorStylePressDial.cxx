@@ -200,13 +200,13 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	
 	vtkErrorMacro(<< "W2D:");
 	for(int i=0;i<4;i++)
-		vtkErrorMacro(<< "|" << w2d[0] << ", " << w2d[1] << ", " << w2d[2] << ", " << w2d[3] << "|");
+		vtkErrorMacro(<< "|" << w2d->Element[i][0] << ", " << w2d->Element[i][1] << ", " << w2d->Element[i][2] << ", " << w2d->Element[i][3] << "|");
 	vtkErrorMacro(<< "D2T:");
 	for (int i = 0; i<4; i++)
-		vtkErrorMacro(<< "|" << d2t[0] << ", " << d2t[1] << ", " << d2t[2] << ", " << d2t[3] << "|");
+		vtkErrorMacro(<< "|" << d2t->Element[i][0] << ", " << d2t->Element[i][1] << ", " << d2t->Element[i][2] << ", " << d2t->Element[i][3] << "|");
 	vtkErrorMacro(<< "W2T:");
 	for (int i = 0; i<4; i++)
-		vtkErrorMacro(<< "|" << w2t[0] << ", " << w2t[1] << ", " << w2t[2] << ", " << w2t[3] << "|");
+		vtkErrorMacro(<< "|" << w2t->Element[i][0] << ", " << w2t->Element[i][1] << ", " << w2t->Element[i][2] << ", " << w2t->Element[i][3] << "|");
 	
 	/*
 	vtkOpenVRRenderWindow *renWin =
