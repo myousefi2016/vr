@@ -249,8 +249,8 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	*/
 
 	//Place text
-	this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
-	this->TextActor->SetOrientation(camOriXYZ[0], camOriXYZ[1]+180, camOriXYZ[2]); //this->TextActor->SetOrientation(0, -camOri[0], 0);
+	//this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
+	//this->TextActor->SetOrientation(camOriXYZ[0], camOriXYZ[1]+180, camOriXYZ[2]); //this->TextActor->SetOrientation(0, -camOri[0], 0);
 	this->TextActor->SetPosition(txtPos);
 
 
