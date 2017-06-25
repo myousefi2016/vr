@@ -165,7 +165,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	double *camOri = camera->GetOrientationWXYZ();	//Camera Orientation (W,Ux,Uy,Uz)
 
 	//To try.
-	//double *camOriXYZ = camera->GetOrientation();	//Camera Orientation (X,Y,Z)
+	double *camOriXYZ = camera->GetOrientation();	//Camera Orientation (X,Y,Z)
 	double lookFW[3];// = { camOriXYZ[1], 0, camOriXYZ[3] };	//Projection over ground.
 	camera->GetEyePlaneNormal(lookFW);
 	lookFW[1] = 0;
@@ -226,7 +226,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	*/
 
 	///Math stuff...
-	txtPos[0] = camPos[0] +wscale * d2c * (camOri[1] * camOri[3] * (1 - cosw) + camOri[2] * sinw);// +r*tpos[0] * (cosw + camOri[1] * camOri[1] * (1 - cosw)));
+	txtPos[0] = camPos[0] + wscale * d2c * (camOri[1] * camOri[3] * (1 - cosw) + camOri[2] * sinw);// +r*tpos[0] * (cosw + camOri[1] * camOri[1] * (1 - cosw)));
 	txtPos[1] = camPos[1] + wscale * d2c * (camOri[2] * camOri[3] * (1 - cosw) - camOri[1] * sinw);// +r*tpos[0] * (camOri[1] * camOri[2] * (1 - cosw) + camOri[3] * sinw));
 	txtPos[2] = camPos[2] + wscale * d2c * (cosw + camOri[3] * camOri[3] * (1 - cosw));// +r*tpos[0] * (camOri[1] * camOri[3] * (1 - cosw) - camOri[2] * sinw));
 
