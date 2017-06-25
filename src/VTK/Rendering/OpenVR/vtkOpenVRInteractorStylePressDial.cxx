@@ -163,9 +163,10 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	double *camPos = camera->GetPosition();         //Camera Position
 	//double *camOri = camera->GetOrientation();		//Camera Orientation
 	double *camOri = camera->GetOrientationWXYZ();	//Camera Orientation (W,Ux,Uy,Uz)
-	double *camOriXYZ = camera->GetOrientation();	//Camera Orientation (X,Y,Z)
 
-	double lookFW[3] = { camOri[1], 0, camOri[3]};	//Projection over ground.
+	//To try.
+	double *camOriXYZ = camera->GetOrientation();	//Camera Orientation (X,Y,Z)
+	double lookFW[3] = { camOriXYZ[1], 0, camOriXYZ[3]};	//Projection over ground.
 	vtkMath::Normalize(lookFW);
 
 	vtkErrorMacro(<< "camPos (x, y, z):");
@@ -175,7 +176,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	vtkErrorMacro(<< "lookFW (x, y, z):");
 	vtkErrorMacro(<< "(" << lookFW[0] << ", " << lookFW[1] << ", " << lookFW[2] << ")");
 	vtkErrorMacro(<< "------------------------------------------------------------");
-
+	
 
 	
 	double *textScale = this->TextActor->GetScale();
@@ -236,7 +237,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 
 
 
-	for (int i = 0; i > 3; i++)
+	for (int i = 0; i < 3; i++)
 		txtPos[i] = camPos[i];// +d2c * lookFW[i];
 
 
