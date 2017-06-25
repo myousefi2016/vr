@@ -161,7 +161,8 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 
 	double wscale = camera->GetDistance();          //World Scale
 	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation
+	//double *camOri = camera->GetOrientation();		//Camera Orientation
+	double *camOri = camera->GetOrientationWXYZ();	//Camera Orientation	
 
 	vtkErrorMacro(<< "camPos (x, y, z):");
 	vtkErrorMacro(<< "(" << camPos[0] << ", " << camPos[1] << ", " << camPos[2] << ")");
@@ -194,15 +195,18 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	d2t->SetElement(0, 3, d2c);		// Apply traslation on x-axis.
 	d2t->SetElement(0, 0, -1);		// Apply rotation of 180º on y-axis.
 	d2t->SetElement(2, 2, -1);
-
 	vtkMatrix4x4 *w2t = vtkMatrix4x4::New();	//World to text
 	vtkMatrix4x4::Multiply4x4(w2d, d2t, w2t);
 	
 	vtkErrorMacro(<< "W2D:");
 	for(int i=0;i<4;i++)
-	vtkErrorMacro(<< "(" << w2d[0] << ", " << w2d[1] << ", " << w2d[2] << ", " << w2d[3] << ")");
-	
-	
+		vtkErrorMacro(<< "|" << w2d[0] << ", " << w2d[1] << ", " << w2d[2] << ", " << w2d[3] << "|");
+	vtkErrorMacro(<< "D2T:");
+	for (int i = 0; i<4; i++)
+		vtkErrorMacro(<< "|" << d2t[0] << ", " << d2t[1] << ", " << d2t[2] << ", " << d2t[3] << "|");
+	vtkErrorMacro(<< "W2T:");
+	for (int i = 0; i<4; i++)
+		vtkErrorMacro(<< "|" << w2t[0] << ", " << w2t[1] << ", " << w2t[2] << ", " << w2t[3] << "|");
 	
 	/*
 	vtkOpenVRRenderWindow *renWin =
