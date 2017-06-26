@@ -73,7 +73,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 	region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
 
-	if (TextDefaultMsg)
+	if (this->TextActor && TextDefaultMsg)
 	{
 		this->TextActor->SetInput("");
 		TextDefaultMsg = false;
@@ -127,11 +127,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 
 	//May be omitted?
 	//Render Scene
-	if (this->Interactor)
+	/*if (this->Interactor)
 	{
 		this->Interactor->Render();
 	}
-	
+	*/
 }
 
 //----------------------------------------------------------------------------
