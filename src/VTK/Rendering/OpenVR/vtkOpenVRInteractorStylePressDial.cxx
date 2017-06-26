@@ -107,6 +107,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 				//Actual code:
 				if (this->TextActor)
 				{
+					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
+					if (newText.compare("") == 0)
+					{
+						this->TextActor->SetInput(" ");		//Avoids unexpected errors
+					}
 					this->TextActor->GetTextProperty()->BoldOff();
 					TextHasUnsavedChanges = false;
 				}
@@ -118,12 +123,20 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 				//Actual code:
 				if (this->TextActor)
 				{
-
 					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					newText.pop_back();
-					this->TextActor->SetInput(newText);
-					this->TextActor->GetTextProperty()->BoldOn();
-					TextHasUnsavedChanges = true;
+					if (newText.length() <= 1)
+					{
+						this->TextActor->SetInput(" ");		//Avoids unexpected errors
+						this->TextActor->GetTextProperty()->BoldOff();
+						TextHasUnsavedChanges = false;
+					}
+					else
+					{
+						newText.pop_back();
+						this->TextActor->SetInput(newText);
+						this->TextActor->GetTextProperty()->BoldOn();
+						TextHasUnsavedChanges = true;
+					}
 				}
 			}
 		}
@@ -147,9 +160,10 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		                        this->Interactor->GetEventPositions(pointer)[1]);
 	}
 
-	bool TextEmpty = !bool(vtkStdString("").compare(this->TextActor->GetInput()));
+	bool TextEmpty = false;
+	if(this->TextActor) TextEmpty = !bool(vtkStdString(" ").compare(this->TextActor->GetInput()));
 
-	//Second Click. Already created and changes saved: can be destroyed.
+	//Second Click. Already created and changes saved: can be hidden.
 	if (this->TextActor && this->TextRenderer != NULL &&
 		(!this->TextHasUnsavedChanges || TextEmpty))
 	{
@@ -162,6 +176,8 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			//Restore initial values
 			this->TextActor->SetInput("Input data");
 			this->TextDefaultMsg = true;
+			this->TextIsVisible = false;
+			//this->TextHasUnsavedChanges = false;
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -193,6 +209,8 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 				vtkWarningMacro(<< "no current renderer on the interactor style.");
 			}
 			this->TextRenderer = this->CurrentRenderer;
+			this->TextIsVisible = true;
+			this->TextHasUnsavedChanges = false;
 		}
 
 	}
