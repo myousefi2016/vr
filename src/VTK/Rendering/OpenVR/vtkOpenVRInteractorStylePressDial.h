@@ -78,6 +78,7 @@ protected:
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
   bool TextDefaultMsg;
+  bool TextIsVisible;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

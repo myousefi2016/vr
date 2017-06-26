@@ -44,6 +44,7 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->TextRenderer = NULL;
 	this->TextHasUnsavedChanges = false;
 	this->TextDefaultMsg = true;
+	this->TextIsVisible = false;
 }
 
 //----------------------------------------------------------------------------
@@ -60,78 +61,73 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 //TODO add behaviour if needed
 void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 {
-	//Downcast to a 3D Interactor.
-	vtkRenderWindowInteractor3D *rwi =
-		static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);
-
-	float x = rwi->GetTouchPadPosition()[0];	// Values between -1 and 1.
-	float y = rwi->GetTouchPadPosition()[1];
-	
-	float radius = sqrt(x*x + y*y);
-
-	int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-	region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
-
-
-	if (this->TextActor && TextDefaultMsg)
+	if (this->TextIsVisible)
 	{
-		this->TextActor->SetInput("");
-		TextDefaultMsg = false;
-		TextHasUnsavedChanges = true;
-	}
+		//Downcast to a 3D Interactor.
+		vtkRenderWindowInteractor3D *rwi =
+			static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);
+
+		float x = rwi->GetTouchPadPosition()[0];	// Values between -1 and 1.
+		float y = rwi->GetTouchPadPosition()[1];
+
+		float radius = sqrt(x*x + y*y);
+
+		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
+		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
 
-	if(radius > .75)
-	{
-		//Display number, which is equal to region number
-		vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
-
-		//Actual code:
-		if (this->TextActor)
+		if (this->TextActor && TextDefaultMsg)
 		{
-			const char *newText = vtkVariant(vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString()).GetTypeAsString();
-			this->TextActor->SetInput(newText);
-			this->TextActor->GetTextProperty()->BoldOn();
+			this->TextActor->SetInput("");
+			TextDefaultMsg = false;
 			TextHasUnsavedChanges = true;
 		}
-	}
-	else
-	{
-		if(region <= 4)
-		{
-			vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
 
-            //Actual code:
-			if (this->TextActor)
-			{
-				this->TextActor->GetTextProperty()->BoldOff();
-				TextHasUnsavedChanges = false;
-			}
-		}
-		else	// region in range [5,9]
+
+		if (radius > .75)
 		{
-			vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
+			//Display number, which is equal to region number
+			vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 
 			//Actual code:
 			if (this->TextActor)
 			{
-
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-				newText.pop_back();
-				this->TextActor->SetInput(vtkVariant(newText).GetTypeAsString());
+				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString();
+				this->TextActor->SetInput(newText);
 				this->TextActor->GetTextProperty()->BoldOn();
 				TextHasUnsavedChanges = true;
 			}
 		}
-	}
+		else
+		{
+			if (region <= 4)
+			{
+				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
 
-	//May be omitted?
-	//Render Scene
-	/*if (this->Interactor)
-	{
-		this->Interactor->Render();
+				//Actual code:
+				if (this->TextActor)
+				{
+					this->TextActor->GetTextProperty()->BoldOff();
+					TextHasUnsavedChanges = false;
+				}
+			}
+			else	// region in range [5,9]
+			{
+				vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
+
+				//Actual code:
+				if (this->TextActor)
+				{
+
+					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
+					newText.pop_back();
+					this->TextActor->SetInput(newText);
+					this->TextActor->GetTextProperty()->BoldOn();
+					TextHasUnsavedChanges = true;
+				}
+			}
+		}
 	}
-	*/
 }
 
 //----------------------------------------------------------------------------
@@ -151,9 +147,13 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		                        this->Interactor->GetEventPositions(pointer)[1]);
 	}
 
+	bool TextEmpty = !bool(vtkStdString("").compare(this->TextActor->GetInput()));
+
 	//Second Click. Already created and changes saved: can be destroyed.
-	if (this->TextActor && !this->TextHasUnsavedChanges && this->TextRenderer != NULL)
+	if (this->TextActor && this->TextRenderer != NULL &&
+		(!this->TextHasUnsavedChanges || TextEmpty))
 	{
+
 		if (this->TextRenderer != NULL && this->TextActor)
 		{
 			//Remove from renderer
@@ -164,7 +164,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextDefaultMsg = true;
 		}
 	}
-	//Either or is not created or has changes
+	//Either or is not created or has changes or is not shown
 	else
 	{
 		//First Click ever. Not created yet: create it and place it properly.
@@ -174,7 +174,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextActor->SetInput("Input data");
 			this->TextActor->PickableOff();
 			this->TextActor->DragableOff();
-			
+			this->TextActor->GetTextProperty()->SetBackgroundOpacity(1.0);
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
@@ -194,6 +194,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			}
 			this->TextRenderer = this->CurrentRenderer;
 		}
+
 	}
 	
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
