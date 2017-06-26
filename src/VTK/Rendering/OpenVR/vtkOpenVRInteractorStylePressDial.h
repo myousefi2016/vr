@@ -64,6 +64,11 @@ public:
   //Launch touchpad touched event
   //void OnTap() VTK_OVERRIDE;	//moved to its superclass
 
+  
+  /*To do in the future for all the properties:
+  void AssignTextToProperty(vtkProperty);	-->>   NO!!! Create a class which handles all that stuff.
+	*/
+
 protected:
   vtkOpenVRInteractorStylePressDial();
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
@@ -72,6 +77,7 @@ protected:
   vtkTextActor3D *TextActor;
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
+  bool TextDefaultMsg;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

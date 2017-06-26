@@ -43,6 +43,7 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->TextActor = NULL;
 	this->TextRenderer = NULL;
 	this->TextHasUnsavedChanges = false;
+	this->TextDefaultMsg = true;
 }
 
 //----------------------------------------------------------------------------
@@ -70,27 +71,67 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 
 	int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
 	region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
-	
+
+
+	if (TextDefaultMsg)
+	{
+		this->TextActor->SetInput("");
+		TextDefaultMsg = false;
+		TextHasUnsavedChanges = true;
+	}
+
+
 	if(radius > .75)
 	{
 		//Display number, which is equal to region number
 		vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 
 		//Actual code:
-		//if(this->TextActor) this->TextActor->SetInput(this->TextActor->GetInput() + region);
+		if (this->TextActor)
+		{
+			const char *newText = vtkVariant(vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString()).GetTypeAsString();
+			this->TextActor->SetInput(newText);
+			this->TextActor->GetTextProperty()->BoldOn();
+			TextHasUnsavedChanges = true;
+		}
 	}
 	else
 	{
 		if(region <= 4)
 		{
 			vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
+
+            //Actual code:
+			if (this->TextActor)
+			{
+				this->TextActor->GetTextProperty()->BoldOff();
+				TextHasUnsavedChanges = false;
+			}
 		}
 		else	// region in range [5,9]
 		{
-			//Negative angles
 			vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
+
+			//Actual code:
+			if (this->TextActor)
+			{
+
+				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
+				newText.pop_back();
+				this->TextActor->SetInput(vtkVariant(newText).GetTypeAsString());
+				this->TextActor->GetTextProperty()->BoldOn();
+				TextHasUnsavedChanges = true;
+			}
 		}
 	}
+
+	//May be omitted?
+	//Render Scene
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
+	
 }
 
 //----------------------------------------------------------------------------
@@ -113,11 +154,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	//Second Click. Already created and changes saved: can be destroyed.
 	if (this->TextActor && !this->TextHasUnsavedChanges && this->TextRenderer != NULL)
 	{
-		//Remove from renderer
 		if (this->TextRenderer != NULL && this->TextActor)
 		{
+			//Remove from renderer
 			this->TextRenderer->RemoveViewProp(this->TextActor);
 			this->TextRenderer = NULL;
+			//Restore initial values
+			this->TextActor->SetInput("Input data");
+			this->TextDefaultMsg = true;
 		}
 	}
 	//Either or is not created or has changes
@@ -127,7 +171,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		if (!this->TextActor)
 		{
 			this->TextActor = vtkTextActor3D::New();
-			this->TextActor->SetInput("Input data madafaka");
+			this->TextActor->SetInput("Input data");
 			this->TextActor->PickableOff();
 			this->TextActor->DragableOff();
 			
@@ -155,11 +199,10 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
-	double wscale = camera->GetDistance();          //World Scale
 	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();			//Camera Orientation: rotation in (X,Y,Z)
+	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 	
-	const double d2c = 0.5;		//Distance to camera. MAy be needed to multiply by scale.
+	const double d2c = 0.5;		//Text distance to camera.
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
