@@ -68,33 +68,38 @@ vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
 //----------------------------------------------------------------------------
 void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, char* value)
 {
+	vtkProp *downProp;
+	vtkActor *downActor;
+	vtkSphereSource *downSphere;
+	vtkProp3D *downProp3D;
+
 	switch(field)
 	{
 	case vtkField::Visibility:
-		vtkProp *downVisibility = vtkProp::SafeDownCast(obj);
-		if (downVisibility != NULL)
+		downProp = vtkProp::SafeDownCast(obj);
+		if (downProp != NULL)
 		{
-			downVisibility->SetVisibility(vtkVariant(value).ToInt());
+			downProp->SetVisibility(vtkVariant(value).ToInt());
 		}
 	case vtkField::Opacity:
-		vtkActor *downOpacity = vtkActor::SafeDownCast(obj);
-		if (downOpacity != NULL)
+		downActor = vtkActor::SafeDownCast(obj);
+		if (downActor != NULL)
 		{
-			downOpacity->GetProperty()->SetOpacity(vtkVariant(value).ToDouble());
+			downActor->GetProperty()->SetOpacity(vtkVariant(value).ToDouble());
 		}
 		break;
 	case vtkField::Scale:
-		vtkProp3D *downScale = vtkProp3D::SafeDownCast(obj);
-		if(downScale != NULL)
+		downProp3D = vtkProp3D::SafeDownCast(obj);
+		if(downProp3D != NULL)
 		{
-			downScale->SetScale(vtkVariant(value).ToDouble());
+			downProp3D->SetScale(vtkVariant(value).ToDouble());
 		}
 		break;
 	case vtkField::Radius:
-		vtkSphereSource *downRadius = vtkSphereSource::SafeDownCast(obj);
-		if (downRadius != NULL)
+		downSphere = vtkSphereSource::SafeDownCast(obj);
+		if (downSphere != NULL)
 		{
-			downRadius->SetRadius(vtkVariant(value).ToDouble());
+			downSphere->SetRadius(vtkVariant(value).ToDouble());
 		}
 		break;
 	// Add cases as desired. Remenber to add the vtkProp in the enum class!

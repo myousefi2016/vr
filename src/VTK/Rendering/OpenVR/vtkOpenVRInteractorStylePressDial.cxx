@@ -125,6 +125,10 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 					}
 					this->TextActor->GetTextProperty()->BoldOff();
 					TextHasUnsavedChanges = false;
+					
+					//test:
+					vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+					this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextActor->GetInput());
 				}
 			}
 			else	// region in range [5,9]
@@ -316,7 +320,8 @@ void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 			//create and place in coordinates.
 			testSource->SetPhiResolution(50);
 			testSource->SetThetaResolution(50);
-			this->FieldModifier->SetTestActor(vtkActor::New());
+			testActor = vtkActor::New();
+			this->FieldModifier->SetTestActor(testActor);
 			testActor->PickableOff();
 			testActor->DragableOff();
 			testActor->SetMapper(testMapper);
