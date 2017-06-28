@@ -9,6 +9,7 @@ set(Module_SRCS
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
   vtkOpenVRInteractorStylePressDial.cxx
+  vtkOpenVRInteractorStylePressKeyboard.cxx
   vtkOpenVRInteractorStylePressKeypad.cxx
   vtkOpenVRInteractorStyleSwipeDial.cxx
   vtkOpenVRInteractorStyleSwipeKeypad.cxx
@@ -26,6 +27,7 @@ set_source_files_properties(
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
   vtkOpenVRInteractorStylePressDial
+  vtkOpenVRInteractorStylePressKeyboard
   vtkOpenVRInteractorStylePressKeypad
   vtkOpenVRInteractorStyleSwipeDial
   vtkOpenVRInteractorStyleSwipeKeypad

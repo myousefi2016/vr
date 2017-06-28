@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStylePressDial.h
+Module:    vtkOpenVRInteractorStylePressKeyboard.h
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -13,16 +13,19 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStylePressDial
+ * @class   vtkOpenVRInteractorStylePressKeyboard
  * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
- *          Divides touchpad in circular crown sectors for numbers 0-9.
+ *          Divides touchpad in sectors allowing to convert it into a keyboard for text writing
 */
 
-#ifndef vtkOpenVRInteractorStylePressDial_h
-#define vtkOpenVRInteractorStylePressDial_h
+#ifndef vtkOpenVRInteractorStylePressKeyboard_h
+#define vtkOpenVRInteractorStylePressKeyboard_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
+#include "vtkImageActor.h"
+
+#define MAX_IMG 8
 
 class vtkTextActor3D;
 class vtkBillboardTextActor3D;
@@ -31,11 +34,11 @@ class vtkTextSource;
 
 class vtkOpenVRPropertyModifier;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeyboard : public vtkOpenVRInteractorStyle
 {
 public:
-  static vtkOpenVRInteractorStylePressDial *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkOpenVRInteractorStyle);
+  static vtkOpenVRInteractorStylePressKeyboard *New();
+  vtkTypeMacro(vtkOpenVRInteractorStylePressKeyboard, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -66,10 +69,11 @@ public:
   //Launch touchpad touched event
   //void OnTap() VTK_OVERRIDE;	//moved to its superclass
 
+ 
 
 protected:
-  vtkOpenVRInteractorStylePressDial();
-  ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
+	vtkOpenVRInteractorStylePressKeyboard();
+  ~vtkOpenVRInteractorStylePressKeyboard() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
   vtkTextActor3D *TextActor;
@@ -78,13 +82,19 @@ protected:
   bool TextDefaultMsg;
   bool TextIsVisible;
 
+  //Add different images depending on the buttons pressed before.
+  vtkImageActor* Images[MAX_IMG];
+  vtkImageActor* CurrentImage;
+  int ActiveImage;
+  virtual void UpdateImage();
+
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
 
 private:
-  vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRInteractorStylePressKeyboard(const vtkOpenVRInteractorStylePressKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStylePressKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif
