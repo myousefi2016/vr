@@ -29,6 +29,8 @@ class vtkBillboardTextActor3D;
 class vtkTextMapper;
 class vtkTextSource;
 
+class vtkOpenVRPropertyModifier;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
 public:
@@ -79,6 +81,8 @@ protected:
   bool TextHasUnsavedChanges;
   bool TextDefaultMsg;
   bool TextIsVisible;
+
+  vtkOpenVRPropertyModifier *FieldModifier;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

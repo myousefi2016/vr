@@ -34,6 +34,8 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRCamera.h"
 #include "vtkMatrixToHomogeneousTransform.h"
 
+#include "vtkOpenVRPropertyModifier.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
@@ -45,6 +47,8 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->TextHasUnsavedChanges = false;
 	this->TextDefaultMsg = true;
 	this->TextIsVisible = false;
+
+	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 }
 
 //----------------------------------------------------------------------------
@@ -54,6 +58,11 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 	if(this->TextActor)
 	{
 		this->TextActor->Delete();
+	}
+
+	if(this->FieldModifier)
+	{
+		this->FieldModifier->Delete();
 	}
 }
 
@@ -84,7 +93,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 		}
 
 
-		if (radius > .75)
+		if (radius > .6)
 		{
 			//Display number, which is equal to region number
 			vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
@@ -98,7 +107,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 				TextHasUnsavedChanges = true;
 			}
 		}
-		else
+		else if(radius > .2)
 		{
 			if (region <= 4)
 			{
@@ -138,6 +147,16 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 						TextHasUnsavedChanges = true;
 					}
 				}
+			}
+		}
+		else
+		{
+			if (this->TextActor)
+			{
+				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + ".";
+				this->TextActor->SetInput(newText);
+				this->TextActor->GetTextProperty()->BoldOn();
+				TextHasUnsavedChanges = true;
 			}
 		}
 	}
