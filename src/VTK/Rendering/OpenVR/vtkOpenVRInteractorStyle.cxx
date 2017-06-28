@@ -49,7 +49,6 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 	if (this->PointerMapper && this->Pointer)
 	{
 		this->PointerMapper->SetInputConnection(this->Pointer->GetOutputPort());
-		//this->PointerActor->SetMapper(PointerMapper);
 	}
 
 	this->PointerRenderer = NULL;

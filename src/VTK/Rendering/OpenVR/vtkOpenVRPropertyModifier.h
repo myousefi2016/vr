@@ -23,8 +23,9 @@ PURPOSE.  See the above copyright notice for more information.
 #ifndef vtkOpenVRPropertyModifier_h
 #define vtkOpenVRPropertyModifier_h
 
-#include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkObject.h"
+#include "vtkRenderingOpenVRModule.h" // For export macro
+#include "vtkSetGet.h"	//For export macro
 
 //Move to a different class?
 /**
@@ -51,7 +52,11 @@ enum class vtkField
 	Radius
 };
 
+class vtkObject;
+class vtkSphereSource;	//For dummy test
+class vtkPolyDataMapper;
 class vtkActor;
+class vtkRenderer;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
 {
@@ -64,11 +69,27 @@ public:
 	// the most general class which has the field to modify
   virtual void ModifyProperty(vtkObject *obj, vtkField field, char* value);
 
+  vtkSetMacro(TestSource, vtkSphereSource*);
+  vtkGetMacro(TestSource, vtkSphereSource*);
+  vtkSetMacro(TestMapper, vtkPolyDataMapper*);
+  vtkGetMacro(TestMapper, vtkPolyDataMapper*);
+  vtkSetMacro(TestActor, vtkActor*);
+  vtkGetMacro(TestActor, vtkActor*);
+  vtkSetMacro(TestRenderer, vtkRenderer*);
+  vtkGetMacro(TestRenderer, vtkRenderer*);
+  vtkSetMacro(TestOn, bool);
+  vtkGetMacro(TestOn, bool);
+
 protected:
   vtkOpenVRPropertyModifier();
-  ~vtkOpenVRPropertyModifier() VTK_OVERRIDE;
+  ~vtkOpenVRPropertyModifier();
 
-
+  //Dummy test Actor/Source
+  vtkSphereSource *TestSource;
+  vtkPolyDataMapper *TestMapper;
+  vtkActor *TestActor;
+  vtkRenderer *TestRenderer;
+  bool TestOn;
 
 private:
   vtkOpenVRPropertyModifier(const vtkOpenVRPropertyModifier&) VTK_DELETE_FUNCTION;  // Not implemented.

@@ -28,19 +28,41 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkActor.h"
 #include "vtkProperty.h"
 #include "vtkSphereSource.h"
+#include "vtkPolyDataMapper.h"
 
 vtkStandardNewMacro(vtkOpenVRPropertyModifier);
 
 //----------------------------------------------------------------------------
 vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 {
+	//Dummy test
+	this->TestSource = vtkSphereSource::New();
+	this->TestActor = NULL;
+	this->TestMapper = vtkPolyDataMapper::New();
+	this->TestRenderer = NULL;
+	this->TestOn = false;
 
+	if (this->TestMapper && this->TestSource)
+	{
+		this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
+	}
 }
 
 //----------------------------------------------------------------------------
 vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
 {
-	
+	if (this->TestActor)
+	{
+		this->TestActor->Delete();
+	}
+
+	if (this->TestMapper)
+	{
+		this->TestMapper->Delete();
+	}
+
+	this->TestSource->Delete();
+	this->TestSource = NULL;
 }
 
 //----------------------------------------------------------------------------
@@ -86,7 +108,7 @@ void vtkOpenVRPropertyModifier::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }
-
+	
 /*
 //----------------------------------------------------------------------------
 void vtkInteractorStyle::PrintSelf(ostream& os, vtkIndent indent)

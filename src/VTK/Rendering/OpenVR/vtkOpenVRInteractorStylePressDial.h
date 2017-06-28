@@ -83,6 +83,8 @@ protected:
   bool TextIsVisible;
 
   vtkOpenVRPropertyModifier *FieldModifier;
+  //Used along with vtkOpenVRPropertyModifier:
+  virtual void ShowTestActor(bool on);
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.
