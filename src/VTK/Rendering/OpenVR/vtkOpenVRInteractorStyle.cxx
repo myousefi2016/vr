@@ -57,6 +57,9 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 	this->PointerColor[2] = 0.0;
 	//this->PointerActive = false;
 	//-----------------------------------------------------------
+
+	//Images:
+	//this->HasImage = false;
 }
 
 //----------------------------------------------------------------------------
@@ -120,6 +123,7 @@ void vtkOpenVRInteractorStyle::OnTap()
 void vtkOpenVRInteractorStyle::OnUntap()
 {
 	this->SetTouchPadPointer(false);
+	this->SetTouchPadImage(false);
 
 	switch (this->State)
 	{

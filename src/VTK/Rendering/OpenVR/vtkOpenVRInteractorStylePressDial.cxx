@@ -39,6 +39,10 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRPropertyModifier.h"
 
+#include "vtkImageActor.h"
+#include "vtkImageReader2.h"
+#include "vtkImageSliceMapper.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
@@ -52,6 +56,19 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->TextIsVisible = false;
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+
+
+	//Images:
+	//this->HasImage = true;
+	this->ImgReader = vtkImageReader2::New(); 
+	this->ImgReader->SetFileName("./img/ControllerOverlay.png");
+	this->ImgActor = NULL;
+	this->ImgRenderer = NULL;
+	this->ImgMapper = vtkImageSliceMapper::New();	//Most probably, not needed.
+
+	this->ImgActor->SetInputData(this->ImgReader->GetOutput());
+	//this->imgActor->SetPosition(0., 0., 0.);
+	;
 }
 
 //----------------------------------------------------------------------------
@@ -63,14 +80,26 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 		this->TextActor->Delete();
 	}
 
+	//Remove Field Modifier:
 	if(this->FieldModifier)
 	{
 		this->FieldModifier->Delete();
 	}
+
+	//Remove Image:
+	this->SetTouchPadImage(false);
+	if(this->ImgReader)
+	{
+		this->ImgReader->Delete();
+	}
+	if(this->ImgMapper)
+	{
+		this->ImgMapper->Delete();
+	}
+
 }
 
 //----------------------------------------------------------------------------
-//TODO add behaviour if needed
 void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 {
 	if (this->TextIsVisible)
@@ -283,8 +312,96 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
 
+void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
+{
+	//current renderer
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+			this->Interactor->GetEventPositions(pointer)[1]);
+	}
 
+	//to disable it
+	if (!activate)
+	{
+		if (this->ImgRenderer != NULL && this->ImgActor)
+		{
+			this->ImgRenderer->RemoveActor(this->ImgActor);
+			this->ImgRenderer = NULL;
+		}
+	}
+	//to enable it
+	else
+	{
+		//check if it is already active
+		if (!this->ImgActor)
+		{
+			//create and place in coordinates.
+			this->ImgActor = vtkImageActor::New();
+			this->ImgActor->PickableOff();
+			this->ImgActor->DragableOff();
+			//this->PointerActor->SetMapper(this->PointerMapper);
+			//this->PointerActor->GetProperty()->SetColor(this->PointerColor);
+			//this->PointerActor->GetProperty()->SetAmbient(1.0);
+			//this->PointerActor->GetProperty()->SetDiffuse(0.0);
+		}
 
+		//check if used different renderer to previous visualization
+		if (this->CurrentRenderer != this->ImgRenderer)
+		{
+			if (this->ImgRenderer != NULL && this->ImgActor)
+			{
+				this->ImgRenderer->RemoveActor(this->ImgActor);
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddActor(this->ImgActor);
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->ImgRenderer = this->CurrentRenderer;
+		}
+
+		vtkOpenVRRenderWindowInteractor *rwi =
+			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
+		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+
+		//Get world information
+		double wscale = camera->GetDistance();                                 //Scale
+		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
+		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
+
+																			   //Get/Set touchpad information
+		const double r = 0.02;	//Touchpad radius
+		const double d = 0.05;	// Distance from center of controller to center of touchpad
+		float *tpos = rwi->GetTouchPadPosition();
+		this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
+
+												//3D Rotation and Translation Maths
+		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
+		double sinw = sin(vtkMath::RadiansFromDegrees(wori[0]));
+		double ptrpos[3];
+
+		//Transformation matrix (X' = R · T · X)
+		//ptrpos = controller position + translate to touchpad
+		ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
+		ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
+		ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));
+
+		this->ImgActor->SetPosition(ptrpos);
+	}
+
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
+}
+
+//----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 {
 	//Get prop data:
@@ -363,7 +480,6 @@ void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 		this->Interactor->Render();
 	}
 }
-
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)

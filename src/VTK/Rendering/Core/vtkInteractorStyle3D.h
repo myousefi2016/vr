@@ -149,10 +149,16 @@ public:
 
   //@{
   /**
-  * Set touchpad pointer when the touchpad is touched
-  * (may be extended to other haptic buttons).
+  * Set touchpad pointer when the touchpad is touched.
   */
-	virtual void SetTouchPadPointer(bool activate) {};
+	virtual void SetTouchPadPointer(bool activate) {}
+  //@}
+
+  //@{
+  /**
+  * Set touchpad image when the touchpad is touched.
+  */
+	virtual void SetTouchPadImage(bool activate) {}
   //@}
 
 

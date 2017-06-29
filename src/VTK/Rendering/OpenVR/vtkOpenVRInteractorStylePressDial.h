@@ -31,6 +31,10 @@ class vtkTextSource;
 
 class vtkOpenVRPropertyModifier;
 
+class vtkImageActor;
+class vtkImageSliceMapper;
+class vtkImageReader2;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
 public:
@@ -66,6 +70,10 @@ public:
   //Launch touchpad touched event
   //void OnTap() VTK_OVERRIDE;	//moved to its superclass
 
+  //Images:
+  void SetTouchPadImage(bool activate) VTK_OVERRIDE;
+
+
 
 protected:
   vtkOpenVRInteractorStylePressDial();
@@ -83,6 +91,10 @@ protected:
   virtual void ShowTestActor(bool on);
 
 	//TODO add images
+  vtkImageActor *ImgActor;
+  vtkRenderer *ImgRenderer;
+  vtkImageReader2 *ImgReader;
+  vtkImageSliceMapper *ImgMapper;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

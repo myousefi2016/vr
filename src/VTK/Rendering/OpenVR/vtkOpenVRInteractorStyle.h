@@ -51,6 +51,9 @@ public:
 
 	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
 
+	//Images:
+	//vtkGetMacro(HasImage, bool);
+
 protected:
   vtkOpenVRInteractorStyle();
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
@@ -62,6 +65,9 @@ protected:
 	vtkRenderer *PointerRenderer;
 	double PointerColor[3];
 	//bool PointerActive;
+
+	//Images
+	//bool HasImage;
 
 
 private:

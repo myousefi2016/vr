@@ -84,6 +84,7 @@ void vtkInteractorStyle3D::OnMouseMove()
 	case VTKIS_TAP:
 	  this->FindPokedRenderer(x, y);
 	  this->SetTouchPadPointer(true);
+	  this->SetTouchPadImage(true);
 	  this->InvokeEvent(vtkCommand::TapEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
 	  break;
   }
