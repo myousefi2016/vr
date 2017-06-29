@@ -34,6 +34,7 @@
 #include "vtkTextureObject.h"
 //New Interactor style includes:
 #include "vtkOpenVRInteractorStylePressDial.h"
+#include "vtkOpenVRInteractorStylePressKeyboard.h"
 
 vtkStandardNewMacro(vtkOpenVRRenderWindowInteractor);
 
@@ -46,7 +47,8 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
   //vtkNew<vtkOpenVRInteractorStyle> style;
-	vtkNew<vtkOpenVRInteractorStylePressDial> style;
+	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
+	vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
 	this->SetInteractorStyle(style.Get());
 }
 
@@ -412,6 +414,7 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
       {
         for (int i = 0; i < VTKI_MAX_POINTERS; i++)
         {
+					//Touch event doesnt work because this is FALSE. WHERE IS THE POINTERSDOWN SET TO 0?? I NEED TO MODIFY IT!!
           if (this->PointersDown[i])
           {
             this->UpdateTouchPadPosition(pHMD,

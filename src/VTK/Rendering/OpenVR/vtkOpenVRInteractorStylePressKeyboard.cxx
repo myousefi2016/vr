@@ -127,9 +127,14 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 5: newChar = 'f'; break;
 					case 4: newChar = 'g'; break;
 					case 3: newChar = 'h'; break;
-						//TODO fix this. should return 0-3 OR 4-7-
-					case 2: (++this->ActiveImage) %= MAX_IMG; break;
-					case 7: (--this->ActiveImage += 8) %= MAX_IMG; break;
+					case 2:	//Returns 0 - 3 OR 4 - 7
+						if (this->ActiveImage == (MAX_IMG/2-1) || this->ActiveImage == (MAX_IMG-1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
+						else this->ActiveImage++;
+						break;
+					case 7: //Returns 0 - 3 OR 4 - 7
+						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
+						else this->ActiveImage--;
+						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
 					break;
@@ -247,7 +252,9 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					break;
 				}
 
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString();
+				vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
+
+				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
 				this->TextActor->SetInput(newText);
 				this->TextActor->GetTextProperty()->BoldOn();
 				TextHasUnsavedChanges = true;
@@ -280,9 +287,15 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				}
 				else if (x > 0 && y < 0)	//Whitespace
 				{
+					newChar = ' ';
+
 					vtkErrorMacro(<< "\"Whitespace\" pressed");	// Just for debugging purposes.
 
-					newChar = ' ';
+					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
+					this->TextActor->SetInput(newText);
+					this->TextActor->GetTextProperty()->BoldOn();
+					TextHasUnsavedChanges = true;
+
 				}
 				else	//Accept value.
 				{
