@@ -82,6 +82,8 @@ protected:
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
 
+	//TODO add images
+
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.
