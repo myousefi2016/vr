@@ -62,7 +62,7 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	//this->HasImage = true;
 	this->ImgReader = vtkImageReader2::New(); 
 	this->ImgReader->SetFileName("./img/ControllerOverlay.png");
-	this->ImgActor = NULL;
+	this->ImgActor = vtkImageActor::New();
 	this->ImgRenderer = NULL;
 	this->ImgMapper = vtkImageSliceMapper::New();	//Most probably, not needed.
 
@@ -338,7 +338,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		if (!this->ImgActor)
 		{
 			//create and place in coordinates.
-			this->ImgActor = vtkImageActor::New();
+	//		this->ImgActor = vtkImageActor::New();
 			this->ImgActor->PickableOff();
 			this->ImgActor->DragableOff();
 			//this->PointerActor->SetMapper(this->PointerMapper);
