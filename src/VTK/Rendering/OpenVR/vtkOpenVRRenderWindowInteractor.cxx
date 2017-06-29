@@ -184,10 +184,28 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 		return;
 	}
 
-	//Multitouch is not used here
+	// are we translating multitouch into gestures?
+	if (this->RecognizeGestures)
+	{
+		if (!this->PointersDown[this->PointerIndex])
+		{
+			this->PointersDown[this->PointerIndex] = 1;
+			this->PointersDownCount++;
+		}
+		// do we have multitouch
+		if (this->PointersDownCount > 1)
+		{
+			// did we just transition to multitouch?
+			if (this->PointersDownCount == 2)
+			{
+				this->InvokeEvent(vtkCommand::RightButtonReleaseEvent, NULL);
+			}
+			// handle the gesture
+			this->RecognizeGesture(vtkCommand::RightButtonPressEvent);
+			return;
+		}
+	}
 	this->InvokeEvent(vtkCommand::TapEvent, NULL);
-		//Give a try also to vtkCommand::LongTapEvent
-		//Give a try also to vtkCommand::SwipeEvent
 }
 
 void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
@@ -197,7 +215,21 @@ void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 		return;
 	}
 
-	//Multitouch is not used here
+	if (this->RecognizeGestures)
+	{
+		if (this->PointersDown[this->PointerIndex])
+		{
+			this->PointersDown[this->PointerIndex] = 0;
+			this->PointersDownCount--;
+		}
+		// do we have multitouch
+		if (this->PointersDownCount > 1)
+		{
+			// handle the gesture
+			this->RecognizeGesture(vtkCommand::EndTapEvent);
+			return;
+		}
+	}
 	this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
 }
 
