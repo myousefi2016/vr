@@ -500,7 +500,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		this->ImgActor->SetScale(0.0002);
 		
 		//this->ImgActor->SetOrientation(wori[1], wori[2], wori[3]);
-		this->ImgActor->SetOrientation(rotEuler[0], rotEuler[1], rotEuler[2]);
+		this->ImgActor->SetOrientation(vtkMath::DegreesFromRadians(rotEuler[0]), vtkMath::DegreesFromRadians(rotEuler[1]), vtkMath::DegreesFromRadians(rotEuler[2]));
 	}
 	
 	
