@@ -459,6 +459,9 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 
 			
 
+		//http://answers.unity3d.com/questions/1145948/split-quaternion-into-multiple-angle-axis-rotation.html
+
+
 
 
 
