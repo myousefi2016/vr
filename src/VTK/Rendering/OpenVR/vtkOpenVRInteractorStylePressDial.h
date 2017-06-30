@@ -34,6 +34,12 @@ class vtkOpenVRPropertyModifier;
 class vtkImageActor;
 class vtkImageSliceMapper;
 class vtkImageReader2;
+class vtkImageMapper3D;
+class vtkActor2D;
+class vtkImageMapper;
+class vtkImageData;
+class vtkJPEGReader;
+
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
@@ -92,9 +98,17 @@ protected:
 
 	//TODO add images
   vtkImageActor *ImgActor;
+	//vtkActor *ImgActor;
   vtkRenderer *ImgRenderer;
   vtkImageReader2 *ImgReader;
-  vtkImageSliceMapper *ImgMapper;
+	vtkImageMapper3D *ImgMapper;		//vtkImageSliceMapper *ImgMapper;
+	// Lets try with an overlay:
+	//vtkOpenVROverlay *Overlay;
+	//Other try:
+	vtkJPEGReader *reader;
+	vtkImageSliceMapper *mapper;
+	//vtkActor2D *ImgActor;
+	//vtkRenderer *render;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

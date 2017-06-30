@@ -42,6 +42,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageActor.h"
 #include "vtkImageReader2.h"
 #include "vtkImageSliceMapper.h"
+#include "vtkJPEGReader.h"
+#include "vtkImageMapper.h"
+#include "vtkActor2D.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -57,18 +60,41 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
-
+/*
 	//Images:
 	//this->HasImage = true;
 	this->ImgReader = vtkImageReader2::New(); 
-	this->ImgReader->SetFileName("./img/ControllerOverlay.png");
-	this->ImgActor = vtkImageActor::New();
+	//this->ImgReader->SetFileName("OpenVRDashboard.jpg");
+	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
+	this->ImgReader->Update();
+	this->ImgActor = NULL;		// vtkImageActor::New();
 	this->ImgRenderer = NULL;
-	this->ImgMapper = vtkImageSliceMapper::New();	//Most probably, not needed.
-
-	this->ImgActor->SetInputData(this->ImgReader->GetOutput());
+	//this->ImgMapper = this->ImgActor->GetMapper();			//vtkImageSliceMapper::New();	//Most probably, not needed.
+	//system("dir & pause");
+	//this->ImgActor->SetInputData(this->ImgReader->GetOutput());
 	//this->imgActor->SetPosition(0., 0., 0.);
-	;
+*/
+
+/*vtkJPEGReader *reader;
+vtkImageMapper *mapper;
+vtkActor2D *image;
+vtkRenderer *render;*/
+	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
+	this->reader = vtkJPEGReader::New();
+	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
+	reader->Update();
+
+	this->mapper = vtkImageSliceMapper::New();
+	mapper->SetInputData(this->reader->GetOutput());
+	//mapper->SetColorWindow(255); // width of the color range to map to
+	//mapper->SetColorLevel(127.5); // center of the color range to map to
+
+	this->ImgActor = vtkImageActor::New();
+	ImgActor->SetMapper(mapper);
+
+	this->ImgRenderer = NULL;
+
+	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 }
 
 //----------------------------------------------------------------------------
@@ -88,15 +114,16 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 
 	//Remove Image:
 	this->SetTouchPadImage(false);
-	if(this->ImgReader)
+	/*if(this->ImgReader)
 	{
 		this->ImgReader->Delete();
-	}
+	}*/
+	/*
 	if(this->ImgMapper)
 	{
 		this->ImgMapper->Delete();
 	}
-
+	*/
 }
 
 //----------------------------------------------------------------------------
@@ -338,7 +365,14 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		if (!this->ImgActor)
 		{
 			//create and place in coordinates.
-	//		this->ImgActor = vtkImageActor::New();
+			this->ImgActor = vtkImageActor::New();		//this->ImgActor = vtkActor2D::New();	//->working
+			//this->ImgActor->SetInputData(this->ImgReader->GetOutput());
+			this->ImgActor->GetMapper()->SetInputConnection(this->ImgReader->GetOutputPort());
+
+			//this->ImgMapper = this->ImgActor->GetMapper();
+			//this->ImgMapper->SetInputData(this->ImgReader->GetOutput());
+
+
 			this->ImgActor->PickableOff();
 			this->ImgActor->DragableOff();
 			//this->PointerActor->SetMapper(this->PointerMapper);
@@ -379,7 +413,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		const double r = 0.02;	//Touchpad radius
 		const double d = 0.05;	// Distance from center of controller to center of touchpad
 		float *tpos = rwi->GetTouchPadPosition();
-		this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
+		//this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
 
 												//3D Rotation and Translation Maths
 		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
@@ -391,8 +425,12 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
 		ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
 		ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));
-
+		
+		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates.
+		vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(ptrpos);
+		this->ImgActor->SetScale(0.0002);
+		this->ImgActor->SetOrientation(wori);
 	}
 
 	if (this->Interactor)
