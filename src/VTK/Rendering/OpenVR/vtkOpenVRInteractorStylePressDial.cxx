@@ -441,7 +441,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(imgPos);
 		this->ImgActor->SetScale(0.0002);
-		this->ImgActor->SetOrientation(wori);
+		this->ImgActor->SetOrientation(wori[2],wori[1],wori[3]);
 	}
 
 	if (this->Interactor)
