@@ -447,11 +447,17 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		rotEuler[2] = atan2(-rotMat[0][1], rotMat[0][0]);*/
 
 		//birdys notes:
-		double r11 = 
-			double r12 = 
-			double r21 =
-			double r31 =
+		double r11 = -2 * (wori[1] * wori[3] - wori[0] * wori[2]);
+		double r12 = wori[0] * wori[0] + wori[1]* wori[1] - wori[2]* wori[2] - wori[3]* wori[3];
+		double r21 = 2 * (wori[1] * wori[2] + wori[0] * wori[3]);
+		double r31 = -2 * (wori[2] * wori[3] - wori[0] * wori[1]);
+		double r32 = wori[0]* wori[0] - wori[1]* wori[1] + wori[2]* wori[2] - wori[3]* wori[3];
+		double rotEuler[3];
+		rotEuler[0] = atan2(r31, r32);
+		rotEuler[1] = asin(r21);
+		rotEuler[2] = atan2(r11, r12);
 
+			
 
 
 
