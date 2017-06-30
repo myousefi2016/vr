@@ -105,7 +105,7 @@ protected:
 	// Lets try with an overlay:
 	//vtkOpenVROverlay *Overlay;
 	//Other try:
-	vtkPNGReader *reader;	//vtkJPEGReader *reader;
+	vtkJPEGReader *reader;
 	vtkImageSliceMapper *mapper;
 	//vtkActor2D *ImgActor;
 	//vtkRenderer *render;

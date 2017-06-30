@@ -44,7 +44,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageSliceMapper.h"
 #include "vtkJPEGReader.h"
 #include "vtkPNGReader.h"
-#include "vtkPNGReader.h"
 #include "vtkImageMapper.h"
 #include "vtkActor2D.h"
 
@@ -82,7 +81,7 @@ vtkImageMapper *mapper;
 vtkActor2D *image;
 vtkRenderer *render;*/
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->reader = vtkPNGReader::New();	//this->reader = vtkJPEGReader::New();
+	this->reader = vtkJPEGReader::New();	//this->reader = vtkJPEGReader::New();
 	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
 	reader->Update();
 
@@ -425,11 +424,14 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		vtkErrorMacro(<< "(" << rotMat[1][0] << ", " << rotMat[1][1] << ", " << rotMat[1][2] << ")");
 		vtkErrorMacro(<< "(" << rotMat[2][0] << ", " << rotMat[2][1] << ", " << rotMat[2][2] << ")");
 
-		//Euler angles:
+		//Euler angles: ->Not Working
 		double rotEuler[3];
 		rotEuler[0] = atan2(2 * (wori[0] * wori[1] + wori[2] * wori[3]), 1 - 2 * (wori[1] * wori[1] + wori[2] * wori[2]));
 		rotEuler[1] = asin(2 * (wori[0] * wori[2] - wori[3] * wori[1]));
 		rotEuler[2] = atan2(2 * (wori[0] * wori[3] + wori[1] * wori[2]), 1 - 2 * (wori[2] * wori[2] + wori[3] * wori[3]));
+
+
+
 
 
 
