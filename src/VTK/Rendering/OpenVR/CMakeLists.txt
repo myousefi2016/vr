@@ -107,3 +107,9 @@ configure_file(
   "${CMAKE_BINARY_DIR}/OpenVRDashboard.jpg"
   COPYONLY
   )
+
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/ControllerOverlay.png"
+  "${CMAKE_BINARY_DIR}/ControllerOverlay.png"
+  COPYONLY
+  )

@@ -44,6 +44,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageSliceMapper.h"
 #include "vtkJPEGReader.h"
 #include "vtkPNGReader.h"
+#include "vtkPNGReader.h"
 #include "vtkImageMapper.h"
 #include "vtkActor2D.h"
 
@@ -81,7 +82,7 @@ vtkImageMapper *mapper;
 vtkActor2D *image;
 vtkRenderer *render;*/
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->reader = vtkJPEGReader::New();
+	this->reader = vtkPNGReader::New();	//this->reader = vtkJPEGReader::New();
 	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
 	reader->Update();
 
@@ -89,7 +90,7 @@ vtkRenderer *render;*/
 	mapper->SetInputData(this->reader->GetOutput());
 	//mapper->SetColorWindow(255); // width of the color range to map to
 	//mapper->SetColorLevel(127.5); // center of the color range to map to
-
+	
 	this->ImgActor = vtkImageActor::New();
 	ImgActor->SetMapper(mapper);
 
@@ -408,26 +409,49 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//Get world information
 		double wscale = camera->GetDistance();                                 //Scale
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
-		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 
+
+
+
+
+		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 		vtkErrorMacro(<< "(" << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3] << ")");
 
-																			   //Get/Set touchpad information
+		//Playground:
+		double rotMat[3][3];
+		vtkMath::QuaternionToMatrix3x3(wori, rotMat);
+		vtkErrorMacro(<< "rotMat");
+		vtkErrorMacro(<< "(" << rotMat[0][0] << ", " << rotMat[0][1] << ", " << rotMat[0][2] << ")");
+		vtkErrorMacro(<< "(" << rotMat[1][0] << ", " << rotMat[1][1] << ", " << rotMat[1][2] << ")");
+		vtkErrorMacro(<< "(" << rotMat[2][0] << ", " << rotMat[2][1] << ", " << rotMat[2][2] << ")");
+
+		//Euler angles:
+		double rotEuler[3];
+		rotEuler[0] = atan2(2 * (wori[0] * wori[1] + wori[2] * wori[3]), 1 - 2 * (wori[1] * wori[1] + wori[2] * wori[2]));
+		rotEuler[1] = asin(2 * (wori[0] * wori[2] - wori[3] * wori[1]));
+		rotEuler[2] = atan2(2 * (wori[0] * wori[3] + wori[1] * wori[2]), 1 - 2 * (wori[2] * wori[2] + wori[3] * wori[3]));
+
+
+
+
+        //Get/Set touchpad information
 		const double r = 0.02;	//Touchpad radius
 		const double d = 0.05;	// Distance from center of controller to center of touchpad
 		float *tpos = rwi->GetTouchPadPosition();
 		//this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
 
-												//3D Rotation and Translation Maths
+        //3D Rotation and Translation Maths
 		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
 		double sinw = sin(vtkMath::RadiansFromDegrees(wori[0]));
 		double ptrpos[3];
 		double imgPos[3];
 
+		//Will place a corner (lower left?) of the image in the center of the touchpad.
 		imgPos[0] = wpos[0] + wscale*(d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
 		imgPos[1] = wpos[1] + wscale*(d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
 		imgPos[2] = wpos[2] + wscale*(d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw));
 
+			
 
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
@@ -439,12 +463,14 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		ptrpos[2] = imgPos[2] + wscale*(r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));*/
 		
 		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
-		vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
+		//vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(imgPos);
 		this->ImgActor->SetScale(0.0002);
-		this->ImgActor->SetOrientation(wori[2],wori[1],wori[3]);
+		this->ImgActor->SetOrientation(rotEuler[0], rotEuler[1], rotEuler[2]);
 	}
-
+	
+	
+	
 	if (this->Interactor)
 	{
 		this->Interactor->Render();

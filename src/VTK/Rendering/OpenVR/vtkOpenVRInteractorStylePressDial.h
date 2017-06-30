@@ -39,7 +39,7 @@ class vtkActor2D;
 class vtkImageMapper;
 class vtkImageData;
 class vtkJPEGReader;
-
+class vtkPNGReader;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
@@ -105,7 +105,7 @@ protected:
 	// Lets try with an overlay:
 	//vtkOpenVROverlay *Overlay;
 	//Other try:
-	vtkJPEGReader *reader;
+	vtkPNGReader *reader;	//vtkJPEGReader *reader;
 	vtkImageSliceMapper *mapper;
 	//vtkActor2D *ImgActor;
 	//vtkRenderer *render;
