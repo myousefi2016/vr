@@ -81,8 +81,9 @@ vtkImageMapper *mapper;
 vtkActor2D *image;
 vtkRenderer *render;*/
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->reader = vtkJPEGReader::New();	//this->reader = vtkJPEGReader::New();
-	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
+	this->reader = vtkPNGReader::New();	//this->reader = vtkJPEGReader::New();
+	//reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
+	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
 	reader->Update();
 
 	this->mapper = vtkImageSliceMapper::New();
@@ -414,6 +415,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 
 
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
+		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 		vtkErrorMacro(<< "(" << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3] << ")");
 
 		//Playground:
@@ -425,11 +427,30 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		vtkErrorMacro(<< "(" << rotMat[2][0] << ", " << rotMat[2][1] << ", " << rotMat[2][2] << ")");
 
 		//Euler angles: ->Not Working
-		double rotEuler[3];
+		/*double rotEuler[3];
 		rotEuler[0] = atan2(2 * (wori[0] * wori[1] + wori[2] * wori[3]), 1 - 2 * (wori[1] * wori[1] + wori[2] * wori[2]));
 		rotEuler[1] = asin(2 * (wori[0] * wori[2] - wori[3] * wori[1]));
 		rotEuler[2] = atan2(2 * (wori[0] * wori[3] + wori[1] * wori[2]), 1 - 2 * (wori[2] * wori[2] + wori[3] * wori[3]));
+		*/
 
+		//RotMat to Euler: -> Not working
+		/*double rotEuler[3];
+		rotEuler[0] = atan2(rotMat[2][1], rotMat[2][2]);
+		rotEuler[1] = atan2(-rotMat[2][0], sqrt(rotMat[2][1]*rotMat[2][1]+rotMat[2][2]*rotMat[2][2]));
+		rotEuler[2] = atan2(rotMat[1][0], rotMat[0][0]);*/
+
+		//I want extrinsic (original axis always) in this order: ZXY.
+		//Lets try:
+		/*double rotEuler[3];
+		rotEuler[0] = atan2(-rotMat[1][2], rotMat[2][2]);
+		rotEuler[1] = asin(rotMat[0][2]);
+		rotEuler[2] = atan2(-rotMat[0][1], rotMat[0][0]);*/
+
+		//birdys notes:
+		double r11 = 
+			double r12 = 
+			double r21 =
+			double r31 =
 
 
 
@@ -443,8 +464,8 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
 
         //3D Rotation and Translation Maths
-		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
-		double sinw = sin(vtkMath::RadiansFromDegrees(wori[0]));
+		double cosw = cos(wori[0]);	// (vtkMath::RadiansFromDegrees(wori[0]));
+		double sinw = sin(wori[0]);	// (vtkMath::RadiansFromDegrees(wori[0]));
 		double ptrpos[3];
 		double imgPos[3];
 
@@ -468,6 +489,8 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(imgPos);
 		this->ImgActor->SetScale(0.0002);
+		
+		//this->ImgActor->SetOrientation(wori[1], wori[2], wori[3]);
 		this->ImgActor->SetOrientation(rotEuler[0], rotEuler[1], rotEuler[2]);
 	}
 	
