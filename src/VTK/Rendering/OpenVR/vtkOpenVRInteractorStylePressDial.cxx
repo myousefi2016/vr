@@ -43,6 +43,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageReader2.h"
 #include "vtkImageSliceMapper.h"
 #include "vtkJPEGReader.h"
+#include "vtkPNGReader.h"
 #include "vtkImageMapper.h"
 #include "vtkActor2D.h"
 
