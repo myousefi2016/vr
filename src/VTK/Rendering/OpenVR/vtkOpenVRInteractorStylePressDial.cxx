@@ -409,6 +409,8 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 
+		vtkErrorMacro(<< "(" << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3] << ")");
+
 																			   //Get/Set touchpad information
 		const double r = 0.02;	//Touchpad radius
 		const double d = 0.05;	// Distance from center of controller to center of touchpad
@@ -419,16 +421,25 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
 		double sinw = sin(vtkMath::RadiansFromDegrees(wori[0]));
 		double ptrpos[3];
+		double imgPos[3];
+
+		imgPos[0] = wpos[0] + wscale*(d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
+		imgPos[1] = wpos[1] + wscale*(d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
+		imgPos[2] = wpos[2] + wscale*(d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw));
+
 
 		//Transformation matrix (X' = R · T · X)
 		//ptrpos = controller position + translate to touchpad
-		ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
+		/*ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
 		ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
-		ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));
+		ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));*/
+		/*ptrpos[0] = imgPos[0] + wscale*(r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
+		ptrpos[1] = imgPos[1] + wscale*(r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
+		ptrpos[2] = imgPos[2] + wscale*(r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));*/
 		
-		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates.
+		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
 		vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
-		this->ImgActor->SetPosition(ptrpos);
+		this->ImgActor->SetPosition(imgPos);
 		this->ImgActor->SetScale(0.0002);
 		this->ImgActor->SetOrientation(wori);
 	}
