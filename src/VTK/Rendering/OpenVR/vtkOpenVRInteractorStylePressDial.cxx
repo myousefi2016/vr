@@ -346,10 +346,9 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 	else
 	{
 		//To test
-		//ImgActor->SetZSlice((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax()+1));
-		vtkImageSliceMapper::SafeDownCast(ImgActor->GetMapper())->SetSliceNumber((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax() + 1));
-		ImgActor->Update();
-		vtkErrorMacro(<< "slice: " << ImgActor->GetZSlice());
+		ImgActor->SetZSlice((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax()+1));
+		vtkImageSliceMapper *sliceMapper = vtkImageSliceMapper::SafeDownCast(ImgActor->GetMapper());
+		sliceMapper->SetSliceNumber((sliceMapper->GetSliceNumber() + 1) % (sliceMapper->GetSliceNumberMaxValue() + 1));
 		
 		//check if used different renderer to previous visualization
 		if (this->CurrentRenderer != this->ImgRenderer)
@@ -368,8 +367,6 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 			}
 			this->ImgRenderer = this->CurrentRenderer;
 		}
-
-		//this->ImgRenderer->Render();		//New.
 
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
