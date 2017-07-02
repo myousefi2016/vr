@@ -410,42 +410,63 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//Get world information
 		double wscale = camera->GetDistance();                                 //Scale
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
+		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
+		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 
+
+		vtkErrorMacro(<< "---------------");
+
+		double *center = this->ImgActor->GetCenter();	//World Coords
+		vtkErrorMacro(<< "center: (" << center[0] << ", " << center[1] << ", " << center[2] << ")");
+
+		double *origin = this->ImgActor->GetOrigin();
+		vtkErrorMacro(<< "origin: (" << origin[0] << ", " << origin[1] << ", " << origin[2] <<  ")");
+
+		double *scale = this->ImgActor->GetScale();
+		vtkErrorMacro(<< "scale: (" << scale[0] << ", " << scale[1] << ", " << scale[2] << ")");
+
+		double *xRange = this->ImgActor->GetXRange();
+		vtkErrorMacro(<< "xRange: (" << xRange[0] << ", " << xRange[1] << ")");
+		double *yRange = this->ImgActor->GetYRange();
+		vtkErrorMacro(<< "yRange: (" << yRange[0] << ", " << yRange[1] << ")");
+		double *zRange = this->ImgActor->GetZRange();
+		vtkErrorMacro(<< "zRange: (" << zRange[0] << ", " << zRange[1] << ")");
+
+		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
+		vtkErrorMacro(<< "imgCenter: (" << imgCenter[0] << ", " << imgCenter[1] << ")");
+
+		double *bounds = this->ImgActor->GetMapper()->GetBounds();
+		vtkErrorMacro(<< "bounds: (" << bounds[0] << ", " << bounds[1] << ", " << bounds[2] << ", " << bounds[3] << ", " << bounds[4] << ", " << bounds[5] << ")");
+
+		double length = this->ImgActor->GetMapper()->GetLength();	//Diagonal length of mapper's bounding box.
+		vtkErrorMacro(<< "length: " << length);
+
+
+		vtkErrorMacro(<< "---------------");
+
+
+        //Get/Set touchpad information
+		const double d = 0.05;	// Distance from center of controller to center of touchpad
+
+        //3D Rotation and Translation Maths
+		double cosw = cos(wori[0]);
+		double sinw = sin(wori[0]);
+		double imgPos[3];
+
+		//Will place a corner of the image in the center of the touchpad.
+		imgPos[0] = wpos[0] + wscale*d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
+		imgPos[1] = wpos[1] + wscale* d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
+		imgPos[2] = wpos[2] + wscale* d * (cosw + wori[3] * wori[3] * (1 - cosw));
+
+			
 
 		
 
 
-		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
-		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
-		vtkErrorMacro(<< "(" << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3] << ")");
-
-			
-
-        //Get/Set touchpad information
-		const double r = 0.02;	//Touchpad radius
-		const double d = 0.05;	// Distance from center of controller to center of touchpad
-		float *tpos = rwi->GetTouchPadPosition();
-		//this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
-
-        //3D Rotation and Translation Maths
-		double cosw = cos(wori[0]);	// (vtkMath::RadiansFromDegrees(wori[0]));
-		double sinw = sin(wori[0]);	// (vtkMath::RadiansFromDegrees(wori[0]));
-		double ptrpos[3];
-		double imgPos[3];
-
-		//Will place a corner (lower left?) of the image in the center of the touchpad.
-		imgPos[0] = wpos[0] + wscale*(d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
-		imgPos[1] = wpos[1] + wscale*(d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw);
-		imgPos[2] = wpos[2] + wscale*(d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw));
-
-			
-
-		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
-		//vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(imgPos);
 		this->ImgActor->SetScale(0.0001);
 
-
+		//Rotation
 		ImgActor->SetOrientation(0, 0, 0);
 		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
 		ImgActor->RotateX(-90);
