@@ -85,15 +85,10 @@ protected:
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
 
-	//TODO clean this code. most fields can be deleted.
+	//Images
+	vtkPNGReader *ImgReader;
   vtkImageActor *ImgActor;
   vtkRenderer *ImgRenderer;
-  vtkImageReader2 *ImgReader;
-	vtkImageMapper3D *ImgMapper;
-
-	//Other try:
-	vtkPNGReader *reader;
-	vtkImageSliceMapper *mapper;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

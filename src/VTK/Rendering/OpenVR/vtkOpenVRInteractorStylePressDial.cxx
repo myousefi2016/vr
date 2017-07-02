@@ -64,15 +64,14 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->reader = vtkPNGReader::New();
-	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
-	reader->Update();
+	this->ImgReader = vtkPNGReader::New();
+	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
+	ImgReader->Update();
 
-	this->mapper = vtkImageSliceMapper::New();
-	mapper->SetInputData(this->reader->GetOutput());
-	
 	this->ImgActor = vtkImageActor::New();
-	ImgActor->SetMapper(mapper);
+	this->ImgActor->GetMapper()->SetInputData(this->reader->GetOutput());
+	this->ImgActor->PickableOff();
+	this->ImgActor->DragableOff();
 
 	this->ImgRenderer = NULL;
 
@@ -96,6 +95,10 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 
 	//Remove Image:
 	this->SetTouchPadImage(false);
+	if (this->ImgActor)
+	{
+		this->ImgActor->Delete();
+	}
 }
 
 //----------------------------------------------------------------------------
@@ -334,7 +337,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 	else
 	{
 		//check if it is already active
-		if (!this->ImgActor)
+		/*if (!this->ImgActor)
 		{
 			//create and place in coordinates.
 			this->ImgActor = vtkImageActor::New();
@@ -343,7 +346,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 
 			this->ImgActor->PickableOff();
 			this->ImgActor->DragableOff();
-		}
+		}*/
 
 		//check if used different renderer to previous visualization
 		if (this->CurrentRenderer != this->ImgRenderer)
