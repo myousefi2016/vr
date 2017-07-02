@@ -47,7 +47,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageMapper.h"
 #include "vtkActor2D.h"
 #include "vtkImageProperty.h"
-
+#include "vtkStringArray.h"
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
@@ -65,14 +65,21 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->ImgReader = vtkPNGReader::New();
-	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
+
+	//ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
+	//Substituted by:
+	vtkStringArray *FileNames = vtkStringArray::New();
+	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
+	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\Smiley.png");
+	ImgReader->SetFileNames(FileNames);
+
 	ImgReader->Update();
 
 	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->reader->GetOutput());
+	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
+	this->ImgActor->SetZSlice(0);
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
-
 	this->ImgRenderer = NULL;
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
@@ -336,17 +343,16 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 	//to enable it
 	else
 	{
-		//check if it is already active
-		/*if (!this->ImgActor)
+		//To test
+		if(ImgActor->GetZSlice() + 1 <= ImgActor->GetWholeZMax())
 		{
-			//create and place in coordinates.
-			this->ImgActor = vtkImageActor::New();
-			this->ImgActor->GetMapper()->SetInputConnection(this->ImgReader->GetOutputPort());
-			//ImgActor->SetMapper(mapper);
-
-			this->ImgActor->PickableOff();
-			this->ImgActor->DragableOff();
-		}*/
+			ImgActor->SetZSlice(ImgActor->GetZSlice() + 1);
+		}
+		else
+		{
+			ImgActor->SetZSlice(ImgActor->GetWholeZMin());
+		}
+		
 
 		//check if used different renderer to previous visualization
 		if (this->CurrentRenderer != this->ImgRenderer)

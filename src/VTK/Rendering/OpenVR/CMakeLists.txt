@@ -113,3 +113,8 @@ configure_file(
   "${CMAKE_BINARY_DIR}/ControllerOverlay.png"
   COPYONLY
   )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/Smiley.png"
+  "${CMAKE_BINARY_DIR}/Smiley.png"
+  COPYONLY
+  )
