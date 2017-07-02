@@ -475,16 +475,6 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonUp()
 }
 
 
-
-void vtkOpenVRInteractorStylePressKeyboard::UpdateImage()
-{
-	if(this->CurrentImage != this->Images[ActiveImage])
-	{
-		//Change image. Sth like this:
-		//this->CurrentImage = this->Images[ActiveImage];
-	}
-}
-
 void vtkOpenVRInteractorStylePressKeyboard::ShowTestActor(bool on)
 {
 	//Get prop data:

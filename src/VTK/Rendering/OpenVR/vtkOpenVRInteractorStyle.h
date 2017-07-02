@@ -25,6 +25,8 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkInteractorStyle3D.h"
 
 class vtkSphereSource;
+class vtkPNGReader;
+class vtkImageActor;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyle : public vtkInteractorStyle3D
 {
@@ -52,7 +54,10 @@ public:
 	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
 
 	//Images:
-	//vtkGetMacro(HasImage, bool);
+	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
+	vtkGetMacro(HasImage, bool)
+	vtkSetMacro(HasImage, bool)
+	virtual void UpdateImage();
 
 protected:
   vtkOpenVRInteractorStyle();
@@ -66,8 +71,13 @@ protected:
 	double PointerColor[3];
 	//bool PointerActive;
 
-	//Images
-	//bool HasImage;
+	//Images (implemented in inherited classes):
+	bool HasImage;
+	int NextImage;
+	vtkPNGReader *ImgReader;
+	vtkImageActor *ImgActor;
+	vtkRenderer *ImgRenderer;
+
 
 
 private:

@@ -67,8 +67,7 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-  //Images:
-  void SetTouchPadImage(bool activate) VTK_OVERRIDE;
+
 
 protected:
   vtkOpenVRInteractorStylePressDial();
@@ -84,11 +83,6 @@ protected:
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
-
-	//Images
-	vtkPNGReader *ImgReader;
-  vtkImageActor *ImgActor;
-  vtkRenderer *ImgRenderer;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

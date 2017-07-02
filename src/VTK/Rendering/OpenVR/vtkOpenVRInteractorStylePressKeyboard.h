@@ -83,10 +83,10 @@ protected:
   bool TextIsVisible;
 
   //Add different images depending on the buttons pressed before.
-  vtkImageActor* Images[MAX_IMG];
+/*  vtkImageActor* Images[MAX_IMG];
   vtkImageActor* CurrentImage;
   int ActiveImage;
-  virtual void UpdateImage();
+  virtual void UpdateImage();*/	//Done in superclass.
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

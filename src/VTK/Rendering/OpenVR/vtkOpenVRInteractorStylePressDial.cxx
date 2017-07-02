@@ -48,6 +48,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkActor2D.h"
 #include "vtkImageProperty.h"
 #include "vtkStringArray.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
@@ -65,16 +66,16 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->ImgReader = vtkPNGReader::New();
-
-	//ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
-	//Substituted by:
-	vtkStringArray *FileNames = vtkStringArray::New();
+	this->HasImage = true;
+	this->NextImage = 0;
+	/*vtkStringArray *FileNames = vtkStringArray::New();
 	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\VenturaSmiley.png");
 	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\VenturaControllerOverlay.png");
-	ImgReader->SetFileNames(FileNames);
-	/*//Other option:
-	ImgReader->SetFilePrefix("Ventura");
-	ImgReader->SetDataExtent(0, 999, 0, 999, 0, 1);*/
+	ImgReader->SetFileNames(FileNames);*/
+	//Substituted by: (previous was working, just in case...)
+	ImgReader->SetFilePrefix("PressDial_Image");
+	// Needed?
+	//ImgReader->SetDataExtent(0, 999, 0, 999, 0, 1);
 
 	ImgReader->Update();
 
@@ -321,100 +322,6 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
-}
-
-void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
-{
-	//current renderer
-	if (this->Interactor)
-	{
-		int pointer = this->Interactor->GetPointerIndex();
-		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-			this->Interactor->GetEventPositions(pointer)[1]);
-	}
-
-	//to disable it
-	if (!activate)
-	{
-		if (this->ImgRenderer != NULL && this->ImgActor)
-		{
-			this->ImgRenderer->RemoveActor(this->ImgActor);
-			this->ImgRenderer = NULL;
-		}
-	}
-	//to enable it
-	else
-	{
-		//To test
-		ImgActor->SetZSlice((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax()+1));
-		vtkImageSliceMapper *sliceMapper = vtkImageSliceMapper::SafeDownCast(ImgActor->GetMapper());
-		sliceMapper->SetSliceNumber((sliceMapper->GetSliceNumber() + 1) % (sliceMapper->GetSliceNumberMaxValue() + 1));
-		
-		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != this->ImgRenderer)
-		{
-			if (this->ImgRenderer != NULL && this->ImgActor)
-			{
-				this->ImgRenderer->RemoveActor(this->ImgActor);
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddActor(this->ImgActor);
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->ImgRenderer = this->CurrentRenderer;
-		}
-
-		vtkOpenVRRenderWindowInteractor *rwi =
-			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
-		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
-		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
-		//Get world information
-		double wscale = camera->GetDistance();                                 //Scale
-		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
-		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
-		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
-
-    //Get/Set touchpad information
-		const double d = 0.05;	// Distance from center of controller to center of touchpad
-		const double h = 0.007;	// Separation image-touchpad.
-    
-		//ROTATION
-		ImgActor->SetOrientation(0, 0, 0);
-		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
-		ImgActor->RotateX(-85);		//Adjust to the touchpad's inclination.
-
-		//SCALE
-		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();
-		//It is supposed to be a squared image (image of a circle), so xScale == yScale
-		double imgScale = 0.0475/(++imgBounds[1]);
-		this->ImgActor->SetScale(imgScale);
-
-		//TRANSLATION
-		double imgPos[3];
-		double cosw = cos(wori[0]);
-		double sinw = sin(wori[0]);
-		//Will place a corner of the image in the center of the touchpad.
-		imgPos[0] = wpos[0] + wscale * (d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + h * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw));
-		imgPos[1] = wpos[1] + wscale * (d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + h * (cosw + wori[2] * wori[2] * (1 - cosw)));
-		imgPos[2] = wpos[2] + wscale * (d * (cosw + wori[3] * wori[3] * (1 - cosw)) + h * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw));
-		this->ImgActor->SetPosition(imgPos);
-		this->ImgActor->Update();
-		//Now, center the image to the center of touchpad (can't be done before because "position" might not be set.
-		double *imgCtr = this->ImgActor->GetCenter();
-		//Move center if the image to the corner (which is center of touchpad)
-		for (int i = 0; i < 3; i++) imgPos[i] += (imgPos[i] - imgCtr[i]);
-		this->ImgActor->SetPosition(imgPos);
-	}
-	
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
 }
 
 //----------------------------------------------------------------------------
