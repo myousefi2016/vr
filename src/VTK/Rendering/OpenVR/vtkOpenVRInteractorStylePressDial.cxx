@@ -46,6 +46,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkPNGReader.h"
 #include "vtkImageMapper.h"
 #include "vtkActor2D.h"
+#include "vtkImageProperty.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -411,60 +412,14 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
 
 
-
+		
 
 
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 		vtkErrorMacro(<< "(" << wori[0] << ", " << wori[1] << ", " << wori[2] << ", " << wori[3] << ")");
 
-		//Playground:
-		double rotMat[3][3];
-		vtkMath::QuaternionToMatrix3x3(wori, rotMat);
-		vtkErrorMacro(<< "rotMat");
-		vtkErrorMacro(<< "(" << rotMat[0][0] << ", " << rotMat[0][1] << ", " << rotMat[0][2] << ")");
-		vtkErrorMacro(<< "(" << rotMat[1][0] << ", " << rotMat[1][1] << ", " << rotMat[1][2] << ")");
-		vtkErrorMacro(<< "(" << rotMat[2][0] << ", " << rotMat[2][1] << ", " << rotMat[2][2] << ")");
-
-		//Euler angles: ->Not Working
-		/*double rotEuler[3];
-		rotEuler[0] = atan2(2 * (wori[0] * wori[1] + wori[2] * wori[3]), 1 - 2 * (wori[1] * wori[1] + wori[2] * wori[2]));
-		rotEuler[1] = asin(2 * (wori[0] * wori[2] - wori[3] * wori[1]));
-		rotEuler[2] = atan2(2 * (wori[0] * wori[3] + wori[1] * wori[2]), 1 - 2 * (wori[2] * wori[2] + wori[3] * wori[3]));
-		*/
-
-		//RotMat to Euler: -> Not working
-		/*double rotEuler[3];
-		rotEuler[0] = atan2(rotMat[2][1], rotMat[2][2]);
-		rotEuler[1] = atan2(-rotMat[2][0], sqrt(rotMat[2][1]*rotMat[2][1]+rotMat[2][2]*rotMat[2][2]));
-		rotEuler[2] = atan2(rotMat[1][0], rotMat[0][0]);*/
-
-		//I want extrinsic (original axis always) in this order: ZXY.
-		//Lets try:
-		/*double rotEuler[3];
-		rotEuler[0] = atan2(-rotMat[1][2], rotMat[2][2]);
-		rotEuler[1] = asin(rotMat[0][2]);
-		rotEuler[2] = atan2(-rotMat[0][1], rotMat[0][0]);*/
-
-		//birdys notes:
-		double r11 = -2 * (wori[1] * wori[3] - wori[0] * wori[2]);
-		double r12 = wori[0] * wori[0] + wori[1]* wori[1] - wori[2]* wori[2] - wori[3]* wori[3];
-		double r21 = 2 * (wori[1] * wori[2] + wori[0] * wori[3]);
-		double r31 = -2 * (wori[2] * wori[3] - wori[0] * wori[1]);
-		double r32 = wori[0]* wori[0] - wori[1]* wori[1] + wori[2]* wori[2] - wori[3]* wori[3];
-		double rotEuler[3];
-		rotEuler[0] = atan2(r31, r32);
-		rotEuler[1] = asin(r21);
-		rotEuler[2] = atan2(r11, r12);
-
 			
-
-		//http://answers.unity3d.com/questions/1145948/split-quaternion-into-multiple-angle-axis-rotation.html
-
-
-
-
-
 
         //Get/Set touchpad information
 		const double r = 0.02;	//Touchpad radius
@@ -485,22 +440,16 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 
 			
 
-		//Transformation matrix (X' = R · T · X)
-		//ptrpos = controller position + translate to touchpad
-		/*ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
-		ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
-		ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));*/
-		/*ptrpos[0] = imgPos[0] + wscale*(r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)));
-		ptrpos[1] = imgPos[1] + wscale*(r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw));
-		ptrpos[2] = imgPos[2] + wscale*(r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw));*/
-		
 		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
 		//vtkErrorMacro(<< "(" << imgCenter[0] << ", " << imgCenter[1] << ")");
 		this->ImgActor->SetPosition(imgPos);
-		this->ImgActor->SetScale(0.0002);
+		this->ImgActor->SetScale(0.0001);
+
+
+		ImgActor->SetOrientation(0, 0, 0);
+		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
+		ImgActor->RotateX(-90);
 		
-		//this->ImgActor->SetOrientation(wori[1], wori[2], wori[3]);
-		this->ImgActor->SetOrientation(vtkMath::DegreesFromRadians(rotEuler[0]), vtkMath::DegreesFromRadians(rotEuler[1]), vtkMath::DegreesFromRadians(rotEuler[2]));
 	}
 	
 	
