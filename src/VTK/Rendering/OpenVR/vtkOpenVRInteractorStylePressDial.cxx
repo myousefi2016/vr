@@ -419,13 +419,19 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double *center = this->ImgActor->GetCenter();	//World Coords
 		vtkErrorMacro(<< "center: (" << center[0] << ", " << center[1] << ", " << center[2] << ")");
 
-		double *origin = this->ImgActor->GetOrigin();
+		double *position = this->ImgActor->GetPosition();
+		vtkErrorMacro(<< "position: (" << position[0] << ", " << position[1] << ", " << position[2] << ")");
+
+		double *origin = this->ImgActor->GetOrigin();	//returns (0,0,0)
 		vtkErrorMacro(<< "origin: (" << origin[0] << ", " << origin[1] << ", " << origin[2] <<  ")");
+
+		this->ImgActor->SetOrigin(0.5,0.5,0.5);
+		//this->ImgActor->SetOrigin(499.5,499.5,0);
 
 		double *scale = this->ImgActor->GetScale();
 		vtkErrorMacro(<< "scale: (" << scale[0] << ", " << scale[1] << ", " << scale[2] << ")");
 
-		double *xRange = this->ImgActor->GetXRange();
+		double *xRange = this->ImgActor->GetXRange();	//world coordinates.
 		vtkErrorMacro(<< "xRange: (" << xRange[0] << ", " << xRange[1] << ")");
 		double *yRange = this->ImgActor->GetYRange();
 		vtkErrorMacro(<< "yRange: (" << yRange[0] << ", " << yRange[1] << ")");
@@ -435,12 +441,11 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
 		vtkErrorMacro(<< "imgCenter: (" << imgCenter[0] << ", " << imgCenter[1] << ")");
 
-		double *bounds = this->ImgActor->GetMapper()->GetBounds();
+		double *bounds = this->ImgActor->GetMapper()->GetBounds();	//(0,999,0,999,0,0)
 		vtkErrorMacro(<< "bounds: (" << bounds[0] << ", " << bounds[1] << ", " << bounds[2] << ", " << bounds[3] << ", " << bounds[4] << ", " << bounds[5] << ")");
 
-		double length = this->ImgActor->GetMapper()->GetLength();	//Diagonal length of mapper's bounding box.
+		double length = this->ImgActor->GetMapper()->GetLength();	//Diagonal length of mapper's bounding box. ->Uses pizels
 		vtkErrorMacro(<< "length: " << length);
-
 
 		vtkErrorMacro(<< "---------------");
 
