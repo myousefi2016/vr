@@ -456,7 +456,18 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
         //3D Rotation and Translation Maths
 		double cosw = cos(wori[0]);
 		double sinw = sin(wori[0]);
-		
+	
+		//ROTATION
+		ImgActor->SetOrientation(0, 0, 0);
+		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
+		ImgActor->RotateX(-90);
+
+		//SCALE
+		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();	//(0,999,0,999,0,0)
+																																	//It is supposed to be a squared image (image of a circle), so xScale == yScale
+		double imgScale = 0.1/(++imgBounds[1]);
+		//this->ImgActor->SetScale(0.0001);
+		this->ImgActor->SetScale(imgScale);
 
 		//TRANSLATION
 		double imgPos[3];
@@ -467,24 +478,18 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		this->ImgActor->SetPosition(imgPos);
 		//Now, center the image to the center of touchpad
 		//(can't be done before because "position" might not be set.
+		this->ImgActor->Update();
 		double *imgCtr = this->ImgActor->GetCenter();
 		//Move center if the image to the corner (which is center of touchpad)
-		for (int i = 0; i < 3; i++) imgPos[i] -= (imgPos[i] - imgCtr[i]);
+		for (int i = 0; i < 3; i++) imgPos[i] += (imgPos[i] - imgCtr[i]);
 		this->ImgActor->SetPosition(imgPos);
 
-		//ROTATION
-		ImgActor->SetOrientation(0, 0, 0);
-		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
-		ImgActor->RotateX(-90);
 
-		//SCALE
-		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();	//(0,999,0,999,0,0)
-		//It is supposed to be a squared image (image of a circle), so xScale == yScale
-		double imgScale = 0.1*(++imgBounds[1]);
 
-		//this->ImgActor->SetScale(0.0001);
-		this->ImgActor->SetScale(imgScale);
 
+
+
+		
 		
 	}
 	
