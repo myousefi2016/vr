@@ -109,12 +109,12 @@ configure_file(
   )
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/ControllerOverlay.png"
-  "${CMAKE_BINARY_DIR}/ControllerOverlay.png"
+  "${CMAKE_CURRENT_SOURCE_DIR}/VenturaControllerOverlay.png"
+  "${CMAKE_BINARY_DIR}/VenturaControllerOverlay.png"
   COPYONLY
   )
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/Smiley.png"
-  "${CMAKE_BINARY_DIR}/Smiley.png"
+  "${CMAKE_CURRENT_SOURCE_DIR}/VenturaSmiley.png"
+  "${CMAKE_BINARY_DIR}/VenturaSmiley.png"
   COPYONLY
   )

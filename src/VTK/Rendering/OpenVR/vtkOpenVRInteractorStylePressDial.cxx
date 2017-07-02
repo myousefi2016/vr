@@ -69,14 +69,17 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	//ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
 	//Substituted by:
 	vtkStringArray *FileNames = vtkStringArray::New();
-	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\Smiley.png");
-	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
+	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\VenturaSmiley.png");
+	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\VenturaControllerOverlay.png");
 	ImgReader->SetFileNames(FileNames);
+	/*//Other option:
+	ImgReader->SetFilePrefix("Ventura");
+	ImgReader->SetDataExtent(0, 999, 0, 999, 0, 1);*/
+
 	ImgReader->Update();
 
 	this->ImgActor = vtkImageActor::New();
 	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	//this->ImgActor->SetZSlice(0);
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;
@@ -343,12 +346,11 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 	else
 	{
 		//To test
-		ImgActor->VisibilityOff();
-		ImgActor->SetZSlice((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax()+1));
+		//ImgActor->SetZSlice((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax()+1));
+		vtkImageSliceMapper::SafeDownCast(ImgActor->GetMapper())->SetSliceNumber((ImgActor->GetZSlice() + 1) % (ImgActor->GetWholeZMax() + 1));
 		ImgActor->Update();
 		vtkErrorMacro(<< "slice: " << ImgActor->GetZSlice());
 		
-
 		//check if used different renderer to previous visualization
 		if (this->CurrentRenderer != this->ImgRenderer)
 		{
@@ -367,6 +369,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 			this->ImgRenderer = this->CurrentRenderer;
 		}
 
+		//this->ImgRenderer->Render();		//New.
 
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
