@@ -67,19 +67,8 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-  //Delete trigger behaviour from base class.
-  //void OnLeftButtonDown() VTK_OVERRIDE {};
-  //void OnLeftButtonUp() VTK_OVERRIDE {};
-
-
-
-  //Launch touchpad touched event
-  //void OnTap() VTK_OVERRIDE;	//moved to its superclass
-
   //Images:
   void SetTouchPadImage(bool activate) VTK_OVERRIDE;
-
-
 
 protected:
   vtkOpenVRInteractorStylePressDial();
@@ -96,19 +85,15 @@ protected:
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
 
-	//TODO add images
+	//TODO clean this code. most fields can be deleted.
   vtkImageActor *ImgActor;
-	//vtkActor *ImgActor;
   vtkRenderer *ImgRenderer;
   vtkImageReader2 *ImgReader;
-	vtkImageMapper3D *ImgMapper;		//vtkImageSliceMapper *ImgMapper;
-	// Lets try with an overlay:
-	//vtkOpenVROverlay *Overlay;
+	vtkImageMapper3D *ImgMapper;
+
 	//Other try:
 	vtkPNGReader *reader;
 	vtkImageSliceMapper *mapper;
-	//vtkActor2D *ImgActor;
-	//vtkRenderer *render;
 
 private:
   vtkOpenVRInteractorStylePressDial(const vtkOpenVRInteractorStylePressDial&) VTK_DELETE_FUNCTION;  // Not implemented.

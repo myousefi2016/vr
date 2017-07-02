@@ -62,35 +62,14 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
-/*
-	//Images:
-	//this->HasImage = true;
-	this->ImgReader = vtkImageReader2::New(); 
-	//this->ImgReader->SetFileName("OpenVRDashboard.jpg");
-	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
-	this->ImgReader->Update();
-	this->ImgActor = NULL;		// vtkImageActor::New();
-	this->ImgRenderer = NULL;
-	//this->ImgMapper = this->ImgActor->GetMapper();			//vtkImageSliceMapper::New();	//Most probably, not needed.
-	//system("dir & pause");
-	//this->ImgActor->SetInputData(this->ImgReader->GetOutput());
-	//this->imgActor->SetPosition(0., 0., 0.);
-*/
-
-/*vtkJPEGReader *reader;
-vtkImageMapper *mapper;
-vtkActor2D *image;
-vtkRenderer *render;*/
+	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->reader = vtkPNGReader::New();	//this->reader = vtkJPEGReader::New();
-	//reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\OpenVRDashboard.jpg");
+	this->reader = vtkPNGReader::New();
 	reader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\ControllerOverlay.png");
 	reader->Update();
 
 	this->mapper = vtkImageSliceMapper::New();
 	mapper->SetInputData(this->reader->GetOutput());
-	//mapper->SetColorWindow(255); // width of the color range to map to
-	//mapper->SetColorLevel(127.5); // center of the color range to map to
 	
 	this->ImgActor = vtkImageActor::New();
 	ImgActor->SetMapper(mapper);
@@ -117,16 +96,6 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 
 	//Remove Image:
 	this->SetTouchPadImage(false);
-	/*if(this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}*/
-	/*
-	if(this->ImgMapper)
-	{
-		this->ImgMapper->Delete();
-	}
-	*/
 }
 
 //----------------------------------------------------------------------------
@@ -370,6 +339,8 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 			//create and place in coordinates.
 			this->ImgActor = vtkImageActor::New();
 			this->ImgActor->GetMapper()->SetInputConnection(this->ImgReader->GetOutputPort());
+			//ImgActor->SetMapper(mapper);
+
 			this->ImgActor->PickableOff();
 			this->ImgActor->DragableOff();
 		}
@@ -410,7 +381,7 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//ROTATION
 		ImgActor->SetOrientation(0, 0, 0);
 		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
-		ImgActor->RotateX(-85);
+		ImgActor->RotateX(-85);		//Adjust to the touchpad's inclination.
 
 		//SCALE
 		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();
