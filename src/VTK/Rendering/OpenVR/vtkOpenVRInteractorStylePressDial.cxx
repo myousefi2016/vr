@@ -410,6 +410,8 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		//Get world information
 		double wscale = camera->GetDistance();                                 //Scale
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
+		vtkErrorMacro(<< "wpos: (" << wpos[0] << ", " << wpos[1] << ", " << wpos[2] << ")");
+
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 
@@ -454,6 +456,15 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double cosw = cos(wori[0]);
 		double sinw = sin(wori[0]);
 		double imgPos[3];
+
+
+
+		double *imgCtr = this->ImgActor->GetCenter();
+		double *imgPosit = this->ImgActor->GetPosition();
+		//Move center if the image to the corner (which is center of touchpad)
+		for (int i = 0; i < 3; i++) imgPosit[i] -= (imgPosit[i] - imgCtr[i]);	
+
+
 
 		//Will place a corner of the image in the center of the touchpad.
 		imgPos[0] = wpos[0] + wscale*d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw);
