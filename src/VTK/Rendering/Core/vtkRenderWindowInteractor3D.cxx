@@ -342,8 +342,9 @@ void vtkRenderWindowInteractor3D::RightButtonReleaseEvent()
   {
     if (this->PointersDown[this->PointerIndex])
     {
-      this->PointersDown[this->PointerIndex] = 0;
-      this->PointersDownCount--;
+			//We will handle this on the Untap event
+      //this->PointersDown[this->PointerIndex] = 0;
+      //this->PointersDownCount--;
     }
     // do we have multitouch
     if (this->PointersDownCount > 1)

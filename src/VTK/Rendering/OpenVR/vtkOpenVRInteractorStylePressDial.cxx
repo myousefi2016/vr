@@ -368,20 +368,10 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		if (!this->ImgActor)
 		{
 			//create and place in coordinates.
-			this->ImgActor = vtkImageActor::New();		//this->ImgActor = vtkActor2D::New();	//->working
-			//this->ImgActor->SetInputData(this->ImgReader->GetOutput());
+			this->ImgActor = vtkImageActor::New();
 			this->ImgActor->GetMapper()->SetInputConnection(this->ImgReader->GetOutputPort());
-
-			//this->ImgMapper = this->ImgActor->GetMapper();
-			//this->ImgMapper->SetInputData(this->ImgReader->GetOutput());
-
-
 			this->ImgActor->PickableOff();
 			this->ImgActor->DragableOff();
-			//this->PointerActor->SetMapper(this->PointerMapper);
-			//this->PointerActor->GetProperty()->SetColor(this->PointerColor);
-			//this->PointerActor->GetProperty()->SetAmbient(1.0);
-			//this->PointerActor->GetProperty()->SetDiffuse(0.0);
 		}
 
 		//check if used different renderer to previous visualization
@@ -409,91 +399,41 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 
 		//Get world information
 		double wscale = camera->GetDistance();                                 //Scale
-		vtkErrorMacro(<< "wscale: " << wscale);
 		double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());     //Position
-		vtkErrorMacro(<< "wpos: (" << wpos[0] << ", " << wpos[1] << ", " << wpos[2] << ")");
-
 		double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex());  //Orientation
 		wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 
-
-		vtkErrorMacro(<< "---------------");
-
-		double *center = this->ImgActor->GetCenter();	//World Coords
-		vtkErrorMacro(<< "center: (" << center[0] << ", " << center[1] << ", " << center[2] << ")");
-
-		double *position = this->ImgActor->GetPosition();
-		vtkErrorMacro(<< "position: (" << position[0] << ", " << position[1] << ", " << position[2] << ")");
-
-		double *origin = this->ImgActor->GetOrigin();	//returns (0,0,0)
-		vtkErrorMacro(<< "origin: (" << origin[0] << ", " << origin[1] << ", " << origin[2] <<  ")");
-
-		double *scale = this->ImgActor->GetScale();
-		vtkErrorMacro(<< "scale: (" << scale[0] << ", " << scale[1] << ", " << scale[2] << ")");
-
-		double *xRange = this->ImgActor->GetXRange();	//world coordinates.
-		vtkErrorMacro(<< "xRange: (" << xRange[0] << ", " << xRange[1] << ")");
-		double *yRange = this->ImgActor->GetYRange();
-		vtkErrorMacro(<< "yRange: (" << yRange[0] << ", " << yRange[1] << ")");
-		double *zRange = this->ImgActor->GetZRange();
-		vtkErrorMacro(<< "zRange: (" << zRange[0] << ", " << zRange[1] << ")");
-
-		double *imgCenter = this->ImgActor->GetMapper()->GetCenter();	//x-y img coordinates. (returns: (pixels-1)/2.0)
-		vtkErrorMacro(<< "imgCenter: (" << imgCenter[0] << ", " << imgCenter[1] << ")");
-
-		double *bounds = this->ImgActor->GetMapper()->GetBounds();	//(0,999,0,999,0,0)
-		vtkErrorMacro(<< "bounds: (" << bounds[0] << ", " << bounds[1] << ", " << bounds[2] << ", " << bounds[3] << ", " << bounds[4] << ", " << bounds[5] << ")");
-
-		double length = this->ImgActor->GetMapper()->GetLength();	//Diagonal length of mapper's bounding box. ->Uses pizels
-		vtkErrorMacro(<< "length: " << length);
-
-		vtkErrorMacro(<< "---------------");
-
-
-        //Get/Set touchpad information
+    //Get/Set touchpad information
 		const double d = 0.05;	// Distance from center of controller to center of touchpad
-		const double h = 0.01;	// Separation image-touchpad.
-        //3D Rotation and Translation Maths
-		double cosw = cos(wori[0]);
-		double sinw = sin(wori[0]);
-	
+		const double h = 0.007;	// Separation image-touchpad.
+    
 		//ROTATION
 		ImgActor->SetOrientation(0, 0, 0);
 		ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
-		ImgActor->RotateX(-90);
+		ImgActor->RotateX(-85);
 
 		//SCALE
-		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();	//(0,999,0,999,0,0)
+		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();
 		//It is supposed to be a squared image (image of a circle), so xScale == yScale
-		double imgScale = 0.1/(++imgBounds[1]);
-		//this->ImgActor->SetScale(0.0001);
+		double imgScale = 0.0475/(++imgBounds[1]);
 		this->ImgActor->SetScale(imgScale);
 
 		//TRANSLATION
 		double imgPos[3];
+		double cosw = cos(wori[0]);
+		double sinw = sin(wori[0]);
 		//Will place a corner of the image in the center of the touchpad.
 		imgPos[0] = wpos[0] + wscale * (d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + h * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw));
 		imgPos[1] = wpos[1] + wscale * (d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + h * (cosw + wori[2] * wori[2] * (1 - cosw)));
 		imgPos[2] = wpos[2] + wscale * (d * (cosw + wori[3] * wori[3] * (1 - cosw)) + h * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw));
 		this->ImgActor->SetPosition(imgPos);
-		//Now, center the image to the center of touchpad
-		//(can't be done before because "position" might not be set.
 		this->ImgActor->Update();
+		//Now, center the image to the center of touchpad (can't be done before because "position" might not be set.
 		double *imgCtr = this->ImgActor->GetCenter();
 		//Move center if the image to the corner (which is center of touchpad)
 		for (int i = 0; i < 3; i++) imgPos[i] += (imgPos[i] - imgCtr[i]);
 		this->ImgActor->SetPosition(imgPos);
-
-
-
-
-
-
-		
-		
 	}
-	
-	
 	
 	if (this->Interactor)
 	{
