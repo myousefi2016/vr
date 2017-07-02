@@ -425,9 +425,6 @@ void vtkOpenVRInteractorStylePressDial::SetTouchPadImage(bool activate)
 		double *origin = this->ImgActor->GetOrigin();	//returns (0,0,0)
 		vtkErrorMacro(<< "origin: (" << origin[0] << ", " << origin[1] << ", " << origin[2] <<  ")");
 
-		this->ImgActor->SetOrigin(0.5,0.5,0.5);
-		//this->ImgActor->SetOrigin(499.5,499.5,0);
-
 		double *scale = this->ImgActor->GetScale();
 		vtkErrorMacro(<< "scale: (" << scale[0] << ", " << scale[1] << ", " << scale[2] << ")");
 
