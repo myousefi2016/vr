@@ -8,6 +8,7 @@ set(Module_SRCS
   vtkOpenVRCamera.cxx
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
+  vtkOpenVRInteractorStylePressBool.cxx
   vtkOpenVRInteractorStylePressDial.cxx
   vtkOpenVRInteractorStylePressKeyboard.cxx
   vtkOpenVRInteractorStylePressKeypad.cxx
@@ -26,6 +27,7 @@ set_source_files_properties(
   vtkOpenVRCamera
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
+  vtkOpenVRInteractorStylePressBool
   vtkOpenVRInteractorStylePressDial
   vtkOpenVRInteractorStylePressKeyboard
   vtkOpenVRInteractorStylePressKeypad
