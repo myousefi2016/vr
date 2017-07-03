@@ -47,8 +47,8 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
   //vtkNew<vtkOpenVRInteractorStyle> style;
-	vtkNew<vtkOpenVRInteractorStylePressDial> style;
-	//vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
+	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
+	vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
 	this->SetInteractorStyle(style.Get());
 }
 

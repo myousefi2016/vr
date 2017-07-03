@@ -111,12 +111,48 @@ configure_file(
   )
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.0"
-  "${CMAKE_BINARY_DIR}/PressDial_Image.0"
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.png"
+  "${CMAKE_BINARY_DIR}/PressDial_Image.png"
+  COPYONLY
+  )
+
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image0.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image0.png"
   COPYONLY
   )
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.1"
-  "${CMAKE_BINARY_DIR}/PressDial_Image.1"
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image1.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image1.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image2.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image2.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image3.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image3.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image4.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image4.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image5.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image5.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image6.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image6.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image7.png"
+  "${CMAKE_BINARY_DIR}/PressKeyboard_Image7.png"
   COPYONLY
   )

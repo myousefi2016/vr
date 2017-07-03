@@ -38,6 +38,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkPolyDataMapper.h"
 
 #include "vtkOpenVRPropertyModifier.h"
+#include "vtkPNGReader.h"
+#include "vtkStringArray.h"
+#include "vtkImageMapper3D.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
 
@@ -52,11 +55,24 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	this->TextIsVisible = false;
 
 	//Images:
+	this->HasImage = true;
 	this->NextImage = 0;
+	//This class contains several images:
+	vtkStringArray *FileNames = vtkStringArray::New();
 	for(int i=0; i< MAX_IMG; i++)
 	{
-		//Init images properly.
+		FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image" + vtkVariant(i).ToString() + ".png");
 	}
+	this->ImgReader = vtkPNGReader::New();
+	this->ImgReader->SetFileNames(FileNames);
+	//this->ImgReader->GetDataExtent();
+	//ImgReader->SetDataExtent(0, 999, 0, 999, 0, 1);
+	FileNames->Delete();
+	this->ImgActor = vtkImageActor::New();
+	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
+	this->ImgActor->PickableOff();
+	this->ImgActor->DragableOff();
+	this->ImgRenderer = NULL;
 
 	//Properties' Modifier
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
@@ -77,9 +93,18 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 	}
 
 	//Remove images
-	for (int i = 0; i< MAX_IMG; i++)
+	this->SetTouchPadImage(false);
+	if (this->ImgActor)
 	{
-		//Remove images properly.
+		this->ImgActor->Delete();
+	}
+	if (this->ImgReader)
+	{
+		this->ImgReader->Delete();
+	}
+	if (this->ImgRenderer)
+	{
+		this->ImgRenderer->Delete();
 	}
 }
 
