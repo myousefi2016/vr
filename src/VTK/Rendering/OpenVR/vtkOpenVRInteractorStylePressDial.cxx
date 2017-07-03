@@ -73,7 +73,8 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\VenturaControllerOverlay.png");
 	ImgReader->SetFileNames(FileNames);*/
 	//Substituted by: (previous was working, just in case...)
-	ImgReader->SetFilePrefix("PressDial_Image");
+	ImgReader->SetFilePrefix("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image");
+	//ImgReader->SetFilePattern("PressDial_Image\d+.jpg");
 	// Needed?
 	//ImgReader->SetDataExtent(0, 999, 0, 999, 0, 1);
 

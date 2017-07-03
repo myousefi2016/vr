@@ -52,7 +52,7 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	this->TextIsVisible = false;
 
 	//Images:
-	this->ActiveImage = 0;
+	this->NextImage = 0;
 	for(int i=0; i< MAX_IMG; i++)
 	{
 		//Init images properly.
@@ -114,7 +114,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 		{
 			if (radius > .65)	//External radius buttons
 			{
-				switch (this->ActiveImage)
+				switch (this->NextImage)
 				{
 				case 0:	//Small, abcdefgh
 					switch (region)
@@ -128,12 +128,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'g'; break;
 					case 3: newChar = 'h'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG/2-1) || this->ActiveImage == (MAX_IMG-1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG/2-1) || this->NextImage == (MAX_IMG-1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -150,12 +150,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'o'; break;
 					case 3: newChar = 'p'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -172,12 +172,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'w'; break;
 					case 3: newChar = 'x'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -194,12 +194,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = ':'; break;
 					case 3: newChar = ';'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -216,12 +216,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'G'; break;
 					case 3: newChar = 'H'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -238,12 +238,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'O'; break;
 					case 3: newChar = 'P'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -260,12 +260,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = 'W'; break;
 					case 3: newChar = 'X'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -282,12 +282,12 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 4: newChar = ':'; break;
 					case 3: newChar = ';'; break;
 					case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == (MAX_IMG / 2 - 1) || this->ActiveImage == (MAX_IMG - 1)) this->ActiveImage -= (MAX_IMG / 2 - 1);
-						else this->ActiveImage++;
+						if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1)) this->NextImage -= (MAX_IMG / 2 - 1);
+						else this->NextImage++;
 						break;
 					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->ActiveImage == 0 || this->ActiveImage == (MAX_IMG / 2)) this->ActiveImage += (MAX_IMG / 2 - 1);
-						else this->ActiveImage--;
+						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
+						else this->NextImage--;
 						break;
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
@@ -306,7 +306,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				{
 					vtkErrorMacro(<< "\"Caps\" pressed");	// Just for debugging purposes.
 
-					(this->ActiveImage += 4) %= MAX_IMG;
+					(this->NextImage += 4) %= MAX_IMG;
 				}
 				else if (x < 0 && y>0)		//Delete last
 				{
