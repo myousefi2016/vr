@@ -69,6 +69,10 @@ public:
   //Launch touchpad touched event
   //void OnTap() VTK_OVERRIDE;	//moved to its superclass
 
+	//Images handling
+	void IncNextImage() VTK_OVERRIDE;
+	void DecNextImage() VTK_OVERRIDE;
+	virtual void SwitchCaps();
  
 
 protected:

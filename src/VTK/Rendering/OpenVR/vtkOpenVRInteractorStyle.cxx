@@ -92,7 +92,7 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 
 	//Images:
 	this->HasImage = false;
-	this->NextImage = -1;
+	this->NextImage = 0;
 	ImgReader = NULL;
 	ImgActor = NULL;
 	ImgRenderer = NULL;
@@ -294,13 +294,9 @@ void vtkOpenVRInteractorStyle::SetTouchPadImage(bool activate)
 	//to enable it
 	else
 	{
-
 		//Load next image. Just to test functionality.
-		this->NextImage = (++NextImage) % (ImgActor->GetWholeZMax() + 1);
-		this->UpdateImage();
-		vtkErrorMacro(<< this->NextImage);
-		vtkErrorMacro(<< "Ttl: " << this->ImgActor->GetSliceNumberMin());
-		vtkErrorMacro(<< "Ttl: " << this->ImgActor->GetSliceNumberMax());
+		//this->NextImage = (++NextImage) % (ImgActor->GetSliceNumberMax() + 1);
+		//this->UpdateImage();
 
 
 		//check if used different renderer to previous visualization

@@ -57,6 +57,8 @@ public:
 	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
 	vtkGetMacro(HasImage, bool)
 	vtkSetMacro(HasImage, bool)
+	virtual void IncNextImage() {}
+	virtual void DecNextImage() {}
 	virtual void UpdateImage();
 
 protected:
