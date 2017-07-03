@@ -69,7 +69,7 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 	this->NextImage = 0;
 	this->ImgReader = vtkPNGReader::New();
 	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image");
-	ImgReader->SetFilePrefix();
+	//ImgReader->SetFilePrefix();
 	ImgReader->Update();
 
 	this->ImgActor = vtkImageActor::New();
@@ -278,13 +278,13 @@ void vtkOpenVRInteractorStylePressBool::OnMiddleButtonDown()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
+void vtkOpenVRInteractorStylePressBool::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
+void vtkOpenVRInteractorStylePressBool::ShowTestActor(bool on)
 {
 	//Get prop data:
 	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
@@ -364,7 +364,7 @@ void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStylePressBool::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

@@ -111,12 +111,12 @@ configure_file(
   )
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image0.png"
-  "${CMAKE_BINARY_DIR}/PressDial_Image0.png"
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.0"
+  "${CMAKE_BINARY_DIR}/PressDial_Image.0"
   COPYONLY
   )
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image1.png"
-  "${CMAKE_BINARY_DIR}/PressDial_Image1.png"
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.1"
+  "${CMAKE_BINARY_DIR}/PressDial_Image.1"
   COPYONLY
   )
