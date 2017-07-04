@@ -58,6 +58,7 @@ void vtkOpenVRInteractorStyle::UpdateImage()
 			if(this->NextImage <= ImgActor->GetWholeZMax() && this->NextImage >= ImgActor->GetWholeZMin())
 			{
 				ImgActor->SetZSlice(this->NextImage);
+				//this->ImgActor->Update();
 			}
 			else
 			{
@@ -68,6 +69,7 @@ void vtkOpenVRInteractorStyle::UpdateImage()
 			if(this->NextImage <= sliceMapper->GetSliceNumberMaxValue() && this->NextImage >= sliceMapper->GetSliceNumberMinValue())
 			{
 				sliceMapper->SetSliceNumber(this->NextImage);
+				//sliceMapper->Update();
 			}
 			else
 			{
@@ -303,8 +305,8 @@ void vtkOpenVRInteractorStyle::SetTouchPadImage(bool activate)
 	else
 	{
 		//Load next image. Just to test functionality.
-		//this->NextImage = (++NextImage) % (ImgActor->GetSliceNumberMax() + 1);
-		//this->UpdateImage();
+		/*this->NextImage = (++NextImage) % (ImgActor->GetSliceNumberMax() + 1);
+		this->UpdateImage();*/
 
 
 		//check if used different renderer to previous visualization

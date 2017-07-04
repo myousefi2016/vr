@@ -69,6 +69,7 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	FileNames->Delete();
 	this->ImgActor = vtkImageActor::New();
 	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
+	this->ImgActor->SetInputData(this->ImgReader->GetOutput());
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;
@@ -126,7 +127,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
 
-		if (this->TextActor && TextDefaultMsg)
+		if (this->TextActor && TextDefaultMsg && (radius < .65 || (region != 2 && region != 7)))
 		{
 			this->TextActor->SetInput("");
 			TextDefaultMsg = false;
@@ -156,14 +157,6 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 7: //Returns 0 - 3 OR 4 - 7
 						this->DecNextImage();
 						break;
-					/*case 2:	//Returns 0 - 3 OR 4 - 7
-						if (this->NextImage == (MAX_IMG/2-1) || this->NextImage == (MAX_IMG-1)) this->NextImage -= (MAX_IMG / 2 - 1);
-						else this->NextImage++;
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2)) this->NextImage += (MAX_IMG / 2 - 1);
-						else this->NextImage--;
-						break;*/
 					default: vtkErrorMacro(<< "region out of boundaries");
 					}
 					break;
@@ -304,23 +297,36 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 					case 7: //Returns 0 - 3 OR 4 - 7
 						this->DecNextImage();
 						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
+					default:
+						vtkErrorMacro(<< "region out of boundaries");
 					}
 					break;
+				default:
+					vtkErrorMacro(<< "NextImage out of boundaries");
 				}
 
-				vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
+				if (newChar != '\0')
+				{
+					vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
 
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
-				this->TextActor->SetInput(newText);
-				this->TextActor->GetTextProperty()->BoldOn();
-				TextHasUnsavedChanges = true;
+					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
+					this->TextActor->SetInput(newText);
+					this->TextActor->GetTextProperty()->BoldOn();
+					TextHasUnsavedChanges = true;
+				}				
 			}
 			else {
 				if (x <= 0 && y <= 0)		//Caps
 				{
 					vtkErrorMacro(<< "\"Caps\" pressed");	// Just for debugging purposes.
 
+					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
+					if (newText.compare("") == 0)
+					{
+						this->TextActor->SetInput(" ");		//Avoids unexpected errors
+						this->TextActor->GetTextProperty()->BoldOff();
+						TextHasUnsavedChanges = false;
+					}
 					this->SwitchCaps();
 				}
 				else if (x < 0 && y>0)		//Delete last
