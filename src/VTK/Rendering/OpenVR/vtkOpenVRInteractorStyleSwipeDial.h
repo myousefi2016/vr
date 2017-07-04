@@ -25,8 +25,12 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStyleSwipeDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-
 #include "vtkOpenVRInteractorStyle.h"
+
+class vtkDequeAngleRadius;
+class vtkTextActor3D;
+
+#define MAX_REC 10
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwipeDial : public vtkOpenVRInteractorStyle
 {
@@ -36,16 +40,42 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
-  /**
+  /** 04/07 - I remove this because I am using TAP for everything.
+   *          May be interesting to switch from tap to SWIPE.
   * Override Swiping (Touchpad) to increment/decrement numbers.
   */
-  void OnSwipe() VTK_OVERRIDE;
-  void OnLongTap() VTK_OVERRIDE;	//May be useful to detct start of gesture.
+//  void OnSwipe() VTK_OVERRIDE;
+//  void OnLongTap() VTK_OVERRIDE;	//May be useful to detct start of gesture.
   //@}
 
+  //Text3D to modify Props' attributes.
+  //TODO move all this to Superclass
+  vtkTextActor3D *TextActor;
+  vtkRenderer *TextRenderer;
+  bool TextHasUnsavedChanges;
+  bool TextDefaultMsg;
+  bool TextIsVisible;
+
+
+  void TrackFinger() VTK_OVERRIDE;
+
+	//Manage finger position values
+  virtual double GetAngle(int pos = 0);
+  virtual double GetRadius(int pos = 0);
+  virtual double GetDiffAngle();
+  virtual double GetAvgRadius();
+  virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
+  virtual void DecValue();	//Inc and Dec may be merged.
+  virtual void IncValue();
 protected:
   vtkOpenVRInteractorStyleSwipeDial();
   ~vtkOpenVRInteractorStyleSwipeDial() VTK_OVERRIDE;
+  
+
+
+	//Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
+	vtkDequeAngleRadius *AngleRadiusRecord;
+
 
 private:
   vtkOpenVRInteractorStyleSwipeDial(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;  // Not implemented.
@@ -53,3 +83,5 @@ private:
 };
 
 #endif
+
+//List, **queue**, stack
