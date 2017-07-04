@@ -59,11 +59,19 @@ void vtkOpenVRInteractorStyle::UpdateImage()
 			{
 				ImgActor->SetZSlice(this->NextImage);
 			}
+			else
+			{
+				vtkErrorMacro(<< "ImgActor: Image slice number is out of bounds");
+			}
 			
 			vtkImageSliceMapper *sliceMapper = vtkImageSliceMapper::SafeDownCast(ImgActor->GetMapper());
 			if(this->NextImage <= sliceMapper->GetSliceNumberMaxValue() && this->NextImage >= sliceMapper->GetSliceNumberMinValue())
 			{
 				sliceMapper->SetSliceNumber(this->NextImage);
+			}
+			else
+			{
+				vtkErrorMacro(<< "ImgMapper: Image slice number is out of bounds");
 			}
 		}
 	}
