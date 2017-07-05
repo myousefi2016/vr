@@ -68,7 +68,7 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 	this->HasImage = true;
 	this->NextImage = 0;
 	this->ImgReader = vtkPNGReader::New();
-	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image");
+	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
 	//ImgReader->SetFilePrefix();
 	ImgReader->Update();
 
@@ -118,7 +118,8 @@ void vtkOpenVRInteractorStylePressBool::OnRightButtonDown()
 
 		float radius = sqrt(x*x + y*y);
 
-		bool region = (x>0)?false:true;		//2 regions: right->0(False); left->1(True)
+		//bool region = (x>0)?false:true;		//2 regions: right->0(False); left->1(True)
+		char *selBool = (x > 0) ? "false" : "true";
 		
 		//TODO check if it is convinient to add here if(this->TextActor) and wrap everything.
 		
@@ -132,16 +133,12 @@ void vtkOpenVRInteractorStylePressBool::OnRightButtonDown()
 		if (radius > .3)
 		{
 			//Display number, which is equal to region number
-			vtkErrorMacro(<< "Bool pressed: " << region);	// Just for debugging purposes.
+			vtkErrorMacro(<< "Bool pressed: " << selBool);	// Just for debugging purposes.
 
 			//Actual code:
 			if (this->TextActor)
 			{
-				//vtkStdString newText = vtkVariant(region).ToString();
-				//this->TextActor->SetInput(newText);
-				//this->TextActor->GetTextProperty()->BoldOn();
-				//TextHasUnsavedChanges = true;
-				this->TextActor->SetInput(vtkVariant(region).ToString());
+				this->TextActor->SetInput(selBool);
 				this->TextActor->GetTextProperty()->BoldOn();
 				TextHasUnsavedChanges = true;
 			}
