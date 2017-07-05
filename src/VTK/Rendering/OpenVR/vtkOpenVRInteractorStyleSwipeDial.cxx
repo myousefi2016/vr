@@ -125,7 +125,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			TextHasUnsavedChanges = true;
 		}
 
-		double newValue = this->TextActor->GetInput();
+		double newValue = vtkVariant(this->TextActor->GetInput()).ToDouble();
 
 		if (radius > .65)
 		{
@@ -140,55 +140,41 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			case 9:		newValue /= 4;		break;
 			case 8:		newValue /= 8;		break;
 			default: break;
-
 			}
 
-			vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString();
-			this->TextActor->SetInput(newText);
 			this->TextActor->GetTextProperty()->BoldOn();
 			TextHasUnsavedChanges = true;
 		}
-		else if (radius > .2)
+		else if (radius > .3)
 		{
-			if (region <= 4)
+			switch (region)
 			{
-				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
-
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-				if (newText.compare("") == 0)
-				{
-					this->TextActor->SetInput(" ");		//Avoids unexpected errors
-				}
-				this->TextActor->GetTextProperty()->BoldOff();
-				TextHasUnsavedChanges = false;
+			case 4: case 5:		newValue *= 1.01;	break;
+			case 10: case 11:	newValue *= 0.99;	break;
+			case 6: case 7:		newValue *= 2;		break;
+			case 8: case 9:		newValue /= 2;		break;
+			default: break;
 			}
-			else	// region in range [5,9]
-			{
-				vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
 
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-				if (newText.length() <= 1)
-				{
-					this->TextActor->SetInput(" ");		//Avoids unexpected errors
-					this->TextActor->GetTextProperty()->BoldOff();
-					TextHasUnsavedChanges = false;
-				}
-				else
-				{
-					newText.pop_back();
-					this->TextActor->SetInput(newText);
-					this->TextActor->GetTextProperty()->BoldOn();
-					TextHasUnsavedChanges = true;
-				}
-			}
+			this->TextActor->GetTextProperty()->BoldOn();
+			TextHasUnsavedChanges = true;
 		}
 		else
 		{
-			vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + ".";
-			this->TextActor->SetInput(newText);
-			this->TextActor->GetTextProperty()->BoldOn();
-			TextHasUnsavedChanges = true;
+			if(region < 8)	// Accept value
+			{
+				this->TextActor->GetTextProperty()->BoldOff();
+				TextHasUnsavedChanges = false;
+			}
+			else			// Restore default: 0
+			{
+				newValue = 0;
+				this->TextActor->GetTextProperty()->BoldOn();
+				TextHasUnsavedChanges = true;
+			}
 		}
+
+		this->TextActor->SetInput(vtkVariant(newValue).ToString());
 	}
 }
 
@@ -197,7 +183,6 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
-
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
