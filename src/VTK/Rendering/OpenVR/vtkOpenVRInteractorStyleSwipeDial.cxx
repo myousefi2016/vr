@@ -459,7 +459,7 @@ void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 	{
 		if(AvgDiffAngle > 20.)	//TODO adjust values.
 		{	//Fast swipe
-			
+			//TODO fill
 		}
 		else if(AvgDiffAngle > 5.)
 		{	//Normal swipe
