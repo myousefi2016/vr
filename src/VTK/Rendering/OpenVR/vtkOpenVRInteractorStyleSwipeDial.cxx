@@ -153,7 +153,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		if (this->TextDefaultMsg)
 		{
-			this->TextActor->SetInput("0");
+			this->TextActor->SetInput("1");		//Set to 0 in the future. This is only to check buttons
 			TextDefaultMsg = false;
 			TextHasUnsavedChanges = true;
 		}
@@ -162,6 +162,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		if (radius > .65)
 		{
+			vtkErrorMacro(<< "Entered on radius > .65");
 			switch(region)
 			{
 			case 4:		newValue *= 1.02;	break;
@@ -180,6 +181,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		}
 		else if (radius > .3)
 		{
+			vtkErrorMacro(<< "Entered on radius > .3");
 			switch (region)
 			{
 			case 4: case 5:		newValue *= 1.01;	break;
@@ -343,13 +345,15 @@ void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 		float *tpos = rwi->GetTouchPadPosition();
+		float angle = int(180. * atan2(tpos[0], tpos[1]) / vtkMath::Pi());	//Angle in degrees.
+		float radius = sqrt(tpos[0] * tpos[0] + tpos[1] * tpos[1]);
 
 		//Update record: Add new values and remove old values if maximum is reached:
 		if (this->AngleRadiusRecord->size() == MAX_REC)
 		{
 			this->AngleRadiusRecord->pop_front();
 		}
-		this->AngleRadiusRecord->push_back(AngleRadius(tpos[0], tpos[1]));
+		this->AngleRadiusRecord->push_back(AngleRadius(angle, radius));
 
 		// Find out direction of swipe
 		switch (this->GetSwipeDirection())
