@@ -35,6 +35,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRCamera.h"
 #include "vtkVariant.h"
+#include "vtkPNGReader.h"
+#include "vtkImageActor.h"
+#include "vtkImageMapper3D.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
@@ -61,6 +64,22 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	this->TextDefaultMsg = true;
 	this->TextIsVisible = false;
 	
+
+	//Images
+	this->ImgReader = vtkPNGReader::New();
+	this->HasImage = true;
+	this->NextImage = 0;
+
+	//In this class, only one image needed.
+	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\SwipeDial_Image0.png");
+	ImgReader->Update();
+
+	this->ImgActor = vtkImageActor::New();
+	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
+	this->ImgActor->PickableOff();
+	this->ImgActor->DragableOff();
+	this->ImgRenderer = NULL;
+
 }
 
 //----------------------------------------------------------------------------
@@ -74,6 +93,12 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 		this->TextActor->Delete();
 	}
 
+	//Remove Image:
+	this->SetTouchPadImage(false);
+	if (this->ImgActor)
+	{
+		this->ImgActor->Delete();
+	}
 }
 
 /*
