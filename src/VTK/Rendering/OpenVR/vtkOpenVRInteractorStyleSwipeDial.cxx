@@ -443,54 +443,57 @@ void vtkOpenVRInteractorStyleSwipeDial::DecValue()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 {
-	double AvgRadius = this->GetAvgRadius();
-	double AvgDiffAngle = this->GetAvgDiffAngle();
+	vtkErrorMacro(<< "Inside IncValue()");	//Debug purposes.
 
-	//Debug purposes
-	vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
-	vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
-
-
-	//TODO FOLLOW HERE!!
-	//Modification can be fine or rough, depending on avg radius and diff angle.
-	//Think about an algorithm.
-
-	if(AvgRadius > 0.65)	//Outer circle. Decimal adjust
+	if(this->TextActor)
 	{
-		if(AvgDiffAngle > 20.)	//TODO adjust values.
-		{	//Fast swipe
-			//TODO fill
+		double AvgRadius = this->GetAvgRadius();
+		double AvgDiffAngle = this->GetAvgDiffAngle();
+
+		double newNum = vtkVariant(this->TextActor->GetInput()).ToDouble();
+
+		//Debug purposes
+		vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
+		vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
+
+		//TODO FOLLOW HERE!!
+		//Modification can be fine or rough, depending on avg radius and diff angle.
+		//Think about an algorithm.
+
+		if (AvgRadius > 0.65)	//Outer circle. Decimal adjust
+		{
+			if (AvgDiffAngle > 20.)	//TODO adjust values.
+			{	//Fast swipe
+				//TODO fill
+				newNum += 0.1;
+			}
+			else if (AvgDiffAngle > 5.)
+			{	//Normal swipe
+				newNum += 0.01;
+			}
+			else
+			{	//Slow swipe
+				newNum += 0.001;
+			}
 		}
-		else if(AvgDiffAngle > 5.)
-		{	//Normal swipe
-			
+		else if (AvgRadius > 0.3)	//Middle circle. Integer adjust.
+		{
+			if (AvgDiffAngle > 20.)	//TODO adjust values.
+			{	//Fast swipe
+				newNum += 100;
+			}
+			else if (AvgDiffAngle > 5.)
+			{	//Normal swipe
+				newNum += 10;
+			}
+			else
+			{	//Slow swipe
+				newNum += 1;
+			}
 		}
-		else
-		{	//Slow swipe
-			
-		}
+		//else, too close to the center. Do nothing.
+		this->TextActor->SetInput(vtkVariant(newNum).ToString());
 	}
-	else if(AvgRadius > 0.3)	//Middle circle. Integer adjust.
-	{
-		if (AvgDiffAngle > 20.)	//TODO adjust values.
-		{	//Fast swipe
-
-		}
-		else if (AvgDiffAngle > 5.)
-		{	//Normal swipe
-
-		}
-		else
-		{	//Slow swipe
-
-		}
-	}
-	//else, too close to the center. Do nothing.
-
-
-
-
-
 }
 
 //----------------------------------------------------------------------------
