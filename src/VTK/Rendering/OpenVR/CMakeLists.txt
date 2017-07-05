@@ -111,8 +111,8 @@ configure_file(
   )
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image.png"
-  "${CMAKE_BINARY_DIR}/PressDial_Image.png"
+  "${CMAKE_CURRENT_SOURCE_DIR}/PressDial_Image0.png"
+  "${CMAKE_BINARY_DIR}/PressDial_Image0.png"
   COPYONLY
   )
 
@@ -154,5 +154,11 @@ configure_file(
 configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/PressKeyboard_Image7.png"
   "${CMAKE_BINARY_DIR}/PressKeyboard_Image7.png"
+  COPYONLY
+  )
+
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/SwipeDial_Image0.png"
+  "${CMAKE_BINARY_DIR}/SwipeDial_Image0.png"
   COPYONLY
   )

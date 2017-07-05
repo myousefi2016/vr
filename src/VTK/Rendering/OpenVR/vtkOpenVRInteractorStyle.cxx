@@ -351,7 +351,7 @@ void vtkOpenVRInteractorStyle::SetTouchPadImage(bool activate)
 		double *imgBounds = this->ImgActor->GetMapper()->GetBounds();
 		//It is supposed to be a squared image (image of a circle), so xScale == yScale
 		double imgScale = 0.0475 / (++imgBounds[1]);
-		this->ImgActor->SetScale(imgScale);
+		this->ImgActor->SetScale(wscale*imgScale);
 
 		//TRANSLATION
 		double imgPos[3];
