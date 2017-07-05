@@ -103,6 +103,14 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 	{
 		this->ImgActor->Delete();
 	}
+	if (this->ImgReader)
+	{
+		this->ImgReader->Delete();
+	}
+	if (this->ImgRenderer)
+	{
+		this->ImgRenderer->Delete();
+	}
 }
 
 //----------------------------------------------------------------------------

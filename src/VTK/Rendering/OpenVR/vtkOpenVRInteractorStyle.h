@@ -61,8 +61,7 @@ public:
 	virtual void DecNextImage() {}
 	virtual void UpdateImage();
 
-	//Swiping
-	virtual void TrackFinger() {}
+	
 
 protected:
   vtkOpenVRInteractorStyle();

@@ -161,6 +161,8 @@ public:
 	virtual void SetTouchPadImage(bool activate) {}
   //@}
 
+	//Swiping
+	virtual void TrackFinger() {}
 
 protected:
   vtkInteractorStyle3D();
