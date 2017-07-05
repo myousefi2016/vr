@@ -87,6 +87,7 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 		this->TextActor->Delete();
 	}
 
+	//Remove FieldModifier
 	if(this->FieldModifier)
 	{
 		this->FieldModifier->Delete();

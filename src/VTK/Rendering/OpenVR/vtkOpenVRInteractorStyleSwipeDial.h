@@ -57,12 +57,29 @@ public:
   bool TextIsVisible;
 
 
+  //Repeated code from PressDial:
+  //@{
+  /**
+  * Override Right Button (Touchpad) to input numbers.
+  */
+  void OnRightButtonDown() VTK_OVERRIDE;
+  void OnRightButtonUp() VTK_OVERRIDE;
+  //@}
+  //@{
+  /**
+  * Override Middle Button (Grip) which will enable a text to input data.
+  */
+  void OnMiddleButtonDown() VTK_OVERRIDE;
+  void OnMiddleButtonUp() VTK_OVERRIDE;
+  //@}
+
+
   void TrackFinger() VTK_OVERRIDE;
 
 	//Manage finger position values
   virtual double GetAngle(int pos = 0);
   virtual double GetRadius(int pos = 0);
-  virtual double GetDiffAngle();
+  virtual double GetAvgDiffAngle();
   virtual double GetAvgRadius();
   virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
   virtual void DecValue();	//Inc and Dec may be merged.

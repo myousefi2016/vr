@@ -49,8 +49,6 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
-
-//TODO add interactions on touchpad 
   //@{
   /**
   * Override Right Button (Touchpad) to input numbers.
@@ -61,7 +59,8 @@ public:
 
   //@{
   /**
-  * Override Middle Button (Grip) which will select Prop and attribute to modify.
+  * Override Middle Button (Grip) which will enable a text to input data.
+  * Also, for test purposes select Prop and attribute to modify.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
   void OnMiddleButtonUp() VTK_OVERRIDE;
