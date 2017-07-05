@@ -74,7 +74,7 @@ protected:
 
   //Text3D to modify Props' attributes.
 	//TODO move all this to Superclass
-  vtkTextActor3D *TextActor;
+	vtkTextActor3D *TextActor;		//vtkBillboardTextActor3D *TextActor;
   vtkRenderer *TextRenderer;
   bool TextHasUnsavedChanges;
   bool TextDefaultMsg;

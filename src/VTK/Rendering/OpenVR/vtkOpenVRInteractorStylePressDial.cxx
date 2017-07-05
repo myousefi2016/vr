@@ -249,11 +249,11 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		//First Click ever. Not created yet: create it and place it properly.
 		if (!this->TextActor)
 		{
-			this->TextActor = vtkTextActor3D::New();
+			this->TextActor = vtkTextActor3D::New();		//vtkBillboardTextActor3D::New();		
 			this->TextActor->SetInput("Input data");
 			this->TextActor->PickableOff();
 			this->TextActor->DragableOff();
-			this->TextActor->GetTextProperty()->SetBackgroundOpacity(1.0);
+			this->TextActor->GetTextProperty()->SetBackgroundOpacity(0.25);
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
@@ -283,11 +283,12 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
+	
+	double wScale = camera->GetDistance();			//World scale
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 	
-	const double d2c = 0.5;		//Text distance to camera.
+	const double d2c = 1.25;		//Text distance to camera.
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
@@ -298,13 +299,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	double txtPos[3];
 
 	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c;
+		txtPos[i] = camPos[i] + projection[i] * d2c  * wScale;
 
 	//Place text
-	this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
+	this->TextActor->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
 	this->TextActor->SetOrientation(0, -camOri[1], 0);
 	this->TextActor->SetPosition(txtPos);
-
+	this->TextActor->GetTextProperty()->SetFontSize(60);
+	
 	//Render Scene
 	if (this->Interactor)
 	{
