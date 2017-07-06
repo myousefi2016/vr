@@ -30,13 +30,13 @@ PURPOSE.  See the above copyright notice for more information.
 class vtkDequeAngleRadius;
 class vtkTextActor3D;
 
-#define MAX_REC 10
+#define MAX_REC 5
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwipeDial : public vtkOpenVRInteractorStyle
 {
 public:
   static vtkOpenVRInteractorStyleSwipeDial *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleSwipeDial, vtkInteractorStyle3D);
+  vtkTypeMacro(vtkOpenVRInteractorStyleSwipeDial, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
@@ -74,6 +74,9 @@ public:
   //@}
 
 
+	void OnUntap() VTK_OVERRIDE;
+
+
   void TrackFinger() VTK_OVERRIDE;
 
 	//Manage finger position values
@@ -84,6 +87,7 @@ public:
   virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
   virtual void DecValue();	//Inc and Dec may be merged.
   virtual void IncValue();
+	virtual void FlushValues();	//Empty records.
 protected:
   vtkOpenVRInteractorStyleSwipeDial();
   ~vtkOpenVRInteractorStyleSwipeDial() VTK_OVERRIDE;
