@@ -414,6 +414,39 @@ double vtkOpenVRInteractorStyleSwipeDial::GetAvgRadius()
 int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 {
 	int dir = 0;
+	std::deque<AngleRadius>::reverse_iterator it1 = ++(AngleRadiusRecord->rbegin());
+	std::deque<AngleRadius>::reverse_iterator it2 = AngleRadiusRecord->rbegin();
+
+	//Test for instantaneus stop when pausing the finger.
+	//Check last two values.
+	if(fabs(it1->first - it2->first) < 1)
+	{
+		vtkErrorMacro(<< "Finger paused");
+		return 0;
+	}
+
+	for (it1, it2; it1 != AngleRadiusRecord->rend(); ++it1, ++it2)
+	{
+		//Debug purposes:
+		vtkErrorMacro(<< "Swipe direction, diff value: " << it1->first - it2->first);
+
+		if (it1->first - it2->first < -1) dir++;
+		else if (it2->first - it1->first < -1) dir--;
+		//else, difference of 1 degree is too close to consider movement.
+	}
+
+	//Normalize to {-1, 0, 1}
+	if (dir != 0) dir /= abs(dir);
+	return dir;
+
+
+	//Test for instantaneus stop when pausing the finger
+	/*if(AngleRadiusRecord->r)
+	{
+		return 0;
+	}*/
+
+	/*int dir = 0;
 	std::deque<AngleRadius>::iterator it1 = AngleRadiusRecord->begin();
 	std::deque<AngleRadius>::iterator it2 = ++(AngleRadiusRecord->begin());
 	for (it1, it2; it2 != AngleRadiusRecord->end(); ++it1, ++it2)
@@ -421,14 +454,14 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 		//Debug purposes:
 		vtkErrorMacro(<< "Swipe direction, diff value: " << it1->first - it2->first);
 
-		if (it1->first - it2->first < -1e-4) dir++;
-		else if(it2->first - it1->first < -1e-4) dir--;
-		//else, too close to consider movement.
+		if (it1->first - it2->first < -1) dir++;
+		else if(it2->first - it1->first < -1) dir--;
+		//else, difference of 1 degree is too close to consider movement.
 	}
 
 	//Normalize to {-1, 0, 1}
 	if(dir != 0) dir /= abs(dir);
-	return dir;
+	return dir;*/
 }
 
 //----------------------------------------------------------------------------
@@ -456,11 +489,11 @@ void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 		vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
 		vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
 
-		//TODO FOLLOW HERE!!
-		//Modification can be fine or rough, depending on avg radius and diff angle.
+
+		//Modification can be fine or rough, depending on avg radius and avg diff angle.
 		//Think about an algorithm.
 
-		if (AvgRadius > 0.65)	//Outer circle. Decimal adjust
+		if (AvgRadius > 0.5)	//Outer circle. Decimal adjust
 		{
 			if (AvgDiffAngle > 20.)	//TODO adjust values.
 			{	//Fast swipe
@@ -476,7 +509,7 @@ void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 				newNum += 0.001;
 			}
 		}
-		else if (AvgRadius > 0.3)	//Middle circle. Integer adjust.
+		else	//Inner circle. Integer adjust.
 		{
 			if (AvgDiffAngle > 20.)	//TODO adjust values.
 			{	//Fast swipe
