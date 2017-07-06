@@ -432,11 +432,9 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 	std::deque<AngleRadius>::reverse_iterator it1 = ++(AngleRadiusRecord->rbegin());
 	std::deque<AngleRadius>::reverse_iterator it2 = AngleRadiusRecord->rbegin();
 
-	//Test for instantaneus stop when pausing the finger.
-	//Check last two values.
+	//Instantaneus stop when pausing the finger.
 	if(fabs(it1->first - it2->first) < 1)
 	{
-		//vtkErrorMacro(<< "Finger paused");
 		this->FlushValues();
 		return 0;
 	}
@@ -445,9 +443,6 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 
 	for (it1, it2; it1 != AngleRadiusRecord->rend(); ++it1, ++it2)
 	{
-		//Debug purposes:
-		//vtkErrorMacro(<< "Swipe direction. it1: " << it1->first << "; it2: " << it2->first);
-
 		if (it1->first - it2->first < -1) dir++;
 		else if (it2->first - it1->first < -1) dir--;
 		//else, difference of 1 degree is too close to consider movement.
@@ -456,30 +451,6 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 	//Normalize to {-1, 0, 1}
 	if (dir != 0) dir /= abs(dir);
 	return dir;
-
-
-	//Test for instantaneus stop when pausing the finger
-	/*if(AngleRadiusRecord->r)
-	{
-		return 0;
-	}*/
-
-	/*int dir = 0;
-	std::deque<AngleRadius>::iterator it1 = AngleRadiusRecord->begin();
-	std::deque<AngleRadius>::iterator it2 = ++(AngleRadiusRecord->begin());
-	for (it1, it2; it2 != AngleRadiusRecord->end(); ++it1, ++it2)
-	{
-		//Debug purposes:
-		vtkErrorMacro(<< "Swipe direction, diff value: " << it1->first - it2->first);
-
-		if (it1->first - it2->first < -1) dir++;
-		else if(it2->first - it1->first < -1) dir--;
-		//else, difference of 1 degree is too close to consider movement.
-	}
-
-	//Normalize to {-1, 0, 1}
-	if(dir != 0) dir /= abs(dir);
-	return dir;*/
 }
 
 //----------------------------------------------------------------------------
