@@ -85,10 +85,10 @@ public:
   virtual double GetAvgDiffAngle();
   virtual double GetAvgRadius();
   virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
-  virtual void DecValue();	//Inc and Dec may be merged.
-  virtual void IncValue();
+  //virtual void DecValue();	//Inc and Dec may be merged.
+  //virtual void IncValue();
 
-	virtual void UpdateValue(bool abs);	
+	virtual void UpdateValue();	
 
 	virtual void FlushValues();	//Empty records.
 protected:
@@ -100,7 +100,7 @@ protected:
 	//Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
 	vtkDequeAngleRadius *AngleRadiusRecord;
 	bool AbsoluteInc;	//absolute/relative increments
-	bool PositiveInc;	//positive/negative increments 
+//	bool PositiveInc;	//positive/negative increments 
 
 
 private:

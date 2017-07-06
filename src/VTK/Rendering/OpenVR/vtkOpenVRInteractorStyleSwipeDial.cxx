@@ -41,6 +41,16 @@ PURPOSE.  See the above copyright notice for more information.
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
+//A/R: (A)bsolute/(R)elative increment
+//D/I: (D)ecimal/(I)nteger adjust
+//S/F: (S)low/(F)ast swipe
+const double ADS = 0.01;
+const double ADF = 0.1;
+const double AIS = 1.;
+const double AIF = 10.;
+const double RS = 0.01;
+const double RF = 0.1;
+
 
 //PIMPL to use STL (ref: VTKUsersGuide, 303)
 typedef std::pair<double, double> AngleRadius;
@@ -57,7 +67,7 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 {
 	this->AngleRadiusRecord = new vtkDequeAngleRadius;
 	this->AbsoluteInc = true;
-	this->PositiveInc = true;
+	//this->PositiveInc = true;
 
 	//Text3D to modify Props' attributes.
 	this->TextActor = NULL;
@@ -167,14 +177,16 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			vtkErrorMacro(<< "Entered on radius > .65");
 			switch(region)
 			{
-			case 4:		newValue *= 1.02;	break;
-			case 5:		newValue *= 1.05;	break;
-			case 11:	newValue *= 0.98;	break;
-			case 10:	newValue *= 0.95;	break;
-			case 6:		newValue *= 4;		break;
-			case 7:		newValue *= 8;		break;
-			case 9:		newValue /= 4;		break;
-			case 8:		newValue /= 8;		break;
+			case 4:		newValue *= 1.02;		break;
+			case 5:		newValue *= 1.05;		break;
+			case 11:	newValue *= 0.98;		break;
+			case 10:	newValue *= 0.95;		break;
+			case 6:		newValue *= 4;			break;
+			case 7:		newValue *= 8;			break;
+			case 9:		newValue /= 4;			break;
+			case 8:		newValue /= 8;			break;
+			case 3:		AbsoluteInc = true;		break;
+			case 12:	AbsoluteInc = false;	break;
 			default: break;
 			}
 
@@ -370,12 +382,14 @@ void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 		switch (this->GetSwipeDirection())
 		{
 		case -1:	//Anti-clockwise
-			this->PositiveInc = false;
-			this->DecValue();
+			//this->PositiveInc = false;
+			//this->DecValue();
+			this->UpdateValue();
 			break;
 		case 1:		//Clockwise
-			this->PositiveInc = true;
-			this->IncValue();
+			//this->PositiveInc = true;
+			//this->IncValue();
+			this->UpdateValue();
 			break;
 		default:
 			break;
@@ -456,6 +470,7 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 	return dir;
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::DecValue()
 {
@@ -523,9 +538,10 @@ void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 		this->FlushValues();
 	}
 }
+*/
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::UpdateValue(bool abs)
+void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 {
 
 	if (this->TextActor)
@@ -533,13 +549,14 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue(bool abs)
 		//Ensure there is a number
 		if (this->TextDefaultMsg)
 		{
-			this->TextActor->SetInput("1");		//Set to 0 in the future. This is only to check buttons. Also, create field with message (avoid hardcoding)
+			this->TextActor->SetInput("1");
 			TextDefaultMsg = false;
 			TextHasUnsavedChanges = true;
 		}
 
 		double AvgRadius = this->GetAvgRadius();
 		double AvgDiffAngle = this->GetAvgDiffAngle();
+		int swipeDir = this->GetSwipeDirection();
 
 		double newNum = vtkVariant(this->TextActor->GetInput()).ToDouble();
 
@@ -547,34 +564,48 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue(bool abs)
 		vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
 		vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
 
-
 		//Modification can be fine or rough, depending on avg radius and avg diff angle.
 		//Think about an algorithm.
-
-		if (AvgRadius > 0.5)	//Outer circle. Decimal adjust
+		if(this->AbsoluteInc)	//(A)bsolute Increments
 		{
-			if (AvgDiffAngle > 20.)	//TODO adjust values.
-			{	//Fast swipe
-				newNum += 0.1;
+			if (AvgRadius > 0.5)	//Outer circle. (D)ecimal adjust
+			{
+				if (AvgDiffAngle > 20.)
+				{	//Fast swipe
+					newNum += swipeDir*ADF;
+				}
+				else if (AvgDiffAngle > 1.)
+				{	//Slow swipe
+					newNum += swipeDir*ADS;
+				}
+				//else no swipe
+			}
+			else	//Inner circle. (I)nteger adjust
+			{
+				if (AvgDiffAngle > 25.)
+				{	//Fast swipe
+					newNum += swipeDir*AIF;
+				}
+				else if (AvgDiffAngle > 1.)
+				{	//Slow swipe
+					newNum += swipeDir*AIS;
+				}
+				//else no swipe
+			}
+		}
+		else	//(R)elative Increments
+		{
+			if (AvgDiffAngle > 20.)
+			{	//(F)ast swipe
+				newNum *= (1+swipeDir*RF);
 			}
 			else if (AvgDiffAngle > 1.)
-			{	//Slow swipe
-				newNum += 0.01;
+			{	//(S)low swipe
+				newNum *= (1+swipeDir*RS);
 			}
 			//else no swipe
 		}
-		else	//Inner circle. Integer adjust.
-		{
-			if (AvgDiffAngle > 25.)	//TODO adjust values.
-			{	//Fast swipe
-				newNum += 10;
-			}
-			else if (AvgDiffAngle > 1.)
-			{	//Slow swipe
-				newNum += 1;
-			}
-			//else no swipe
-		}
+		
 		//else, too close to the center. Do nothing.
 		this->TextActor->SetInput(vtkVariant(newNum).ToString());
 
