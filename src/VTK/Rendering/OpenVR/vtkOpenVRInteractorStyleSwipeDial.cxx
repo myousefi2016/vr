@@ -161,11 +161,11 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		float radius = sqrt(x*x + y*y);
 
 		int region = int(8. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-		region = (x > 0) ? region : (region + 15);				// 16 regions. Integer values in range [0, 15]
+		region = (x > 0) ? region : (region + 15);						// 16 regions. Integer values in range [0, 15]
 
 		if (this->TextDefaultMsg)
 		{
-			this->TextActor->SetInput("1");		//Set to 0 in the future. This is only to check buttons. Also, create field with message (avoid hardcoding)
+			this->TextActor->SetInput("1");		//Create field with message (avoid hardcoding)
 			TextDefaultMsg = false;
 			TextHasUnsavedChanges = true;
 		}
@@ -174,17 +174,16 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		if (radius > .65)
 		{
-			vtkErrorMacro(<< "Entered on radius > .65");
 			switch(region)
 			{
-			case 4:		newValue *= 1.02;		break;
-			case 5:		newValue *= 1.05;		break;
-			case 11:	newValue *= 0.98;		break;
-			case 10:	newValue *= 0.95;		break;
-			case 6:		newValue *= 4;			break;
-			case 7:		newValue *= 8;			break;
-			case 9:		newValue /= 4;			break;
-			case 8:		newValue /= 8;			break;
+			case 4:		newValue *= 1.02;			break;
+			case 5:		newValue *= 1.05;			break;
+			case 11:	newValue *= 0.98;			break;
+			case 10:	newValue *= 0.95;			break;
+			case 6:		newValue *= 4;				break;
+			case 7:		newValue *= 8;				break;
+			case 9:		newValue /= 4;				break;
+			case 8:		newValue /= 8;				break;
 			case 3:		AbsoluteInc = true;		break;
 			case 12:	AbsoluteInc = false;	break;
 			default: break;
@@ -195,7 +194,6 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		}
 		else if (radius > .3)
 		{
-			vtkErrorMacro(<< "Entered on radius > .3");
 			switch (region)
 			{
 			case 4: case 5:		newValue *= 1.01;	break;
@@ -217,7 +215,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			}
 			else			// Restore default: 0
 			{
-				newValue = 0;
+				newValue = 0;	//Add field with the value (as a string?)
 				this->TextActor->GetTextProperty()->BoldOn();
 				TextHasUnsavedChanges = true;
 			}
@@ -382,13 +380,9 @@ void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 		switch (this->GetSwipeDirection())
 		{
 		case -1:	//Anti-clockwise
-			//this->PositiveInc = false;
-			//this->DecValue();
 			this->UpdateValue();
 			break;
 		case 1:		//Clockwise
-			//this->PositiveInc = true;
-			//this->IncValue();
 			this->UpdateValue();
 			break;
 		default:
@@ -565,7 +559,6 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
 
 		//Modification can be fine or rough, depending on avg radius and avg diff angle.
-		//Think about an algorithm.
 		if(this->AbsoluteInc)	//(A)bsolute Increments
 		{
 			if (AvgRadius > 0.5)	//Outer circle. (D)ecimal adjust
@@ -605,9 +598,11 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 			}
 			//else no swipe
 		}
-		
-		//else, too close to the center. Do nothing.
+
+		//Finally, update value
 		this->TextActor->SetInput(vtkVariant(newNum).ToString());
+		this->TextActor->GetTextProperty()->BoldOn();
+		TextHasUnsavedChanges = true;
 
 		//Start tracking next set of movements
 		this->FlushValues();
