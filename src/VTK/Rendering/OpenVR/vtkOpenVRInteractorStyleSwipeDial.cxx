@@ -40,6 +40,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageMapper3D.h"
 
 #include "vtkOpenVRTextFeedback.h"
+#include "vtkOpenVRTouchPadImage.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
@@ -76,7 +77,7 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	
 
 	//Images
-	this->ImgReader = vtkPNGReader::New();
+	/*this->ImgReader = vtkPNGReader::New();
 	this->HasImage = true;
 	this->NextImage = 0;
 
@@ -88,8 +89,9 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;
-
+	this->ImgRenderer = NULL;*/
+	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
+	this->TouchPadImage->LoadSingleImage("SwipeDial_Image0");
 }
 
 //----------------------------------------------------------------------------
@@ -104,7 +106,7 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 	}
 
 	//Remove Image:
-	this->SetTouchPadImage(false);
+	/*this->SetTouchPadImage(false);
 	if (this->ImgActor)
 	{
 		this->ImgActor->Delete();
@@ -116,7 +118,12 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 	if (this->ImgRenderer)
 	{
 		this->ImgRenderer->Delete();
+	}*/
+	if (this->TouchPadImage)
+	{
+		this->TouchPadImage->Delete();
 	}
+
 }
 
 /*

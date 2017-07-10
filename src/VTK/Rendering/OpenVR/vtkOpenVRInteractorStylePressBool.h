@@ -14,7 +14,7 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 /**
  * @class   vtkOpenVRInteractorStylePressBool
- * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
+ * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
  *          Divides touchpad in sections to input boolean values.
 */
 
@@ -22,7 +22,7 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStylePressBool_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-#include "vtkOpenVRInteractorStyle.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
 
 class vtkOpenVRPropertyModifier;
 
@@ -37,12 +37,13 @@ class vtkJPEGReader;
 class vtkPNGReader;
 
 class vtkOpenVRTextFeedback;
+class vtkOpenVRTouchPadImage;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressBool : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressBool : public vtkOpenVRInteractorStyleInputData
 {
 public:
   static vtkOpenVRInteractorStylePressBool *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressBool, vtkOpenVRInteractorStyle);
+  vtkTypeMacro(vtkOpenVRInteractorStylePressBool, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -69,11 +70,14 @@ protected:
   ~vtkOpenVRInteractorStylePressBool() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-	vtkOpenVRTextFeedback *TextFeedback;
+//	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
+
+	//Images
+//  vtkOpenVRTouchPadImage *TouchPadImage;
 
 private:
   vtkOpenVRInteractorStylePressBool(const vtkOpenVRInteractorStylePressBool&) VTK_DELETE_FUNCTION;  // Not implemented.

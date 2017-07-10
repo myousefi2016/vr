@@ -39,6 +39,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageActor.h"
 
 #include "vtkOpenVRTextFeedback.h"
+#include "vtkOpenVRTouchPadImage.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
 
@@ -49,6 +50,8 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	//Images:
+//*//
+/*	
 	this->HasImage = true;
 	this->NextImage = 0;
 	//This class contains several images:
@@ -67,6 +70,9 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;
+*/ //*//
+	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
+	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image");
 
 	//Properties' Modifier
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
@@ -88,7 +94,7 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 	}
 
 	//Remove images
-	this->SetTouchPadImage(false);
+	/*this->SetTouchPadImage(false);
 	if (this->ImgActor)
 	{
 		this->ImgActor->Delete();
@@ -100,7 +106,8 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 	if (this->ImgRenderer)
 	{
 		this->ImgRenderer->Delete();
-	}
+	}*/
+	this->TouchPadImage->Delete();
 }
 
 //----------------------------------------------------------------------------
@@ -132,7 +139,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 
 		if (radius > .65)	//External radius buttons
 		{
-			switch (this->NextImage)
+			switch (this->TouchPadImage->GetNextImage())
 			{
 			case 0:	//Small, abcdefgh
 				switch (region)
@@ -145,8 +152,10 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'f'; break;
 				case 4: newChar = 'g'; break;
 				case 3: newChar = 'h'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				/*case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;*/
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -161,8 +170,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'n'; break;
 				case 4: newChar = 'o'; break;
 				case 3: newChar = 'p'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -177,8 +186,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'v'; break;
 				case 4: newChar = 'w'; break;
 				case 3: newChar = 'x'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -193,8 +202,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = ','; break;
 				case 4: newChar = ':'; break;
 				case 3: newChar = ';'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -209,8 +218,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'F'; break;
 				case 4: newChar = 'G'; break;
 				case 3: newChar = 'H'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -225,8 +234,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'N'; break;
 				case 4: newChar = 'O'; break;
 				case 3: newChar = 'P'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -241,8 +250,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'V'; break;
 				case 4: newChar = 'W'; break;
 				case 3: newChar = 'X'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -257,8 +266,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = ','; break;
 				case 4: newChar = ':'; break;
 				case 3: newChar = ';'; break;
-				case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;
+				case 2:	this->TouchPadImage->IncNextImage(); break;
+				case 7: this->TouchPadImage->DecNextImage(); break;
 				default:
 					vtkErrorMacro(<< "region out of boundaries");
 				}
@@ -337,7 +346,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 		}
 		
 		//Has the image changed?
-		this->UpdateImage();
+		this->TouchPadImage->UpdateImage();
 	}
 }
 
@@ -453,7 +462,7 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
-
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressKeyboard::IncNextImage()
 {
@@ -478,12 +487,13 @@ void vtkOpenVRInteractorStylePressKeyboard::DecNextImage()
 	{
 		this->NextImage--;
 	}
-}
+}*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressKeyboard::SwitchCaps()
 {
-	(this->NextImage += 4) %= MAX_IMG;
+	int currentImg = this->TouchPadImage->GetNextImage();
+	this->TouchPadImage->SetNextImage( (currentImg += 4) %= this->TouchPadImage->GetMaxNumImg());
 }
 
 //----------------------------------------------------------------------------

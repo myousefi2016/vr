@@ -13,30 +13,27 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStylePressDial
- * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
- *          Divides touchpad in two concentric circles.  Swiping clockwise on the outer circular
- *          crown will increment the value of the number, while swiping anti-clockwise will
- *          decrease its value. Inner circle will implement two buttons for deleting and
- *          accepting the value.
+ * @class   vtkOpenVRInteractorStyleSwipeDial
+ * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
+ *          TODO description.
 */
 
 #ifndef vtkOpenVRInteractorStyleSwipeDial_h
 #define vtkOpenVRInteractorStyleSwipeDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-#include "vtkOpenVRInteractorStyle.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
 
 class vtkDequeAngleRadius;
 class vtkOpenVRTextFeedback;
 
 #define MAX_REC 5
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwipeDial : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwipeDial : public vtkOpenVRInteractorStyleInputData
 {
 public:
   static vtkOpenVRInteractorStyleSwipeDial *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleSwipeDial, vtkOpenVRInteractorStyle);
+  vtkTypeMacro(vtkOpenVRInteractorStyleSwipeDial, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
@@ -49,7 +46,7 @@ public:
   //@}
 
   //Text3D to modify Props' attributes.
-  vtkOpenVRTextFeedback *TextFeedback;
+  //vtkOpenVRTextFeedback *TextFeedback;
 
 
   //Repeated code from PressDial:

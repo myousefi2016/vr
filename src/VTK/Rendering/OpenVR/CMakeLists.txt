@@ -8,6 +8,7 @@ set(Module_SRCS
   vtkOpenVRCamera.cxx
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
+  vtkOpenVRInteractorStyleInputData.cxx
   vtkOpenVRInteractorStylePressBool.cxx
   vtkOpenVRInteractorStylePressDial.cxx
   vtkOpenVRInteractorStylePressKeyboard.cxx
@@ -22,12 +23,14 @@ set(Module_SRCS
   vtkOpenVRRenderWindow.cxx
   vtkOpenVRRenderWindowInteractor.cxx
   vtkOpenVRTextFeedback.cxx
+  vtkOpenVRTouchPadImage.cxx
   )
   
 set_source_files_properties(
   vtkOpenVRCamera
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
+  vtkOpenVRInteractorStyleInputData
   vtkOpenVRInteractorStylePressBool
   vtkOpenVRInteractorStylePressDial
   vtkOpenVRInteractorStylePressKeyboard
@@ -42,6 +45,7 @@ set_source_files_properties(
   vtkOpenVRRenderWindow
   vtkOpenVRRenderWindowInteractor
   vtkOpenVRTextFeedback
+  vtkOpenVRTouchPadImage
   PROPERTIES
     WRAP_EXCLUDE 1
     WRAP_EXCLUDE_PYTHON 1

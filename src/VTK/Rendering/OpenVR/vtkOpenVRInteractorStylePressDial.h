@@ -22,7 +22,7 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStylePressDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-#include "vtkOpenVRInteractorStyle.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
 
 class vtkOpenVRPropertyModifier;
 
@@ -38,11 +38,11 @@ class vtkPNGReader;
 
 class vtkOpenVRTextFeedback;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyleInputData
 {
 public:
   static vtkOpenVRInteractorStylePressDial *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkOpenVRInteractorStyle);
+  vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
@@ -67,7 +67,7 @@ protected:
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-	vtkOpenVRTextFeedback *TextFeedback;
+//	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

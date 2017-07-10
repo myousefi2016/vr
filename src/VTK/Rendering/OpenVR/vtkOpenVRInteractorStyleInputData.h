@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyle.h
+Module:    vtkOpenVRInteractorStyleInputData.h
 
 Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
 All rights reserved.
@@ -13,27 +13,33 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStyle
- * @brief   extended from vtkInteractorStyle3D to override command methods
+ * @class   vtkOpenVRInteractorStyleInputData
+ * @brief   extended from vtkOpenVRInteractorStyle to provide support for
+ * data modification and user interaction for inputtiong data.
 */
 
-#ifndef vtkOpenVRInteractorStyle_h
-#define vtkOpenVRInteractorStyle_h
+#ifndef vtkOpenVRInteractorStyleInputData_h
+#define vtkOpenVRInteractorStyleInputData_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 
-#include "vtkInteractorStyle3D.h"
+#include "vtkOpenVRInteractorStyle.h"
 
 class vtkSphereSource;
 class vtkPNGReader;
 class vtkImageActor;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyle : public vtkInteractorStyle3D
+class vtkOpenVRTextFeedback;
+class vtkOpenVRTouchPadImage;
+
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleInputData : public vtkOpenVRInteractorStyle
 {
 public:
-  static vtkOpenVRInteractorStyle *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyle, vtkInteractorStyle3D);
+  static vtkOpenVRInteractorStyleInputData *New();
+  vtkTypeMacro(vtkOpenVRInteractorStyleInputData, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
+
+
 
   //@{
   /**
@@ -51,21 +57,17 @@ public:
 	void OnUntap() VTK_OVERRIDE;
 	//@}
 
-//	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
+	//Pointer:
+	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
 
 	//Images:
-//	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
-	/*vtkGetMacro(HasImage, bool)
-	vtkSetMacro(HasImage, bool)
-	virtual void IncNextImage() {}
-	virtual void DecNextImage() {}
-	virtual void UpdateImage();*/
+	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
 
 	
 
 protected:
-  vtkOpenVRInteractorStyle();
-  ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
+  vtkOpenVRInteractorStyleInputData();
+  ~vtkOpenVRInteractorStyleInputData() VTK_OVERRIDE;
 
 	//Touchpad Pointer.
 	vtkSphereSource *Pointer;
@@ -81,12 +83,15 @@ protected:
 	vtkPNGReader *ImgReader;
 	vtkImageActor *ImgActor;
 	vtkRenderer *ImgRenderer;*/
+	vtkOpenVRTouchPadImage *TouchPadImage;
 
+	//Text 3D
+	vtkOpenVRTextFeedback *TextFeedback;
 
 
 private:
-  vtkOpenVRInteractorStyle(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRInteractorStyleInputData(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;  // Not implemented.
   	
 };
 

@@ -14,7 +14,7 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 /**
  * @class   vtkOpenVRInteractorStylePressKeyboard
- * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
+ * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
  *          Divides touchpad in sectors allowing to convert it into a keyboard for text writing
 */
 
@@ -22,7 +22,7 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStylePressKeyboard_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-#include "vtkOpenVRInteractorStyle.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
 
 #define MAX_IMG 8
 
@@ -35,8 +35,9 @@ class vtkImageActor;
 class vtkOpenVRPropertyModifier;
 
 class vtkOpenVRTextFeedback;
+class vtkOpenVRTouchPadImage;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeyboard : public vtkOpenVRInteractorStyle
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeyboard : public vtkOpenVRInteractorStyleInputData
 {
 public:
   static vtkOpenVRInteractorStylePressKeyboard *New();
@@ -60,8 +61,8 @@ public:
   //@}
 
 	//Images handling
-	void IncNextImage() VTK_OVERRIDE;
-	void DecNextImage() VTK_OVERRIDE;
+/*	void IncNextImage() VTK_OVERRIDE;
+	void DecNextImage() VTK_OVERRIDE;*/
 	virtual void SwitchCaps();
  
 
@@ -70,7 +71,9 @@ protected:
   ~vtkOpenVRInteractorStylePressKeyboard() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-  vtkOpenVRTextFeedback *TextFeedback;
+//  vtkOpenVRTextFeedback *TextFeedback;
+  //Images
+ // vtkOpenVRTouchPadImage *TouchPadImage;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

@@ -41,6 +41,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkStringArray.h"
 
 #include "vtkOpenVRTextFeedback.h"
+#include "vtkOpenVRTouchPadImage.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressBool);
 
@@ -53,7 +54,7 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
-	//Images
+	/*//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->HasImage = true;
 	this->NextImage = 0;
@@ -66,7 +67,11 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
 	this->ImgActor->PickableOff();
 	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;
+	this->ImgRenderer = NULL;*/
+	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
+	this->TouchPadImage->LoadImages(1, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image.png");
+
+
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 }
@@ -87,7 +92,7 @@ vtkOpenVRInteractorStylePressBool::~vtkOpenVRInteractorStylePressBool()
 	}
 
 	//Remove Image:
-	this->SetTouchPadImage(false);
+	/*this->SetTouchPadImage(false);
 	if (this->ImgActor)
 	{
 		this->ImgActor->Delete();
@@ -100,6 +105,10 @@ vtkOpenVRInteractorStylePressBool::~vtkOpenVRInteractorStylePressBool()
 	if (this->ImgRenderer)
 	{
 		this->ImgRenderer->Delete();
+	}*/
+	if (this->TouchPadImage)
+	{
+		this->TouchPadImage->Delete();
 	}
 }
 
