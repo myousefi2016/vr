@@ -70,6 +70,8 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;*/
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
+	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
+	this->TouchPadImage->Init();
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 }
