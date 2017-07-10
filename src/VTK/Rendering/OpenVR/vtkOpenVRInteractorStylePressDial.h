@@ -45,7 +45,6 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStylePressDial, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-
   //@{
   /**
   * Override Right Button (Touchpad) to input numbers.
@@ -62,8 +61,6 @@ public:
   void OnMiddleButtonDown() VTK_OVERRIDE;
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
-
-
 
 protected:
   vtkOpenVRInteractorStylePressDial();

@@ -23,7 +23,6 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
-#include "vtkImageActor.h"
 
 #define MAX_IMG 8
 
@@ -31,8 +30,11 @@ class vtkTextActor3D;
 class vtkBillboardTextActor3D;
 class vtkTextMapper;
 class vtkTextSource;
+class vtkImageActor;
 
 class vtkOpenVRPropertyModifier;
+
+class vtkOpenVRTextFeedback;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeyboard : public vtkOpenVRInteractorStyle
 {
@@ -41,9 +43,6 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStylePressKeyboard, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-
-
-//TODO add interactions on touchpad 
   //@{
   /**
   * Override Right Button (Touchpad) to input numbers.
@@ -60,15 +59,6 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-  //Delete trigger behaviour from base class.
-  //void OnLeftButtonDown() VTK_OVERRIDE {};
-  //void OnLeftButtonUp() VTK_OVERRIDE {};
-
-
-
-  //Launch touchpad touched event
-  //void OnTap() VTK_OVERRIDE;	//moved to its superclass
-
 	//Images handling
 	void IncNextImage() VTK_OVERRIDE;
 	void DecNextImage() VTK_OVERRIDE;
@@ -80,17 +70,7 @@ protected:
   ~vtkOpenVRInteractorStylePressKeyboard() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-  vtkTextActor3D *TextActor;
-  vtkRenderer *TextRenderer;
-  bool TextHasUnsavedChanges;
-  bool TextDefaultMsg;
-  bool TextIsVisible;
-
-  //Add different images depending on the buttons pressed before.
-/*  vtkImageActor* Images[MAX_IMG];
-  vtkImageActor* CurrentImage;
-  int ActiveImage;
-  virtual void UpdateImage();*/	//Done in superclass.
+  vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

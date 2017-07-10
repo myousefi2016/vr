@@ -14,39 +14,31 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 #include "vtkOpenVRInteractorStylePressDial.h"
 
-#include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
 #include "vtkTextActor3D.h"
-#include "vtkBillboardTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkTextMapper.h"
 #include "vtkRenderer.h"
 #include "vtkTextSource.h"
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
-#include "vtkMatrixToHomogeneousTransform.h"
 #include "vtkSphereSource.h"
 #include "vtkProperty.h"
-#include "vtkPolyDataMapper.h"
+#include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
 
 #include "vtkOpenVRPropertyModifier.h"
 
 #include "vtkImageActor.h"
 #include "vtkImageReader2.h"
 #include "vtkImageSliceMapper.h"
-#include "vtkJPEGReader.h"
 #include "vtkPNGReader.h"
-#include "vtkImageMapper.h"
 #include "vtkActor2D.h"
-#include "vtkImageProperty.h"
 #include "vtkStringArray.h"
 
 #include "vtkOpenVRTextFeedback.h"
@@ -129,11 +121,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
 		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
-		if (this->TextFeedback->GetTextDefaultMsgOn())
+		if (this->TextFeedback->GetDefaultMsgOn())
 		{
 			this->TextFeedback->GetTextActor()->SetInput("");
-			this->TextFeedback->SetTextDefaultMsgOn(false);
-			this->TextFeedback->SetTextHasUnsavedChanges(true);
+			this->TextFeedback->SetDefaultMsgOn(false);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
 		if (radius > .6)
@@ -145,7 +137,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(region).ToString();
 			this->TextFeedback->GetTextActor()->SetInput(newText);
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-			this->TextFeedback->SetTextHasUnsavedChanges(true);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 
 		}
 		else if(radius > .2)
@@ -161,7 +153,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
 				}
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-				this->TextFeedback->SetTextHasUnsavedChanges(false);
+				this->TextFeedback->SetHasUnsavedChanges(false);
 
 				//test:
 				vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
@@ -177,14 +169,14 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 				{
 					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
 					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-					this->TextFeedback->SetTextHasUnsavedChanges(false);
+					this->TextFeedback->SetHasUnsavedChanges(false);
 				}
 				else
 				{
 					newText.pop_back();
 					this->TextFeedback->GetTextActor()->SetInput(newText);
 					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-					this->TextFeedback->SetTextHasUnsavedChanges(true);
+					this->TextFeedback->SetHasUnsavedChanges(true);
 				}
 			}
 		}
@@ -193,7 +185,7 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + ".";
 			this->TextFeedback->GetTextActor()->SetInput(newText);
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-			this->TextFeedback->SetTextHasUnsavedChanges(true);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 	}
 }
@@ -221,7 +213,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 
 	//Second Click. Already created and changes saved: can be hidden.
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-			&& (!this->TextFeedback->GetTextHasUnsavedChanges() || TextEmpty))
+			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 
 		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
@@ -231,7 +223,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextFeedback->SetTextRenderer(NULL);
 			//Restore initial values
 			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->SetTextDefaultMsgOn(true);
+			this->TextFeedback->SetDefaultMsgOn(true);
 			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
@@ -244,11 +236,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		//First Click ever. Not created yet: create it and place it properly.
 		if (!this->TextFeedback->GetTextActor())
 		{
-			this->TextFeedback->SetTextActor(vtkTextActor3D::New());
-			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->GetTextActor()->PickableOff();
-			this->TextFeedback->GetTextActor()->DragableOff();
-			this->TextFeedback->GetTextActor()->GetTextProperty()->SetBackgroundOpacity(0.25);
+			this->TextFeedback->Init();
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
@@ -268,7 +256,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			}
 			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
 			this->TextFeedback->SetTextIsVisible(true);
-			this->TextFeedback->SetTextHasUnsavedChanges(false);
+			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
 			this->ShowTestActor(true);

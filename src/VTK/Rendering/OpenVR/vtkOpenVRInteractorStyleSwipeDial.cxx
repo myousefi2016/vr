@@ -39,6 +39,8 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageActor.h"
 #include "vtkImageMapper3D.h"
 
+#include "vtkOpenVRTextFeedback.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
 //A/R: (A)bsolute/(R)elative increment
@@ -70,11 +72,7 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	//this->PositiveInc = true;
 
 	//Text3D to modify Props' attributes.
-	this->TextActor = NULL;
-	this->TextRenderer = NULL;
-	this->TextHasUnsavedChanges = false;
-	this->TextDefaultMsg = true;
-	this->TextIsVisible = false;
+	this->TextFeedback = vtkOpenVRTextFeedback::New();
 	
 
 	//Images
@@ -100,9 +98,9 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 	delete this->AngleRadiusRecord;
 
 	//Remove Text3D
-	if (this->TextActor)
+	if (this->TextFeedback)
 	{
-		this->TextActor->Delete();
+		this->TextFeedback->Delete();
 	}
 
 	//Remove Image:
@@ -149,7 +147,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnLongTap()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 {
-	if (this->TextIsVisible && this->TextActor)
+	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
 		//Downcast to a 3D Interactor.
 		vtkRenderWindowInteractor3D *rwi =
@@ -163,14 +161,14 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		int region = int(8. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
 		region = (x > 0) ? region : (region + 15);						// 16 regions. Integer values in range [0, 15]
 
-		if (this->TextDefaultMsg)
+		if (this->TextFeedback->GetDefaultMsgOn())
 		{
-			this->TextActor->SetInput("1");		//Create field with message (avoid hardcoding)
-			TextDefaultMsg = false;
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->SetInput("1");		//Create field with message (avoid hardcoding)
+			this->TextFeedback->SetDefaultMsgOn(false);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
-		double newValue = vtkVariant(this->TextActor->GetInput()).ToDouble();
+		double newValue = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToDouble();
 
 		if (radius > .65)
 		{
@@ -189,8 +187,8 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			default: break;
 			}
 
-			this->TextActor->GetTextProperty()->BoldOn();
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 		else if (radius > .3)
 		{
@@ -203,25 +201,25 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			default: break;
 			}
 
-			this->TextActor->GetTextProperty()->BoldOn();
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 		else
 		{
 			if(region < 8)	// Accept value
 			{
-				this->TextActor->GetTextProperty()->BoldOff();
-				TextHasUnsavedChanges = false;
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+				this->TextFeedback->SetHasUnsavedChanges(false);
 			}
 			else			// Restore default: 0
 			{
 				newValue = 0;	//Add field with the value (as a string?)
-				this->TextActor->GetTextProperty()->BoldOn();
-				TextHasUnsavedChanges = true;
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+				this->TextFeedback->SetHasUnsavedChanges(true);
 			}
 		}
 
-		this->TextActor->SetInput(vtkVariant(newValue).ToString());
+		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newValue).ToString());
 	}
 }
 
@@ -243,23 +241,22 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	}
 
 	bool TextEmpty = false;
-	if (this->TextActor) TextEmpty = !bool(vtkStdString(" ").compare(this->TextActor->GetInput()));
+	if (this->TextFeedback->GetTextActor()) TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
 
 	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextActor && this->TextRenderer != NULL &&
-		(!this->TextHasUnsavedChanges || TextEmpty))
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
+		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 
-		if (this->TextRenderer != NULL && this->TextActor)
+		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 		{
 			//Remove from renderer
-			this->TextRenderer->RemoveViewProp(this->TextActor);
-			this->TextRenderer = NULL;
+			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
+			this->TextFeedback->SetTextRenderer(NULL);
 			//Restore initial values
-			this->TextActor->SetInput("Swipe or Press");
-			this->TextDefaultMsg = true;
-			this->TextIsVisible = false;
-			//this->TextHasUnsavedChanges = false;
+			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
+			this->TextFeedback->SetDefaultMsgOn(true);
+			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
 			//this->ShowTestActor(false);
@@ -269,33 +266,29 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	else
 	{
 		//First Click ever. Not created yet: create it and place it properly.
-		if (!this->TextActor)
+		if (!this->TextFeedback->GetTextActor())
 		{
-			this->TextActor = vtkTextActor3D::New();
-			this->TextActor->SetInput("Swipe or Press");
-			this->TextActor->PickableOff();
-			this->TextActor->DragableOff();
-			this->TextActor->GetTextProperty()->SetBackgroundOpacity(1.0);
+			this->TextFeedback->Init();
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
-		if (this->CurrentRenderer != this->TextRenderer)
+		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
 		{
-			if (this->TextRenderer != NULL && this->TextActor)
+			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 			{
-				this->TextRenderer->RemoveViewProp(this->TextActor);
+				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
 			}
 			if (this->CurrentRenderer != 0)
 			{
-				this->CurrentRenderer->AddViewProp(this->TextActor);
+				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
 			}
 			else
 			{
 				vtkWarningMacro(<< "no current renderer on the interactor style.");
 			}
-			this->TextRenderer = this->CurrentRenderer;
-			this->TextIsVisible = true;
-			this->TextHasUnsavedChanges = false;
+			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
+			this->TextFeedback->SetTextIsVisible(true);
+			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
 			//this->ShowTestActor(true);
@@ -307,6 +300,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
+	double wScale = camera->GetDistance();			//World scale
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 
@@ -323,9 +317,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	for (int i = 0; i < 3; i++)
 		txtPos[i] = camPos[i] + projection[i] * d2c;
 
-	this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
-	this->TextActor->SetOrientation(0, -camOri[1], 0);
-	this->TextActor->SetPosition(txtPos);
+	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
+	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
+	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
+	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
 
 	//Render Scene
 	if (this->Interactor)
@@ -352,7 +347,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnUntap()
 void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 {
 	vtkErrorMacro(<< "TrackFinger()");
-	if (/*this->TextActor &&*/ this->TextIsVisible)
+	if (this->TextFeedback->GetTextIsVisible())
 	{
 		//current renderer
 		if (this->Interactor)
@@ -538,21 +533,21 @@ void vtkOpenVRInteractorStyleSwipeDial::IncValue()
 void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 {
 
-	if (this->TextActor)
+	if (this->TextFeedback->GetTextActor())
 	{
 		//Ensure there is a number
-		if (this->TextDefaultMsg)
+		if (this->TextFeedback->GetDefaultMsgOn())
 		{
-			this->TextActor->SetInput("1");
-			TextDefaultMsg = false;
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->SetInput("1");
+			this->TextFeedback->SetDefaultMsgOn(false);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
 		double AvgRadius = this->GetAvgRadius();
 		double AvgDiffAngle = this->GetAvgDiffAngle();
 		int swipeDir = this->GetSwipeDirection();
 
-		double newNum = vtkVariant(this->TextActor->GetInput()).ToDouble();
+		double newNum = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToDouble();
 
 		//Debug purposes
 		vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
@@ -600,9 +595,9 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		}
 
 		//Finally, update value
-		this->TextActor->SetInput(vtkVariant(newNum).ToString());
-		this->TextActor->GetTextProperty()->BoldOn();
-		TextHasUnsavedChanges = true;
+		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newNum).ToString());
+		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+		this->TextFeedback->SetHasUnsavedChanges(true);
 
 		//Start tracking next set of movements
 		this->FlushValues();

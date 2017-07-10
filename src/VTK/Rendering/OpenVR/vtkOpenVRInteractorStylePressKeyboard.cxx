@@ -14,25 +14,20 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 #include "vtkOpenVRInteractorStylePressKeyboard.h"
 
-#include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
 #include "vtkTextActor3D.h"
-#include "vtkBillboardTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkTextMapper.h"
 #include "vtkRenderer.h"
 #include "vtkTextSource.h"
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
-#include "vtkMatrixToHomogeneousTransform.h"
 #include "vtkSphereSource.h"
 #include "vtkProperty.h"
 #include "vtkPolyDataMapper.h"
@@ -41,6 +36,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkPNGReader.h"
 #include "vtkStringArray.h"
 #include "vtkImageMapper3D.h"
+#include "vtkImageActor.h"
+
+#include "vtkOpenVRTextFeedback.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
 
@@ -48,11 +46,7 @@ vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
 vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 {
 	//Text3D to modify Props' attributes.
-	this->TextActor = NULL;
-	this->TextRenderer = NULL;
-	this->TextHasUnsavedChanges = false;
-	this->TextDefaultMsg = true;
-	this->TextIsVisible = false;
+	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	//Images:
 	this->HasImage = true;
@@ -82,9 +76,9 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 {
 	//Remove Text3D
-	if(this->TextActor)
+	if (this->TextFeedback)
 	{
-		this->TextActor->Delete();
+		this->TextFeedback->Delete();
 	}
 
 	//Remove FieldModifier
@@ -112,7 +106,7 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 {
-	if (this->TextIsVisible)
+	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
 		//Downcast to a 3D Interactor.
 		vtkRenderWindowInteractor3D *rwi =
@@ -128,251 +122,217 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
 
-		if (this->TextActor && TextDefaultMsg && (radius < .65 || (region != 2 && region != 7)))
+		if (this->TextFeedback->GetDefaultMsgOn())
 		{
-			this->TextActor->SetInput("");
-			TextDefaultMsg = false;
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->SetInput("");
+			this->TextFeedback->SetDefaultMsgOn(false);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
-		if(this->TextActor)
+
+		if (radius > .65)	//External radius buttons
 		{
-			if (radius > .65)	//External radius buttons
+			switch (this->NextImage)
 			{
-				switch (this->NextImage)
+			case 0:	//Small, abcdefgh
+				switch (region)
 				{
-				case 0:	//Small, abcdefgh
-					switch (region)
-					{
-					case 8: newChar = 'a'; break;
-					case 9: newChar = 'b'; break;
-					case 0: newChar = 'c'; break;
-					case 1: newChar = 'd'; break;
-					case 6: newChar = 'e'; break;
-					case 5: newChar = 'f'; break;
-					case 4: newChar = 'g'; break;
-					case 3: newChar = 'h'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 1:	//Small, ijklmnop
-					switch (region)
-					{
-					case 8: newChar = 'i'; break;
-					case 9: newChar = 'j'; break;
-					case 0: newChar = 'k'; break;
-					case 1: newChar = 'l'; break;
-					case 6: newChar = 'm'; break;
-					case 5: newChar = 'n'; break;
-					case 4: newChar = 'o'; break;
-					case 3: newChar = 'p'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 2:	//Small, qrstuvwx
-					switch (region)
-					{
-					case 8: newChar = 'q'; break;
-					case 9: newChar = 'r'; break;
-					case 0: newChar = 's'; break;
-					case 1: newChar = 't'; break;
-					case 6: newChar = 'u'; break;
-					case 5: newChar = 'v'; break;
-					case 4: newChar = 'w'; break;
-					case 3: newChar = 'x'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 3:	//Small, yz!?.,:;
-					switch (region)
-					{
-					case 8: newChar = 'y'; break;
-					case 9: newChar = 'z'; break;
-					case 0: newChar = '!'; break;
-					case 1: newChar = '?'; break;
-					case 6: newChar = '.'; break;
-					case 5: newChar = ','; break;
-					case 4: newChar = ':'; break;
-					case 3: newChar = ';'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 4:	//Caps, ABCDEFGH
-					switch (region)
-					{
-					case 8: newChar = 'A'; break;
-					case 9: newChar = 'B'; break;
-					case 0: newChar = 'C'; break;
-					case 1: newChar = 'D'; break;
-					case 6: newChar = 'E'; break;
-					case 5: newChar = 'F'; break;
-					case 4: newChar = 'G'; break;
-					case 3: newChar = 'H'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 5:	//Caps, IJKLMNOP
-					switch (region)
-					{
-					case 8: newChar = 'I'; break;
-					case 9: newChar = 'J'; break;
-					case 0: newChar = 'K'; break;
-					case 1: newChar = 'L'; break;
-					case 6: newChar = 'M'; break;
-					case 5: newChar = 'N'; break;
-					case 4: newChar = 'O'; break;
-					case 3: newChar = 'P'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 6:	//Caps, QRSTUVWX
-					switch (region)
-					{
-					case 8: newChar = 'Q'; break;
-					case 9: newChar = 'R'; break;
-					case 0: newChar = 'S'; break;
-					case 1: newChar = 'T'; break;
-					case 6: newChar = 'U'; break;
-					case 5: newChar = 'V'; break;
-					case 4: newChar = 'W'; break;
-					case 3: newChar = 'X'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default: vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
-				case 7:	//Caps, YZ!?.,:;
-					switch (region)
-					{
-					case 8: newChar = 'Y'; break;
-					case 9: newChar = 'Z'; break;
-					case 0: newChar = '!'; break;
-					case 1: newChar = '?'; break;
-					case 6: newChar = '.'; break;
-					case 5: newChar = ','; break;
-					case 4: newChar = ':'; break;
-					case 3: newChar = ';'; break;
-					case 2:	//Returns 0 - 3 OR 4 - 7
-						this->IncNextImage();
-						break;
-					case 7: //Returns 0 - 3 OR 4 - 7
-						this->DecNextImage();
-						break;
-					default:
-						vtkErrorMacro(<< "region out of boundaries");
-					}
-					break;
+				case 8: newChar = 'a'; break;
+				case 9: newChar = 'b'; break;
+				case 0: newChar = 'c'; break;
+				case 1: newChar = 'd'; break;
+				case 6: newChar = 'e'; break;
+				case 5: newChar = 'f'; break;
+				case 4: newChar = 'g'; break;
+				case 3: newChar = 'h'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 1:	//Small, ijklmnop
+				switch (region)
+				{
+				case 8: newChar = 'i'; break;
+				case 9: newChar = 'j'; break;
+				case 0: newChar = 'k'; break;
+				case 1: newChar = 'l'; break;
+				case 6: newChar = 'm'; break;
+				case 5: newChar = 'n'; break;
+				case 4: newChar = 'o'; break;
+				case 3: newChar = 'p'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 2:	//Small, qrstuvwx
+				switch (region)
+				{
+				case 8: newChar = 'q'; break;
+				case 9: newChar = 'r'; break;
+				case 0: newChar = 's'; break;
+				case 1: newChar = 't'; break;
+				case 6: newChar = 'u'; break;
+				case 5: newChar = 'v'; break;
+				case 4: newChar = 'w'; break;
+				case 3: newChar = 'x'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 3:	//Small, yz!?.,:;
+				switch (region)
+				{
+				case 8: newChar = 'y'; break;
+				case 9: newChar = 'z'; break;
+				case 0: newChar = '!'; break;
+				case 1: newChar = '?'; break;
+				case 6: newChar = '.'; break;
+				case 5: newChar = ','; break;
+				case 4: newChar = ':'; break;
+				case 3: newChar = ';'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 4:	//Caps, ABCDEFGH
+				switch (region)
+				{
+				case 8: newChar = 'A'; break;
+				case 9: newChar = 'B'; break;
+				case 0: newChar = 'C'; break;
+				case 1: newChar = 'D'; break;
+				case 6: newChar = 'E'; break;
+				case 5: newChar = 'F'; break;
+				case 4: newChar = 'G'; break;
+				case 3: newChar = 'H'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 5:	//Caps, IJKLMNOP
+				switch (region)
+				{
+				case 8: newChar = 'I'; break;
+				case 9: newChar = 'J'; break;
+				case 0: newChar = 'K'; break;
+				case 1: newChar = 'L'; break;
+				case 6: newChar = 'M'; break;
+				case 5: newChar = 'N'; break;
+				case 4: newChar = 'O'; break;
+				case 3: newChar = 'P'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 6:	//Caps, QRSTUVWX
+				switch (region)
+				{
+				case 8: newChar = 'Q'; break;
+				case 9: newChar = 'R'; break;
+				case 0: newChar = 'S'; break;
+				case 1: newChar = 'T'; break;
+				case 6: newChar = 'U'; break;
+				case 5: newChar = 'V'; break;
+				case 4: newChar = 'W'; break;
+				case 3: newChar = 'X'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
+				default: vtkErrorMacro(<< "region out of boundaries");
+				}
+				break;
+			case 7:	//Caps, YZ!?.,:;
+				switch (region)
+				{
+				case 8: newChar = 'Y'; break;
+				case 9: newChar = 'Z'; break;
+				case 0: newChar = '!'; break;
+				case 1: newChar = '?'; break;
+				case 6: newChar = '.'; break;
+				case 5: newChar = ','; break;
+				case 4: newChar = ':'; break;
+				case 3: newChar = ';'; break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default:
-					vtkErrorMacro(<< "NextImage out of boundaries");
+					vtkErrorMacro(<< "region out of boundaries");
 				}
-
-				if (newChar != '\0')
-				{
-					vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
-
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
-					this->TextActor->SetInput(newText);
-					this->TextActor->GetTextProperty()->BoldOn();
-					TextHasUnsavedChanges = true;
-				}				
+				break;
+			default:
+				vtkErrorMacro(<< "NextImage out of boundaries");
 			}
-			else {
-				if (x <= 0 && y <= 0)		//Caps
-				{
-					vtkErrorMacro(<< "\"Caps\" pressed");	// Just for debugging purposes.
 
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					if (newText.compare("") == 0)
-					{
-						this->TextActor->SetInput(" ");		//Avoids unexpected errors
-						this->TextActor->GetTextProperty()->BoldOff();
-						TextHasUnsavedChanges = false;
-					}
-					this->SwitchCaps();
+			if (newChar != '\0')
+			{
+				vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
+
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(newChar).ToString();
+				this->TextFeedback->GetTextActor()->SetInput(newText);
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+				this->TextFeedback->SetHasUnsavedChanges(true);
+			}				
+		}
+		else {
+			if (x <= 0 && y <= 0)		//Caps
+			{
+				vtkErrorMacro(<< "\"Caps\" pressed");	// Just for debugging purposes.
+
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+				if (newText.compare("") == 0)
+				{
+					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
+					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+					this->TextFeedback->SetHasUnsavedChanges(false);
 				}
-				else if (x < 0 && y>0)		//Delete last
-				{
-					vtkErrorMacro(<< "\"Remove last digit\" pressed");	// Just for debugging purposes.
+				this->SwitchCaps();
+			}
+			else if (x < 0 && y>0)		//Delete last
+			{
+				vtkErrorMacro(<< "\"Remove last digit\" pressed");	// Just for debugging purposes.
 
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					if (newText.length() <= 1)
-					{
-						this->TextActor->SetInput(" ");		//Avoids unexpected errors
-						this->TextActor->GetTextProperty()->BoldOff();
-						TextHasUnsavedChanges = false;
-					}
-					else
-					{
-						newText.pop_back();
-						this->TextActor->SetInput(newText);
-						this->TextActor->GetTextProperty()->BoldOn();
-						TextHasUnsavedChanges = true;
-					}
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+				if (newText.length() <= 1)
+				{
+					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
+					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+					this->TextFeedback->SetHasUnsavedChanges(false);
 				}
-				else if (x > 0 && y < 0)	//Whitespace
+				else
 				{
-					newChar = ' ';
-
-					vtkErrorMacro(<< "\"Whitespace\" pressed");	// Just for debugging purposes.
-
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(newChar).ToString();
-					this->TextActor->SetInput(newText);
-					this->TextActor->GetTextProperty()->BoldOn();
-					TextHasUnsavedChanges = true;
-
+					newText.pop_back();
+					this->TextFeedback->GetTextActor()->SetInput(newText);
+					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+					this->TextFeedback->SetHasUnsavedChanges(true);
 				}
-				else	//Accept value.
-				{
-					vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
+			}
+			else if (x > 0 && y < 0)	//Whitespace
+			{
+				newChar = ' ';
+
+				vtkErrorMacro(<< "\"Whitespace\" pressed");	// Just for debugging purposes.
+
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(newChar).ToString();
+				this->TextFeedback->GetTextActor()->SetInput(newText);
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+				this->TextFeedback->SetHasUnsavedChanges(true);
+
+			}
+			else	//Accept value.
+			{
+				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
 					
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					if (newText.compare("") == 0)
-					{
-						this->TextActor->SetInput(" ");		//Avoids unexpected errors
-					}
-					this->TextActor->GetTextProperty()->BoldOff();
-					TextHasUnsavedChanges = false;
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+				if (newText.compare("") == 0)
+				{
+					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
 				}
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+				this->TextFeedback->SetHasUnsavedChanges(false);
 			}
 		}
 		
@@ -399,23 +359,23 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
 	}
 
 	bool TextEmpty = false;
-	if(this->TextActor) TextEmpty = !bool(vtkStdString(" ").compare(this->TextActor->GetInput()));
+	if (this->TextFeedback->GetTextActor())
+		TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
 
 	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextActor && this->TextRenderer != NULL &&
-		(!this->TextHasUnsavedChanges || TextEmpty))
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
+		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 
-		if (this->TextRenderer != NULL && this->TextActor)
+		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 		{
 			//Remove from renderer
-			this->TextRenderer->RemoveViewProp(this->TextActor);
-			this->TextRenderer = NULL;
+			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
+			this->TextFeedback->SetTextRenderer(NULL);
 			//Restore initial values
-			this->TextActor->SetInput("Input data");
-			this->TextDefaultMsg = true;
-			this->TextIsVisible = false;
-			//this->TextHasUnsavedChanges = false;
+			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
+			this->TextFeedback->SetDefaultMsgOn(true);
+			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
 			//this->ShowTestActor(false);
@@ -425,33 +385,29 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
 	else
 	{
 		//First Click ever. Not created yet: create it and place it properly.
-		if (!this->TextActor)
+		if (!this->TextFeedback->GetTextActor())
 		{
-			this->TextActor = vtkTextActor3D::New();
-			this->TextActor->SetInput("Input data");
-			this->TextActor->PickableOff();
-			this->TextActor->DragableOff();
-			this->TextActor->GetTextProperty()->SetBackgroundOpacity(1.0);
+			this->TextFeedback->Init();
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
-		if (this->CurrentRenderer != this->TextRenderer)
+		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
 		{
-			if (this->TextRenderer != NULL && this->TextActor)
+			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 			{
-				this->TextRenderer->RemoveViewProp(this->TextActor);
+				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
 			}
 			if (this->CurrentRenderer != 0)
 			{
-				this->CurrentRenderer->AddViewProp(this->TextActor);
+				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
 			}
 			else
 			{
 				vtkWarningMacro(<< "no current renderer on the interactor style.");
 			}
-			this->TextRenderer = this->CurrentRenderer;
-			this->TextIsVisible = true;
-			this->TextHasUnsavedChanges = false;
+			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
+			this->TextFeedback->SetTextIsVisible(true);
+			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
 			//this->ShowTestActor(true);
@@ -462,10 +418,11 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
+	double wScale = camera->GetDistance();			//World scale
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 	
-	const double d2c = 0.5;		//Text distance to camera.
+	const double d2c = 1.5;		//Text distance to camera.
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
@@ -479,9 +436,10 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
 		txtPos[i] = camPos[i] + projection[i] * d2c;
 
 	//Place text
-	this->TextActor->SetScale(0.01);	//Default scale is ridiculously big.
-	this->TextActor->SetOrientation(0, -camOri[1], 0);
-	this->TextActor->SetPosition(txtPos);
+	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
+	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
+	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
+	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
 
 	//Render Scene
 	if (this->Interactor)

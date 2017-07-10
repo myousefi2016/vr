@@ -14,39 +14,30 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 #include "vtkOpenVRInteractorStylePressBool.h"
 
-#include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
-/*#include "vtkTextActor3D.h"
-#include "vtkBillboardTextActor3D.h"
+#include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkTextMapper.h"*/
 #include "vtkRenderer.h"
-//#include "vtkTextSource.h"
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
-//#include "vtkMatrixToHomogeneousTransform.h"
-//#include "vtkSphereSource.h"
+#include "vtkSphereSource.h"
 #include "vtkProperty.h"
-#include "vtkPolyDataMapper.h"
+#include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
 
 #include "vtkOpenVRPropertyModifier.h"
 
 #include "vtkImageActor.h"
 #include "vtkImageReader2.h"
 #include "vtkImageSliceMapper.h"
-#include "vtkJPEGReader.h"
 #include "vtkPNGReader.h"
-#include "vtkImageMapper.h"
 #include "vtkActor2D.h"
-#include "vtkImageProperty.h"
 #include "vtkStringArray.h"
 
 #include "vtkOpenVRTextFeedback.h"
@@ -131,11 +122,11 @@ void vtkOpenVRInteractorStylePressBool::OnRightButtonDown()
 		
 		//TODO check if it is convinient to add here if(this->TextActor) and wrap everything.
 		
-		if (this->TextFeedback->GetTextDefaultMsgOn())
+		if (this->TextFeedback->GetDefaultMsgOn())
 		{
 			this->TextFeedback->GetTextActor()->SetInput("");
-			this->TextFeedback->SetTextDefaultMsgOn(false);
-			this->TextFeedback->SetTextHasUnsavedChanges(true);
+			this->TextFeedback->SetDefaultMsgOn(false);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
 		if (radius > .3)
@@ -146,7 +137,7 @@ void vtkOpenVRInteractorStylePressBool::OnRightButtonDown()
 			//Actual code:
 			this->TextFeedback->GetTextActor()->SetInput(selBool);
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-			this->TextFeedback->SetTextHasUnsavedChanges(true);
+			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 		else
 		{
@@ -159,7 +150,7 @@ void vtkOpenVRInteractorStylePressBool::OnRightButtonDown()
 				this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
 			}
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-			this->TextFeedback->SetTextHasUnsavedChanges(false);
+			this->TextFeedback->SetHasUnsavedChanges(false);
 				
 			//TODO test with SetVisibility!!:
 			//vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
@@ -191,7 +182,7 @@ void vtkOpenVRInteractorStylePressBool::OnMiddleButtonDown()
 
 	//Second Click. Already created and changes saved: can be hidden.
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-			&& (!this->TextFeedback->GetTextHasUnsavedChanges() || TextEmpty))
+			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 		{
@@ -200,7 +191,7 @@ void vtkOpenVRInteractorStylePressBool::OnMiddleButtonDown()
 			this->TextFeedback->SetTextRenderer(NULL);
 			//Restore initial values
 			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->SetTextDefaultMsgOn(true);
+			this->TextFeedback->SetDefaultMsgOn(true);
 			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
@@ -213,11 +204,7 @@ void vtkOpenVRInteractorStylePressBool::OnMiddleButtonDown()
 		//First Click ever. Not created yet: create it and place it properly.
 		if (!this->TextFeedback->GetTextActor())
 		{
-			this->TextFeedback->SetTextActor(vtkTextActor3D::New());
-			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->GetTextActor()->PickableOff();
-			this->TextFeedback->GetTextActor()->DragableOff();
-			this->TextFeedback->GetTextActor()->GetTextProperty()->SetBackgroundOpacity(0.25);
+			this->TextFeedback->Init();
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
@@ -237,7 +224,7 @@ void vtkOpenVRInteractorStylePressBool::OnMiddleButtonDown()
 			}
 			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
 			this->TextFeedback->SetTextIsVisible(true);
-			this->TextFeedback->SetTextHasUnsavedChanges(false);
+			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
 			//this->ShowTestActor(true);

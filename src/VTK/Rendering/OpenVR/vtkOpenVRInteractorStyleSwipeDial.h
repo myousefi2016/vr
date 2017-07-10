@@ -28,7 +28,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRInteractorStyle.h"
 
 class vtkDequeAngleRadius;
-class vtkTextActor3D;
+class vtkOpenVRTextFeedback;
 
 #define MAX_REC 5
 
@@ -49,12 +49,7 @@ public:
   //@}
 
   //Text3D to modify Props' attributes.
-  //TODO move all this to Superclass
-  vtkTextActor3D *TextActor;
-  vtkRenderer *TextRenderer;
-  bool TextHasUnsavedChanges;
-  bool TextDefaultMsg;
-  bool TextIsVisible;
+  vtkOpenVRTextFeedback *TextFeedback;
 
 
   //Repeated code from PressDial:

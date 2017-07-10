@@ -14,25 +14,15 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 #include "vtkOpenVRTextFeedback.h"
 
-#include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
-#include <valarray>
-#include "vtkRenderWindowInteractor3D.h"
 
 #include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkTextMapper.h"
 #include "vtkRenderer.h"
 #include "vtkTextSource.h"
-#include "vtkOpenVRRenderer.h"
-#include "vtkOpenVRRenderWindowInteractor.h"
-#include "vtkOpenVRCamera.h"
-#include "vtkProperty.h"
-#include "vtkPolyDataMapper.h"
 
 vtkStandardNewMacro(vtkOpenVRTextFeedback);
 
@@ -41,8 +31,8 @@ vtkOpenVRTextFeedback::vtkOpenVRTextFeedback()
 {
 	this->TextActor = NULL;
 	this->TextRenderer = NULL;
-	this->TextHasUnsavedChanges = false;
-	this->TextDefaultMsgOn = true;
+	this->HasUnsavedChanges = false;
+	this->DefaultMsgOn = true;
 	this->TextIsVisible = false;
 	this->TextDefaultMsg = "Input data";
 }
@@ -60,4 +50,13 @@ vtkOpenVRTextFeedback::~vtkOpenVRTextFeedback()
 void vtkOpenVRTextFeedback::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
+}
+
+void vtkOpenVRTextFeedback::Init()
+{
+	this->TextActor = vtkTextActor3D::New();
+	this->GetTextActor()->SetInput(this->TextDefaultMsg);
+	this->GetTextActor()->PickableOff();
+	this->GetTextActor()->DragableOff();
+	this->GetTextActor()->GetTextProperty()->SetBackgroundOpacity(0.25);
 }

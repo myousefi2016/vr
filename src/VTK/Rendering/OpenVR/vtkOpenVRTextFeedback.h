@@ -35,16 +35,18 @@ public:
   vtkTypeMacro(vtkOpenVRTextFeedback, vtkObject);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
+  virtual void Init();
+
 	vtkGetMacro(TextActor, vtkTextActor3D*);
 	vtkSetMacro(TextActor, vtkTextActor3D*);
 	vtkGetMacro(TextRenderer, vtkRenderer*);
 	vtkSetMacro(TextRenderer, vtkRenderer*);
 	vtkGetMacro(TextIsVisible, bool);
 	vtkSetMacro(TextIsVisible, bool);
-	vtkGetMacro(TextHasUnsavedChanges, bool);
-	vtkSetMacro(TextHasUnsavedChanges, bool);
-	vtkGetMacro(TextDefaultMsgOn, bool);
-	vtkSetMacro(TextDefaultMsgOn, bool);
+	vtkGetMacro(HasUnsavedChanges, bool);
+	vtkSetMacro(HasUnsavedChanges, bool);
+	vtkGetMacro(DefaultMsgOn, bool);
+	vtkSetMacro(DefaultMsgOn, bool);
 	vtkGetMacro(TextDefaultMsg, char*);
 	vtkSetMacro(TextDefaultMsg, char*);
 
@@ -54,10 +56,10 @@ protected:
 
 	vtkTextActor3D *TextActor;
   vtkRenderer *TextRenderer;
-  bool TextHasUnsavedChanges;
-  bool TextDefaultMsgOn;
+  bool HasUnsavedChanges;
+  bool DefaultMsgOn;
   bool TextIsVisible;
-	char* TextDefaultMsg;
+  char* TextDefaultMsg;
 
 private:
 	vtkOpenVRTextFeedback(const vtkOpenVRTextFeedback&) VTK_DELETE_FUNCTION;  // Not implemented.
