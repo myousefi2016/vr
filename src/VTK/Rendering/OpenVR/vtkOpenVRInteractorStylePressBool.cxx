@@ -69,7 +69,9 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;*/
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadImages(1, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image.png");
+	this->TouchPadImage->LoadSingleImage( "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
+	this->TouchPadImage->Init();
+
 
 
 

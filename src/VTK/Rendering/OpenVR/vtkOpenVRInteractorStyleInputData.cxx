@@ -162,8 +162,6 @@ void vtkOpenVRInteractorStyleInputData::OnUntap()
 //-----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 {
-	if(this->TouchPadImage->GetHasImage())
-	{
 	//current renderer
 	if (this->Interactor)
 	{
@@ -250,7 +248,6 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 	if (this->Interactor)
 	{
 		this->Interactor->Render();
-	}	
 	}
 }
 
