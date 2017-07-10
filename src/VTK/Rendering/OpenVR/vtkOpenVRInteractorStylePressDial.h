@@ -24,11 +24,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
 
-class vtkTextActor3D;
-class vtkBillboardTextActor3D;
-class vtkTextMapper;
-class vtkTextSource;
-
 class vtkOpenVRPropertyModifier;
 
 class vtkImageActor;
@@ -75,12 +70,6 @@ protected:
   ~vtkOpenVRInteractorStylePressDial() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-	//TODO move all this to Superclass
-//*//	vtkTextActor3D *TextActor;		//vtkBillboardTextActor3D *TextActor;
-//*//  vtkRenderer *TextRenderer;
-//*//  bool TextHasUnsavedChanges;
-//*//  bool TextDefaultMsg;
-//*//  bool TextIsVisible;
 	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;

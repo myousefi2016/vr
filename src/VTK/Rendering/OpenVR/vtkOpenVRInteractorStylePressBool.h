@@ -24,11 +24,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
 
-class vtkTextActor3D;
-class vtkBillboardTextActor3D;
-class vtkTextMapper;
-class vtkTextSource;
-
 class vtkOpenVRPropertyModifier;
 
 class vtkImageActor;
@@ -41,6 +36,8 @@ class vtkImageData;
 class vtkJPEGReader;
 class vtkPNGReader;
 
+class vtkOpenVRTextFeedback;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressBool : public vtkOpenVRInteractorStyle
 {
 public:
@@ -49,8 +46,6 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
-
-//TODO add interactions on touchpad 
   //@{
   /**
   * Override Right Button (Touchpad) to input numbers.
@@ -74,11 +69,7 @@ protected:
   ~vtkOpenVRInteractorStylePressBool() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
-  vtkTextActor3D *TextActor;
-  vtkRenderer *TextRenderer;
-  bool TextHasUnsavedChanges;
-  bool TextDefaultMsg;
-  bool TextIsVisible;
+	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

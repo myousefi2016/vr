@@ -45,8 +45,8 @@ public:
 	vtkSetMacro(TextHasUnsavedChanges, bool);
 	vtkGetMacro(TextDefaultMsgOn, bool);
 	vtkSetMacro(TextDefaultMsgOn, bool);
-	vtkGetStringMacro(TextDefaultMsg);
-	vtkSetStringMacro(TextDefaultMsg);
+	vtkGetMacro(TextDefaultMsg, char*);
+	vtkSetMacro(TextDefaultMsg, char*);
 
 protected:
 	vtkOpenVRTextFeedback();

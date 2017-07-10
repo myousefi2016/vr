@@ -105,6 +105,7 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 	{
 		this->ImgReader->Delete();
 	}
+	//It may cause problems (deleted in other places). Think about removing :
 	if (this->ImgRenderer)
 	{
 		this->ImgRenderer->Delete();
@@ -114,7 +115,6 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 {
-//*//	if (this->TextIsVisible)
 	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
 		//Downcast to a 3D Interactor.
@@ -216,10 +216,12 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	}
 
 	bool TextEmpty = false;
-	if (this->TextFeedback->GetTextActor()) TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
+	if (this->TextFeedback->GetTextActor())
+		TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
 
 	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL && (!this->TextFeedback->GetTextHasUnsavedChanges() || TextEmpty))
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
+			&& (!this->TextFeedback->GetTextHasUnsavedChanges() || TextEmpty))
 	{
 
 		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
