@@ -41,6 +41,8 @@ class vtkImageData;
 class vtkJPEGReader;
 class vtkPNGReader;
 
+class vtkOpenVRTextFeedback;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressDial : public vtkOpenVRInteractorStyle
 {
 public:
@@ -74,11 +76,12 @@ protected:
 
   //Text3D to modify Props' attributes.
 	//TODO move all this to Superclass
-	vtkTextActor3D *TextActor;		//vtkBillboardTextActor3D *TextActor;
-  vtkRenderer *TextRenderer;
-  bool TextHasUnsavedChanges;
-  bool TextDefaultMsg;
-  bool TextIsVisible;
+//*//	vtkTextActor3D *TextActor;		//vtkBillboardTextActor3D *TextActor;
+//*//  vtkRenderer *TextRenderer;
+//*//  bool TextHasUnsavedChanges;
+//*//  bool TextDefaultMsg;
+//*//  bool TextIsVisible;
+	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:

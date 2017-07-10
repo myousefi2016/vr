@@ -21,6 +21,7 @@ set(Module_SRCS
   vtkOpenVRRenderer.cxx
   vtkOpenVRRenderWindow.cxx
   vtkOpenVRRenderWindowInteractor.cxx
+  vtkOpenVRTextFeedback.cxx
   )
   
 set_source_files_properties(
@@ -40,6 +41,7 @@ set_source_files_properties(
   vtkOpenVRRenderer
   vtkOpenVRRenderWindow
   vtkOpenVRRenderWindowInteractor
+  vtkOpenVRTextFeedback
   PROPERTIES
     WRAP_EXCLUDE 1
     WRAP_EXCLUDE_PYTHON 1

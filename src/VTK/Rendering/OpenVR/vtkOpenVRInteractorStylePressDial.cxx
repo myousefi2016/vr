@@ -49,17 +49,15 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkImageProperty.h"
 #include "vtkStringArray.h"
 
+#include "vtkOpenVRTextFeedback.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 {
 	//Text3D to modify Props' attributes.
-	this->TextActor = NULL;
-	this->TextRenderer = NULL;
-	this->TextHasUnsavedChanges = false;
-	this->TextDefaultMsg = true;
-	this->TextIsVisible = false;
+	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
@@ -86,9 +84,9 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 {
 	//Remove Text3D
-	if(this->TextActor)
+	if (this->TextFeedback)
 	{
-		this->TextActor->Delete();
+		this->TextFeedback->Delete();
 	}
 
 	//Remove Field Modifier:
@@ -116,7 +114,8 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 {
-	if (this->TextIsVisible)
+//*//	if (this->TextIsVisible)
+	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
 		//Downcast to a 3D Interactor.
 		vtkRenderWindowInteractor3D *rwi =
@@ -130,12 +129,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
 		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
 
-
-		if (this->TextActor && TextDefaultMsg)
+		if (this->TextFeedback->GetTextDefaultMsgOn())
 		{
-			this->TextActor->SetInput("");
-			TextDefaultMsg = false;
-			TextHasUnsavedChanges = true;
+			this->TextFeedback->GetTextActor()->SetInput("");
+			this->TextFeedback->SetTextDefaultMsgOn(false);
+			this->TextFeedback->SetTextHasUnsavedChanges(true);
 		}
 
 		if (radius > .6)
@@ -144,13 +142,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 			vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
 
 			//Actual code:
-			if (this->TextActor)
-			{
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + vtkVariant(region).ToString();
-				this->TextActor->SetInput(newText);
-				this->TextActor->GetTextProperty()->BoldOn();
-				TextHasUnsavedChanges = true;
-			}
+			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(region).ToString();
+			this->TextFeedback->GetTextActor()->SetInput(newText);
+			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+			this->TextFeedback->SetTextHasUnsavedChanges(true);
+
 		}
 		else if(radius > .2)
 		{
@@ -159,54 +155,45 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
 
 				//Actual code:
-				if (this->TextActor)
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+				if (newText.compare("") == 0)
 				{
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					if (newText.compare("") == 0)
-					{
-						this->TextActor->SetInput(" ");		//Avoids unexpected errors
-					}
-					this->TextActor->GetTextProperty()->BoldOff();
-					TextHasUnsavedChanges = false;
-					
-					//test:
-					vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-					this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextActor->GetInput());
+					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
 				}
+				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+				this->TextFeedback->SetTextHasUnsavedChanges(false);
+
+				//test:
+				vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+				this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
 			}
 			else	// region in range [5,9]
 			{
 				vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
 
 				//Actual code:
-				if (this->TextActor)
+				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+				if (newText.length() <= 1)
 				{
-					vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString();
-					if (newText.length() <= 1)
-					{
-						this->TextActor->SetInput(" ");		//Avoids unexpected errors
-						this->TextActor->GetTextProperty()->BoldOff();
-						TextHasUnsavedChanges = false;
-					}
-					else
-					{
-						newText.pop_back();
-						this->TextActor->SetInput(newText);
-						this->TextActor->GetTextProperty()->BoldOn();
-						TextHasUnsavedChanges = true;
-					}
+					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
+					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+					this->TextFeedback->SetTextHasUnsavedChanges(false);
+				}
+				else
+				{
+					newText.pop_back();
+					this->TextFeedback->GetTextActor()->SetInput(newText);
+					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+					this->TextFeedback->SetTextHasUnsavedChanges(true);
 				}
 			}
 		}
 		else
 		{
-			if (this->TextActor)
-			{
-				vtkStdString newText = vtkVariant(this->TextActor->GetInput()).ToString() + ".";
-				this->TextActor->SetInput(newText);
-				this->TextActor->GetTextProperty()->BoldOn();
-				TextHasUnsavedChanges = true;
-			}
+			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + ".";
+			this->TextFeedback->GetTextActor()->SetInput(newText);
+			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
+			this->TextFeedback->SetTextHasUnsavedChanges(true);
 		}
 	}
 }
@@ -229,23 +216,21 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	}
 
 	bool TextEmpty = false;
-	if(this->TextActor) TextEmpty = !bool(vtkStdString(" ").compare(this->TextActor->GetInput()));
+	if (this->TextFeedback->GetTextActor()) TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
 
 	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextActor && this->TextRenderer != NULL &&
-		(!this->TextHasUnsavedChanges || TextEmpty))
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL && (!this->TextFeedback->GetTextHasUnsavedChanges() || TextEmpty))
 	{
 
-		if (this->TextRenderer != NULL && this->TextActor)
+		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 		{
 			//Remove from renderer
-			this->TextRenderer->RemoveViewProp(this->TextActor);
-			this->TextRenderer = NULL;
+			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
+			this->TextFeedback->SetTextRenderer(NULL);
 			//Restore initial values
-			this->TextActor->SetInput("Input data");
-			this->TextDefaultMsg = true;
-			this->TextIsVisible = false;
-			//this->TextHasUnsavedChanges = false;
+			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
+			this->TextFeedback->SetTextDefaultMsgOn(true);
+			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
 			this->ShowTestActor(false);
@@ -255,33 +240,33 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	else
 	{
 		//First Click ever. Not created yet: create it and place it properly.
-		if (!this->TextActor)
+		if (!this->TextFeedback->GetTextActor())
 		{
-			this->TextActor = vtkTextActor3D::New();		//vtkBillboardTextActor3D::New();		
-			this->TextActor->SetInput("Input data");
-			this->TextActor->PickableOff();
-			this->TextActor->DragableOff();
-			this->TextActor->GetTextProperty()->SetBackgroundOpacity(0.25);
+			this->TextFeedback->SetTextActor(vtkTextActor3D::New());
+			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
+			this->TextFeedback->GetTextActor()->PickableOff();
+			this->TextFeedback->GetTextActor()->DragableOff();
+			this->TextFeedback->GetTextActor()->GetTextProperty()->SetBackgroundOpacity(0.25);
 		}
 
 		//First Click. Created but not shown. Check if used different renderer to previous visualization.
-		if (this->CurrentRenderer != this->TextRenderer)
+		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
 		{
-			if (this->TextRenderer != NULL && this->TextActor)
+			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 			{
-				this->TextRenderer->RemoveViewProp(this->TextActor);
+				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
 			}
 			if (this->CurrentRenderer != 0)
 			{
-				this->CurrentRenderer->AddViewProp(this->TextActor);
+				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
 			}
 			else
 			{
 				vtkWarningMacro(<< "no current renderer on the interactor style.");
 			}
-			this->TextRenderer = this->CurrentRenderer;
-			this->TextIsVisible = true;
-			this->TextHasUnsavedChanges = false;
+			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
+			this->TextFeedback->SetTextIsVisible(true);
+			this->TextFeedback->SetTextHasUnsavedChanges(false);
 
 			//Test:
 			this->ShowTestActor(true);
@@ -310,10 +295,10 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 		txtPos[i] = camPos[i] + projection[i] * d2c  * wScale;
 
 	//Place text
-	this->TextActor->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
-	this->TextActor->SetOrientation(0, -camOri[1], 0);
-	this->TextActor->SetPosition(txtPos);
-	this->TextActor->GetTextProperty()->SetFontSize(60);
+	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
+	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
+	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
+	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
 	
 	//Render Scene
 	if (this->Interactor)
