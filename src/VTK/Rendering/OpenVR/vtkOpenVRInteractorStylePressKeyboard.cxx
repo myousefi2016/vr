@@ -51,27 +51,6 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	//Images:
-//*//
-/*	
-	this->HasImage = true;
-	this->NextImage = 0;
-	//This class contains several images:
-	vtkStringArray *FileNames = vtkStringArray::New();
-	for(int i=0; i< MAX_IMG; i++)
-	{
-		FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image" + vtkVariant(i).ToString() + ".png");
-	}
-	this->ImgReader = vtkPNGReader::New();
-	this->ImgReader->SetFileNames(FileNames);
-	this->ImgReader->Update();
-	FileNames->Delete();
-	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;
-*/ //*//
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image");
 	this->TouchPadImage->Init();
@@ -101,25 +80,12 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 	}
 
 	//Remove images
-	/*this->SetTouchPadImage(false);
-	if (this->ImgActor)
-	{
-		this->ImgActor->Delete();
-	}
-	if (this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}
-	if (this->ImgRenderer)
-	{
-		this->ImgRenderer->Delete();
-	}*/
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
 	}
 
-	//Delete pointer
+	//Remove pointer
 	if (this->TouchPadPointer)
 	{
 		this->TouchPadPointer->Delete();
@@ -168,10 +134,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'f'; break;
 				case 4: newChar = 'g'; break;
 				case 3: newChar = 'h'; break;
-				/*case 2:	this->IncNextImage(); break;
-				case 7: this->DecNextImage(); break;*/
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -186,8 +150,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'n'; break;
 				case 4: newChar = 'o'; break;
 				case 3: newChar = 'p'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -202,8 +166,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'v'; break;
 				case 4: newChar = 'w'; break;
 				case 3: newChar = 'x'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -218,8 +182,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = ','; break;
 				case 4: newChar = ':'; break;
 				case 3: newChar = ';'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -234,8 +198,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'F'; break;
 				case 4: newChar = 'G'; break;
 				case 3: newChar = 'H'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -250,8 +214,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'N'; break;
 				case 4: newChar = 'O'; break;
 				case 3: newChar = 'P'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -266,8 +230,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = 'V'; break;
 				case 4: newChar = 'W'; break;
 				case 3: newChar = 'X'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default: vtkErrorMacro(<< "region out of boundaries");
 				}
 				break;
@@ -282,8 +246,8 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 				case 5: newChar = ','; break;
 				case 4: newChar = ':'; break;
 				case 3: newChar = ';'; break;
-				case 2:	this->TouchPadImage->IncNextImage(); break;
-				case 7: this->TouchPadImage->DecNextImage(); break;
+				case 2:	this->IncNextImage(); break;
+				case 7: this->DecNextImage(); break;
 				default:
 					vtkErrorMacro(<< "region out of boundaries");
 				}
@@ -291,16 +255,20 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 			default:
 				vtkErrorMacro(<< "NextImage out of boundaries");
 			}
-
+			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+			if (newText.compare("") == 0 && newChar == '\0')
+			{
+				this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
+			}
 			if (newChar != '\0')
 			{
 				vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
 
-				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(newChar).ToString();
+				newText += vtkVariant(newChar).ToString();
 				this->TextFeedback->GetTextActor()->SetInput(newText);
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
 				this->TextFeedback->SetHasUnsavedChanges(true);
-			}				
+			}
 		}
 		else {
 			if (x <= 0 && y <= 0)		//Caps
@@ -478,38 +446,42 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::IncNextImage()
-{
-	if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1))
-	{
-		this->NextImage -= (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		this->NextImage++;
-	}
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::DecNextImage()
-{
-	if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2))
-	{
-		this->NextImage += (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		this->NextImage--;
-	}
-}*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStylePressKeyboard::SwitchCaps()
 {
 	int currentImg = this->TouchPadImage->GetNextImage();
 	this->TouchPadImage->SetNextImage( (currentImg += 4) %= this->TouchPadImage->GetMaxNumImg());
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStylePressKeyboard::IncNextImage()
+{
+	int nextImg = this->TouchPadImage->GetNextImage();
+	if ((nextImg == (MAX_IMG / 2 - 1)) || (nextImg == (MAX_IMG - 1)))
+	{
+		nextImg -= (MAX_IMG / 2 - 1);
+	}
+	else
+	{
+		++nextImg;
+	}
+	this->TouchPadImage->SetNextImage(nextImg);
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStylePressKeyboard::DecNextImage()
+{
+	int nextImg = this->TouchPadImage->GetNextImage();
+	if (nextImg == 0 || nextImg == (MAX_IMG / 2))
+	{
+		nextImg += (MAX_IMG / 2 - 1);
+	}
+	else
+	{
+		--nextImg;
+	}
+	this->TouchPadImage->SetNextImage(nextImg);
 }
 
 //----------------------------------------------------------------------------

@@ -55,20 +55,8 @@ vtkOpenVRInteractorStylePressBool::vtkOpenVRInteractorStylePressBool()
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
-	/*//Images
+	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->HasImage = true;
-	this->NextImage = 0;
-	this->ImgReader = vtkPNGReader::New();
-	ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
-	//ImgReader->SetFilePrefix();
-	ImgReader->Update();
-
-	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;*/
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadSingleImage( "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
 	this->TouchPadImage->Init();
@@ -97,20 +85,6 @@ vtkOpenVRInteractorStylePressBool::~vtkOpenVRInteractorStylePressBool()
 	}
 
 	//Remove Image:
-	/*this->SetTouchPadImage(false);
-	if (this->ImgActor)
-	{
-		this->ImgActor->Delete();
-	}
-	if (this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}
-	//It may cause problems (deleted in other places). Think about removing :
-	if (this->ImgRenderer)
-	{
-		this->ImgRenderer->Delete();
-	}*/
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();

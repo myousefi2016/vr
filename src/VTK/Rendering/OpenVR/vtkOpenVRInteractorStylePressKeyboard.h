@@ -61,8 +61,8 @@ public:
   //@}
 
 	//Images handling
-/*	void IncNextImage() VTK_OVERRIDE;
-	void DecNextImage() VTK_OVERRIDE;*/
+	void IncNextImage() VTK_OVERRIDE;
+	void DecNextImage() VTK_OVERRIDE;
 	virtual void SwitchCaps();
  
 

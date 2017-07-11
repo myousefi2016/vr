@@ -42,48 +42,11 @@ public:
   void OnMiddleButtonDown() VTK_OVERRIDE;
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
-
-	//@{
-	/**
-	* Override Tap to show pointer on touchpad.
-	*/
-	void OnTap() VTK_OVERRIDE;
-	void OnUntap() VTK_OVERRIDE;
-	//@}
-
-//	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
-
-	//Images:
-//	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
-	/*vtkGetMacro(HasImage, bool)
-	vtkSetMacro(HasImage, bool)
-	virtual void IncNextImage() {}
-	virtual void DecNextImage() {}
-	virtual void UpdateImage();*/
-
 	
-
 protected:
   vtkOpenVRInteractorStyle();
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
-
-	//Touchpad Pointer.
-	/*vtkSphereSource *Pointer;
-	vtkPolyDataMapper *PointerMapper;
-	vtkActor *PointerActor;
-	vtkRenderer *PointerRenderer;
-	double PointerColor[3];*/
-	//bool PointerActive;
-
-	/*//Images (implemented in inherited classes):
-	bool HasImage;
-	int NextImage;
-	vtkPNGReader *ImgReader;
-	vtkImageActor *ImgActor;
-	vtkRenderer *ImgRenderer;*/
-
-
-
+	
 private:
   vtkOpenVRInteractorStyle(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyle&) VTK_DELETE_FUNCTION;  // Not implemented.

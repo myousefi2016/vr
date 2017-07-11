@@ -71,35 +71,17 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 {
 	this->AngleRadiusRecord = new vtkDequeAngleRadius;
 	this->AbsoluteInc = true;
-	//this->PositiveInc = true;
 
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
-	
 
 	//Images
-	/*this->ImgReader = vtkPNGReader::New();
-	this->HasImage = true;
-	this->NextImage = 0;
-
-	//In this class, only one image needed.
-	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\SwipeDial_Image0.png");
-	ImgReader->Update();
-
-	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;*/
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\SwipeDial_Image0.png");
 	this->TouchPadImage->Init();
 
-
-
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
-
 }
 
 //----------------------------------------------------------------------------
@@ -113,20 +95,7 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 		this->TextFeedback->Delete();
 	}
 
-	//Remove Image:
-	/*this->SetTouchPadImage(false);
-	if (this->ImgActor)
-	{
-		this->ImgActor->Delete();
-	}
-	if (this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}
-	if (this->ImgRenderer)
-	{
-		this->ImgRenderer->Delete();
-	}*/
+	//Remove Image
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
@@ -137,7 +106,6 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 	{
 		this->TouchPadPointer->Delete();
 	}
-
 }
 
 /*

@@ -92,19 +92,6 @@ public:
   void OnPan() VTK_OVERRIDE;
   //@}
 
-  //@{
-  /**
-  * Event bindings for gestures over the touchpad.
-  */
-//  void OnTap() VTK_OVERRIDE;
-//  void OnUntap() VTK_OVERRIDE;
-  //@}
-
-  // This method handles updating the pointer based on changes in touchpad
-  // position, when it is being touched
-//  void Tap() VTK_OVERRIDE;
-//  void Untap() VTK_OVERRIDE;
-
   // This method handles updating the prop based on changes in the devices
   // pose. We use rotate as the state to mean adjusting-the-actor-pose
   void Rotate() VTK_OVERRIDE;
@@ -146,37 +133,17 @@ public:
    */
   void SetDistance(vtkCamera *cam, double distance);
 
-
-  //@{
-  /**
-  * Set touchpad pointer when the touchpad is touched.
-  */
-	virtual void SetTouchPadPointer(bool activate) {}
-  //@}
-
-  //@{
-  /**
-  * Set touchpad image when the touchpad is touched.
-  */
-	virtual void SetTouchPadImage(bool activate) {}
-  //@}
-
-	//Swiping
-	virtual void TrackFinger() {}
-
-	void Prop3DTransform(vtkProp3D *prop3D,
-		double *boxCenter,
-		int NumRotation,
-		double **rotate,
-		double *scale);
-
 protected:
   vtkInteractorStyle3D();
   ~vtkInteractorStyle3D() VTK_OVERRIDE;
 
+	void Prop3DTransform(vtkProp3D *prop3D,
+											 double *boxCenter,
+											 int NumRotation,
+											 double **rotate,
+											 double *scale);
+
   void FindPickedActor(double x, double y, double z);
-
-
 
   vtkPropPicker3D *InteractionPicker;
   vtkProp3D *InteractionProp;
@@ -186,16 +153,6 @@ protected:
   double AppliedTranslation[3];
 
   double DollyMotionFactor;
-
-	/*
-  //Touchpad Pointer.
-  vtkSphereSource *Pointer;
-  vtkPolyDataMapper *PointerMapper;
-  vtkActor *PointerActor;
-  vtkRenderer *PointerRenderer;
-  double PointerColor[3];
-  //bool PointerActive;
-	*/
 
 private:
   vtkInteractorStyle3D(const vtkInteractorStyle3D&) VTK_DELETE_FUNCTION;  // Not implemented.

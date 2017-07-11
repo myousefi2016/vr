@@ -82,13 +82,6 @@ void vtkInteractorStyle3D::OnMouseMove()
       this->Clip();
       this->InvokeEvent(vtkCommand::InteractionEvent, NULL);
       break;
-	case VTKIS_TAP:
-	  this->FindPokedRenderer(x, y);
-	  this->SetTouchPadPointer(true);
-	  this->SetTouchPadImage(true);
-		this->TrackFinger();
-	  this->InvokeEvent(vtkCommand::InteractionEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
-	  break;
   }
 }
 
@@ -614,51 +607,3 @@ void vtkInteractorStyle3D::Clip()
   rwi->Render();
 
 }
-
-/*
-//----------------------------------------------------------------------------
-void vtkInteractorStyle3D::OnTap()
-{
-	int x = this->Interactor->GetEventPosition()[0];
-	int y = this->Interactor->GetEventPosition()[1];
-
-	this->FindPokedRenderer(x, y);
-	if (this->CurrentRenderer == NULL)
-	{
-		return;
-	}
-
-	this->GrabFocus(this->EventCallbackCommand);
-	this->StartTap();
-}
-
-//----------------------------------------------------------------------------
-void vtkInteractorStyle3D::OnUntap()
-{
-	this->SetTouchPadPointer(false);
-
-	switch (this->State)
-	{
-	case VTKIS_TIMER:
-		this->EndTap();
-		break;
-	}
-
-	if (this->Interactor)
-	{
-		this->ReleaseFocus();
-	}
-}
-*/
-
-/*
-void vtkInteractorStyle3D::Tap()
-{
-	if (this->CurrentRenderer == NULL)
-	{
-		return;
-	}
-
-	this->SetTouchPadPointer(true);
-}
-*/

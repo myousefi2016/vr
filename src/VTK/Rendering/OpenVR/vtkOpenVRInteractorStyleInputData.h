@@ -22,12 +22,7 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStyleInputData_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-
 #include "vtkOpenVRInteractorStyle.h"
-
-class vtkSphereSource;
-class vtkPNGReader;
-class vtkImageActor;
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
@@ -40,10 +35,9 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleInputData, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-
   //@{
   /**
-  * Override Middle Button to load next camera position
+  * Override Middle Button to load an auxiliary text
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
   void OnMiddleButtonUp() VTK_OVERRIDE;
@@ -57,7 +51,6 @@ public:
 	void OnUntap() VTK_OVERRIDE;
 	//@}
 
-
 	//@{
 	/**
 	* Override OnMouseMove to be able to use functions from
@@ -66,38 +59,19 @@ public:
 	void OnMouseMove() VTK_OVERRIDE;
 	//@}
 
+	virtual void IncNextImage();
+	virtual void DecNextImage();
 
-	//Pointer:
-	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;
+	//Swiping
+	virtual void TrackFinger() {}
 
-	//Images:
-	void SetTouchPadImage(bool activate) VTK_OVERRIDE;
-
-	
 
 protected:
   vtkOpenVRInteractorStyleInputData();
   ~vtkOpenVRInteractorStyleInputData() VTK_OVERRIDE;
 
-	//Touchpad Pointer.
-	//*//
-	/*vtkSphereSource *Pointer;
-	vtkPolyDataMapper *PointerMapper;
-	vtkActor *PointerActor;
-	vtkRenderer *PointerRenderer;
-	double PointerColor[3];*/
-	//*//
 	vtkOpenVRTouchPadPointer *TouchPadPointer;
-
-	/*//Images (implemented in inherited classes):
-	bool HasImage;
-	int NextImage;
-	vtkPNGReader *ImgReader;
-	vtkImageActor *ImgActor;
-	vtkRenderer *ImgRenderer;*/
 	vtkOpenVRTouchPadImage *TouchPadImage;
-
-	//Text 3D
 	vtkOpenVRTextFeedback *TextFeedback;
 
 

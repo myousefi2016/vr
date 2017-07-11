@@ -27,30 +27,20 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkPNGReader.h"
 #include "vtkImageActor.h"
-//#include "vtkImageMapper3D.h"
 #include "vtkImageSliceMapper.h"
+#include "vtkOpenVRRenderWindowInteractor.h"
+#include "vtkOpenVRRenderer.h"
+#include "vtkOpenVRInteractorStyle.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
+#include "vtkOpenVRCamera.h"
 
 vtkStandardNewMacro(vtkOpenVRTouchPadImage);
 
 //----------------------------------------------------------------------------
 vtkOpenVRTouchPadImage::vtkOpenVRTouchPadImage()
 {
-	//This class contains several images:
-	/*vtkStringArray *FileNames = vtkStringArray::New();
-	for (int i = 0; i< MAX_IMG; i++)
-	{
-		FileNames->InsertNextValue("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image" + vtkVariant(i).ToString() + ".png");
-	}*/
 	this->ImgReader = vtkPNGReader::New();
-	/*this->ImgReader->SetFileNames(FileNames);
-	this->ImgReader->Update();
-	FileNames->Delete();*/
-
 	this->ImgActor = vtkImageActor::New();
-	/*this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();*/ //Moved to Init()
 	this->ImgRenderer = NULL;
 
 	this->HasImage = true;
@@ -72,11 +62,6 @@ vtkOpenVRTouchPadImage::~vtkOpenVRTouchPadImage()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRTouchPadImage::PrintSelf(ostream& os, vtkIndent indent)
-{
-	this->Superclass::PrintSelf(os,indent);
-}
-
 void vtkOpenVRTouchPadImage::LoadImages(int imgNum, char *prefix)
 {
 	this->MaxNumImg = imgNum;
@@ -91,6 +76,7 @@ void vtkOpenVRTouchPadImage::LoadImages(int imgNum, char *prefix)
 	FileNames->Delete();
 }
 
+//----------------------------------------------------------------------------
 void vtkOpenVRTouchPadImage::LoadSingleImage(char * fullName)
 {
 	this->MaxNumImg = 1;
@@ -99,6 +85,13 @@ void vtkOpenVRTouchPadImage::LoadSingleImage(char * fullName)
 	this->ImgReader->Update();
 }
 
+//----------------------------------------------------------------------------
+void vtkOpenVRTouchPadImage::PrintSelf(ostream& os, vtkIndent indent)
+{
+	this->Superclass::PrintSelf(os,indent);
+}
+
+//----------------------------------------------------------------------------
 void vtkOpenVRTouchPadImage::Init()
 {
 	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
@@ -107,19 +100,121 @@ void vtkOpenVRTouchPadImage::Init()
 	this->ImgActor->DragableOff();
 }
 
+//----------------------------------------------------------------------------
+void vtkOpenVRTouchPadImage::Attach(vtkOpenVRRenderWindowInteractor * rwi)
+{
+	//Current renderer
+	vtkOpenVRRenderer *ren = NULL;
+	if (rwi)
+	{
+		int pointer = rwi->GetPointerIndex();
+		//This will return the current renderer:
+		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(rwi->GetEventPositions(pointer)[0],
+																																 rwi->GetEventPositions(pointer)[1]));
+	}
+
+	//check if used different renderer to previous visualization
+	if (ren != this->ImgRenderer)
+	{
+		if (this->ImgRenderer != NULL && this->ImgActor)
+		{
+			this->ImgRenderer->RemoveActor(this->ImgActor);
+		}
+		if (ren != 0)
+		{
+			ren->AddActor(this->ImgActor);
+		}
+		else
+		{
+			vtkWarningMacro(<< "no current renderer on the interactor style.");
+		}
+		this->ImgRenderer = ren;
+	}
+
+	this->Move(rwi);
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRTouchPadImage::Move(vtkOpenVRRenderWindowInteractor * rwi)
+{
+	//Current renderer
+	vtkOpenVRRenderer *ren = NULL;
+	vtkOpenVRInteractorStyle *ist = NULL;
+	vtkOpenVRCamera *cam = NULL;
+	if (rwi)
+	{
+		int pointer = rwi->GetPointerIndex();
+		//This will return the current renderer:
+		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(rwi->GetEventPositions(pointer)[0],
+																																 rwi->GetEventPositions(pointer)[1]));
+		ist = vtkOpenVRInteractorStyleInputData::SafeDownCast(rwi->GetInteractorStyle());
+		cam = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+	}
+
+	//Get world information
+	double wscale = cam->GetDistance();																		//Scale
+	double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());    //Position
+	double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex()); //Orientation
+	wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
+
+	//Get/Set touchpad information
+	const double d = 0.05;	// Distance from center of controller to center of touchpad
+	const double h = 0.007;	// Separation image-touchpad.
+
+	//ROTATION
+	this->ImgActor->SetOrientation(0, 0, 0);
+	this->ImgActor->RotateWXYZ(vtkMath::DegreesFromRadians(wori[0]), wori[1], wori[2], wori[3]);
+	this->ImgActor->RotateX(-85);		//Adjust to the touchpad's inclination.
+
+	//SCALE
+	double *imgBounds = this->ImgActor->GetMapper()->GetBounds();
+	//It is supposed to be a squared image (image of a circle), so xScale == yScale
+	double imgScale = 0.0475 / (++imgBounds[1]);
+	this->ImgActor->SetScale(wscale*imgScale);
+
+	//TRANSLATION
+	double imgPos[3];
+	double cosw = cos(wori[0]);
+	double sinw = sin(wori[0]);
+	//Will place a corner of the image in the center of the touchpad.
+	imgPos[0] = wpos[0] + wscale * (d * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + h * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw));
+	imgPos[1] = wpos[1] + wscale * (d * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + h * (cosw + wori[2] * wori[2] * (1 - cosw)));
+	imgPos[2] = wpos[2] + wscale * (d * (cosw + wori[3] * wori[3] * (1 - cosw)) + h * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw));
+	this->ImgActor->SetPosition(imgPos);
+	this->ImgActor->Update();
+	//Now, center the image to the center of touchpad (can't be done before because "position" might not be set.
+	double *imgCtr = this->ImgActor->GetCenter();
+	//Move center if the image to the corner (which is center of touchpad)
+	for (int i = 0; i < 3; i++) imgPos[i] += (imgPos[i] - imgCtr[i]);
+	this->ImgActor->SetPosition(imgPos);
+
+	if (rwi)
+	{
+		rwi->Render();
+	}
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRTouchPadImage::Detach()
+{
+	if (this->ImgRenderer != NULL && this->ImgActor)
+	{
+		this->ImgRenderer->RemoveActor(this->ImgActor);
+		this->ImgRenderer = NULL;
+	}
+}
+
+//----------------------------------------------------------------------------
 void vtkOpenVRTouchPadImage::UpdateImage()
 {
-	//TODO test
 	if (this->GetHasImage())
 	{
 		if (this->ImgActor->GetZSlice() != this->NextImage)
 		{
-			//Change image. Need to update both Mapper and Actor:
-			//To test
+			//Change image. Need to update both Mapper and Actor.
 			if (this->NextImage <= ImgActor->GetWholeZMax() && this->NextImage >= ImgActor->GetWholeZMin())
 			{
 				ImgActor->SetZSlice(this->NextImage);
-				//this->ImgActor->Update();
 			}
 			else
 			{
@@ -130,38 +225,11 @@ void vtkOpenVRTouchPadImage::UpdateImage()
 			if (this->NextImage <= sliceMapper->GetSliceNumberMaxValue() && this->NextImage >= sliceMapper->GetSliceNumberMinValue())
 			{
 				sliceMapper->SetSliceNumber(this->NextImage);
-				//sliceMapper->Update();
 			}
 			else
 			{
 				vtkErrorMacro(<< "ImgMapper: Image slice number is out of bounds");
 			}
 		}
-	}
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRTouchPadImage::IncNextImage()
-{
-	if (this->NextImage == (MAX_IMG / 2 - 1) || this->NextImage == (MAX_IMG - 1))
-	{
-		this->NextImage -= (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		this->NextImage++;
-	}
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRTouchPadImage::DecNextImage()
-{
-	if (this->NextImage == 0 || this->NextImage == (MAX_IMG / 2))
-	{
-		this->NextImage += (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		this->NextImage--;
 	}
 }

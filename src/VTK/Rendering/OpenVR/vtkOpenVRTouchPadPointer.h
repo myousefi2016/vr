@@ -25,11 +25,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkObject.h"
 
-#define MAX_IMG 8
-
-/*class vtkPNGReader;
-class vtkImageActor;
-class vtkRenderer;*/
 class vtkPolyDataMapper;
 class vtkSphereSource;
 class vtkActor;
@@ -47,10 +42,9 @@ public:
 
 
   virtual void Init();
-
   virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap.
-  virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);	//If moved when is Tapped.
-  virtual void Detach();	//If Untap
+  virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);		//If moved when is Tapped.
+  virtual void Detach();																			//If Untap
   
 	vtkGetMacro(PointerSource, vtkSphereSource*)
 	vtkSetMacro(PointerSource, vtkSphereSource*)
@@ -63,16 +57,11 @@ public:
 	vtkSetVector3Macro(PointerColor, double);
 	vtkGetVector3Macro(PointerColor, double);
 	
- /* virtual void IncNextImage();
-  virtual void DecNextImage();
-  virtual void UpdateImage();*/
-
-
 protected:
 	vtkOpenVRTouchPadPointer();
   ~vtkOpenVRTouchPadPointer() VTK_OVERRIDE;
 
-	//Pointer (from vtkOVRIS)
+	//To change this sphere and use a cylinder or other element.
 	vtkSphereSource *PointerSource;
 	vtkPolyDataMapper *PointerMapper;
 	vtkActor *PointerActor;

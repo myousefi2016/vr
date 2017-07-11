@@ -50,8 +50,8 @@ vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
   //vtkNew<vtkOpenVRInteractorStyle> style;
 	//vtkNew<vtkOpenVRInteractorStylePressBool> style;
-	vtkNew<vtkOpenVRInteractorStylePressDial> style;
-	//vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
+	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
+	vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
 	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;
 	this->SetInteractorStyle(style.Get());
 }
@@ -328,12 +328,6 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
     if (result)
     {
       vr::TrackedDeviceIndex_t tdi = event.trackedDeviceIndex;
-	  /*
-      vr::VRControllerState_t *cs;
-	  uint64_t mask = vr::ButtonMaskFromId(vr::EVRButtonId::k_EButton_SteamVR_Touchpad);
-      if(pHMD->GetControllerState((tdi,&cs,sizeof(vr::VRControllerState_t)) == mask){};
-	   */
-	  
       // is it a controller button action?
       if (pHMD->GetTrackedDeviceClass(tdi) ==
           vr::ETrackedDeviceClass::TrackedDeviceClass_Controller &&
@@ -423,25 +417,6 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 					}
 				}
       }
-      /* IMPOSSIBLE TO DO. bFingerDown IS ALWAYS TRUE, REGARDLESS THE STATE OF TOUCHPAD.
-      else if(event.data.touchPadMove.bFingerDown)
-      {
-        vtkErrorMacro(<< "Detected touchpad movement! (vtkOVRRWI)");
-        this->MouseMoveEvent();	//I want to repaint the controller pointer.
-      }*/
-//      else if(/*event.data == vr::VREvent_Data_t::mouse &&*/ event.eventType == vr::VREvent_TouchPadMove)
-//      {
-//        //Continue here to handle SWIPE events
-//		  int i = 0;
-//      }
-//      else if(event.eventType == vr::VREvent_TrackedDeviceUpdated)
-//	  {
-//        //Other swipe alternative.
-//		  int k = 0;
-//      }
-		//Debugging purposes.
-	  //int type = event.eventType;
-	  //vtkErrorMacro(<< "eventType = " << type);
     }
     else
     {

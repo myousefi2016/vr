@@ -25,11 +25,11 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkObject.h"
 
-#define MAX_IMG 8
-
 class vtkPNGReader;
 class vtkImageActor;
 class vtkRenderer;
+
+class vtkOpenVRRenderWindowInteractor;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRTouchPadImage : public vtkObject
 {
@@ -46,11 +46,14 @@ public:
 	 */
   virtual void LoadImages(int imgNum, char *prefix);
   /**
-  * Similar coass to LoadImages, but loading a single image.
+  * Similar method to LoadImages, but loading a single image.
   */
   virtual void LoadSingleImage(char *fullName);
 
   virtual void Init();
+	virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap.
+	virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);	//If moved when is Tapped.
+	virtual void Detach();	//If Untap
   
   vtkGetMacro(ImgReader, vtkPNGReader*)
   vtkSetMacro(ImgReader, vtkPNGReader*)
@@ -65,10 +68,8 @@ public:
   vtkGetMacro(MaxNumImg, int)
   vtkSetMacro(MaxNumImg, int)
 
-  virtual void IncNextImage();
-  virtual void DecNextImage();
   virtual void UpdateImage();
-
+	
 
 protected:
 	vtkOpenVRTouchPadImage();
