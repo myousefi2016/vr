@@ -40,6 +40,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
+#include "vtkOpenVRTouchPadPointer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
 
@@ -73,9 +74,15 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 */ //*//
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image");
+	this->TouchPadImage->Init();
 
 	//Properties' Modifier
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+
+
+	//TouchPad Pointer
+	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
+
 }
 
 //----------------------------------------------------------------------------
@@ -107,7 +114,16 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 	{
 		this->ImgRenderer->Delete();
 	}*/
-	this->TouchPadImage->Delete();
+	if (this->TouchPadImage)
+	{
+		this->TouchPadImage->Delete();
+	}
+
+	//Delete pointer
+	if (this->TouchPadPointer)
+	{
+		this->TouchPadPointer->Delete();
+	}
 }
 
 //----------------------------------------------------------------------------
@@ -565,9 +581,9 @@ void vtkOpenVRInteractorStylePressKeyboard::ShowTestActor(bool on)
 		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
 		double wscale = camera->GetDistance();                                 //Scale
-		this->Pointer->SetRadius(.01*wscale);	//Pointer radius
+		this->TouchPadPointer->GetPointerSource()->SetRadius(.01*wscale);	//Pointer radius
 
-		this->Pointer->SetCenter(0.,0.,0.);
+		this->TouchPadPointer->GetPointerSource()->SetCenter(0.,0.,0.);
 	}
 
 	if (this->Interactor)

@@ -45,6 +45,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkStringArray.h"
 
 #include "vtkOpenVRTouchPadImage.h"
+#include "vtkOpenVRTouchPadPointer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleInputData);
 
@@ -53,6 +54,8 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 {
 	//-----------------------------------------------------------
 	//Touch pointer
+	//*//
+	/*
 	this->Pointer = vtkSphereSource::New();
 	this->PointerActor = NULL;
 	this->PointerMapper = vtkPolyDataMapper::New();
@@ -67,8 +70,10 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 	this->PointerColor[1] = 1.0;
 	this->PointerColor[2] = 0.0;
 	//this->PointerActive = false;
-	//-----------------------------------------------------------
-
+	*/
+	//*//
+	this->TouchPadPointer = NULL;	//Will be constructed in inherited classes, this is an interface class.
+	
 	//Images:
 	/*this->HasImage = false;
 	this->NextImage = 0;
@@ -85,7 +90,8 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 vtkOpenVRInteractorStyleInputData::~vtkOpenVRInteractorStyleInputData()
 {
 	//Remove pointer
-	this->SetTouchPadPointer(false);
+	//*//
+	/*this->SetTouchPadPointer(false);
 
 	if (this->PointerActor)
 	{
@@ -98,7 +104,9 @@ vtkOpenVRInteractorStyleInputData::~vtkOpenVRInteractorStyleInputData()
 	}
 
 	this->Pointer->Delete();
-	this->Pointer = NULL;
+	this->Pointer = NULL;*/ //*//
+
+	//TouchPadPointer will be deleted in inherited classes (only those classes which use the resource).
 }
 
 //----------------------------------------------------------------------------
@@ -173,46 +181,46 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 	//to disable it
 	if (!activate)
 	{
-		if (this->PointerRenderer != NULL && this->PointerActor)
+		if (this->TouchPadPointer->GetPointerRenderer() != NULL && this->TouchPadPointer->GetPointerActor())
 		{
-			this->PointerRenderer->RemoveActor(this->PointerActor);
-			this->PointerRenderer = NULL;
+			this->TouchPadPointer->GetPointerRenderer()->RemoveActor(this->TouchPadPointer->GetPointerActor());
+			this->TouchPadPointer->SetPointerRenderer(NULL);
 		}
 	}
 	//to enable it
 	else
 	{
 		//check if it is already active
-		if (!this->PointerActor)
+		if (!this->TouchPadPointer->GetPointerActor())
 		{
 			//create and place in coordinates.
-			this->Pointer->SetPhiResolution(50);
-			this->Pointer->SetThetaResolution(50);
-			this->PointerActor = vtkActor::New();
-			this->PointerActor->PickableOff();
-			this->PointerActor->DragableOff();
-			this->PointerActor->SetMapper(this->PointerMapper);
-			this->PointerActor->GetProperty()->SetColor(this->PointerColor);
-			this->PointerActor->GetProperty()->SetAmbient(1.0);
-			this->PointerActor->GetProperty()->SetDiffuse(0.0);
+			this->TouchPadPointer->GetPointerSource()->SetPhiResolution(50);
+			this->TouchPadPointer->GetPointerSource()->SetThetaResolution(50);
+			this->TouchPadPointer->SetPointerActor(vtkActor::New());
+			this->TouchPadPointer->GetPointerActor()->PickableOff();
+			this->TouchPadPointer->GetPointerActor()->DragableOff();
+			this->TouchPadPointer->GetPointerActor()->SetMapper(this->TouchPadPointer->GetPointerMapper());
+			this->TouchPadPointer->GetPointerActor()->GetProperty()->SetColor(this->TouchPadPointer->GetPointerColor());
+			this->TouchPadPointer->GetPointerActor()->GetProperty()->SetAmbient(1.0);
+			this->TouchPadPointer->GetPointerActor()->GetProperty()->SetDiffuse(0.0);
 		}
 
 		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != this->PointerRenderer)
+		if (this->CurrentRenderer != this->TouchPadPointer->GetPointerRenderer())
 		{
-			if (this->PointerRenderer != NULL && this->PointerActor)
+			if (this->TouchPadPointer->GetPointerRenderer() != NULL && this->TouchPadPointer->GetPointerActor())
 			{
-				this->PointerRenderer->RemoveActor(this->PointerActor);
+				this->TouchPadPointer->GetPointerRenderer()->RemoveActor(this->TouchPadPointer->GetPointerActor());
 			}
 			if (this->CurrentRenderer != 0)
 			{
-				this->CurrentRenderer->AddActor(this->PointerActor);
+				this->CurrentRenderer->AddActor(this->TouchPadPointer->GetPointerActor());
 			}
 			else
 			{
 				vtkWarningMacro(<< "no current renderer on the interactor style.");
 			}
-			this->PointerRenderer = this->CurrentRenderer;
+			this->TouchPadPointer->SetPointerRenderer(this->CurrentRenderer);
 		}
 
 		vtkOpenVRRenderWindowInteractor *rwi =
@@ -229,7 +237,7 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 		const double r = 0.02;	//Touchpad radius
 		const double d = 0.05;	// Distance from center of controller to center of touchpad
 		float *tpos = rwi->GetTouchPadPosition();
-		this->Pointer->SetRadius(.0075*wscale);	//Pointer radius
+		this->TouchPadPointer->GetPointerSource()->SetRadius(.0075*wscale);	//Pointer radius
 
 		//3D Rotation and Translation Maths
 		double cosw = cos(vtkMath::RadiansFromDegrees(wori[0]));
@@ -242,7 +250,7 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
 		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
-		this->Pointer->SetCenter(ptrpos);
+		this->TouchPadPointer->GetPointerSource()->SetCenter(ptrpos);
 	}
 
 	if (this->Interactor)

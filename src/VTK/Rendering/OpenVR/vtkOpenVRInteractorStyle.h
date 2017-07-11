@@ -68,11 +68,11 @@ protected:
   ~vtkOpenVRInteractorStyle() VTK_OVERRIDE;
 
 	//Touchpad Pointer.
-	vtkSphereSource *Pointer;
+	/*vtkSphereSource *Pointer;
 	vtkPolyDataMapper *PointerMapper;
 	vtkActor *PointerActor;
 	vtkRenderer *PointerRenderer;
-	double PointerColor[3];
+	double PointerColor[3];*/
 	//bool PointerActive;
 
 	/*//Images (implemented in inherited classes):

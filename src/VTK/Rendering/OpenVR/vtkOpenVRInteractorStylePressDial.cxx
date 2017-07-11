@@ -43,6 +43,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
+#include "vtkOpenVRTouchPadPointer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
 
@@ -72,6 +73,11 @@ vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
 	this->TouchPadImage->Init();
+
+
+	//TouchPad Pointer
+	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
+
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 }
@@ -109,6 +115,12 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
+	}
+
+	//Remove pointer
+	if (this->TouchPadPointer)
+	{
+		this->TouchPadPointer->Delete();
 	}
 
 }
@@ -381,9 +393,9 @@ void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
 		double wscale = camera->GetDistance();                                 //Scale
-		this->Pointer->SetRadius(.01*wscale);	//Pointer radius
+		this->TouchPadPointer->GetPointerSource()->SetRadius(.01*wscale);	//Pointer radius
 
-		this->Pointer->SetCenter(0.,0.,0.);
+		this->TouchPadPointer->GetPointerSource()->SetCenter(0.,0.,0.);
 	}
 
 	if (this->Interactor)

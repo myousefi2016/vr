@@ -41,6 +41,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
+#include "vtkOpenVRTouchPadPointer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
@@ -91,7 +92,14 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	this->ImgActor->DragableOff();
 	this->ImgRenderer = NULL;*/
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadSingleImage("SwipeDial_Image0");
+	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\SwipeDial_Image0.png");
+	this->TouchPadImage->Init();
+
+
+
+	//TouchPad Pointer
+	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
+
 }
 
 //----------------------------------------------------------------------------
@@ -122,6 +130,12 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
+	}
+
+	//Delete pointer
+	if (this->TouchPadPointer)
+	{
+		this->TouchPadPointer->Delete();
 	}
 
 }

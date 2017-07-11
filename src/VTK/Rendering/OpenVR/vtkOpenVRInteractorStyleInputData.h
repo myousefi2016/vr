@@ -31,6 +31,7 @@ class vtkImageActor;
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
+class vtkOpenVRTouchPadPointer;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleInputData : public vtkOpenVRInteractorStyle
 {
@@ -70,12 +71,14 @@ protected:
   ~vtkOpenVRInteractorStyleInputData() VTK_OVERRIDE;
 
 	//Touchpad Pointer.
-	vtkSphereSource *Pointer;
+	//*//
+	/*vtkSphereSource *Pointer;
 	vtkPolyDataMapper *PointerMapper;
 	vtkActor *PointerActor;
 	vtkRenderer *PointerRenderer;
-	double PointerColor[3];
-	//bool PointerActive;
+	double PointerColor[3];*/
+	//*//
+	vtkOpenVRTouchPadPointer *TouchPadPointer;
 
 	/*//Images (implemented in inherited classes):
 	bool HasImage;

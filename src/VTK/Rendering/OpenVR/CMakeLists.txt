@@ -24,6 +24,7 @@ set(Module_SRCS
   vtkOpenVRRenderWindowInteractor.cxx
   vtkOpenVRTextFeedback.cxx
   vtkOpenVRTouchPadImage.cxx
+  vtkOpenVRTouchPadPointer.cxx
   )
   
 set_source_files_properties(
@@ -46,6 +47,7 @@ set_source_files_properties(
   vtkOpenVRRenderWindowInteractor
   vtkOpenVRTextFeedback
   vtkOpenVRTouchPadImage
+  vtkOpenVRTouchPadPointer
   PROPERTIES
     WRAP_EXCLUDE 1
     WRAP_EXCLUDE_PYTHON 1

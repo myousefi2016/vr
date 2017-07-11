@@ -85,7 +85,7 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 {
 	//-----------------------------------------------------------
 	//Touch pointer
-	this->Pointer = vtkSphereSource::New();
+	/*this->Pointer = vtkSphereSource::New();
 	this->PointerActor = NULL;
 	this->PointerMapper = vtkPolyDataMapper::New();
 
@@ -97,8 +97,7 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 	this->PointerRenderer = NULL;
 	this->PointerColor[0] = 0.0;
 	this->PointerColor[1] = 1.0;
-	this->PointerColor[2] = 0.0;
-	//this->PointerActive = false;
+	this->PointerColor[2] = 0.0;*/
 	//-----------------------------------------------------------
 
 	//Images:
@@ -113,7 +112,7 @@ vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
 vtkOpenVRInteractorStyle::~vtkOpenVRInteractorStyle()
 {
 	//Remove pointer
-	this->SetTouchPadPointer(false);
+	/*this->SetTouchPadPointer(false);
 
 	if (this->PointerActor)
 	{
@@ -126,7 +125,7 @@ vtkOpenVRInteractorStyle::~vtkOpenVRInteractorStyle()
 	}
 
 	this->Pointer->Delete();
-	this->Pointer = NULL;
+	this->Pointer = NULL;*/
 }
 
 //----------------------------------------------------------------------------
