@@ -41,7 +41,6 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
-
   //@{
   /**
   * Override Middle Button to load next camera position
@@ -57,6 +56,16 @@ public:
 	void OnTap() VTK_OVERRIDE;
 	void OnUntap() VTK_OVERRIDE;
 	//@}
+
+
+	//@{
+	/**
+	* Override OnMouseMove to be able to use functions from
+	* TouchPadImage and TouchPadPointer.
+	*/
+	void OnMouseMove() VTK_OVERRIDE;
+	//@}
+
 
 	//Pointer:
 	void SetTouchPadPointer(bool activate) VTK_OVERRIDE;

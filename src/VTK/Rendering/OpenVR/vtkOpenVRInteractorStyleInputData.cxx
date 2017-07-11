@@ -149,7 +149,7 @@ void vtkOpenVRInteractorStyleInputData::OnTap()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnUntap()
 {
-	this->SetTouchPadPointer(false);
+	this->TouchPadPointer->Remove();	//this->SetTouchPadPointer(false);
 	this->SetTouchPadImage(false);
 
 	switch (this->State)
@@ -162,6 +162,39 @@ void vtkOpenVRInteractorStyleInputData::OnUntap()
 	if (this->Interactor)
 	{
 		this->ReleaseFocus();
+	}
+}
+
+void vtkOpenVRInteractorStyleInputData::OnMouseMove()
+{
+	vtkErrorMacro(<< "OnMouseMove() from vtkISID");
+	int x = this->Interactor->GetEventPosition()[0];
+	int y = this->Interactor->GetEventPosition()[1];
+
+	switch (this->State)
+	{
+	case VTKIS_ROTATE:
+		this->FindPokedRenderer(x, y);
+		this->Rotate();
+		this->InvokeEvent(vtkCommand::InteractionEvent, NULL);
+		break;
+	case VTKIS_DOLLY:
+		this->FindPokedRenderer(x, y);
+		this->Dolly();
+		this->InvokeEvent(vtkCommand::InteractionEvent, NULL);
+		break;
+	case VTKIS_CLIP:
+		this->FindPokedRenderer(x, y);
+		this->Clip();
+		this->InvokeEvent(vtkCommand::InteractionEvent, NULL);
+		break;
+	case VTKIS_TAP:
+		this->FindPokedRenderer(x, y);
+		this->TouchPadPointer->Move();	//this->SetTouchPadPointer(true);
+		this->SetTouchPadImage(true);
+		this->TrackFinger();
+		this->InvokeEvent(vtkCommand::TapEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
+		break;
 	}
 }
 
@@ -190,12 +223,15 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 	//to enable it
 	else
 	{
+		
 		//check if it is already active
-		if (!this->TouchPadPointer->GetPointerActor())
+		/*if (!this->TouchPadPointer->GetPointerActor())
 		{
+			//TODO subsitute by vtkOVRTPPointer::Init()
 			//create and place in coordinates.
 			this->TouchPadPointer->GetPointerSource()->SetPhiResolution(50);
 			this->TouchPadPointer->GetPointerSource()->SetThetaResolution(50);
+			//TODO move the New() to th constructor, and also delete from the destructor.
 			this->TouchPadPointer->SetPointerActor(vtkActor::New());
 			this->TouchPadPointer->GetPointerActor()->PickableOff();
 			this->TouchPadPointer->GetPointerActor()->DragableOff();
@@ -250,7 +286,7 @@ void vtkOpenVRInteractorStyleInputData::SetTouchPadPointer(bool activate)
 		ptrpos[1] = wpos[1] + wscale*((d-r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1]*wori[2]*(1-cosw)+wori[3]*sinw));
 		ptrpos[2] = wpos[2] + wscale*((d-r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1]*wori[3]*(1-cosw)-wori[2]*sinw));
 
-		this->TouchPadPointer->GetPointerSource()->SetCenter(ptrpos);
+		this->TouchPadPointer->GetPointerSource()->SetCenter(ptrpos);*/
 	}
 
 	if (this->Interactor)

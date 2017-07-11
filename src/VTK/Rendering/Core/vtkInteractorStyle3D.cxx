@@ -61,6 +61,7 @@ vtkInteractorStyle3D::~vtkInteractorStyle3D()
 //----------------------------------------------------------------------------
 void vtkInteractorStyle3D::OnMouseMove()
 {
+	vtkErrorMacro(<< "OnMouseMove() from vtkIS3D");
   int x = this->Interactor->GetEventPosition()[0];
   int y = this->Interactor->GetEventPosition()[1];
 

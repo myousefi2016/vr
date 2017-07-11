@@ -35,6 +35,8 @@ class vtkSphereSource;
 class vtkActor;
 class vtkRenderer;
 
+class vtkOpenVRRenderWindowInteractor;
+
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRTouchPadPointer : public vtkObject
 {
@@ -45,19 +47,11 @@ public:
 
 
   virtual void Init();
+
+  virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap.
+  virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);	//If moved when is Tapped.
+  virtual void Detach();	//If Untap
   
-  /*vtkGetMacro(ImgReader, vtkPNGReader*)
-  vtkSetMacro(ImgReader, vtkPNGReader*)
-  vtkGetMacro(ImgActor, vtkImageActor*)
-  vtkSetMacro(ImgActor, vtkImageActor*)
-  vtkGetMacro(ImgRenderer, vtkRenderer*)
-  vtkSetMacro(ImgRenderer, vtkRenderer*)
-  vtkGetMacro(HasImage, bool)
-  vtkSetMacro(HasImage, bool)
-  vtkGetMacro(NextImage, int)
-  vtkSetMacro(NextImage, int)
-  vtkGetMacro(MaxNumImg, int)
-  vtkSetMacro(MaxNumImg, int)*/
 	vtkGetMacro(PointerSource, vtkSphereSource*)
 	vtkSetMacro(PointerSource, vtkSphereSource*)
 	vtkGetMacro(PointerMapper, vtkPolyDataMapper*)
