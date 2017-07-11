@@ -220,7 +220,8 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 	if (this->PointerActor->GetUserMatrix() != NULL)
 	{
 		//Conseguir TempTransfrm o algo parecido de PointerActor!!
-		vtkTransform *t = this->TempTransform;
+		//vtkTransform *t = this->TempTransform;
+		vtkTransform *t = vtkTransform::New();
 		t->PostMultiply();
 		t->SetMatrix(this->PointerActor->GetUserMatrix());
 		t->Translate(trans);
@@ -253,19 +254,12 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 	scale[0] = scale[1] = scale[2] = 1.0;
 
 	double *rotate = axis;
-	this->Prop3DTransform(this->InteractionProp,
-	                      wpos,
-	                      1,
-	                      &rotate,
-	                      scale);
+	ist->Prop3DTransform(this->PointerActor,wpos, 1, &rotate, scale);
 
-	if (this->AutoAdjustCameraClippingRange)
+	if (ist->GetAutoAdjustCameraClippingRange())
 	{
-		this->CurrentRenderer->ResetCameraClippingRange();
+		ren->ResetCameraClippingRange();
 	}
-
-
-
 
 }
 

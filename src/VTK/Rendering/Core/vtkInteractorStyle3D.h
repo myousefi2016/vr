@@ -164,17 +164,19 @@ public:
 	//Swiping
 	virtual void TrackFinger() {}
 
+	void Prop3DTransform(vtkProp3D *prop3D,
+		double *boxCenter,
+		int NumRotation,
+		double **rotate,
+		double *scale);
+
 protected:
   vtkInteractorStyle3D();
   ~vtkInteractorStyle3D() VTK_OVERRIDE;
 
   void FindPickedActor(double x, double y, double z);
 
-  void Prop3DTransform(vtkProp3D *prop3D,
-                       double *boxCenter,
-                       int NumRotation,
-                       double **rotate,
-                       double *scale);
+
 
   vtkPropPicker3D *InteractionPicker;
   vtkProp3D *InteractionProp;

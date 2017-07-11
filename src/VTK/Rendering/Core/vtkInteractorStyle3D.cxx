@@ -87,7 +87,7 @@ void vtkInteractorStyle3D::OnMouseMove()
 	  this->SetTouchPadPointer(true);
 	  this->SetTouchPadImage(true);
 		this->TrackFinger();
-	  this->InvokeEvent(vtkCommand::TapEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
+	  this->InvokeEvent(vtkCommand::InteractionEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
 	  break;
   }
 }

@@ -140,7 +140,9 @@ void vtkOpenVRInteractorStyleInputData::OnTap()
 		return;
 	}
 
-	this->SetTouchPadPointer(true);
+	//this->SetTouchPadPointer(true);
+	vtkOpenVRRenderWindowInteractor *rwi = vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor);
+	this->TouchPadPointer->Attach(rwi);
 
 	this->GrabFocus(this->EventCallbackCommand);
 	this->StartTap();
@@ -149,7 +151,7 @@ void vtkOpenVRInteractorStyleInputData::OnTap()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnUntap()
 {
-	this->TouchPadPointer->Remove();	//this->SetTouchPadPointer(false);
+	this->TouchPadPointer->Detach();	//this->SetTouchPadPointer(false);
 	this->SetTouchPadImage(false);
 
 	switch (this->State)
@@ -190,7 +192,8 @@ void vtkOpenVRInteractorStyleInputData::OnMouseMove()
 		break;
 	case VTKIS_TAP:
 		this->FindPokedRenderer(x, y);
-		this->TouchPadPointer->Move();	//this->SetTouchPadPointer(true);
+		vtkOpenVRRenderWindowInteractor *rwi = vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor);
+		this->TouchPadPointer->Move(rwi);	//this->SetTouchPadPointer(true);
 		this->SetTouchPadImage(true);
 		this->TrackFinger();
 		this->InvokeEvent(vtkCommand::TapEvent, NULL);		// Is it really needed? Try deleting or using "InteractionEvent"
