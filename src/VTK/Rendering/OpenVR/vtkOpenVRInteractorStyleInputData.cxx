@@ -157,7 +157,7 @@ void vtkOpenVRInteractorStyleInputData::OnMouseMove()
 void vtkOpenVRInteractorStyleInputData::IncNextImage()
 {
 	int nextImg = this->TouchPadImage->GetNextImage();
-	if (nextImg == (MAX_IMG - 1))
+	if (nextImg == (this->TouchPadImage->GetMaxNumImg() - 1))
 	{
 		this->TouchPadImage->SetNextImage(0);
 	}
@@ -173,7 +173,7 @@ void vtkOpenVRInteractorStyleInputData::DecNextImage()
 	int nextImg = this->TouchPadImage->GetNextImage();
 	if (nextImg == 0)
 	{
-		this->TouchPadImage->SetNextImage(MAX_IMG - 1);
+		this->TouchPadImage->SetNextImage(this->TouchPadImage->GetMaxNumImg() - 1);
 	}
 	else
 	{

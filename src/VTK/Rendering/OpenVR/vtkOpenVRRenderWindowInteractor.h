@@ -87,6 +87,9 @@ public:
 	virtual void TouchPadUntouchEvent();
 	//@}
 
+	vtkGetMacro(PointerIndexLastTouchpad,int)
+	vtkSetMacro(PointerIndexLastTouchpad,int)
+
   virtual void DoOneEvent(vtkOpenVRRenderWindow *renWin, vtkRenderer *ren);
 
 protected:
@@ -134,6 +137,11 @@ protected:
     double pos[3],
     double wxyz[4],
     double ppos[3]);
+
+	//tap
+	bool IsTap = false;
+
+	int PointerIndexLastTouchpad = -1;
 
 private:
   vtkOpenVRRenderWindowInteractor(const vtkOpenVRRenderWindowInteractor&) VTK_DELETE_FUNCTION;

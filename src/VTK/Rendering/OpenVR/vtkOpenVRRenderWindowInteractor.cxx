@@ -188,28 +188,36 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 		return;
 	}
 
-	// are we translating multitouch into gestures?
+	
+
+	if (this->IsTap)
+	{
+		this->TouchPadUntouchEvent();
+		//for (int i = 0; i < VTKI_MAX_POINTERS; i++) this->PointersDown[i] = 0;
+		//this->PointersDownCount = 0;
+
+		//this->PointersDownCount++;
+		//this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
+	}
+
 	if (this->RecognizeGestures)
 	{
+		//Store controller index
+		this->PointerIndexLastTouchpad = this->PointerIndex;
+
+		//To execute OnMouseMove on the DoOneEvent() loop.
 		if (!this->PointersDown[this->PointerIndex])
 		{
 			this->PointersDown[this->PointerIndex] = 1;
 			this->PointersDownCount++;
 		}
-		// do we have multitouch
-		if (this->PointersDownCount > 1)
-		{
-			// did we just transition to multitouch?
-			if (this->PointersDownCount == 2)
-			{
-				this->InvokeEvent(vtkCommand::RightButtonReleaseEvent, NULL);
-			}
-			// handle the gesture
-			this->RecognizeGesture(vtkCommand::RightButtonPressEvent);
-			return;
-		}
+
+		//To avoid conflicts with Pan/Pinch/..
+		this->RecognizeGestures = false;
+		this->IsTap = true;
+
+		this->InvokeEvent(vtkCommand::TapEvent, NULL);
 	}
-	this->InvokeEvent(vtkCommand::TapEvent, NULL);
 }
 
 void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
@@ -219,22 +227,39 @@ void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 		return;
 	}
 
-	if (this->RecognizeGestures)
+	if (!this->IsTap)
 	{
+		return;
+	}
+
+	if (!this->RecognizeGestures)
+	{
+		//TODO it differently: if (this->PointerIndex != this->PointerIndexLastTouchpad)
+/*
+		//controller with the image triggered Untap.
 		if (this->PointersDown[this->PointerIndex])
 		{
 			this->PointersDown[this->PointerIndex] = 0;
 			this->PointersDownCount--;
+			//for (int i = 0; i < VTKI_MAX_POINTERS; i++) this->PointersDown[i] = 0;
+			//this->PointersDownCount = 0;
 		}
-		// do we have multitouch
-		if (this->PointersDownCount > 1)
+		//called from TouchPadTouchEvent() to remove last Tap.
+		else if (this->PointersDown[this->PointerIndexLastTouchpad])
 		{
-			// handle the gesture
-			this->RecognizeGesture(vtkCommand::EndTapEvent);
-			return;
+			this->PointersDown[this->PointerIndexLastTouchpad] = 0;
+			this->PointersDownCount--;
 		}
+		//controller without image triggered untap
+		else
+		{
+		}
+
+		this->RecognizeGestures = true;
+		this->IsTap = false;
+		this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
+*/
 	}
-	this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
 }
 
 //----------------------------------------------------------------------------
@@ -366,41 +391,47 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 				
         if (event.eventType == vr::VREvent_ButtonPress)
         {
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis1)
-          {
-            this->LeftButtonPressEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis0)
-          {
-            this->RightButtonPressEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Grip)
-          {
-            this->MiddleButtonPressEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_ApplicationMenu)
-          {
-            this->FourthButtonPressEvent();
-          }
+					if (!this->IsTap)	//Avoid interferences on touch.
+					{
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis1)
+						{
+							this->LeftButtonPressEvent();
+						}
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_Grip)
+						{
+							this->MiddleButtonPressEvent();
+						}
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_ApplicationMenu)
+						{
+							this->FourthButtonPressEvent();
+						}
+					}
+					if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis0)
+					{
+						this->RightButtonPressEvent();
+					}
         }
         if (event.eventType == vr::VREvent_ButtonUnpress)
         {
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis1)
-          {
-            this->LeftButtonReleaseEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis0)
-          {
-            this->RightButtonReleaseEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_Grip)
-          {
-            this->MiddleButtonReleaseEvent();
-          }
-          if (event.data.controller.button == vr::EVRButtonId::k_EButton_ApplicationMenu)
-          {
-            this->FourthButtonReleaseEvent();
-          }
+					if (!this->IsTap)	//Avoid interferences on touch.
+					{
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis1)
+						{
+							this->LeftButtonReleaseEvent();
+						}
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_Grip)
+						{
+							this->MiddleButtonReleaseEvent();
+						}
+						if (event.data.controller.button == vr::EVRButtonId::k_EButton_ApplicationMenu)
+						{
+							this->FourthButtonReleaseEvent();
+						}
+					}
+					if (event.data.controller.button == vr::EVRButtonId::k_EButton_Axis0)
+					{
+						this->RightButtonReleaseEvent();
+					}
         }
         if (event.eventType == vr::VREvent_ButtonTouch)
 				{
@@ -450,8 +481,15 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
             this->SetPhysicalEventPosition(ppos[0], ppos[1], ppos[2], i);
           }
         }
-        this->MouseMoveEvent();
+				if (this->IsTap && (event.eventType != vr::VREvent_ButtonPress &&
+														event.eventType != vr::VREvent_ButtonUnpress/* &&
+														event.eventType != vr::VREvent_ButtonTouch &&
+														event.eventType != vr::VREvent_ButtonUntouch*/))
+				{
+					this->MouseMoveEvent();
+				}
       }
+			//this->MouseMoveEvent();	//to test, deleting previous call.
     }
     renWin->Render();
   }
