@@ -188,35 +188,51 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 		return;
 	}
 
-	
-
-	if (this->IsTap)
-	{
-		this->TouchPadUntouchEvent();
-		//for (int i = 0; i < VTKI_MAX_POINTERS; i++) this->PointersDown[i] = 0;
-		//this->PointersDownCount = 0;
-
-		//this->PointersDownCount++;
-		//this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
-	}
 
 	if (this->RecognizeGestures)
 	{
-		//Store controller index
-		this->PointerIndexLastTouchpad = this->PointerIndex;
-
-		//To execute OnMouseMove on the DoOneEvent() loop.
-		if (!this->PointersDown[this->PointerIndex])
+		//First touch. Nothing was being touched before.
+		if (this->PointerIndexLastTouchpad == -1)
 		{
-			this->PointersDown[this->PointerIndex] = 1;
-			this->PointersDownCount++;
+			//Store controller index
+			this->PointerIndexLastTouchpad = this->PointerIndex;
+			//To execute OnMouseMove on the DoOneEvent() loop.
+			if (!this->PointersDown[this->PointerIndex])
+			{
+				this->PointersDown[this->PointerIndex] = 1;
+				this->PointersDownCount++;
+			}
+			//To avoid conflicts with Pan/Pinch/..
+			this->RecognizeGestures = false;
+			this->IsTap = true;
+			//Call the event
+			this->InvokeEvent(vtkCommand::TapEvent, NULL);
 		}
-
-		//To avoid conflicts with Pan/Pinch/..
-		this->RecognizeGestures = false;
-		this->IsTap = true;
-
-		this->InvokeEvent(vtkCommand::TapEvent, NULL);
+		//Touchpad from the other controller was being touched.
+		else if (this->PointerIndex != this->PointerIndexLastTouchpad)
+		{
+			//this->PointerIndexLastTouchpad = -1;
+			this->TouchPadUntouchEvent();
+			//----From this line, code equal to the previous case!!-----//
+			//Store controller index
+			this->PointerIndexLastTouchpad = this->PointerIndex;
+			//To execute OnMouseMove on the DoOneEvent() loop.
+			if (!this->PointersDown[this->PointerIndex])
+			{
+				this->PointersDown[this->PointerIndex] = 1;
+				this->PointersDownCount++;
+			}
+			//To avoid conflicts with Pan/Pinch/..
+			this->RecognizeGestures = false;
+			this->IsTap = true;
+			//Call the event
+			this->InvokeEvent(vtkCommand::TapEvent, NULL);
+		}
+		//Touchpad from the same controller was being touched.
+		//else
+		//{
+		// Not considered right now...
+		//}
 	}
 }
 
@@ -227,38 +243,48 @@ void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 		return;
 	}
 
-	if (!this->IsTap)
-	{
-		return;
-	}
-
 	if (!this->RecognizeGestures)
 	{
-		//TODO it differently: if (this->PointerIndex != this->PointerIndexLastTouchpad)
-/*
-		//controller with the image triggered Untap.
-		if (this->PointersDown[this->PointerIndex])
+		//From the active controller.	Multitouch same controller may be added here in the future.
+		if (this->PointerIndex == this->PointerIndexLastTouchpad)
 		{
-			this->PointersDown[this->PointerIndex] = 0;
-			this->PointersDownCount--;
-			//for (int i = 0; i < VTKI_MAX_POINTERS; i++) this->PointersDown[i] = 0;
-			//this->PointersDownCount = 0;
+			//Restore controller index to default
+			this->PointerIndexLastTouchpad = -1;
+			//To execute OnMouseMove on the DoOneEvent() loop.
+			if (this->PointersDown[this->PointerIndex])
+			{
+				this->PointersDown[this->PointerIndex] = 0;
+				this->PointersDownCount--;
+			}
+			//To avoid conflicts with Pan/Pinch/..
+			this->RecognizeGestures = true;
+			this->IsTap = false;
+			//Call the event
+			this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
 		}
-		//called from TouchPadTouchEvent() to remove last Tap.
-		else if (this->PointersDown[this->PointerIndexLastTouchpad])
+		else    //Both conditions inside are the same!! merge!!
 		{
-			this->PointersDown[this->PointerIndexLastTouchpad] = 0;
-			this->PointersDownCount--;
+			//No active controller. Untapped controller with inactive touchpad.
+			if (this->PointerIndexLastTouchpad == -1)
+			{
+				//To execute OnMouseMove on the DoOneEvent() loop.
+				if (this->PointersDown[this->PointerIndex])
+				{
+					this->PointersDown[this->PointerIndex] = 0;
+					this->PointersDownCount--;
+				}
+			}
+			//From inactive controller. The other controller must remain active.
+			else
+			{
+				//To execute OnMouseMove on the DoOneEvent() loop.
+				if (this->PointersDown[this->PointerIndex])
+				{
+					this->PointersDown[this->PointerIndex] = 0;
+					this->PointersDownCount--;
+				}
+			}
 		}
-		//controller without image triggered untap
-		else
-		{
-		}
-
-		this->RecognizeGestures = true;
-		this->IsTap = false;
-		this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
-*/
 	}
 }
 

@@ -137,13 +137,14 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 	int pointer;
 	if (rwi)
 	{
-		pointer = rwi->GetPointerIndexLastTouchpad();  //int pointer = rwi->GetPointerIndex();
+		pointer = rwi->GetPointerIndexLastTouchpad();
 		//This will return the current renderer:
 		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(rwi->GetEventPositions(pointer)[0],
 		                                                             rwi->GetEventPositions(pointer)[1]));
 		ist = vtkOpenVRInteractorStyleInputData::SafeDownCast(rwi->GetInteractorStyle());
 		cam = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 	}
+	else return;
 
 	//Get world information
 	double wscale = cam->GetDistance();																			//Scale

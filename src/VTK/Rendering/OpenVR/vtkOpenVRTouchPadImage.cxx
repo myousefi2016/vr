@@ -141,20 +141,22 @@ void vtkOpenVRTouchPadImage::Move(vtkOpenVRRenderWindowInteractor * rwi)
 	vtkOpenVRRenderer *ren = NULL;
 	vtkOpenVRInteractorStyle *ist = NULL;
 	vtkOpenVRCamera *cam = NULL;
+	int pointer;
 	if (rwi)
 	{
-		int pointer = rwi->GetPointerIndex();
+		pointer = rwi->GetPointerIndexLastTouchpad();
 		//This will return the current renderer:
 		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(rwi->GetEventPositions(pointer)[0],
 																																 rwi->GetEventPositions(pointer)[1]));
 		ist = vtkOpenVRInteractorStyleInputData::SafeDownCast(rwi->GetInteractorStyle());
 		cam = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 	}
+	else return;
 
 	//Get world information
 	double wscale = cam->GetDistance();																		//Scale
-	double *wpos = rwi->GetWorldEventPosition(rwi->GetPointerIndex());    //Position
-	double *wori = rwi->GetWorldEventOrientation(rwi->GetPointerIndex()); //Orientation
+	double *wpos = rwi->GetWorldEventPosition(pointer);    //Position
+	double *wori = rwi->GetWorldEventOrientation(pointer); //Orientation
 	wori[0] = vtkMath::RadiansFromDegrees(wori[0]);
 
 	//Get/Set touchpad information
