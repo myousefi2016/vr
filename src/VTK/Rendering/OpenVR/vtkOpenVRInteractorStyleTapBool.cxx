@@ -58,7 +58,7 @@ vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadSingleImage( "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
+	this->TouchPadImage->LoadSingleImage( "..\\..\\..\\VTK\\Rendering\\OpenVR\\TapBool_Image0.png");
 	this->TouchPadImage->Init();
 
 	//TouchPad Pointer

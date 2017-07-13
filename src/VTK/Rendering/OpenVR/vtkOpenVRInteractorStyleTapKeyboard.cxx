@@ -52,7 +52,7 @@ vtkOpenVRInteractorStyleTapKeyboard::vtkOpenVRInteractorStyleTapKeyboard()
 
 	//Images:
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressKeyboard_Image");
+	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\TapKeyboard_Image");
 	this->TouchPadImage->Init();
 
 	//Properties' Modifier
