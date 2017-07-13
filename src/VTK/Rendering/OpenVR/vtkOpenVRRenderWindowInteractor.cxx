@@ -51,8 +51,8 @@ vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
   //vtkNew<vtkOpenVRInteractorStyle> style;
 	//vtkNew<vtkOpenVRInteractorStyleTapBool> style;
 	//vtkNew<vtkOpenVRInteractorStyleTapDial> style;
-	vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;
-	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;
+	//vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;
+	vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;
 	this->SetInteractorStyle(style.Get());
 }
 
@@ -474,14 +474,11 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
           }
         }
 				if (this->IsTap && (event.eventType != vr::VREvent_ButtonPress &&
-														event.eventType != vr::VREvent_ButtonUnpress/* &&
-														event.eventType != vr::VREvent_ButtonTouch &&
-														event.eventType != vr::VREvent_ButtonUntouch*/))
+														event.eventType != vr::VREvent_ButtonUnpress))
 				{
 					this->MouseMoveEvent();
 				}
       }
-			//this->MouseMoveEvent();	//to test, deleting previous call.
     }
     renWin->Render();
   }
