@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStylePressBool.h
+Module:    vtkOpenVRInteractorStyleTapDial.h
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -13,13 +13,13 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStylePressBool
- * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
- *          Divides touchpad in sections to input boolean values.
+ * @class   vtkOpenVRInteractorStyleTapDial
+ * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
+ *          Divides touchpad in circular crown sectors for numbers 0-9.
 */
 
-#ifndef vtkOpenVRInteractorStylePressBool_h
-#define vtkOpenVRInteractorStylePressBool_h
+#ifndef vtkOpenVRInteractorStyleTapDial_h
+#define vtkOpenVRInteractorStyleTapDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
@@ -37,15 +37,13 @@ class vtkJPEGReader;
 class vtkPNGReader;
 
 class vtkOpenVRTextFeedback;
-class vtkOpenVRTouchPadImage;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressBool : public vtkOpenVRInteractorStyleInputData
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapDial : public vtkOpenVRInteractorStyleInputData
 {
 public:
-  static vtkOpenVRInteractorStylePressBool *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressBool, vtkOpenVRInteractorStyleInputData);
+  static vtkOpenVRInteractorStyleTapDial *New();
+  vtkTypeMacro(vtkOpenVRInteractorStyleTapDial, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
-
 
   //@{
   /**
@@ -57,17 +55,16 @@ public:
 
   //@{
   /**
-  * Override Middle Button (Grip) which will select Prop and attribute to modify.
+  * Override Middle Button (Grip) which will enable a text to input data.
+  * Also, for test purposes select Prop and attribute to modify.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-
-
 protected:
-  vtkOpenVRInteractorStylePressBool();
-  ~vtkOpenVRInteractorStylePressBool() VTK_OVERRIDE;
+  vtkOpenVRInteractorStyleTapDial();
+  ~vtkOpenVRInteractorStyleTapDial() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
 //	vtkOpenVRTextFeedback *TextFeedback;
@@ -76,12 +73,9 @@ protected:
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
 
-	//Images
-//  vtkOpenVRTouchPadImage *TouchPadImage;
-
 private:
-  vtkOpenVRInteractorStylePressBool(const vtkOpenVRInteractorStylePressBool&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStylePressBool&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif

@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStylePressDial.cxx
+Module:    vtkOpenVRInteractorStyleTapBool.cxx
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRInteractorStylePressDial.h"
+#include "vtkOpenVRInteractorStyleTapBool.h"
 
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
@@ -24,7 +24,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
 #include "vtkRenderer.h"
-#include "vtkTextSource.h"
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
@@ -45,45 +44,33 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
 
-vtkStandardNewMacro(vtkOpenVRInteractorStylePressDial);
+vtkStandardNewMacro(vtkOpenVRInteractorStyleTapBool);
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStylePressDial::vtkOpenVRInteractorStylePressDial()
+vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 {
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
+	this->TextFeedback->SetTextDefaultMsg("Select Bool");
 
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
 	//Images
-	/*//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->ImgReader = vtkPNGReader::New();
-	this->HasImage = true;
-	this->NextImage = 0;
-
-	//In this class, only one image needed.
-	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
-	ImgReader->Update();
-
-	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;*/
+	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
+	this->TouchPadImage->LoadSingleImage( "..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
 	this->TouchPadImage->Init();
-
 
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
+
 
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
+vtkOpenVRInteractorStyleTapBool::~vtkOpenVRInteractorStyleTapBool()
 {
 	//Remove Text3D
 	if (this->TextFeedback)
@@ -98,35 +85,20 @@ vtkOpenVRInteractorStylePressDial::~vtkOpenVRInteractorStylePressDial()
 	}
 
 	//Remove Image:
-	/*this->SetTouchPadImage(false);
-	if (this->ImgActor)
-	{
-		this->ImgActor->Delete();
-	}
-	if (this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}
-	//It may cause problems (deleted in other places). Think about removing :
-	if (this->ImgRenderer)
-	{
-		this->ImgRenderer->Delete();
-	}*/
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
 	}
 
-	//Remove pointer
+	//Remove Pointer
 	if (this->TouchPadPointer)
 	{
 		this->TouchPadPointer->Delete();
 	}
-
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
+void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 {
 	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
@@ -139,9 +111,11 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 
 		float radius = sqrt(x*x + y*y);
 
-		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
-
+		//bool region = (x>0)?false:true;		//2 regions: right->0(False); left->1(True)
+		char *selBool = (x > 0) ? "false" : "true";
+		
+		//TODO check if it is convinient to add here if(this->TextActor) and wrap everything.
+		
 		if (this->TextFeedback->GetDefaultMsgOn())
 		{
 			this->TextFeedback->GetTextActor()->SetInput("");
@@ -149,76 +123,44 @@ void vtkOpenVRInteractorStylePressDial::OnRightButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
-		if (radius > .6)
+		if (radius > .3)
 		{
 			//Display number, which is equal to region number
-			vtkErrorMacro(<< "Number pressed: " << region);	// Just for debugging purposes.
+			vtkErrorMacro(<< "Bool pressed: " << selBool);	// Just for debugging purposes.
 
 			//Actual code:
-			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(region).ToString();
-			this->TextFeedback->GetTextActor()->SetInput(newText);
+			this->TextFeedback->GetTextActor()->SetInput(selBool);
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
 			this->TextFeedback->SetHasUnsavedChanges(true);
-
-		}
-		else if(radius > .2)
-		{
-			if (region <= 4)
-			{
-				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
-
-				//Actual code:
-				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-				if (newText.compare("") == 0)
-				{
-					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-				}
-				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-				this->TextFeedback->SetHasUnsavedChanges(false);
-
-				//test:
-				vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-				this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
-			}
-			else	// region in range [5,9]
-			{
-				vtkErrorMacro(<< "\"Remove last digit\" pressed. Region: " << region);	// Just for debugging purposes.
-
-				//Actual code:
-				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-				if (newText.length() <= 1)
-				{
-					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-					this->TextFeedback->SetHasUnsavedChanges(false);
-				}
-				else
-				{
-					newText.pop_back();
-					this->TextFeedback->GetTextActor()->SetInput(newText);
-					this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-					this->TextFeedback->SetHasUnsavedChanges(true);
-				}
-			}
 		}
 		else
 		{
-			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + ".";
-			this->TextFeedback->GetTextActor()->SetInput(newText);
-			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-			this->TextFeedback->SetHasUnsavedChanges(true);
+			vtkErrorMacro(<< "\"Validate bool\" pressed.");	// Just for debugging purposes.
+
+			//Actual code:
+			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+			if (newText.compare("") == 0)
+			{
+				this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
+			}
+			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
+			this->TextFeedback->SetHasUnsavedChanges(false);
+				
+			//TODO test with SetVisibility!!:
+			//vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+			//this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, //this->TextActor->GetInput());
 		}
 	}
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::OnRightButtonUp()
+void vtkOpenVRInteractorStyleTapBool::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
+void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 {
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
@@ -236,7 +178,6 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
 			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
-
 		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
 		{
 			//Remove from renderer
@@ -248,7 +189,7 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
-			this->ShowTestActor(false);
+			//this->ShowTestActor(false);
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -280,19 +221,19 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			this->ShowTestActor(true);
+			//this->ShowTestActor(true);
 		}
 
 	}
 	
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-	
+
 	double wScale = camera->GetDistance();			//World scale
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 	
-	const double d2c = 1.25;		//Text distance to camera.
+	const double d2c = 0.5;		//Text distance to camera.
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
@@ -303,14 +244,14 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 	double txtPos[3];
 
 	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c  * wScale;
+		txtPos[i] = camPos[i] + projection[i] * d2c;
 
 	//Place text
 	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
 	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
 	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
 	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
-	
+
 	//Render Scene
 	if (this->Interactor)
 	{
@@ -319,13 +260,13 @@ void vtkOpenVRInteractorStylePressDial::OnMiddleButtonDown()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::OnMiddleButtonUp()
+void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
+void vtkOpenVRInteractorStyleTapBool::ShowTestActor(bool on)
 {
 	//Get prop data:
 	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
@@ -405,7 +346,7 @@ void vtkOpenVRInteractorStylePressDial::ShowTestActor(bool on)
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressDial::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStyleTapBool::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

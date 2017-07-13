@@ -37,20 +37,6 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
-  /** 04/07 - I remove this because I am using TAP for everything.
-   *          May be interesting to switch from tap to SWIPE.
-  * Override Swiping (Touchpad) to increment/decrement numbers.
-  */
-//  void OnSwipe() VTK_OVERRIDE;
-//  void OnLongTap() VTK_OVERRIDE;	//May be useful to detct start of gesture.
-  //@}
-
-  //Text3D to modify Props' attributes.
-  //vtkOpenVRTextFeedback *TextFeedback;
-
-
-  //Repeated code from PressDial:
-  //@{
   /**
   * Override Right Button (Touchpad) to input numbers.
   */
@@ -77,9 +63,6 @@ public:
   virtual double GetAvgDiffAngle();
   virtual double GetAvgRadius();
   virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
-  //virtual void DecValue();	//Inc and Dec may be merged.
-  //virtual void IncValue();
-
 	virtual void UpdateValue();	
 
 	virtual void FlushValues();	//Empty records.
@@ -92,7 +75,6 @@ protected:
 	//Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
 	vtkDequeAngleRadius *AngleRadiusRecord;
 	bool AbsoluteInc;	//absolute/relative increments
-//	bool PositiveInc;	//positive/negative increments 
 
 
 private:
@@ -101,5 +83,3 @@ private:
 };
 
 #endif
-
-//List, **queue**, stack

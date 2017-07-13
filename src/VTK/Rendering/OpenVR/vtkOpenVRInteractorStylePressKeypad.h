@@ -13,7 +13,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStylePressDialTouchpad
+ * @class   vtkOpenVRInteractorStyleTapDialTouchpad
  * @brief   extended from vtkOpenVRInteractorStyle to override command methods on Touchpad.
  *          Divides touchpad in squared sectors for numbers 0-9.
 */

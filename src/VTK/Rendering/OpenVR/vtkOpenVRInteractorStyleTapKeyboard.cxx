@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStylePressKeyboard.cxx
+Module:    vtkOpenVRInteractorStyleTapKeyboard.cxx
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRInteractorStylePressKeyboard.h"
+#include "vtkOpenVRInteractorStyleTapKeyboard.h"
 
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
@@ -42,10 +42,10 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
 
-vtkStandardNewMacro(vtkOpenVRInteractorStylePressKeyboard);
+vtkStandardNewMacro(vtkOpenVRInteractorStyleTapKeyboard);
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
+vtkOpenVRInteractorStyleTapKeyboard::vtkOpenVRInteractorStyleTapKeyboard()
 {
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
@@ -65,7 +65,7 @@ vtkOpenVRInteractorStylePressKeyboard::vtkOpenVRInteractorStylePressKeyboard()
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
+vtkOpenVRInteractorStyleTapKeyboard::~vtkOpenVRInteractorStyleTapKeyboard()
 {
 	//Remove Text3D
 	if (this->TextFeedback)
@@ -93,7 +93,7 @@ vtkOpenVRInteractorStylePressKeyboard::~vtkOpenVRInteractorStylePressKeyboard()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
+void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 {
 	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
@@ -335,13 +335,13 @@ void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonDown()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::OnRightButtonUp()
+void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
+void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 {
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
@@ -442,20 +442,20 @@ void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonDown()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::OnMiddleButtonUp()
+void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::SwitchCaps()
+void vtkOpenVRInteractorStyleTapKeyboard::SwitchCaps()
 {
 	int currentImg = this->TouchPadImage->GetNextImage();
 	this->TouchPadImage->SetNextImage( (currentImg += 4) %= this->TouchPadImage->GetMaxNumImg());
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::IncNextImage()
+void vtkOpenVRInteractorStyleTapKeyboard::IncNextImage()
 {
 	int nextImg = this->TouchPadImage->GetNextImage();
 	if ((nextImg == (MAX_IMG / 2 - 1)) || (nextImg == (MAX_IMG - 1)))
@@ -470,7 +470,7 @@ void vtkOpenVRInteractorStylePressKeyboard::IncNextImage()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::DecNextImage()
+void vtkOpenVRInteractorStyleTapKeyboard::DecNextImage()
 {
 	int nextImg = this->TouchPadImage->GetNextImage();
 	if (nextImg == 0 || nextImg == (MAX_IMG / 2))
@@ -485,7 +485,7 @@ void vtkOpenVRInteractorStylePressKeyboard::DecNextImage()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::ShowTestActor(bool on)
+void vtkOpenVRInteractorStyleTapKeyboard::ShowTestActor(bool on)
 {
 	//Get prop data:
 	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
@@ -565,7 +565,7 @@ void vtkOpenVRInteractorStylePressKeyboard::ShowTestActor(bool on)
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRInteractorStylePressKeyboard::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRInteractorStyleTapKeyboard::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

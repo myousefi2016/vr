@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStylePressKeyboard.h
+Module:    vtkOpenVRInteractorStyleTapKeyboard.h
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -13,13 +13,13 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStylePressKeyboard
+ * @class   vtkOpenVRInteractorStyleTapKeyboard
  * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
  *          Divides touchpad in sectors allowing to convert it into a keyboard for text writing
 */
 
-#ifndef vtkOpenVRInteractorStylePressKeyboard_h
-#define vtkOpenVRInteractorStylePressKeyboard_h
+#ifndef vtkOpenVRInteractorStyleTapKeyboard_h
+#define vtkOpenVRInteractorStyleTapKeyboard_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
@@ -37,11 +37,11 @@ class vtkOpenVRPropertyModifier;
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStylePressKeyboard : public vtkOpenVRInteractorStyleInputData
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapKeyboard : public vtkOpenVRInteractorStyleInputData
 {
 public:
-  static vtkOpenVRInteractorStylePressKeyboard *New();
-  vtkTypeMacro(vtkOpenVRInteractorStylePressKeyboard, vtkOpenVRInteractorStyle);
+  static vtkOpenVRInteractorStyleTapKeyboard *New();
+  vtkTypeMacro(vtkOpenVRInteractorStyleTapKeyboard, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{
@@ -67,8 +67,8 @@ public:
  
 
 protected:
-	vtkOpenVRInteractorStylePressKeyboard();
-  ~vtkOpenVRInteractorStylePressKeyboard() VTK_OVERRIDE;
+	vtkOpenVRInteractorStyleTapKeyboard();
+  ~vtkOpenVRInteractorStyleTapKeyboard() VTK_OVERRIDE;
 
   //Text3D to modify Props' attributes.
 //  vtkOpenVRTextFeedback *TextFeedback;
@@ -80,8 +80,8 @@ protected:
   virtual void ShowTestActor(bool on);
 
 private:
-	vtkOpenVRInteractorStylePressKeyboard(const vtkOpenVRInteractorStylePressKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStylePressKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRInteractorStyleTapKeyboard(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif

@@ -33,9 +33,9 @@
 #include "vtkPropPicker3D.h"
 #include "vtkTextureObject.h"
 //New Interactor style includes:
-#include "vtkOpenVRInteractorStylePressDial.h"
-#include "vtkOpenVRInteractorStylePressKeyboard.h"
-#include "vtkOpenVRInteractorStylePressBool.h"
+#include "vtkOpenVRInteractorStyleTapDial.h"
+#include "vtkOpenVRInteractorStyleTapKeyboard.h"
+#include "vtkOpenVRInteractorStyleTapBool.h"
 #include "vtkOpenVRInteractorStyleSwipeDial.h"
 
 vtkStandardNewMacro(vtkOpenVRRenderWindowInteractor);
@@ -49,9 +49,9 @@ void (*vtkOpenVRRenderWindowInteractor::ClassExitMethodArgDelete)(void *) = (voi
 vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
   //vtkNew<vtkOpenVRInteractorStyle> style;
-	//vtkNew<vtkOpenVRInteractorStylePressBool> style;
-	//vtkNew<vtkOpenVRInteractorStylePressDial> style;
-	vtkNew<vtkOpenVRInteractorStylePressKeyboard> style;
+	//vtkNew<vtkOpenVRInteractorStyleTapBool> style;
+	//vtkNew<vtkOpenVRInteractorStyleTapDial> style;
+	vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;
 	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;
 	this->SetInteractorStyle(style.Get());
 }

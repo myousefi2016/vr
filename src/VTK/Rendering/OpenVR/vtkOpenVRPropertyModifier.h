@@ -17,7 +17,7 @@ PURPOSE.  See the above copyright notice for more information.
  * @brief   Used as a generic actors' property changer API. Primarily
  * intended to be used in combination with interactor styles which allow
  * to input data.
- * @see vtkOpenVRInteractorStylePressDial
+ * @see vtkOpenVRInteractorStyleTapDial
 */
 
 #ifndef vtkOpenVRPropertyModifier_h

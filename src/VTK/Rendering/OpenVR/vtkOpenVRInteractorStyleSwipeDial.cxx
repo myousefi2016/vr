@@ -64,7 +64,6 @@ class vtkDequeAngleRadius:
 		
 
 
-	
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
@@ -107,31 +106,6 @@ vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 		this->TouchPadPointer->Delete();
 	}
 }
-
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::OnSwipe()	//adapted from vtkInteractorStyle3D::OnMouseMove()
-{
-	//NOTE May be useful on the future: vr::VREvent_ButtonTouch
-
-	//Do I need another function where to set state == VTKIS_SWIPE ? I think so.
-	switch(this->State)
-	{
-		//case VTKIS_ ...
-	}
-}
-
-void vtkOpenVRInteractorStyleSwipeDial::OnLongTap()
-{
-	int x = this->Interactor->GetEventPosition()[0];
-	int y = this->Interactor->GetEventPosition()[1];
-	this->FindPokedRenderer(x, y);
-	if (this->CurrentRenderer == NULL)
-	{
-		return;
-	}
-}
-*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
@@ -447,76 +421,6 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 	if (dir != 0) dir /= abs(dir);
 	return dir;
 }
-
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::DecValue()
-{
-	double AvgRadius = this->GetAvgRadius();
-	double AvgDiffAngle = this->GetAvgDiffAngle();
-	
-	//Modification can be fine or rough, depending on avg radius and diff angle.
-	//Think about an algorithm.
-}
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::IncValue()
-{
-
-	if(this->TextActor)
-	{
-		//Ensure there is a number
-		if (this->TextDefaultMsg)
-		{
-			this->TextActor->SetInput("1");		//Set to 0 in the future. This is only to check buttons. Also, create field with message (avoid hardcoding)
-			TextDefaultMsg = false;
-			TextHasUnsavedChanges = true;
-		}
-
-		double AvgRadius = this->GetAvgRadius();
-		double AvgDiffAngle = this->GetAvgDiffAngle();
-
-		double newNum = vtkVariant(this->TextActor->GetInput()).ToDouble();
-
-		//Debug purposes
-		vtkErrorMacro(<< "AvgRadius:    " << AvgRadius);
-		vtkErrorMacro(<< "AvgDiffAngle: " << AvgDiffAngle);
-
-
-		//Modification can be fine or rough, depending on avg radius and avg diff angle.
-		//Think about an algorithm.
-
-		if (AvgRadius > 0.5)	//Outer circle. Decimal adjust
-		{
-			if (AvgDiffAngle > 20.)	//TODO adjust values.
-			{	//Fast swipe
-				newNum += 0.1;
-			}
-			else if (AvgDiffAngle > 1.)
-			{	//Slow swipe
-				newNum += 0.01;
-			}
-			//else no swipe
-		}
-		else	//Inner circle. Integer adjust.
-		{
-			if (AvgDiffAngle > 25.)	//TODO adjust values.
-			{	//Fast swipe
-				newNum += 10;
-			}
-			else if (AvgDiffAngle > 1.)
-			{	//Slow swipe
-				newNum += 1;
-			}
-			//else no swipe
-		}
-		//else, too close to the center. Do nothing.
-		this->TextActor->SetInput(vtkVariant(newNum).ToString());
-
-		//Start tracking next set of movements
-		this->FlushValues();
-	}
-}
-*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
