@@ -746,6 +746,7 @@ public:
   virtual void PanEvent();
   virtual void EndPanEvent();
   virtual void TapEvent();
+	virtual void UntapEvent();
   virtual void LongTapEvent();
   virtual void SwipeEvent();
   //@}

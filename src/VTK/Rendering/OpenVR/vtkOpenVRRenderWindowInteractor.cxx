@@ -181,7 +181,7 @@ void vtkOpenVRRenderWindowInteractor::UpdateTouchPadPosition(
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
+void vtkOpenVRRenderWindowInteractor::TapEvent()
 {
 	if (!this->Enabled)
 	{
@@ -213,7 +213,7 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 
 }
 
-void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
+void vtkOpenVRRenderWindowInteractor::UntapEvent()
 {
 	if (!this->Enabled)
 	{
@@ -237,7 +237,7 @@ void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 			this->RecognizeGestures = true;
 			this->IsTap = false;
 			//Call the event
-			this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
+			this->InvokeEvent(vtkCommand::UntapEvent, NULL);
 		}
 		//Other cases:
 		// - No active controller. Untapped controller with inactive touchpad.
@@ -429,14 +429,14 @@ void vtkOpenVRRenderWindowInteractor::DoOneEvent(vtkOpenVRRenderWindow *renWin, 
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
-						this->TouchPadTouchEvent();
+						this->TapEvent();
 					}
 				}
         if (event.eventType == vr::VREvent_ButtonUntouch)
 				{
 					if (event.data.controller.button == vr::EVRButtonId::k_EButton_SteamVR_Touchpad)	// = k_EButton_Axis0
 					{
-						this->TouchPadUntouchEvent();
+						this->UntapEvent();
 					}
 				}
       }

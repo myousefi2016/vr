@@ -1369,6 +1369,17 @@ void vtkRenderWindowInteractor::TapEvent()
   }
   this->InvokeEvent(vtkCommand::TapEvent, NULL);
 }
+
+//------------------------------------------------------------------
+void vtkRenderWindowInteractor::UntapEvent()
+{
+	if (!this->Enabled)
+	{
+		return;
+	}
+	this->InvokeEvent(vtkCommand::UntapEvent, NULL);
+}
+
 //------------------------------------------------------------------
 void vtkRenderWindowInteractor::LongTapEvent()
 {

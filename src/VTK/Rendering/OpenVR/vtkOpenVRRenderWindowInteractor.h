@@ -83,8 +83,8 @@ public:
 	/**
 	* Handlers for Touch/Untouch Touchpad Events.
 	*/
-	virtual void TouchPadTouchEvent();
-	virtual void TouchPadUntouchEvent();
+	void TapEvent() VTK_OVERRIDE;
+	void UntapEvent() VTK_OVERRIDE;
 	//@}
 
 	vtkGetMacro(PointerIndexLastTouchpad,int)
