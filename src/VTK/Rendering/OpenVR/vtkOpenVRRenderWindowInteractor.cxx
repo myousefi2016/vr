@@ -188,52 +188,29 @@ void vtkOpenVRRenderWindowInteractor::TouchPadTouchEvent()
 		return;
 	}
 
-
-	if (this->RecognizeGestures)
+	//First touch. Nothing was being touched before.
+	if (this->PointerIndexLastTouchpad == -1)
 	{
-		//First touch. Nothing was being touched before.
-		if (this->PointerIndexLastTouchpad == -1)
+		//Store controller index
+		this->PointerIndexLastTouchpad = this->PointerIndex;
+		//To execute OnMouseMove on the DoOneEvent() loop.
+		if (!this->PointersDown[this->PointerIndex])
 		{
-			//Store controller index
-			this->PointerIndexLastTouchpad = this->PointerIndex;
-			//To execute OnMouseMove on the DoOneEvent() loop.
-			if (!this->PointersDown[this->PointerIndex])
-			{
-				this->PointersDown[this->PointerIndex] = 1;
-				this->PointersDownCount++;
-			}
-			//To avoid conflicts with Pan/Pinch/..
-			this->RecognizeGestures = false;
-			this->IsTap = true;
-			//Call the event
-			this->InvokeEvent(vtkCommand::TapEvent, NULL);
+			this->PointersDown[this->PointerIndex] = 1;
+			this->PointersDownCount++;
 		}
-		//Touchpad from the other controller was being touched.
-		else if (this->PointerIndex != this->PointerIndexLastTouchpad)
-		{
-			//this->PointerIndexLastTouchpad = -1;
-			this->TouchPadUntouchEvent();
-			//----From this line, code equal to the previous case!!-----//
-			//Store controller index
-			this->PointerIndexLastTouchpad = this->PointerIndex;
-			//To execute OnMouseMove on the DoOneEvent() loop.
-			if (!this->PointersDown[this->PointerIndex])
-			{
-				this->PointersDown[this->PointerIndex] = 1;
-				this->PointersDownCount++;
-			}
-			//To avoid conflicts with Pan/Pinch/..
-			this->RecognizeGestures = false;
-			this->IsTap = true;
-			//Call the event
-			this->InvokeEvent(vtkCommand::TapEvent, NULL);
-		}
-		//Touchpad from the same controller was being touched.
-		//else
-		//{
-		// Not considered right now...
-		//}
+		//To avoid conflicts with Pan/Pinch/..
+		this->RecognizeGestures = false;
+		this->IsTap = true;
+		//Call the event
+		this->InvokeEvent(vtkCommand::TapEvent, NULL);
 	}
+	//Touchpad from the same controller was being touched.
+	else if(this->PointerIndexLastTouchpad == this->PointerIndex)
+	{
+		vtkErrorMacro(<< "Multitouch in same touchpad not supported.");
+	}
+
 }
 
 void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
@@ -256,33 +233,22 @@ void vtkOpenVRRenderWindowInteractor::TouchPadUntouchEvent()
 				this->PointersDown[this->PointerIndex] = 0;
 				this->PointersDownCount--;
 			}
-			//To avoid conflicts with Pan/Pinch/..
+			//To avoid conflicts with Pan/Pinch/.. and with pressing on the other touchpad.
 			this->RecognizeGestures = true;
 			this->IsTap = false;
 			//Call the event
 			this->InvokeEvent(vtkCommand::EndTapEvent, NULL);
 		}
-		else    //Both conditions inside are the same!! merge!!
+		//Other cases:
+		// - No active controller. Untapped controller with inactive touchpad.
+		// - From inactive controller. The other controller must remain active.
+		else
 		{
-			//No active controller. Untapped controller with inactive touchpad.
-			if (this->PointerIndexLastTouchpad == -1)
+			//To execute OnMouseMove on the DoOneEvent() loop.
+			if (this->PointersDown[this->PointerIndex])
 			{
-				//To execute OnMouseMove on the DoOneEvent() loop.
-				if (this->PointersDown[this->PointerIndex])
-				{
-					this->PointersDown[this->PointerIndex] = 0;
-					this->PointersDownCount--;
-				}
-			}
-			//From inactive controller. The other controller must remain active.
-			else
-			{
-				//To execute OnMouseMove on the DoOneEvent() loop.
-				if (this->PointersDown[this->PointerIndex])
-				{
-					this->PointersDown[this->PointerIndex] = 0;
-					this->PointersDownCount--;
-				}
+				this->PointersDown[this->PointerIndex] = 0;
+				this->PointersDownCount--;
 			}
 		}
 	}
