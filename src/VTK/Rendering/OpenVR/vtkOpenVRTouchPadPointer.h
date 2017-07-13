@@ -54,19 +54,16 @@ public:
 	vtkSetMacro(PointerActor, vtkActor*)
 	vtkGetMacro(PointerRenderer, vtkRenderer*)
 	vtkSetMacro(PointerRenderer, vtkRenderer*)
-	vtkSetVector3Macro(PointerColor, double);
-	vtkGetVector3Macro(PointerColor, double);
 	
 protected:
 	vtkOpenVRTouchPadPointer();
   ~vtkOpenVRTouchPadPointer() VTK_OVERRIDE;
 
 	//To change this sphere and use a cylinder or other element.
-	vtkSphereSource *PointerSource;
+	vtkSphereSource *PointerSource;		//vtkSphereSource *PointerSource;
 	vtkPolyDataMapper *PointerMapper;
 	vtkActor *PointerActor;
 	vtkRenderer *PointerRenderer;
-	double PointerColor[3];
 
 private:
 	vtkOpenVRTouchPadPointer(const vtkOpenVRTouchPadPointer&) VTK_DELETE_FUNCTION;  // Not implemented.
