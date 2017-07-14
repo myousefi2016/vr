@@ -29,9 +29,6 @@
 #include "vtkMatrix3x3.h"
 #include "vtkTransform.h"
 #include "vtkCamera.h"
-#include "vtkPolyDataMapper.h"
-#include "vtkSphereSource.h"
-#include "vtkProperty.h"
 
 vtkStandardNewMacro(vtkInteractorStyle3D);
 
@@ -61,7 +58,6 @@ vtkInteractorStyle3D::~vtkInteractorStyle3D()
 //----------------------------------------------------------------------------
 void vtkInteractorStyle3D::OnMouseMove()
 {
-	vtkErrorMacro(<< "OnMouseMove() from vtkIS3D");
   int x = this->Interactor->GetEventPosition()[0];
   int y = this->Interactor->GetEventPosition()[1];
 

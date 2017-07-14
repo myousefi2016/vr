@@ -33,13 +33,6 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRPropertyModifier.h"
 
-#include "vtkImageActor.h"
-#include "vtkImageReader2.h"
-#include "vtkImageSliceMapper.h"
-#include "vtkPNGReader.h"
-#include "vtkActor2D.h"
-#include "vtkStringArray.h"
-
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"

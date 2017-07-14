@@ -19,12 +19,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 
-#include "vtkTextActor3D.h"
-#include "vtkTextProperty.h"
-#include "vtkRenderer.h"
-#include "vtkTextSource.h"
 #include "vtkStringArray.h"
-
 #include "vtkPNGReader.h"
 #include "vtkImageActor.h"
 #include "vtkImageSliceMapper.h"

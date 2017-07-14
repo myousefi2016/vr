@@ -34,13 +34,6 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRPropertyModifier.h"
 
-#include "vtkImageActor.h"
-#include "vtkImageReader2.h"
-#include "vtkImageSliceMapper.h"
-#include "vtkPNGReader.h"
-#include "vtkActor2D.h"
-#include "vtkStringArray.h"
-
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
@@ -56,20 +49,7 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
 	//Images
-	/*//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
-	this->ImgReader = vtkPNGReader::New();
-	this->HasImage = true;
-	this->NextImage = 0;
-
-	//In this class, only one image needed.
-	this->ImgReader->SetFileName("..\\..\\..\\VTK\\Rendering\\OpenVR\\PressDial_Image0.png");
-	ImgReader->Update();
-
-	this->ImgActor = vtkImageActor::New();
-	this->ImgActor->GetMapper()->SetInputData(this->ImgReader->GetOutput());
-	this->ImgActor->PickableOff();
-	this->ImgActor->DragableOff();
-	this->ImgRenderer = NULL;*/
+	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\TapDial_Image0.png");
 	this->TouchPadImage->Init();
@@ -98,20 +78,6 @@ vtkOpenVRInteractorStyleTapDial::~vtkOpenVRInteractorStyleTapDial()
 	}
 
 	//Remove Image:
-	/*this->SetTouchPadImage(false);
-	if (this->ImgActor)
-	{
-		this->ImgActor->Delete();
-	}
-	if (this->ImgReader)
-	{
-		this->ImgReader->Delete();
-	}
-	//It may cause problems (deleted in other places). Think about removing :
-	if (this->ImgRenderer)
-	{
-		this->ImgRenderer->Delete();
-	}*/
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();

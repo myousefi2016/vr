@@ -23,7 +23,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
 
-#include <vector>
 #include <deque>
 #include <utility>	//std::pair
 #include <iterator>
@@ -35,9 +34,12 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRRenderer.h"
 #include "vtkOpenVRCamera.h"
 #include "vtkVariant.h"
-#include "vtkPNGReader.h"
-#include "vtkImageActor.h"
-#include "vtkImageMapper3D.h"
+
+#include "vtkSphereSource.h"
+#include "vtkProperty.h"
+#include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
+
+#include "vtkOpenVRPropertyModifier.h"
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
@@ -81,6 +83,9 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
+
+	//tests
+	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 }
 
 //----------------------------------------------------------------------------
@@ -190,6 +195,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		}
 
 		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newValue).ToString());
+
+		//test:
+		vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+		this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
 	}
 }
 
@@ -229,7 +238,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 			this->TextFeedback->SetTextIsVisible(false);
 
 			//Test:
-			//this->ShowTestActor(false);
+			this->ShowTestActor(false);
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -261,7 +270,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			//this->ShowTestActor(true);
+			this->ShowTestActor(true);
 		}
 
 	}
@@ -499,6 +508,10 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
 		this->TextFeedback->SetHasUnsavedChanges(true);
 
+		//test:
+		vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+		this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+
 		//Start tracking next set of movements
 		this->FlushValues();
 	}
@@ -516,3 +529,83 @@ void vtkOpenVRInteractorStyleSwipeDial::PrintSelf(ostream& os, vtkIndent indent)
 }
 
 
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyleSwipeDial::ShowTestActor(bool on)
+{
+	//Get prop data:
+	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
+	vtkRenderer *testRenderer = this->FieldModifier->GetTestRenderer();
+	vtkPolyDataMapper *testMapper = this->FieldModifier->GetTestMapper();
+	vtkActor *testActor = this->FieldModifier->GetTestActor();
+
+
+	//current renderer
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+														this->Interactor->GetEventPositions(pointer)[1]);
+	}
+
+	//to disable it
+	if (!on)
+	{
+		if (testRenderer != NULL && testActor)
+		{
+			testRenderer->RemoveActor(testActor);
+			this->FieldModifier->SetTestRenderer(NULL);
+		}
+	}
+	//to enable it
+	else
+	{
+		//check if it is already active
+		if (!testActor)
+		{
+			//create and place in coordinates.
+			testSource->SetPhiResolution(50);
+			testSource->SetThetaResolution(50);
+			testActor = vtkActor::New();
+			this->FieldModifier->SetTestActor(testActor);
+			testActor->PickableOff();
+			testActor->DragableOff();
+			testActor->SetMapper(testMapper);
+			testActor->GetProperty()->SetAmbient(1.0);
+			testActor->GetProperty()->SetDiffuse(0.0);
+		}
+
+		//check if used different renderer to previous visualization
+		if (this->CurrentRenderer != testRenderer)
+		{
+			if (testRenderer != NULL && testActor)
+			{
+				testRenderer->RemoveActor(testActor);
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddActor(testActor);
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->FieldModifier->SetTestRenderer(this->CurrentRenderer);
+		}
+
+		vtkOpenVRRenderWindowInteractor *rwi =
+			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
+		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+
+		double wscale = camera->GetDistance();                                 //Scale
+		this->TouchPadPointer->GetPointerSource()->SetRadius(.01*wscale);	//Pointer radius
+
+		this->TouchPadPointer->GetPointerSource()->SetCenter(0., 0., 0.);
+	}
+
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
+}

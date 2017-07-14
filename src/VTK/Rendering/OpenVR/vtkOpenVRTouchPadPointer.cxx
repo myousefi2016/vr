@@ -19,12 +19,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 
-#include "vtkTextActor3D.h"
-#include "vtkTextProperty.h"
-#include "vtkRenderer.h"
-#include "vtkTextSource.h"
-#include "vtkStringArray.h"
-
 #include "vtkProperty.h"
 
 #include "vtkPolyDataMapper.h"
@@ -33,7 +27,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
 #include "vtkOpenVRInteractorStyleInputData.h"
-#include "vtkQuaternion.h"
 
 vtkStandardNewMacro(vtkOpenVRTouchPadPointer);
 

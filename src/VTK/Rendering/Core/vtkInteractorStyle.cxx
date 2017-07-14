@@ -32,7 +32,6 @@
 #include "vtkRenderer.h"
 #include "vtkEventForwarderCommand.h"
 #include "vtkTDxInteractorStyleCamera.h"
-#include "vtkSphereSource.h"
 
 vtkStandardNewMacro(vtkInteractorStyle);
 vtkCxxSetObjectMacro(vtkInteractorStyle,TDxStyle,vtkTDxInteractorStyle);

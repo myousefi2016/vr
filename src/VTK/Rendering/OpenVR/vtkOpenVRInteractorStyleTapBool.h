@@ -69,16 +69,11 @@ protected:
   vtkOpenVRInteractorStyleTapBool();
   ~vtkOpenVRInteractorStyleTapBool() VTK_OVERRIDE;
 
-  //Text3D to modify Props' attributes.
-//	vtkOpenVRTextFeedback *TextFeedback;
 
   vtkOpenVRPropertyModifier *FieldModifier;
   //Used along with vtkOpenVRPropertyModifier:
   virtual void ShowTestActor(bool on);
-
-	//Images
-//  vtkOpenVRTouchPadImage *TouchPadImage;
-
+	
 private:
   vtkOpenVRInteractorStyleTapBool(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.

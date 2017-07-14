@@ -22,7 +22,6 @@
 #include "vtkRendererCollection.h"
 #include "vtkInteractorStyle3D.h"
 
-#include "vtkActor.h"
 #include "vtkObjectFactory.h"
 #include "vtkCommand.h"
 #include "vtkNew.h"

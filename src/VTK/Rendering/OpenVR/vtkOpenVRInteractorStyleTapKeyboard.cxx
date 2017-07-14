@@ -33,10 +33,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkPolyDataMapper.h"
 
 #include "vtkOpenVRPropertyModifier.h"
-#include "vtkPNGReader.h"
-#include "vtkStringArray.h"
-#include "vtkImageMapper3D.h"
-#include "vtkImageActor.h"
+
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"

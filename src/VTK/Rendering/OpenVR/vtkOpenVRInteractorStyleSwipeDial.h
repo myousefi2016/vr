@@ -26,6 +26,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 class vtkDequeAngleRadius;
 class vtkOpenVRTextFeedback;
+class vtkOpenVRPropertyModifier;
 
 #define MAX_REC 5
 
@@ -76,6 +77,10 @@ protected:
 	vtkDequeAngleRadius *AngleRadiusRecord;
 	bool AbsoluteInc;	//absolute/relative increments
 
+
+	vtkOpenVRPropertyModifier *FieldModifier;
+	//Used along with vtkOpenVRPropertyModifier:
+	virtual void ShowTestActor(bool on);
 
 private:
   vtkOpenVRInteractorStyleSwipeDial(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;  // Not implemented.
