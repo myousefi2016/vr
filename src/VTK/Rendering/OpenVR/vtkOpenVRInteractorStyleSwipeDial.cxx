@@ -133,6 +133,15 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		double newValue = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToDouble();
 
+		if (radius > .5 && region == 3)
+		{
+			AbsoluteInc = true;
+		}
+		else if (radius > .5 && region == 12)
+		{
+			AbsoluteInc = false;
+		}
+
 		if (radius > .65)
 		{
 			switch(region)
@@ -145,8 +154,6 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 			case 7:		newValue *= 8;				break;
 			case 9:		newValue /= 4;				break;
 			case 8:		newValue /= 8;				break;
-			case 3:		AbsoluteInc = true;		break;
-			case 12:	AbsoluteInc = false;	break;
 			default: break;
 			}
 
@@ -169,12 +176,12 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		}
 		else
 		{
-			if(region < 8)	// Accept value
+			if(region >+ 4 && region <= 7)	// Accept value
 			{
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
 				this->TextFeedback->SetHasUnsavedChanges(false);
 			}
-			else			// Restore default: 0
+			else if(region >= 8 && region <= 11)			// Restore default: 0
 			{
 				newValue = 0;	//Add field with the value (as a string?)
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
