@@ -30,6 +30,12 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkSphereSource.h"
 #include "vtkPolyDataMapper.h"
 
+#include "vtkOpenVRRenderWindowInteractor.h"
+#include "vtkOpenVRRenderer.h"
+#include "vtkInteractorStyle3D.h"
+#include "vtkOpenVRInteractorStyleInputData.h"
+#include "vtkOpenVRCamera.h"
+
 vtkStandardNewMacro(vtkOpenVRPropertyModifier);
 
 //----------------------------------------------------------------------------
@@ -40,7 +46,6 @@ vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 	this->TestActor = NULL;
 	this->TestMapper = vtkPolyDataMapper::New();
 	this->TestRenderer = NULL;
-	this->TestOn = false;
 
 	if (this->TestMapper && this->TestSource)
 	{
@@ -109,6 +114,75 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	// Add cases as desired. Remenber to add the vtkProp in the enum class!
 	default:
 		vtkErrorMacro(<< "vtkField not recognized.");
+	}
+}
+
+void vtkOpenVRPropertyModifier::InitTest()
+{
+	//create and place in coordinates.
+	TestSource->SetPhiResolution(20);
+	TestSource->SetThetaResolution(20);
+	TestActor = vtkActor::New();
+	TestActor->PickableOff();
+	TestActor->DragableOff();
+	TestActor->SetMapper(TestMapper);
+	TestActor->GetProperty()->SetAmbient(1.0);
+	TestActor->GetProperty()->SetDiffuse(0.0);
+}
+
+void vtkOpenVRPropertyModifier::ShowTest(vtkOpenVRRenderWindowInteractor *rwi)
+{
+	//Current renderer
+	vtkOpenVRRenderer *ren = NULL;
+	vtkInteractorStyle3D *ist = NULL;
+	vtkOpenVRCamera *cam = NULL;
+	int pointer;
+	if (rwi)
+	{
+		int pointer = rwi->GetPointerIndex();		//pointer = rwi->GetPointerIndexLastTouchpad();
+		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(rwi->GetEventPositions(pointer)[0],
+																																 rwi->GetEventPositions(pointer)[1]));
+		ist = vtkOpenVRInteractorStyleInputData::SafeDownCast(rwi->GetInteractorStyle());
+		cam = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+	}
+	else return;
+	
+	//check if it is already active
+	if (!TestActor)
+	{
+		this->InitTest();
+	}
+
+	//check if used different renderer to previous visualization
+	if (ren != TestRenderer)
+	{
+		if (TestRenderer != NULL && TestActor)
+		{
+			TestRenderer->RemoveActor(TestActor);
+		}
+		if (ren)
+		{
+			ren->AddActor(TestActor);
+		}
+		else
+		{
+			vtkWarningMacro(<< "no current renderer on the interactor style.");
+		}
+		this->TestRenderer = ren;
+	}
+	
+	if (rwi)
+	{
+		rwi->Render();
+	}
+}
+
+void vtkOpenVRPropertyModifier::HideTest()
+{
+	if (TestRenderer != NULL && TestActor)
+	{
+		TestRenderer->RemoveActor(TestActor);
+		this->TestRenderer = NULL;
 	}
 }
 

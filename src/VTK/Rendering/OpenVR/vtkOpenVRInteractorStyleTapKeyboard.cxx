@@ -259,8 +259,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 			}
 			if (newChar != '\0')
 			{
-				vtkErrorMacro(<< "Letter pressed: " << newChar);	// Just for debugging purposes.
-
 				newText += vtkVariant(newChar).ToString();
 				this->TextFeedback->GetTextActor()->SetInput(newText);
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
@@ -270,8 +268,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 		else {
 			if (x <= 0 && y <= 0)		//Caps
 			{
-				vtkErrorMacro(<< "\"Caps\" pressed");	// Just for debugging purposes.
-
 				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
 				if (newText.compare("") == 0)
 				{
@@ -283,8 +279,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 			}
 			else if (x < 0 && y>0)		//Delete last
 			{
-				vtkErrorMacro(<< "\"Remove last digit\" pressed");	// Just for debugging purposes.
-
 				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
 				if (newText.length() <= 1)
 				{
@@ -303,9 +297,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 			else if (x > 0 && y < 0)	//Whitespace
 			{
 				newChar = ' ';
-
-				vtkErrorMacro(<< "\"Whitespace\" pressed");	// Just for debugging purposes.
-
 				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(newChar).ToString();
 				this->TextFeedback->GetTextActor()->SetInput(newText);
 				this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
@@ -313,10 +304,7 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 
 			}
 			else	//Accept value.
-			{
-				vtkErrorMacro(<< "\"Validate number\" pressed. Region: " << region);	// Just for debugging purposes.
-					
-				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
+			{				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
 				if (newText.compare("") == 0)
 				{
 					this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
@@ -356,20 +344,10 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
 		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
+		this->TextFeedback->Reset();
 
-		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
-		{
-			//Remove from renderer
-			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
-			this->TextFeedback->SetTextRenderer(NULL);
-			//Restore initial values
-			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->SetDefaultMsgOn(true);
-			this->TextFeedback->SetTextIsVisible(false);
-
-			//Test:
-			//this->ShowTestActor(false);
-		}
+		//Test:
+		//this->FieldModifier->HideTest();
 	}
 	//Either or is not created or has changes or is not shown
 	else
@@ -400,7 +378,7 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			//this->ShowTestActor(true);
+			//this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 		}
 
 	}
@@ -479,86 +457,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::DecNextImage()
 		--nextImg;
 	}
 	this->TouchPadImage->SetNextImage(nextImg);
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleTapKeyboard::ShowTestActor(bool on)
-{
-	//Get prop data:
-	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-	vtkRenderer *testRenderer = this->FieldModifier->GetTestRenderer();
-	vtkPolyDataMapper *testMapper = this->FieldModifier->GetTestMapper();
-	vtkActor *testActor = this->FieldModifier->GetTestActor();
-
-
-		//current renderer
-		if (this->Interactor)
-		{
-			int pointer = this->Interactor->GetPointerIndex();
-			this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-				this->Interactor->GetEventPositions(pointer)[1]);
-		}
-
-	//to disable it
-	if (!on)
-	{
-		if (testRenderer != NULL && testActor)
-		{
-			testRenderer->RemoveActor(testActor);
-			this->FieldModifier->SetTestRenderer(NULL);
-		}
-	}
-	//to enable it
-	else
-	{
-		//check if it is already active
-		if (!testActor)
-		{
-			//create and place in coordinates.
-			testSource->SetPhiResolution(50);
-			testSource->SetThetaResolution(50);
-			testActor = vtkActor::New();
-			this->FieldModifier->SetTestActor(testActor);
-			testActor->PickableOff();
-			testActor->DragableOff();
-			testActor->SetMapper(testMapper);
-			testActor->GetProperty()->SetAmbient(1.0);
-			testActor->GetProperty()->SetDiffuse(0.0);
-		}
-
-		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != testRenderer)
-		{
-			if (testRenderer != NULL && testActor)
-			{
-				testRenderer->RemoveActor(testActor);
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddActor(testActor);
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->FieldModifier->SetTestRenderer(this->CurrentRenderer);
-		}
-
-		vtkOpenVRRenderWindowInteractor *rwi =
-			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
-		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
-		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
-		double wscale = camera->GetDistance();                                 //Scale
-		this->TouchPadPointer->GetPointerSource()->SetRadius(.01*wscale);	//Pointer radius
-
-		this->TouchPadPointer->GetPointerSource()->SetCenter(0.,0.,0.);
-	}
-
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
 }
 
 //----------------------------------------------------------------------------

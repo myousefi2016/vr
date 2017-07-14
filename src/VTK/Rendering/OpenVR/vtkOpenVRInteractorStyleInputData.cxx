@@ -27,9 +27,10 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
+#include "vtkOpenVRTextFeedback.h"
+#include "vtkOpenVRPropertyModifier.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleInputData);
-
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
@@ -37,7 +38,8 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 	//pointers will be constructed in inherited classes, this is an interface class.
 	this->TouchPadPointer = NULL;
 	this->TouchPadImage = NULL;
-	this->TextFeedback = NULL;	
+	this->TextFeedback = NULL;
+	this->FieldModifier = NULL;
 }
 
 //----------------------------------------------------------------------------
@@ -63,7 +65,6 @@ void vtkOpenVRInteractorStyleInputData::OnMiddleButtonUp()
   ovl->LoadNextCameraPose();
 }
 
-
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnTap()
 {
@@ -76,11 +77,9 @@ void vtkOpenVRInteractorStyleInputData::OnTap()
 		return;
 	}
 
-	//this->SetTouchPadPointer(true);
 	vtkOpenVRRenderWindowInteractor *rwi = vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor);
 	this->TouchPadPointer->Attach(rwi);
 	this->TouchPadImage->Attach(rwi);
-	//Maybe need to ad here Move() also?? to avoid jumps at the beginning
 
 	this->GrabFocus(this->EventCallbackCommand);
 	this->StartTap();
@@ -159,6 +158,30 @@ void vtkOpenVRInteractorStyleInputData::DecNextImage()
 	else
 	{
 		this->TouchPadImage->SetNextImage(--nextImg);
+	}
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyleInputData::Reset()
+{
+	if (this->TextFeedback)
+	{
+		this->TextFeedback->Reset();
+	}
+	
+	if (this->TouchPadPointer)
+	{
+		this->TouchPadPointer->Detach();
+	}
+
+	if (this->TouchPadImage)
+	{
+		this->TouchPadImage->Detach();
+	}
+	
+	if (this->FieldModifier)
+	{
+		this->FieldModifier->HideTest();
 	}
 }
 

@@ -17,37 +17,41 @@
  * @brief   class to swap between interactory styles in OpenVR
  *
  * The class vtkOpenVRInteractorStyleSwitchInput allows handles interactively
- * switching between OpenVR interactor styles used to input data -- 
- * TO END DESCRIPTION, USE TEMPLATE FROM vtkInteractorStyleSwitch
+ * switching between OpenVR interactor styles used to input data from VR
+ * devices supported by OpenVR.
+ * 
  * @sa
- * vtkOpenVRInteractorStylePressDial vtkOpenVRInteractorStylePressKeypad
- * vtkOpenVRInteractorStyleSwipeDial vtkOpenVRInteractorStyleSwipeKeypad
+ * vtkOpenVRInteractorStyleTapDial vtkOpenVRInteractorStyleTapKeyboard
+ * vtkOpenVRInteractorStyleTapBool vtkOpenVRInteractorStyleSwipeDial
 */
 
 #ifndef vtkOpenVRInteractorStyleSwitchInput_h
 #define vtkOpenVRInteractorStyleSwitchInput_h
 
 #include "vtkInteractionStyleModule.h" // For export macro
-#include "vtkInteractorStyleSwitchBase.h"
+#include "vtkOpenVRInteractorStyleSwitchBase.h"
 
+//Layouts
 #define VTKIS_DIAL  0
-#define VTKIS_KEYPAD 1
+#define VTKIS_KEYBOARD 1
+#define VTKIS_BOOL 2
 
-#define VTKIS_PRESS    0
+//Gestures
+#define VTKIS_TAP    0
 #define VTKIS_SWIPE     1
 
-class vtkOpenVRInteractorStylePressDial;
-class vtkOpenVRInteractorStylePressKeypad;
+class vtkOpenVRInteractorStyleTapDial;
+class vtkOpenVRInteractorStyleTapKeyboard;
+class vtkOpenVRInteractorStyleTapBool;
 class vtkOpenVRInteractorStyleSwipeDial;
-class vtkOpenVRInteractorStyleSwipeKeypad;
 class vtkInteractorStyleMultiTouchCamera;
 
-class VTKINTERACTIONSTYLE_EXPORT vtkOpenVRInteractorStyleSwitchInput
-  : public vtkInteractorStyleSwitchBase
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwitchInput
+  : public vtkOpenVRInteractorStyleSwitchBase
 {
 public:
   static vtkOpenVRInteractorStyleSwitchInput *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleSwitchInput, vtkInteractorStyleSwitchBase);
+  vtkTypeMacro(vtkOpenVRInteractorStyleSwitchInput, vtkOpenVRInteractorStyleSwitchBase);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   /**
@@ -66,18 +70,19 @@ public:
    * Set/Get current style
    */
   vtkGetObjectMacro(CurrentStyle, vtkInteractorStyle);
-  void SetCurrentStyleToPressDial();
-  void SetCurrentStyleToPressKeypad();
-  void SetCurrentStyleToSwipeDial();	// FW/RW
-  void SetCurrentStyleToSwipeKeypad();	// Draw numbers, letters.
+  void SetCurrentStyleToTapDial();
+  void SetCurrentStyleToTapKeyboard();
+	void SetCurrentStyleToTapBool();
+  void SetCurrentStyleToSwipeDial();
   void SetCurrentStyleToMultiTouchCamera();
   //@}
 
   /**
-   * Only care about the char event, which is used to switch between
+   * Only care about the Trigger event event, which is used to switch between
    * different styles.
    */
-  void OnChar() VTK_OVERRIDE;
+  void OnLeftButtonDown() VTK_OVERRIDE;
+	void OnLeftButtonUp() VTK_OVERRIDE;
 
   //@{
   /**
@@ -94,15 +99,15 @@ protected:
 
   void SetCurrentStyle();
 
-  vtkOpenVRInteractorStylePressDial *PressDial;
-  vtkOpenVRInteractorStylePressKeypad *PressKeypad;
+	vtkOpenVRInteractorStyleTapDial *TapDial;
+	vtkOpenVRInteractorStyleTapKeyboard *TapKeyboard;
+	vtkOpenVRInteractorStyleTapBool *TapBool;
   vtkOpenVRInteractorStyleSwipeDial *SwipeDial;
-  vtkOpenVRInteractorStyleSwipeKeypad *SwipeKeypad;
   vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
 
-  int PressOrSwipe;
-  int DialOrKeypad;
+  int Gesture;
+  int Layout;
   bool MultiTouch;
 
 private:

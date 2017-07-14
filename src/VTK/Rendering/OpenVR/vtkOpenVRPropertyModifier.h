@@ -57,6 +57,7 @@ class vtkSphereSource;	//For dummy test
 class vtkPolyDataMapper;
 class vtkActor;
 class vtkRenderer;
+class vtkOpenVRRenderWindowInteractor;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
 {
@@ -69,16 +70,12 @@ public:
 	// the most general class which has the field to modify
   virtual void ModifyProperty(vtkObject *obj, vtkField field, char* value);
 
-  vtkSetMacro(TestSource, vtkSphereSource*);
   vtkGetMacro(TestSource, vtkSphereSource*);
-  vtkSetMacro(TestMapper, vtkPolyDataMapper*);
-  vtkGetMacro(TestMapper, vtkPolyDataMapper*);
-  vtkSetMacro(TestActor, vtkActor*);
-  vtkGetMacro(TestActor, vtkActor*);
-  vtkSetMacro(TestRenderer, vtkRenderer*);
-  vtkGetMacro(TestRenderer, vtkRenderer*);
-  vtkSetMacro(TestOn, bool);
-  vtkGetMacro(TestOn, bool);
+
+	//test:
+	virtual void InitTest();
+	virtual void ShowTest(vtkOpenVRRenderWindowInteractor *rwi);
+	virtual void HideTest();
 
 protected:
   vtkOpenVRPropertyModifier();
@@ -89,7 +86,6 @@ protected:
   vtkPolyDataMapper *TestMapper;
   vtkActor *TestActor;
   vtkRenderer *TestRenderer;
-  bool TestOn;
 
 private:
   vtkOpenVRPropertyModifier(const vtkOpenVRPropertyModifier&) VTK_DELETE_FUNCTION;  // Not implemented.

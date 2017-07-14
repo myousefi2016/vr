@@ -37,6 +37,7 @@
 #include "vtkOpenVRInteractorStyleTapKeyboard.h"
 #include "vtkOpenVRInteractorStyleTapBool.h"
 #include "vtkOpenVRInteractorStyleSwipeDial.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRRenderWindowInteractor);
 
@@ -52,7 +53,9 @@ vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 	//vtkNew<vtkOpenVRInteractorStyleTapBool> style;				//OK
 	//vtkNew<vtkOpenVRInteractorStyleTapDial> style;				//OK
 	//vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;		//ok
-	vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;			//ok
+	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;			//ok
+	vtkNew<vtkOpenVRInteractorStyleSwitchInput> style;
+
 	this->SetInteractorStyle(style.Get());
 }
 

@@ -119,18 +119,12 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 		if (radius > .3)
 		{
 			//Display number, which is equal to region number
-			vtkErrorMacro(<< "Bool pressed: " << selBool);	// Just for debugging purposes.
-
-			//Actual code:
 			this->TextFeedback->GetTextActor()->SetInput(selBool);
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
 			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 		else
 		{
-			vtkErrorMacro(<< "\"Validate bool\" pressed.");	// Just for debugging purposes.
-
-			//Actual code:
 			vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
 			if (newText.compare("") == 0)
 			{
@@ -171,19 +165,9 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
 			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
-		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
-		{
-			//Remove from renderer
-			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
-			this->TextFeedback->SetTextRenderer(NULL);
-			//Restore initial values
-			this->TextFeedback->GetTextActor()->SetInput(this->TextFeedback->GetTextDefaultMsg());
-			this->TextFeedback->SetDefaultMsgOn(true);
-			this->TextFeedback->SetTextIsVisible(false);
-
-			//Test:
-			//this->ShowTestActor(false);
-		}
+		this->TextFeedback->Reset();
+		//Test:
+		//this->FieldModifier->HideTest();
 	}
 	//Either or is not created or has changes or is not shown
 	else
@@ -214,9 +198,8 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			//this->ShowTestActor(true);
+			//this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 		}
-
 	}
 	
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
@@ -256,86 +239,6 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleTapBool::ShowTestActor(bool on)
-{
-	//Get prop data:
-	vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-	vtkRenderer *testRenderer = this->FieldModifier->GetTestRenderer();
-	vtkPolyDataMapper *testMapper = this->FieldModifier->GetTestMapper();
-	vtkActor *testActor = this->FieldModifier->GetTestActor();
-
-
-		//current renderer
-		if (this->Interactor)
-		{
-			int pointer = this->Interactor->GetPointerIndex();
-			this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-				this->Interactor->GetEventPositions(pointer)[1]);
-		}
-
-	//to disable it
-	if (!on)
-	{
-		if (testRenderer != NULL && testActor)
-		{
-			testRenderer->RemoveActor(testActor);
-			this->FieldModifier->SetTestRenderer(NULL);
-		}
-	}
-	//to enable it
-	else
-	{
-		//check if it is already active
-		if (!testActor)
-		{
-			//create and place in coordinates.
-			testSource->SetPhiResolution(50);
-			testSource->SetThetaResolution(50);
-			testActor = vtkActor::New();
-			this->FieldModifier->SetTestActor(testActor);
-			testActor->PickableOff();
-			testActor->DragableOff();
-			testActor->SetMapper(testMapper);
-			testActor->GetProperty()->SetAmbient(1.0);
-			testActor->GetProperty()->SetDiffuse(0.0);
-		}
-
-		//check if used different renderer to previous visualization
-		if (this->CurrentRenderer != testRenderer)
-		{
-			if (testRenderer != NULL && testActor)
-			{
-				testRenderer->RemoveActor(testActor);
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddActor(testActor);
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->FieldModifier->SetTestRenderer(this->CurrentRenderer);
-		}
-
-		vtkOpenVRRenderWindowInteractor *rwi =
-			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
-		vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
-		vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
-		double wscale = camera->GetDistance();                                 //Scale
-		this->TouchPadPointer->GetPointerSource()->SetRadius(.01*wscale);	//Pointer radius
-
-		this->TouchPadPointer->GetPointerSource()->SetCenter(0.,0.,0.);
-	}
-
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
 }
 
 //----------------------------------------------------------------------------

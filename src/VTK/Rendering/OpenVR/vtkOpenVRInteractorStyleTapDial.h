@@ -66,13 +66,6 @@ protected:
   vtkOpenVRInteractorStyleTapDial();
   ~vtkOpenVRInteractorStyleTapDial() VTK_OVERRIDE;
 
-  //Text3D to modify Props' attributes.
-//	vtkOpenVRTextFeedback *TextFeedback;
-
-  vtkOpenVRPropertyModifier *FieldModifier;
-  //Used along with vtkOpenVRPropertyModifier:
-  virtual void ShowTestActor(bool on);
-
 private:
   vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.

@@ -27,6 +27,7 @@ PURPOSE.  See the above copyright notice for more information.
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
 class vtkOpenVRTouchPadPointer;
+class vtkOpenVRPropertyModifier;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleInputData : public vtkOpenVRInteractorStyle
 {
@@ -65,6 +66,9 @@ public:
 	//Swiping
 	virtual void TrackFinger() {}
 
+	//Disable all external elements active on the IS
+	virtual void Reset();
+
 
 protected:
   vtkOpenVRInteractorStyleInputData();
@@ -73,6 +77,7 @@ protected:
 	vtkOpenVRTouchPadPointer *TouchPadPointer;
 	vtkOpenVRTouchPadImage *TouchPadImage;
 	vtkOpenVRTextFeedback *TextFeedback;
+	vtkOpenVRPropertyModifier *FieldModifier;
 
 
 private:

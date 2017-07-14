@@ -33,7 +33,7 @@ vtkStandardNewMacro(vtkOpenVRTouchPadPointer);
 //----------------------------------------------------------------------------
 vtkOpenVRTouchPadPointer::vtkOpenVRTouchPadPointer()
 {
-	this->PointerSource = vtkSphereSource::New();			//this->PointerSource = vtkSphereSource::New();
+	this->PointerSource = vtkSphereSource::New();
 	this->PointerActor = NULL;
 	this->PointerMapper = vtkPolyDataMapper::New();
 

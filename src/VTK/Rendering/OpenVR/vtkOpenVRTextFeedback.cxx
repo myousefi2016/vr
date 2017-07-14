@@ -60,3 +60,22 @@ void vtkOpenVRTextFeedback::Init()
 	this->GetTextActor()->DragableOff();
 	this->GetTextActor()->GetTextProperty()->SetBackgroundOpacity(0.25);
 }
+
+void vtkOpenVRTextFeedback::Reset()
+{
+	if (this->TextActor)
+	{
+		//Restore initial values
+		this->TextActor->SetInput(this->TextDefaultMsg);
+		this->DefaultMsgOn = true;
+		this->TextIsVisible = false;
+		this->HasUnsavedChanges = false;
+	}
+
+	if (this->TextRenderer)
+	{
+		//Remove actor from renderer
+		this->TextRenderer->RemoveViewProp(this->TextActor);
+		this->TextRenderer = NULL;
+	}
+}

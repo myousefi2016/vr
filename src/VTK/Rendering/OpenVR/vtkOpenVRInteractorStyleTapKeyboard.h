@@ -70,15 +70,6 @@ protected:
 	vtkOpenVRInteractorStyleTapKeyboard();
   ~vtkOpenVRInteractorStyleTapKeyboard() VTK_OVERRIDE;
 
-  //Text3D to modify Props' attributes.
-//  vtkOpenVRTextFeedback *TextFeedback;
-  //Images
- // vtkOpenVRTouchPadImage *TouchPadImage;
-
-  vtkOpenVRPropertyModifier *FieldModifier;
-  //Used along with vtkOpenVRPropertyModifier:
-  virtual void ShowTestActor(bool on);
-
 private:
 	vtkOpenVRInteractorStyleTapKeyboard(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.

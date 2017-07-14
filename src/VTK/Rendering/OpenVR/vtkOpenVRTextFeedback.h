@@ -36,6 +36,7 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   virtual void Init();
+	virtual void Reset();
 
 	vtkGetMacro(TextActor, vtkTextActor3D*);
 	vtkSetMacro(TextActor, vtkTextActor3D*);

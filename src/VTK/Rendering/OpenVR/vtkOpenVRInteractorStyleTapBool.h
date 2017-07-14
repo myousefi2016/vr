@@ -63,17 +63,10 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-
-
 protected:
   vtkOpenVRInteractorStyleTapBool();
   ~vtkOpenVRInteractorStyleTapBool() VTK_OVERRIDE;
 
-
-  vtkOpenVRPropertyModifier *FieldModifier;
-  //Used along with vtkOpenVRPropertyModifier:
-  virtual void ShowTestActor(bool on);
-	
 private:
   vtkOpenVRInteractorStyleTapBool(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.

@@ -67,20 +67,14 @@ public:
 	virtual void UpdateValue();	
 
 	virtual void FlushValues();	//Empty records.
+
 protected:
   vtkOpenVRInteractorStyleSwipeDial();
   ~vtkOpenVRInteractorStyleSwipeDial() VTK_OVERRIDE;
   
-
-
 	//Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
 	vtkDequeAngleRadius *AngleRadiusRecord;
 	bool AbsoluteInc;	//absolute/relative increments
-
-
-	vtkOpenVRPropertyModifier *FieldModifier;
-	//Used along with vtkOpenVRPropertyModifier:
-	virtual void ShowTestActor(bool on);
 
 private:
   vtkOpenVRInteractorStyleSwipeDial(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;  // Not implemented.
