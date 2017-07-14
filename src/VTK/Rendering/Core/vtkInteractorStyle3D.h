@@ -60,7 +60,6 @@ class vtkProp3D;
 class vtkMatrix3x3;
 class vtkMatrix4x4;
 class vtkTransform;
-//class vtkSphereSource;
 
 class VTKRENDERINGCORE_EXPORT vtkInteractorStyle3D : public vtkInteractorStyle
 {

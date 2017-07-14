@@ -13,6 +13,8 @@ set(Module_SRCS
   vtkOpenVRInteractorStyleTapBool.cxx
   vtkOpenVRInteractorStyleTapDial.cxx
   vtkOpenVRInteractorStyleTapKeyboard.cxx
+  vtkOpenVRInteractorStyleSwitchBase.cxx
+  vtkOpenVRInteractorStyleSwitchInput.cxx
   vtkOpenVRModel.cxx
   vtkOpenVROverlay.cxx
   vtkOpenVRPropertyModifier.cxx
@@ -34,6 +36,8 @@ set_source_files_properties(
   vtkOpenVRInteractorStyleTapBool
   vtkOpenVRInteractorStyleTapDial
   vtkOpenVRInteractorStyleTapKeyboard
+  vtkOpenVRInteractorStyleSwitchBase
+  vtkOpenVRInteractorStyleSwitchInput
   vtkOpenVRModel
   vtkOpenVROverlay
   vtkOpenVRPropertyModifier
