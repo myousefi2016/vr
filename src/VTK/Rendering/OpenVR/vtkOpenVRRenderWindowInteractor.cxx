@@ -51,8 +51,8 @@ vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
   //vtkNew<vtkOpenVRInteractorStyle> style;
 	//vtkNew<vtkOpenVRInteractorStyleTapBool> style;				//OK
 	//vtkNew<vtkOpenVRInteractorStyleTapDial> style;				//OK
-	//vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;		//ok
-	vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;
+	vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;		//ok
+	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;			//ok
 	this->SetInteractorStyle(style.Get());
 }
 
