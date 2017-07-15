@@ -31,14 +31,20 @@
 #include "vtkInteractionStyleModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleSwitchBase.h"
 
-//Layouts
-#define VTKIS_DIAL  0
-#define VTKIS_KEYBOARD 1
-#define VTKIS_BOOL 2
-
 //Gestures
-#define VTKIS_TAP    0
-#define VTKIS_SWIPE     1
+enum class Gesture
+{
+	TAP,
+	SWIPE
+};
+
+//Layouts
+enum class Layout
+{
+	DIAL,
+	KEYBOARD,
+	BOOL
+};
 
 class vtkOpenVRInteractorStyleTapDial;
 class vtkOpenVRInteractorStyleTapKeyboard;
@@ -72,8 +78,9 @@ public:
   vtkGetObjectMacro(CurrentStyle, vtkInteractorStyle);
   void SetCurrentStyleToTapDial();
   void SetCurrentStyleToTapKeyboard();
-	void SetCurrentStyleToTapBool();
+  void SetCurrentStyleToTapBool();
   void SetCurrentStyleToSwipeDial();
+  void SetCurrentStyleTo(Gesture g, Layout l);
   void SetCurrentStyleToMultiTouchCamera();
   //@}
 
@@ -106,8 +113,8 @@ protected:
   vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
 
-  int Gesture;
-  int Layout;
+  Gesture CurrentGesture;
+  Layout CurrentLayout;
   bool MultiTouch;
 
 private:

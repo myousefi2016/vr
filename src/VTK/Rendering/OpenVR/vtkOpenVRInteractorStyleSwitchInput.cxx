@@ -37,8 +37,8 @@ vtkOpenVRInteractorStyleSwitchInput::vtkOpenVRInteractorStyleSwitchInput()
   this->SwipeDial = vtkOpenVRInteractorStyleSwipeDial::New();
   this->MultiTouchCamera = vtkInteractorStyleMultiTouchCamera::New();
 
-  this->Gesture = VTKIS_TAP;
-  this->Layout = VTKIS_DIAL;
+  this->CurrentGesture = Gesture::TAP;
+  this->CurrentLayout = Layout::DIAL;
   this->MultiTouch = false;
   this->CurrentStyle = 0;
 }
@@ -90,8 +90,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetAutoAdjustCameraClippingRange( int 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapDial()
 {
-  this->Gesture = VTKIS_TAP;
-  this->Layout = VTKIS_DIAL;
+  this->CurrentGesture = Gesture::TAP;
+  this->CurrentLayout = Layout::DIAL;
   this->MultiTouch = false;
   this->SetCurrentStyle();
 }
@@ -99,8 +99,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapDial()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapKeyboard()
 {
-  this->Gesture = VTKIS_TAP;
-  this->Layout = VTKIS_KEYBOARD;
+  this->CurrentGesture = Gesture::TAP;
+  this->CurrentLayout = Layout::KEYBOARD;
   this->MultiTouch = false;
   this->SetCurrentStyle();
 }
@@ -108,8 +108,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapKeyboard()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapBool()
 {
-	this->Gesture = VTKIS_SWIPE;
-	this->Layout = VTKIS_KEYBOARD;
+	this->CurrentGesture = Gesture::SWIPE;
+	this->CurrentLayout = Layout::KEYBOARD;
 	this->MultiTouch = false;
 	this->SetCurrentStyle();
 }
@@ -117,10 +117,18 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToTapBool()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToSwipeDial()
 {
-  this->Gesture = VTKIS_SWIPE;
-  this->Layout = VTKIS_DIAL;
+  this->CurrentGesture = Gesture::SWIPE;
+  this->CurrentLayout = Layout::DIAL;
   this->MultiTouch = false;
   this->SetCurrentStyle();
+}
+
+void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleTo(Gesture g, Layout l)
+{
+	this->CurrentGesture = g;
+	this->CurrentLayout = l;
+	this->MultiTouch = false;
+	this->SetCurrentStyle();
 }
 
 //----------------------------------------------------------------------------
@@ -137,34 +145,34 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 {
 	// Cycle order:
 	// (def) TapDial -> TapKeyboard -> TapBool -> SwipeDial -> (def)
-	if (this->Gesture == VTKIS_TAP && this->Layout == VTKIS_DIAL)
+	if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::DIAL)
 	{
 		//TODO First, disable all active elements in the current IS
 		vtkOpenVRInteractorStyleTapDial::SafeDownCast(this->CurrentStyle)->Reset();
 
-		this->Gesture = VTKIS_TAP;
-		this->Layout = VTKIS_KEYBOARD;
+		this->CurrentGesture = Gesture::TAP;
+		this->CurrentLayout = Layout::KEYBOARD;
 		this->MultiTouch = false;
 		this->EventCallbackCommand->SetAbortFlag(1);
 	}
-	else if (this->Gesture == VTKIS_TAP && this->Layout == VTKIS_KEYBOARD)
+	else if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::KEYBOARD)
 	{
-		this->Gesture = VTKIS_TAP;
-		this->Layout = VTKIS_BOOL;
+		this->CurrentGesture = Gesture::TAP;
+		this->CurrentLayout = Layout::BOOL;
 		this->MultiTouch = false;
 		this->EventCallbackCommand->SetAbortFlag(1);
 	}
-	else if (this->Gesture == VTKIS_TAP && this->Layout == VTKIS_BOOL)
+	else if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::BOOL)
 	{
-		this->Gesture = VTKIS_SWIPE;
-		this->Layout = VTKIS_DIAL;
+		this->CurrentGesture = Gesture::SWIPE;
+		this->CurrentLayout = Layout::DIAL;
 		this->MultiTouch = false;
 		this->EventCallbackCommand->SetAbortFlag(1);
 	}
-	else if (this->Gesture == VTKIS_SWIPE && this->Layout == VTKIS_DIAL)
+	else if (this->CurrentGesture == Gesture::SWIPE && this->CurrentLayout == Layout::DIAL)
 	{
-		this->Gesture = VTKIS_TAP;
-		this->Layout = VTKIS_DIAL;
+		this->CurrentGesture = Gesture::TAP;
+		this->CurrentLayout = Layout::DIAL;
 		this->MultiTouch = false;
 		this->EventCallbackCommand->SetAbortFlag(1);
 	}
@@ -201,8 +209,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
       this->CurrentStyle = this->MultiTouchCamera;
     }
   }
-  else if (this->Gesture == VTKIS_TAP &&
-      this->Layout == VTKIS_DIAL)
+  else if (this->CurrentGesture == Gesture::TAP &&
+      this->CurrentLayout == Layout::DIAL)
   {
     if(this->CurrentStyle != this->TapDial)
     {
@@ -213,8 +221,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
       this->CurrentStyle = this->TapDial;
     }
   }
-  else if (this->Gesture == VTKIS_TAP &&
-           this->Layout == VTKIS_KEYBOARD)
+  else if (this->CurrentGesture == Gesture::TAP &&
+           this->CurrentLayout == Layout::KEYBOARD)
   {
     if(this->CurrentStyle != this->TapKeyboard)
     {
@@ -225,8 +233,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
       this->CurrentStyle = this->TapKeyboard;
     }
   }
-  else if (this->Gesture == VTKIS_TAP &&
-           this->Layout == VTKIS_BOOL)
+  else if (this->CurrentGesture == Gesture::TAP &&
+           this->CurrentLayout == Layout::BOOL)
   {
     if(this->CurrentStyle != this->TapBool)
     {
@@ -237,8 +245,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
       this->CurrentStyle = this->TapBool;
     }
   }
-  else if (this->Gesture == VTKIS_SWIPE &&
-           this->Layout == VTKIS_DIAL)
+  else if (this->CurrentGesture == Gesture::SWIPE &&
+           this->CurrentLayout == Layout::DIAL)
   {
       if(this->CurrentStyle != this->SwipeDial)
       {
