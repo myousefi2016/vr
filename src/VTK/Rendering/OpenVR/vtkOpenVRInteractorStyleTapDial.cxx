@@ -46,7 +46,9 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
+	//Prop to modify:
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+	this->ModifyProp = true;
 
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
@@ -137,7 +139,10 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonDown()
 				this->TextFeedback->SetHasUnsavedChanges(false);
 
 				//test:
-				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+				if (this->ModifyProp)
+				{
+					this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+				}
 			}
 			else	// region in range [5,9]
 			{
@@ -194,8 +199,10 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 	{
 		this->TextFeedback->Reset();
 		//Test:
-		this->FieldModifier->HideTest();
-
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->HideTest();
+		}
 	}
 	//Either or is not created or has changes or is not shown
 	else
@@ -226,7 +233,10 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			if (this->ModifyProp)
+			{
+				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			}
 		}
 
 	}

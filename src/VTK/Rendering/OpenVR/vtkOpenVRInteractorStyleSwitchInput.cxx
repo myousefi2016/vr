@@ -147,7 +147,7 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 	// (def) TapDial -> TapKeyboard -> TapBool -> SwipeDial -> (def)
 	if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::DIAL)
 	{
-		//TODO First, disable all active elements in the current IS
+		//First, disable all active elements in the current IS
 		vtkOpenVRInteractorStyleTapDial::SafeDownCast(this->CurrentStyle)->Reset();
 
 		this->CurrentGesture = Gesture::TAP;
@@ -157,6 +157,9 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 	}
 	else if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::KEYBOARD)
 	{
+		//First, disable all active elements in the current IS
+		vtkOpenVRInteractorStyleTapKeyboard::SafeDownCast(this->CurrentStyle)->Reset();
+
 		this->CurrentGesture = Gesture::TAP;
 		this->CurrentLayout = Layout::BOOL;
 		this->MultiTouch = false;
@@ -164,6 +167,9 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 	}
 	else if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::BOOL)
 	{
+		//First, disable all active elements in the current IS
+		vtkOpenVRInteractorStyleTapBool::SafeDownCast(this->CurrentStyle)->Reset();
+
 		this->CurrentGesture = Gesture::SWIPE;
 		this->CurrentLayout = Layout::DIAL;
 		this->MultiTouch = false;
@@ -171,6 +177,9 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 	}
 	else if (this->CurrentGesture == Gesture::SWIPE && this->CurrentLayout == Layout::DIAL)
 	{
+		//First, disable all active elements in the current IS
+		vtkOpenVRInteractorStyleSwipeDial::SafeDownCast(this->CurrentStyle)->Reset();
+
 		this->CurrentGesture = Gesture::TAP;
 		this->CurrentLayout = Layout::DIAL;
 		this->MultiTouch = false;

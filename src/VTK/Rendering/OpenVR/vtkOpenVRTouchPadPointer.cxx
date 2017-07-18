@@ -72,7 +72,7 @@ void vtkOpenVRTouchPadPointer::Init()
 	this->PointerActor->PickableOff();
 	this->PointerActor->DragableOff();
 	this->PointerActor->SetMapper(this->PointerMapper);
-	this->PointerActor->GetProperty()->SetColor(0.7,0.7,0.7);
+	this->PointerActor->GetProperty()->SetColor(0.25, 0.25, 0.25);		//SetColor(0.7,0.7,0.7);
 	this->PointerActor->GetProperty()->SetAmbient(0.8);
 	this->PointerActor->GetProperty()->SetDiffuse(0.8);
 }
@@ -145,7 +145,7 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 	//Get/Set touchpad information
 	const double r = 0.02;												//Touchpad radius
 	const double d = 0.05;												// Distance from center of controller to center of touchpad
-	const double h = 0.007;	// Separation pointer-touchpad.
+	const double h = 0.01;	// Separation pointer-touchpad.
 	float *tpos = rwi->GetTouchPadPosition();
 	this->PointerSource->SetRadius(.0025*wscale);	//Pointer radius
 

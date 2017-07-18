@@ -40,6 +40,8 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 	this->TouchPadImage = NULL;
 	this->TextFeedback = NULL;
 	this->FieldModifier = NULL;
+
+	this->ModifyProp = false;
 }
 
 //----------------------------------------------------------------------------

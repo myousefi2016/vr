@@ -156,7 +156,7 @@ void vtkOpenVRTouchPadImage::Move(vtkOpenVRRenderWindowInteractor * rwi)
 
 	//Get/Set touchpad information
 	const double d = 0.05;	// Distance from center of controller to center of touchpad
-	const double h = 0.007;	// Separation image-touchpad.
+	const double h = 0.01;	// Separation image-touchpad.
 
 	//ROTATION
 	this->ImgActor->SetOrientation(0, 0, 0);

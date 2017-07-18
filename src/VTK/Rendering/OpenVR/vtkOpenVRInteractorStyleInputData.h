@@ -69,6 +69,8 @@ public:
 	//Disable all external elements active on the IS
 	virtual void Reset();
 
+	//Enable or disable Properties modification:
+	bool ModifyProp;
 
 protected:
   vtkOpenVRInteractorStyleInputData();

@@ -46,6 +46,7 @@ vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 	this->TextFeedback->SetTextDefaultMsg("Select Bool");
 
+	//Prop to modify:
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
 	//Images
@@ -133,9 +134,11 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 			this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
 			this->TextFeedback->SetHasUnsavedChanges(false);
 				
-			//TODO test with SetVisibility!!:
-			//vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-			//this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, //this->TextActor->GetInput());
+			//test:
+			if (this->ModifyProp)
+			{
+				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
+			}
 		}
 	}
 }
@@ -167,7 +170,10 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	{
 		this->TextFeedback->Reset();
 		//Test:
-		//this->FieldModifier->HideTest();
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->HideTest();
+		}
 	}
 	//Either or is not created or has changes or is not shown
 	else
@@ -198,7 +204,10 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			//this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			if (this->ModifyProp)
+			{
+				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			}
 		}
 	}
 	
@@ -209,7 +218,7 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 	
-	const double d2c = 0.5;		//Text distance to camera.
+	const double d2c = 1.25;		//Text distance to camera.
 	
 	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));

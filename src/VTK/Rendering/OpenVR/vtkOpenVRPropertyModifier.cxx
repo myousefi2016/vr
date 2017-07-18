@@ -77,7 +77,7 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	//instead of vtkSphereSource, we can select vtkAlgorithm or vtkPolyDataAlgorithm
 	//¿?To do so, create a method, selectDownCast(...) ¿?
 	//BRIGHT IDEA: Use an "union" to store all the different types as pointers!!!
-	vtkProp *downProp;
+//	vtkProp *downProp;
 	vtkActor *downActor;
 	vtkSphereSource *downSphere;
 	vtkProp3D *downProp3D;
@@ -85,11 +85,20 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	switch(field)
 	{
 	case vtkField::Visibility:
-		downProp = vtkProp::SafeDownCast(obj);
-		if (downProp != NULL)
+		downSphere = vtkSphereSource::SafeDownCast(obj);
+		if (downSphere != NULL)
 		{
-			downProp->SetVisibility(vtkVariant(value).ToInt());
+			vtkStdString str = vtkVariant(value).ToString();
+			if (str.compare("true"))
+			{
+				downSphere->LatLongTessellationOn();
+			}
+			else if (str.compare("false"))
+			{
+				downSphere->LatLongTessellationOff();
+			}
 		}
+		break;
 	case vtkField::Opacity:
 		downActor = vtkActor::SafeDownCast(obj);
 		if (downActor != NULL)

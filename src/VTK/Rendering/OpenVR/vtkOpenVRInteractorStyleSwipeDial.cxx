@@ -84,8 +84,9 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
 
-	//tests
+	//Prop to modify:
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+	this->ModifyProp = true;
 }
 
 //----------------------------------------------------------------------------
@@ -197,8 +198,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newValue).ToString());
 
 		//test:
-		vtkSphereSource *testSource = this->FieldModifier->GetTestSource();
-		this->FieldModifier->ModifyProperty(testSource, vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+		}
 	}
 }
 
@@ -228,7 +231,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	{
 		this->TextFeedback->Reset();
 		//Test:
-		this->FieldModifier->HideTest();
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->HideTest();
+		}
 
 	}
 	//Either or is not created or has changes or is not shown
@@ -260,7 +266,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			if (this->ModifyProp)
+			{
+				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			}
 		}
 
 	}
@@ -273,7 +282,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
 
-	const double d2c = 0.5;		//Text distance to camera.
+	const double d2c = 1.25;		//Text distance to camera.
 
 								//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
@@ -492,7 +501,10 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		this->TextFeedback->SetHasUnsavedChanges(true);
 
 		//test:
-		this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+		}
 
 		//Start tracking next set of movements
 		this->FlushValues();
