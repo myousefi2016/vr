@@ -195,6 +195,19 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 		int pointer = this->Interactor->GetPointerIndex();
 		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
 		                        this->Interactor->GetEventPositions(pointer)[1]);
+
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition( vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+	}
+
+
+	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
+	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
+	{
+		//iterates over all the defined SourceTypes (except 'None').
+		vtkSourceType newST = vtkSourceType((int(this->FieldModifier->GetCurrentSourceType())+1) % this->FieldModifier->GetMaxSourceType());
+		this->FieldModifier->SelectSourceType(newST);
 	}
 
 	bool TextEmpty = false;

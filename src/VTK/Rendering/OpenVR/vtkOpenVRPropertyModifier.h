@@ -66,26 +66,13 @@ enum class vtkField
 
 
 
-enum class vtkSource
+enum class vtkSourceType
 {
 	Sphere,
 	Cylinder,
-	Cube
+	Cube,
+	None	//Leave 'None' ALWAYS last. It is used also as Size() property of the enum.
 };
-
-
-/*
-//union GenericSource;
-union GenericSource {
-	vtkSphereSource *Sphere;
-	vtkCylinderSource *Cylinder;
-	vtkCubeSource *Cube;
-	//vtkPolyDataAlgorithm *Def;
-	//GenericSource() {};
-};
-*/
-
-
 
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
@@ -96,11 +83,13 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 	// A vtkObject is sent. internally, it must be downcasted to 
-	// the most general class which has the field to modify
+	// the most general class which has the field to modify.
   virtual void ModifyProperty(vtkObject *obj, vtkField field, char* value);
 
-	vtkGetMacro(TestSource, vtkPolyDataAlgorithm*);		//vtkGetMacro(TestSource, vtkSphereSource*);
+	vtkGetMacro(TestSource, vtkPolyDataAlgorithm*);
 	vtkGetMacro(TestActor, vtkActor*);
+	vtkSourceType GetCurrentSourceType();
+	int GetMaxSourceType();
 
 	//test:
 	virtual void InitTest();
@@ -108,8 +97,8 @@ public:
 	virtual void HideTest();
 
 	//Union try
-	void SetGenericSource(vtkSource s);
-	void SelectSourceDownCast(vtkSource s);
+	void SetGenericSource(vtkSourceType s);
+	void SelectSourceType(vtkSourceType s);
 
 
 protected:
@@ -117,19 +106,13 @@ protected:
   ~vtkOpenVRPropertyModifier();
 
   //Dummy test Actor/Source
-	vtkPolyDataAlgorithm *TestSource;		//vtkSphereSource *TestSource;
-
+	vtkPolyDataAlgorithm *TestSource;
   vtkPolyDataMapper *TestMapper;
   vtkActor *TestActor;
   vtkRenderer *TestRenderer;
 
 
-	//vtkSource currentTest
-
-	//Union try
-	//Tries to substitute TestSource.
-	//GenericSource gs;
-
+	vtkSourceType CurrentSourceType;
 
 
 private:

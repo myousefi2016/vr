@@ -58,7 +58,8 @@ void vtkOpenVRInteractorStyleInputData::OnMiddleButtonDown()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnMiddleButtonUp()
 {
-  /*vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
+  /* CODE FOr OVERLAYS.
+	vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
   if (!renWin)
   {
     return;

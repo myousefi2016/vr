@@ -42,64 +42,24 @@ PURPOSE.  See the above copyright notice for more information.
 vtkStandardNewMacro(vtkOpenVRPropertyModifier);
 
 
-
-/*union GenericSource {
-	vtkSphereSource *Sphere;
-	vtkCylinderSource *Cylinder;
-	vtkCubeSource *Cube;
-	vtkPolyDataAlgorithm *Def;
-	GenericSource() {};
-	GenericSource(vtkSource s)
-	{
-		switch (s)
-		{
-		case vtkSource::Sphere: this->Sphere = vtkSphereSource::New(); break;
-		case vtkSource::Cylinder: this->Cylinder = vtkCylinderSource::New(); break;
-		case vtkSource::Cube: this->Cube = vtkCubeSource::New(); break;
-		default: this->Def = vtkPolyDataAlgorithm::New(); break;
-		}
-	}
-};*/
-/*GenericSource(vtkSource s)
-{
-	switch (s)
-	{
-	case vtkSource::Sphere: this->Sphere = vtkSphereSource::New(); break;
-	case vtkSource::Cylinder: this->Cylinder = vtkCylinderSource::New(); break;
-	case vtkSource::Cube: this->Cube = vtkCubeSource::New(); break;
-	default: this->Def = vtkPolyDataAlgorithm::New(); break;
-	}
-}*/
-
-
-
-
 //----------------------------------------------------------------------------
 vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 {
+	
 	//Dummy test
 	this->TestSource = NULL;		// vtkPolyDataAlgorithm::New();		//this->TestSource = vtkSphereSource::New();
-	this->SelectSourceDownCast(vtkSource::Sphere);
-	//this->SelectSourceDownCast(vtkSource::Cube);
-
-	this->TestActor = NULL;
+	this->TestActor = NULL; 
 	this->TestMapper = vtkPolyDataMapper::New();
 	this->TestRenderer = NULL;
+	CurrentSourceType = vtkSourceType::None;
 
+	this->SelectSourceType(vtkSourceType::Sphere);	//Default
 	
 	if (this->TestMapper && this->TestSource)
 	{
 		this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
 	}
 	
-
-
-
-	//this->gs = GenericSource();
-
-	
-
-
 }
 
 //----------------------------------------------------------------------------
@@ -181,13 +141,23 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	}
 }
 
+vtkSourceType vtkOpenVRPropertyModifier::GetCurrentSourceType()
+{
+	return this->CurrentSourceType;
+}
+
+int vtkOpenVRPropertyModifier::GetMaxSourceType()
+{
+	return int(vtkSourceType::None);
+}
+
 void vtkOpenVRPropertyModifier::InitTest()
 {
 	//create and place in coordinates.
 //	TestSource->SetPhiResolution(20);
 //	TestSource->SetThetaResolution(20);
 	TestActor = vtkActor::New();
-	TestActor->PickableOff();
+	//TestActor->PickableOff();
 	TestActor->DragableOff();
 	TestActor->SetMapper(TestMapper);
 	TestActor->GetProperty()->SetAmbient(1.0);
@@ -250,20 +220,28 @@ void vtkOpenVRPropertyModifier::HideTest()
 	}
 }
 
-void vtkOpenVRPropertyModifier::SetGenericSource(vtkSource s)
+void vtkOpenVRPropertyModifier::SetGenericSource(vtkSourceType s)
 {
 	
 }
 
-void vtkOpenVRPropertyModifier::SelectSourceDownCast(vtkSource s)
+void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
 {
-	if (this->TestSource != NULL) this->TestSource->Delete();
-
-	switch (s)
+	if (this->CurrentSourceType != s)
 	{
-	case vtkSource::Sphere: this->TestSource = vtkSphereSource::New(); break;
-	case vtkSource::Cylinder: this->TestSource = vtkCylinderSource::New(); break;
-	case vtkSource::Cube: this->TestSource = vtkCubeSource::New(); break;
+		if(this->TestSource) this->TestSource->Delete();
+		this->CurrentSourceType = s;
+		switch (s)
+		{
+		case vtkSourceType::Sphere: this->TestSource = vtkSphereSource::New(); break;
+		case vtkSourceType::Cylinder: this->TestSource = vtkCylinderSource::New(); break;
+		case vtkSourceType::Cube: this->TestSource = vtkCubeSource::New(); break;
+		default:
+			vtkErrorMacro("Unrecognised SourceType");
+			this->CurrentSourceType = vtkSourceType::None;
+			break;
+		}
+		if (this->TestMapper && this->TestSource) this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
 	}
 }
 
