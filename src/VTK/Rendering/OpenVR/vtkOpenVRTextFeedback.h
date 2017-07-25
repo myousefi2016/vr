@@ -27,6 +27,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 class vtkTextActor3D;
 class vtkRenderer;
+class vtkOpenVRCamera;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRTextFeedback : public vtkObject
 {
@@ -37,6 +38,7 @@ public:
 
   virtual void Init();
 	virtual void Reset();
+	virtual void PlaceInScene(vtkOpenVRCamera* cam);
 
 	vtkGetMacro(TextActor, vtkTextActor3D*);
 	vtkSetMacro(TextActor, vtkTextActor3D*);

@@ -11,6 +11,7 @@ vtk_module(vtkRenderingOpenVR
     vtkRenderingOpenGL2
     vtkRenderingVolumeOpenGL2
     vtkInteractionStyle
+	vtkIOGeometry
     vtkIOImage
     vtkIOXMLParser
   ${_impl}

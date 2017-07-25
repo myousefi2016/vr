@@ -214,6 +214,12 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
+
+	/*NEW*/
+	this->TextFeedback->PlaceInScene(camera);
+	/**/
+
+	/*	OLD
 	double wScale = camera->GetDistance();			//World scale
 	double *camPos = camera->GetPosition();         //Camera Position
 	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
@@ -236,6 +242,7 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
 	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
 	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
+	*/
 
 	//Render Scene
 	if (this->Interactor)

@@ -6,6 +6,7 @@ find_package(SDL2 REQUIRED)
 
 set(Module_SRCS
   vtkOpenVRCamera.cxx
+  vtkOpenVRCFDFilterer.cxx
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
   vtkOpenVRInteractorStyleInputData.cxx
@@ -29,6 +30,7 @@ set(Module_SRCS
   
 set_source_files_properties(
   vtkOpenVRCamera
+  vtkOpenVRCFDFilterer
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
   vtkOpenVRInteractorStyleInputData

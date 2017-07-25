@@ -38,6 +38,8 @@ class vtkPNGReader;
 
 class vtkOpenVRTextFeedback;
 
+class vtkOpenVRCFDFilterer;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapDial : public vtkOpenVRInteractorStyleInputData
 {
 public:
@@ -62,9 +64,27 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
+
+
+	//@{
+	/**
+	* Override Left Button (Trigger) to try to get properties from the actor picked.
+	*/
+	void OnLeftButtonDown() VTK_OVERRIDE;
+	void OnLeftButtonUp() VTK_OVERRIDE;
+	//@}
+
+
+
+
 protected:
   vtkOpenVRInteractorStyleTapDial();
   ~vtkOpenVRInteractorStyleTapDial() VTK_OVERRIDE;
+
+
+	//CFD integration try
+	vtkOpenVRCFDFilterer *CFDFilterer;
+
 
 private:
   vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.

@@ -32,11 +32,17 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkProperty.h"
 #include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkInformation.h"
 
+#include "vtkOpenVRPropertyModifier.h"
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
+
+
+#include "vtkShrinkPolyData.h"
+//#include "vtkPVLODActor.h"
+#include "vtkOpenVRCFDFilterer.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleTapDial);
 
@@ -62,6 +68,13 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
+
+
+
+
+	//CFD integration try.
+	this->CFDFilterer = vtkOpenVRCFDFilterer::New();
+
 }
 
 //----------------------------------------------------------------------------
@@ -91,6 +104,8 @@ vtkOpenVRInteractorStyleTapDial::~vtkOpenVRInteractorStyleTapDial()
 		this->TouchPadPointer->Delete();
 	}
 
+	//CFD integration try.
+	if (this->CFDFilterer) this->CFDFilterer->Delete();
 }
 
 //----------------------------------------------------------------------------
@@ -240,33 +255,11 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 		}
 
 	}
-	
+
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-	
-	double wScale = camera->GetDistance();			//World scale
-	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
-	
-	const double d2c = 1.25;		//Text distance to camera.
-	
-	//3D Rotation and Translation Maths
-	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
-	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
-	double projection[3] = {sinw, 0, -cosw};
-	vtkMath::Normalize(projection);
+	this->TextFeedback->PlaceInScene(camera);
 
-	double txtPos[3];
-
-	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c  * wScale;
-
-	//Place text
-	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
-	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
-	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
-	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
-	
 	//Render Scene
 	if (this->Interactor)
 	{
@@ -279,6 +272,124 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+
+
+
+
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
+{
+	//Common code...
+	int x = this->Interactor->GetEventPosition()[0];
+	int y = this->Interactor->GetEventPosition()[1];
+
+	vtkRenderWindowInteractor3D *vriren =
+		vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+
+	double *wpos = vriren->GetWorldEventPosition(
+		vriren->GetPointerIndex());
+
+	this->FindPokedRenderer(x, y);
+	this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+
+	if (this->CurrentRenderer == NULL || this->InteractionProp == NULL)
+	{
+		return;
+	}
+
+	//Specific code...
+
+	//First Click ever. Not created yet: create it and place it properly.
+	if (!this->TextFeedback->GetTextActor())
+	{
+		this->TextFeedback->Init();
+	}
+	//Created but not shown. Check if used different renderer to previous visualization.
+	if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
+	{
+		if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
+		{
+			this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
+		}
+		if (this->CurrentRenderer != 0)
+		{
+			this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
+		}
+		else
+		{
+			vtkWarningMacro(<< "no current renderer on the interactor style.");
+		}
+		this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
+		this->TextFeedback->SetTextIsVisible(true);
+		this->TextFeedback->SetHasUnsavedChanges(false);
+	}
+
+	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+
+	this->TextFeedback->PlaceInScene(camera);
+
+
+	//CFD integration try.
+	this->CFDFilterer->ShowCFD(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+
+
+
+
+
+
+	/*
+	//this->InteractionProp->Print(std::cout);
+	
+	//this->TextFeedback->GetTextActor()->SetInput(this->InteractionProp->GetClassName());
+
+//	vtkInformation *propKeys = this->InteractionProp->GetPropertyKeys();
+	//totry
+	//vtkInformation *propKeys2 = vtkPVLODActor::SafeDownCast(this->InteractionProp)->GetPropertyKeys();
+
+	//To try:
+//	int nKeys = propKeys->GetNumberOfKeys();
+	//propKeys->Get()
+	//propKeys->GetKey(...);
+	///propKeys->Has(...);
+	//propKeys->Print(...);
+
+//	this->TextFeedback->GetTextActor()->SetInput(vtkVariant(nKeys).ToString());
+
+
+	//vtkShrinkPolyData *shrinkFilter = vtkShrinkPolyData::New();
+	//shrinkFilter->SetShrinkFactor(0.5);
+	//shrinkFilter->SetInputConnection((this->InteractionProp->Ge);			//geom->GetOutputPort(0));
+
+
+	//vtkSphereSource *sph = vtkSphereSource::SafeDownCast(this->InteractionProp);
+
+
+		//CFD readers from ParaView: (to Tilerature review)
+//		https://www.paraview.org/fluid-dynamics/
+//		https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_readers#OpenFOAMReader
+//		http://www.openfoam.com/documentation/user-guide/paraview.php
+//		http://vtk.1045678.n5.nabble.com/Help-with-vtkOpenFOAMReader-and-extraction-td3370753.html
+	*/
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRInteractorStyleTapDial::OnLeftButtonUp()
+{
+	//Already created and changes saved: can be hidden.
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
+			&& !this->TextFeedback->GetHasUnsavedChanges())
+	{
+		this->TextFeedback->Reset();
+	}
+}
+
+
+
+
+
+
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::PrintSelf(ostream& os, vtkIndent indent)
