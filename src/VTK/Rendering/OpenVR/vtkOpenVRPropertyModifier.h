@@ -27,7 +27,19 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkSetGet.h"	//For export macro
 
-//Move to a different class?
+class vtkObject;
+class vtkPolyDataMapper;
+class vtkActor;
+class vtkRenderer;
+class vtkOpenVRRenderWindowInteractor;
+
+class vtkPolyDataAlgorithm;
+class vtkSphereSource;	//For dummy test
+class vtkCylinderSource;
+class vtkCubeSource;
+
+
+
 /**
  * @enum vtkField
  * @brief Strongly-typed enum class used to reference uniquely all the
@@ -52,12 +64,29 @@ enum class vtkField
 	Radius
 };
 
-class vtkObject;
-class vtkSphereSource;	//For dummy test
-class vtkPolyDataMapper;
-class vtkActor;
-class vtkRenderer;
-class vtkOpenVRRenderWindowInteractor;
+
+
+enum class vtkSource
+{
+	Sphere,
+	Cylinder,
+	Cube
+};
+
+
+/*
+//union GenericSource;
+union GenericSource {
+	vtkSphereSource *Sphere;
+	vtkCylinderSource *Cylinder;
+	vtkCubeSource *Cube;
+	//vtkPolyDataAlgorithm *Def;
+	//GenericSource() {};
+};
+*/
+
+
+
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
 {
@@ -70,22 +99,38 @@ public:
 	// the most general class which has the field to modify
   virtual void ModifyProperty(vtkObject *obj, vtkField field, char* value);
 
-  vtkGetMacro(TestSource, vtkSphereSource*);
+	vtkGetMacro(TestSource, vtkPolyDataAlgorithm*);		//vtkGetMacro(TestSource, vtkSphereSource*);
+	vtkGetMacro(TestActor, vtkActor*);
 
 	//test:
 	virtual void InitTest();
 	virtual void ShowTest(vtkOpenVRRenderWindowInteractor *rwi);
 	virtual void HideTest();
 
+	//Union try
+	void SetGenericSource(vtkSource s);
+	void SelectSourceDownCast(vtkSource s);
+
+
 protected:
   vtkOpenVRPropertyModifier();
   ~vtkOpenVRPropertyModifier();
 
   //Dummy test Actor/Source
-  vtkSphereSource *TestSource;
+	vtkPolyDataAlgorithm *TestSource;		//vtkSphereSource *TestSource;
+
   vtkPolyDataMapper *TestMapper;
   vtkActor *TestActor;
   vtkRenderer *TestRenderer;
+
+
+	//vtkSource currentTest
+
+	//Union try
+	//Tries to substitute TestSource.
+	//GenericSource gs;
+
+
 
 private:
   vtkOpenVRPropertyModifier(const vtkOpenVRPropertyModifier&) VTK_DELETE_FUNCTION;  // Not implemented.

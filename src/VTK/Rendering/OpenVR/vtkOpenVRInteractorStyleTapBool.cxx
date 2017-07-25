@@ -48,6 +48,7 @@ vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 
 	//Prop to modify:
 	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+	this->ModifyProp = true;
 
 	//Images
 	//https://gist.github.com/waldyrious/c3be68f0682543ee0ae2
@@ -57,7 +58,6 @@ vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
-
 
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
@@ -137,7 +137,8 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 			//test:
 			if (this->ModifyProp)
 			{
-				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
+				//this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
+				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestActor(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
 			}
 		}
 	}

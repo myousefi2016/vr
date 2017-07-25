@@ -58,13 +58,13 @@ void vtkOpenVRInteractorStyleInputData::OnMiddleButtonDown()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnMiddleButtonUp()
 {
-  vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
+  /*vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
   if (!renWin)
   {
     return;
   }
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
-  ovl->LoadNextCameraPose();
+  ovl->LoadNextCameraPose();*/
 }
 
 //----------------------------------------------------------------------------

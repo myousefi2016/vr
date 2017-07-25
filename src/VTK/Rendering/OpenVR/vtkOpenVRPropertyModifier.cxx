@@ -28,7 +28,10 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkActor.h"
 #include "vtkProperty.h"
 #include "vtkSphereSource.h"
+#include "vtkCylinderSource.h"
+#include "vtkCubeSource.h"
 #include "vtkPolyDataMapper.h"
+#include "vtkPolyDataAlgorithm.h"
 
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRRenderer.h"
@@ -38,19 +41,65 @@ PURPOSE.  See the above copyright notice for more information.
 
 vtkStandardNewMacro(vtkOpenVRPropertyModifier);
 
+
+
+/*union GenericSource {
+	vtkSphereSource *Sphere;
+	vtkCylinderSource *Cylinder;
+	vtkCubeSource *Cube;
+	vtkPolyDataAlgorithm *Def;
+	GenericSource() {};
+	GenericSource(vtkSource s)
+	{
+		switch (s)
+		{
+		case vtkSource::Sphere: this->Sphere = vtkSphereSource::New(); break;
+		case vtkSource::Cylinder: this->Cylinder = vtkCylinderSource::New(); break;
+		case vtkSource::Cube: this->Cube = vtkCubeSource::New(); break;
+		default: this->Def = vtkPolyDataAlgorithm::New(); break;
+		}
+	}
+};*/
+/*GenericSource(vtkSource s)
+{
+	switch (s)
+	{
+	case vtkSource::Sphere: this->Sphere = vtkSphereSource::New(); break;
+	case vtkSource::Cylinder: this->Cylinder = vtkCylinderSource::New(); break;
+	case vtkSource::Cube: this->Cube = vtkCubeSource::New(); break;
+	default: this->Def = vtkPolyDataAlgorithm::New(); break;
+	}
+}*/
+
+
+
+
 //----------------------------------------------------------------------------
 vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 {
 	//Dummy test
-	this->TestSource = vtkSphereSource::New();
+	this->TestSource = NULL;		// vtkPolyDataAlgorithm::New();		//this->TestSource = vtkSphereSource::New();
+	this->SelectSourceDownCast(vtkSource::Sphere);
+	//this->SelectSourceDownCast(vtkSource::Cube);
+
 	this->TestActor = NULL;
 	this->TestMapper = vtkPolyDataMapper::New();
 	this->TestRenderer = NULL;
 
+	
 	if (this->TestMapper && this->TestSource)
 	{
 		this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
 	}
+	
+
+
+
+	//this->gs = GenericSource();
+
+	
+
+
 }
 
 //----------------------------------------------------------------------------
@@ -77,7 +126,7 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	//instead of vtkSphereSource, we can select vtkAlgorithm or vtkPolyDataAlgorithm
 	//¿?To do so, create a method, selectDownCast(...) ¿?
 	//BRIGHT IDEA: Use an "union" to store all the different types as pointers!!!
-//	vtkProp *downProp;
+	vtkProp *downProp;
 	vtkActor *downActor;
 	vtkSphereSource *downSphere;
 	vtkProp3D *downProp3D;
@@ -85,17 +134,20 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	switch(field)
 	{
 	case vtkField::Visibility:
-		downSphere = vtkSphereSource::SafeDownCast(obj);
-		if (downSphere != NULL)
+//		downProp = vtkProp::SafeDownCast(obj);	//downSphere = vtkSphereSource::SafeDownCast(obj);
+//		if (downProp /*downSphere*/ != NULL)
+		if(obj->IsA("vtkProp"))			//WORKS WITH UPCAST!!
 		{
+			downProp = vtkProp::SafeDownCast(obj);
+
 			vtkStdString str = vtkVariant(value).ToString();
-			if (str.compare("true"))
+			if (str.compare("true") == 0)
 			{
-				downSphere->LatLongTessellationOn();
+				downProp->SetVisibility(true);
 			}
-			else if (str.compare("false"))
+			else if (str.compare("false") == 0)
 			{
-				downSphere->LatLongTessellationOff();
+				downProp->SetVisibility(false);
 			}
 		}
 		break;
@@ -114,9 +166,12 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 		}
 		break;
 	case vtkField::Radius:
-		downSphere = vtkSphereSource::SafeDownCast(obj);
-		if (downSphere != NULL)
+//		downSphere = vtkSphereSource::SafeDownCast(obj);
+//		if (downSphere != NULL)
+		if (obj->IsA("vtkSphereSource"))			//will it WORK WITH downCAST!!
 		{
+			downSphere = vtkSphereSource::SafeDownCast(obj);
+
 			downSphere->SetRadius(vtkVariant(value).ToDouble());
 		}
 		break;
@@ -129,8 +184,8 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 void vtkOpenVRPropertyModifier::InitTest()
 {
 	//create and place in coordinates.
-	TestSource->SetPhiResolution(20);
-	TestSource->SetThetaResolution(20);
+//	TestSource->SetPhiResolution(20);
+//	TestSource->SetThetaResolution(20);
 	TestActor = vtkActor::New();
 	TestActor->PickableOff();
 	TestActor->DragableOff();
@@ -192,6 +247,23 @@ void vtkOpenVRPropertyModifier::HideTest()
 	{
 		TestRenderer->RemoveActor(TestActor);
 		this->TestRenderer = NULL;
+	}
+}
+
+void vtkOpenVRPropertyModifier::SetGenericSource(vtkSource s)
+{
+	
+}
+
+void vtkOpenVRPropertyModifier::SelectSourceDownCast(vtkSource s)
+{
+	if (this->TestSource != NULL) this->TestSource->Delete();
+
+	switch (s)
+	{
+	case vtkSource::Sphere: this->TestSource = vtkSphereSource::New(); break;
+	case vtkSource::Cylinder: this->TestSource = vtkCylinderSource::New(); break;
+	case vtkSource::Cube: this->TestSource = vtkCubeSource::New(); break;
 	}
 }
 

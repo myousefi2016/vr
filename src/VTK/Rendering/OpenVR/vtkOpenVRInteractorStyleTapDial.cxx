@@ -69,12 +69,6 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 
 	//https://www.researchgate.net/publication/45338891_A_Multimodal_Virtual_Reality_Interface_for_VTK
 
-
-
-
-	//CFD integration try.
-	this->CFDFilterer = vtkOpenVRCFDFilterer::New();
-
 }
 
 //----------------------------------------------------------------------------
@@ -103,9 +97,6 @@ vtkOpenVRInteractorStyleTapDial::~vtkOpenVRInteractorStyleTapDial()
 	{
 		this->TouchPadPointer->Delete();
 	}
-
-	//CFD integration try.
-	if (this->CFDFilterer) this->CFDFilterer->Delete();
 }
 
 //----------------------------------------------------------------------------
@@ -196,6 +187,8 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonUp()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 {
+
+
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
 	{
@@ -299,7 +292,6 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
 	}
 
 	//Specific code...
-
 	//First Click ever. Not created yet: create it and place it properly.
 	if (!this->TextFeedback->GetTextActor())
 	{
@@ -331,47 +323,12 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
 	this->TextFeedback->PlaceInScene(camera);
 
 
-	//CFD integration try.
-	this->CFDFilterer->ShowCFD(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
-
-
-
-
-
-
-	/*
-	//this->InteractionProp->Print(std::cout);
-	
-	//this->TextFeedback->GetTextActor()->SetInput(this->InteractionProp->GetClassName());
-
-//	vtkInformation *propKeys = this->InteractionProp->GetPropertyKeys();
-	//totry
-	//vtkInformation *propKeys2 = vtkPVLODActor::SafeDownCast(this->InteractionProp)->GetPropertyKeys();
-
-	//To try:
-//	int nKeys = propKeys->GetNumberOfKeys();
-	//propKeys->Get()
-	//propKeys->GetKey(...);
-	///propKeys->Has(...);
-	//propKeys->Print(...);
-
-//	this->TextFeedback->GetTextActor()->SetInput(vtkVariant(nKeys).ToString());
-
-
-	//vtkShrinkPolyData *shrinkFilter = vtkShrinkPolyData::New();
-	//shrinkFilter->SetShrinkFactor(0.5);
-	//shrinkFilter->SetInputConnection((this->InteractionProp->Ge);			//geom->GetOutputPort(0));
-
-
-	//vtkSphereSource *sph = vtkSphereSource::SafeDownCast(this->InteractionProp);
-
-
 		//CFD readers from ParaView: (to Tilerature review)
 //		https://www.paraview.org/fluid-dynamics/
 //		https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_readers#OpenFOAMReader
 //		http://www.openfoam.com/documentation/user-guide/paraview.php
 //		http://vtk.1045678.n5.nabble.com/Help-with-vtkOpenFOAMReader-and-extraction-td3370753.html
-	*/
+
 }
 
 //----------------------------------------------------------------------------

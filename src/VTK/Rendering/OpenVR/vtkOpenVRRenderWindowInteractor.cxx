@@ -51,11 +51,11 @@ vtkOpenVRRenderWindowInteractor::vtkOpenVRRenderWindowInteractor()
 {
   //vtkNew<vtkOpenVRInteractorStyle> style;
 	//vtkNew<vtkOpenVRInteractorStyleTapBool> style;				//OK
-	vtkNew<vtkOpenVRInteractorStyleTapDial> style;				//OK
+	//vtkNew<vtkOpenVRInteractorStyleTapDial> style;				//OK
 	//vtkNew<vtkOpenVRInteractorStyleTapKeyboard> style;		//ok
 	//vtkNew<vtkOpenVRInteractorStyleSwipeDial> style;			//ok
 	
-	//vtkNew<vtkOpenVRInteractorStyleSwitchInput> style;
+	vtkNew<vtkOpenVRInteractorStyleSwitchInput> style;
 
 	this->SetInteractorStyle(style.Get());
 }

@@ -81,11 +81,6 @@ protected:
   vtkOpenVRInteractorStyleTapDial();
   ~vtkOpenVRInteractorStyleTapDial() VTK_OVERRIDE;
 
-
-	//CFD integration try
-	vtkOpenVRCFDFilterer *CFDFilterer;
-
-
 private:
   vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
   void operator=(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
