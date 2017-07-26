@@ -43,6 +43,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkShrinkPolyData.h"
 //#include "vtkPVLODActor.h"
 #include "vtkOpenVRCFDFilterer.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleTapDial);
 
@@ -207,14 +208,18 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
 	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
 	{
-//=====================
+		//=====================
+
 		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
 		{
-			this->Interactor->GetInteractorStyle()
-				//TODO
+			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
+				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
+			//TODO 26/07/2017 Check if this works or there is any problem.
+			ISSwitch->SetCurrentStyleToSwipeDial();
+
 		}
 
-//=====================
+		//=====================
 
 		this->FieldModifier->IterateSourceType();
 	}
@@ -225,7 +230,7 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 
 	//Second Click. Already created and changes saved: can be hidden.
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
+		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 		this->TextFeedback->Reset();
 		//Test:
@@ -345,11 +350,11 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
 	this->TextFeedback->PlaceInScene(camera);
 
 
-		//CFD readers from ParaView: (to Tilerature review)
-//		https://www.paraview.org/fluid-dynamics/
-//		https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_readers#OpenFOAMReader
-//		http://www.openfoam.com/documentation/user-guide/paraview.php
-//		http://vtk.1045678.n5.nabble.com/Help-with-vtkOpenFOAMReader-and-extraction-td3370753.html
+	//CFD readers from ParaView: (to Tilerature review)
+	//		https://www.paraview.org/fluid-dynamics/
+	//		https://www.paraview.org/Wiki/ParaView/Users_Guide/List_of_readers#OpenFOAMReader
+	//		http://www.openfoam.com/documentation/user-guide/paraview.php
+	//		http://vtk.1045678.n5.nabble.com/Help-with-vtkOpenFOAMReader-and-extraction-td3370753.html
 
 }
 
@@ -358,7 +363,7 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonUp()
 {
 	//Already created and changes saved: can be hidden.
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-			&& !this->TextFeedback->GetHasUnsavedChanges())
+		&& !this->TextFeedback->GetHasUnsavedChanges())
 	{
 		this->TextFeedback->Reset();
 	}

@@ -81,11 +81,7 @@ vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
 
 //----------------------------------------------------------------------------
 void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, char** value)
-{	//Add new parameter: vtkObjectType (which is a new enum class).
-	//This will remove problems on downcasting:
-	//instead of vtkSphereSource, we can select vtkAlgorithm or vtkPolyDataAlgorithm
-	//¿?To do so, create a method, selectDownCast(...) ¿?
-	//BRIGHT IDEA: Use an "union" to store all the different types as pointers!!!
+{
 	vtkProp *downProp;
 	vtkProp3D *downProp3D;
 	vtkActor *downActor;

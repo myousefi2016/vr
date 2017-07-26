@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRInteractorStyleTapKeyboard.h
+Module:    vtkOpenVRInteractorStyleFieldSelector.h
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -13,13 +13,16 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRInteractorStyleTapKeyboard
- * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
- *          Divides touchpad in sectors allowing to convert it into a keyboard for text writing
-*/
+ * @class   vtkOpenVRInteractorStyleFieldSelector
+ * @brief   extended from vtkOpenVRInteractorStyleInputData as a proof of concept
+ * intended to show an alternative to modify porperty fields on vtkProps and sources.
+ * 
+ * @see vtkOpenVRInteractorStyleInputData vtkOpenVRPropertyModifier
+ * 
+ */
 
-#ifndef vtkOpenVRInteractorStyleTapKeyboard_h
-#define vtkOpenVRInteractorStyleTapKeyboard_h
+#ifndef vtkOpenVRInteractorStyleFieldSelector_h
+#define vtkOpenVRInteractorStyleFieldSelector_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
@@ -36,12 +39,13 @@ class vtkOpenVRPropertyModifier;
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapKeyboard : public vtkOpenVRInteractorStyleInputData
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleFieldSelector : public vtkOpenVRInteractorStyleInputData
 {
 public:
-  static vtkOpenVRInteractorStyleTapKeyboard *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleTapKeyboard, vtkOpenVRInteractorStyle);
+  static vtkOpenVRInteractorStyleFieldSelector *New();
+  vtkTypeMacro(vtkOpenVRInteractorStyleFieldSelector, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
+
 
   //@{
   /**
@@ -59,19 +63,19 @@ public:
   void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
-	//Images handling
+	//Images handling METHODS FROM PREVIOUS CLASS. delete!
 	void IncNextImage() VTK_OVERRIDE;
 	void DecNextImage() VTK_OVERRIDE;
 	virtual void SwitchCaps();
- 
+
 
 protected:
-	vtkOpenVRInteractorStyleTapKeyboard();
-  ~vtkOpenVRInteractorStyleTapKeyboard() VTK_OVERRIDE;
+	vtkOpenVRInteractorStyleFieldSelector();
+  ~vtkOpenVRInteractorStyleFieldSelector() VTK_OVERRIDE;
 
 private:
-	vtkOpenVRInteractorStyleTapKeyboard(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleTapKeyboard&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif

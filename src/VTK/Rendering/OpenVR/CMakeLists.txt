@@ -9,6 +9,7 @@ set(Module_SRCS
   vtkOpenVRCFDFilterer.cxx
   vtkOpenVRDefaultOverlay.cxx
   vtkOpenVRInteractorStyle.cxx
+  vtkOpenVRInteractorStyleFieldSelector.cxx
   vtkOpenVRInteractorStyleInputData.cxx
   vtkOpenVRInteractorStyleSwipeDial.cxx
   vtkOpenVRInteractorStyleTapBool.cxx
@@ -33,6 +34,7 @@ set_source_files_properties(
   vtkOpenVRCFDFilterer
   vtkOpenVRDefaultOverlay
   vtkOpenVRInteractorStyle
+  vtkOpenVRInteractorStyleFieldSelector
   vtkOpenVRInteractorStyleInputData
   vtkOpenVRInteractorStyleSwipeDial
   vtkOpenVRInteractorStyleTapBool

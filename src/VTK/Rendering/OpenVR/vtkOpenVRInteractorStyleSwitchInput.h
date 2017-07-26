@@ -80,6 +80,7 @@ public:
   void SetCurrentStyleToTapKeyboard();
   void SetCurrentStyleToTapBool();
   void SetCurrentStyleToSwipeDial();
+//  void SetCurrentStyleToSelector();		//TODO 26/07/2017
   void SetCurrentStyleTo(Gesture g, Layout l);
   void SetCurrentStyleToMultiTouchCamera();
   //@}
