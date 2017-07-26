@@ -49,7 +49,7 @@ vtkOpenVRInteractorStyleFieldSelector::vtkOpenVRInteractorStyleFieldSelector()
 
 	//Images:
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
-	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\TapKeyboard_Image");
+	this->TouchPadImage->LoadImages(3, "..\\..\\..\\VTK\\Rendering\\OpenVR\\FieldSelector_Image");
 	this->TouchPadImage->Init();
 
 	//Properties' Modifier

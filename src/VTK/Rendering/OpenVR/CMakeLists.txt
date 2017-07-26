@@ -180,3 +180,19 @@ configure_file(
   "${CMAKE_BINARY_DIR}/SwipeDial_Image0.png"
   COPYONLY
   )
+
+  configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/FieldSelector_Image0.png"
+  "${CMAKE_BINARY_DIR}/FieldSelector_Image0.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/FieldSelector_Image1.png"
+  "${CMAKE_BINARY_DIR}/FieldSelector_Image1.png"
+  COPYONLY
+  )
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/FieldSelector_Image2.png"
+  "${CMAKE_BINARY_DIR}/FieldSelector_Image2.png"
+  COPYONLY
+  )
