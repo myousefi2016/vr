@@ -46,14 +46,17 @@ vtkOpenVRInteractorStyleFieldSelector::vtkOpenVRInteractorStyleFieldSelector()
 {
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
+	this->TextFeedback->SetTextDefaultMsg(
+		"Press Grip:\n-Inside Object: Iterate to next Object.\n-Outside Object: Toggle Object ON/OFF.");
+
+	//Properties' Modifier
+	this->FieldModifier = vtkOpenVRPropertyModifier::New();	//Starts with a Sphere
 
 	//Images:
 	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadImages(3, "..\\..\\..\\VTK\\Rendering\\OpenVR\\FieldSelector_Image");
+	//0: Sphere; 1: Cylinder; 2: Cube;
 	this->TouchPadImage->Init();
-
-	//Properties' Modifier
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
 
 	//TouchPad Pointer
@@ -346,18 +349,26 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 	//(according to the field).
 
 
-	//=====================
-
-
-
 
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
 	{
 		int pointer = this->Interactor->GetPointerIndex();
 		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-		                        this->Interactor->GetEventPositions(pointer)[1]);
+														this->Interactor->GetEventPositions(pointer)[1]);
+
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition(vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
 	}
+
+	//If I have the controller inside the object, iterate to next object.
+	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
+	{
+		this->FieldModifier->IterateSourceType();
+		return;
+	}
+
 
 	bool TextEmpty = false;
 	if (this->TextFeedback->GetTextActor())
@@ -365,12 +376,14 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 
 	//Second Click. Already created and changes saved: can be hidden.
 	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
+			&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
 	{
 		this->TextFeedback->Reset();
-
 		//Test:
-		//this->FieldModifier->HideTest();
+		if (this->ModifyProp)
+		{
+			this->FieldModifier->HideTest();
+		}
 	}
 	//Either or is not created or has changes or is not shown
 	else
@@ -401,42 +414,17 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 			this->TextFeedback->SetHasUnsavedChanges(false);
 
 			//Test:
-			//this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			if (this->ModifyProp)
+			{
+				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			}
 		}
-
 	}
-	
+
+	//Place in scene
 	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
 	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
-	/*NEW*/
 	this->TextFeedback->PlaceInScene(camera);
-	/**/
-
-	/*	OLD
-	double wScale = camera->GetDistance();			//World scale
-	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
-	
-	const double d2c = 1.5;		//Text distance to camera.
-	
-	//3D Rotation and Translation Maths
-	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
-	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
-	double projection[3] = {sinw, 0, -cosw};
-	vtkMath::Normalize(projection);
-
-	double txtPos[3];
-
-	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c;
-
-	//Place text
-	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
-	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
-	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
-	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
-	*/
 
 	//Render Scene
 	if (this->Interactor)

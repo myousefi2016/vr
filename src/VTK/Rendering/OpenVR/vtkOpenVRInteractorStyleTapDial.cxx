@@ -190,8 +190,6 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonUp()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 {
-
-
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
 	{
@@ -214,14 +212,15 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 		{
 			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
 				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
-			//TODO 26/07/2017 Check if this works or there is any problem.
-			ISSwitch->SetCurrentStyleToSwipeDial();
-
+			
+			//ISSwitch->SetCurrentStyleToSwipeDial();	//TODO 26/07/2017 Check if this works or there is any problem. --> WORKS!!
+			
+			ISSwitch->SetCurrentStyleToFieldSelector();
+			return;
 		}
 
+		//this->FieldModifier->IterateSourceType();
 		//=====================
-
-		this->FieldModifier->IterateSourceType();
 	}
 
 	bool TextEmpty = false;

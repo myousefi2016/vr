@@ -22,6 +22,7 @@
 #include "vtkOpenVRInteractorStyleTapKeyboard.h"
 #include "vtkOpenVRInteractorStyleTapBool.h"
 #include "vtkOpenVRInteractorStyleSwipeDial.h"
+#include "vtkOpenVRInteractorStyleFieldSelector.h"
 #include "vtkInteractorStyleMultiTouchCamera.h"
 #include "vtkObjectFactory.h"
 #include "vtkRenderWindowInteractor.h"
@@ -35,10 +36,13 @@ vtkOpenVRInteractorStyleSwitchInput::vtkOpenVRInteractorStyleSwitchInput()
   this->TapKeyboard = vtkOpenVRInteractorStyleTapKeyboard::New();
 	this->TapBool = vtkOpenVRInteractorStyleTapBool::New();
   this->SwipeDial = vtkOpenVRInteractorStyleSwipeDial::New();
+	this->FieldSelector = vtkOpenVRInteractorStyleFieldSelector::New();
   this->MultiTouchCamera = vtkInteractorStyleMultiTouchCamera::New();
 
   this->CurrentGesture = Gesture::TAP;
   this->CurrentLayout = Layout::DIAL;
+	//this->CurrentGesture = Gesture::NONE;
+	//this->CurrentLayout = Layout::NONE;
   this->MultiTouch = false;
   this->CurrentStyle = 0;
 }
@@ -57,6 +61,9 @@ vtkOpenVRInteractorStyleSwitchInput::~vtkOpenVRInteractorStyleSwitchInput()
 
   this->SwipeDial->Delete();
   this->SwipeDial = NULL;
+
+	this->FieldSelector->Delete();
+	this->FieldSelector = NULL;
 
   this->MultiTouchCamera->Delete();
   this->MultiTouchCamera = NULL;
@@ -82,6 +89,7 @@ void vtkOpenVRInteractorStyleSwitchInput::SetAutoAdjustCameraClippingRange( int 
   this->TapKeyboard->SetAutoAdjustCameraClippingRange( value );
   this->SwipeDial->SetAutoAdjustCameraClippingRange( value );
   this->TapBool->SetAutoAdjustCameraClippingRange(value);
+	this->FieldSelector->SetAutoAdjustCameraClippingRange(value);
   this->MultiTouchCamera->SetAutoAdjustCameraClippingRange( value );
 
   this->Modified();
@@ -123,6 +131,14 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToSwipeDial()
   this->SetCurrentStyle();
 }
 
+void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToFieldSelector()
+{
+	this->CurrentGesture = Gesture::NONE;
+	this->CurrentLayout = Layout::NONE;
+	this->MultiTouch = false;
+	this->SetCurrentStyle();
+}
+
 void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleTo(Gesture g, Layout l)
 {
 	this->CurrentGesture = g;
@@ -143,7 +159,7 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleToMultiTouchCamera()
 // (except Multitouch).
 void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 {
-	// Cycle order:
+	// Cycle order, only if CurrentStyle!=FieldSelector (proof of concept):
 	// (def) TapDial -> TapKeyboard -> TapBool -> SwipeDial -> (def)
 	if (this->CurrentGesture == Gesture::TAP && this->CurrentLayout == Layout::DIAL)
 	{
@@ -213,11 +229,31 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
     {
       if(this->CurrentStyle)
       {
+				if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+				{
+					vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+				}
         this->CurrentStyle->SetInteractor(0);
       }
       this->CurrentStyle = this->MultiTouchCamera;
     }
   }
+	else if (this->CurrentGesture == Gesture::NONE &&
+					 this->CurrentLayout == Layout::NONE)
+	{
+		if (this->CurrentStyle != this->FieldSelector)
+		{
+			if (this->CurrentStyle)
+			{
+				if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+				{
+					vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+				}
+				this->CurrentStyle->SetInteractor(0);
+			}
+			this->CurrentStyle = this->FieldSelector;
+		}
+	}
   else if (this->CurrentGesture == Gesture::TAP &&
       this->CurrentLayout == Layout::DIAL)
   {
@@ -225,6 +261,10 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
     {
       if(this->CurrentStyle)
       {
+				if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+				{
+					vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+				}
         this->CurrentStyle->SetInteractor(0);
       }
       this->CurrentStyle = this->TapDial;
@@ -237,6 +277,10 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
     {
       if(this->CurrentStyle)
       {
+				if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+				{
+					vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+				}
         this->CurrentStyle->SetInteractor(0);
       }
       this->CurrentStyle = this->TapKeyboard;
@@ -249,6 +293,10 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
     {
       if(this->CurrentStyle)
       {
+				if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+				{
+					vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+				}
         this->CurrentStyle->SetInteractor(0);
       }
       this->CurrentStyle = this->TapBool;
@@ -261,6 +309,10 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
       {
         if(this->CurrentStyle)
         {
+					if (this->CurrentStyle->IsA("vtkOpenVRInteractorStyleInputData"))
+					{
+						vtkOpenVRInteractorStyleInputData::SafeDownCast(this->CurrentStyle)->Reset();
+					}
           this->CurrentStyle->SetInteractor(0);
         }
         this->CurrentStyle = this->SwipeDial;
@@ -325,6 +377,7 @@ void vtkOpenVRInteractorStyleSwitchInput::SetDefaultRenderer(vtkRenderer* render
   this->TapKeyboard->SetDefaultRenderer(renderer);
 	this->TapBool->SetDefaultRenderer(renderer);
   this->SwipeDial->SetDefaultRenderer(renderer);
+	this->FieldSelector->SetDefaultRenderer(renderer);
 }
 
 //----------------------------------------------------------------------------
@@ -335,4 +388,5 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentRenderer(vtkRenderer* render
   this->TapKeyboard->SetCurrentRenderer(renderer);
 	this->TapBool->SetCurrentRenderer(renderer);
   this->SwipeDial->SetCurrentRenderer(renderer);
+	this->FieldSelector->SetCurrentRenderer(renderer);
 }

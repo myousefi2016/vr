@@ -35,7 +35,8 @@
 enum class Gesture
 {
 	TAP,
-	SWIPE
+	SWIPE,
+	NONE
 };
 
 //Layouts
@@ -43,7 +44,8 @@ enum class Layout
 {
 	DIAL,
 	KEYBOARD,
-	BOOL
+	BOOL,
+	NONE
 };
 
 class vtkOpenVRInteractorStyleTapDial;
@@ -51,6 +53,7 @@ class vtkOpenVRInteractorStyleTapKeyboard;
 class vtkOpenVRInteractorStyleTapBool;
 class vtkOpenVRInteractorStyleSwipeDial;
 class vtkInteractorStyleMultiTouchCamera;
+class vtkOpenVRInteractorStyleFieldSelector;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwitchInput
   : public vtkOpenVRInteractorStyleSwitchBase
@@ -80,7 +83,7 @@ public:
   void SetCurrentStyleToTapKeyboard();
   void SetCurrentStyleToTapBool();
   void SetCurrentStyleToSwipeDial();
-//  void SetCurrentStyleToSelector();		//TODO 26/07/2017
+  void SetCurrentStyleToFieldSelector();
   void SetCurrentStyleTo(Gesture g, Layout l);
   void SetCurrentStyleToMultiTouchCamera();
   //@}
@@ -107,10 +110,11 @@ protected:
 
   void SetCurrentStyle();
 
-	vtkOpenVRInteractorStyleTapDial *TapDial;
-	vtkOpenVRInteractorStyleTapKeyboard *TapKeyboard;
-	vtkOpenVRInteractorStyleTapBool *TapBool;
-  vtkOpenVRInteractorStyleSwipeDial *SwipeDial;
+	vtkOpenVRInteractorStyleTapDial *TapDial;								//Gesture::TAP		Layout::DIAL
+	vtkOpenVRInteractorStyleTapKeyboard *TapKeyboard;				//Gesture::TAP		Layout::KEYBOARD
+	vtkOpenVRInteractorStyleTapBool *TapBool;								//Gesture::TAP		Layout::BOOL
+  vtkOpenVRInteractorStyleSwipeDial *SwipeDial;						//Gesture::SWIPE	Layout::DIAL
+	vtkOpenVRInteractorStyleFieldSelector *FieldSelector;		//Gesture::NONE		Layout::NONE
   vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
 
