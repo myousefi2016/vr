@@ -69,17 +69,14 @@ public:
 	virtual void SwitchCaps();
 
 	virtual void ChangeImage();
-
-	vtkField GetSelectedField();
-
-	void Reset();
+	
+	//void Reset();
 
 protected:
 	vtkOpenVRInteractorStyleFieldSelector();
   ~vtkOpenVRInteractorStyleFieldSelector() VTK_OVERRIDE;
 
-	vtkOpenVRPropertyModifier *FieldModifier;
-	vtkField SelectedField;	//Field to be modified next;
+//	vtkOpenVRPropertyModifier *FieldModifier;
 
 private:
 	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.

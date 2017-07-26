@@ -184,6 +184,10 @@ void vtkOpenVRInteractorStyleInputData::Reset()
 		this->TouchPadImage->Detach();
 	}
 	
+	if (this->ISSwitch)
+	{
+		this->ISSwitch->GetFieldModifier()->HideTest();
+	}
 	/*if (this->FieldModifier)
 	{
 		this->FieldModifier->HideTest();

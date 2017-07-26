@@ -54,7 +54,6 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	//Prop to modify:
-//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 	this->ModifyProp = true;
 
 	//Images
@@ -80,12 +79,6 @@ vtkOpenVRInteractorStyleTapDial::~vtkOpenVRInteractorStyleTapDial()
 	{
 		this->TextFeedback->Delete();
 	}
-
-	//Remove Field Modifier:
-//////	if(this->FieldModifier)
-//////	{
-//////		this->FieldModifier->Delete();
-//////	}
 
 	//Remove Image:
 	if (this->TouchPadImage)
@@ -148,11 +141,12 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonDown()
 				//test:
 				if (this->ModifyProp)
 				{
+					vtkObject *Object = this->ISSwitch->GetFieldModifier()->GetfieldOwnerAsObject();
+					vtkField Field = this->ISSwitch->GetFieldModifier()->GetSelectedField();
 					char *Value = this->TextFeedback->GetTextActor()->GetInput();
 					char **pValue = &Value;
-					//this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
-					this->ISSwitch->GetFieldModifier()->ModifyProperty(
-						this->ISSwitch->GetFieldModifier()->GetTestSource(), vtkField::Radius, pValue);
+
+					this->ISSwitch->GetFieldModifier()->ModifyProperty(Object, Field, pValue);
 				}
 
 			}
@@ -209,21 +203,14 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
 	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
-		//=====================
-
 		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
 		{
 			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
 				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
 			
-			//ISSwitch->SetCurrentStyleToSwipeDial();	//TODO 26/07/2017 Check if this works or there is any problem. --> WORKS!!
-			
 			ISSwitch->SetCurrentStyleToFieldSelector();
 			return;
 		}
-
-		//this->FieldModifier->IterateSourceType();
-		//=====================
 	}
 
 	bool TextEmpty = false;

@@ -45,7 +45,8 @@ vtkStandardNewMacro(vtkOpenVRPropertyModifier);
 //----------------------------------------------------------------------------
 vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 {
-	
+	this->SelectedField = vtkField::None;
+
 	//Dummy test
 	this->TestSource = NULL;		// vtkPolyDataAlgorithm::New();		//this->TestSource = vtkSphereSource::New();
 	this->TestActor = NULL; 
@@ -200,10 +201,7 @@ int vtkOpenVRPropertyModifier::GetMaxSourceType()
 void vtkOpenVRPropertyModifier::InitTest()
 {
 	//create and place in coordinates.
-//	TestSource->SetPhiResolution(20);
-//	TestSource->SetThetaResolution(20);
 	TestActor = vtkActor::New();
-	//TestActor->PickableOff();
 	TestActor->DragableOff();
 	TestActor->SetMapper(TestMapper);
 	TestActor->GetProperty()->SetAmbient(1.0);
@@ -266,16 +264,57 @@ void vtkOpenVRPropertyModifier::HideTest()
 	}
 }
 
-void vtkOpenVRPropertyModifier::SetGenericSource(vtkSourceType s)
+void vtkOpenVRPropertyModifier::SetSelectedField(vtkField field)
 {
-	
+	this->SelectedField = field;
+}
+
+vtkField vtkOpenVRPropertyModifier::GetSelectedField()
+{
+	return this->SelectedField;
+}
+
+vtkObject * vtkOpenVRPropertyModifier::GetfieldOwnerAsObject()
+{
+	// Specify also if the field owner is an algorithm (sources)
+	// or a data object (props / actors)
+	switch (this->SelectedField)
+	{
+		//Algorithms (sources):
+	case vtkField::Radius:
+	case vtkField::ThetaResolution:
+	case vtkField::PhiResolution:
+	case vtkField::Height:
+	case vtkField::XLength:
+	case vtkField::YLength:
+	case vtkField::ZLength:
+		return this->TestSource;
+		//Data Objects (props / actors):
+	case vtkField::Visibility:
+	case vtkField::Scale:
+	case vtkField::Opacity:
+		return this->TestActor;
+	case vtkField::None:
+	default:
+		vtkErrorMacro(<< "Unrecognised vtkField. No Pipeline entity can be inferred as owner.");
+		return nullptr;
+	}
+}
+
+void vtkOpenVRPropertyModifier::IterateSourceType()
+{
+	//Default behaviour: iterates over all the defined SourceTypes (except 'None').
+	vtkSourceType newST = vtkSourceType((int(this->GetCurrentSourceType()) + 1) % this->GetMaxSourceType());
+	this->SelectSourceType(newST);
 }
 
 void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
 {
 	if (this->CurrentSourceType != s)
 	{
-		if(this->TestSource) this->TestSource->Delete();
+
+		if (this->TestSource) this->TestSource->Delete();
+
 		this->CurrentSourceType = s;
 		switch (s)
 		{
@@ -289,13 +328,7 @@ void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
 		}
 		if (this->TestMapper && this->TestSource) this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
 	}
-}
 
-void vtkOpenVRPropertyModifier::IterateSourceType()
-{
-	//Default behaviour: iterates over all the defined SourceTypes (except 'None').
-	vtkSourceType newST = vtkSourceType((int(this->GetCurrentSourceType()) + 1) % this->GetMaxSourceType());
-	this->SelectSourceType(newST);
 }
 
 //----------------------------------------------------------------------------

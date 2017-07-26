@@ -89,6 +89,16 @@ enum class vtkSourceType
 };
 
 
+
+enum class vtkPipelineEntity
+{
+	Algorithm,
+	DataObject,
+	None
+};
+
+
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
 {
 public:
@@ -112,9 +122,16 @@ public:
 	virtual void ShowTest(vtkOpenVRRenderWindowInteractor *rwi);
 	virtual void HideTest();
 
-	//Union try
-	void SetGenericSource(vtkSourceType s);
+
+
 	void SelectSourceType(vtkSourceType s);
+
+
+	void SetSelectedField(vtkField field);
+	vtkField GetSelectedField();
+	vtkObject* GetfieldOwnerAsObject();
+
+
 
 	virtual void IterateSourceType();
 
@@ -130,6 +147,8 @@ protected:
 
 
 	vtkSourceType CurrentSourceType;
+
+	vtkField SelectedField;	//Field to be modified next;
 
 
 private:

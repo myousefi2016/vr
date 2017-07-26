@@ -46,15 +46,13 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyleFieldSelector);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleFieldSelector::vtkOpenVRInteractorStyleFieldSelector()
 {
-	this->SelectedField = vtkField::None;
-
 	//Text3D to modify Props' attributes.
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 	this->TextFeedback->SetTextDefaultMsg(
 		"Press Grip:\n -Inside Object: Iterate to next Object.\n -Outside Object: Toggle Object ON/OFF.\nPress Touchpad: Select Field to modify.");
 
 	//Properties' Modifier
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();	//Starts with a Sphere
+//	this->FieldModifier = vtkOpenVRPropertyModifier::New();	//Starts with a Sphere
 	this->ModifyProp = true;
 
 	//Images:
@@ -78,10 +76,10 @@ vtkOpenVRInteractorStyleFieldSelector::~vtkOpenVRInteractorStyleFieldSelector()
 	}
 
 	//Remove FieldModifier
-	if(this->FieldModifier)
-	{
-		this->FieldModifier->Delete();
-	}
+	//if(this->FieldModifier)
+	//{
+	//	this->FieldModifier->Delete();
+	//}
 
 	//Remove images
 	if (this->TouchPadImage)
@@ -119,43 +117,80 @@ void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonUp()
 
 
 		//Find out the Field selected by the user:
-		switch (this->FieldModifier->GetCurrentSourceType())
+		switch (this->ISSwitch->GetFieldModifier()->GetCurrentSourceType())
 		{
 		case vtkSourceType::Sphere:
 			if (x <= 0 && y >= 0)			//Upper left quadrant (+ boundaries).
-				this->SelectedField = vtkField::ThetaResolution;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::ThetaResolution);
 			else if (x > 0 && y > 0)	//Upper right quadrant.
-				this->SelectedField = vtkField::Radius;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::Radius);
 			else if (x < 0 && y < 0)	//Lower left quadrant.
-				this->SelectedField = vtkField::PhiResolution;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::PhiResolution);
 			else											//Lower right quadrant.
-				this->SelectedField = vtkField::None;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::None);
 			break;
 		case vtkSourceType::Cylinder:
 			if (x <= 0 && y >= 0)			//Upper left quadrant (+ boundaries).
-				this->SelectedField = vtkField::Height;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::Height);
 			else if (x > 0 && y > 0)	//Upper right quadrant.
-				this->SelectedField = vtkField::Radius;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::Radius);
 			else if (x < 0 && y < 0)	//Lower left quadrant.
-				this->SelectedField = vtkField::None;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::None);
 			else											//Lower right quadrant.
-				this->SelectedField = vtkField::None;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::None);
 			break;
 		case vtkSourceType::Cube:
 			if (x <= 0 && y >= 0)			//Upper left quadrant (+ boundaries).
-				this->SelectedField = vtkField::XLength;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::XLength);
 			else if (x > 0 && y > 0)	//Upper right quadrant.
-				this->SelectedField = vtkField::YLength;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::YLength);
 			else if (x < 0 && y < 0)	//Lower left quadrant.
-				this->SelectedField = vtkField::ZLength;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::ZLength);
 			else											//Lower right quadrant.
-				this->SelectedField = vtkField::None;
+				this->ISSwitch->GetFieldModifier()->SetSelectedField(vtkField::None);
 			break;
 		}
 
 
+
+		/*
+		// Specify also if the field owner is an algorithm (sources)
+		// or a data object (props / actors)
+		switch (this->ISSwitch->GetFieldModifier()->GetSelectedField())
+		{
+			//Algorithms (sources):
+		case vtkField::Radius:
+		case vtkField::ThetaResolution:
+		case vtkField::PhiResolution:
+		case vtkField::Height:
+		case vtkField::XLength:
+		case vtkField::YLength:
+		case vtkField::ZLength:
+			this->ISSwitch->GetFieldModifier()->Set(vtkField::None);
+			break;
+			//TapBool (booleans):
+		case vtkField::Visibility:
+			this->ISSwitch->SetCurrentStyleToTapBool();
+			break;
+			//TapKeyboard (letters):
+			//Nothing, by now...
+			//SwipeDial (numbers):
+		case vtkField::Scale:
+		case vtkField::Opacity:
+			this->ISSwitch->SetCurrentStyleToSwipeDial();
+			break;
+			//None:
+		case vtkField::None:
+			break;
+		default:
+			vtkErrorMacro(<< "Unrecognised vtkField. No IS Selected to modify it.");
+			break;
+		}*/
+
+
+
 		//Decide which IS class will handle the value change (according to the field selected):
-		switch (this->SelectedField)
+		switch (this->ISSwitch->GetFieldModifier()->GetSelectedField())
 		{
 			//TapDial (numbers):
 		case vtkField::ThetaResolution:
@@ -185,7 +220,6 @@ void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonUp()
 			vtkErrorMacro(<< "Unrecognised vtkField. No IS Selected to modify it.");
 			break;
 		}
-
 
 
 		/*
@@ -426,9 +460,9 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 
 
 	//Click Inside. If I have the controller inside the object, iterate to next object.
-	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
-		this->FieldModifier->IterateSourceType();
+		this->ISSwitch->GetFieldModifier()->IterateSourceType();
 		this->ChangeImage();
 		return;
 	}
@@ -446,7 +480,7 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 		//Test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->HideTest();
+			this->ISSwitch->GetFieldModifier()->HideTest();
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -480,7 +514,7 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 			//Test:
 			if (this->ModifyProp)
 			{
-				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 			}
 		}
 	}
@@ -512,7 +546,7 @@ void vtkOpenVRInteractorStyleFieldSelector::SwitchCaps()
 
 void vtkOpenVRInteractorStyleFieldSelector::ChangeImage()
 {
-	switch (this->FieldModifier->GetCurrentSourceType())
+	switch (this->ISSwitch->GetFieldModifier()->GetCurrentSourceType())
 	{
 	case vtkSourceType::Sphere:
 		this->TouchPadImage->SetNextImage(0); break;
@@ -527,11 +561,15 @@ void vtkOpenVRInteractorStyleFieldSelector::ChangeImage()
 
 }
 
+/*
 vtkField vtkOpenVRInteractorStyleFieldSelector::GetSelectedField()
 {
 	return SelectedField;
 }
+*/
 
+
+/*
 void vtkOpenVRInteractorStyleFieldSelector::Reset()
 {
 	Superclass::Reset();
@@ -540,7 +578,7 @@ void vtkOpenVRInteractorStyleFieldSelector::Reset()
 	{
 		this->FieldModifier->HideTest();
 	}
-}
+}*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleFieldSelector::IncNextImage()
