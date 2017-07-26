@@ -27,6 +27,9 @@
 #include "vtkObjectFactory.h"
 #include "vtkRenderWindowInteractor.h"
 
+
+#include "vtkOpenVRPropertyModifier.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwitchInput);
 
 //----------------------------------------------------------------------------
@@ -37,14 +40,25 @@ vtkOpenVRInteractorStyleSwitchInput::vtkOpenVRInteractorStyleSwitchInput()
 	this->TapBool = vtkOpenVRInteractorStyleTapBool::New();
   this->SwipeDial = vtkOpenVRInteractorStyleSwipeDial::New();
 	this->FieldSelector = vtkOpenVRInteractorStyleFieldSelector::New();
+	this->SetISSwitch();
+
   this->MultiTouchCamera = vtkInteractorStyleMultiTouchCamera::New();
 
-  this->CurrentGesture = Gesture::TAP;
-  this->CurrentLayout = Layout::DIAL;
-	//this->CurrentGesture = Gesture::NONE;
-	//this->CurrentLayout = Layout::NONE;
+  //this->CurrentGesture = Gesture::TAP;
+  //this->CurrentLayout = Layout::DIAL;
+	this->CurrentGesture = Gesture::NONE;
+	this->CurrentLayout = Layout::NONE;
   this->MultiTouch = false;
   this->CurrentStyle = 0;
+
+
+
+
+
+	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+
+
+
 }
 
 //----------------------------------------------------------------------------
@@ -67,6 +81,14 @@ vtkOpenVRInteractorStyleSwitchInput::~vtkOpenVRInteractorStyleSwitchInput()
 
   this->MultiTouchCamera->Delete();
   this->MultiTouchCamera = NULL;
+
+
+
+	this->FieldModifier->Delete();
+	this->FieldModifier = NULL;
+
+
+
 }
 
 //----------------------------------------------------------------------------
@@ -323,6 +345,15 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyle()
     this->CurrentStyle->SetInteractor(this->Interactor);
     this->CurrentStyle->SetTDxStyle(this->TDxStyle);
   }
+}
+
+void vtkOpenVRInteractorStyleSwitchInput::SetISSwitch()
+{
+	this->TapDial->SetISSwitch(this);
+	this->TapKeyboard->SetISSwitch(this);
+	this->TapBool->SetISSwitch(this);
+	this->SwipeDial->SetISSwitch(this);
+	this->FieldSelector->SetISSwitch(this);
 }
 
 //----------------------------------------------------------------------------

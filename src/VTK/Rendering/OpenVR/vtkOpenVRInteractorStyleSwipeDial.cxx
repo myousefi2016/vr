@@ -44,6 +44,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 
@@ -85,7 +86,7 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
 
 	//Prop to modify:
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 	this->ModifyProp = true;
 }
 
@@ -202,7 +203,8 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		{
 			char *Value = this->TextFeedback->GetTextActor()->GetInput();
 			char **pValue = &Value;
-			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
+			this->ISSwitch->GetFieldModifier()->ModifyProperty(
+				this->ISSwitch->GetFieldModifier()->GetTestSource(), vtkField::Radius, pValue);
 		}
 	}
 }
@@ -235,7 +237,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 		//Test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->HideTest();
+			this->ISSwitch->GetFieldModifier()->HideTest();
 		}
 
 	}
@@ -270,7 +272,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 			//Test:
 			if (this->ModifyProp)
 			{
-				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 			}
 		}
 
@@ -515,7 +517,8 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		{
 			char *Value = this->TextFeedback->GetTextActor()->GetInput();
 			char **pValue = &Value;
-			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
+			this->ISSwitch->GetFieldModifier()->ModifyProperty(
+				this->ISSwitch->GetFieldModifier()->GetTestSource(), vtkField::Radius, pValue);
 		}
 
 		//Start tracking next set of movements

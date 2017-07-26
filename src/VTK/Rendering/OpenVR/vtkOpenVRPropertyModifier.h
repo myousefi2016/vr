@@ -73,7 +73,9 @@ enum class vtkField
 //vtkCubeSource
 	XLength,
 	YLength,
-	ZLength
+	ZLength,
+//Default
+	None
 };
 
 

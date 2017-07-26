@@ -40,7 +40,7 @@ class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapKeyboard : public vtk
 {
 public:
   static vtkOpenVRInteractorStyleTapKeyboard *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleTapKeyboard, vtkOpenVRInteractorStyle);
+  vtkTypeMacro(vtkOpenVRInteractorStyleTapKeyboard, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
   //@{

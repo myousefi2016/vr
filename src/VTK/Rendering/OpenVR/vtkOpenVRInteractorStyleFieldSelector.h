@@ -43,7 +43,7 @@ class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleFieldSelector : public v
 {
 public:
   static vtkOpenVRInteractorStyleFieldSelector *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleFieldSelector, vtkOpenVRInteractorStyle);
+  vtkTypeMacro(vtkOpenVRInteractorStyleFieldSelector, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
@@ -68,10 +68,18 @@ public:
 	void DecNextImage() VTK_OVERRIDE;
 	virtual void SwitchCaps();
 
+	virtual void ChangeImage();
+
+	vtkField GetSelectedField();
+
+	void Reset();
 
 protected:
 	vtkOpenVRInteractorStyleFieldSelector();
   ~vtkOpenVRInteractorStyleFieldSelector() VTK_OVERRIDE;
+
+	vtkOpenVRPropertyModifier *FieldModifier;
+	vtkField SelectedField;	//Field to be modified next;
 
 private:
 	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.

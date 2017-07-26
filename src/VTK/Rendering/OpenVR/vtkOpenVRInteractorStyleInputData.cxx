@@ -29,6 +29,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTouchPadPointer.h"
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleInputData);
 
@@ -39,7 +40,8 @@ vtkOpenVRInteractorStyleInputData::vtkOpenVRInteractorStyleInputData()
 	this->TouchPadPointer = NULL;
 	this->TouchPadImage = NULL;
 	this->TextFeedback = NULL;
-	this->FieldModifier = NULL;
+//////	this->FieldModifier = NULL;
+	this->ISSwitch = NULL;
 
 	this->ModifyProp = false;
 }
@@ -182,10 +184,15 @@ void vtkOpenVRInteractorStyleInputData::Reset()
 		this->TouchPadImage->Detach();
 	}
 	
-	if (this->FieldModifier)
+	/*if (this->FieldModifier)
 	{
 		this->FieldModifier->HideTest();
-	}
+	}*/
+}
+
+void vtkOpenVRInteractorStyleInputData::ModifyProperty(vtkObject * obj, vtkField field, char ** value)
+{
+	this->ISSwitch->GetFieldModifier()->ModifyProperty(obj, field, value);
 }
 
 //----------------------------------------------------------------------------

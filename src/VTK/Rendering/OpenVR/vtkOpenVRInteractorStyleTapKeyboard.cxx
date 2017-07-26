@@ -53,8 +53,7 @@ vtkOpenVRInteractorStyleTapKeyboard::vtkOpenVRInteractorStyleTapKeyboard()
 	this->TouchPadImage->Init();
 
 	//Properties' Modifier
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
-
+//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
@@ -71,10 +70,10 @@ vtkOpenVRInteractorStyleTapKeyboard::~vtkOpenVRInteractorStyleTapKeyboard()
 	}
 
 	//Remove FieldModifier
-	if(this->FieldModifier)
-	{
-		this->FieldModifier->Delete();
-	}
+//////	if(this->FieldModifier)
+//////	{
+//////		this->FieldModifier->Delete();
+//////	}
 
 	//Remove images
 	if (this->TouchPadImage)

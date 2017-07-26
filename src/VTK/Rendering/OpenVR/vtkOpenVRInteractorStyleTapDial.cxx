@@ -54,7 +54,7 @@ vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 	this->TextFeedback = vtkOpenVRTextFeedback::New();
 
 	//Prop to modify:
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 	this->ModifyProp = true;
 
 	//Images
@@ -82,10 +82,10 @@ vtkOpenVRInteractorStyleTapDial::~vtkOpenVRInteractorStyleTapDial()
 	}
 
 	//Remove Field Modifier:
-	if(this->FieldModifier)
-	{
-		this->FieldModifier->Delete();
-	}
+//////	if(this->FieldModifier)
+//////	{
+//////		this->FieldModifier->Delete();
+//////	}
 
 	//Remove Image:
 	if (this->TouchPadImage)
@@ -150,8 +150,11 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonDown()
 				{
 					char *Value = this->TextFeedback->GetTextActor()->GetInput();
 					char **pValue = &Value;
-					this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
+					//this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
+					this->ISSwitch->GetFieldModifier()->ModifyProperty(
+						this->ISSwitch->GetFieldModifier()->GetTestSource(), vtkField::Radius, pValue);
 				}
+
 			}
 			else	// region in range [5,9]
 			{
@@ -204,7 +207,7 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 
 
 	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
-	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
 		//=====================
 
@@ -235,7 +238,7 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 		//Test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->HideTest();
+			this->ISSwitch->GetFieldModifier()->HideTest();
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -269,7 +272,7 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 			//Test:
 			if (this->ModifyProp)
 			{
-				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 			}
 		}
 

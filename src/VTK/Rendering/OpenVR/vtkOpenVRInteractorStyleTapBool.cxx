@@ -36,6 +36,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleTapBool);
 
@@ -47,7 +48,7 @@ vtkOpenVRInteractorStyleTapBool::vtkOpenVRInteractorStyleTapBool()
 	this->TextFeedback->SetTextDefaultMsg("Select Bool");
 
 	//Prop to modify:
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
 	this->ModifyProp = true;
 
 	//Images
@@ -73,10 +74,10 @@ vtkOpenVRInteractorStyleTapBool::~vtkOpenVRInteractorStyleTapBool()
 	}
 
 	//Remove Field Modifier:
-	if(this->FieldModifier)
-	{
-		this->FieldModifier->Delete();
-	}
+//////	if(this->FieldModifier)
+//////	{
+//////		this->FieldModifier->Delete();
+//////	}
 
 	//Remove Image:
 	if (this->TouchPadImage)
@@ -139,7 +140,8 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 			{
 				char *Value = this->TextFeedback->GetTextActor()->GetInput();
 				char **pValue = &Value;
-				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestActor(), vtkField::Visibility, pValue);
+				this->ISSwitch->GetFieldModifier()->ModifyProperty(
+					this->ISSwitch->GetFieldModifier()->GetTestActor(), vtkField::Visibility, pValue);
 			}
 		}
 	}
@@ -174,7 +176,7 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 		//Test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->HideTest();
+			this->ISSwitch->GetFieldModifier()->HideTest();
 		}
 	}
 	//Either or is not created or has changes or is not shown
@@ -208,7 +210,7 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 			//Test:
 			if (this->ModifyProp)
 			{
-				this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
 			}
 		}
 	}

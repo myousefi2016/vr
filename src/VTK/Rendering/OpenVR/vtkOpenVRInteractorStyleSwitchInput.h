@@ -55,6 +55,9 @@ class vtkOpenVRInteractorStyleSwipeDial;
 class vtkInteractorStyleMultiTouchCamera;
 class vtkOpenVRInteractorStyleFieldSelector;
 
+//is this needed?
+class vtkOpenVRPropertyModifier;
+
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwitchInput
   : public vtkOpenVRInteractorStyleSwitchBase
 {
@@ -104,11 +107,22 @@ public:
   void SetCurrentRenderer(vtkRenderer*) VTK_OVERRIDE;
   //@}
 
+
+
+	vtkGetMacro(FieldModifier, vtkOpenVRPropertyModifier*);
+
+
 protected:
   vtkOpenVRInteractorStyleSwitchInput();
   ~vtkOpenVRInteractorStyleSwitchInput() VTK_OVERRIDE;
 
   void SetCurrentStyle();
+
+	/**
+	* The sub styles need a pointer to the switch too
+	* (can be obtained by Interactor, but this is more clean and convinient).
+	*/
+	virtual void SetISSwitch();
 
 	vtkOpenVRInteractorStyleTapDial *TapDial;								//Gesture::TAP		Layout::DIAL
 	vtkOpenVRInteractorStyleTapKeyboard *TapKeyboard;				//Gesture::TAP		Layout::KEYBOARD
@@ -117,6 +131,10 @@ protected:
 	vtkOpenVRInteractorStyleFieldSelector *FieldSelector;		//Gesture::NONE		Layout::NONE
   vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
+
+	
+	vtkOpenVRPropertyModifier *FieldModifier;
+
 
   Gesture CurrentGesture;
   Layout CurrentLayout;
