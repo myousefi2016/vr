@@ -147,7 +147,9 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonDown()
 				//test:
 				if (this->ModifyProp)
 				{
-					this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+					char *Value = this->TextFeedback->GetTextActor()->GetInput();
+					char **pValue = &Value;
+					this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
 				}
 			}
 			else	// region in range [5,9]
@@ -205,9 +207,16 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
 	if (this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
 	{
-		//iterates over all the defined SourceTypes (except 'None').
-		vtkSourceType newST = vtkSourceType((int(this->FieldModifier->GetCurrentSourceType())+1) % this->FieldModifier->GetMaxSourceType());
-		this->FieldModifier->SelectSourceType(newST);
+//=====================
+		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
+		{
+			this->Interactor->GetInteractorStyle()
+				//TODO
+		}
+
+//=====================
+
+		this->FieldModifier->IterateSourceType();
 	}
 
 	bool TextEmpty = false;

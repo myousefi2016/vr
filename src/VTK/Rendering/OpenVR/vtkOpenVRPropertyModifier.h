@@ -50,18 +50,30 @@ class vtkCubeSource;
  * them must be specified the way of modifying them from a text input.
  * 
  * Default version only is intended as a demo, and implements few
- * properties from a Sphere.
+ * properties from some sources (sphere, Cylinder, Cube) and actors,
+ * props and 3D props.
  * 
- * Currently only valid to set monovalue properties (i.e. not color)
- * 
- * @see vtkProperty vtkActor
+ * @see vtkProperty vtkActor vtkProp vtkProp3D
  */
 enum class vtkField
 {
-	Scale,
-	Opacity,
+//vtkProp
 	Visibility,
-	Radius
+//vtkProp3D
+	Scale,
+//vtkActor
+	Opacity,
+//vtkSphereSource
+	Radius,
+	ThetaResolution,
+	PhiResolution,
+//vtkCylinderSource
+	Height,
+	//Radius, already added on Sphere
+//vtkCubeSource
+	XLength,
+	YLength,
+	ZLength
 };
 
 
@@ -84,7 +96,9 @@ public:
 
 	// A vtkObject is sent. internally, it must be downcasted to 
 	// the most general class which has the field to modify.
-  virtual void ModifyProperty(vtkObject *obj, vtkField field, char* value);
+	// Double pointer in 'value' is intended to allow passing multiple
+	// values (such as x-y-z coords, colour, ...).
+  virtual void ModifyProperty(vtkObject *obj, vtkField field, char** value);
 
 	vtkGetMacro(TestSource, vtkPolyDataAlgorithm*);
 	vtkGetMacro(TestActor, vtkActor*);
@@ -100,6 +114,7 @@ public:
 	void SetGenericSource(vtkSourceType s);
 	void SelectSourceType(vtkSourceType s);
 
+	virtual void IterateSourceType();
 
 protected:
   vtkOpenVRPropertyModifier();

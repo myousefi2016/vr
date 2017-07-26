@@ -137,8 +137,9 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 			//test:
 			if (this->ModifyProp)
 			{
-				//this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
-				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestActor(), vtkField::Visibility, this->TextFeedback->GetTextActor()->GetInput());
+				char *Value = this->TextFeedback->GetTextActor()->GetInput();
+				char **pValue = &Value;
+				this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestActor(), vtkField::Visibility, pValue);
 			}
 		}
 	}

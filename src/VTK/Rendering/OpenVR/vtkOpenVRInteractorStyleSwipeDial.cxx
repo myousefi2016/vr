@@ -200,7 +200,9 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 		//test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+			char *Value = this->TextFeedback->GetTextActor()->GetInput();
+			char **pValue = &Value;
+			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
 		}
 	}
 }
@@ -511,7 +513,9 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 		//test:
 		if (this->ModifyProp)
 		{
-			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, this->TextFeedback->GetTextActor()->GetInput());
+			char *Value = this->TextFeedback->GetTextActor()->GetInput();
+			char **pValue = &Value;
+			this->FieldModifier->ModifyProperty(this->FieldModifier->GetTestSource(), vtkField::Radius, pValue);
 		}
 
 		//Start tracking next set of movements

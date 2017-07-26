@@ -80,27 +80,28 @@ vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, char* value)
+void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, char** value)
 {	//Add new parameter: vtkObjectType (which is a new enum class).
 	//This will remove problems on downcasting:
 	//instead of vtkSphereSource, we can select vtkAlgorithm or vtkPolyDataAlgorithm
 	//¿?To do so, create a method, selectDownCast(...) ¿?
 	//BRIGHT IDEA: Use an "union" to store all the different types as pointers!!!
 	vtkProp *downProp;
+	vtkProp3D *downProp3D;
 	vtkActor *downActor;
 	vtkSphereSource *downSphere;
-	vtkProp3D *downProp3D;
+	vtkCylinderSource *downCylinder;
+	vtkCubeSource *downCube;
 
 	switch(field)
 	{
+	//vtkProp cases
 	case vtkField::Visibility:
-//		downProp = vtkProp::SafeDownCast(obj);	//downSphere = vtkSphereSource::SafeDownCast(obj);
-//		if (downProp /*downSphere*/ != NULL)
-		if(obj->IsA("vtkProp"))			//WORKS WITH UPCAST!!
+		if(obj->IsA("vtkProp"))
 		{
 			downProp = vtkProp::SafeDownCast(obj);
 
-			vtkStdString str = vtkVariant(value).ToString();
+			vtkStdString str = vtkVariant(*value).ToString();
 			if (str.compare("true") == 0)
 			{
 				downProp->SetVisibility(true);
@@ -111,31 +112,80 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 			}
 		}
 		break;
-	case vtkField::Opacity:
-		downActor = vtkActor::SafeDownCast(obj);
-		if (downActor != NULL)
-		{
-			downActor->GetProperty()->SetOpacity(vtkVariant(value).ToDouble());
-		}
-		break;
+	//vtkProp3D cases
 	case vtkField::Scale:
-		downProp3D = vtkProp3D::SafeDownCast(obj);
-		if(downProp3D != NULL)
+		if (obj->IsA("vtkProp3D"))
 		{
-			downProp3D->SetScale(vtkVariant(value).ToDouble());
+			downProp3D = vtkProp3D::SafeDownCast(obj);
+			downProp3D->SetScale(vtkVariant(*value).ToDouble());
 		}
 		break;
+	//vtkActor cases
+	case vtkField::Opacity:
+		if (obj->IsA("vtkActor"))
+		{
+			downActor = vtkActor::SafeDownCast(obj);
+			downActor->GetProperty()->SetOpacity(vtkVariant(*value).ToDouble());
+		}
+		break;
+	//vtkSphereSource cases
 	case vtkField::Radius:
-//		downSphere = vtkSphereSource::SafeDownCast(obj);
-//		if (downSphere != NULL)
-		if (obj->IsA("vtkSphereSource"))			//will it WORK WITH downCAST!!
+		if (obj->IsA("vtkSphereSource"))
 		{
 			downSphere = vtkSphereSource::SafeDownCast(obj);
-
-			downSphere->SetRadius(vtkVariant(value).ToDouble());
+			downSphere->SetRadius(vtkVariant(*value).ToDouble());
+		}
+		else if (obj->IsA("vtkCylinderSource"))
+		{
+			downCylinder = vtkCylinderSource::SafeDownCast(obj);
+			downCylinder->SetRadius(vtkVariant(*value).ToDouble());
 		}
 		break;
-	// Add cases as desired. Remenber to add the vtkProp in the enum class!
+	case vtkField::ThetaResolution:
+		if (obj->IsA("vtkSphereSource"))
+		{
+			downSphere = vtkSphereSource::SafeDownCast(obj);
+			downSphere->SetThetaResolution(vtkVariant(*value).ToInt());
+		}
+		break;
+	case vtkField::PhiResolution:
+		if (obj->IsA("vtkSphereSource"))
+		{
+			downSphere = vtkSphereSource::SafeDownCast(obj);
+			downSphere->SetPhiResolution(vtkVariant(*value).ToInt());
+		}
+		break;
+	//vtkCylinderSource cases
+	case vtkField::Height:
+		if (obj->IsA("vtkCylinderSource"))
+		{
+			downCylinder = vtkCylinderSource::SafeDownCast(obj);
+			downCylinder->SetHeight(vtkVariant(*value).ToDouble());
+		}
+		break;
+	//vtkCubeSource cases
+	case vtkField::XLength:
+		if (obj->IsA("vtkCubeSource"))
+		{
+			downCube = vtkCubeSource::SafeDownCast(obj);
+			downCube->SetXLength(vtkVariant(*value).ToDouble());
+		}
+		break;
+	case vtkField::YLength:
+		if (obj->IsA("vtkCubeSource"))
+		{
+			downCube = vtkCubeSource::SafeDownCast(obj);
+			downCube->SetYLength(vtkVariant(*value).ToDouble());
+		}
+		break;
+	case vtkField::ZLength:
+		if (obj->IsA("vtkCubeSource"))
+		{
+			downCube = vtkCubeSource::SafeDownCast(obj);
+			downCube->SetZLength(vtkVariant(*value).ToDouble());
+		}
+		break;
+	// Add cases as desired. Remember to add the vtkProp in the enum class!
 	default:
 		vtkErrorMacro(<< "vtkField not recognized.");
 	}
@@ -243,6 +293,13 @@ void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
 		}
 		if (this->TestMapper && this->TestSource) this->TestMapper->SetInputConnection(this->TestSource->GetOutputPort());
 	}
+}
+
+void vtkOpenVRPropertyModifier::IterateSourceType()
+{
+	//Default behaviour: iterates over all the defined SourceTypes (except 'None').
+	vtkSourceType newST = vtkSourceType((int(this->GetCurrentSourceType()) + 1) % this->GetMaxSourceType());
+	this->SelectSourceType(newST);
 }
 
 //----------------------------------------------------------------------------
