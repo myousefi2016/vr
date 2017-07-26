@@ -138,10 +138,12 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 			//test:
 			if (this->ModifyProp)
 			{
+				vtkObject *Object = this->ISSwitch->GetFieldModifier()->GetfieldOwnerAsObject();
+				vtkField Field = this->ISSwitch->GetFieldModifier()->GetSelectedField();
 				char *Value = this->TextFeedback->GetTextActor()->GetInput();
 				char **pValue = &Value;
-				this->ISSwitch->GetFieldModifier()->ModifyProperty(
-					this->ISSwitch->GetFieldModifier()->GetTestActor(), vtkField::Visibility, pValue);
+
+				this->ISSwitch->GetFieldModifier()->ModifyProperty(Object, Field, pValue);
 			}
 		}
 	}
@@ -162,6 +164,23 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 		int pointer = this->Interactor->GetPointerIndex();
 		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
 		                        this->Interactor->GetEventPositions(pointer)[1]);
+
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition(vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+	}
+
+	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
+	{
+		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
+		{
+			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
+				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
+
+			ISSwitch->SetCurrentStyleToFieldSelector();
+			return;
+		}
 	}
 
 	bool TextEmpty = false;

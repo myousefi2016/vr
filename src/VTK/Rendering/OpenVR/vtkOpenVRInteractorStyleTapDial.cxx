@@ -199,7 +199,6 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
 	}
 
-
 	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
 	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
