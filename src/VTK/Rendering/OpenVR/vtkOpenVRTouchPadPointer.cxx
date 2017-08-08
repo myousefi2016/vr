@@ -146,6 +146,7 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 	const double r = 0.02;												//Touchpad radius
 	const double d = 0.05;												// Distance from center of controller to center of touchpad
 	const double h = 0.01;	// Separation pointer-touchpad.
+	const double a = 0.16;	//Weight to determine the angle of the touchpad coordinates respecting to the angle of the controller coordinates.
 	float *tpos = rwi->GetTouchPadPosition();
 	this->PointerSource->SetRadius(.0025*wscale);	//Pointer radius
 
@@ -156,9 +157,9 @@ void vtkOpenVRTouchPadPointer::Move(vtkOpenVRRenderWindowInteractor *rwi)
 
 	//Transformation matrix (X' = R · T · X)
 	//ptrpos = controller position + translate to touchpad + translate to finger
-	ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)) + (h *(1+ 0.16*tpos[1])) * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw) );
-	ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw) + (h *(1 + 0.16*tpos[1])) * (cosw + wori[2] * wori[2] * (1 - cosw)));
-	ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw) + (h *(1 + 0.16*tpos[1])) * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw));
+	ptrpos[0] = wpos[0] + wscale*((d - r*tpos[1]) * (wori[1] * wori[3] * (1 - cosw) + wori[2] * sinw) + r*tpos[0] * (cosw + wori[1] * wori[1] * (1 - cosw)) + (h *(1+ a*tpos[1])) * (wori[1] * wori[2] * (1 - cosw) - wori[3] * sinw) );
+	ptrpos[1] = wpos[1] + wscale*((d - r*tpos[1]) * (wori[2] * wori[3] * (1 - cosw) - wori[1] * sinw) + r*tpos[0] * (wori[1] * wori[2] * (1 - cosw) + wori[3] * sinw) + (h *(1 + a*tpos[1])) * (cosw + wori[2] * wori[2] * (1 - cosw)));
+	ptrpos[2] = wpos[2] + wscale*((d - r*tpos[1]) * (cosw + wori[3] * wori[3] * (1 - cosw)) + r*tpos[0] * (wori[1] * wori[3] * (1 - cosw) - wori[2] * sinw) + (h *(1 + a*tpos[1])) * (wori[2] * wori[3] * (1 - cosw) + wori[1] * sinw));
 
 	this->PointerSource->SetCenter(ptrpos);
 
