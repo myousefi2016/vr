@@ -28,7 +28,7 @@
 #include "vtkRenderWindowInteractor.h"
 
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwitchInput);
 
@@ -55,7 +55,7 @@ vtkOpenVRInteractorStyleSwitchInput::vtkOpenVRInteractorStyleSwitchInput()
 
 
 
-	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+	this->FieldModifier = vtkOpenVRFieldModifier::New();
 
 
 

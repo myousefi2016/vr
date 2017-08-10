@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRPropertyModifier.cxx
+Module:    vtkOpenVRFieldModifier.cxx
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -12,7 +12,7 @@ the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
@@ -39,11 +39,11 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRInteractorStyleInputData.h"
 #include "vtkOpenVRCamera.h"
 
-vtkStandardNewMacro(vtkOpenVRPropertyModifier);
+vtkStandardNewMacro(vtkOpenVRFieldModifier);
 
 
 //----------------------------------------------------------------------------
-vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
+vtkOpenVRFieldModifier::vtkOpenVRFieldModifier()
 {
 	this->SelectedField = vtkField::None;
 
@@ -64,7 +64,7 @@ vtkOpenVRPropertyModifier::vtkOpenVRPropertyModifier()
 }
 
 //----------------------------------------------------------------------------
-vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
+vtkOpenVRFieldModifier::~vtkOpenVRFieldModifier()
 {
 	if (this->TestActor)
 	{
@@ -81,7 +81,7 @@ vtkOpenVRPropertyModifier::~vtkOpenVRPropertyModifier()
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, char** value)
+void vtkOpenVRFieldModifier::ModifyProperty(vtkObject * obj, vtkField field, char** value)
 {
 	vtkProp *downProp;
 	vtkProp3D *downProp3D;
@@ -188,17 +188,17 @@ void vtkOpenVRPropertyModifier::ModifyProperty(vtkObject * obj, vtkField field, 
 	}
 }
 
-vtkSourceType vtkOpenVRPropertyModifier::GetCurrentSourceType()
+vtkSourceType vtkOpenVRFieldModifier::GetCurrentSourceType()
 {
 	return this->CurrentSourceType;
 }
 
-int vtkOpenVRPropertyModifier::GetMaxSourceType()
+int vtkOpenVRFieldModifier::GetMaxSourceType()
 {
 	return int(vtkSourceType::None);
 }
 
-void vtkOpenVRPropertyModifier::InitTest()
+void vtkOpenVRFieldModifier::InitTest()
 {
 	//create and place in coordinates.
 	TestActor = vtkActor::New();
@@ -208,7 +208,7 @@ void vtkOpenVRPropertyModifier::InitTest()
 	TestActor->GetProperty()->SetDiffuse(0.0);
 }
 
-void vtkOpenVRPropertyModifier::ShowTest(vtkOpenVRRenderWindowInteractor *rwi)
+void vtkOpenVRFieldModifier::ShowTest(vtkOpenVRRenderWindowInteractor *rwi)
 {
 	//Current renderer
 	vtkOpenVRRenderer *ren = NULL;
@@ -255,7 +255,7 @@ void vtkOpenVRPropertyModifier::ShowTest(vtkOpenVRRenderWindowInteractor *rwi)
 	}
 }
 
-void vtkOpenVRPropertyModifier::HideTest()
+void vtkOpenVRFieldModifier::HideTest()
 {
 	if (TestRenderer != NULL && TestActor)
 	{
@@ -264,17 +264,17 @@ void vtkOpenVRPropertyModifier::HideTest()
 	}
 }
 
-void vtkOpenVRPropertyModifier::SetSelectedField(vtkField field)
+void vtkOpenVRFieldModifier::SetSelectedField(vtkField field)
 {
 	this->SelectedField = field;
 }
 
-vtkField vtkOpenVRPropertyModifier::GetSelectedField()
+vtkField vtkOpenVRFieldModifier::GetSelectedField()
 {
 	return this->SelectedField;
 }
 
-vtkObject * vtkOpenVRPropertyModifier::GetfieldOwnerAsObject()
+vtkObject * vtkOpenVRFieldModifier::GetfieldOwnerAsObject()
 {
 	// Specify also if the field owner is an algorithm (sources)
 	// or a data object (props / actors)
@@ -301,14 +301,14 @@ vtkObject * vtkOpenVRPropertyModifier::GetfieldOwnerAsObject()
 	}
 }
 
-void vtkOpenVRPropertyModifier::IterateSourceType()
+void vtkOpenVRFieldModifier::IterateSourceType()
 {
 	//Default behaviour: iterates over all the defined SourceTypes (except 'None').
 	vtkSourceType newST = vtkSourceType((int(this->GetCurrentSourceType()) + 1) % this->GetMaxSourceType());
 	this->SelectSourceType(newST);
 }
 
-void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
+void vtkOpenVRFieldModifier::SelectSourceType(vtkSourceType s)
 {
 	if (this->CurrentSourceType != s)
 	{
@@ -332,7 +332,7 @@ void vtkOpenVRPropertyModifier::SelectSourceType(vtkSourceType s)
 }
 
 //----------------------------------------------------------------------------
-void vtkOpenVRPropertyModifier::PrintSelf(ostream& os, vtkIndent indent)
+void vtkOpenVRFieldModifier::PrintSelf(ostream& os, vtkIndent indent)
 {
 	this->Superclass::PrintSelf(os,indent);
 }

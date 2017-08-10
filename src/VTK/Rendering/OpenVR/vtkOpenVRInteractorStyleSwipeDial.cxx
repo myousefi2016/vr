@@ -39,7 +39,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkProperty.h"
 #include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
@@ -86,7 +86,7 @@ vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
 
 	//Prop to modify:
-//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+//////	this->FieldModifier = vtkOpenVRFieldModifier::New();
 	this->ModifyProp = true;
 }
 

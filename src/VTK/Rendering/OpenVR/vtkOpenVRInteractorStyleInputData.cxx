@@ -28,7 +28,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
 #include "vtkOpenVRTextFeedback.h"
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 #include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleInputData);

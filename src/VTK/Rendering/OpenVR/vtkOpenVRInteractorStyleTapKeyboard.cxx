@@ -32,7 +32,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkProperty.h"
 #include "vtkPolyDataMapper.h"
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 
 
 #include "vtkOpenVRTextFeedback.h"
@@ -53,7 +53,7 @@ vtkOpenVRInteractorStyleTapKeyboard::vtkOpenVRInteractorStyleTapKeyboard()
 	this->TouchPadImage->Init();
 
 	//Properties' Modifier
-//////	this->FieldModifier = vtkOpenVRPropertyModifier::New();
+//////	this->FieldModifier = vtkOpenVRFieldModifier::New();
 
 	//TouchPad Pointer
 	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();

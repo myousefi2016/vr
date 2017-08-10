@@ -24,12 +24,12 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
 
-#include "vtkOpenVRPropertyModifier.h"	//For vtkField. In the future, move the enum to a new file and include it here.
+#include "vtkOpenVRFieldModifier.h"	//For vtkField. In the future, move the enum to a new file and include it here.
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
 class vtkOpenVRTouchPadPointer;
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 class vtkOpenVRInteractorStyleSwitchInput;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleInputData : public vtkOpenVRInteractorStyle
@@ -87,7 +87,7 @@ protected:
 	vtkOpenVRTouchPadPointer *TouchPadPointer;
 	vtkOpenVRTouchPadImage *TouchPadImage;
 	vtkOpenVRTextFeedback *TextFeedback;
-//////	vtkOpenVRPropertyModifier *FieldModifier;
+//////	vtkOpenVRFieldModifier *FieldModifier;
 
 	vtkOpenVRInteractorStyleSwitchInput *ISSwitch;
 

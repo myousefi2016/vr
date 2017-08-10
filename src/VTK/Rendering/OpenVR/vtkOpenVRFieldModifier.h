@@ -1,7 +1,7 @@
 /*=========================================================================
 
 Program:   Visualization Toolkit
-Module:    vtkOpenVRPropertyModifier.h
+Module:    vtkOpenVRFieldModifier.h
 
 Copyright (c) Ventura Romero Mendo
 All rights reserved.
@@ -13,15 +13,15 @@ PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
 /**
- * @class   vtkOpenVRPropertyModifier
+ * @class   vtkOpenVRFieldModifier
  * @brief   Used as a generic actors' property changer API. Primarily
  * intended to be used in combination with interactor styles which allow
  * to input data.
  * @see vtkOpenVRInteractorStyleTapDial
 */
 
-#ifndef vtkOpenVRPropertyModifier_h
-#define vtkOpenVRPropertyModifier_h
+#ifndef vtkOpenVRFieldModifier_h
+#define vtkOpenVRFieldModifier_h
 
 #include "vtkObject.h"
 #include "vtkRenderingOpenVRModule.h" // For export macro
@@ -99,11 +99,11 @@ enum class vtkPipelineEntity
 
 
 
-class VTKRENDERINGOPENVR_EXPORT vtkOpenVRPropertyModifier : public vtkObject
+class VTKRENDERINGOPENVR_EXPORT vtkOpenVRFieldModifier : public vtkObject
 {
 public:
-  static vtkOpenVRPropertyModifier *New();
-  vtkTypeMacro(vtkOpenVRPropertyModifier, vtkObject);
+  static vtkOpenVRFieldModifier *New();
+  vtkTypeMacro(vtkOpenVRFieldModifier, vtkObject);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 	// A vtkObject is sent. internally, it must be downcasted to 
@@ -136,8 +136,8 @@ public:
 	virtual void IterateSourceType();
 
 protected:
-  vtkOpenVRPropertyModifier();
-  ~vtkOpenVRPropertyModifier();
+  vtkOpenVRFieldModifier();
+  ~vtkOpenVRFieldModifier();
 
   //Dummy test Actor/Source
 	vtkPolyDataAlgorithm *TestSource;
@@ -152,8 +152,8 @@ protected:
 
 
 private:
-  vtkOpenVRPropertyModifier(const vtkOpenVRPropertyModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRPropertyModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRFieldModifier(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
+  void operator=(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
 };
 
 #endif

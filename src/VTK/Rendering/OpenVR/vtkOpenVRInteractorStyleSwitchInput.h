@@ -56,7 +56,7 @@ class vtkInteractorStyleMultiTouchCamera;
 class vtkOpenVRInteractorStyleFieldSelector;
 
 //is this needed?
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwitchInput
   : public vtkOpenVRInteractorStyleSwitchBase
@@ -109,7 +109,7 @@ public:
 
 
 
-	vtkGetMacro(FieldModifier, vtkOpenVRPropertyModifier*);
+	vtkGetMacro(FieldModifier, vtkOpenVRFieldModifier*);
 
 
 protected:
@@ -133,7 +133,7 @@ protected:
   vtkInteractorStyle* CurrentStyle;
 
 	
-	vtkOpenVRPropertyModifier *FieldModifier;
+	vtkOpenVRFieldModifier *FieldModifier;
 
 
   Gesture CurrentGesture;

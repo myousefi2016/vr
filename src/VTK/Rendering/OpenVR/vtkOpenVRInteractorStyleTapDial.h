@@ -24,7 +24,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
 
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 
 class vtkImageActor;
 class vtkImageSliceMapper;

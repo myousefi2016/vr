@@ -17,7 +17,7 @@ PURPOSE.  See the above copyright notice for more information.
  * @brief   extended from vtkOpenVRInteractorStyleInputData as a proof of concept
  * intended to show an alternative to modify porperty fields on vtkProps and sources.
  * 
- * @see vtkOpenVRInteractorStyleInputData vtkOpenVRPropertyModifier
+ * @see vtkOpenVRInteractorStyleInputData vtkOpenVRFieldModifier
  * 
  */
 
@@ -34,7 +34,7 @@ class vtkTextMapper;
 class vtkTextSource;
 class vtkImageActor;
 
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
@@ -76,7 +76,7 @@ protected:
 	vtkOpenVRInteractorStyleFieldSelector();
   ~vtkOpenVRInteractorStyleFieldSelector() VTK_OVERRIDE;
 
-//	vtkOpenVRPropertyModifier *FieldModifier;
+//	vtkOpenVRFieldModifier *FieldModifier;
 
 private:
 	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.

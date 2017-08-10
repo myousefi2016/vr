@@ -31,7 +31,7 @@ class vtkTextMapper;
 class vtkTextSource;
 class vtkImageActor;
 
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;

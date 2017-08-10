@@ -26,7 +26,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 class vtkDequeAngleRadius;
 class vtkOpenVRTextFeedback;
-class vtkOpenVRPropertyModifier;
+class vtkOpenVRFieldModifier;
 
 #define MAX_REC 5
 

@@ -34,7 +34,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkInformation.h"
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
@@ -282,9 +282,6 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonUp()
 }
 
 
-
-
-
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
 {
@@ -356,11 +353,6 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonUp()
 		this->TextFeedback->Reset();
 	}
 }
-
-
-
-
-
 
 
 //----------------------------------------------------------------------------

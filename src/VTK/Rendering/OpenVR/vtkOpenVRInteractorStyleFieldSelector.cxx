@@ -32,7 +32,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkProperty.h"
 #include "vtkPolyDataMapper.h"
 
-#include "vtkOpenVRPropertyModifier.h"
+#include "vtkOpenVRFieldModifier.h"
 
 
 #include "vtkOpenVRTextFeedback.h"
@@ -52,7 +52,7 @@ vtkOpenVRInteractorStyleFieldSelector::vtkOpenVRInteractorStyleFieldSelector()
 		"Press Grip:\n -Inside Object: Iterate to next Object.\n -Outside Object: Toggle Object ON/OFF.\nPress Touchpad: Select Field to modify.");
 
 	//Properties' Modifier
-//	this->FieldModifier = vtkOpenVRPropertyModifier::New();	//Starts with a Sphere
+//	this->FieldModifier = vtkOpenVRFieldModifier::New();	//Starts with a Sphere
 	this->ModifyProp = true;
 
 	//Images:
