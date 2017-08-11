@@ -73,6 +73,7 @@ vtkOpenVRInteractorStyleFieldSelector::~vtkOpenVRInteractorStyleFieldSelector()
 	if (this->TextFeedback)
 	{
 		this->TextFeedback->Delete();
+		this->TextFeedback = NULL;
 	}
 
 	//Remove FieldModifier
@@ -85,12 +86,14 @@ vtkOpenVRInteractorStyleFieldSelector::~vtkOpenVRInteractorStyleFieldSelector()
 	if (this->TouchPadImage)
 	{
 		this->TouchPadImage->Delete();
+		this->TouchPadImage = NULL;
 	}
 
 	//Remove pointer
 	if (this->TouchPadPointer)
 	{
 		this->TouchPadPointer->Delete();
+		this->TouchPadPointer = NULL;
 	}
 }
 
@@ -151,44 +154,6 @@ void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonUp()
 			break;
 		}
 
-
-
-		/*
-		// Specify also if the field owner is an algorithm (sources)
-		// or a data object (props / actors)
-		switch (this->ISSwitch->GetFieldModifier()->GetSelectedField())
-		{
-			//Algorithms (sources):
-		case vtkField::Radius:
-		case vtkField::ThetaResolution:
-		case vtkField::PhiResolution:
-		case vtkField::Height:
-		case vtkField::XLength:
-		case vtkField::YLength:
-		case vtkField::ZLength:
-			this->ISSwitch->GetFieldModifier()->Set(vtkField::None);
-			break;
-			//TapBool (booleans):
-		case vtkField::Visibility:
-			this->ISSwitch->SetCurrentStyleToTapBool();
-			break;
-			//TapKeyboard (letters):
-			//Nothing, by now...
-			//SwipeDial (numbers):
-		case vtkField::Scale:
-		case vtkField::Opacity:
-			this->ISSwitch->SetCurrentStyleToSwipeDial();
-			break;
-			//None:
-		case vtkField::None:
-			break;
-		default:
-			vtkErrorMacro(<< "Unrecognised vtkField. No IS Selected to modify it.");
-			break;
-		}*/
-
-
-
 		//Decide which IS class will handle the value change (according to the field selected):
 		switch (this->ISSwitch->GetFieldModifier()->GetSelectedField())
 		{
@@ -221,224 +186,6 @@ void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonUp()
 			break;
 		}
 
-
-		/*
-		float radius = sqrt(x*x + y*y);
-		char newChar = '\0';
-
-		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
-
-
-		if (this->TextFeedback->GetDefaultMsgOn())
-		{
-		this->TextFeedback->GetTextActor()->SetInput("");
-		this->TextFeedback->SetDefaultMsgOn(false);
-		this->TextFeedback->SetHasUnsavedChanges(true);
-		}
-
-
-		if (radius > .65)	//External radius buttons
-		{
-		switch (this->TouchPadImage->GetNextImage())
-		{
-		case 0:	//Small, abcdefgh
-		switch (region)
-		{
-		case 8: newChar = 'a'; break;
-		case 9: newChar = 'b'; break;
-		case 0: newChar = 'c'; break;
-		case 1: newChar = 'd'; break;
-		case 6: newChar = 'e'; break;
-		case 5: newChar = 'f'; break;
-		case 4: newChar = 'g'; break;
-		case 3: newChar = 'h'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 1:	//Small, ijklmnop
-		switch (region)
-		{
-		case 8: newChar = 'i'; break;
-		case 9: newChar = 'j'; break;
-		case 0: newChar = 'k'; break;
-		case 1: newChar = 'l'; break;
-		case 6: newChar = 'm'; break;
-		case 5: newChar = 'n'; break;
-		case 4: newChar = 'o'; break;
-		case 3: newChar = 'p'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 2:	//Small, qrstuvwx
-		switch (region)
-		{
-		case 8: newChar = 'q'; break;
-		case 9: newChar = 'r'; break;
-		case 0: newChar = 's'; break;
-		case 1: newChar = 't'; break;
-		case 6: newChar = 'u'; break;
-		case 5: newChar = 'v'; break;
-		case 4: newChar = 'w'; break;
-		case 3: newChar = 'x'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 3:	//Small, yz!?.,:;
-		switch (region)
-		{
-		case 8: newChar = 'y'; break;
-		case 9: newChar = 'z'; break;
-		case 0: newChar = '!'; break;
-		case 1: newChar = '?'; break;
-		case 6: newChar = '.'; break;
-		case 5: newChar = ','; break;
-		case 4: newChar = ':'; break;
-		case 3: newChar = ';'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 4:	//Caps, ABCDEFGH
-		switch (region)
-		{
-		case 8: newChar = 'A'; break;
-		case 9: newChar = 'B'; break;
-		case 0: newChar = 'C'; break;
-		case 1: newChar = 'D'; break;
-		case 6: newChar = 'E'; break;
-		case 5: newChar = 'F'; break;
-		case 4: newChar = 'G'; break;
-		case 3: newChar = 'H'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 5:	//Caps, IJKLMNOP
-		switch (region)
-		{
-		case 8: newChar = 'I'; break;
-		case 9: newChar = 'J'; break;
-		case 0: newChar = 'K'; break;
-		case 1: newChar = 'L'; break;
-		case 6: newChar = 'M'; break;
-		case 5: newChar = 'N'; break;
-		case 4: newChar = 'O'; break;
-		case 3: newChar = 'P'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 6:	//Caps, QRSTUVWX
-		switch (region)
-		{
-		case 8: newChar = 'Q'; break;
-		case 9: newChar = 'R'; break;
-		case 0: newChar = 'S'; break;
-		case 1: newChar = 'T'; break;
-		case 6: newChar = 'U'; break;
-		case 5: newChar = 'V'; break;
-		case 4: newChar = 'W'; break;
-		case 3: newChar = 'X'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default: vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		case 7:	//Caps, YZ!?.,:;
-		switch (region)
-		{
-		case 8: newChar = 'Y'; break;
-		case 9: newChar = 'Z'; break;
-		case 0: newChar = '!'; break;
-		case 1: newChar = '?'; break;
-		case 6: newChar = '.'; break;
-		case 5: newChar = ','; break;
-		case 4: newChar = ':'; break;
-		case 3: newChar = ';'; break;
-		case 2:	this->IncNextImage(); break;
-		case 7: this->DecNextImage(); break;
-		default:
-		vtkErrorMacro(<< "region out of boundaries");
-		}
-		break;
-		default:
-		vtkErrorMacro(<< "NextImage out of boundaries");
-		}
-		vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-		if (newText.compare("") == 0 && newChar == '\0')
-		{
-		this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-		}
-		if (newChar != '\0')
-		{
-		newText += vtkVariant(newChar).ToString();
-		this->TextFeedback->GetTextActor()->SetInput(newText);
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-		this->TextFeedback->SetHasUnsavedChanges(true);
-		}
-		}
-		else {
-		if (x <= 0 && y <= 0)		//Caps
-		{
-		vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-		if (newText.compare("") == 0)
-		{
-		this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-		this->TextFeedback->SetHasUnsavedChanges(false);
-		}
-		this->SwitchCaps();
-		}
-		else if (x < 0 && y>0)		//Delete last
-		{
-		vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-		if (newText.length() <= 1)
-		{
-		this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-		this->TextFeedback->SetHasUnsavedChanges(false);
-		}
-		else
-		{
-		newText.pop_back();
-		this->TextFeedback->GetTextActor()->SetInput(newText);
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-		this->TextFeedback->SetHasUnsavedChanges(true);
-		}
-		}
-		else if (x > 0 && y < 0)	//Whitespace
-		{
-		newChar = ' ';
-		vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString() + vtkVariant(newChar).ToString();
-		this->TextFeedback->GetTextActor()->SetInput(newText);
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
-		this->TextFeedback->SetHasUnsavedChanges(true);
-
-		}
-		else	//Accept value.
-		{				vtkStdString newText = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToString();
-		if (newText.compare("") == 0)
-		{
-		this->TextFeedback->GetTextActor()->SetInput(" ");		//Avoids unexpected errors
-		}
-		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOff();
-		this->TextFeedback->SetHasUnsavedChanges(false);
-		}
-		}
-
-		//Has the image changed?
-		this->TouchPadImage->UpdateImage();
-		*/
 	}
 
 }

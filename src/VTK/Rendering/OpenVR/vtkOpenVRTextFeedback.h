@@ -65,8 +65,8 @@ protected:
   char* TextDefaultMsg;
 
 private:
-	vtkOpenVRTextFeedback(const vtkOpenVRTextFeedback&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRTextFeedback&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRTextFeedback(const vtkOpenVRTextFeedback&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRTextFeedback&) VTK_DELETE_FUNCTION;
 };
 
 #endif

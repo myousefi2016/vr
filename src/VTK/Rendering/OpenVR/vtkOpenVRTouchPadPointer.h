@@ -29,9 +29,7 @@ class vtkPolyDataMapper;
 class vtkSphereSource;
 class vtkActor;
 class vtkRenderer;
-
 class vtkOpenVRRenderWindowInteractor;
-
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRTouchPadPointer : public vtkObject
 {
@@ -40,10 +38,9 @@ public:
   vtkTypeMacro(vtkOpenVRTouchPadPointer, vtkObject);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-
   virtual void Init();
-  virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap.
-  virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);		//If moved when is Tapped.
+  virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap
+  virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);		//If moved when is Tapped
   virtual void Detach();																			//If Untap
   
 	vtkGetMacro(PointerSource, vtkSphereSource*)
@@ -59,15 +56,14 @@ protected:
 	vtkOpenVRTouchPadPointer();
   ~vtkOpenVRTouchPadPointer() VTK_OVERRIDE;
 
-	//To change this sphere and use a cylinder or other element.
-	vtkSphereSource *PointerSource;		//vtkSphereSource *PointerSource;
+	vtkSphereSource *PointerSource;
 	vtkPolyDataMapper *PointerMapper;
 	vtkActor *PointerActor;
 	vtkRenderer *PointerRenderer;
 
 private:
-	vtkOpenVRTouchPadPointer(const vtkOpenVRTouchPadPointer&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRTouchPadPointer&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRTouchPadPointer(const vtkOpenVRTouchPadPointer&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRTouchPadPointer&) VTK_DELETE_FUNCTION;
 };
 
 #endif

@@ -17,32 +17,8 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
-#include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
-
-#include "vtkOpenVRCamera.h"
-#include "vtkOpenVRRenderer.h"
-#include "vtkCommand.h"
-#include "vtkCallbackCommand.h"
-#include "vtkRenderer.h"
-#include "vtkPolyDataMapper.h"
-#include "vtkSphereSource.h"
-#include "vtkProperty.h"
-#include "vtkActor.h"
-#include "vtkMatrix4x4.h"
-#include "vtkMatrix3x3.h"
-#include "vtkOpenVRModel.h"
-
-#include "vtkImageActor.h"
-#include "vtkImageReader2.h"
-#include "vtkImageSliceMapper.h"
-#include "vtkJPEGReader.h"
-#include "vtkImageMapper.h"
-#include "vtkActor2D.h"
-#include "vtkImageProperty.h"
-#include "vtkStringArray.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 

@@ -19,7 +19,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVROverlay.h"
 #include "vtkOpenVRCamera.h"
-
 #include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
 #include "vtkRenderer.h"
@@ -29,12 +28,10 @@ vtkStandardNewMacro(vtkOpenVRTextFeedback);
 
 //----------------------------------------------------------------------------
 vtkOpenVRTextFeedback::vtkOpenVRTextFeedback()
+	: HasUnsavedChanges(false), DefaultMsgOn(true), TextIsVisible(false)
 {
 	this->TextActor = NULL;
 	this->TextRenderer = NULL;
-	this->HasUnsavedChanges = false;
-	this->DefaultMsgOn = true;
-	this->TextIsVisible = false;
 	this->TextDefaultMsg = "Input data";
 }
 
@@ -44,13 +41,13 @@ vtkOpenVRTextFeedback::~vtkOpenVRTextFeedback()
 	if (this->TextActor)
 	{
 		this->TextActor->Delete();
+		this->TextActor = NULL;
 	}
-}
-
-//----------------------------------------------------------------------------
-void vtkOpenVRTextFeedback::PrintSelf(ostream& os, vtkIndent indent)
-{
-	this->Superclass::PrintSelf(os,indent);
+	if (this->TextRenderer)
+	{
+		this->TextRenderer->Delete();
+		this->TextRenderer = NULL;
+	}
 }
 
 void vtkOpenVRTextFeedback::Init()
@@ -84,17 +81,16 @@ void vtkOpenVRTextFeedback::Reset()
 void vtkOpenVRTextFeedback::PlaceInScene(vtkOpenVRCamera * cam)
 {
 	double wScale = cam->GetDistance();			//World scale
-	double *camPos = cam->GetPosition();         //Camera Position
-	double *camOri = cam->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
+	double *camPos = cam->GetPosition();    //Camera Position
+	double *camOri = cam->GetOrientation();	//Camera Orientation: rotation in (X,Y,Z)
 
 	const double d2c = 1.25;		//Text distance to camera.
 
-															//3D Rotation and Translation Maths
+	//3D Rotation and Translation Maths
 	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
 	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
 	double projection[3] = { sinw, 0, -cosw };
 	vtkMath::Normalize(projection);
-
 	double txtPos[3];
 
 	for (int i = 0; i < 3; i++)
@@ -105,4 +101,10 @@ void vtkOpenVRTextFeedback::PlaceInScene(vtkOpenVRCamera * cam)
 	this->GetTextActor()->SetOrientation(0, -camOri[1], 0);
 	this->GetTextActor()->SetPosition(txtPos);
 	this->GetTextActor()->GetTextProperty()->SetFontSize(60);
+}
+
+//----------------------------------------------------------------------------
+void vtkOpenVRTextFeedback::PrintSelf(ostream& os, vtkIndent indent)
+{
+	this->Superclass::PrintSelf(os, indent);
 }

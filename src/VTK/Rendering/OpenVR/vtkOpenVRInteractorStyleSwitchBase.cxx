@@ -23,13 +23,11 @@ vtkObjectFactoryNewMacro(vtkOpenVRInteractorStyleSwitchBase)
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleSwitchBase::vtkOpenVRInteractorStyleSwitchBase()
-{
-}
+{}
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleSwitchBase::~vtkOpenVRInteractorStyleSwitchBase()
-{
-}
+{}
 
 //----------------------------------------------------------------------------
 vtkRenderWindowInteractor* vtkOpenVRInteractorStyleSwitchBase::GetInteractor()

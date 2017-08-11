@@ -28,7 +28,6 @@ PURPOSE.  See the above copyright notice for more information.
 class vtkPNGReader;
 class vtkImageActor;
 class vtkRenderer;
-
 class vtkOpenVRRenderWindowInteractor;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRTouchPadImage : public vtkObject
@@ -38,22 +37,14 @@ public:
   vtkTypeMacro(vtkOpenVRTouchPadImage, vtkObject);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-	/**
-	 * Intended for loading several images which will be switched
-	 * within the caller class using their own methods and algorithms.
-	 * All the images must have the same prefix (path included), changing
-	 * only the ending of their nam, which will be a number.
-	 */
-  virtual void LoadImages(int imgNum, char *prefix);
-  /**
-  * Similar method to LoadImages, but loading a single image.
-  */
-  virtual void LoadSingleImage(char *fullName);
+  virtual void LoadImages(int imgNum, char *prefix);	//Load several images
+  virtual void LoadSingleImage(char *fullName);				//Load a single image
+	virtual void UpdateImage();
 
   virtual void Init();
 	virtual void Attach(vtkOpenVRRenderWindowInteractor *rwi);	//If Tap.
-	virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);	//If moved when is Tapped.
-	virtual void Detach();	//If Untap
+	virtual void Move(vtkOpenVRRenderWindowInteractor *rwi);		//If moved when is Tapped.
+	virtual void Detach();																			//If Untap
   
   vtkGetMacro(ImgReader, vtkPNGReader*)
   vtkSetMacro(ImgReader, vtkPNGReader*)
@@ -68,9 +59,6 @@ public:
   vtkGetMacro(MaxNumImg, int)
   vtkSetMacro(MaxNumImg, int)
 
-  virtual void UpdateImage();
-	
-
 protected:
 	vtkOpenVRTouchPadImage();
   ~vtkOpenVRTouchPadImage() VTK_OVERRIDE;
@@ -83,8 +71,8 @@ protected:
   int MaxNumImg;
 
 private:
-	vtkOpenVRTouchPadImage(const vtkOpenVRTouchPadImage&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRTouchPadImage&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRTouchPadImage(const vtkOpenVRTouchPadImage&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRTouchPadImage&) VTK_DELETE_FUNCTION;
 };
 
 #endif

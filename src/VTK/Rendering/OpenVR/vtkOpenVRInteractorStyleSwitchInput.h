@@ -52,10 +52,8 @@ class vtkOpenVRInteractorStyleTapDial;
 class vtkOpenVRInteractorStyleTapKeyboard;
 class vtkOpenVRInteractorStyleTapBool;
 class vtkOpenVRInteractorStyleSwipeDial;
-class vtkInteractorStyleMultiTouchCamera;
+////class vtkInteractorStyleMultiTouchCamera;
 class vtkOpenVRInteractorStyleFieldSelector;
-
-//is this needed?
 class vtkOpenVRFieldModifier;
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleSwitchInput
@@ -88,7 +86,7 @@ public:
   void SetCurrentStyleToSwipeDial();
   void SetCurrentStyleToFieldSelector();
   void SetCurrentStyleTo(Gesture g, Layout l);
-  void SetCurrentStyleToMultiTouchCamera();
+  ////void SetCurrentStyleToMultiTouchCamera();
   //@}
 
   /**
@@ -129,7 +127,7 @@ protected:
 	vtkOpenVRInteractorStyleTapBool *TapBool;								//Gesture::TAP		Layout::BOOL
   vtkOpenVRInteractorStyleSwipeDial *SwipeDial;						//Gesture::SWIPE	Layout::DIAL
 	vtkOpenVRInteractorStyleFieldSelector *FieldSelector;		//Gesture::NONE		Layout::NONE
-  vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
+ //// vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
 
 	
@@ -138,7 +136,7 @@ protected:
 
   Gesture CurrentGesture;
   Layout CurrentLayout;
-  bool MultiTouch;
+////  bool MultiTouch;
 
 private:
   vtkOpenVRInteractorStyleSwitchInput(const vtkOpenVRInteractorStyleSwitchInput&) VTK_DELETE_FUNCTION;
