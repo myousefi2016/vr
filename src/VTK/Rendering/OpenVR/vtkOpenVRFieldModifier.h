@@ -27,14 +27,12 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkSetGet.h"	//For export macro
 
-class vtkObject;
+class vtkPolyDataAlgorithm;
 class vtkPolyDataMapper;
 class vtkActor;
 class vtkRenderer;
 class vtkOpenVRRenderWindowInteractor;
-
-class vtkPolyDataAlgorithm;
-class vtkSphereSource;	//For dummy test
+class vtkSphereSource;
 class vtkCylinderSource;
 class vtkCubeSource;
 
@@ -55,6 +53,7 @@ class vtkCubeSource;
  * 
  * @see vtkProperty vtkActor vtkProp vtkProp3D
  */
+// Field Types
 enum class vtkField
 {
 //vtkProp
@@ -75,28 +74,26 @@ enum class vtkField
 	YLength,
 	ZLength,
 //Default
-	None
+	None	// 'None' ALWAYS last.
 };
 
 
-
+// Source Types
 enum class vtkSourceType
 {
 	Sphere,
 	Cylinder,
 	Cube,
-	None	//Leave 'None' ALWAYS last. It is used also as Size() property of the enum.
+	None	// 'None' ALWAYS last. Used also as Size() property of the enum.
 };
 
-
-
+// Pipeline Entity
 enum class vtkPipelineEntity
 {
 	Algorithm,
 	DataObject,
 	None
 };
-
 
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRFieldModifier : public vtkObject
@@ -106,7 +103,7 @@ public:
   vtkTypeMacro(vtkOpenVRFieldModifier, vtkObject);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-	// A vtkObject is sent. internally, it must be downcasted to 
+	// A vtkObject is sent. Internally, it must be downcasted to 
 	// the most general class which has the field to modify.
 	// Double pointer in 'value' is intended to allow passing multiple
 	// values (such as x-y-z coords, colour, ...).
@@ -116,44 +113,35 @@ public:
 	vtkGetMacro(TestActor, vtkActor*);
 	vtkSourceType GetCurrentSourceType();
 	int GetMaxSourceType();
-
-	//test:
-	virtual void InitTest();
-	virtual void ShowTest(vtkOpenVRRenderWindowInteractor *rwi);
-	virtual void HideTest();
-
-
-
-	void SelectSourceType(vtkSourceType s);
-
-
+	void SetSourceType(vtkSourceType s);
 	void SetSelectedField(vtkField field);
 	vtkField GetSelectedField();
 	vtkObject* GetfieldOwnerAsObject();
 
-
-
+	// Cycles over all the available source types.
 	virtual void IterateSourceType();
+
+	// Test (proof of concept):
+	virtual void InitTest();
+	virtual void ShowTest(vtkOpenVRRenderWindowInteractor *rwi);
+	virtual void HideTest();
 
 protected:
   vtkOpenVRFieldModifier();
   ~vtkOpenVRFieldModifier();
 
-  //Dummy test Actor/Source
+	// Test (proof of concept):
 	vtkPolyDataAlgorithm *TestSource;
   vtkPolyDataMapper *TestMapper;
   vtkActor *TestActor;
   vtkRenderer *TestRenderer;
 
-
 	vtkSourceType CurrentSourceType;
-
-	vtkField SelectedField;	//Field to be modified next;
-
+	vtkField SelectedField;	//Field to be modified next.
 
 private:
-  vtkOpenVRFieldModifier(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRFieldModifier(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRFieldModifier&) VTK_DELETE_FUNCTION;
 };
 
 #endif

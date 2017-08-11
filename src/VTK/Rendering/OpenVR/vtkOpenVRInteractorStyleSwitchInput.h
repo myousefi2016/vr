@@ -31,7 +31,7 @@
 #include "vtkInteractionStyleModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleSwitchBase.h"
 
-//Gestures
+// Gestures
 enum class Gesture
 {
 	TAP,
@@ -39,7 +39,7 @@ enum class Gesture
 	NONE
 };
 
-//Layouts
+// Layouts
 enum class Layout
 {
 	DIAL,
@@ -52,7 +52,6 @@ class vtkOpenVRInteractorStyleTapDial;
 class vtkOpenVRInteractorStyleTapKeyboard;
 class vtkOpenVRInteractorStyleTapBool;
 class vtkOpenVRInteractorStyleSwipeDial;
-////class vtkInteractorStyleMultiTouchCamera;
 class vtkOpenVRInteractorStyleFieldSelector;
 class vtkOpenVRFieldModifier;
 
@@ -64,21 +63,13 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleSwitchInput, vtkOpenVRInteractorStyleSwitchBase);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-  /**
-   * The sub styles need the interactor too.
-   */
+   // The sub styles need the interactor too.
   void SetInteractor(vtkRenderWindowInteractor *iren) VTK_OVERRIDE;
 
-  /**
-   * We must override this method in order to pass the setting down to
-   * the underlying styles
-   */
+   // Pass the setting down to the underlying styles
   void SetAutoAdjustCameraClippingRange( int value ) VTK_OVERRIDE;
 
-  //@{
-  /**
-   * Set/Get current style
-   */
+  // Set/Get current style
   vtkGetObjectMacro(CurrentStyle, vtkInteractorStyle);
   void SetCurrentStyleToTapDial();
   void SetCurrentStyleToTapKeyboard();
@@ -86,8 +77,6 @@ public:
   void SetCurrentStyleToSwipeDial();
   void SetCurrentStyleToFieldSelector();
   void SetCurrentStyleTo(Gesture g, Layout l);
-  ////void SetCurrentStyleToMultiTouchCamera();
-  //@}
 
   /**
    * Only care about the Trigger event event, which is used to switch between
@@ -96,19 +85,13 @@ public:
   void OnLeftButtonDown() VTK_OVERRIDE;
 	void OnLeftButtonUp() VTK_OVERRIDE;
 
-  //@{
-  /**
-   * Overridden from vtkInteractorObserver because the interactor styles
-   * used by this class must also be updated.
-   */
+   // Interactor styles used by this class must also be updated.
   void SetDefaultRenderer(vtkRenderer*) VTK_OVERRIDE;
   void SetCurrentRenderer(vtkRenderer*) VTK_OVERRIDE;
-  //@}
-
-
 
 	vtkGetMacro(FieldModifier, vtkOpenVRFieldModifier*);
-
+	vtkSetMacro(CycleOverStyles ,bool);
+	vtkGetMacro(CycleOverStyles, bool);
 
 protected:
   vtkOpenVRInteractorStyleSwitchInput();
@@ -116,10 +99,7 @@ protected:
 
   void SetCurrentStyle();
 
-	/**
-	* The sub styles need a pointer to the switch too
-	* (can be obtained by Interactor, but this is more clean and convinient).
-	*/
+	// Provides the sub-IS with a pointer to this class
 	virtual void SetISSwitch();
 
 	vtkOpenVRInteractorStyleTapDial *TapDial;								//Gesture::TAP		Layout::DIAL
@@ -127,16 +107,14 @@ protected:
 	vtkOpenVRInteractorStyleTapBool *TapBool;								//Gesture::TAP		Layout::BOOL
   vtkOpenVRInteractorStyleSwipeDial *SwipeDial;						//Gesture::SWIPE	Layout::DIAL
 	vtkOpenVRInteractorStyleFieldSelector *FieldSelector;		//Gesture::NONE		Layout::NONE
- //// vtkInteractorStyleMultiTouchCamera *MultiTouchCamera;
   vtkInteractorStyle* CurrentStyle;
 
-	
 	vtkOpenVRFieldModifier *FieldModifier;
-
 
   Gesture CurrentGesture;
   Layout CurrentLayout;
-////  bool MultiTouch;
+
+	bool CycleOverStyles;
 
 private:
   vtkOpenVRInteractorStyleSwitchInput(const vtkOpenVRInteractorStyleSwitchInput&) VTK_DELETE_FUNCTION;
