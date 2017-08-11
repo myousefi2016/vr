@@ -39,13 +39,13 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleInputData, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-  //@{
-  /**
-  * Override Middle Button to load an auxiliary text
-  */
-  void OnMiddleButtonDown() VTK_OVERRIDE;
-  void OnMiddleButtonUp() VTK_OVERRIDE;
-  //@}
+	//Override Right Button's behaviour from base class.
+	void OnRightButtonDown() VTK_OVERRIDE {};
+	void OnRightButtonUp() VTK_OVERRIDE {};
+
+  // Override Middle Button to load an auxiliary text
+	void OnMiddleButtonDown() VTK_OVERRIDE;
+	void OnMiddleButtonUp() VTK_OVERRIDE {};
 
 	//@{
 	/**

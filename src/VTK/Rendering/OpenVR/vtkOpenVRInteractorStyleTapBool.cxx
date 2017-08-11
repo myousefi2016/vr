@@ -149,11 +149,13 @@ void vtkOpenVRInteractorStyleTapBool::OnRightButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapBool::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
@@ -274,11 +276,13 @@ void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapBool::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapBool::PrintSelf(ostream& os, vtkIndent indent)

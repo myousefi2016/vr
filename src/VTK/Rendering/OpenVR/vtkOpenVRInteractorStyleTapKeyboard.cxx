@@ -318,11 +318,13 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
@@ -421,11 +423,13 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::SwitchCaps()

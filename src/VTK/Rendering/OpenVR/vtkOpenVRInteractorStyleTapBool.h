@@ -24,21 +24,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
 
-class vtkOpenVRFieldModifier;
-
-class vtkImageActor;
-class vtkImageSliceMapper;
-class vtkImageReader2;
-class vtkImageMapper3D;
-class vtkActor2D;
-class vtkImageMapper;
-class vtkImageData;
-class vtkJPEGReader;
-class vtkPNGReader;
-
-class vtkOpenVRTextFeedback;
-class vtkOpenVRTouchPadImage;
-
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapBool : public vtkOpenVRInteractorStyleInputData
 {
 public:
@@ -46,21 +31,16 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleTapBool, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-
-  //@{
-  /**
-  * Override Right Button (Touchpad) to input numbers.
-  */
+  // Override Right Button (Touchpad) to input numbers.
   void OnRightButtonDown() VTK_OVERRIDE;
-  void OnRightButtonUp() VTK_OVERRIDE;
-  //@}
+//  void OnRightButtonUp() VTK_OVERRIDE;
 
   //@{
   /**
   * Override Middle Button (Grip) which will select Prop and attribute to modify.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
-  void OnMiddleButtonUp() VTK_OVERRIDE;
+//  void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
 protected:
@@ -68,8 +48,8 @@ protected:
   ~vtkOpenVRInteractorStyleTapBool() VTK_OVERRIDE;
 
 private:
-  vtkOpenVRInteractorStyleTapBool(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStyleTapBool(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRInteractorStyleTapBool&) VTK_DELETE_FUNCTION;
 };
 
 #endif

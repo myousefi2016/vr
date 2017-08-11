@@ -178,15 +178,49 @@ void vtkOpenVRInteractorStyleTapDial::OnRightButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 {
+	//Get current renderer (if is not got already)
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+														this->Interactor->GetEventPositions(pointer)[1]);
+
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition(vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+	}
+
+
+	
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
+	{
+		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
+		{
+			// Controller inside TestActor and we have a ISSwitch,
+			// so we switch to ISFieldSelector
+			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
+				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
+			//
+			ISSwitch->SetCurrentStyleToFieldSelector();
+		}
+		return;
+	}
+
+	// Controller outside TestActor or there is no Switch.
+	Superclass::OnMiddleButtonDown();
+
+	/*
 	//Get current renderer (if is not got already)
 	if (this->Interactor)
 	{
@@ -273,15 +307,18 @@ void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonDown()
 	{
 		this->Interactor->Render();
 	}
+	*/
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+*/
 
-
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::OnLeftButtonDown()
 {
@@ -353,7 +390,7 @@ void vtkOpenVRInteractorStyleTapDial::OnLeftButtonUp()
 		this->TextFeedback->Reset();
 	}
 }
-
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapDial::PrintSelf(ostream& os, vtkIndent indent)

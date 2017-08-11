@@ -42,14 +42,14 @@ public:
   * Override Right Button (Touchpad) to input numbers.
   */
   void OnRightButtonDown() VTK_OVERRIDE;
-  void OnRightButtonUp() VTK_OVERRIDE;
+//  void OnRightButtonUp() VTK_OVERRIDE;
   //@}
   //@{
   /**
   * Override Middle Button (Grip) which will enable a text to input data.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
-  void OnMiddleButtonUp() VTK_OVERRIDE;
+//  void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
 

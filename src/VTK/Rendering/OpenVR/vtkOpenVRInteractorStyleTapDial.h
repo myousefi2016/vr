@@ -52,7 +52,7 @@ public:
   * Override Right Button (Touchpad) to input numbers.
   */
   void OnRightButtonDown() VTK_OVERRIDE;
-  void OnRightButtonUp() VTK_OVERRIDE;
+ // void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
   //@{
@@ -61,7 +61,7 @@ public:
   * Also, for test purposes select Prop and attribute to modify.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
-  void OnMiddleButtonUp() VTK_OVERRIDE;
+  //void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
 
@@ -70,8 +70,8 @@ public:
 	/**
 	* Override Left Button (Trigger) to try to get properties from the actor picked.
 	*/
-	void OnLeftButtonDown() VTK_OVERRIDE;
-	void OnLeftButtonUp() VTK_OVERRIDE;
+	//void OnLeftButtonDown() VTK_OVERRIDE;
+	//void OnLeftButtonUp() VTK_OVERRIDE;
 	//@}
 
 

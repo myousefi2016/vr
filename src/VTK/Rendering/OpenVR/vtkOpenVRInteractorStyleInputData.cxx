@@ -31,6 +31,13 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRFieldModifier.h"
 #include "vtkOpenVRInteractorStyleSwitchInput.h"
 
+#include "vtkActor.h"
+#include "vtkTextActor3D.h"
+#include "vtkStdString.h"
+#include "vtkOpenVRRenderer.h"
+#include "vtkOpenVRCamera.h"
+#include "vtkRenderer.h"
+
 vtkStandardNewMacro(vtkOpenVRInteractorStyleInputData);
 
 //----------------------------------------------------------------------------
@@ -54,22 +61,113 @@ vtkOpenVRInteractorStyleInputData::~vtkOpenVRInteractorStyleInputData()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnMiddleButtonDown()
 {
-  // do nothing except overriding the default MiddleButtonPressEvent behavior
-}
+  	//Get current renderer (if is not got already)
+	if (this->Interactor)
+	{
+		int pointer = this->Interactor->GetPointerIndex();
+		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
+		                        this->Interactor->GetEventPositions(pointer)[1]);
 
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition( vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
+	}
+
+/*
+	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
+	{
+		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
+		{
+			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
+				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
+			
+			ISSwitch->SetCurrentStyleToFieldSelector();
+			return;
+		}
+	}
+*/
+
+	bool TextEmpty = false;
+	if (this->TextFeedback->GetTextActor())
+		TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
+
+	//Second Click. Already created and changes saved: can be hidden.
+	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
+		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
+	{
+		this->TextFeedback->Reset();
+		//Test:
+		if (this->ModifyProp)
+		{
+			this->ISSwitch->GetFieldModifier()->HideTest();
+		}
+	}
+	//Either or is not created or has changes or is not shown
+	else
+	{
+		//First Click ever. Not created yet: create it and place it properly.
+		if (!this->TextFeedback->GetTextActor())
+		{
+			this->TextFeedback->Init();
+		}
+
+		//First Click. Created but not shown. Check if used different renderer to previous visualization.
+		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
+		{
+			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
+			{
+				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
+			}
+			if (this->CurrentRenderer != 0)
+			{
+				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
+			}
+			else
+			{
+				vtkWarningMacro(<< "no current renderer on the interactor style.");
+			}
+			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
+			this->TextFeedback->SetTextIsVisible(true);
+			this->TextFeedback->SetHasUnsavedChanges(false);
+			////NEW:
+			vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+			vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+			this->TextFeedback->PlaceInScene(camera);
+
+
+			//Test:
+			if (this->ModifyProp)
+			{
+				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
+			}
+		}
+
+	}
+////NEW:
+////	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
+////	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
+////	this->TextFeedback->PlaceInScene(camera);
+
+	//Render Scene
+	if (this->Interactor)
+	{
+		this->Interactor->Render();
+	}
+}
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnMiddleButtonUp()
 {
-  /* CODE FOr OVERLAYS.
 	vtkOpenVRRenderWindow* renWin = vtkOpenVRRenderWindow::SafeDownCast(this->Interactor->GetRenderWindow());
   if (!renWin)
   {
     return;
   }
   vtkOpenVROverlay *ovl = renWin->GetDashboardOverlay();
-  ovl->LoadNextCameraPose();*/
+  ovl->LoadNextCameraPose();
 }
-
+*/
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleInputData::OnTap()
 {

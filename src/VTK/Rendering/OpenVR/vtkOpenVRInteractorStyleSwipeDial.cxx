@@ -211,11 +211,13 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonUp()
 {
 	// do nothing except overriding the default OnRightButtonDown behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
@@ -338,11 +340,13 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnUntap()

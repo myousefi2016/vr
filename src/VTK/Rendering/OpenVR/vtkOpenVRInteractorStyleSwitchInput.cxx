@@ -25,6 +25,7 @@
 #include "vtkObjectFactory.h"
 #include "vtkRenderWindowInteractor.h"
 #include "vtkOpenVRFieldModifier.h"
+#include "vtkActor.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwitchInput);
 
@@ -159,11 +160,8 @@ void vtkOpenVRInteractorStyleSwitchInput::SetCurrentStyleTo(Gesture g, Layout l)
 //  - behave as its base class (grab objects)
 void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 {
-	if (!this->CycleOverStyles)
-	{
-		Superclass::OnLeftButtonDown();
-	}
-	else
+	if (this->CycleOverStyles
+			&& this->InteractionProp != NULL && this->InteractionProp == this->FieldModifier->GetTestActor())
 	{
 		// Cycle order, only if CurrentStyle != FieldSelector (proof of concept):
 		// (def) TapDial -> TapKeyboard -> TapBool -> SwipeDial -> (def)
@@ -199,6 +197,11 @@ void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonDown()
 		// Set the CurrentStyle pointer to the picked style
 		this->SetCurrentStyle();
 	}
+	else
+	{
+		Superclass::OnLeftButtonDown();
+	}
+	
 }
 
 void vtkOpenVRInteractorStyleSwitchInput::OnLeftButtonUp()

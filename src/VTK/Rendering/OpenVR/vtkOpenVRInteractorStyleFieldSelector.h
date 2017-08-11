@@ -51,7 +51,7 @@ public:
   /**
   * Override Right Button (Touchpad) to input numbers.
   */
-  void OnRightButtonDown() VTK_OVERRIDE;
+//  void OnRightButtonDown() VTK_OVERRIDE;
   void OnRightButtonUp() VTK_OVERRIDE;
   //@}
 
@@ -60,7 +60,7 @@ public:
   * Override Middle Button (Grip) which will select Prop and attribute to modify.
   */
   void OnMiddleButtonDown() VTK_OVERRIDE;
-  void OnMiddleButtonUp() VTK_OVERRIDE;
+//  void OnMiddleButtonUp() VTK_OVERRIDE;
   //@}
 
 	//Images handling METHODS FROM PREVIOUS CLASS. delete!

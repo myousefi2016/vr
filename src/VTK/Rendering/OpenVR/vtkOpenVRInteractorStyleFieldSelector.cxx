@@ -97,12 +97,11 @@ vtkOpenVRInteractorStyleFieldSelector::~vtkOpenVRInteractorStyleFieldSelector()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonDown()
-{
-
-
-}
+{}
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleFieldSelector::OnRightButtonUp()
@@ -278,11 +277,13 @@ void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonDown()
 	}
 }
 
+/*
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleFieldSelector::OnMiddleButtonUp()
 {
 	// do nothing except overriding the default OnMiddleButtonUp behavior
 }
+*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleFieldSelector::SwitchCaps()
