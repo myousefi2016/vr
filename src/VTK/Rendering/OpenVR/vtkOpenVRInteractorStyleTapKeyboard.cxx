@@ -17,25 +17,15 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
-#include "vtkOpenVROverlay.h"
-#include <valarray>
 #include "vtkRenderWindowInteractor3D.h"
-
 #include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkRenderer.h"
 #include "vtkTextSource.h"
-#include "vtkOpenVRRenderer.h"
-#include "vtkOpenVRRenderWindowInteractor.h"
-#include "vtkOpenVRCamera.h"
-#include "vtkSphereSource.h"
-
 #include "vtkOpenVRFieldModifier.h"
-#include "vtkOpenVRInteractorStyleSwitchInput.h"
-
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
-#include "vtkOpenVRTouchPadPointer.h"
+#include "vtkActor.h"
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleTapKeyboard);
 

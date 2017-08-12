@@ -14,35 +14,20 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 #include "vtkOpenVRInteractorStyleSwipeDial.h"
 
-#include "vtkNew.h"
 #include "vtkObjectFactory.h"
 #include "vtkOpenVRRenderWindow.h"
-#include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
-#include "vtkOpenVROverlay.h"
-#include <valarray>
-#include "vtkRenderWindowInteractor3D.h"
-
-#include <deque>
-#include <utility>	//std::pair
-#include <iterator>
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkTextActor3D.h"
 #include "vtkTextProperty.h"
-#include "vtkStdString.h"
-#include "vtkRenderer.h"
-#include "vtkOpenVRRenderer.h"
-#include "vtkOpenVRCamera.h"
-#include "vtkVariant.h"
-
-#include "vtkSphereSource.h"
-
+#include "vtkTextSource.h"
 #include "vtkOpenVRFieldModifier.h"
-
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
-#include "vtkOpenVRTouchPadPointer.h"
+#include "vtkActor.h"
 #include "vtkOpenVRInteractorStyleSwitchInput.h"
+#include <deque>
+#include <utility>	//std::pair
 
 vtkStandardNewMacro(vtkOpenVRInteractorStyleSwipeDial);
 

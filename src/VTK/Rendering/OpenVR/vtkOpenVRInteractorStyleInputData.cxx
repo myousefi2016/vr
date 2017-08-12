@@ -16,11 +16,9 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkNew.h"
 #include "vtkObjectFactory.h"
-#include "vtkOpenVRRenderWindow.h"
 #include "vtkRenderWindow.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkRenderWindowInteractor.h"
-#include "vtkOpenVROverlay.h"
 
 #include "vtkCommand.h"
 #include "vtkCallbackCommand.h"
