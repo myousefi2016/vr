@@ -24,22 +24,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
 
-class vtkOpenVRFieldModifier;
-
-class vtkImageActor;
-class vtkImageSliceMapper;
-class vtkImageReader2;
-class vtkImageMapper3D;
-class vtkActor2D;
-class vtkImageMapper;
-class vtkImageData;
-class vtkJPEGReader;
-class vtkPNGReader;
-
-class vtkOpenVRTextFeedback;
-
-class vtkOpenVRCFDFilterer;
-
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleTapDial : public vtkOpenVRInteractorStyleInputData
 {
 public:
@@ -47,43 +31,21 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleTapDial, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-  //@{
-  /**
-  * Override Right Button (Touchpad) to input numbers.
-  */
+  // Override Right Button (Touchpad) to input numbers.
   void OnRightButtonDown() VTK_OVERRIDE;
- // void OnRightButtonUp() VTK_OVERRIDE;
-  //@}
 
-  //@{
-  /**
-  * Override Middle Button (Grip) which will enable a text to input data.
-  * Also, for test purposes select Prop and attribute to modify.
-  */
+  // Override Middle Button (Grip):
+	// - Inside a prop, goes into the FieldSelector
+	// - Outsade a prop, uses superclass implementation
   void OnMiddleButtonDown() VTK_OVERRIDE;
-  //void OnMiddleButtonUp() VTK_OVERRIDE;
-  //@}
-
-
-
-	//@{
-	/**
-	* Override Left Button (Trigger) to try to get properties from the actor picked.
-	*/
-	//void OnLeftButtonDown() VTK_OVERRIDE;
-	//void OnLeftButtonUp() VTK_OVERRIDE;
-	//@}
-
-
-
 
 protected:
   vtkOpenVRInteractorStyleTapDial();
   ~vtkOpenVRInteractorStyleTapDial() VTK_OVERRIDE;
 
 private:
-  vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStyleTapDial(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRInteractorStyleTapDial&) VTK_DELETE_FUNCTION;
 };
 
 #endif

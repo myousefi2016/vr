@@ -24,13 +24,11 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyle);
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::vtkOpenVRInteractorStyle()
-{
-}
+{}
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyle::~vtkOpenVRInteractorStyle()
-{
-}
+{}
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyle::OnMiddleButtonDown()

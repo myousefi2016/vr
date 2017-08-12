@@ -29,11 +29,9 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkOpenVRCamera.h"
 #include "vtkSphereSource.h"
-#include "vtkProperty.h"
-#include "vtkPolyDataMapper.h"
 
 #include "vtkOpenVRFieldModifier.h"
-
+#include "vtkOpenVRInteractorStyleSwitchInput.h"
 
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRTouchPadImage.h"
@@ -44,49 +42,16 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyleTapKeyboard);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleTapKeyboard::vtkOpenVRInteractorStyleTapKeyboard()
 {
-	//Text3D to modify Props' attributes.
-	this->TextFeedback = vtkOpenVRTextFeedback::New();
+	this->TextFeedback->SetTextDefaultMsg("Type message");
 
 	//Images:
-	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadImages(8, "..\\..\\..\\VTK\\Rendering\\OpenVR\\TapKeyboard_Image");
 	this->TouchPadImage->Init();
-
-	//Properties' Modifier
-//////	this->FieldModifier = vtkOpenVRFieldModifier::New();
-
-	//TouchPad Pointer
-	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
-
 }
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleTapKeyboard::~vtkOpenVRInteractorStyleTapKeyboard()
-{
-	//Remove Text3D
-	if (this->TextFeedback)
-	{
-		this->TextFeedback->Delete();
-	}
-
-	//Remove FieldModifier
-//////	if(this->FieldModifier)
-//////	{
-//////		this->FieldModifier->Delete();
-//////	}
-
-	//Remove images
-	if (this->TouchPadImage)
-	{
-		this->TouchPadImage->Delete();
-	}
-
-	//Remove pointer
-	if (this->TouchPadPointer)
-	{
-		this->TouchPadPointer->Delete();
-	}
-}
+{}
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
@@ -103,9 +68,8 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 		float radius = sqrt(x*x + y*y);
 		char newChar = '\0';
 
-		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-		region = (x > 0) ? region : (region + 9);				// 10 regions. Integer values in range [0, 9]
-
+		int region = int(5. * atan2(x, y) / vtkMath::Pi());		// Clockwise, starting in (x,y) = (0,1)
+		region = (x > 0) ? region : (region + 9);							// 10 regions. Integer values in [0, 9]
 
 		if (this->TextFeedback->GetDefaultMsgOn())
 		{
@@ -113,7 +77,6 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 			this->TextFeedback->SetDefaultMsgOn(false);
 			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
-
 
 		if (radius > .65)	//External radius buttons
 		{
@@ -313,123 +276,43 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonDown()
 			}
 		}
 		
-		//Has the image changed?
+		//Has the image changed? Maybe: update it.
 		this->TouchPadImage->UpdateImage();
 	}
 }
 
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleTapKeyboard::OnRightButtonUp()
-{
-	// do nothing except overriding the default OnRightButtonDown behavior
-}
-*/
-
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 {
-	//Get current renderer (if is not got already)
+	// Get current renderer
 	if (this->Interactor)
 	{
 		int pointer = this->Interactor->GetPointerIndex();
 		this->FindPokedRenderer(this->Interactor->GetEventPositions(pointer)[0],
-		                        this->Interactor->GetEventPositions(pointer)[1]);
+														this->Interactor->GetEventPositions(pointer)[1]);
+
+		vtkRenderWindowInteractor3D *vriren = vtkRenderWindowInteractor3D::SafeDownCast(this->Interactor);
+		double *wpos = vriren->GetWorldEventPosition(vriren->GetPointerIndex());
+		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
 	}
 
-	bool TextEmpty = false;
-	if (this->TextFeedback->GetTextActor())
-		TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
-
-	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
+	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
-		this->TextFeedback->Reset();
-
-		//Test:
-		//this->FieldModifier->HideTest();
-	}
-	//Either or is not created or has changes or is not shown
-	else
-	{
-		//First Click ever. Not created yet: create it and place it properly.
-		if (!this->TextFeedback->GetTextActor())
+		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
 		{
-			this->TextFeedback->Init();
+			// Controller inside TestActor and we have a ISSwitch,
+			// so we switch to ISFieldSelector
+			this->ISSwitch->SetCurrentStyleToFieldSelector();
+
+			if (this->Interactor) this->Interactor->Render();
 		}
-
-		//First Click. Created but not shown. Check if used different renderer to previous visualization.
-		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
-		{
-			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
-			{
-				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
-			this->TextFeedback->SetTextIsVisible(true);
-			this->TextFeedback->SetHasUnsavedChanges(false);
-
-			//Test:
-			//this->FieldModifier->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
-		}
-
+		return;
 	}
-	
-	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
-	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 
-	/*NEW*/
-	this->TextFeedback->PlaceInScene(camera);
-	/**/
-
-	/*	OLD
-	double wScale = camera->GetDistance();			//World scale
-	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
-	
-	const double d2c = 1.5;		//Text distance to camera.
-	
-	//3D Rotation and Translation Maths
-	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
-	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
-	double projection[3] = {sinw, 0, -cosw};
-	vtkMath::Normalize(projection);
-
-	double txtPos[3];
-
-	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c;
-
-	//Place text
-	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
-	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
-	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
-	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
-	*/
-
-	//Render Scene
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
+	// Controller outside TestActor or there is no Switch,
+	// so we run its base class' method.
+	Superclass::OnMiddleButtonDown();
 }
-
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonUp()
-{
-	// do nothing except overriding the default OnMiddleButtonUp behavior
-}
-*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleTapKeyboard::SwitchCaps()
@@ -442,14 +325,11 @@ void vtkOpenVRInteractorStyleTapKeyboard::SwitchCaps()
 void vtkOpenVRInteractorStyleTapKeyboard::IncNextImage()
 {
 	int nextImg = this->TouchPadImage->GetNextImage();
+
 	if ((nextImg == (MAX_IMG / 2 - 1)) || (nextImg == (MAX_IMG - 1)))
-	{
 		nextImg -= (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		++nextImg;
-	}
+	else ++nextImg;
+
 	this->TouchPadImage->SetNextImage(nextImg);
 }
 
@@ -457,14 +337,11 @@ void vtkOpenVRInteractorStyleTapKeyboard::IncNextImage()
 void vtkOpenVRInteractorStyleTapKeyboard::DecNextImage()
 {
 	int nextImg = this->TouchPadImage->GetNextImage();
+
 	if (nextImg == 0 || nextImg == (MAX_IMG / 2))
-	{
 		nextImg += (MAX_IMG / 2 - 1);
-	}
-	else
-	{
-		--nextImg;
-	}
+	else --nextImg;
+
 	this->TouchPadImage->SetNextImage(nextImg);
 }
 

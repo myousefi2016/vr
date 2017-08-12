@@ -36,8 +36,6 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkVariant.h"
 
 #include "vtkSphereSource.h"
-#include "vtkProperty.h"
-#include "vtkPolyDataMapper.h"	//For test. Might be removed if tests are moved avay.
 
 #include "vtkOpenVRFieldModifier.h"
 
@@ -58,60 +56,28 @@ const double AIF = 10.;
 const double RS = 0.01;
 const double RF = 0.1;
 
-
-//PIMPL to use STL (ref: VTKUsersGuide, 303)
+//PIMPL to use STL
 typedef std::pair<double, double> AngleRadius;
 typedef std::deque<AngleRadius> AngleRadiusBase;
 class vtkDequeAngleRadius:
 	public AngleRadiusBase {};
-		
-
-
-
+	
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
+	: AbsoluteInc(true)
 {
 	this->AngleRadiusRecord = new vtkDequeAngleRadius;
-	this->AbsoluteInc = true;
-
-	//Text3D to modify Props' attributes.
-	this->TextFeedback = vtkOpenVRTextFeedback::New();
+	this->ModifyProp = true;
 
 	//Images
-	this->TouchPadImage = vtkOpenVRTouchPadImage::New();
 	this->TouchPadImage->LoadSingleImage("..\\..\\..\\VTK\\Rendering\\OpenVR\\SwipeDial_Image0.png");
 	this->TouchPadImage->Init();
-
-	//TouchPad Pointer
-	this->TouchPadPointer = vtkOpenVRTouchPadPointer::New();
-
-	//Prop to modify:
-//////	this->FieldModifier = vtkOpenVRFieldModifier::New();
-	this->ModifyProp = true;
 }
 
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleSwipeDial::~vtkOpenVRInteractorStyleSwipeDial()
 {
 	delete this->AngleRadiusRecord;
-
-	//Remove Text3D
-	if (this->TextFeedback)
-	{
-		this->TextFeedback->Delete();
-	}
-
-	//Remove Image
-	if (this->TouchPadImage)
-	{
-		this->TouchPadImage->Delete();
-	}
-
-	//Delete pointer
-	if (this->TouchPadPointer)
-	{
-		this->TouchPadPointer->Delete();
-	}
 }
 
 //----------------------------------------------------------------------------
@@ -119,7 +85,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 {
 	if (this->TextFeedback->GetTextIsVisible() && this->TextFeedback->GetTextActor())
 	{
-		//Downcast to a 3D Interactor.
+		// Downcast to a 3D Interactor.
 		vtkRenderWindowInteractor3D *rwi =
 			static_cast<vtkRenderWindowInteractor3D *>(this->Interactor);
 
@@ -128,26 +94,20 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		float radius = sqrt(x*x + y*y);
 
-		int region = int(8. * atan2(x, y) / vtkMath::Pi());		// Clockwise values, starting in (x,y) = (0,1)
-		region = (x > 0) ? region : (region + 15);						// 16 regions. Integer values in range [0, 15]
+		int region = int(8. * atan2(x, y) / vtkMath::Pi());	// Clockwise, starting in (x,y) = (0,1)
+		region = (x > 0) ? region : (region + 15);					// 16 regions. Integer values in [0, 15]
 
 		if (this->TextFeedback->GetDefaultMsgOn())
 		{
-			this->TextFeedback->GetTextActor()->SetInput("1");		//Create field with message (avoid hardcoding)
+			this->TextFeedback->GetTextActor()->SetInput("1");
 			this->TextFeedback->SetDefaultMsgOn(false);
 			this->TextFeedback->SetHasUnsavedChanges(true);
 		}
 
 		double newValue = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToDouble();
 
-		if (radius > .5 && region == 3)
-		{
-			AbsoluteInc = true;
-		}
-		else if (radius > .5 && region == 12)
-		{
-			AbsoluteInc = false;
-		}
+		if (radius > .5 && region == 3)	AbsoluteInc = true;
+		else if (radius > .5 && region == 12)	AbsoluteInc = false;
 
 		if (radius > .65)
 		{
@@ -198,7 +158,7 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 
 		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newValue).ToString());
 
-		//test:
+		// Test (proof of concept)
 		if (this->ModifyProp)
 		{
 			vtkObject *Object = this->ISSwitch->GetFieldModifier()->GetfieldOwnerAsObject();
@@ -211,18 +171,10 @@ void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonDown()
 	}
 }
 
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::OnRightButtonUp()
-{
-	// do nothing except overriding the default OnRightButtonDown behavior
-}
-*/
-
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 {
-	//Get current renderer (if is not got already)
+	// Get current renderer
 	if (this->Interactor)
 	{
 		int pointer = this->Interactor->GetPointerIndex();
@@ -234,125 +186,28 @@ void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonDown()
 		this->FindPickedActor(wpos[0], wpos[1], wpos[2]);
 	}
 
-	//TestActor is a mandatory condition for me because I dont know how to get the Source from other objects.
 	if (this->InteractionProp != NULL && this->InteractionProp == this->ISSwitch->GetFieldModifier()->GetTestActor())
 	{
 		if (this->Interactor->GetInteractorStyle()->IsA("vtkOpenVRInteractorStyleSwitchInput"))
 		{
-			vtkOpenVRInteractorStyleSwitchInput *ISSwitch =
-				vtkOpenVRInteractorStyleSwitchInput::SafeDownCast(this->Interactor->GetInteractorStyle());
+			// Controller inside TestActor and we have a ISSwitch,
+			// so we switch to ISFieldSelector
+			this->ISSwitch->SetCurrentStyleToFieldSelector();
 
-			ISSwitch->SetCurrentStyleToFieldSelector();
-			return;
+			if (this->Interactor) this->Interactor->Render();
 		}
+		return;
 	}
 
-	bool TextEmpty = false;
-	if (this->TextFeedback->GetTextActor()) TextEmpty = !bool(vtkStdString(" ").compare(this->TextFeedback->GetTextActor()->GetInput()));
-
-	//Second Click. Already created and changes saved: can be hidden.
-	if (this->TextFeedback->GetTextActor() && this->TextFeedback->GetTextRenderer() != NULL
-		&& (!this->TextFeedback->GetHasUnsavedChanges() || TextEmpty))
-	{
-		this->TextFeedback->Reset();
-		//Test:
-		if (this->ModifyProp)
-		{
-			this->ISSwitch->GetFieldModifier()->HideTest();
-		}
-
-	}
-	//Either or is not created or has changes or is not shown
-	else
-	{
-		//First Click ever. Not created yet: create it and place it properly.
-		if (!this->TextFeedback->GetTextActor())
-		{
-			this->TextFeedback->Init();
-		}
-
-		//First Click. Created but not shown. Check if used different renderer to previous visualization.
-		if (this->CurrentRenderer != this->TextFeedback->GetTextRenderer())
-		{
-			if (this->TextFeedback->GetTextRenderer() != NULL && this->TextFeedback->GetTextActor())
-			{
-				this->TextFeedback->GetTextRenderer()->RemoveViewProp(this->TextFeedback->GetTextActor());
-			}
-			if (this->CurrentRenderer != 0)
-			{
-				this->CurrentRenderer->AddViewProp(this->TextFeedback->GetTextActor());
-			}
-			else
-			{
-				vtkWarningMacro(<< "no current renderer on the interactor style.");
-			}
-			this->TextFeedback->SetTextRenderer(this->CurrentRenderer);
-			this->TextFeedback->SetTextIsVisible(true);
-			this->TextFeedback->SetHasUnsavedChanges(false);
-
-			//Test:
-			if (this->ModifyProp)
-			{
-				this->ISSwitch->GetFieldModifier()->ShowTest(vtkOpenVRRenderWindowInteractor::SafeDownCast(this->Interactor));
-			}
-		}
-
-	}
-
-	//Place text opposite to the camera
-	vtkOpenVRRenderer *ren = vtkOpenVRRenderer::SafeDownCast(this->CurrentRenderer);
-	vtkOpenVRCamera *camera = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
-
-
-
-	/*NEW*/
-	this->TextFeedback->PlaceInScene(camera);
-	/**/
-
-	/*	OLD
-	double wScale = camera->GetDistance();			//World scale
-	double *camPos = camera->GetPosition();         //Camera Position
-	double *camOri = camera->GetOrientation();		//Camera Orientation: rotation in (X,Y,Z)
-
-	const double d2c = 1.25;		//Text distance to camera.
-
-								//3D Rotation and Translation Maths
-	double cosw = cos(vtkMath::RadiansFromDegrees(camOri[1]));
-	double sinw = sin(vtkMath::RadiansFromDegrees(camOri[1]));
-	double projection[3] = { sinw, 0, -cosw };
-	vtkMath::Normalize(projection);
-
-	double txtPos[3];
-
-	for (int i = 0; i < 3; i++)
-		txtPos[i] = camPos[i] + projection[i] * d2c;
-
-	this->TextFeedback->GetTextActor()->SetScale(0.00125 * wScale);	//Default scale is ridiculously big
-	this->TextFeedback->GetTextActor()->SetOrientation(0, -camOri[1], 0);
-	this->TextFeedback->GetTextActor()->SetPosition(txtPos);
-	this->TextFeedback->GetTextActor()->GetTextProperty()->SetFontSize(60);
-	*/
-
-	//Render Scene
-	if (this->Interactor)
-	{
-		this->Interactor->Render();
-	}
+	// Controller outside TestActor or there is no Switch,
+	// so we run its base class' method.
+	Superclass::OnMiddleButtonDown();
 }
-
-/*
-//----------------------------------------------------------------------------
-void vtkOpenVRInteractorStyleSwipeDial::OnMiddleButtonUp()
-{
-	// do nothing except overriding the default OnMiddleButtonUp behavior
-}
-*/
 
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::OnUntap()
 {
 	this->FlushValues();
-
 	Superclass::OnUntap();
 }
 
@@ -361,7 +216,7 @@ void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 {
 	if (this->TextFeedback->GetTextIsVisible())
 	{
-		//current renderer
+		// Current renderer
 		if (this->Interactor)
 		{
 			int pointer = this->Interactor->GetPointerIndex();
@@ -369,18 +224,17 @@ void vtkOpenVRInteractorStyleSwipeDial::TrackFinger()
 				this->Interactor->GetEventPositions(pointer)[1]);
 		}
 
-		//Touchpad position (-1,1)
+		// Touchpad position (-1,1)
 		vtkOpenVRRenderWindowInteractor *rwi =
 			static_cast<vtkOpenVRRenderWindowInteractor *>(this->Interactor);
 		float *tpos = rwi->GetTouchPadPosition();
 		float angle = 180. * atan2(tpos[0], tpos[1]) / vtkMath::Pi();	//Angle in degrees.
 		float radius = sqrt(tpos[0] * tpos[0] + tpos[1] * tpos[1]);
 
-		//Update record: Add new values and remove old values if maximum is reached:
+		// Update record: Add new values and remove old values if maximum is reached:
 		if (this->AngleRadiusRecord->size() == MAX_REC)
-		{
 			this->AngleRadiusRecord->pop_front();
-		}
+
 		this->AngleRadiusRecord->push_back(AngleRadius(angle, radius));
 
 		// Find out direction of swipe
@@ -413,14 +267,14 @@ double vtkOpenVRInteractorStyleSwipeDial::GetRadius(int pos)
 //----------------------------------------------------------------------------
 double vtkOpenVRInteractorStyleSwipeDial::GetAvgDiffAngle()
 {
-	//Sum all of them (always incremental values) and get average (used to get swiping speed)
+	// Sum all of them (always incremental values)
+	// and get average (used to get swiping speed)
 	double diffAngle = 0;
 	std::deque<AngleRadius>::iterator it1 = AngleRadiusRecord->begin();
 	std::deque<AngleRadius>::iterator it2 = ++(AngleRadiusRecord->begin());
 	for (it1, it2; it2 != AngleRadiusRecord->end(); ++it1, ++it2)
-	{
 		diffAngle += fabs(it1->first - it2->first);
-	}
+
 	diffAngle /= this->AngleRadiusRecord->size();
 	return diffAngle;
 }
@@ -431,9 +285,8 @@ double vtkOpenVRInteractorStyleSwipeDial::GetAvgRadius()
 	double radius = 0.0;
 	std::deque<AngleRadius>::iterator it = AngleRadiusRecord->begin();
 	for (it; it != AngleRadiusRecord->end(); ++it)
-	{
 		radius += it->second;
-	}
+
 	radius /= this->AngleRadiusRecord->size();
 	return radius;
 }
@@ -441,10 +294,7 @@ double vtkOpenVRInteractorStyleSwipeDial::GetAvgRadius()
 //----------------------------------------------------------------------------
 int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 {
-	if (AngleRadiusRecord->size() < MAX_REC)
-	{
-		return 0;
-	}
+	if (AngleRadiusRecord->size() < MAX_REC) return 0;
 
 	int dir = 0;
 	std::deque<AngleRadius>::reverse_iterator it1 = ++(AngleRadiusRecord->rbegin());
@@ -472,10 +322,9 @@ int vtkOpenVRInteractorStyleSwipeDial::GetSwipeDirection()
 //----------------------------------------------------------------------------
 void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 {
-
 	if (this->TextFeedback->GetTextActor())
 	{
-		//Ensure there is a number
+		// Ensure there is a number
 		if (this->TextFeedback->GetDefaultMsgOn())
 		{
 			this->TextFeedback->GetTextActor()->SetInput("1");
@@ -489,53 +338,41 @@ void vtkOpenVRInteractorStyleSwipeDial::UpdateValue()
 
 		double newNum = vtkVariant(this->TextFeedback->GetTextActor()->GetInput()).ToDouble();
 
-		//Modification can be fine or rough, depending on avg radius and avg diff angle.
+		//Modification can be fine or rough, depending on avgRadius and avgDiffAngle.
 		if(this->AbsoluteInc)	//(A)bsolute Increments
 		{
 			if (AvgRadius > 0.5)	//Outer circle. (D)ecimal adjust
 			{
-				if (AvgDiffAngle > 20.)
-				{	//Fast swipe
+				if (AvgDiffAngle > 20.)	//(F)ast swipe
 					newNum += swipeDir*ADF;
-				}
-				else if (AvgDiffAngle > 1.)
-				{	//Slow swipe
+				else if (AvgDiffAngle > 1.)	//(S)low swipe
 					newNum += swipeDir*ADS;
-				}
 				//else no swipe
 			}
 			else	//Inner circle. (I)nteger adjust
 			{
-				if (AvgDiffAngle > 25.)
-				{	//Fast swipe
+				if (AvgDiffAngle > 25.)	//(F)ast swipe
 					newNum += swipeDir*AIF;
-				}
-				else if (AvgDiffAngle > 1.)
-				{	//Slow swipe
+				else if (AvgDiffAngle > 1.)	//(S)low swipe
 					newNum += swipeDir*AIS;
-				}
 				//else no swipe
 			}
 		}
 		else	//(R)elative Increments
 		{
-			if (AvgDiffAngle > 20.)
-			{	//(F)ast swipe
+			if (AvgDiffAngle > 20.)	//(F)ast swipe
 				newNum *= (1+swipeDir*RF);
-			}
-			else if (AvgDiffAngle > 1.)
-			{	//(S)low swipe
+			else if (AvgDiffAngle > 1.)	//(S)low swipe
 				newNum *= (1+swipeDir*RS);
-			}
 			//else no swipe
 		}
 
-		//Finally, update value
+		// Finally, update value
 		this->TextFeedback->GetTextActor()->SetInput(vtkVariant(newNum).ToString());
 		this->TextFeedback->GetTextActor()->GetTextProperty()->BoldOn();
 		this->TextFeedback->SetHasUnsavedChanges(true);
 
-		//test:
+		// Test (proof of concept)
 		if (this->ModifyProp)
 		{
 			vtkObject *Object = this->ISSwitch->GetFieldModifier()->GetfieldOwnerAsObject();

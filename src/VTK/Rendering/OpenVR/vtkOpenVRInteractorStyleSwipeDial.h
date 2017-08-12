@@ -14,8 +14,9 @@ PURPOSE.  See the above copyright notice for more information.
 =========================================================================*/
 /**
  * @class   vtkOpenVRInteractorStyleSwipeDial
- * @brief   extended from vtkOpenVRInteractorStyleInputData to override command methods on Touchpad.
- *          TODO description.
+ * @brief   extended from vtkOpenVRInteractorStyleInputData to override command
+ * methods on Touchpad. It allows to modify numeric values by swiping inside the
+ * touchpad.
 */
 
 #ifndef vtkOpenVRInteractorStyleSwipeDial_h
@@ -37,25 +38,18 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleSwipeDial, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-  //@{
-  /**
-  * Override Right Button (Touchpad) to input numbers.
-  */
+	// Override Right Button (Touchpad) to input numbers.
   void OnRightButtonDown() VTK_OVERRIDE;
-//  void OnRightButtonUp() VTK_OVERRIDE;
-  //@}
-  //@{
-  /**
-  * Override Middle Button (Grip) which will enable a text to input data.
-  */
+
+	// Override Middle Button (Grip):
+	// - Inside a prop, goes into the FieldSelector
+	// - Outsade a prop, uses superclass implementation
   void OnMiddleButtonDown() VTK_OVERRIDE;
-//  void OnMiddleButtonUp() VTK_OVERRIDE;
-  //@}
 
-
+	// Override Untap event
 	void OnUntap() VTK_OVERRIDE;
 
-
+	//Get swiping data.
   void TrackFinger() VTK_OVERRIDE;
 
 	//Manage finger position values
@@ -63,7 +57,7 @@ public:
   virtual double GetRadius(int pos = 0);
   virtual double GetAvgDiffAngle();
   virtual double GetAvgRadius();
-  virtual int GetSwipeDirection();	//Idea: -1: antiCW; 1:CW; 0: undefined.
+  virtual int GetSwipeDirection();	// -1: antiCW; 1:CW; 0: undefined.
 	virtual void UpdateValue();	
 
 	virtual void FlushValues();	//Empty records.
@@ -72,13 +66,13 @@ protected:
   vtkOpenVRInteractorStyleSwipeDial();
   ~vtkOpenVRInteractorStyleSwipeDial() VTK_OVERRIDE;
   
-	//Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
+	// Values storage: AngleRadius.first: Angle |  AngleRadius.second: Radius
 	vtkDequeAngleRadius *AngleRadiusRecord;
-	bool AbsoluteInc;	//absolute/relative increments
+	bool AbsoluteInc;	// Absolute/relative increments
 
 private:
-  vtkOpenVRInteractorStyleSwipeDial(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;  // Not implemented.
+  vtkOpenVRInteractorStyleSwipeDial(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRInteractorStyleSwipeDial&) VTK_DELETE_FUNCTION;
 };
 
 #endif

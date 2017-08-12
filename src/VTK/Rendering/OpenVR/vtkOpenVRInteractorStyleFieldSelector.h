@@ -18,7 +18,6 @@ PURPOSE.  See the above copyright notice for more information.
  * intended to show an alternative to modify porperty fields on vtkProps and sources.
  * 
  * @see vtkOpenVRInteractorStyleInputData vtkOpenVRFieldModifier
- * 
  */
 
 #ifndef vtkOpenVRInteractorStyleFieldSelector_h
@@ -27,17 +26,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyleInputData.h"
 
-#define MAX_IMG 8
-
-class vtkTextActor3D;
-class vtkTextMapper;
-class vtkTextSource;
-class vtkImageActor;
-
-class vtkOpenVRFieldModifier;
-
-class vtkOpenVRTextFeedback;
-class vtkOpenVRTouchPadImage;
+#define MAX_IMG 3
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleFieldSelector : public vtkOpenVRInteractorStyleInputData
 {
@@ -47,40 +36,24 @@ public:
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 
-  //@{
-  /**
-  * Override Right Button (Touchpad) to input numbers.
-  */
-//  void OnRightButtonDown() VTK_OVERRIDE;
+	// Override Right Button (Touchpad) to select a field.
   void OnRightButtonUp() VTK_OVERRIDE;
-  //@}
 
-  //@{
-  /**
-  * Override Middle Button (Grip) which will select Prop and attribute to modify.
-  */
+	// Override Middle Button (Grip):
+	// - Inside a prop, goes into the FieldSelector
+	// - Outsade a prop, uses superclass implementation
   void OnMiddleButtonDown() VTK_OVERRIDE;
-//  void OnMiddleButtonUp() VTK_OVERRIDE;
-  //@}
 
-	//Images handling METHODS FROM PREVIOUS CLASS. delete!
-	void IncNextImage() VTK_OVERRIDE;
-	void DecNextImage() VTK_OVERRIDE;
-	virtual void SwitchCaps();
-
+	//Images handling
 	virtual void ChangeImage();
-	
-	//void Reset();
 
 protected:
 	vtkOpenVRInteractorStyleFieldSelector();
   ~vtkOpenVRInteractorStyleFieldSelector() VTK_OVERRIDE;
 
-//	vtkOpenVRFieldModifier *FieldModifier;
-
 private:
-	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;  // Not implemented.
+	vtkOpenVRInteractorStyleFieldSelector(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRInteractorStyleFieldSelector&) VTK_DELETE_FUNCTION;
 };
 
 #endif

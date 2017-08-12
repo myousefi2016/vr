@@ -3,7 +3,7 @@
 Program:   Visualization Toolkit
 Module:    vtkOpenVRInteractorStyleInputData.h
 
-Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
+Copyright (c) Ventura Romero Mendo
 All rights reserved.
 See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
 
@@ -15,16 +15,15 @@ PURPOSE.  See the above copyright notice for more information.
 /**
  * @class   vtkOpenVRInteractorStyleInputData
  * @brief   extended from vtkOpenVRInteractorStyle to provide support for
- * data modification and user interaction for inputtiong data.
+ * data modification and user interaction for inputting data.
 */
 
 #ifndef vtkOpenVRInteractorStyleInputData_h
 #define vtkOpenVRInteractorStyleInputData_h
 
+#include "vtkOpenVRFieldModifier.h"	//For vtkField enum export
 #include "vtkRenderingOpenVRModule.h" // For export macro
 #include "vtkOpenVRInteractorStyle.h"
-
-#include "vtkOpenVRFieldModifier.h"	//For vtkField. In the future, move the enum to a new file and include it here.
 
 class vtkOpenVRTextFeedback;
 class vtkOpenVRTouchPadImage;
@@ -47,22 +46,16 @@ public:
 	void OnMiddleButtonDown() VTK_OVERRIDE;
 	void OnMiddleButtonUp() VTK_OVERRIDE {};
 
-	//@{
-	/**
-	* Override Tap to show pointer on touchpad.
-	*/
+
+	// Override Tap to show pointer on touchpad.
 	void OnTap() VTK_OVERRIDE;
 	void OnUntap() VTK_OVERRIDE;
-	//@}
 
-	//@{
-	/**
-	* Override OnMouseMove to be able to use functions from
-	* TouchPadImage and TouchPadPointer.
-	*/
+	// Override OnMouseMove to be able to use functions from
+	// TouchPadImage and TouchPadPointer.
 	void OnMouseMove() VTK_OVERRIDE;
-	//@}
 
+	//Change image to display
 	virtual void IncNextImage();
 	virtual void DecNextImage();
 
@@ -72,13 +65,9 @@ public:
 	//Disable all external elements active on the IS
 	virtual void Reset();
 
-
 	void ModifyProperty(vtkObject * obj, vtkField field, char** value);
+
 	vtkSetMacro(ISSwitch, vtkOpenVRInteractorStyleSwitchInput *);
-
-
-	//Enable or disable Properties modification:
-	bool ModifyProp;
 
 protected:
   vtkOpenVRInteractorStyleInputData();
@@ -87,15 +76,15 @@ protected:
 	vtkOpenVRTouchPadPointer *TouchPadPointer;
 	vtkOpenVRTouchPadImage *TouchPadImage;
 	vtkOpenVRTextFeedback *TextFeedback;
-//////	vtkOpenVRFieldModifier *FieldModifier;
 
 	vtkOpenVRInteractorStyleSwitchInput *ISSwitch;
 
+	// Enable/disable Properties modification:
+	bool ModifyProp;
 
 private:
-	vtkOpenVRInteractorStyleInputData(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;  // Not implemented.
-  void operator=(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;  // Not implemented.
-  	
+	vtkOpenVRInteractorStyleInputData(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;
+  void operator=(const vtkOpenVRInteractorStyleInputData&) VTK_DELETE_FUNCTION;
 };
 
 #endif

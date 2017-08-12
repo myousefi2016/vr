@@ -31,17 +31,13 @@ public:
   vtkTypeMacro(vtkOpenVRInteractorStyleTapBool, vtkOpenVRInteractorStyleInputData);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
-  // Override Right Button (Touchpad) to input numbers.
+  // Override Right Button (Touchpad) to input boolean values.
   void OnRightButtonDown() VTK_OVERRIDE;
-//  void OnRightButtonUp() VTK_OVERRIDE;
 
-  //@{
-  /**
-  * Override Middle Button (Grip) which will select Prop and attribute to modify.
-  */
+	// Override Middle Button (Grip):
+	// - Inside a prop, goes into the FieldSelector
+	// - Outsade a prop, uses superclass implementation
   void OnMiddleButtonDown() VTK_OVERRIDE;
-//  void OnMiddleButtonUp() VTK_OVERRIDE;
-  //@}
 
 protected:
   vtkOpenVRInteractorStyleTapBool();
