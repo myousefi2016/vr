@@ -214,16 +214,11 @@ void vtkOpenVRFieldModifier::InitTest()
 void vtkOpenVRFieldModifier::ShowTest(vtkOpenVRRenderWindowInteractor *rwi)
 {
 	vtkOpenVRRenderer *ren = NULL;
-	vtkInteractorStyle3D *ist = NULL;
-	vtkOpenVRCamera *cam = NULL;
-	int pointer;
 	if (rwi)
 	{
 		int pointer = rwi->GetPointerIndex();
 		ren = vtkOpenVRRenderer::SafeDownCast(rwi->FindPokedRenderer(
 			rwi->GetEventPositions(pointer)[0], rwi->GetEventPositions(pointer)[1]));
-		ist = vtkOpenVRInteractorStyleInputData::SafeDownCast(rwi->GetInteractorStyle());
-		cam = vtkOpenVRCamera::SafeDownCast(ren->GetActiveCamera());
 	}
 	else return;
 	
