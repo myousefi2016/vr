@@ -40,8 +40,8 @@ public:
   void OnRightButtonUp() VTK_OVERRIDE;
 
 	// Override Middle Button (Grip):
-	// - Inside a prop, goes into the FieldSelector
-	// - Outsade a prop, uses superclass implementation
+	// - Inside a prop, iterates over sources
+	// - Outside a prop, uses superclass implementation
   void OnMiddleButtonDown() VTK_OVERRIDE;
 
 	//Images handling

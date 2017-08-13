@@ -308,7 +308,8 @@ void vtkOpenVRInteractorStyleTapKeyboard::OnMiddleButtonDown()
 void vtkOpenVRInteractorStyleTapKeyboard::SwitchCaps()
 {
 	int currentImg = this->TouchPadImage->GetNextImage();
-	this->TouchPadImage->SetNextImage( (currentImg += 4) %= this->TouchPadImage->GetMaxNumImg());
+	int nextImg = (currentImg += 4) %= this->TouchPadImage->GetMaxNumImg();
+	this->TouchPadImage->SetNextImage(nextImg);
 }
 
 //----------------------------------------------------------------------------

@@ -35,7 +35,7 @@ class VTKRENDERINGOPENVR_EXPORT vtkOpenVRInteractorStyleInputData : public vtkOp
 {
 public:
   static vtkOpenVRInteractorStyleInputData *New();
-  vtkTypeMacro(vtkOpenVRInteractorStyleInputData, vtkOpenVRInteractorStyleInputData);
+  vtkTypeMacro(vtkOpenVRInteractorStyleInputData, vtkOpenVRInteractorStyle);
   void PrintSelf(ostream& os, vtkIndent indent) VTK_OVERRIDE;
 
 	//Override Right Button's behaviour from base class.
@@ -45,7 +45,6 @@ public:
   // Override Middle Button to load an auxiliary text
 	void OnMiddleButtonDown() VTK_OVERRIDE;
 	void OnMiddleButtonUp() VTK_OVERRIDE {};
-
 
 	// Override Tap to show pointer on touchpad.
 	void OnTap() VTK_OVERRIDE;

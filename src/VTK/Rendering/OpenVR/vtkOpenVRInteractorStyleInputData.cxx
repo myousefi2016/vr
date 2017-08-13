@@ -19,16 +19,13 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkRenderWindow.h"
 #include "vtkOpenVRRenderWindowInteractor.h"
 #include "vtkRenderWindowInteractor.h"
-
 #include "vtkCommand.h"
 #include "vtkCallbackCommand.h"
-
 #include "vtkOpenVRTouchPadImage.h"
 #include "vtkOpenVRTouchPadPointer.h"
 #include "vtkOpenVRTextFeedback.h"
 #include "vtkOpenVRFieldModifier.h"
 #include "vtkOpenVRInteractorStyleSwitchInput.h"
-
 #include "vtkActor.h"
 #include "vtkTextActor3D.h"
 #include "vtkStdString.h"

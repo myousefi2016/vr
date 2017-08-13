@@ -86,7 +86,7 @@ enum class vtkSourceType
 	Cube,
 	None	// 'None' ALWAYS last. Used also as Size() property of the enum.
 };
-
+/*
 // Pipeline Entity
 enum class vtkPipelineEntity
 {
@@ -94,7 +94,7 @@ enum class vtkPipelineEntity
 	DataObject,
 	None
 };
-
+*/
 
 class VTKRENDERINGOPENVR_EXPORT vtkOpenVRFieldModifier : public vtkObject
 {
