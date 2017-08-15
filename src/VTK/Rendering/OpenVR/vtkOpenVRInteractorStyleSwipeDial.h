@@ -23,7 +23,7 @@ PURPOSE.  See the above copyright notice for more information.
 #define vtkOpenVRInteractorStyleSwipeDial_h
 
 #include "vtkRenderingOpenVRModule.h" // For export macro
-#include "vtkOpenVRInteractorStyleInputData.h"
+#include "vtkOpenVRInteractorStyleInputData.h" 
 
 class vtkDequeAngleRadius;
 class vtkOpenVRTextFeedback;
