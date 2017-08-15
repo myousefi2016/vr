@@ -51,6 +51,8 @@ class vtkDequeAngleRadius:
 vtkOpenVRInteractorStyleSwipeDial::vtkOpenVRInteractorStyleSwipeDial()
 	: AbsoluteInc(true)
 {
+	this->TextFeedback->SetTextDefaultMsg("Swipe on touchpad");
+
 	this->AngleRadiusRecord = new vtkDequeAngleRadius;
 	this->ModifyProp = true;
 

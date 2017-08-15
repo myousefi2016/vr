@@ -32,6 +32,7 @@ vtkStandardNewMacro(vtkOpenVRInteractorStyleTapDial);
 //----------------------------------------------------------------------------
 vtkOpenVRInteractorStyleTapDial::vtkOpenVRInteractorStyleTapDial()
 {
+	this->TextFeedback->SetTextDefaultMsg("Input number");
 	this->ModifyProp = true;
 
 	//Images
